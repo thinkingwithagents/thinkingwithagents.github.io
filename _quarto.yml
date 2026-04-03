@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "AI for UVM Economics"
+  description: "Modular AI literacy resources for UVM Economics students and faculty"
+  site-url: https://eabeam.github.io/uvmecon-ai
+  repo-url: https://github.com/eabeam/uvmecon-ai
+  repo-actions: [issue]
+
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - href: modules/a1-what-llms-do.qmd
+        text: "Sample Module"
+      - href: about.qmd
+        text: About
+
+  page-footer:
+    center: |
+      Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+      Built by [Emily Beam](https://eabeam.github.io), University of Vermont.
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-overflow: wrap

@@ -1,0 +1,28 @@
+---
+title: "AI for UVM Economics"
+subtitle: "Modular AI literacy resources for UVM Economics students and faculty"
+---
+
+::: {.callout-warning}
+## Scaffold only
+This site is a skeleton. Content, module structure, and navigation are placeholders. See [the sample module](modules/a1-what-llms-do.qmd) for the intended format.
+:::
+
+## What Is This?
+
+<!-- TODO: Describe the purpose of this site and who it's for -->
+
+## Modules
+
+<!-- TODO: Add module table once modules are developed. Suggested tracks:
+- Foundations (A-track): What LLMs do, prompting, when to use AI
+- Technical (B-track): Terminal, Git/GitHub
+- Econ Workflows (C-track): Lit review, code, data, writing, math
+- Faculty Quick Start (F-track): Short app-first modules
+-->
+
+## About
+
+Created by [Emily Beam](https://eabeam.github.io), Department of Economics, University of Vermont.
+
+Built with [Quarto](https://quarto.org). Source on [GitHub](https://github.com/eabeam/uvmecon-ai).
