@@ -5,6 +5,7 @@ project:
 format:
   revealjs:
     theme: default
+    include-in-header: section-breadcrumb.html
     slide-number: c/t
     progress: true
     menu: true
