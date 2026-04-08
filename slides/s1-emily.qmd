@@ -55,6 +55,36 @@ You do not need to learn the syntax. The practical point: the AI may hand you a 
 
 # Demo: Create your writing voice
 
+## Same task, no editing, no context {.smaller}
+
+"Write an email asking for an extension on a referee report."
+
+:::: {.columns}
+::: {.column width="30%"}
+**ChatGPT (not logged in)**
+
+![](assets/voice-chatgpt-not-logged-in.png){width="100%" .shot}
+:::
+::: {.column width="5%"}
+&nbsp;
+
+**→**
+:::
+::: {.column width="30%"}
+**ChatGPT (logged in)**
+
+![](assets/voice-chatgpt-logged-in.png){width="100%" .shot}
+:::
+::: {.column width="5%"}
+**→**
+:::
+::: {.column width="30%"}
+**Claude + voice file**
+
+![](assets/voice-claude-with-voice.png){width="100%" .shot}
+:::
+::::
+
 ## You don't have to write the instructions yourself
 
 :::: {.columns}
