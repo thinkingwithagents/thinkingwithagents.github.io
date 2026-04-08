@@ -1,2 +1,5 @@
 docs/
 .quarto/
+
+/.quarto/
+**/*.quarto_ipynb

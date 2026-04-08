@@ -11,8 +11,8 @@ Two lunch sessions introducing AI tools for teaching and research. No prior expe
 
 | Session | Date | Focus |
 |---------|------|-------|
-| [Session 1](session1.qmd) | **Wed, April 22** | Getting started: what AI tools exist, how they work, live demos |
-| [Session 2](session2.qmd) | **Mon, April 27** | Research pipelines, web scraping, automated grading |
+| [Session 1](session1.qmd) | **Wed, April 22, 11:00--12:30** Old. Mill A500 | Getting started: what AI tools exist, how they work, live demos |
+| [Session 2](session2.qmd) | **Mon, April 27, 11:00--12:30** Old Mill A500 | Research pipelines, web scraping, automated grading |
 
 ### Before you arrive
 
