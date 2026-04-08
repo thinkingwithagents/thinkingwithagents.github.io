@@ -443,7 +443,7 @@
 
   <meta name="author" content="Emily Beam">
   <meta name="dcterms.date" content="2026-04-27">
-  <title>AI for Research</title>
+  <title>Teaching + Research Workflows</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -988,7 +988,7 @@ margin-right: 0; }
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">AI for Research</h1>
+  <h1 class="title">Teaching + Research Workflows</h1>
   <p class="subtitle">AI Bootcamp — Session 2, Part 1</p>
 
 <div class="quarto-title-authors">
@@ -1002,108 +1002,99 @@ Emily Beam
   <p class="date">2026-04-27</p>
 </section>
 <section>
-<section id="recap" class="title-slide slide level1 center">
-<h1>Recap</h1>
+<section id="day-2" class="title-slide slide level1 center">
+<h1>Day 2</h1>
 
 </section>
-<section id="last-time" class="slide level2">
-<h2>Last time</h2>
+<section id="two-emily-examples" class="slide level2">
+<h2>Two Emily examples</h2>
+<p>Today is built around two concrete applications:</p>
 <ul>
-<li>AI ladder: Levels 0–5</li>
-<li>Terminal + Claude Code: AI that reads/writes your files</li>
-<li>Desktop apps: quick chat for simple tasks</li>
-<li>Teaching: assignment + rubric generation</li>
+<li><strong>Teaching application</strong>: literature review workflow</li>
+<li><strong>Research application</strong>: raw data to report</li>
 </ul>
-<p>Today: moving from <strong>single prompts</strong> to <strong>multi-step workflows</strong>.</p>
+<p>The point is not one magic prompt. The point is a documented workflow from starting materials to a usable output.</p>
 </section></section>
 <section>
-<section id="the-compound-workflow" class="title-slide slide level1 center">
-<h1>The Compound Workflow</h1>
+<section id="teaching-application" class="title-slide slide level1 center">
+<h1>Teaching Application</h1>
 
 </section>
-<section id="plan-execute-review-clear-repeat" class="slide level2">
-<h2>Plan → Execute → Review → Clear → Repeat</h2>
+<section id="literature-review" class="slide level2">
+<h2>Literature review</h2>
+<p>This is the teaching-side example:</p>
 <ul>
-<li><strong>Plan</strong>: Tell the AI what you want before it starts working</li>
-<li><strong>Execute</strong>: Let it generate code, text, analysis</li>
-<li><strong>Review</strong>: Check the output — AI makes confident mistakes</li>
-<li><strong>Clear context</strong>: Start a fresh conversation for the next step</li>
-<li><strong>Document</strong>: Save decisions and lessons in a markdown file</li>
+<li>start from a question, topic, or pile of readings</li>
+<li>use AI to organize themes, compare papers, and draft a first-pass synthesis</li>
+<li>turn scattered notes into a more teachable structure</li>
+<li>keep the instructor in charge of judgment, interpretation, and final framing</li>
 </ul>
 </section>
-<section id="why-clear-context" class="slide level2">
-<h2>Why clear context?</h2>
-<p>AI tools have limited “memory” (context window).</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Long conversation</strong></p>
+<section id="what-the-literature-review-workflow-can-do" class="slide level2">
+<h2>What the literature review workflow can do</h2>
+<p>Useful outputs:</p>
 <ul>
-<li>Accumulates confusion</li>
-<li>Slower responses</li>
-<li>Earlier instructions get forgotten</li>
+<li>a comparison table</li>
+<li>a theme-based summary</li>
+<li>a first-pass annotated bibliography</li>
+<li>a short lecture or discussion memo</li>
+<li>a list of gaps, disagreements, or open questions</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Fresh + focused</strong></p>
-<ul>
-<li>Clear task = better output</li>
-<li>Faster</li>
-<li>You control what it “knows”</li>
-</ul>
-</div></div>
-<p>Write results to <strong>files</strong>, not just chat. Files persist; chat doesn’t.</p>
 </section>
-<section id="why-this-matters-for-research" class="slide level2">
-<h2>Why this matters for research</h2>
+<section id="what-still-needs-you" class="slide level2">
+<h2>What still needs you</h2>
 <ul>
-<li>research work is often a chain of smaller tasks</li>
-<li>the AI is strongest when each step is narrow and well-defined</li>
-<li>the output should be something you can review, rerun, and share</li>
-<li>if a task gets messy, start a new conversation and keep the useful notes</li>
+<li>deciding which papers matter</li>
+<li>catching bad summaries or invented claims</li>
+<li>deciding how much nuance to preserve</li>
+<li>choosing what is pedagogically useful</li>
+<li>checking any quotations or citations</li>
 </ul>
 </section></section>
 <section>
-<section id="research-pipeline-demo" class="title-slide slide level1 center">
-<h1>Research Pipeline Demo</h1>
+<section id="research-application" class="title-slide slide level1 center">
+<h1>Research Application</h1>
 
 </section>
-<section id="the-working-example" class="slide level2 scrollable">
-<h2>The working example</h2>
-<p>The main example today is a <strong>county-level IPUMS workflow</strong>.</p>
-<p>Possible question:</p>
+<section id="raw-data-to-report" class="slide level2">
+<h2>Raw data to report</h2>
+<p>This is the research-side example:</p>
 <ul>
-<li>How does the county-level share of native-born population change over time?</li>
-<li>What does that look like in maps and line graphs?</li>
-<li>Can we turn that into a short descriptive report?</li>
+<li>start with uncleaned data</li>
+<li>make a plan</li>
+<li>write code</li>
+<li>build on existing code</li>
+<li>execute</li>
+<li>review results</li>
+<li>write a short report</li>
 </ul>
-<p>Desired workflow:</p>
-<ol type="1">
-<li>define the question</li>
-<li>ask the tool for an analysis plan</li>
-<li>have it help with data access, cleaning, and code</li>
-<li>make plots and maps</li>
-<li>draft a short report</li>
-</ol>
-<p>The point is not that AI does the research question for you. The point is that it helps you move from a question to a documented workflow faster.</p>
+<p>The core message is that AI can help connect these steps, but it does not remove the need to review them.</p>
 </section>
-<section id="why-screenshots-may-be-better-than-fully-live-execution" class="slide level2">
-<h2>Why screenshots may be better than fully live execution</h2>
-<ul>
-<li>less waiting</li>
-<li>less technical failure risk</li>
-<li>easier to keep attention on the workflow</li>
-<li>easier to show a whole process in a short lunch session</li>
-</ul>
-<p>We may still keep one live moment, but screenshots can make the sequence clearer.</p>
+<section id="workflow-in-one-line" class="slide level2">
+<h2>Workflow in one line</h2>
+<p>For this kind of task, the workflow is:</p>
+<p><code>plan</code> -&gt; <code>write code</code> -&gt; <code>build on existing code</code> -&gt; <code>run</code> -&gt; <code>review</code> -&gt; <code>report</code></p>
+<p>Each step is narrow enough to review, rerun, and improve.</p>
 </section>
-<section id="mixed-tools-one-workflow" class="slide level2">
-<h2>Mixed tools, one workflow</h2>
-<p>This example is intentionally mixed-tool:</p>
+<section id="why-this-matters" class="slide level2">
+<h2>Why this matters</h2>
 <ul>
-<li><strong>Stata</strong> for most cleaning and data work</li>
-<li><strong>R</strong> for maps or plots if that is the easiest path</li>
-<li><strong>Markdown or LaTeX</strong> for the report output</li>
+<li>research work is usually a chain of smaller tasks</li>
+<li>AI is strongest when each step is explicit</li>
+<li>the output should live in files, not just in chat</li>
+<li>if the task changes, start a fresh session and keep the useful notes</li>
 </ul>
-<p>That is normal. The point is not to force one tool to do everything.</p>
+</section>
+<section id="why-screenshots-are-the-right-format-here" class="slide level2">
+<h2>Why screenshots are the right format here</h2>
+<p>For the workshop, this demo is mostly pre-done.</p>
+<ul>
+<li>start from screenshots and saved results</li>
+<li>show the prompts</li>
+<li>walk through the logic of each step</li>
+<li>avoid spending lunch watching code run</li>
+</ul>
+<p>That keeps the attention on the workflow instead of on technical waiting.</p>
 </section>
 <section id="what-ai-is-good-at-here" class="slide level2">
 <h2>What AI is good at here</h2>
@@ -1111,74 +1102,45 @@ Emily Beam
 <div class="column" style="width:50%;">
 <p><strong>Accelerates</strong></p>
 <ul>
-<li>Data exploration</li>
-<li>Boilerplate code</li>
-<li>Summary statistics</li>
-<li>First-draft write-ups</li>
-<li>Formatting tables</li>
+<li>data orientation</li>
+<li>analysis planning</li>
+<li>boilerplate code</li>
+<li>building on existing code</li>
+<li>first-draft reporting</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><strong>Still needs you</strong></p>
 <ul>
-<li>Research question</li>
-<li>Identification strategy</li>
-<li>Institutional knowledge</li>
-<li>Interpreting results</li>
-<li>Knowing when it’s wrong</li>
+<li>choosing the question</li>
+<li>deciding whether the plan is sensible</li>
+<li>checking code before or after execution</li>
+<li>interpreting the results</li>
+<li>knowing when something is wrong</li>
 </ul>
 </div></div>
 </section>
 <section id="review-and-guardrails" class="slide level2">
 <h2>Review and guardrails</h2>
 <ul>
-<li>verify the prompt matched the actual data task</li>
-<li>inspect code before you run it</li>
-<li>keep sensitive data rules in mind</li>
+<li>verify that the prompt matches the actual task</li>
+<li>inspect code before you trust it</li>
 <li>do not confuse polished prose with correctness</li>
-<li>if the task is risky, redesign it rather than forcing it</li>
+<li>if the data are sensitive, redesign the workflow instead of forcing it</li>
 </ul>
-<p>If the data are sensitive, a safer pattern is often:</p>
+<p>A safer pattern for sensitive work is often:</p>
 <ul>
 <li>let the tool write code</li>
 <li>review the code yourself</li>
-<li>review logs or output files rather than exposing raw protected data</li>
-</ul>
-</section>
-<section id="parallel-checks" class="slide level2">
-<h2>Parallel checks</h2>
-<p>One useful trick is to ask for more than one pass.</p>
-<ul>
-<li>run two workflows in parallel</li>
-<li>compare outputs</li>
-<li>ask one agent to challenge the other</li>
-<li>treat disagreement as a reason to review more carefully</li>
-</ul>
-<p>You do not need a fully built adversarial agent to get value from this idea.</p>
-</section>
-<section id="skills-and-new-features" class="slide level2">
-<h2>Skills and new features</h2>
-<p>Skills are reusable task bundles that can help with recurring work.</p>
-<ul>
-<li>useful for repeated document, spreadsheet, or coding tasks</li>
-<li>do not overinvest in building everything from scratch</li>
-<li>start with what already exists</li>
-<li>if reusable project instructions come up, keep them generic here unless a named file already exists</li>
-<li>a personal voice file can be mentioned later if it is part of the actual workflow, for example <code>/Users/ebeam/Dropbox/GitHub/eb-lab/EB-VOICE.md</code></li>
-</ul>
-<p>The tool landscape is changing quickly, so keep an eye on new features.</p>
-<ul>
-<li>remote control for Claude</li>
-<li>dispatch</li>
-<li>other recent orchestration features</li>
+<li>review logs and outputs rather than exposing raw protected data</li>
 </ul>
 </section>
 <section id="what-to-try-next" class="slide level2">
 <h2>What to try next</h2>
 <ul>
-<li>Bootcamp site: <a href="https://eabeam.github.io/uvmecon-ai">eabeam.github.io/uvmecon-ai</a></li>
-<li>Claude Code: free tier + pay-as-you-go ($3–10/mo typical)</li>
-<li>UVM Copilot: free for all UVM — <a href="https://go.uvm.edu/copilot">go.uvm.edu/copilot</a></li>
-<li>PDF funds may cover AI subscriptions — ask your chair</li>
+<li>try one literature-review task with real papers</li>
+<li>try one small raw-data task with saved outputs and screenshots</li>
+<li>keep the workflow narrow and reviewable</li>
+<li>save prompts and outputs so you can reuse what works</li>
 </ul>
 
 </section></section>

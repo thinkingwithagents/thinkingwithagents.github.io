@@ -39,7 +39,8 @@ python3 -m http.server "$PORT" --directory "$DOCS_SLIDES" >/tmp/reveal_pdf_serve
 SERVER_PID=$!
 trap 'kill "$SERVER_PID" >/dev/null 2>&1 || true' EXIT
 
-sleep 1
+# Give reveal + print CSS a little longer to settle before headless export.
+sleep 2
 
 URL="http://localhost:$PORT/${BASE_NAME}.html?print-pdf"
 
@@ -53,7 +54,7 @@ echo "Printing to PDF: $OUT"
   --disable-features=VizDisplayCompositor \
   --print-to-pdf-no-header \
   --print-to-pdf="$OUT" \
-  --virtual-time-budget=20000 \
+  --virtual-time-budget=60000 \
   --run-all-compositor-stages-before-draw \
   "$URL"
 
