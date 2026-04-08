@@ -19,6 +19,8 @@ website:
         text: Home
       - href: prep.qmd
         text: "Prep Guide"
+      - href: skills.qmd
+        text: "Skills & Demos"
       - href: resources.qmd
         text: "Outside Resources"
       - href: session1.qmd

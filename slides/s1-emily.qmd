@@ -53,6 +53,74 @@ You do not need to learn the syntax. The practical point: the AI may hand you a 
 <!-- EMILY: Replace or supplement with your best real hallucination/failure story. -->
 :::
 
+# Demo: Create your writing voice
+
+## You don't have to write the instructions yourself
+
+:::: {.columns}
+::: {.column width="50%"}
+A "voice file" is a plain Markdown file that describes how you write — tone, structure, habits. The AI reads it and matches your style.
+
+**You don't write it from scratch.** You give the AI samples of your real writing — emails, letters of recommendation, feedback — and ask it to describe your patterns.
+
+The result is a file like `EB-VOICE.md` that you can edit, refine, and reuse across projects.
+:::
+::: {.column width="50%"}
+**The prompt:**
+
+```
+Read these five emails I've sent.
+Describe my writing style: tone,
+sentence length, how I open and
+close messages, what I avoid.
+Save it as EB-VOICE.md.
+```
+
+**What you get back:**
+
+```markdown
+# EB Voice
+- Tone: direct, warm, slightly
+  informal
+- Opens with context, not greeting
+- Short paragraphs, rarely > 3
+  sentences
+- Avoids: hedging, exclamation
+  points, corporate jargon
+```
+:::
+::::
+
+## Then use it whenever you want
+
+:::: {.columns}
+::: {.column width="50%"}
+Once the voice file exists, you can:
+
+- Tell the AI to **load it automatically** via standing instructions
+- **Call it on demand**: "Draft this email using my voice file"
+- **Update it** as your preferences change — it's just a text file
+
+**Tip:** Keep a central folder for all your prompts, voice files, and project instructions. They accumulate fast and you don't want them scattered across your computer.
+:::
+::: {.column width="50%"}
+**Using it:**
+
+```
+Draft a reply to this student
+asking for a deadline extension.
+Use my voice file. Be kind but
+firm — the deadline stands.
+```
+
+**Output looks like you wrote it** — not like a chatbot wrote it. That's the point.
+:::
+::::
+
+::: {.alert-box}
+**Outlook limitation:** AI agents cannot currently interact with the Outlook desktop app — Microsoft gates this heavily. However, tools like Claude Code have direct integrations with Gmail and Google Calendar that allow reading, drafting, and even scheduling. The email demo here uses saved files, not a live inbox connection.
+:::
+
 # Next Steps
 
 ## Before next time (April 27)
