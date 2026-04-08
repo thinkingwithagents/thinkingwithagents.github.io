@@ -1,0 +1,20 @@
+project:
+  type: default
+  output-dir: ../docs/slides
+
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    code-overflow: wrap
+    embed-resources: true
+    width: 1280
+    height: 720
+    pdf-separate-fragments: false
+    pdf-max-pages-per-slide: 2
+    transition: fade
+    smaller: false
+    scrollable: true
+  beamer:
+    theme: metropolis
+    aspectratio: 169

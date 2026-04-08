@@ -1,0 +1,138 @@
+---
+title: "AI for Research and Advanced Teaching"
+subtitle: "AI Bootcamp for UVM Economics — Session 2"
+author:
+  - Emily Beam
+  - Erkmen Aslim
+date: 2026-04-27
+institute: "Department of Economics, University of Vermont"
+format:
+  revealjs: default
+  beamer: default
+---
+
+# Recap
+
+## Last time
+
+- AI ladder: Levels 0–5
+- Terminal + Claude Code: AI that reads/writes your files
+- Desktop apps: quick chat for simple tasks
+- Teaching: assignment + rubric generation
+
+Today: moving from **single prompts** to **multi-step workflows**.
+
+# The Compound Workflow
+
+## Plan → Execute → Review → Clear → Repeat
+
+- **Plan**: Tell the AI what you want before it starts working
+- **Execute**: Let it generate code, text, analysis
+- **Review**: Check the output — AI makes confident mistakes
+- **Clear context**: Start a fresh conversation for the next step
+- **Document**: Save decisions and lessons in a markdown file
+
+## Why clear context?
+
+AI tools have limited "memory" (context window).
+
+:::: {.columns}
+::: {.column width="50%"}
+**Long conversation**
+
+- Accumulates confusion
+- Slower responses
+- Earlier instructions get forgotten
+:::
+::: {.column width="50%"}
+**Fresh + focused**
+
+- Clear task = better output
+- Faster
+- You control what it "knows"
+:::
+::::
+
+Write results to **files**, not just chat. Files persist; chat doesn't.
+
+# Demo 1: Research Pipeline (Emily)
+
+## Research pipeline demo
+
+Starting from a raw dataset, using Claude Code to:
+
+1. **Explore**: "Read this data and describe what's in it"
+2. **Plan**: "Suggest 3 analyses for a paper on [topic]"
+3. **Code**: "Write Stata code to run [analysis]"
+4. **Report**: "Draft a 1-page summary with a table"
+
+Each step = fresh conversation + saved output.
+
+## What AI is good at here
+
+:::: {.columns}
+::: {.column width="50%"}
+**Accelerates**
+
+- Data exploration
+- Boilerplate code
+- Summary statistics
+- First-draft write-ups
+- Formatting tables
+:::
+::: {.column width="50%"}
+**Still needs you**
+
+- Research question
+- Identification strategy
+- Institutional knowledge
+- Interpreting results
+- Knowing when it's wrong
+:::
+::::
+
+# Demo 2: Web Scraping (Erkmen)
+
+## Web scraping with AI
+
+<!-- Erkmen: replace this slide -->
+
+- Identify a data source
+- Ask AI to write a scraper
+- Run it, inspect output
+- Ethics: terms of service, robots.txt
+
+# Demo 3: Automated Grading (Erkmen)
+
+## Automated grading workflow
+
+<!-- Erkmen: replace this slide -->
+
+- Feed submissions + rubric to AI
+- Get structured feedback per submission
+- Limitations: starting point, not final grade
+
+# Wrap-up
+
+## What to try next
+
+**Teaching**
+
+- Draft a new assignment or practice problems
+- Build a study guide from your lecture notes
+
+**Research**
+
+- Try the explore → plan → code workflow on your data
+- Use AI to clean messy data or reformat variables
+
+**Writing**
+
+- Revise a draft, check structure, restructure sections
+
+## Resources & costs
+
+- Bootcamp site: [eabeam.github.io/uvmecon-ai](https://eabeam.github.io/uvmecon-ai)
+- Claude Code: free tier + pay-as-you-go ($3–10/mo typical)
+- UVM Copilot: free for all UVM — [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
+- PDF funds may cover AI subscriptions — ask your chair

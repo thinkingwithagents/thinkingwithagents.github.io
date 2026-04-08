@@ -1,0 +1,122 @@
+---
+title: "Getting Started with AI Tools"
+subtitle: "AI Bootcamp for UVM Economics — Session 1"
+author:
+  - Emily Beam
+  - Erkmen Aslim
+date: 2026-04-22
+institute: "Department of Economics, University of Vermont"
+format:
+  revealjs: default
+  beamer: default
+---
+
+# Welcome
+
+## What is this?
+
+Two lunch sessions on AI tools for teaching and research.
+
+- **Today**: Getting started — what AI can do, live demos
+- **April 27**: Research pipelines, web scraping, automated grading
+
+No installation required. Watch, ask questions, try things later.
+
+# The AI Ladder
+
+## Where are you?
+
+| Level | Description |
+|-------|-------------|
+| 0 | Haven't tried it |
+| 1 | Tried it once, wasn't impressed |
+| 2 | Use occasionally for simple tasks |
+| 3 | Regular user, integrated into workflow |
+| 4 | Power user, multi-step workflows |
+| 5 | Building systems with AI |
+
+**Goal today:** Show you what Levels 3–4 look like.
+
+## The tools landscape
+
+:::: {.columns}
+::: {.column width="50%"}
+**Chat interfaces**
+
+- ChatGPT, Claude.ai, Copilot
+- Good for: quick questions, drafting
+- Limit: copy-paste in/out
+:::
+::: {.column width="50%"}
+**Terminal / Code tools**
+
+- Claude Code, GitHub Copilot
+- Good for: file access, iteration, pipelines
+- Limit: steeper learning curve
+:::
+::::
+
+UVM provides [Microsoft Copilot](https://go.uvm.edu/copilot) free to everyone.
+
+# Demo 1: Terminal + Claude Code (Emily)
+
+## What you're seeing
+
+1. **Ghostty** — a terminal app (any terminal works)
+2. **Claude Code** — AI assistant in the terminal
+3. Type a request → AI responds → iterate
+
+Key ideas:
+
+- AI can **read and write files** on your computer
+- **Iterate**: "Make it shorter," "Add a section on X"
+- Output is **Markdown** — readable as plain text or rendered nicely
+
+## Context and iteration
+
+**Context window**: The AI only "sees" what you show it. Be explicit.
+
+**Iteration tips:**
+
+- First output is a draft, not a final product
+- Refine: "Change the tone," "Add an example," "This is wrong because..."
+- Save to a file so you can pick up later
+
+**When it's wrong:** AI makes confident-sounding mistakes. Always review output, especially numbers and citations.
+
+# Demo 2: Desktop App (Erkmen)
+
+## Desktop AI tools
+
+<!-- Erkmen: replace this slide -->
+
+- ChatGPT / Claude desktop interface
+- When to use chat vs. terminal
+- Quick demo
+
+# Demo 3: Teaching Application (Erkmen)
+
+## AI for teaching tasks
+
+<!-- Erkmen: replace this slide -->
+
+- Creating assignment prompts
+- Building grading rubrics
+- Iterating on rubric criteria
+
+# Wrap-up
+
+## Before next time (April 27)
+
+- Try using an AI tool for **one real task** this week
+- Think of a research or teaching task you'd like to automate
+- Install guide: [eabeam.github.io/uvmecon-ai/prep.html](https://eabeam.github.io/uvmecon-ai/prep.html)
+
+**Next session:** Research pipelines, web scraping, automated grading
+
+## Resources
+
+- Bootcamp site: [eabeam.github.io/uvmecon-ai](https://eabeam.github.io/uvmecon-ai)
+- Claude Code docs: [docs.anthropic.com/en/docs/claude-code](https://docs.anthropic.com/en/docs/claude-code)
+- UVM Copilot (free): [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
+- Prompt guide: [docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
