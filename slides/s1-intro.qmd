@@ -94,6 +94,21 @@ The useful distinction is not the brand name. It is what the tool can actually d
 
 In practice, we use both. We often run multiple Claude and Codex sessions at the same time with different tasks separated into different windows.
 
+## Parallel workflows in practice
+
+:::: {.columns}
+::: {.column width="50%"}
+![](assets/multi-workflow-1.png){width="100%" .shot}
+:::
+::: {.column width="50%"}
+![](assets/multi-workflow-2.png){width="100%" .shot}
+:::
+::::
+
+- separate tasks into separate sessions instead of piling everything into one thread
+- one window might be planning, another writing, another code execution or review
+- this is a normal part of agentic workflow, not an advanced edge case
+
 ## Vocabulary {.smaller}
 
 A few shared terms will make the rest of the session easier to follow.
@@ -171,7 +186,7 @@ For coding tools, these are standing instruction files that are loaded automatic
 
 :::: {.columns}
 ::: {.column width="58%"}
-![](assets/preferences-placeholder.svg){width="100%" .shot}
+![](assets/claude-context-example.png){width="100%" .shot}
 :::
 ::: {.column width="42%"}
 - good place for preferences like full file paths, permission rules, and writing defaults
@@ -220,8 +235,9 @@ The context window is the tool's working memory for the current session.
 - as that working memory fills up, performance can get worse
 - larger, messier sessions are more likely to accumulate mistakes
 - this is one reason to separate tasks and work in multiple sessions
+- depending on the tool, session-management commands may include things like `compact`, `/compact`, or `/clear`
 
-## Workflow schematic
+## Session hygiene
 
 For larger tasks, it helps to separate planning, execution, and review rather than doing everything in one long messy thread.
 
@@ -234,17 +250,46 @@ flowchart LR
     E --> F[Continue]
 ```
 
-## Compacting
+Useful code-like reminders:
+
+- `plan`
+- `compact`
+- `/compact`
+- `/clear`
+
+## Checking Claude usage
+
+:::: {.columns}
+::: {.column width="54%"}
+![](assets/claude-usage-panel.png){width="100%" .shot}
+:::
+::: {.column width="46%"}
+Two useful commands:
+
+- `npx claude-spend`
+- `npx ccusage@latest`
+
+What this shows:
+
+- session limits
+- weekly limits
+- extra paid usage
+- current usage is not static and can change over time
+:::
+::::
+
+## Usage changes over time
 
 :::: {.columns}
 ::: {.column width="58%"}
-![](assets/compacting-placeholder.svg){width="100%" .shot}
+![](assets/claude-spend-overview.png){width="100%" .shot}
 :::
 ::: {.column width="42%"}
-- compacting summarizes the useful state, then lets you continue with a cleaner session
-- it is most helpful for larger tasks, not every tiny edit
-- Codex is currently better at doing this automatically
-- Claude is improving, but it is still useful to think about this explicitly
+- paid plans subsidize usage, so the effective pricing is often better than raw token prices
+- pricing is still somewhat unclear and can shift
+- some models are cheaper than others
+- rates can be higher at busy times
+- for Claude, peak time is often around `8 a.m.-1 p.m. EDT`, but that can change
 :::
 ::::
 
