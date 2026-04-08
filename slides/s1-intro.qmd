@@ -129,6 +129,38 @@ Instead of copying your syllabus into a chat window, the tool reads it directly 
 - You can build workflows you reuse later
 - Much better fit for real research and teaching work
 
+# Cost
+
+## What does this cost? {.smaller}
+
+:::: {.columns}
+::: {.column width="55%"}
+
+| Model | Input | Output |
+|---|---|---|
+| **GPT-4o** | $2.50 | $10.00 |
+| **GPT-4.1** | $2.00 | $8.00 |
+| **Claude Sonnet 4.6** | $3.00 | $15.00 |
+| **Claude Opus 4.6** | $15.00 | $75.00 |
+| **Claude Haiku 4.5** | $0.80 | $4.00 |
+| **Gemini 2.5 Pro** | $1.25 | $10.00 |
+| GPT-4o mini | $0.15 | $0.60 |
+
+*Per million tokens. A token ≈ ¾ of a word.*
+
+Most subscriptions ($20/mo) include generous usage before you hit limits. API pricing is pay-as-you-go.
+:::
+::: {.column width="45%"}
+![](assets/claude-spend-overview.png){width="100%" .shot}
+
+![](assets/claude-usage-panel.png){width="100%" .shot}
+:::
+::::
+
+::: {.aside}
+My usage since March: ~$2,200 on the API. The $20/mo subscription covers most people.
+:::
+
 # Standing instructions
 
 ## You can give the tool standing instructions
