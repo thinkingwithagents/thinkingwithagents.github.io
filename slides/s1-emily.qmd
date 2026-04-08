@@ -25,12 +25,12 @@ AI tools write in Markdown — a simple plain-text format that uses `#` for head
 ::: {.column width="50%"}
 **Raw file**
 
-![](assets/markdown-raw.png){width="100%"}
+![](assets/markdown-raw.png){width="100%" height="280px"}
 :::
 ::: {.column width="50%"}
 **Rendered in Typora**
 
-![](assets/markdown-pretty.png){width="100%"}
+![](assets/markdown-pretty.png){width="100%" height="280px"}
 :::
 ::::
 
@@ -101,7 +101,6 @@ Once the voice file exists, you can:
 - **Call it on demand**: "Draft this email using my voice file"
 - **Update it** as your preferences change — it's just a text file
 
-**Tip:** Keep a central folder for all your prompts, voice files, and project instructions. They accumulate fast and you don't want them scattered across your computer.
 :::
 ::: {.column width="50%"}
 **Using it:**
@@ -117,8 +116,16 @@ firm — the deadline stands.
 :::
 ::::
 
+::: {.aside}
+Tip: Keep a central folder for all your prompts and voice files. They accumulate fast.
+:::
+
+## A note on email integrations
+
+Tools like Claude Code have direct integrations with **Gmail and Google Calendar** — reading, drafting, and scheduling.
+
 ::: {.alert-box}
-**Outlook limitation:** AI agents cannot currently interact with the Outlook desktop app — Microsoft gates this heavily. However, tools like Claude Code have direct integrations with Gmail and Google Calendar that allow reading, drafting, and even scheduling. The email demo here uses saved files, not a live inbox connection.
+AI agents cannot currently interact with the **Outlook** desktop app — Microsoft gates this heavily. The demos here use saved files, not a live inbox connection.
 :::
 
 # Next Steps
