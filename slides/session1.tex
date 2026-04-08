@@ -1,0 +1,170 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{Getting Started with AI Tools}
+\subtitle{AI Bootcamp for UVM Economics --- Session 1}
+\author{Emily Beam \and Erkmen Aslim}
+\date{April 22, 2026}
+\institute{Department of Economics, University of Vermont}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+\section{Welcome}
+% ============================================================
+
+\begin{frame}{What is this?}
+Two lunch sessions on AI tools for teaching and research.
+
+\bigskip
+
+\begin{itemize}
+    \item Today: Getting started --- what AI can do, live demos
+    \item April 27: Research pipelines, web scraping, automated grading
+\end{itemize}
+
+\bigskip
+No installation required. Watch, ask questions, try things later.
+\end{frame}
+
+% ============================================================
+\section{The AI Ladder}
+% ============================================================
+
+\begin{frame}{Where are you?}
+\begin{table}
+\begin{tabular}{cl}
+\toprule
+Level & Description \\
+\midrule
+0 & Haven't tried it \\
+1 & Tried it once, wasn't impressed \\
+2 & Use occasionally for simple tasks \\
+3 & Regular user, integrated into workflow \\
+4 & Power user, multi-step workflows \\
+5 & Building systems with AI \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\bigskip
+\textbf{Goal today:} Show you what Levels 3--4 look like.
+\end{frame}
+
+\begin{frame}{The tools landscape}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Chat interfaces}
+\begin{itemize}
+    \item ChatGPT, Claude.ai, Copilot
+    \item Good for: quick questions, drafting
+    \item Limit: copy-paste in/out
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\textbf{Terminal / Code tools}
+\begin{itemize}
+    \item Claude Code, GitHub Copilot
+    \item Good for: file access, iteration, pipelines
+    \item Limit: steeper learning curve
+\end{itemize}
+\end{column}
+\end{columns}
+
+\bigskip
+UVM provides \href{https://go.uvm.edu/copilot}{Microsoft Copilot} free to everyone.
+\end{frame}
+
+% ============================================================
+\section{Demo 1: Terminal + Claude Code (Emily)}
+% ============================================================
+
+% --- SHOW DURING DEMO ---
+\begin{frame}{What you're seeing}
+\begin{enumerate}
+    \item \textbf{Ghostty} --- a terminal app (any terminal works)
+    \item \textbf{Claude Code} --- AI assistant in the terminal
+    \item Type a request $\rightarrow$ AI responds $\rightarrow$ iterate
+\end{enumerate}
+
+\bigskip
+Key ideas:
+\begin{itemize}
+    \item AI can \textbf{read and write files} on your computer
+    \item \textbf{Iterate}: ``Make it shorter,'' ``Add a section on X''
+    \item Output is \textbf{Markdown} --- readable as plain text or rendered nicely
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Context and iteration}
+\textbf{Context window}: The AI only ``sees'' what you show it. Be explicit.
+
+\bigskip
+\textbf{Iteration tips:}
+\begin{itemize}
+    \item First output is a draft, not a final product
+    \item Refine: ``Change the tone,'' ``Add an example,'' ``This is wrong because\ldots''
+    \item Save to a file so you can pick up later
+\end{itemize}
+
+\bigskip
+\textbf{When it's wrong:} AI makes confident-sounding mistakes. Always review output, especially numbers and citations.
+\end{frame}
+
+% ============================================================
+\section{Demo 2: Desktop App (Erkmen)}
+% ============================================================
+
+% --- Erkmen: add or replace slides here ---
+\begin{frame}{Desktop AI tools}
+% Placeholder --- Erkmen to fill in
+\begin{itemize}
+    \item ChatGPT / Claude desktop interface
+    \item When to use chat vs.\ terminal
+    \item Quick demo
+\end{itemize}
+\end{frame}
+
+% ============================================================
+\section{Demo 3: Teaching Application (Erkmen)}
+% ============================================================
+
+% --- Erkmen: add or replace slides here ---
+\begin{frame}{AI for teaching tasks}
+% Placeholder --- Erkmen to fill in
+\begin{itemize}
+    \item Creating assignment prompts
+    \item Building grading rubrics
+    \item Iterating on rubric criteria
+\end{itemize}
+\end{frame}
+
+% ============================================================
+\section{Wrap-up}
+% ============================================================
+
+\begin{frame}{Before next time (April 27)}
+\begin{itemize}
+    \item Try using an AI tool for \textbf{one real task} this week
+    \item Think of a research or teaching task you'd like to automate
+    \item Install guide: \url{https://eabeam.github.io/uvmecon-ai/prep.html}
+\end{itemize}
+
+\bigskip
+\textbf{Next session:} Research pipelines, web scraping, automated grading
+\end{frame}
+
+\begin{frame}{Resources}
+\begin{itemize}
+    \item Bootcamp site: \url{https://eabeam.github.io/uvmecon-ai}
+    \item Claude Code docs: \url{https://docs.anthropic.com/en/docs/claude-code}
+    \item UVM Copilot (free): \url{https://go.uvm.edu/copilot}
+    \item Anthropic prompt guide: \url{https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview}
+\end{itemize}
+\end{frame}
+
+\end{document}

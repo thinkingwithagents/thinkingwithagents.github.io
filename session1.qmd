@@ -24,6 +24,11 @@ Where are you today?
 
 **Our goal today**: Get everyone to at least Level 2, and show you what Levels 3–4 look like.
 
+::: {.callout-note}
+## Format
+This is a watch-along session — we'll demo everything live. No installation required. Slides will be up during generation/loading time so you can follow the concepts while the AI works.
+:::
+
 ## Part 1: Terminal + Claude Code (Emily) {#terminal-demo}
 
 *~30 minutes*
@@ -37,14 +42,14 @@ The desktop chat interfaces (ChatGPT, Claude.ai) are great for quick questions. 
 - **Reproducibility**: Save your workflow, rerun it later
 - **Power tools**: Claude Code can search your files, run code, and build things
 
-### Setup walkthrough
+### What you're seeing
 
-1. **Open Ghostty** (or Terminal.app — any terminal works)
-2. **Launch Claude Code**: Type `claude` and hit Enter
-3. **Your first prompt**: Ask it something useful right now
+1. **Ghostty** — a terminal app (any terminal works; this one just looks nice)
+2. **Claude Code** — an AI assistant that runs in the terminal. Type `claude` to launch.
+3. **Live prompting** — we type a request, the AI responds, we iterate.
 
 ::: {.callout-tip}
-## Good first prompts for faculty
+## Things you could try later on your own
 - "Read my syllabus at [path] and list all the due dates in a table"
 - "I have a CSV of student grades. Summarize the distribution and flag any outliers."
 - "Draft a response to this student email: [paste email]"

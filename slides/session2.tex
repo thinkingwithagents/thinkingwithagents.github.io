@@ -1,0 +1,183 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{AI for Research and Advanced Teaching}
+\subtitle{AI Bootcamp for UVM Economics --- Session 2}
+\author{Emily Beam \and Erkmen Aslim}
+\date{April 27, 2026}
+\institute{Department of Economics, University of Vermont}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+\section{Recap + The Compound Workflow}
+% ============================================================
+
+\begin{frame}{Last time}
+\begin{itemize}
+    \item AI ladder: Levels 0--5
+    \item Terminal + Claude Code: AI that reads/writes your files
+    \item Desktop apps: quick chat for simple tasks
+    \item Teaching: assignment + rubric generation
+\end{itemize}
+
+\bigskip
+Today: moving from \textbf{single prompts} to \textbf{multi-step workflows}.
+\end{frame}
+
+\begin{frame}{The compound workflow}
+\begin{center}
+\Large
+Plan $\rightarrow$ Execute $\rightarrow$ Review $\rightarrow$ Clear $\rightarrow$ Repeat
+\end{center}
+
+\bigskip
+\begin{itemize}
+    \item \textbf{Plan}: Tell the AI what you want before it starts working
+    \item \textbf{Execute}: Let it generate code, text, analysis
+    \item \textbf{Review}: Check the output --- AI makes confident mistakes
+    \item \textbf{Clear context}: Start a fresh conversation for the next step
+    \item \textbf{Document}: Save decisions and lessons in a markdown file
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Why clear context?}
+AI tools have limited ``memory'' (context window).
+
+\bigskip
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\textbf{Long conversation}
+\begin{itemize}
+    \item Accumulates confusion
+    \item Slower responses
+    \item Earlier instructions get forgotten
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+\textbf{Fresh + focused}
+\begin{itemize}
+    \item Clear task = better output
+    \item Faster
+    \item You control what it ``knows''
+\end{itemize}
+\end{column}
+\end{columns}
+
+\bigskip
+Write results to \textbf{files}, not just chat. Files persist; chat doesn't.
+\end{frame}
+
+% ============================================================
+\section{Demo 1: Research Pipeline (Emily)}
+% ============================================================
+
+% --- SHOW DURING DEMO ---
+\begin{frame}{Research pipeline demo}
+Starting from a raw dataset, using Claude Code to:
+
+\bigskip
+\begin{enumerate}
+    \item \textbf{Explore}: ``Read this data and describe what's in it''
+    \item \textbf{Plan}: ``Suggest 3 analyses for a paper on [topic]''
+    \item \textbf{Code}: ``Write Stata code to run [analysis]''
+    \item \textbf{Report}: ``Draft a 1-page summary with a table''
+\end{enumerate}
+
+\bigskip
+Each step = fresh conversation + saved output.
+\end{frame}
+
+\begin{frame}{What AI is good at here}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\textbf{Accelerates}
+\begin{itemize}
+    \item Data exploration
+    \item Boilerplate code
+    \item Summary statistics
+    \item First-draft write-ups
+    \item Formatting tables
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+\textbf{Still needs you}
+\begin{itemize}
+    \item Research question
+    \item Identification strategy
+    \item Institutional knowledge
+    \item Interpreting results
+    \item Knowing when it's wrong
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ============================================================
+\section{Demo 2: Web Scraping (Erkmen)}
+% ============================================================
+
+% --- Erkmen: add or replace slides here ---
+\begin{frame}{Web scraping with AI}
+% Placeholder --- Erkmen to fill in
+\begin{itemize}
+    \item Identify a data source
+    \item Ask AI to write a scraper
+    \item Run it, inspect output
+    \item Ethics: terms of service, robots.txt
+\end{itemize}
+\end{frame}
+
+% ============================================================
+\section{Demo 3: Automated Grading (Erkmen)}
+% ============================================================
+
+% --- Erkmen: add or replace slides here ---
+\begin{frame}{Automated grading workflow}
+% Placeholder --- Erkmen to fill in
+\begin{itemize}
+    \item Feed submissions + rubric to AI
+    \item Get structured feedback per submission
+    \item Limitations: starting point, not final grade
+\end{itemize}
+\end{frame}
+
+% ============================================================
+\section{Wrap-up}
+% ============================================================
+
+\begin{frame}{What to try next}
+\textbf{Teaching}
+\begin{itemize}
+    \item Draft a new assignment or practice problems
+    \item Build a study guide from your lecture notes
+\end{itemize}
+
+\bigskip
+\textbf{Research}
+\begin{itemize}
+    \item Try the explore $\rightarrow$ plan $\rightarrow$ code workflow on your data
+    \item Use AI to clean messy data or reformat variables
+\end{itemize}
+
+\bigskip
+\textbf{Writing}
+\begin{itemize}
+    \item Revise a draft, check structure, restructure sections
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Resources \& costs}
+\begin{itemize}
+    \item Bootcamp site: \url{https://eabeam.github.io/uvmecon-ai}
+    \item Claude Code: free tier + pay-as-you-go (\$3--10/mo typical)
+    \item UVM Copilot: free for all UVM --- \url{https://go.uvm.edu/copilot}
+    \item PDF funds may cover AI subscriptions --- ask your chair
+\end{itemize}
+\end{frame}
+
+\end{document}

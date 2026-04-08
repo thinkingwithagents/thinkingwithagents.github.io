@@ -3,13 +3,13 @@ title: "Participant Prep Guide"
 subtitle: "What to install before the AI Bootcamp"
 ---
 
-## Before Session 1 (April 22)
+## Before the Bootcamp
 
-Please install the following before the first session. If you get stuck, don't worry — we'll help during the session.
+No installation needed — both sessions are demo-based. Just show up with your lunch.
 
-### Required
+If you want to follow along on your own machine or try things after the bootcamp, here's what we use:
 
-**Claude Code** (terminal-based AI assistant)
+### Claude Code (terminal-based AI assistant)
 
 1. Open your terminal (Terminal.app on Mac, or Ghostty if installed)
 2. Run: `npm install -g @anthropic-ai/claude-code`
@@ -20,26 +20,19 @@ Please install the following before the first session. If you get stuck, don't w
 If you don't have `npm`, install [Node.js](https://nodejs.org/) first (LTS version). On Mac: `brew install node` if you have Homebrew.
 :::
 
-### Recommended
-
-**Ghostty** — a fast, clean terminal app
+### Ghostty — a fast, clean terminal app
 
 - Download from [ghostty.org](https://ghostty.org)
-- Why? Nicer than the default Terminal.app. Not required, but makes the demo easier to follow.
+- Nicer than the default Terminal.app. Not required — any terminal works.
 
-**Typora** — a markdown editor/viewer
+### Typora — a markdown editor/viewer
 
 - Download from [typora.io](https://typora.io)
-- Why? Claude Code outputs markdown files. Typora renders them beautifully so you can review, edit, and share.
+- Claude Code outputs markdown files. Typora renders them nicely for review and sharing.
 
-### Already have these? You're set.
+### VS Code (alternative)
 
-If you already use VS Code, Claude Code also works as a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code). You can use whichever interface you prefer.
-
-## What to bring
-
-- Laptop (Mac or Windows) with power cable
-- A real task you'd like to try — a syllabus to reformat, data to explore, an email to draft, an assignment to create
+Claude Code also works as a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code) if you prefer that over the terminal.
 
 ## Cost
 
