@@ -92,6 +92,7 @@ AI tools produce Markdown files (`.md`). A good viewer makes them immediately re
 | **[Elicit](https://elicit.com)** | Literature review, evidence synthesis, structured research reports |
 | **[Scite](https://scite.ai/)** | Citation context — see whether later papers support or contradict a claim |
 | **[ResearchRabbit](https://www.researchrabbit.ai/)** | Citation-network exploration and related paper discovery |
+| **[Refine](https://refine.ink)** | AI-powered academic writing and editing for research papers |
 
 ## Workflow patterns worth trying
 
