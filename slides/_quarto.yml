@@ -18,4 +18,4 @@ format:
     pdf-max-pages-per-slide: 2
     transition: none
     smaller: false
-    scrollable: true
+    scrollable: false
