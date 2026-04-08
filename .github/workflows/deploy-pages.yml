@@ -1,0 +1,73 @@
+name: Build and Deploy Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Detect Chrome or Chromium
+        id: browser
+        shell: bash
+        run: |
+          set -euo pipefail
+          for candidate in \
+            "$(command -v google-chrome || true)" \
+            "$(command -v google-chrome-stable || true)" \
+            "$(command -v chromium || true)" \
+            "$(command -v chromium-browser || true)"; do
+            if [ -n "$candidate" ] && [ -x "$candidate" ]; then
+              echo "path=$candidate" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+
+          echo "Could not find Chrome or Chromium on the runner." >&2
+          exit 1
+
+      - name: Build site and slides
+        shell: bash
+        env:
+          CHROME: ${{ steps.browser.outputs.path }}
+        run: |
+          chmod +x ./render.sh ./slides/render_pdf.sh
+          ./render.sh all
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -4,14 +4,14 @@
     "href": "session2.html",
     "title": "Session 2: AI for Research and Advanced Teaching",
     "section": "",
-    "text": "Time: 1.5 hours (lunch session) Goal: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nPart 1: AI for Research (Beam)\nHTML / PDF\n\n\nPart 2: Web Scraping + Grading (Aslim)\nHTML / PDF"
+    "text": "Time: 1.5 hours (lunch session) Goal: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nEmily: Slide Creation, Teaching, and Research Workflows\nHTML / PDF\n\n\nErkmen: Web Scraping + Automated Grading\nHTML / PDF"
   },
   {
     "objectID": "session2.html#overview",
     "href": "session2.html#overview",
     "title": "Session 2: AI for Research and Advanced Teaching",
     "section": "",
-    "text": "Time: 1.5 hours (lunch session) Goal: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nPart 1: AI for Research (Beam)\nHTML / PDF\n\n\nPart 2: Web Scraping + Grading (Aslim)\nHTML / PDF"
+    "text": "Time: 1.5 hours (lunch session) Goal: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nEmily: Slide Creation, Teaching, and Research Workflows\nHTML / PDF\n\n\nErkmen: Web Scraping + Automated Grading\nHTML / PDF"
   },
   {
     "objectID": "session2.html#compound-workflow",
@@ -24,22 +24,22 @@
     "objectID": "session2.html#research-demo",
     "href": "session2.html#research-demo",
     "title": "Session 2: AI for Research and Advanced Teaching",
-    "section": "Part 1: Research Pipeline Demo (Emily)",
-    "text": "Part 1: Research Pipeline Demo (Emily)\n~35 minutes\n\nLive demo: Raw data → analysis plan → code → report\nStarting from a raw dataset, we’ll use Claude Code to:\n\nExplore the data: “Read this CSV and describe what’s in it. How many observations? What are the variables?”\nPropose an analysis plan: “Given these variables, suggest 3 analyses that would be interesting for a research paper on [topic].”\nWrite analysis code: “Write Stata code to run [analysis]. Use clear variable labels and save the output.”\nGenerate a summary report: “Based on these results, draft a 1-page summary with key findings, a table, and a limitations paragraph.”\n\n\n\n\n\n\n\n\nNoteWhat this demo is NOT\n\n\n\nThis is not a replacement for careful research design. The AI doesn’t know your research question, institutional context, or identification strategy. It’s a tool for accelerating the mechanical parts — data cleaning, boilerplate code, first-draft summaries — so you can focus on the thinking."
+    "section": "Emily: Research Pipeline Demo",
+    "text": "Emily: Research Pipeline Demo\n~35 minutes\n\nLive demo: Raw data → analysis plan → code → report\nStarting from a raw dataset, we’ll use Claude Code to:\n\nExplore the data: “Read this CSV and describe what’s in it. How many observations? What are the variables?”\nPropose an analysis plan: “Given these variables, suggest 3 analyses that would be interesting for a research paper on [topic].”\nWrite analysis code: “Write Stata code to run [analysis]. Use clear variable labels and save the output.”\nGenerate a summary report: “Based on these results, draft a 1-page summary with key findings, a table, and a limitations paragraph.”\n\n\n\n\n\n\n\n\nNoteWhat this demo is NOT\n\n\n\nThis is not a replacement for careful research design. The AI doesn’t know your research question, institutional context, or identification strategy. It’s a tool for accelerating the mechanical parts — data cleaning, boilerplate code, first-draft summaries — so you can focus on the thinking."
   },
   {
     "objectID": "session2.html#web-scraper",
     "href": "session2.html#web-scraper",
     "title": "Session 2: AI for Research and Advanced Teaching",
-    "section": "Part 2: Web Scraping Demo (Erkmen)",
-    "text": "Part 2: Web Scraping Demo (Erkmen)\n~20 minutes"
+    "section": "Erkmen: Web Scraping Demo",
+    "text": "Erkmen: Web Scraping Demo\n~20 minutes"
   },
   {
     "objectID": "session2.html#automated-grading",
     "href": "session2.html#automated-grading",
     "title": "Session 2: AI for Research and Advanced Teaching",
-    "section": "Part 3: Automated Grading (Erkmen)",
-    "text": "Part 3: Automated Grading (Erkmen)\n~20 minutes"
+    "section": "Erkmen: Automated Grading",
+    "text": "Erkmen: Automated Grading\n~20 minutes"
   },
   {
     "objectID": "session2.html#wrapup",
@@ -53,49 +53,70 @@
     "href": "resources.html",
     "title": "Outside Resources",
     "section": "",
-    "text": "This page is a running list of useful outside resources: talks, articles, demos, explainers, and people worth following. It is broader than the bootcamp itself."
+    "text": "This page is a broader reference list for people who want to keep going after the bootcamp. It is organized by resource type so you can jump directly to product docs, teaching guidance, research tools, or workflow examples."
   },
   {
     "objectID": "resources.html#how-to-use-this-page",
     "href": "resources.html#how-to-use-this-page",
     "title": "Outside Resources",
     "section": "How to use this page",
-    "text": "How to use this page\nFor each link, try to add:\n\nwhat it is\nwhy it is useful\nwho it is for\nwhether it is more about teaching, research, or general AI literacy"
+    "text": "How to use this page\nPick one section that matches what you need right now:\n\nofficial documentation if you want to learn a tool directly\nteaching guidance if you want faculty-oriented pedagogy examples\nresearch and literature tools if you want help with discovery or evidence synthesis\nworkflow examples if you want to see how other people actually use these tools\nnotes and productivity tools if your bottleneck is organization rather than generation\n\nYou do not need to read everything here."
   },
   {
-    "objectID": "resources.html#talks-and-explainers",
-    "href": "resources.html#talks-and-explainers",
+    "objectID": "resources.html#official-tool-documentation",
+    "href": "resources.html#official-tool-documentation",
     "title": "Outside Resources",
-    "section": "Talks and explainers",
-    "text": "Talks and explainers\n\nPaul Goldsmith-Pinkham\n\nGetting started with Claude Code A good starting point for faculty who want to understand what Claude Code is for, how it fits into a workflow, and why working in the terminal feels different from ordinary chat.\n\n\n\nClaude Blattman\n\nclaudeblattman.com Useful for skills, templates, and Claude Code-oriented workflow examples. Good for people who want concrete patterns rather than abstract prompting advice."
+    "section": "Official tool documentation",
+    "text": "Official tool documentation\n\nUVM and Microsoft\n\nMicrosoft Copilot at UVM Best starting point if you want the UVM-supported option.\nMicrosoft Copilot docs Useful if you want the broader Microsoft ecosystem view.\n\n\n\nAnthropic / Claude\n\nClaude Code docs Best starting point for the terminal-based, file-aware workflow featured in the bootcamp.\nAnthropic prompt engineering guide Useful for improving prompting and workflow structure.\nClaude Main chat-first entry point for Claude.\n\n\n\nOpenAI / ChatGPT / Codex\n\nChatGPT Main chat-first entry point for ChatGPT.\nChatGPT overview Good orientation if you want a quick product overview first.\nOpenAI Codex docs Official reference for OpenAI’s agentic coding and file-workflow tool.\nOpenAI Codex CLI getting started Best if you want the terminal workflow specifically.\nOpenAI ChatGPT Education docs Useful if you want educator-oriented OpenAI guidance.\n\n\n\nAlternative editor-based workflow\n\nCursor Popular option for people who want an editor-based AI workflow rather than a terminal-first workflow.\nCursor docs Useful if you want to compare editor-based and terminal-based workflows."
   },
   {
-    "objectID": "resources.html#tool-documentation-and-guides",
-    "href": "resources.html#tool-documentation-and-guides",
+    "objectID": "resources.html#teaching-and-pedagogy-guidance",
+    "href": "resources.html#teaching-and-pedagogy-guidance",
     "title": "Outside Resources",
-    "section": "Tool documentation and guides",
-    "text": "Tool documentation and guides\n\nAnthropic / Claude\n\nClaude app\nClaude Code\nprompt-writing or workflow guides\n\n\n\nOpenAI / ChatGPT / Codex\n\nChatGPT guides\nCodex guides\nworkflow examples\n\n\n\nCursor\n\nCursor A popular AI code editor for people who want an editor-based workflow rather than a pure terminal workflow.\nCursor docs Useful if you want to compare Cursor’s editor-based workflow to Claude Code or Codex.\n\n\n\nObsidian\n\nObsidian A flexible notes app that works well as a personal knowledge base, project notebook, or place to store prompts, reusable instructions, and session notes.\nObsidian Help Useful if you want to learn linking, vault structure, templates, and other features for organizing AI-assisted work over time.\n\n\n\nMicrosoft / Copilot\n\nUVM Copilot access info\nMicrosoft 365 Copilot guides for Word, Excel, PowerPoint, or Outlook"
+    "section": "Teaching and pedagogy guidance",
+    "text": "Teaching and pedagogy guidance\n\nHigher-ed teaching guidance\n\nColumbia CTL: Teaching and Learning in the Age of AI Strong higher-ed resource for faculty trying to think through teaching, assignments, and policy.\nColumbia CTL: Faculty use cases Concrete examples of how faculty across disciplines are using AI.\n\n\n\nTeaching use cases to try\nThese are the teaching tasks where the tools above tend to be most useful:\n\ndrafting assignment prompts\nrevising instructions for clarity\nbuilding rubrics\ngenerating study guides\ncreating practice questions\nscaffolding feedback comments\n\nIf you want a first experiment, try one bounded teaching task using an existing course document rather than starting from a blank page."
   },
   {
-    "objectID": "resources.html#teaching-focused-resources",
-    "href": "resources.html#teaching-focused-resources",
+    "objectID": "resources.html#research-and-literature-tools",
+    "href": "resources.html#research-and-literature-tools",
     "title": "Outside Resources",
-    "section": "Teaching-focused resources",
-    "text": "Teaching-focused resources\n\nassignment design\nrubric design\nfeedback workflows\nAI policy language"
+    "section": "Research and literature tools",
+    "text": "Research and literature tools\n\nLiterature review and evidence synthesis\n\nElicit Good for literature review, evidence synthesis, and research reports.\nScite Especially useful for citation context and seeing whether later work supports or contrasts with a claim.\n\n\n\nLiterature discovery and mapping\n\nResearchRabbit Useful for citation-network exploration and discovering related work.\n\n\n\nResearch tasks where AI is often useful\n\nliterature review organization\ncoding assistance\ndata cleaning and exploration\nfirst-pass tables, graphs, and memos\nwriting and revision\nproject handoff notes and reproducibility checklists\n\nThe safer pattern for research is usually:\n\nkeep the task narrow\nsave intermediate outputs\nreview before building on them\navoid exposing protected raw data unless you have a clear reason and safe setup"
   },
   {
-    "objectID": "resources.html#research-focused-resources",
-    "href": "resources.html#research-focused-resources",
+    "objectID": "resources.html#workflow-examples-and-explainers",
+    "href": "resources.html#workflow-examples-and-explainers",
     "title": "Outside Resources",
-    "section": "Research-focused resources",
-    "text": "Research-focused resources\n\nliterature review workflows\ncoding assistance\ndata cleaning and exploration\nwriting and revision\npaper-reading AI tool or paper-summarization service Placeholder: Emily has a specific reference in mind and will fill this in later."
+    "section": "Workflow examples and explainers",
+    "text": "Workflow examples and explainers\nThese are helpful when official documentation feels too product-focused and you want to see how a real person uses the tools.\n\nPaul Goldsmith-Pinkham\n\nGetting started with Claude Code A good introduction to why terminal-based AI work feels different from ordinary chat.\n\n\n\nClaude Blattman\n\nClaude Blattman Useful for concrete workflows, reusable patterns, and examples aimed at professionals who are not primarily programmers."
+  },
+  {
+    "objectID": "resources.html#notes-markdown-and-knowledge-management",
+    "href": "resources.html#notes-markdown-and-knowledge-management",
+    "title": "Outside Resources",
+    "section": "Notes, Markdown, and knowledge management",
+    "text": "Notes, Markdown, and knowledge management\nThese are useful because AI tools often produce Markdown files, memos, and reusable prompts.\n\nMarkdown viewers and editors\n\nTypora A good default Markdown viewer if you want AI-generated .md files to look like normal formatted text immediately.\nZettlr Worth a look if you want a more writing-oriented Markdown environment.\n\n\n\nNotes and project memory\n\nObsidian Useful for storing prompts, session notes, project instructions, and reusable workflows.\nObsidian Help Good if you want to learn links, templates, vault organization, and lightweight knowledge management."
+  },
+  {
+    "objectID": "resources.html#meeting-capture-and-dictation-tools",
+    "href": "resources.html#meeting-capture-and-dictation-tools",
+    "title": "Outside Resources",
+    "section": "Meeting capture and dictation tools",
+    "text": "Meeting capture and dictation tools\nThese are optional, but useful if your work starts from spoken notes, meetings, or rough fragments.\n\nGranola Useful for meeting capture, searchable notes, and turning conversation into a more usable record.\nWispr Flow Useful for dictation-heavy workflows and quick drafting on computer or phone."
+  },
+  {
+    "objectID": "resources.html#workflow-ideas-worth-exploring-later",
+    "href": "resources.html#workflow-ideas-worth-exploring-later",
+    "title": "Outside Resources",
+    "section": "Workflow ideas worth exploring later",
+    "text": "Workflow ideas worth exploring later\nIf the basic tools feel useful, the next level is not just better prompting. It is better workflow structure:\n\nreusable prompts\nproject instruction files such as CLAUDE.md or AGENTS.md\nsaved Markdown outputs\ntask plans and handoff notes\ncomparing two outputs instead of trusting the first one"
   },
   {
     "objectID": "resources.html#notes",
     "href": "resources.html#notes",
     "title": "Outside Resources",
     "section": "Notes",
-    "text": "Notes\n\nKeep this page broader than the bootcamp itself.\nIf a resource becomes central to a session, link it from the relevant session page too."
+    "text": "Notes\n\nKeep this page broader than the bootcamp itself.\nIf a resource becomes central to a session, link it from the relevant session page too.\nIf a link here stops being useful, delete it rather than letting this page become a graveyard."
   },
   {
     "objectID": "modules/a1-what-llms-do.html",

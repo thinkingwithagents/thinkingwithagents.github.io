@@ -12,8 +12,8 @@ subtitle: "April 27, 2026 — AI Bootcamp for UVM Economics"
 
 | Deck | Format |
 |------|--------|
-| Part 1: AI for Research (Beam) | [HTML](slides/s2-part1.html){target="_blank"} / [PDF](slides/s2-part1.pdf) |
-| Part 2: Web Scraping + Grading (Aslim) | [HTML](slides/s2-part2.html){target="_blank"} / [PDF](slides/s2-part2.pdf) |
+| Emily: Slide Creation, Teaching, and Research Workflows | [HTML](slides/s2-part1.html){target="_blank"} / [PDF](slides/s2-part1.pdf) |
+| Erkmen: Web Scraping + Automated Grading | [HTML](slides/s2-part2.html){target="_blank"} / [PDF](slides/s2-part2.pdf) |
 
 ## Recap: The Compound Workflow (Emily) {#compound-workflow}
 
@@ -36,7 +36,7 @@ Plan → Execute → Review → Clear context → Repeat
 - **Review each step**: AI makes confident-sounding mistakes. Check before building on top.
 - **Document as you go**: Keep a running markdown file of decisions, prompts that worked, and lessons learned.
 
-## Part 1: Research Pipeline Demo (Emily) {#research-demo}
+## Emily: Research Pipeline Demo {#research-demo}
 
 *~35 minutes*
 
@@ -71,7 +71,7 @@ Steps:
 This is not a replacement for careful research design. The AI doesn't know your research question, institutional context, or identification strategy. It's a tool for accelerating the mechanical parts — data cleaning, boilerplate code, first-draft summaries — so you can focus on the thinking.
 :::
 
-## Part 2: Web Scraping Demo (Erkmen) {#web-scraper}
+## Erkmen: Web Scraping Demo {#web-scraper}
 
 *~20 minutes*
 
@@ -83,7 +83,7 @@ Suggested flow:
 4. Discuss when this is appropriate (ethics, terms of service, robots.txt)
 -->
 
-## Part 3: Automated Grading (Erkmen) {#automated-grading}
+## Erkmen: Automated Grading {#automated-grading}
 
 *~20 minutes*
 

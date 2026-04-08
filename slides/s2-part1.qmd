@@ -1,57 +1,93 @@
 ---
-title: "Teaching + Research Workflows"
-subtitle: "AI Bootcamp — Session 2, Part 1"
+title: "Emily: Slide Creation, Teaching, and Research Workflows"
+subtitle: "AI Bootcamp — Session 2"
 author: Emily Beam
 date: 2026-04-27
 format:
   revealjs: default
 ---
 
-# Day 2
+# Emily Session 2
 
-## Two Emily examples
+## Four concrete use cases
 
-Today is built around two concrete applications:
+Today is built around workflows that many faculty already do:
 
-- **Teaching application**: literature review workflow
-- **Research application**: raw data to report
+- slide creation
+- teaching applications
+- conducting data analysis
+- a few additional repeatable use cases
 
 The point is not one magic prompt. The point is a documented workflow from starting materials to a usable output.
 
-# Teaching Application
+# Slide Creation
 
-## Literature review
+## From rough notes to usable slides
 
-This is the teaching-side example:
+This is a good AI task because slide drafting is repetitive but still judgment-heavy.
 
-- start from a question, topic, or pile of readings
-- use AI to organize themes, compare papers, and draft a first-pass synthesis
-- turn scattered notes into a more teachable structure
-- keep the instructor in charge of judgment, interpretation, and final framing
+- start from notes, a memo, or a rough outline
+- ask for a slide sequence before asking for slide text
+- turn long prose into headlines plus a few bullets
+- tighten wording after you see the structure
 
-## What the literature review workflow can do
+## A good slide workflow
 
-Useful outputs:
+For bigger presentation tasks, a useful pattern is:
 
-- a comparison table
-- a theme-based summary
-- a first-pass annotated bibliography
-- a short lecture or discussion memo
-- a list of gaps, disagreements, or open questions
+`prompt` -> `plan` -> `review` -> `clear` -> `draft` -> `review again`
+
+That helps you avoid one long, messy conversation.
 
 ## What still needs you
 
-- deciding which papers matter
-- catching bad summaries or invented claims
-- deciding how much nuance to preserve
-- choosing what is pedagogically useful
-- checking any quotations or citations
+- deciding the audience and tone
+- choosing what to cut
+- deciding which examples actually land
+- replacing generic bullets with your real content
 
-# Research Application
+# Teaching Applications
+
+## Best low-risk teaching uses
+
+The most useful teaching tasks are usually drafting and revision tasks:
+
+- assignment prompt first draft
+- rubric scaffolding
+- study guides
+- practice questions
+- editing for clarity
+
+## Example: literature review to teaching memo
+
+One teaching-side example is a literature review workflow:
+
+- start from a topic, question, or pile of readings
+- organize themes and compare papers
+- draft a synthesis, annotated bibliography, or discussion memo
+- turn scattered notes into something teachable
+
+## Example: assignment and rubric workflow
+
+Another strong teaching workflow is:
+
+- draft an assignment prompt from learning goals
+- revise for clarity and course level
+- build a rubric with criteria and performance levels
+- use the rubric to draft feedback comments
+
+## What not to outsource
+
+- final grading judgment
+- course alignment and standards
+- fairness decisions
+- anything involving sensitive student situations
+
+# Conducting Data Analysis
 
 ## Raw data to report
 
-This is the research-side example:
+This is the research-side workflow:
 
 - start with uncleaned data
 - make a plan
@@ -61,8 +97,6 @@ This is the research-side example:
 - review results
 - write a short report
 
-The core message is that AI can help connect these steps, but it does not remove the need to review them.
-
 ## Workflow in one line
 
 For this kind of task, the workflow is:
@@ -71,24 +105,6 @@ For this kind of task, the workflow is:
 
 Each step is narrow enough to review, rerun, and improve.
 
-## Why this matters
-
-- research work is usually a chain of smaller tasks
-- AI is strongest when each step is explicit
-- the output should live in files, not just in chat
-- if the task changes, start a fresh session and keep the useful notes
-
-## Why screenshots are the right format here
-
-For the workshop, this demo is mostly pre-done.
-
-- start from screenshots and saved results
-- show the prompts
-- walk through the logic of each step
-- avoid spending lunch watching code run
-
-That keeps the attention on the workflow instead of on technical waiting.
-
 ## What AI is good at here
 
 :::: {.columns}
@@ -96,7 +112,7 @@ That keeps the attention on the workflow instead of on technical waiting.
 **Accelerates**
 
 - data orientation
-- analysis planning
+- candidate analyses
 - boilerplate code
 - building on existing code
 - first-draft reporting
@@ -106,13 +122,22 @@ That keeps the attention on the workflow instead of on technical waiting.
 
 - choosing the question
 - deciding whether the plan is sensible
-- checking code before or after execution
+- checking code
 - interpreting the results
 - knowing when something is wrong
 :::
 ::::
 
-## Review and guardrails
+## Why screenshots are the right format here
+
+For the workshop, this demo is mostly pre-done.
+
+- show prompts and saved outputs
+- walk through the logic of each step
+- avoid spending lunch watching code run
+- keep attention on the workflow rather than the wait time
+
+## Research guardrails
 
 - verify that the prompt matches the actual task
 - inspect code before you trust it
@@ -125,9 +150,38 @@ A safer pattern for sensitive work is often:
 - review the code yourself
 - review logs and outputs rather than exposing raw protected data
 
+# Additional Specific Use Cases
+
+## Writing and admin
+
+Useful bounded tasks include:
+
+- rewrite an email to be shorter, warmer, and clearer
+- summarize meeting notes into decisions, action items, and open questions
+- extract deadlines from a document into a table
+- turn rough notes into a clean markdown memo
+
+## Project management and workflow control
+
+AI is also useful for keeping work organized:
+
+- make a step-by-step plan before starting
+- keep a running list of decisions, open questions, and next steps
+- summarize project state so you can reopen it later
+- create a reusable prompt for a recurring task
+
+## Compare outputs and use disagreement
+
+One useful advanced pattern is not just "do the task," but:
+
+- ask for two approaches
+- compare outputs
+- send one version to stress-test the other
+- use disagreement as a signal to review more carefully
+
 ## What to try next
 
-- try one literature-review task with real papers
+- try one slide-creation task from your own rough notes
+- try one bounded teaching task such as a rubric or study guide
 - try one small raw-data task with saved outputs and screenshots
-- keep the workflow narrow and reviewable
 - save prompts and outputs so you can reuse what works

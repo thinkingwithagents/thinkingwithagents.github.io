@@ -22,9 +22,35 @@ if [ -z "$OUT" ]; then
   OUT="$DOCS_SLIDES/${BASE_NAME}.pdf"
 fi
 
-CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-if [ ! -x "$CHROME" ]; then
-  echo "Chrome not found at: $CHROME"
+resolve_chrome() {
+  if [ -n "${CHROME:-}" ] && [ -x "${CHROME}" ]; then
+    echo "${CHROME}"
+    return 0
+  fi
+
+  local candidates=(
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    "$(command -v google-chrome 2>/dev/null || true)"
+    "$(command -v google-chrome-stable 2>/dev/null || true)"
+    "$(command -v chromium 2>/dev/null || true)"
+    "$(command -v chromium-browser 2>/dev/null || true)"
+  )
+
+  local candidate
+  for candidate in "${candidates[@]}"; do
+    if [ -n "$candidate" ] && [ -x "$candidate" ]; then
+      echo "$candidate"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+CHROME_BIN="$(resolve_chrome || true)"
+if [ -z "$CHROME_BIN" ]; then
+  echo "Chrome or Chromium not found."
+  echo "Set CHROME=/path/to/browser or install Google Chrome / Chromium."
   exit 1
 fi
 
@@ -44,8 +70,8 @@ sleep 2
 
 URL="http://localhost:$PORT/${BASE_NAME}.html?print-pdf"
 
-echo "Printing to PDF: $OUT"
-"$CHROME" \
+echo "Printing to PDF with $CHROME_BIN: $OUT"
+"$CHROME_BIN" \
   --headless \
   --disable-gpu \
   --disable-dev-shm-usage \

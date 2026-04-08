@@ -1,81 +1,165 @@
 ---
 title: "Outside Resources"
-subtitle: "Talks, guides, and links beyond the bootcamp itself"
+subtitle: "Tools, guides, and examples beyond the bootcamp itself"
 ---
 
-This page is a running list of useful outside resources: talks, articles, demos, explainers, and people worth following. It is broader than the bootcamp itself.
+This page is a broader reference list for people who want to keep going after the bootcamp. It is organized by resource type so you can jump directly to product docs, teaching guidance, research tools, or workflow examples.
 
 ## How to use this page
 
-For each link, try to add:
+Pick one section that matches what you need right now:
 
-- what it is
-- why it is useful
-- who it is for
-- whether it is more about teaching, research, or general AI literacy
+- official documentation if you want to learn a tool directly
+- teaching guidance if you want faculty-oriented pedagogy examples
+- research and literature tools if you want help with discovery or evidence synthesis
+- workflow examples if you want to see how other people actually use these tools
+- notes and productivity tools if your bottleneck is organization rather than generation
 
-## Talks and explainers
+You do not need to read everything here.
+
+## Official tool documentation
+
+### UVM and Microsoft
+
+- [Microsoft Copilot at UVM](https://go.uvm.edu/copilot)
+  Best starting point if you want the UVM-supported option.
+- [Microsoft Copilot docs](https://learn.microsoft.com/en-us/copilot/)
+  Useful if you want the broader Microsoft ecosystem view.
+
+### Anthropic / Claude
+
+- [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/overview)
+  Best starting point for the terminal-based, file-aware workflow featured in the bootcamp.
+- [Anthropic prompt engineering guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+  Useful for improving prompting and workflow structure.
+- [Claude](https://claude.ai/)
+  Main chat-first entry point for Claude.
+
+### OpenAI / ChatGPT / Codex
+
+- [ChatGPT](https://chatgpt.com/)
+  Main chat-first entry point for ChatGPT.
+- [ChatGPT overview](https://chatgpt.com/overview)
+  Good orientation if you want a quick product overview first.
+- [OpenAI Codex docs](https://platform.openai.com/docs/codex)
+  Official reference for OpenAI’s agentic coding and file-workflow tool.
+- [OpenAI Codex CLI getting started](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)
+  Best if you want the terminal workflow specifically.
+- [OpenAI ChatGPT Education docs](https://platform.openai.com/docs/chatgpt-education)
+  Useful if you want educator-oriented OpenAI guidance.
+
+### Alternative editor-based workflow
+
+- [Cursor](https://cursor.com/)
+  Popular option for people who want an editor-based AI workflow rather than a terminal-first workflow.
+- [Cursor docs](https://docs.cursor.com/get-started/introduction)
+  Useful if you want to compare editor-based and terminal-based workflows.
+
+## Teaching and pedagogy guidance
+
+### Higher-ed teaching guidance
+
+- [Columbia CTL: Teaching and Learning in the Age of AI](https://ai.ctl.columbia.edu/)
+  Strong higher-ed resource for faculty trying to think through teaching, assignments, and policy.
+- [Columbia CTL: Faculty use cases](https://ai.ctl.columbia.edu/explore/examples/)
+  Concrete examples of how faculty across disciplines are using AI.
+
+### Teaching use cases to try
+
+These are the teaching tasks where the tools above tend to be most useful:
+
+- drafting assignment prompts
+- revising instructions for clarity
+- building rubrics
+- generating study guides
+- creating practice questions
+- scaffolding feedback comments
+
+If you want a first experiment, try one bounded teaching task using an existing course document rather than starting from a blank page.
+
+## Research and literature tools
+
+### Literature review and evidence synthesis
+
+- [Elicit](https://elicit.com/welcome)
+  Good for literature review, evidence synthesis, and research reports.
+- [Scite](https://scite.ai/)
+  Especially useful for citation context and seeing whether later work supports or contrasts with a claim.
+
+### Literature discovery and mapping
+
+- [ResearchRabbit](https://www.researchrabbit.ai/)
+  Useful for citation-network exploration and discovering related work.
+
+### Research tasks where AI is often useful
+
+- literature review organization
+- coding assistance
+- data cleaning and exploration
+- first-pass tables, graphs, and memos
+- writing and revision
+- project handoff notes and reproducibility checklists
+
+The safer pattern for research is usually:
+
+- keep the task narrow
+- save intermediate outputs
+- review before building on them
+- avoid exposing protected raw data unless you have a clear reason and safe setup
+
+## Workflow examples and explainers
+
+These are helpful when official documentation feels too product-focused and you want to see how a real person uses the tools.
 
 ### Paul Goldsmith-Pinkham
 
 - [Getting started with Claude Code](https://paulgp.substack.com/p/getting-started-with-claude-code?utm_source=post-email-title&publication_id=1015181&post_id=192433164&utm_campaign=email-post-title&isFreemail=true&r=4oe7l&triedRedirect=true&utm_medium=email)
-  A good starting point for faculty who want to understand what Claude Code is for, how it fits into a workflow, and why working in the terminal feels different from ordinary chat.
+  A good introduction to why terminal-based AI work feels different from ordinary chat.
 
 ### Claude Blattman
 
-- [claudeblattman.com](https://claudeblattman.com/)
-  Useful for skills, templates, and Claude Code-oriented workflow examples. Good for people who want concrete patterns rather than abstract prompting advice.
+- [Claude Blattman](https://claudeblattman.com/)
+  Useful for concrete workflows, reusable patterns, and examples aimed at professionals who are not primarily programmers.
 
-## Tool documentation and guides
+## Notes, Markdown, and knowledge management
 
-### Anthropic / Claude
+These are useful because AI tools often produce Markdown files, memos, and reusable prompts.
 
-- Claude app
-- Claude Code
-- prompt-writing or workflow guides
+### Markdown viewers and editors
 
-### OpenAI / ChatGPT / Codex
+- [Typora](https://typora.io/)
+  A good default Markdown viewer if you want AI-generated `.md` files to look like normal formatted text immediately.
+- [Zettlr](https://www.zettlr.com/)
+  Worth a look if you want a more writing-oriented Markdown environment.
 
-- ChatGPT guides
-- Codex guides
-- workflow examples
-
-### Cursor
-
-- [Cursor](https://cursor.com/)
-  A popular AI code editor for people who want an editor-based workflow rather than a pure terminal workflow.
-- [Cursor docs](https://docs.cursor.com/)
-  Useful if you want to compare Cursor's editor-based workflow to Claude Code or Codex.
-
-### Obsidian
+### Notes and project memory
 
 - [Obsidian](https://obsidian.md/)
-  A flexible notes app that works well as a personal knowledge base, project notebook, or place to store prompts, reusable instructions, and session notes.
+  Useful for storing prompts, session notes, project instructions, and reusable workflows.
 - [Obsidian Help](https://help.obsidian.md/)
-  Useful if you want to learn linking, vault structure, templates, and other features for organizing AI-assisted work over time.
+  Good if you want to learn links, templates, vault organization, and lightweight knowledge management.
 
-### Microsoft / Copilot
+## Meeting capture and dictation tools
 
-- UVM Copilot access info
-- Microsoft 365 Copilot guides for Word, Excel, PowerPoint, or Outlook
+These are optional, but useful if your work starts from spoken notes, meetings, or rough fragments.
 
-## Teaching-focused resources
+- [Granola](https://www.granola.ai/)
+  Useful for meeting capture, searchable notes, and turning conversation into a more usable record.
+- [Wispr Flow](https://wisprflow.ai/)
+  Useful for dictation-heavy workflows and quick drafting on computer or phone.
 
-- assignment design
-- rubric design
-- feedback workflows
-- AI policy language
+## Workflow ideas worth exploring later
 
-## Research-focused resources
+If the basic tools feel useful, the next level is not just better prompting. It is better workflow structure:
 
-- literature review workflows
-- coding assistance
-- data cleaning and exploration
-- writing and revision
-- paper-reading AI tool or paper-summarization service
-  Placeholder: Emily has a specific reference in mind and will fill this in later.
+- reusable prompts
+- project instruction files such as `CLAUDE.md` or `AGENTS.md`
+- saved Markdown outputs
+- task plans and handoff notes
+- comparing two outputs instead of trusting the first one
 
 ## Notes
 
 - Keep this page broader than the bootcamp itself.
 - If a resource becomes central to a session, link it from the relevant session page too.
+- If a link here stops being useful, delete it rather than letting this page become a graveyard.
