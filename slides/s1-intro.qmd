@@ -53,21 +53,58 @@ This is the elephant in the room.
 - This bootcamp is partly about that: if you know the tool, you can design around it.
 - This is not a policy talk. But knowing the technology helps you make better policy.
 
-## What this actually saves me time on
+## Things I have actually used this for since December {.smaller}
 
-<!-- EMILY: This slide needs your specific experience. Fill in both columns with real examples from your own use. The honest version of this slide is what builds credibility with skeptical colleagues.
+<!-- EMILY: Star the ones you want to keep, cut anything that feels wrong. This is meant to be overwhelming on purpose. -->
 
-**Worth the time**
+::: {.tight-table}
 
-- [specific task 1 — e.g., "First drafts of assignment prompts — I edit instead of stare at a blank page"]
-- [specific task 2 — e.g., "Extracting structure from messy documents"]
-- [specific task 3 — e.g., "Writing Stata code for tasks I know how to do but don't want to type out"]
+| | |
+|---|---|
+| **Research** | Built a replication package — it read my do-files, found the dependency chain, wrote the master script |
+| | Generated push-button reproducible balance tables (Stata → LaTeX) |
+| | Wrote R script to pull IPUMS census data via API, then wrote Stata code to analyze it |
+| | Created a data dictionary from a messy dataset for a replication package |
+| | Ran an adversarial review of my own paper — flagged causal language without identification |
+| | Structured a literature review: search, organize by theme, identify gaps, formatted memo |
+| **Teaching** | Built a course website from scratch (Hugo + GitHub Pages) |
+| | Built lecture slides in Quarto |
+| | Made *these slides* |
+| | Drafted assignment prompts and rubrics from learning goals |
+| **Writing** | Created a "voice file" from my real emails — now drafts sound like me |
+| | Drafted replies to emails I'd been avoiding |
+| | Wrote and revised a letter to a journal editor |
+| | Drafted the announcement email for this bootcamp |
+| **Email** | Inbox triage: categorizes messages by action needed (reply, review, delegate) |
+| | Reads a thread, I say the gist, it drafts in my voice |
+| | Kid's hockey schedule emails → Google Calendar events |
+| **Workflow** | Project hub system — one entry point per project with status and blockers |
+| | Reusable saved workflows for weekly review, session planning, literature search |
+| | Morning briefing: calendar + tasks + email + deadlines in one view |
+| | End-of-session handoff notes so I pick up where I left off |
+:::
 
-**Not worth the trouble (yet)**
+## Things that were fun but saved me zero time
 
-- [specific task 1 — e.g., "Anything involving sensitive student data"]
-- [specific task 2 — e.g., "Complex literature reviews — it hallucinates citations"]
--->
+<!-- EMILY: Add/cut freely. The joke is the honesty. -->
+
+:::: {.columns}
+::: {.column width="55%"}
+- Cycling training tracker that pulls data from fitness APIs and yells at me about weekly volume
+- D&D solo campaign (it's a very patient dungeon master)
+- Built a Vermont cycling route planner with elevation profiles *(I have never used a single route)*
+- Built an entire project management system instead of doing the project
+- Automated my to-do list review — now I procrastinate *faster*
+- Spent a weekend building a meal-planning skill that I use regularly and love
+:::
+::: {.column width="45%"}
+![](assets/vt-routes-screenshot.png){width="100%" .shot}
+:::
+::::
+
+::: {.aside}
+The learning curve is real, but at least the rabbit holes are entertaining.
+:::
 
 # Tools
 
