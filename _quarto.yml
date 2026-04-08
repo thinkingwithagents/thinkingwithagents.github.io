@@ -22,7 +22,7 @@ website:
       - href: skills.qmd
         text: "Skills & Demos"
       - href: resources.qmd
-        text: "Outside Resources"
+        text: "Bells & Whistles"
       - href: session1.qmd
         text: "Session 1 (Apr 22)"
       - href: session2.qmd

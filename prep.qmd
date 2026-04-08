@@ -1,6 +1,6 @@
 ---
 title: "Getting Set Up"
-subtitle: "Tools for the AI Bootcamp"
+subtitle: "Choose a tool, pick a plan, install it"
 ---
 
 ## What to expect at the bootcamp
@@ -9,225 +9,140 @@ Two lunch sessions, watch-along format. You do not need to install anything befo
 
 ---
 
-## Two categories of AI tools
+## Two ways to use AI tools
 
-For this bootcamp, the most useful distinction is not "browser vs. app." It is:
+| | Chat tools | Agentic tools |
+|---|---|---|
+| **What they do** | Answer questions, draft text, summarize uploaded files | Work directly on files in your project folders |
+| **Interface** | Web browser or desktop app | Terminal (text-based command line) |
+| **Setup** | Create an account, start typing | Install Node.js, then install the tool |
+| **Best for starting** | Quick tasks, brainstorming, one-off drafts | Multi-step workflows, code, file management |
+| **Examples** | Claude, ChatGPT, Microsoft Copilot | Claude Code, OpenAI Codex |
 
-- **Chat-based tools**: good for asking questions, drafting text, analyzing uploaded files, and trying quick prompts.
-- **Agentic tools**: good for working on files, code, and multi-step tasks with direct access to your project or local environment.
-
-Chat tools can still **write code snippets** or comment on code. What they usually do **not** do is directly search your folders, edit local files, or run commands on your machine. That is the role of the agentic tools we are focusing on for the terminal demos.
-
-## Option 1: Chat-based tools (easiest way to start) {#apps}
-
-These are point-and-click applications. Download, sign in, and start using them.
-
-### Claude (by Anthropic)
-
-A conversational AI assistant. Available as a desktop app and in your browser.
-
-Best for:
-
-- drafting and revising text
-- brainstorming
-- summarizing uploaded files
-- generating code snippets or examples
-
-Not the same as Claude Code:
-
-- Claude in the browser or desktop app can help you **talk through** code and files
-- Claude Code can directly work in your terminal, read local project files, edit files, and run commands
-
-- **Download**: [claude.ai/download](https://claude.ai/download) (Mac and Windows)
-- **Or use in browser**: [claude.ai](https://claude.ai)
-- **Subscription**: Free tier available. **Pro** ($20/month) is the most straightforward paid option. **Max** starts at $100/month for substantially more usage.
-- **Create an account**: [claude.ai](https://claude.ai) — sign up with your email
-
-### ChatGPT (by OpenAI)
-
-Another widely-used AI assistant with desktop and mobile apps.
-
-Best for:
-
-- drafting and revising text
-- summarizing uploaded files
-- brainstorming
-- generating code snippets or examples
-
-Not the same as Codex:
-
-- ChatGPT is primarily a chat interface
-- Codex is OpenAI's coding agent, designed to work in your terminal, code editor, or Codex app with direct project actions
-
-- **Download**: [openai.com/chatgpt/download](https://openai.com/chatgpt/download) (Mac and Windows)
-- **Or use in browser**: [chatgpt.com](https://chatgpt.com)
-- **Subscription**: Free tier available. **Plus** ($20/month) is the standard paid tier for most users.
-
-### UVM note: Microsoft Copilot
-
-UVM provides enterprise-protected access to Microsoft Copilot Chat through your work account.
-
-- **Access**: [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
-- **What it's good for**: low-friction web chat and some Microsoft 365 workflows
-- **What it is not for**: the terminal/file-access demos we are centering in this bootcamp
-- **If you want deeper Office integration**: ask about a **Microsoft 365 Copilot** license, which adds stronger Word, Excel, PowerPoint, and Outlook integration
-- **Why it's not the main setup path here**: for this bootcamp, we want tools that can clearly demonstrate the difference between chat-based help and agentic file/code workflows
-
-<!-- TODO: Add a small number of screenshots:
-1. Claude or ChatGPT chat window
-2. Copilot Chat access point
-3. A terminal window for the agentic tools section
--->
+**For this bootcamp**, we demo agentic tools because they show the bigger jump in usefulness. But chat tools are a perfectly good place to start.
 
 ---
 
-## Option 2: Agentic tools (more powerful) {#command-line}
+## Claude Code vs. OpenAI Codex
 
-These run in your computer's **terminal** — a text-based interface where you type commands. The terminal gives AI tools direct access to your files, which makes them much more powerful for real work.
+These are the two main agentic tools we use. Both run in your terminal and can read, write, and run files.
 
-### What's a terminal?
+| | Claude Code | OpenAI Codex |
+|---|---|---|
+| **Made by** | Anthropic | OpenAI |
+| **Best models** | Claude Opus 4.6, Sonnet 4.6 | GPT-4.1, o3 |
+| **Install** | `npm install -g @anthropic-ai/claude-code` | `npm install -g @openai/codex` |
+| **Launch** | `claude` | `codex` |
+| **Sign in with** | Claude account or Anthropic Console | ChatGPT account or OpenAI API key |
+| **Simplest plan** | Claude Pro ($20/mo) | ChatGPT Plus ($20/mo) |
+| **Heavy use plan** | Claude Max ($100+/mo) or API billing | ChatGPT Pro ($200/mo) or API billing |
+| **IDE extensions** | VS Code, JetBrains | VS Code |
+| **Rule files** | `CLAUDE.md` | `AGENTS.md` |
+| **Integrations** | Gmail, Google Calendar, Todoist, and more via MCP | Fewer built-in integrations currently |
+| **Strengths** | Long context, strong writing, extensive tool ecosystem | Strong coding, fast iteration |
 
-It's an app that's already on your computer:
+Both are good. We primarily demo Claude Code, but the concepts transfer.
 
-- **Mac**: Open **Terminal** (search for "Terminal" in Spotlight, or find it in Applications → Utilities)
-- **Windows**: Open **PowerShell** (search for "PowerShell" in the Start menu)
+---
 
-You type commands and press Enter. That's it.
+## Plans and pricing
 
-### Installing Claude Code
+### Subscription plans (simplest way to start)
 
-Claude Code is an AI assistant that runs in your terminal. It can read your files, write documents, run code, and more.
+| Plan | Cost | What you get |
+|---|---|---|
+| **Claude Free** | $0 | Chat only, limited usage |
+| **Claude Pro** | $20/mo | Chat + Claude Code access, generous limits |
+| **Claude Max** | $100–200/mo | Much higher limits for heavy use |
+| **ChatGPT Free** | $0 | Chat only, limited models |
+| **ChatGPT Plus** | $20/mo | Chat + Codex access, better models |
+| **ChatGPT Pro** | $200/mo | Highest limits |
+| **UVM Copilot** | Free (UVM account) | Microsoft Copilot Chat — good for Office tasks |
 
-This is the Anthropic tool that most clearly shows the difference between:
+**For most faculty**: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you. PDF funds may cover subscriptions — ask your department chair.
 
-- a **chat tool** that answers questions
-- an **agentic tool** that can act on a project
+### API pricing (pay-as-you-go)
 
-**Step 1: Install Node.js** (a tool that Claude Code needs to run)
+If you outgrow the subscription or want more control, both companies offer API billing where you pay per token.
+
+| Model | Input (per 1M tokens) | Output (per 1M tokens) |
+|---|---|---|
+| Claude Sonnet 4.6 | $3.00 | $15.00 |
+| Claude Opus 4.6 | $15.00 | $75.00 |
+| Claude Haiku 4.5 | $0.80 | $4.00 |
+| GPT-4o | $2.50 | $10.00 |
+| GPT-4.1 | $2.00 | $8.00 |
+| GPT-4o mini | $0.15 | $0.60 |
+| Gemini 2.5 Pro | $1.25 | $10.00 |
+
+*A token ≈ ¾ of a word. Most people don't need API billing — the subscription covers it.*
+
+---
+
+## Install guide
+
+### Step 1: Install Node.js (required for both tools)
 
 - Go to [nodejs.org](https://nodejs.org/)
 - Click the big green **LTS** download button
 - Run the installer — accept all the defaults
 
-**Step 2: Install Claude Code**
+### Step 2: Install your tool
 
-Open your terminal and type this command, then press Enter:
+Open your terminal:
+
+- **Mac**: Search for "Terminal" in Spotlight, or find it in Applications → Utilities
+- **Windows**: Search for "PowerShell" in the Start menu
+
+Then run one (or both):
 
 ```bash
+# Claude Code
 npm install -g @anthropic-ai/claude-code
-```
 
-Wait for it to finish (you'll see some text scroll by — that's normal).
-
-**Step 3: Launch it**
-
-Type this and press Enter:
-
-```bash
-claude
-```
-
-It will ask you to sign in. Follow the prompts.
-
-**How you pay for it**:
-
-- **Claude Pro** ($20/month) or **Claude Max** (from $100/month) lets you sign in with your Claude account
-- Anthropic also supports logging in with an **Anthropic Console** account if you prefer API-based billing instead of a Claude subscription
-
-For most faculty trying this on their own, **Pro is the default place to start**.
-
-### Installing OpenAI Codex
-
-Codex is OpenAI's coding agent, similar in spirit to Claude Code.
-
-**Step 1: Install Node.js** (same as above — skip if you already did this)
-
-- Go to [nodejs.org](https://nodejs.org/) → download LTS → run installer
-
-**Step 2: Install Codex**
-
-```bash
+# OpenAI Codex
 npm install -g @openai/codex
 ```
 
-**Step 3: Launch it**
+### Step 3: Launch it
 
 ```bash
-codex
+claude    # for Claude Code
+codex     # for Codex
 ```
 
-**How you pay for it**:
-
-- The simplest path is to sign in with an active **ChatGPT subscription**
-- You do **not** need a separate API account just to try the subscription-based Codex workflow
-
-For most faculty, **ChatGPT Plus** is the simplest paid entry point if they want to try Codex.
-
----
-
-## Cost summary
-
-| Tool | Entry point | Typical cost to try seriously | Best use here |
-|------|-------------|------------------------------|---------------|
-| Claude (chat app) | Free tier available | Pro: $20/mo | Chat-based drafting, brainstorming, file uploads |
-| ChatGPT (chat app) | Free tier available | Plus: $20/mo | Chat-based drafting, brainstorming, file uploads |
-| Claude Code (agentic terminal tool) | Node.js + Claude login | Usually Claude Pro: $20/mo | Terminal workflow with file access and command execution |
-| OpenAI Codex (agentic coding tool) | Node.js + ChatGPT login | Usually ChatGPT Plus: $20/mo | Terminal/code-editor/app workflow with project actions |
-| Microsoft Copilot Chat | Included with UVM account | No extra cost | Enterprise-protected chat and light Office-adjacent support |
-| Microsoft 365 Copilot | Ask about license availability | Extra institutional license | Deeper Office integration, not the main bootcamp workflow |
-
-For this bootcamp, the most relevant paid comparison is usually:
-
-- **Claude Pro** if you want to try Claude Code
-- **ChatGPT Plus** if you want to try Codex
-
-PDF funds may cover subscriptions — ask your department chair.
-
----
-
-## Resources {#resources}
-
-Some extra tools that aren't required but are nice to have:
-
-- **[Ghostty](https://ghostty.org)** (free) — A fast, modern terminal app. Looks nicer than the default Terminal/PowerShell. Purely cosmetic.
-- **[VS Code](https://code.visualstudio.com/)** (free) — A code editor. Claude Code and GitHub Copilot both have VS Code extensions if you prefer a graphical interface over the terminal.
-
-### Markdown viewers / editors
-
-AI tools often output rough-looking `.md` files. A good Markdown viewer or editor makes them render quickly as readable, attractive text.
-
-- **[Typora](https://typora.io)** ($14.99) — Recommended default. It gives a live, clean preview and works well as a standalone app for opening Markdown files directly.
-- **[MarkText](https://github.com/marktext/marktext)** (free) — A simple open-source Markdown editor for macOS, Windows, and Linux.
-- **[Zettlr](https://www.zettlr.com/)** (free) — A stronger option for larger academic writing projects if you want more structure and writing features.
-- **[MacDown](https://github.com/MacDownApp/macdown)** (free, macOS only) — A lightweight Mac-native Markdown editor worth considering.
-
-If you just want one app that opens Markdown files and makes them look good immediately, **Typora is the default recommendation here**.
-
-For broader reading beyond the bootcamp, see **[Outside Resources](resources.qmd)**.
-
----
-
-## Key terms
-
-A few shared terms that come up in the bootcamp sessions:
-
-| Term | What we mean |
-|------|-------------|
-| **Agent** | A tool instance carrying out a bounded task with some autonomy |
-| **Model** | The underlying AI system you are talking to (e.g., Claude, GPT-4) |
-| **Session** | One conversation or one working thread with the tool |
-| **Context window** | The working memory available in the current session — when it fills up, performance gets worse |
-| **Artifact** | A concrete output: file, draft, memo, script, table, or slide |
-| **Rule file** | A standing instructions file such as `CLAUDE.md` or `AGENTS.md` that loads automatically |
-| **Permissions** | The rules about what the tool may read, change, run, or send |
+It will ask you to sign in. Follow the prompts.
 
 ---
 
 ## Checking your usage
 
-If you are using Claude Code with a paid subscription, you can check your usage and limits:
+If you are using Claude Code with a paid subscription:
 
 - `npx claude-spend` — shows session and weekly limits, extra paid usage
 - `npx ccusage@latest` — alternative usage tracker
 
-Usage limits are not static — they can change over time. Paid plans subsidize usage, so the effective pricing is often better than raw token prices. Some models are cheaper than others, and rates can be higher during peak hours (often around 8 a.m.–1 p.m. EDT for Claude, though this shifts).
+Usage limits can change over time. Some models are cheaper than others.
+
+---
+
+## Optional extras
+
+- **[Ghostty](https://ghostty.org)** (free) — A modern terminal app. Looks nicer than the default.
+- **[VS Code](https://code.visualstudio.com/)** (free) — A code editor. Both Claude Code and Codex have VS Code extensions.
+- **[Typora](https://typora.io)** ($15) — A Markdown viewer. AI tools produce `.md` files; Typora makes them look like formatted text immediately.
+
+---
+
+## Key terms
+
+| Term | What we mean |
+|------|-------------|
+| **Agent** | A tool instance carrying out a bounded task with some autonomy |
+| **Model** | The underlying AI system (e.g., Claude Sonnet, GPT-4o) |
+| **Session** | One conversation or working thread with the tool |
+| **Context window** | The working memory in the current session — when full, performance degrades |
+| **Artifact** | A concrete output: file, draft, memo, script, table, or slide |
+| **Rule file** | Standing instructions (`CLAUDE.md` or `AGENTS.md`) that load automatically |
+| **Token** | The unit AI models process — roughly ¾ of a word |
+| **MCP** | Model Context Protocol — how tools connect to external services (email, calendar, etc.) |

@@ -1,192 +1,120 @@
 ---
-title: "Outside Resources"
-subtitle: "Tools, guides, and examples beyond the bootcamp itself"
+title: "Bells and Whistles"
+subtitle: "Integrations, advanced workflows, and tools worth exploring"
 ---
 
-This page is a broader reference list for people who want to keep going after the bootcamp. It is organized by resource type, but it puts **agentic tools** first because those are the main workflow focus of this bootcamp.
+Once you have a basic AI workflow running, these are the things that make it dramatically more useful. None of these are required — pick what fits your work.
 
-## How to use this page
+## Direct integrations (MCP)
 
-Pick one section that matches what you need right now:
+The Model Context Protocol (MCP) lets agentic tools connect directly to external services. These are not copy-paste workarounds — the tool reads and writes to these services natively.
 
-- agentic tools if you want file-aware, multi-step workflows
-- official documentation if you want to learn a tool directly
-- teaching guidance if you want faculty-oriented pedagogy examples
-- research and literature tools if you want help with discovery or evidence synthesis
-- workflow examples if you want to see how other people actually use these tools
-- notes and productivity tools if your bottleneck is organization rather than generation
+### Currently available in Claude Code
 
-You do not need to read everything here.
+| Service | What it can do |
+|---|---|
+| **Gmail** | Read inbox, search messages, draft and send emails |
+| **Google Calendar** | Read events, create events, invite attendees, find free time |
+| **Google Docs** | Read, create, search, and edit documents |
+| **Google Sheets** | Read and write spreadsheet data |
+| **Todoist** | Create/update/complete tasks, search, manage projects |
+| **Slack** | Read and send messages in channels and DMs |
+| **GitHub** | Create issues, PRs, review code, manage repos |
 
-## Start here: agentic tools
+**Example workflow**: "Go through my inbox. Anything about hockey, add it to my Google Calendar." This is real — it reads the emails, extracts dates, and creates the events.
 
-These are the tools most aligned with the workflows emphasized in the bootcamp: working with files, iterating across steps, saving outputs, and building reusable processes.
+::: {.callout-note appearance="simple"}
+**Outlook limitation**: AI agents cannot currently interact with the Outlook desktop app — Microsoft gates this heavily. Gmail and Google Calendar integrations are much more mature. There are workarounds for Outlook read access, but they require manual setup.
+:::
 
-### Claude Code
+### Setting up MCP
 
-- [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/overview)
-  Best starting point for the terminal-based, file-aware workflow featured in the bootcamp.
-- [Anthropic prompt engineering guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
-  Useful for improving prompting and workflow structure.
+MCP servers are configured in your Claude Code settings. The [Claude Code docs on MCP](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp) walk through the setup. Most integrations take 5–10 minutes to configure.
 
-### OpenAI Codex
+## Skills: reusable workflows
 
-- [OpenAI Codex docs](https://platform.openai.com/docs/codex)
-  Official reference for OpenAI’s agentic coding and file-workflow tool.
-- [OpenAI Codex CLI getting started](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)
-  Best if you want the terminal workflow specifically.
+Skills are saved instructions that tell the AI how to do a specific task. Instead of re-explaining your workflow every session, you invoke a skill and it runs.
 
-### Editor-based alternative
+See the **[Skills & Demos](skills.html)** page for installable skills from this bootcamp, including:
 
-- [Cursor](https://cursor.com/)
-  Popular option for people who want an editor-based AI workflow rather than a terminal-first workflow.
-- [Cursor docs](https://docs.cursor.com/get-started/introduction)
-  Useful if you want to compare editor-based and terminal-based workflows.
+- `/lit-review` — structured literature search and synthesis
+- `/econ-audit` — adversarial review of empirical claims
+- `/data-dictionary` — generate formatted data dictionaries
 
-## Quick note on chat-based tools
+### Building your own skills
 
-Chat-based tools still matter. They are often the easiest place to start, and they are very useful for:
+1. Do a task with AI and save the conversation
+2. Extract the instructions into a Markdown file
+3. Drop it in `.claude/commands/` (Claude Code) or equivalent
+4. Invoke it with `/your-skill-name`
 
-- quick questions
-- drafting and rewriting
-- summarizing uploaded files
-- bounded one-session tasks
+The best skill is one you build for a task you actually repeat.
 
-For this bootcamp, though, they are not the main emphasis. The bigger jump in usefulness usually comes when the tool can work directly with project files and help you manage a multi-step workflow.
+## Writing and voice
 
-### Main chat-first options
+### Voice files
 
-- [Claude](https://claude.ai/)
-  Main chat-first entry point for Claude.
-- [ChatGPT](https://chatgpt.com/)
-  Main chat-first entry point for ChatGPT.
-- [ChatGPT overview](https://chatgpt.com/overview)
-  Good orientation if you want a quick product overview first.
-- [Microsoft Copilot at UVM](https://go.uvm.edu/copilot)
-  Best starting point if you want the UVM-supported option.
+A voice file describes how you write — tone, sentence length, habits, what you avoid. The AI reads it and matches your style. See the [Session 1 slides](session1.html) for how to create one.
 
-## Official tool documentation
+### Project instruction files
 
-### UVM and Microsoft
+Files like `CLAUDE.md` or `AGENTS.md` load automatically when you work in a project. They store:
 
-- [Microsoft Copilot docs](https://learn.microsoft.com/en-us/copilot/)
-  Useful if you want the broader Microsoft ecosystem view.
+- Stable preferences and permission rules
+- File path conventions
+- What the tool should and shouldn't do
+- Project-specific context
 
-### Anthropic / Claude
+These compound over time — each session gets better as the instructions improve.
 
-- [Claude](https://claude.ai/)
-  Main chat-first entry point for Claude.
+## Markdown and knowledge management
 
-### OpenAI / ChatGPT / Codex
+AI tools produce Markdown files (`.md`). A good viewer makes them immediately readable.
 
-- [OpenAI ChatGPT Education docs](https://platform.openai.com/docs/chatgpt-education)
-  Useful if you want educator-oriented OpenAI guidance.
+| Tool | Cost | Why |
+|---|---|---|
+| **[Typora](https://typora.io)** | $15 | Clean live preview, opens `.md` files like a word processor |
+| **[Obsidian](https://obsidian.md)** | Free | Vault-based notes with links, tags, search — good for storing prompts and session notes |
+| **[Zettlr](https://www.zettlr.com/)** | Free | Writing-oriented Markdown editor for longer academic work |
+| **[MarkText](https://github.com/marktext/marktext)** | Free | Simple, lightweight Markdown editor |
 
-## Teaching and pedagogy guidance
+## Meeting capture and dictation
 
-### Higher-ed teaching guidance
-
-- [Columbia CTL: Teaching and Learning in the Age of AI](https://ai.ctl.columbia.edu/)
-  Strong higher-ed resource for faculty trying to think through teaching, assignments, and policy.
-- [Columbia CTL: Faculty use cases](https://ai.ctl.columbia.edu/explore/examples/)
-  Concrete examples of how faculty across disciplines are using AI.
-
-### Teaching use cases to try
-
-These are the teaching tasks where the tools above tend to be most useful:
-
-- drafting assignment prompts
-- revising instructions for clarity
-- building rubrics
-- generating study guides
-- creating practice questions
-- scaffolding feedback comments
-
-If you want a first experiment, try one bounded teaching task using an existing course document rather than starting from a blank page.
+| Tool | What it does |
+|---|---|
+| **[Granola](https://www.granola.ai/)** | Meeting capture — searchable notes from conversations. AI can search past meetings for context. |
+| **[Wispr Flow](https://wisprflow.ai/)** | Dictation — speak and it types. Good for drafting on the go or narrating session notes. |
 
 ## Research and literature tools
 
-### Literature review and evidence synthesis
+| Tool | What it does |
+|---|---|
+| **[Elicit](https://elicit.com)** | Literature review, evidence synthesis, structured research reports |
+| **[Scite](https://scite.ai/)** | Citation context — see whether later papers support or contradict a claim |
+| **[ResearchRabbit](https://www.researchrabbit.ai/)** | Citation-network exploration and related paper discovery |
 
-- [Elicit](https://elicit.com/welcome)
-  Good for literature review, evidence synthesis, and research reports.
-- [Scite](https://scite.ai/)
-  Especially useful for citation context and seeing whether later work supports or contrasts with a claim.
+## Workflow patterns worth trying
 
-### Literature discovery and mapping
+Once the basic tools feel useful, the next level is better workflow structure, not better prompting:
 
-- [ResearchRabbit](https://www.researchrabbit.ai/)
-  Useful for citation-network exploration and discovering related work.
+- **Reusable prompts** saved as files, not typed from memory
+- **Project instruction files** that accumulate over time
+- **Session handoff notes** so you pick up where you left off
+- **Separate sessions** for separate tasks — don't pile everything into one thread
+- **Plan → execute → review → clear context → continue** for bigger tasks
+- **Compare two AI outputs** instead of trusting the first one
 
-### Research tasks where AI is often useful
+## Explainers and examples from others
 
-- literature review organization
-- coding assistance
-- data cleaning and exploration
-- first-pass tables, graphs, and memos
-- writing and revision
-- project handoff notes and reproducibility checklists
+- [Paul Goldsmith-Pinkham: Getting started with Claude Code](https://paulgp.substack.com/p/getting-started-with-claude-code) — why terminal-based AI work feels different from chat
+- [Claude Blattman](https://claudeblattman.com/) — concrete workflows and patterns for non-programmers
+- [Columbia CTL: Teaching and Learning in the Age of AI](https://ai.ctl.columbia.edu/) — faculty-oriented pedagogy resource
+- [Columbia CTL: Faculty use cases](https://ai.ctl.columbia.edu/explore/examples/) — concrete examples across disciplines
 
-The safer pattern for research is usually:
+## Official documentation
 
-- keep the task narrow
-- save intermediate outputs
-- review before building on them
-- avoid exposing protected raw data unless you have a clear reason and safe setup
-
-## Workflow examples and explainers
-
-These are helpful when official documentation feels too product-focused and you want to see how a real person uses the tools.
-
-### Paul Goldsmith-Pinkham
-
-- [Getting started with Claude Code](https://paulgp.substack.com/p/getting-started-with-claude-code)
-  A good introduction to why terminal-based AI work feels different from ordinary chat.
-
-### Claude Blattman
-
-- [Claude Blattman](https://claudeblattman.com/)
-  Useful for concrete workflows, reusable patterns, and examples aimed at professionals who are not primarily programmers.
-
-## Notes, Markdown, and knowledge management
-
-These are useful because AI tools often produce Markdown files, memos, and reusable prompts.
-
-### Markdown viewers and editors
-
-- [Typora](https://typora.io/)
-  A good default Markdown viewer if you want AI-generated `.md` files to look like normal formatted text immediately.
-- [Zettlr](https://www.zettlr.com/)
-  Worth a look if you want a more writing-oriented Markdown environment.
-
-### Notes and project memory
-
-- [Obsidian](https://obsidian.md/)
-  Useful for storing prompts, session notes, project instructions, and reusable workflows.
-- [Obsidian Help](https://help.obsidian.md/)
-  Good if you want to learn links, templates, vault organization, and lightweight knowledge management.
-
-## Meeting capture and dictation tools
-
-These are optional, but useful if your work starts from spoken notes, meetings, or rough fragments.
-
-- [Granola](https://www.granola.ai/)
-  Useful for meeting capture, searchable notes, and turning conversation into a more usable record.
-- [Wispr Flow](https://wisprflow.ai/)
-  Useful for dictation-heavy workflows and quick drafting on computer or phone.
-
-## Workflow ideas worth exploring later
-
-If the basic tools feel useful, the next level is not just better prompting. It is better workflow structure:
-
-- reusable prompts
-- project instruction files such as `CLAUDE.md` or `AGENTS.md`
-- saved Markdown outputs
-- task plans and handoff notes
-- comparing two outputs instead of trusting the first one
-
-## Notes
-
-- Keep this page broader than the bootcamp itself.
-- If a resource becomes central to a session, link it from the relevant session page too.
-- If a link here stops being useful, delete it rather than letting this page become a graveyard.
+- [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/overview) — the main reference for terminal-based Claude
+- [OpenAI Codex docs](https://platform.openai.com/docs/codex) — OpenAI's agentic coding tool
+- [Anthropic prompt engineering guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) — useful for improving prompts
+- [skills.sh](https://skills.sh) — public skill registry for Claude Code
+- [claudlab.in](https://claudlab.in) — Claude Code workflow examples and setups
