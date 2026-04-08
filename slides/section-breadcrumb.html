@@ -11,6 +11,7 @@
   padding: 0.28rem 0.5rem;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(47, 111, 171, 0.36);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(6px);
   font-size: 0.5em;
@@ -135,11 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var nav = document.createElement("div");
   nav.className = "section-breadcrumb";
   nav.setAttribute("hidden", "hidden");
-
-  var navLabel = document.createElement("div");
-  navLabel.className = "section-breadcrumb-label";
-  navLabel.textContent = "Sections";
-  nav.appendChild(navLabel);
 
   var currentLabel = document.createElement("div");
   currentLabel.className = "section-breadcrumb-current";
