@@ -61,6 +61,10 @@ Both are good. We primarily demo Claude Code, but the concepts transfer.
 
 **For most faculty**: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you. PDF funds may cover subscriptions — ask your department chair.
 
+::: {.callout-important appearance="simple"}
+**The $20/mo subscription is not just chat.** Claude Pro includes Claude Code (the terminal tool), and ChatGPT Plus includes Codex. You also get access to integrations with Gmail, Google Calendar, Todoist, and more — all the advanced workflows shown on our [Bells & Whistles](resources.html) page. You do not need a separate API account or additional purchases.
+:::
+
 ### API pricing (pay-as-you-go)
 
 If you outgrow the subscription or want more control, both companies offer API billing where you pay per token.
