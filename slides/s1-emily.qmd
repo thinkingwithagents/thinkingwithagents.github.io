@@ -1,39 +1,25 @@
 ---
-title: "Terminal + Claude Code"
+title: "What it looks like to use AI on your actual files"
 subtitle: "AI Bootcamp — Session 1"
 author: Emily Beam
 date: 2026-04-22
 format:
   revealjs: default
-  beamer: default
 ---
 
 # Terminal
 
 ## What you're seeing
 
-1. **A terminal app** — where you type commands
+1. **A terminal app** — where you type commands (this one is Ghostty, but any terminal works)
 2. **Claude Code** — an AI assistant that runs in the terminal
-3. Type a request → AI responds → iterate
+3. I type a request, the AI responds, I iterate
 
-Key ideas:
+The key difference from chat: it can **read and write files** on my computer. I don't copy-paste anything in — it reads the file directly.
 
-- AI can **read and write files** on your computer
-- **Iterate**: "Make it shorter," "Add a section on X"
-- Output is **Markdown** — readable as plain text or rendered nicely
+## Markdown: the output format
 
-## Quick Markdown overview
-
-Markdown files are simple plain-text documents that use light formatting marks like `#` for headers and `-` for bullets.
-
-- AI tools often write in **Markdown** by default
-- It is a good **working output format** because it is lightweight and easy to edit
-- Markdown can be converted into **Word files, PDFs, web pages, and slides**
-- You do **not** need to know Markdown syntax for this bootcamp
-
-The practical point is just: the AI may hand you a `.md` file, and that is normal.
-
-## Raw Markdown vs rendered Markdown
+AI tools write in Markdown — a simple plain-text format that uses `#` for headers and `-` for bullets.
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -42,29 +28,30 @@ The practical point is just: the AI may hand you a `.md` file, and that is norma
 ![](assets/markdown-raw.png){width="100%"}
 :::
 ::: {.column width="50%"}
-**Rendered preview**
+**Rendered in Typora**
 
 ![](assets/markdown-pretty.png){width="100%"}
 :::
 ::::
 
-- Left: the plain text with hashes and formatting marks
-- Right: the same file shown in a Markdown viewer
-- A viewer such as **Typora** makes Markdown look like normal formatted text
-
-You do not need to learn the syntax today, but it helps to have an app that makes these files easy to read.
+You do not need to learn the syntax. The practical point: the AI may hand you a `.md` file, and a viewer like **Typora** ($15) makes it look like normal formatted text.
 
 ## Context and iteration
 
-**Context window**: The AI only "sees" what you show it. Be explicit.
+**Context window**: The AI only "sees" what is in the current session. Be explicit about what you want.
 
-**Iteration tips:**
+**Iteration:**
 
-- First output is a draft, not a final product
-- Refine: "Change the tone," "Add an example," "This is wrong because..."
+- The first output is a draft, not a final product
+- Refine: "Make it shorter," "Add an example," "This is wrong because..."
 - Save to a file so you can pick up later
 
-**When it's wrong:** AI makes confident-sounding mistakes. Always review output, especially numbers and citations.
+<!-- EMILY: Add a specific example here. Something like: "I asked it to extract due dates from my syllabus. First pass missed the final exam. I said 'you missed the final exam date on page 3.' It fixed it." -->
+
+::: {.alert-box}
+**When it's wrong:** It will confidently cite a paper that does not exist. Check everything — especially numbers, citations, and code. I am not exaggerating.
+<!-- EMILY: Replace or supplement with your best real hallucination/failure story. -->
+:::
 
 # Next Steps
 
@@ -74,7 +61,7 @@ You do not need to learn the syntax today, but it helps to have an app that make
 - Think of a research or teaching task you'd like to automate
 - Install guide: [eabeam.github.io/uvmecon-ai/prep.html](https://eabeam.github.io/uvmecon-ai/prep.html)
 
-**Next session:** Research pipelines, web scraping, automated grading
+**Next session:** Research pipelines, slide creation, web scraping, automated grading
 
 ## Resources
 

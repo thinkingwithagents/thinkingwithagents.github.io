@@ -1,5 +1,5 @@
 ---
-title: "Emily: Slide Creation, Teaching, and Research Workflows"
+title: "Slide Creation, Teaching, and Research Workflows"
 subtitle: "AI Bootcamp — Session 2"
 author: Emily Beam
 date: 2026-04-27
@@ -9,179 +9,142 @@ format:
 
 # Overview
 
-## Four concrete use cases
+## Three concrete use cases
 
-Today is built around workflows that many faculty already do:
+Today is built around workflows that faculty already do:
 
-- slide creation
-- teaching applications
-- conducting data analysis
-- a few additional repeatable use cases
+- **Slide creation** — from rough notes to a usable deck
+- **Teaching applications** — assignment prompts, rubrics, study guides
+- **Research pipeline** — raw CPS data to analysis plan to Stata code to report
 
-The point is not one magic prompt. The point is a documented workflow from starting materials to a usable output.
+The point is not one magic prompt. The point is a documented workflow from starting materials to a usable output, where you check each step before building on it.
 
 # Slides
 
-## From rough notes to usable slides
+## Slides are a good AI task
 
-This is a good AI task because slide drafting is repetitive but still judgment-heavy.
+Slide drafting is repetitive but judgment-heavy. The AI is good at the mechanical parts — turning prose into bullets, organizing a sequence, formatting tables. What it cannot do is decide what matters.
 
-- start from notes, a memo, or a rough outline
-- ask for a slide sequence before asking for slide text
-- turn long prose into headlines plus a few bullets
-- tighten wording after you see the structure
+- Start from notes, a memo, or a rough outline
+- Ask for a slide sequence before asking for slide text
+- Turn long prose into headlines plus a few bullets
+- Tighten wording after you see the structure
+
+<!-- EMILY: Mention that you made these slides with Claude Code. What was the failure mode? (e.g., "The first draft was too long and too generic — which is the normal failure mode. Then I edited.") -->
 
 ## A good slide workflow
 
-For bigger presentation tasks, a useful pattern is:
+::: {.highlight-box}
+**Prompt** → **plan** → **review** → **clear context** → **draft** → **review again**
+:::
 
-`prompt` -> `plan` -> `review` -> `clear` -> `draft` -> `review again`
+Separating planning from drafting avoids one long, messy conversation. Clear context between steps.
 
-That helps you avoid one long, messy conversation.
+**What still needs you:**
 
-## What still needs you
-
-- deciding the audience and tone
-- choosing what to cut
-- deciding which examples actually land
-- replacing generic bullets with your real content
+- Deciding the audience and tone
+- Choosing what to cut
+- Deciding which examples actually land
+- Replacing generic bullets with your real content
 
 # Teaching
 
 ## Best low-risk teaching uses
 
-The most useful teaching tasks are usually drafting and revision tasks:
+The most useful teaching tasks are drafting and revision — things where the hard part is getting something on the page, not getting it right.
 
-- assignment prompt first draft
-- rubric scaffolding
-- study guides
-- practice questions
-- editing for clarity
+- Draft a price discrimination problem set for intermediate micro
+- Build a rubric for a development economics writing assignment
+- Generate a study guide from your lecture notes
+- Create practice problems for an upcoming exam
+- Edit an assignment prompt for clarity
 
-## Example: literature review to teaching memo
+## Assignment and rubric workflow
 
-One teaching-side example is a literature review workflow:
+A strong teaching workflow:
 
-- start from a topic, question, or pile of readings
-- organize themes and compare papers
-- draft a synthesis, annotated bibliography, or discussion memo
-- turn scattered notes into something teachable
+1. Draft an assignment from learning goals — "Write an assignment where students analyze CPS wage data by education level"
+2. Revise for clarity and course level
+3. Build a rubric with criteria and performance levels
+4. Use the rubric to draft feedback comments
 
-## Example: assignment and rubric workflow
-
-Another strong teaching workflow is:
-
-- draft an assignment prompt from learning goals
-- revise for clarity and course level
-- build a rubric with criteria and performance levels
-- use the rubric to draft feedback comments
+::: {.highlight-box}
+Each step is a separate prompt. Review before building on it. The AI draft is a starting point, not a final product.
+:::
 
 ## What not to outsource
 
-- final grading judgment
-- course alignment and standards
-- fairness decisions
-- anything involving sensitive student situations
+- Final grading judgment
+- Course alignment and standards
+- Fairness decisions
+- Anything involving sensitive student situations
+
+::: {.alert-box}
+If you wouldn't hand it to an RA without checking, don't hand it to the AI without checking.
+:::
 
 # Research
 
 ## Raw data to report
 
-This is the research-side workflow:
+This is the research-side workflow, using a public CPS extract:
 
-- start with uncleaned data
-- make a plan
-- write code
-- build on existing code
-- execute
-- review results
-- write a short report
+1. Start with uncleaned data
+2. Ask the tool to describe it — how many observations, what variables, what's missing
+3. Propose an analysis plan — "Suggest three analyses for a paper on wage gaps by education"
+4. Write Stata code
+5. Run the code (or review pre-run output)
+6. Write a short report with findings, a table, and limitations
 
-## Workflow in one line
+## Workflow in practice
 
-For this kind of task, the workflow is:
-
-`plan` -> `write code` -> `build on existing code` -> `run` -> `review` -> `report`
+::: {.highlight-box}
+**Plan** → **write code** → **build on existing code** → **run** → **review** → **report**
 
 Each step is narrow enough to review, rerun, and improve.
+:::
 
-## What AI is good at here
+<!-- EMILY: Consider adding a concrete example of what the prompts look like. E.g., "I typed: 'Read this CSV and describe what's in it. How many observations? What are the variables?'" -->
+
+## What AI does well here — and what still needs you
 
 :::: {.columns}
 ::: {.column width="50%"}
 **Accelerates**
 
-- data orientation
-- candidate analyses
-- boilerplate code
-- building on existing code
-- first-draft reporting
+- Data orientation and exploration
+- Candidate analyses
+- Boilerplate Stata code
+- Building on existing do-files
+- First-draft reporting
 :::
 ::: {.column width="50%"}
 **Still needs you**
 
-- choosing the question
-- deciding whether the plan is sensible
-- checking code
-- interpreting the results
-- knowing when something is wrong
+- Choosing the question
+- Deciding whether the analysis plan makes sense
+- Checking the code actually does what it claims
+- Interpreting the results
+- Knowing the coefficient doesn't make sense because you understand the DGP
 :::
 ::::
 
-## Why screenshots are the right format here
-
-For the workshop, this demo is mostly pre-done.
-
-- show prompts and saved outputs
-- walk through the logic of each step
-- avoid spending lunch watching code run
-- keep attention on the workflow rather than the wait time
-
 ## Research guardrails
 
-- verify that the prompt matches the actual task
-- inspect code before you trust it
-- do not confuse polished prose with correctness
-- if the data are sensitive, redesign the workflow instead of forcing it
+- Verify that the prompt matches the actual task
+- Inspect code before you trust it
+- Do not confuse polished prose with correctness
+- If the data are sensitive, redesign the workflow instead of forcing it
 
-A safer pattern for sensitive work is often:
+::: {.alert-box}
+A safer pattern for sensitive work: let the tool write code, review the code yourself, review logs and outputs rather than exposing raw protected data.
+:::
 
-- let the tool write code
-- review the code yourself
-- review logs and outputs rather than exposing raw protected data
+# What to try next
 
-# Extras
+## Start with one bounded task
 
-## Writing and admin
-
-Useful bounded tasks include:
-
-- rewrite an email to be shorter, warmer, and clearer
-- summarize meeting notes into decisions, action items, and open questions
-- extract deadlines from a document into a table
-- turn rough notes into a clean markdown memo
-
-## Project management and workflow control
-
-AI is also useful for keeping work organized:
-
-- make a step-by-step plan before starting
-- keep a running list of decisions, open questions, and next steps
-- summarize project state so you can reopen it later
-- create a reusable prompt for a recurring task
-
-## Compare outputs and use disagreement
-
-One useful advanced pattern is not just "do the task," but:
-
-- ask for two approaches
-- compare outputs
-- send one version to stress-test the other
-- use disagreement as a signal to review more carefully
-
-## What to try next
-
-- try one slide-creation task from your own rough notes
-- try one bounded teaching task such as a rubric or study guide
-- try one small raw-data task with saved outputs and screenshots
-- save prompts and outputs so you can reuse what works
+- Try one slide-creation task from your own rough notes
+- Try one bounded teaching task — a rubric, study guide, or assignment draft
+- Try the data exploration → analysis plan workflow on a small dataset
+- Save prompts and outputs so you can reuse what works

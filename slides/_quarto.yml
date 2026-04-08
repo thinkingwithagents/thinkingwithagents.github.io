@@ -4,8 +4,8 @@ project:
 
 format:
   revealjs:
-    theme: default
-    include-in-header: section-breadcrumb.html
+    theme: simple
+    css: slides.css
     slide-number: c/t
     progress: true
     menu: true

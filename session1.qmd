@@ -3,10 +3,9 @@ title: "Session 1: Getting Started with AI Tools"
 subtitle: "April 22, 2026 — AI Bootcamp for UVM Economics"
 ---
 
-## Overview
+## April 22, 11:00--12:30, Old Mill A500
 
-**Time**: 1.5 hours (lunch session)
-**Goal**: Get faculty comfortable using AI tools for everyday academic tasks. By the end, everyone should have used an AI tool to produce something useful.
+This is a watch-along session. No installation needed — we demo everything live. Slides will be visible during AI processing time so you can follow the concepts while the tools work.
 
 ### Slides
 
@@ -16,103 +15,22 @@ subtitle: "April 22, 2026 — AI Bootcamp for UVM Economics"
 | Terminal + Claude Code (Beam) | [HTML](slides/s1-emily.html){target="_blank"} / [PDF](slides/s1-emily.pdf) |
 | Desktop AI + Teaching Applications (Aslim) | [HTML](slides/s1-erkmen.html){target="_blank"} / [PDF](slides/s1-erkmen.pdf) |
 
-## The AI Ladder
+### What we'll cover
 
-Where are you today?
+- What AI tools exist and which ones are useful for academic work
+- The difference between chat-based tools and agentic tools that work directly on your files
+- Live demos: terminal workflows, desktop AI, and a teaching application
+- What to expect, what to be skeptical about, and where to start
 
-| Level | Description | Example |
-|-------|-------------|---------|
-| 0 | Haven't tried it | — |
-| 1 | Tried it once, wasn't impressed | Asked ChatGPT a question, got a bad answer |
-| 2 | Use it occasionally for simple tasks | Drafting emails, brainstorming |
-| 3 | Regular user, integrated into workflow | Writing assistance, code help, literature search |
-| 4 | Power user, multi-step workflows | Research pipelines, automated grading, custom tools |
-| 5 | Building systems with AI | Custom agents, teaching tools, research infrastructure |
+### Before next time (April 27)
 
-**Our goal today**: Get everyone to at least Level 2, and show you what Levels 3–4 look like.
-
-::: {.callout-note}
-## Format
-This is a watch-along session — we'll demo everything live. No installation required. Slides will be up during generation/loading time so you can follow the concepts while the AI works.
-:::
-
-## Part 1: Terminal + Claude Code (Emily) {#terminal-demo}
-
-*~30 minutes*
-
-### Why the terminal?
-
-The desktop chat interfaces (ChatGPT, Claude.ai) are great for quick questions. But the terminal unlocks:
-
-- **File access**: AI can read and write files on your computer
-- **Iteration**: Work on a document across multiple steps without copy-pasting
-- **Reproducibility**: Save your workflow, rerun it later
-- **Power tools**: Claude Code can search your files, run code, and build things
-
-### What you're seeing
-
-1. **Ghostty** — a terminal app (any terminal works; this one just looks nice)
-2. **Claude Code** — an AI assistant that runs in the terminal. Type `claude` to launch.
-3. **Live prompting** — we type a request, the AI responds, we iterate.
-
-::: {.callout-tip}
-## Things you could try later on your own
-- "Read my syllabus at [path] and list all the due dates in a table"
-- "I have a CSV of student grades. Summarize the distribution and flag any outliers."
-- "Draft a response to this student email: [paste email]"
-:::
-
-### Key concepts
-
-- **Context window**: The AI can only "see" what you show it. Be explicit about what you want.
-- **Iteration**: Your first output won't be perfect. Refine: "Make it shorter," "Add a section on X," "Change the tone to be more formal."
-- **Markdown output**: Claude Code writes in Markdown. Use [Typora](https://typora.io) to view it nicely.
-
-### Live demo: terminal basics → Claude Code → iterating on output
-
-<!-- DEMO SCRIPT (Emily):
-1. Open Ghostty, show the terminal briefly
-2. Type `claude` to launch Claude Code
-3. Ask it to read a sample syllabus and extract due dates
-4. Ask it to reformat the dates as a calendar-ready CSV
-5. Show the output in Typora
-6. Show how to start a new conversation (clear context)
--->
-
-## Part 2: Desktop App Demo (Erkmen) {#desktop-demo}
-
-*~15 minutes*
-
-<!-- Erkmen: demo of ChatGPT or Claude desktop for quick tasks -->
-<!-- Suggested flow: show the chat interface, paste in a task, show how it differs from terminal -->
-
-## Part 3: Teaching Application (Erkmen) {#teaching-app}
-
-*~25 minutes*
-
-### Live demo: Assignment creation + grading rubric
-
-<!-- Erkmen: build an assignment prompt and grading rubric live
-Suggested flow:
-1. Start with a course topic
-2. Ask AI to generate an assignment prompt
-3. Iterate on it (adjust difficulty, add constraints)
-4. Generate a grading rubric
-5. Show how the rubric could be used for consistent grading
--->
-
-## Wrap-up + Q&A
-
-*~5 minutes*
-
-### Before next session (April 27)
-
-- [ ] Try using Claude Code or a desktop AI tool for one real task this week
+- [ ] Try using an AI tool for one real task this week
 - [ ] Install the tools from the [prep guide](prep.qmd) if you haven't already
-- [ ] Write down one research or teaching task you'd like to automate
+- [ ] Think of a research or teaching task you'd like to automate
 
 ### Resources
 
-- [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code)
-- [Anthropic prompt engineering guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+- [Getting Set Up](prep.qmd) — installation and cost guide
+- [Outside Resources](resources.qmd) — tools, guides, and examples
+- [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)
 - [UVM Microsoft Copilot](https://go.uvm.edu/copilot) (free for all UVM)

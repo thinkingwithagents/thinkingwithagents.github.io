@@ -3,6 +3,12 @@ title: "Getting Set Up"
 subtitle: "Tools for the AI Bootcamp"
 ---
 
+## What to expect at the bootcamp
+
+Two lunch sessions, watch-along format. You do not need to install anything beforehand. Bring a laptop if you want to follow along, but it is not required. The main thing to bring is a task you'd like to try — something from your teaching or research where you spend time on mechanical work.
+
+---
+
 ## Two categories of AI tools
 
 For this bootcamp, the most useful distinction is not "browser vs. app." It is:
@@ -198,3 +204,30 @@ AI tools often output rough-looking `.md` files. A good Markdown viewer or edito
 If you just want one app that opens Markdown files and makes them look good immediately, **Typora is the default recommendation here**.
 
 For broader reading beyond the bootcamp, see **[Outside Resources](resources.qmd)**.
+
+---
+
+## Key terms
+
+A few shared terms that come up in the bootcamp sessions:
+
+| Term | What we mean |
+|------|-------------|
+| **Agent** | A tool instance carrying out a bounded task with some autonomy |
+| **Model** | The underlying AI system you are talking to (e.g., Claude, GPT-4) |
+| **Session** | One conversation or one working thread with the tool |
+| **Context window** | The working memory available in the current session — when it fills up, performance gets worse |
+| **Artifact** | A concrete output: file, draft, memo, script, table, or slide |
+| **Rule file** | A standing instructions file such as `CLAUDE.md` or `AGENTS.md` that loads automatically |
+| **Permissions** | The rules about what the tool may read, change, run, or send |
+
+---
+
+## Checking your usage
+
+If you are using Claude Code with a paid subscription, you can check your usage and limits:
+
+- `npx claude-spend` — shows session and weekly limits, extra paid usage
+- `npx ccusage@latest` — alternative usage tracker
+
+Usage limits are not static — they can change over time. Paid plans subsidize usage, so the effective pricing is often better than raw token prices. Some models are cheaper than others, and rates can be higher during peak hours (often around 8 a.m.–1 p.m. EDT for Claude, though this shifts).

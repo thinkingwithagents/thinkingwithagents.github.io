@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with AI Tools"
-subtitle: "AI Bootcamp for UVM Economics - Session 1"
+subtitle: "AI Bootcamp for UVM Economics — Session 1"
 author:
   - Emily Beam
   - Erkmen Aslim
@@ -8,58 +8,24 @@ date: 2026-04-22
 format:
   revealjs:
     slide-number: c/t
-    progress: true
-    menu: true
-    overview: true
-    scrollable: false
 ---
-
-<style>
-.reveal .slides .asidebox {
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
-  border-left: 8px solid #2f6fab;
-  background: #eaf2fb;
-  border-radius: 8px;
-  font-size: 0.9em;
-}
-
-.reveal .slides .tight-table table {
-  width: 100%;
-  font-size: 0.8em;
-  line-height: 1.15;
-}
-
-.reveal .slides .tight-table col.term-col {
-  width: 22%;
-}
-
-.reveal .slides .shot {
-  border: 1px solid #d0d7de;
-  border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-}
-</style>
 
 # Overview
 
-## What is this?
+## Two lunch talks on AI tools
 
-Two lunch sessions on AI tools for teaching and research.
+- **Today**: what the tools are, what they actually do, live demos
+- **April 27**: research workflows, slide creation, web scraping, automated grading
+- No installation needed today — just watch, ask questions, try things later
 
-- **Today**: getting started, what the tools do, live demos
-- **April 27**: research workflows, web scraping, automated grading
-- no installation required today
-- watch now, ask questions, try things later
+## We started using these seriously in December
 
-## We are still learning
+We are still learning. The tools are still changing.
 
-This is a new space, for us and for the tools.
+- We started using Claude Code and Codex in December while working on the Economics AI letter
+- The learning curve is real, but it is short — a few days of real use, not a semester
 
-- we started using these tools in December and January while working on the Economics AI letter
-- the learning curve is real, but it is short
-- things are changing quickly
-- some of what feels hard now may get much easier very soon
+<!-- EMILY: Add 2-3 specific things you used them for early on, what surprised you, and what went wrong. The more concrete the better. Examples: "I used it to extract all the due dates from my syllabus into a CSV — took two minutes instead of twenty." "It confidently cited a paper that does not exist." -->
 
 ## The AI ladder
 
@@ -76,25 +42,52 @@ Where are you today?
 
 *Adapted from Kyle Jensen's AI adoption framework, as described in [Goldsmith-Pinkham (2026)](https://paulgp.substack.com/p/getting-started-with-claude-code).*
 
-**Goal today:** show you what Levels 3-4 look like.
+**Goal today:** show you what Levels 3–4 look like.
+
+## Your students are already using this
+
+This is the elephant in the room.
+
+- Students are using ChatGPT and Claude on your assignments. You know this.
+- Understanding what these tools can and cannot do makes your assessment design better.
+- This bootcamp is partly about that: if you know the tool, you can design around it.
+- This is not a policy talk. But knowing the technology helps you make better policy.
+
+## What this actually saves me time on
+
+<!-- EMILY: This slide needs your specific experience. Fill in both columns with real examples from your own use. The honest version of this slide is what builds credibility with skeptical colleagues.
+
+**Worth the time**
+
+- [specific task 1 — e.g., "First drafts of assignment prompts — I edit instead of stare at a blank page"]
+- [specific task 2 — e.g., "Extracting structure from messy documents"]
+- [specific task 3 — e.g., "Writing Stata code for tasks I know how to do but don't want to type out"]
+
+**Not worth the trouble (yet)**
+
+- [specific task 1 — e.g., "Anything involving sensitive student data"]
+- [specific task 2 — e.g., "Complex literature reviews — it hallucinates citations"]
+-->
 
 # Tools
 
-## Conversational AI vs Agentic AI
+## The useful distinction is chat vs. file access
 
-The useful distinction is not the brand name. It is what the tool can actually do for you and how directly it can work on your project.
+The brand name matters less than what the tool can actually do.
 
-| Conversational AI | Agentic AI |
+| Chat-based tools | Agentic tools |
 |---|---|
-| best for question-answering, drafting, summarizing, and quick help | best for multi-step work on real projects |
-| usually one conversation at a time | can support multiple simultaneous workflows |
-| you can upload files and sometimes do light coding tasks | can work across as many or as few files as you allow |
-| tends to be session-by-session | can be shaped into more customized systems |
-| easier to start with | more setup, but often more quality and efficiency |
+| Ask questions, draft text, summarize an uploaded file | Work directly on files in your project |
+| One conversation at a time | Multiple sessions on different tasks |
+| You copy-paste content in and out | It reads your Stata do-files, edits them, runs them |
+| Each conversation starts fresh | Can be shaped with standing instruction files |
+| Easier to start with | More setup, but you get real outputs, not just advice |
 
-In practice, we use both. We often run multiple Claude and Codex sessions at the same time with different tasks separated into different windows.
+::: {.highlight-box}
+UVM provides [Microsoft Copilot](https://go.uvm.edu/copilot) for free — good for Office integration, but it does not do the file-access workflows we are focusing on today.
+:::
 
-## Parallel workflows in practice
+## You can run multiple tasks at once
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -105,235 +98,90 @@ In practice, we use both. We often run multiple Claude and Codex sessions at the
 :::
 ::::
 
-- separate tasks into separate sessions instead of piling everything into one thread
-- one window might be planning, another writing, another code execution or review
-- this is a normal part of agentic workflow, not an advanced edge case
+- Separate tasks into separate sessions instead of piling everything into one thread
+- One window might be planning, another writing, another reviewing code
+- This is normal, not an advanced edge case
 
-## Vocabulary {.smaller}
+## The big jump is when it can work on your actual files
 
-A few shared terms will make the rest of the session easier to follow.
+Instead of copying your syllabus into a chat window, the tool reads it directly from your folder.
 
-::: {.tight-table}
-<table>
-<colgroup>
-  <col class="term-col" />
-  <col />
-</colgroup>
-<thead>
-  <tr><th>Term</th><th>What we mean</th></tr>
-</thead>
-<tbody>
-  <tr><td><strong>Agent</strong></td><td>A tool instance carrying out a bounded task with some autonomy</td></tr>
-  <tr><td><strong>Model</strong></td><td>The underlying AI system you are talking to</td></tr>
-  <tr><td><strong>Session</strong></td><td>One conversation or one working thread with the tool</td></tr>
-  <tr><td><strong>Context window</strong></td><td>The working memory available in the current session</td></tr>
-  <tr><td><strong>Artifact</strong></td><td>A concrete output: file, draft, memo, script, table, or slide</td></tr>
-  <tr><td><strong>Rule file</strong></td><td>A standing instructions file such as <code>CLAUDE.md</code> or <code>AGENTS.md</code></td></tr>
-  <tr><td><strong>Project file</strong></td><td>A project-specific instructions file that lives with the project itself</td></tr>
-  <tr><td><strong>Permissions</strong></td><td>The rules about what the tool may read, change, run, or send</td></tr>
-  <tr><td><strong>Orchestration</strong></td><td>Coordinating several tasks, tools, or agents in one workflow</td></tr>
-</tbody>
-</table>
-:::
+- Less copy-paste, easier iteration across many files
+- Outputs stay in your project as real files
+- You can build workflows you reuse later
+- Much better fit for real research and teaching work
 
-## The tools landscape {.smaller}
+# Standing instructions
 
-:::: {.columns}
-::: {.column width="48%"}
-**Conversational AI**
+## You can give the tool standing instructions
 
-- ChatGPT
-- Claude.ai
-- good for quick questions, drafting, summarizing, and uploaded files
-- lower barrier to entry
-:::
-::: {.column width="52%"}
-**Agentic AI**
+For agentic tools, files like `CLAUDE.md` or `AGENTS.md` are loaded automatically when you start working in a project.
 
-- Claude Code
-- Codex
-- good for file access, iteration, reusable workflows, and longer jobs
-- usually the better option when you want real outputs instead of just advice
-:::
-::::
+- They store stable preferences, permissions, and workflow rules
+- They reduce how much you re-explain every session
+- You can have general preferences and project-specific ones
+- Keep them short — if they get too long, important rules get lost
 
-::: {.asidebox}
-UVM provides enterprise-level [Microsoft Copilot](https://go.uvm.edu/copilot) with higher data security and strong Microsoft Office integration, but it does not support the agentic workflows we are focusing on here.
-:::
-
-## Why file access matters
-
-The jump from conversational AI to agentic AI is mostly about direct work on real files.
-
-- less copy-paste
-- easier iteration across many files
-- persistent outputs that stay in your project
-- easier to build workflows you can reuse later
-- much better fit for real research, teaching, and website work
-
-# Projects
-
-## About `CLAUDE.md` and `AGENTS.md`
-
-For coding tools, these are standing instruction files that are loaded automatically when you start working in a project that contains them.
-
-- they store stable preferences, permissions, workflow rules, and project context
-- they reduce how much you need to re-explain every session
-- you can have both general and project-specific versions
-- they should stay short: if they get too long, they slow things down and important rules get lost
-
-## Personal preferences example
+<!-- EMILY: Replace the TODO below with a real screenshot of your CLAUDE.md or a short text excerpt. If no screenshot, delete the two-column layout and just describe it: "Mine is about 30 lines. It tells the tool: use full file paths, don't rewrite my phrasing, be direct." -->
 
 :::: {.columns}
 ::: {.column width="58%"}
 _TODO: add updated context/preferences screenshot here._
 :::
 ::: {.column width="42%"}
-- good place for preferences like full file paths, permission rules, and writing defaults
-- a file like [`EB-VOICE.md`](/Users/ebeam/Dropbox/GitHub/eb-lab/EB-VOICE.md) is one concrete example
-- after a work session, you can update the file based on your edits
-- keep it short enough that it stays useful
-:::
-::::
-
-# Markdown
-
-## Markdown (`.md`)
-
-AI tools often write in Markdown because it is a simple plain-text format that converts easily into other outputs.
-
-- common output for notes, reports, instructions, and drafts
-- easy to convert into `docx`, `pdf`, `html`, slides, and other formats
-- useful to get comfortable recognizing it, even if you do not write it yourself
-- recommended viewers/editors:
-  Typora ($15), MarkText, Zettlr, MacDown
-
-## Raw Markdown vs rendered Markdown
-
-Markdown looks ugly in raw form and normal in a viewer.
-
-:::: {.columns}
-::: {.column width="50%"}
-**Raw Markdown**
-
-![](assets/markdown-raw.png){width="100%" .shot}
-:::
-::: {.column width="50%"}
-**Rendered preview**
-
-![](assets/markdown-pretty.png){width="100%" .shot}
+- Preferences like file paths, permission rules, writing style
+- A file like `EB-VOICE.md` stores my writing defaults
+- After a work session, update the file based on what you learned
 :::
 ::::
 
 # Context
 
-## Context window
+## The context window is why long conversations go sideways
 
 The context window is the tool's working memory for the current session.
 
-- every model has a maximum context window set by the model or the company
-- as that working memory fills up, performance can get worse
-- larger, messier sessions are more likely to accumulate mistakes
-- this is one reason to separate tasks and work in multiple sessions
-- depending on the tool, session-management commands may include things like `compact`, `/compact`, or `/clear`
+- Every model has a maximum — when it fills up, performance gets worse
+- Larger, messier sessions accumulate more mistakes
+- This is why you separate tasks into multiple sessions
 
-## Session hygiene
-
-For larger tasks, it helps to separate planning, execution, and review rather than doing everything in one long messy thread.
-
-```{mermaid}
-flowchart LR
-    A[Prompt] --> B[Plan]
-    B --> C[Execute]
-    C --> D[Review]
-    D --> E[Compact or clear]
-    E --> F[Continue]
-```
-
-Useful code-like reminders:
-
-- `plan`
-- `compact`
-- `/compact`
-- `/clear`
-
-## Checking Claude usage
-
-:::: {.columns}
-::: {.column width="54%"}
-![](assets/claude-usage-panel.png){width="100%" .shot}
+::: {.alert-box}
+For bigger tasks: **plan**, then **execute**, then **review**, then **clear context** and continue. Don't do everything in one long messy thread.
 :::
-::: {.column width="46%"}
-Two useful commands:
-
-- `npx claude-spend`
-- `npx ccusage@latest`
-
-What this shows:
-
-- session limits
-- weekly limits
-- extra paid usage
-- current usage is not static and can change over time
-:::
-::::
-
-## Usage changes over time
-
-:::: {.columns}
-::: {.column width="58%"}
-![](assets/claude-spend-overview.png){width="100%" .shot}
-:::
-::: {.column width="42%"}
-- paid plans subsidize usage, so the effective pricing is often better than raw token prices
-- pricing is still somewhat unclear and can shift
-- some models are cheaper than others
-- rates can be higher at busy times
-- for Claude, peak time is often around `8 a.m.-1 p.m. EDT`, but that can change
-:::
-::::
 
 # Safety
 
-## Safety example
+## Don't give it your IRB data
 
-Sensitive work can often be redesigned instead of abandoned.
+Sensitive work can often be redesigned rather than abandoned.
 
-- do not give it PII-heavy files unless the rules and platform are appropriate
-- let it work on code and log files instead of raw protected data
-- if a task is too risky, do not do it
-- paid subscriptions generally let you turn off training on your content, and that is recommended
-
-## What breaking your computer really means
-
-This risk is usually low unless you deliberately ask for something extreme.
-
-- the tool can make mistakes
-- the tool may pause and ask for permission on risky actions
-- you can refuse, stop the task, or tighten the rules
+- Do not give it files with PII unless the platform and rules are appropriate
+- Let it work on code and log files instead of raw protected data
+- Paid subscriptions generally let you turn off training on your content — do that
+- The tool can make mistakes, but it will usually pause and ask permission on risky actions
+- You can refuse, stop the task, or tighten the rules
 
 # Demos
-
-## GitHub and collaboration
-
-These tools work especially well with GitHub-based workflows, though GitHub is not required.
-
-- very useful for collaboration and version control
-- especially powerful for intensive or shared coding projects
-- makes it easier to track changes, compare versions, and work with others
-- a power-up, not a prerequisite
 
 ## What to expect from the demos
 
 You are about to see practical examples, not magic.
 
-- live prompting
-- iteration
-- occasional waiting
-- reviewing output critically
+- Live prompting — we type a request, the AI responds, we iterate
+- Occasional waiting — AI processing is not instant
+- Reviewing output critically — the first draft is never the final product
+- Slides will be visible during wait times so you can follow along
+
+::: {.highlight-box}
+These tools work especially well with GitHub for version control and collaboration, but GitHub is not required for anything we are doing today.
+:::
 
 ## Wrap-up
 
 The biggest jump in usefulness comes when the AI can work directly with your files.
 
-Next session: research pipelines, web scraping, automated grading.
+### Before next time (April 27)
+
+- Try using an AI tool for **one real task** this week
+- Install the tools from the [prep guide](https://eabeam.github.io/uvmecon-ai/prep.html) if you want to try on your own
+- Think of a research or teaching task you'd like to automate

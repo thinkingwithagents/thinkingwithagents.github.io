@@ -140,7 +140,7 @@ These are helpful when official documentation feels too product-focused and you 
 
 ### Paul Goldsmith-Pinkham
 
-- [Getting started with Claude Code](https://paulgp.substack.com/p/getting-started-with-claude-code?utm_source=post-email-title&publication_id=1015181&post_id=192433164&utm_campaign=email-post-title&isFreemail=true&r=4oe7l&triedRedirect=true&utm_medium=email)
+- [Getting started with Claude Code](https://paulgp.substack.com/p/getting-started-with-claude-code)
   A good introduction to why terminal-based AI work feels different from ordinary chat.
 
 ### Claude Blattman
