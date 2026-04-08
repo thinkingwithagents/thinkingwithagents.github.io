@@ -3,12 +3,13 @@ title: "Outside Resources"
 subtitle: "Tools, guides, and examples beyond the bootcamp itself"
 ---
 
-This page is a broader reference list for people who want to keep going after the bootcamp. It is organized by resource type so you can jump directly to product docs, teaching guidance, research tools, or workflow examples.
+This page is a broader reference list for people who want to keep going after the bootcamp. It is organized by resource type, but it puts **agentic tools** first because those are the main workflow focus of this bootcamp.
 
 ## How to use this page
 
 Pick one section that matches what you need right now:
 
+- agentic tools if you want file-aware, multi-step workflows
 - official documentation if you want to learn a tool directly
 - teaching guidance if you want faculty-oriented pedagogy examples
 - research and literature tools if you want help with discovery or evidence synthesis
@@ -17,43 +18,69 @@ Pick one section that matches what you need right now:
 
 You do not need to read everything here.
 
-## Official tool documentation
+## Start here: agentic tools
 
-### UVM and Microsoft
+These are the tools most aligned with the workflows emphasized in the bootcamp: working with files, iterating across steps, saving outputs, and building reusable processes.
 
-- [Microsoft Copilot at UVM](https://go.uvm.edu/copilot)
-  Best starting point if you want the UVM-supported option.
-- [Microsoft Copilot docs](https://learn.microsoft.com/en-us/copilot/)
-  Useful if you want the broader Microsoft ecosystem view.
-
-### Anthropic / Claude
+### Claude Code
 
 - [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/overview)
   Best starting point for the terminal-based, file-aware workflow featured in the bootcamp.
 - [Anthropic prompt engineering guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
   Useful for improving prompting and workflow structure.
-- [Claude](https://claude.ai/)
-  Main chat-first entry point for Claude.
 
-### OpenAI / ChatGPT / Codex
+### OpenAI Codex
 
-- [ChatGPT](https://chatgpt.com/)
-  Main chat-first entry point for ChatGPT.
-- [ChatGPT overview](https://chatgpt.com/overview)
-  Good orientation if you want a quick product overview first.
 - [OpenAI Codex docs](https://platform.openai.com/docs/codex)
   Official reference for OpenAI’s agentic coding and file-workflow tool.
 - [OpenAI Codex CLI getting started](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)
   Best if you want the terminal workflow specifically.
-- [OpenAI ChatGPT Education docs](https://platform.openai.com/docs/chatgpt-education)
-  Useful if you want educator-oriented OpenAI guidance.
 
-### Alternative editor-based workflow
+### Editor-based alternative
 
 - [Cursor](https://cursor.com/)
   Popular option for people who want an editor-based AI workflow rather than a terminal-first workflow.
 - [Cursor docs](https://docs.cursor.com/get-started/introduction)
   Useful if you want to compare editor-based and terminal-based workflows.
+
+## Quick note on chat-based tools
+
+Chat-based tools still matter. They are often the easiest place to start, and they are very useful for:
+
+- quick questions
+- drafting and rewriting
+- summarizing uploaded files
+- bounded one-session tasks
+
+For this bootcamp, though, they are not the main emphasis. The bigger jump in usefulness usually comes when the tool can work directly with project files and help you manage a multi-step workflow.
+
+### Main chat-first options
+
+- [Claude](https://claude.ai/)
+  Main chat-first entry point for Claude.
+- [ChatGPT](https://chatgpt.com/)
+  Main chat-first entry point for ChatGPT.
+- [ChatGPT overview](https://chatgpt.com/overview)
+  Good orientation if you want a quick product overview first.
+- [Microsoft Copilot at UVM](https://go.uvm.edu/copilot)
+  Best starting point if you want the UVM-supported option.
+
+## Official tool documentation
+
+### UVM and Microsoft
+
+- [Microsoft Copilot docs](https://learn.microsoft.com/en-us/copilot/)
+  Useful if you want the broader Microsoft ecosystem view.
+
+### Anthropic / Claude
+
+- [Claude](https://claude.ai/)
+  Main chat-first entry point for Claude.
+
+### OpenAI / ChatGPT / Codex
+
+- [OpenAI ChatGPT Education docs](https://platform.openai.com/docs/chatgpt-education)
+  Useful if you want educator-oriented OpenAI guidance.
 
 ## Teaching and pedagogy guidance
 
