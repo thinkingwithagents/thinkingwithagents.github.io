@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About This Project – AI for UVM Economics</title>
+<title>Participant Prep Guide – AI for UVM Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./prep.html"> 
+    <a class="nav-link active" href="./prep.html" aria-current="page"> 
 <span class="menu-text">Prep Guide</span></a>
   </li>  
   <li class="nav-item">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Session 2 (Apr 27)</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -126,11 +126,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-this-exists" id="toc-why-this-exists" class="nav-link active" data-scroll-target="#why-this-exists">Why This Exists</a></li>
-  <li><a href="#who-its-for" id="toc-who-its-for" class="nav-link" data-scroll-target="#who-its-for">Who It’s For</a></li>
-  <li><a href="#uvm-context" id="toc-uvm-context" class="nav-link" data-scroll-target="#uvm-context">UVM Context</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
+  <li><a href="#before-session-1-april-22" id="toc-before-session-1-april-22" class="nav-link active" data-scroll-target="#before-session-1-april-22">Before Session 1 (April 22)</a>
+  <ul class="collapse">
+  <li><a href="#required" id="toc-required" class="nav-link" data-scroll-target="#required">Required</a></li>
+  <li><a href="#recommended" id="toc-recommended" class="nav-link" data-scroll-target="#recommended">Recommended</a></li>
+  <li><a href="#already-have-these-youre-set." id="toc-already-have-these-youre-set." class="nav-link" data-scroll-target="#already-have-these-youre-set.">Already have these? You’re set.</a></li>
+  </ul></li>
+  <li><a href="#what-to-bring" id="toc-what-to-bring" class="nav-link" data-scroll-target="#what-to-bring">What to bring</a></li>
+  <li><a href="#cost" id="toc-cost" class="nav-link" data-scroll-target="#cost">Cost</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eabeam/uvmecon-ai/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -139,7 +142,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About This Project</h1>
+<h1 class="title">Participant Prep Guide</h1>
+<p class="subtitle lead">What to install before the AI Bootcamp</p>
 </div>
 
 
@@ -156,27 +160,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- TODO: Customize for uvmecon-ai context -->
-<section id="why-this-exists" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-exists">Why This Exists</h2>
-<!-- Placeholder: describe the purpose of uvmecon-ai and how it differs from or extends teaching-ai -->
+<section id="before-session-1-april-22" class="level2">
+<h2 class="anchored" data-anchor-id="before-session-1-april-22">Before Session 1 (April 22)</h2>
+<p>Please install the following before the first session. If you get stuck, don’t worry — we’ll help during the session.</p>
+<section id="required" class="level3">
+<h3 class="anchored" data-anchor-id="required">Required</h3>
+<p><strong>Claude Code</strong> (terminal-based AI assistant)</p>
+<ol type="1">
+<li>Open your terminal (Terminal.app on Mac, or Ghostty if installed)</li>
+<li>Run: <code>npm install -g @anthropic-ai/claude-code</code></li>
+<li>Run: <code>claude</code> and follow the login prompts</li>
+<li>You’ll need an <a href="https://console.anthropic.com/">Anthropic account</a> (free to create; usage is pay-as-you-go after free tier)</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you don’t have <code>npm</code>, install <a href="https://nodejs.org/">Node.js</a> first (LTS version). On Mac: <code>brew install node</code> if you have Homebrew.</p>
+</div>
+</div>
 </section>
-<section id="who-its-for" class="level2">
-<h2 class="anchored" data-anchor-id="who-its-for">Who It’s For</h2>
-<p><strong>Students</strong>: UVM Economics students across courses. Examples assume comfort with economic reasoning and academic writing.</p>
-<p><strong>Instructors</strong>: UVM Economics faculty who want to incorporate AI literacy into existing courses without building everything from scratch.</p>
+<section id="recommended" class="level3">
+<h3 class="anchored" data-anchor-id="recommended">Recommended</h3>
+<p><strong>Ghostty</strong> — a fast, clean terminal app</p>
+<ul>
+<li>Download from <a href="https://ghostty.org">ghostty.org</a></li>
+<li>Why? Nicer than the default Terminal.app. Not required, but makes the demo easier to follow.</li>
+</ul>
+<p><strong>Typora</strong> — a markdown editor/viewer</p>
+<ul>
+<li>Download from <a href="https://typora.io">typora.io</a></li>
+<li>Why? Claude Code outputs markdown files. Typora renders them beautifully so you can review, edit, and share.</li>
+</ul>
 </section>
-<section id="uvm-context" class="level2">
-<h2 class="anchored" data-anchor-id="uvm-context">UVM Context</h2>
-<p>The University of Vermont provides enterprise-protected <a href="https://go.uvm.edu/copilot">Microsoft Copilot</a> to all students, faculty, and staff. Some modules reference this tool, but all concepts apply to any LLM.</p>
+<section id="already-have-these-youre-set." class="level3">
+<h3 class="anchored" data-anchor-id="already-have-these-youre-set.">Already have these? You’re set.</h3>
+<p>If you already use VS Code, Claude Code also works as a <a href="https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code">VS Code extension</a>. You can use whichever interface you prefer.</p>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p><a href="https://eabeam.github.io">Emily Beam</a> · Department of Economics · University of Vermont · emily.beam@uvm.edu</p>
 </section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> — use freely with attribution.</p>
+<section id="what-to-bring" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-bring">What to bring</h2>
+<ul>
+<li>Laptop (Mac or Windows) with power cable</li>
+<li>A real task you’d like to try — a syllabus to reformat, data to explore, an email to draft, an assignment to create</li>
+</ul>
+</section>
+<section id="cost" class="level2">
+<h2 class="anchored" data-anchor-id="cost">Cost</h2>
+<ul>
+<li><strong>Claude Code</strong>: Free tier available; pay-as-you-go after that (~$3–10/month for moderate use)</li>
+<li><strong>Ghostty</strong>: Free</li>
+<li><strong>Typora</strong>: $14.99 one-time (free trial available)</li>
+<li><strong>UVM Microsoft Copilot</strong>: Free for all UVM — <a href="https://go.uvm.edu/copilot">go.uvm.edu/copilot</a></li>
+</ul>
+<p>PDF funds may cover AI subscriptions. Ask your department chair.</p>
 
 
 </section>

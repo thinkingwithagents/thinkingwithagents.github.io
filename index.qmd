@@ -1,28 +1,30 @@
 ---
 title: "AI for UVM Economics"
-subtitle: "Modular AI literacy resources for UVM Economics students and faculty"
+subtitle: "A practical bootcamp for faculty and graduate students"
 ---
 
-::: {.callout-warning}
-## Scaffold only
-This site is a skeleton. Content, module structure, and navigation are placeholders. See [the sample module](modules/a1-what-llms-do.qmd) for the intended format.
-:::
+## AI Bootcamp — Spring 2026
 
-## What Is This?
+Two lunch sessions introducing AI tools for teaching and research. No prior experience required — just bring your laptop and curiosity.
 
-<!-- TODO: Describe the purpose of this site and who it's for -->
+### Schedule
 
-## Modules
+| Session | Date | Focus |
+|---------|------|-------|
+| [Session 1](session1.qmd) | **Wednesday, April 22** | Getting started: terminal, Claude Code, teaching applications |
+| [Session 2](session2.qmd) | **Monday, April 27** | Research pipelines, web scraping, automated grading |
 
-<!-- TODO: Add module table once modules are developed. Suggested tracks:
-- Foundations (A-track): What LLMs do, prompting, when to use AI
-- Technical (B-track): Terminal, Git/GitHub
-- Econ Workflows (C-track): Lit review, code, data, writing, math
-- Faculty Quick Start (F-track): Short app-first modules
--->
+### Before you arrive
+
+See the **[Prep Guide](prep.qmd)** for what to install.
+
+### Presenters
+
+- **Emily Beam** — Associate Professor of Economics, UVM
+- **Erkmen Aslim** — Department of Economics, UVM
 
 ## About
 
-Created by [Emily Beam](https://eabeam.github.io), Department of Economics, University of Vermont.
+This site hosts materials for the UVM Economics AI Bootcamp. After the bootcamp, it will grow into a broader resource for AI literacy in economics.
 
 Built with [Quarto](https://quarto.org). Source on [GitHub](https://github.com/eabeam/uvmecon-ai).

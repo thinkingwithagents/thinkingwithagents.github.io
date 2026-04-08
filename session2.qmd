@@ -1,0 +1,110 @@
+---
+title: "Session 2: AI for Research and Advanced Teaching"
+subtitle: "April 27, 2026 — AI Bootcamp for UVM Economics"
+---
+
+## Overview
+
+**Time**: 1.5 hours (lunch session)
+**Presenters**: Emily Beam + Erkmen Aslim
+**Goal**: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation.
+
+## Recap: The Compound Workflow (Emily) {#compound-workflow}
+
+*~10 minutes*
+
+Last session: one prompt → one output. Today: chained steps where AI builds on its own prior work.
+
+### The cycle
+
+```
+Plan → Execute → Review → Clear context → Repeat
+```
+
+**Why clear context?** AI tools have limited memory. A fresh conversation with a clear task beats a long, muddled conversation. Document what you learned in a markdown file so you (and the AI) can pick up where you left off.
+
+### Key principles
+
+- **Break big tasks into steps**: Don't ask "analyze my data and write a paper." Ask "read my data dictionary and propose an analysis plan."
+- **Save intermediate outputs**: Write results to files, not just chat.
+- **Review each step**: AI makes confident-sounding mistakes. Check before building on top.
+- **Document as you go**: Keep a running markdown file of decisions, prompts that worked, and lessons learned.
+
+## Part 1: Research Pipeline Demo (Emily) {#research-demo}
+
+*~35 minutes*
+
+### Live demo: Raw data → analysis plan → code → report
+
+Starting from a raw dataset, we'll use Claude Code to:
+
+1. **Explore the data**: "Read this CSV and describe what's in it. How many observations? What are the variables?"
+2. **Propose an analysis plan**: "Given these variables, suggest 3 analyses that would be interesting for a research paper on [topic]."
+3. **Write analysis code**: "Write Stata code to run [analysis]. Use clear variable labels and save the output."
+4. **Generate a summary report**: "Based on these results, draft a 1-page summary with key findings, a table, and a limitations paragraph."
+
+<!-- DEMO SCRIPT (Emily):
+Dataset: TBD — needs to be small, public, relatable
+Options:
+  - Teaching evals (if available/anonymized)
+  - Public-use CPS extract (wages, education, demographics)
+  - Simulated data that mimics a simple RCT
+
+Steps:
+1. `claude` → ask it to read the CSV and describe it
+2. Ask for an analysis plan (it will propose regressions, summary stats)
+3. Pick one analysis, ask it to write Stata code
+4. Run the code (or show pre-run output if Stata not available in demo)
+5. Ask it to write up findings as a markdown report
+6. Open report in Typora
+7. Show the "clear context and start fresh" pattern
+-->
+
+::: {.callout-note}
+## What this demo is NOT
+This is not a replacement for careful research design. The AI doesn't know your research question, institutional context, or identification strategy. It's a tool for accelerating the mechanical parts — data cleaning, boilerplate code, first-draft summaries — so you can focus on the thinking.
+:::
+
+## Part 2: Web Scraping Demo (Erkmen) {#web-scraper}
+
+*~20 minutes*
+
+<!-- Erkmen: live demo of using AI to build a web scraper
+Suggested flow:
+1. Identify a data source (e.g., faculty directory, public dataset page)
+2. Ask AI to write a Python script to scrape it
+3. Run it, inspect the output
+4. Discuss when this is appropriate (ethics, terms of service, robots.txt)
+-->
+
+## Part 3: Automated Grading (Erkmen) {#automated-grading}
+
+*~20 minutes*
+
+<!-- Erkmen: extend the Session 1 rubric into an automated grading workflow
+Suggested flow:
+1. Take the rubric from Session 1
+2. Show how to feed student submissions + rubric to AI
+3. Get structured feedback for each submission
+4. Discuss limitations (AI grading is a starting point, not final grade)
+-->
+
+## Wrap-up + Discussion {#wrapup}
+
+*~5 minutes*
+
+### What to try next
+
+- **Teaching**: Use AI to draft a new assignment, create practice problems, or build a study guide
+- **Research**: Try the data exploration → analysis plan workflow on your own data
+- **Writing**: Use Claude Code to revise a draft, check references, or restructure a section
+
+### Ongoing resources
+
+- This site: [eabeam.github.io/uvmecon-ai](https://eabeam.github.io/uvmecon-ai)
+- [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)
+- UVM's [Microsoft Copilot](https://go.uvm.edu/copilot) (enterprise-protected, free)
+
+### The subscription question
+
+AI subscriptions (Claude Pro, ChatGPT Plus) cost ~$20/month. UVM provides Microsoft Copilot for free. PDF funds may cover subscriptions — talk to your chair.

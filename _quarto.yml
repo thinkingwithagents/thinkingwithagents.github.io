@@ -14,8 +14,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: modules/a1-what-llms-do.qmd
-        text: "Sample Module"
+      - href: prep.qmd
+        text: "Prep Guide"
+      - href: session1.qmd
+        text: "Session 1 (Apr 22)"
+      - href: session2.qmd
+        text: "Session 2 (Apr 27)"
       - href: about.qmd
         text: About
 

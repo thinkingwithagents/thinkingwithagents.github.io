@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About This Project – AI for UVM Economics</title>
+<title>Session 1: Getting Started with AI Tools – AI for UVM Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Prep Guide</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./session1.html"> 
+    <a class="nav-link active" href="./session1.html" aria-current="page"> 
 <span class="menu-text">Session 1 (Apr 22)</span></a>
   </li>  
   <li class="nav-item">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Session 2 (Apr 27)</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -126,11 +126,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-this-exists" id="toc-why-this-exists" class="nav-link active" data-scroll-target="#why-this-exists">Why This Exists</a></li>
-  <li><a href="#who-its-for" id="toc-who-its-for" class="nav-link" data-scroll-target="#who-its-for">Who It’s For</a></li>
-  <li><a href="#uvm-context" id="toc-uvm-context" class="nav-link" data-scroll-target="#uvm-context">UVM Context</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#the-ai-ladder" id="toc-the-ai-ladder" class="nav-link" data-scroll-target="#the-ai-ladder">The AI Ladder</a></li>
+  <li><a href="#terminal-demo" id="toc-terminal-demo" class="nav-link" data-scroll-target="#terminal-demo">Part 1: Terminal + Claude Code (Emily)</a>
+  <ul class="collapse">
+  <li><a href="#why-the-terminal" id="toc-why-the-terminal" class="nav-link" data-scroll-target="#why-the-terminal">Why the terminal?</a></li>
+  <li><a href="#setup-walkthrough" id="toc-setup-walkthrough" class="nav-link" data-scroll-target="#setup-walkthrough">Setup walkthrough</a></li>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key concepts</a></li>
+  <li><a href="#live-demo-terminal-basics-claude-code-iterating-on-output" id="toc-live-demo-terminal-basics-claude-code-iterating-on-output" class="nav-link" data-scroll-target="#live-demo-terminal-basics-claude-code-iterating-on-output">Live demo: terminal basics → Claude Code → iterating on output</a></li>
+  </ul></li>
+  <li><a href="#desktop-demo" id="toc-desktop-demo" class="nav-link" data-scroll-target="#desktop-demo">Part 2: Desktop App Demo (Erkmen)</a></li>
+  <li><a href="#teaching-app" id="toc-teaching-app" class="nav-link" data-scroll-target="#teaching-app">Part 3: Teaching Application (Erkmen)</a>
+  <ul class="collapse">
+  <li><a href="#live-demo-assignment-creation-grading-rubric" id="toc-live-demo-assignment-creation-grading-rubric" class="nav-link" data-scroll-target="#live-demo-assignment-creation-grading-rubric">Live demo: Assignment creation + grading rubric</a></li>
+  </ul></li>
+  <li><a href="#wrap-up-qa" id="toc-wrap-up-qa" class="nav-link" data-scroll-target="#wrap-up-qa">Wrap-up + Q&amp;A</a>
+  <ul class="collapse">
+  <li><a href="#before-next-session-april-27" id="toc-before-next-session-april-27" class="nav-link" data-scroll-target="#before-next-session-april-27">Before next session (April 27)</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eabeam/uvmecon-ai/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -139,7 +153,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About This Project</h1>
+<h1 class="title">Session 1: Getting Started with AI Tools</h1>
+<p class="subtitle lead">April 22, 2026 — AI Bootcamp for UVM Economics</p>
 </div>
 
 
@@ -156,29 +171,161 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- TODO: Customize for uvmecon-ai context -->
-<section id="why-this-exists" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-exists">Why This Exists</h2>
-<!-- Placeholder: describe the purpose of uvmecon-ai and how it differs from or extends teaching-ai -->
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>Time</strong>: 1.5 hours (lunch session) <strong>Presenters</strong>: Emily Beam + Erkmen Aslim <strong>Goal</strong>: Get faculty comfortable using AI tools for everyday academic tasks. By the end, everyone should have used an AI tool to produce something useful.</p>
 </section>
-<section id="who-its-for" class="level2">
-<h2 class="anchored" data-anchor-id="who-its-for">Who It’s For</h2>
-<p><strong>Students</strong>: UVM Economics students across courses. Examples assume comfort with economic reasoning and academic writing.</p>
-<p><strong>Instructors</strong>: UVM Economics faculty who want to incorporate AI literacy into existing courses without building everything from scratch.</p>
+<section id="the-ai-ladder" class="level2">
+<h2 class="anchored" data-anchor-id="the-ai-ladder">The AI Ladder</h2>
+<p>Where are you today?</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 44%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Haven’t tried it</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Tried it once, wasn’t impressed</td>
+<td>Asked ChatGPT a question, got a bad answer</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Use it occasionally for simple tasks</td>
+<td>Drafting emails, brainstorming</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Regular user, integrated into workflow</td>
+<td>Writing assistance, code help, literature search</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Power user, multi-step workflows</td>
+<td>Research pipelines, automated grading, custom tools</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Building systems with AI</td>
+<td>Custom agents, teaching tools, research infrastructure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Our goal today</strong>: Get everyone to at least Level 2, and show you what Levels 3–4 look like.</p>
 </section>
-<section id="uvm-context" class="level2">
-<h2 class="anchored" data-anchor-id="uvm-context">UVM Context</h2>
-<p>The University of Vermont provides enterprise-protected <a href="https://go.uvm.edu/copilot">Microsoft Copilot</a> to all students, faculty, and staff. Some modules reference this tool, but all concepts apply to any LLM.</p>
+<section id="terminal-demo" class="level2">
+<h2 class="anchored" data-anchor-id="terminal-demo">Part 1: Terminal + Claude Code (Emily)</h2>
+<p><em>~30 minutes</em></p>
+<section id="why-the-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-terminal">Why the terminal?</h3>
+<p>The desktop chat interfaces (ChatGPT, Claude.ai) are great for quick questions. But the terminal unlocks:</p>
+<ul>
+<li><strong>File access</strong>: AI can read and write files on your computer</li>
+<li><strong>Iteration</strong>: Work on a document across multiple steps without copy-pasting</li>
+<li><strong>Reproducibility</strong>: Save your workflow, rerun it later</li>
+<li><strong>Power tools</strong>: Claude Code can search your files, run code, and build things</li>
+</ul>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p><a href="https://eabeam.github.io">Emily Beam</a> · Department of Economics · University of Vermont · emily.beam@uvm.edu</p>
+<section id="setup-walkthrough" class="level3">
+<h3 class="anchored" data-anchor-id="setup-walkthrough">Setup walkthrough</h3>
+<ol type="1">
+<li><strong>Open Ghostty</strong> (or Terminal.app — any terminal works)</li>
+<li><strong>Launch Claude Code</strong>: Type <code>claude</code> and hit Enter</li>
+<li><strong>Your first prompt</strong>: Ask it something useful right now</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Good first prompts for faculty
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>“Read my syllabus at [path] and list all the due dates in a table”</li>
+<li>“I have a CSV of student grades. Summarize the distribution and flag any outliers.”</li>
+<li>“Draft a response to this student email: [paste email]”</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> — use freely with attribution.</p>
+<section id="key-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="key-concepts">Key concepts</h3>
+<ul>
+<li><strong>Context window</strong>: The AI can only “see” what you show it. Be explicit about what you want.</li>
+<li><strong>Iteration</strong>: Your first output won’t be perfect. Refine: “Make it shorter,” “Add a section on X,” “Change the tone to be more formal.”</li>
+<li><strong>Markdown output</strong>: Claude Code writes in Markdown. Use <a href="https://typora.io">Typora</a> to view it nicely.</li>
+</ul>
+</section>
+<section id="live-demo-terminal-basics-claude-code-iterating-on-output" class="level3">
+<h3 class="anchored" data-anchor-id="live-demo-terminal-basics-claude-code-iterating-on-output">Live demo: terminal basics → Claude Code → iterating on output</h3>
+<!-- DEMO SCRIPT (Emily):
+1. Open Ghostty, show the terminal briefly
+2. Type `claude` to launch Claude Code
+3. Ask it to read a sample syllabus and extract due dates
+4. Ask it to reformat the dates as a calendar-ready CSV
+5. Show the output in Typora
+6. Show how to start a new conversation (clear context)
+-->
+</section>
+</section>
+<section id="desktop-demo" class="level2">
+<h2 class="anchored" data-anchor-id="desktop-demo">Part 2: Desktop App Demo (Erkmen)</h2>
+<p><em>~15 minutes</em></p>
+<!-- Erkmen: demo of ChatGPT or Claude desktop for quick tasks -->
+<!-- Suggested flow: show the chat interface, paste in a task, show how it differs from terminal -->
+</section>
+<section id="teaching-app" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-app">Part 3: Teaching Application (Erkmen)</h2>
+<p><em>~25 minutes</em></p>
+<section id="live-demo-assignment-creation-grading-rubric" class="level3">
+<h3 class="anchored" data-anchor-id="live-demo-assignment-creation-grading-rubric">Live demo: Assignment creation + grading rubric</h3>
+<!-- Erkmen: build an assignment prompt and grading rubric live
+Suggested flow:
+1. Start with a course topic
+2. Ask AI to generate an assignment prompt
+3. Iterate on it (adjust difficulty, add constraints)
+4. Generate a grading rubric
+5. Show how the rubric could be used for consistent grading
+-->
+</section>
+</section>
+<section id="wrap-up-qa" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up-qa">Wrap-up + Q&amp;A</h2>
+<p><em>~5 minutes</em></p>
+<section id="before-next-session-april-27" class="level3">
+<h3 class="anchored" data-anchor-id="before-next-session-april-27">Before next session (April 27)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Try using Claude Code or a desktop AI tool for one real task this week</label></li>
+<li><label><input type="checkbox">Install the tools from the <a href="./prep.html">prep guide</a> if you haven’t already</label></li>
+<li><label><input type="checkbox">Write down one research or teaching task you’d like to automate</label></li>
+</ul>
+</section>
+<section id="resources" class="level3">
+<h3 class="anchored" data-anchor-id="resources">Resources</h3>
+<ul>
+<li><a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code documentation</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">Anthropic prompt engineering guide</a></li>
+<li><a href="https://go.uvm.edu/copilot">UVM Microsoft Copilot</a> (free for all UVM)</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

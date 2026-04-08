@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About This Project – AI for UVM Economics</title>
+<title>Session 2: AI for Research and Advanced Teaching – AI for UVM Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,11 +103,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Session 1 (Apr 22)</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./session2.html"> 
+    <a class="nav-link active" href="./session2.html" aria-current="page"> 
 <span class="menu-text">Session 2 (Apr 27)</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -126,11 +126,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-this-exists" id="toc-why-this-exists" class="nav-link active" data-scroll-target="#why-this-exists">Why This Exists</a></li>
-  <li><a href="#who-its-for" id="toc-who-its-for" class="nav-link" data-scroll-target="#who-its-for">Who It’s For</a></li>
-  <li><a href="#uvm-context" id="toc-uvm-context" class="nav-link" data-scroll-target="#uvm-context">UVM Context</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#compound-workflow" id="toc-compound-workflow" class="nav-link" data-scroll-target="#compound-workflow">Recap: The Compound Workflow (Emily)</a>
+  <ul class="collapse">
+  <li><a href="#the-cycle" id="toc-the-cycle" class="nav-link" data-scroll-target="#the-cycle">The cycle</a></li>
+  <li><a href="#key-principles" id="toc-key-principles" class="nav-link" data-scroll-target="#key-principles">Key principles</a></li>
+  </ul></li>
+  <li><a href="#research-demo" id="toc-research-demo" class="nav-link" data-scroll-target="#research-demo">Part 1: Research Pipeline Demo (Emily)</a>
+  <ul class="collapse">
+  <li><a href="#live-demo-raw-data-analysis-plan-code-report" id="toc-live-demo-raw-data-analysis-plan-code-report" class="nav-link" data-scroll-target="#live-demo-raw-data-analysis-plan-code-report">Live demo: Raw data → analysis plan → code → report</a></li>
+  </ul></li>
+  <li><a href="#web-scraper" id="toc-web-scraper" class="nav-link" data-scroll-target="#web-scraper">Part 2: Web Scraping Demo (Erkmen)</a></li>
+  <li><a href="#automated-grading" id="toc-automated-grading" class="nav-link" data-scroll-target="#automated-grading">Part 3: Automated Grading (Erkmen)</a></li>
+  <li><a href="#wrapup" id="toc-wrapup" class="nav-link" data-scroll-target="#wrapup">Wrap-up + Discussion</a>
+  <ul class="collapse">
+  <li><a href="#what-to-try-next" id="toc-what-to-try-next" class="nav-link" data-scroll-target="#what-to-try-next">What to try next</a></li>
+  <li><a href="#ongoing-resources" id="toc-ongoing-resources" class="nav-link" data-scroll-target="#ongoing-resources">Ongoing resources</a></li>
+  <li><a href="#the-subscription-question" id="toc-the-subscription-question" class="nav-link" data-scroll-target="#the-subscription-question">The subscription question</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eabeam/uvmecon-ai/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -139,7 +152,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About This Project</h1>
+<h1 class="title">Session 2: AI for Research and Advanced Teaching</h1>
+<p class="subtitle lead">April 27, 2026 — AI Bootcamp for UVM Economics</p>
 </div>
 
 
@@ -156,29 +170,119 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- TODO: Customize for uvmecon-ai context -->
-<section id="why-this-exists" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-exists">Why This Exists</h2>
-<!-- Placeholder: describe the purpose of uvmecon-ai and how it differs from or extends teaching-ai -->
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>Time</strong>: 1.5 hours (lunch session) <strong>Presenters</strong>: Emily Beam + Erkmen Aslim <strong>Goal</strong>: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation.</p>
 </section>
-<section id="who-its-for" class="level2">
-<h2 class="anchored" data-anchor-id="who-its-for">Who It’s For</h2>
-<p><strong>Students</strong>: UVM Economics students across courses. Examples assume comfort with economic reasoning and academic writing.</p>
-<p><strong>Instructors</strong>: UVM Economics faculty who want to incorporate AI literacy into existing courses without building everything from scratch.</p>
+<section id="compound-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="compound-workflow">Recap: The Compound Workflow (Emily)</h2>
+<p><em>~10 minutes</em></p>
+<p>Last session: one prompt → one output. Today: chained steps where AI builds on its own prior work.</p>
+<section id="the-cycle" class="level3">
+<h3 class="anchored" data-anchor-id="the-cycle">The cycle</h3>
+<pre><code>Plan → Execute → Review → Clear context → Repeat</code></pre>
+<p><strong>Why clear context?</strong> AI tools have limited memory. A fresh conversation with a clear task beats a long, muddled conversation. Document what you learned in a markdown file so you (and the AI) can pick up where you left off.</p>
 </section>
-<section id="uvm-context" class="level2">
-<h2 class="anchored" data-anchor-id="uvm-context">UVM Context</h2>
-<p>The University of Vermont provides enterprise-protected <a href="https://go.uvm.edu/copilot">Microsoft Copilot</a> to all students, faculty, and staff. Some modules reference this tool, but all concepts apply to any LLM.</p>
+<section id="key-principles" class="level3">
+<h3 class="anchored" data-anchor-id="key-principles">Key principles</h3>
+<ul>
+<li><strong>Break big tasks into steps</strong>: Don’t ask “analyze my data and write a paper.” Ask “read my data dictionary and propose an analysis plan.”</li>
+<li><strong>Save intermediate outputs</strong>: Write results to files, not just chat.</li>
+<li><strong>Review each step</strong>: AI makes confident-sounding mistakes. Check before building on top.</li>
+<li><strong>Document as you go</strong>: Keep a running markdown file of decisions, prompts that worked, and lessons learned.</li>
+</ul>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p><a href="https://eabeam.github.io">Emily Beam</a> · Department of Economics · University of Vermont · emily.beam@uvm.edu</p>
 </section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> — use freely with attribution.</p>
+<section id="research-demo" class="level2">
+<h2 class="anchored" data-anchor-id="research-demo">Part 1: Research Pipeline Demo (Emily)</h2>
+<p><em>~35 minutes</em></p>
+<section id="live-demo-raw-data-analysis-plan-code-report" class="level3">
+<h3 class="anchored" data-anchor-id="live-demo-raw-data-analysis-plan-code-report">Live demo: Raw data → analysis plan → code → report</h3>
+<p>Starting from a raw dataset, we’ll use Claude Code to:</p>
+<ol type="1">
+<li><strong>Explore the data</strong>: “Read this CSV and describe what’s in it. How many observations? What are the variables?”</li>
+<li><strong>Propose an analysis plan</strong>: “Given these variables, suggest 3 analyses that would be interesting for a research paper on [topic].”</li>
+<li><strong>Write analysis code</strong>: “Write Stata code to run [analysis]. Use clear variable labels and save the output.”</li>
+<li><strong>Generate a summary report</strong>: “Based on these results, draft a 1-page summary with key findings, a table, and a limitations paragraph.”</li>
+</ol>
+<!-- DEMO SCRIPT (Emily):
+Dataset: TBD — needs to be small, public, relatable
+Options:
+  - Teaching evals (if available/anonymized)
+  - Public-use CPS extract (wages, education, demographics)
+  - Simulated data that mimics a simple RCT
+
+Steps:
+1. `claude` → ask it to read the CSV and describe it
+2. Ask for an analysis plan (it will propose regressions, summary stats)
+3. Pick one analysis, ask it to write Stata code
+4. Run the code (or show pre-run output if Stata not available in demo)
+5. Ask it to write up findings as a markdown report
+6. Open report in Typora
+7. Show the "clear context and start fresh" pattern
+-->
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>What this demo is NOT
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is not a replacement for careful research design. The AI doesn’t know your research question, institutional context, or identification strategy. It’s a tool for accelerating the mechanical parts — data cleaning, boilerplate code, first-draft summaries — so you can focus on the thinking.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="web-scraper" class="level2">
+<h2 class="anchored" data-anchor-id="web-scraper">Part 2: Web Scraping Demo (Erkmen)</h2>
+<p><em>~20 minutes</em></p>
+<!-- Erkmen: live demo of using AI to build a web scraper
+Suggested flow:
+1. Identify a data source (e.g., faculty directory, public dataset page)
+2. Ask AI to write a Python script to scrape it
+3. Run it, inspect the output
+4. Discuss when this is appropriate (ethics, terms of service, robots.txt)
+-->
+</section>
+<section id="automated-grading" class="level2">
+<h2 class="anchored" data-anchor-id="automated-grading">Part 3: Automated Grading (Erkmen)</h2>
+<p><em>~20 minutes</em></p>
+<!-- Erkmen: extend the Session 1 rubric into an automated grading workflow
+Suggested flow:
+1. Take the rubric from Session 1
+2. Show how to feed student submissions + rubric to AI
+3. Get structured feedback for each submission
+4. Discuss limitations (AI grading is a starting point, not final grade)
+-->
+</section>
+<section id="wrapup" class="level2">
+<h2 class="anchored" data-anchor-id="wrapup">Wrap-up + Discussion</h2>
+<p><em>~5 minutes</em></p>
+<section id="what-to-try-next" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-try-next">What to try next</h3>
+<ul>
+<li><strong>Teaching</strong>: Use AI to draft a new assignment, create practice problems, or build a study guide</li>
+<li><strong>Research</strong>: Try the data exploration → analysis plan workflow on your own data</li>
+<li><strong>Writing</strong>: Use Claude Code to revise a draft, check references, or restructure a section</li>
+</ul>
+</section>
+<section id="ongoing-resources" class="level3">
+<h3 class="anchored" data-anchor-id="ongoing-resources">Ongoing resources</h3>
+<ul>
+<li>This site: <a href="https://eabeam.github.io/uvmecon-ai">eabeam.github.io/uvmecon-ai</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code docs</a></li>
+<li>UVM’s <a href="https://go.uvm.edu/copilot">Microsoft Copilot</a> (enterprise-protected, free)</li>
+</ul>
+</section>
+<section id="the-subscription-question" class="level3">
+<h3 class="anchored" data-anchor-id="the-subscription-question">The subscription question</h3>
+<p>AI subscriptions (Claude Pro, ChatGPT Plus) cost ~$20/month. UVM provides Microsoft Copilot for free. PDF funds may cover subscriptions — talk to your chair.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

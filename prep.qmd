@@ -1,0 +1,51 @@
+---
+title: "Participant Prep Guide"
+subtitle: "What to install before the AI Bootcamp"
+---
+
+## Before Session 1 (April 22)
+
+Please install the following before the first session. If you get stuck, don't worry — we'll help during the session.
+
+### Required
+
+**Claude Code** (terminal-based AI assistant)
+
+1. Open your terminal (Terminal.app on Mac, or Ghostty if installed)
+2. Run: `npm install -g @anthropic-ai/claude-code`
+3. Run: `claude` and follow the login prompts
+4. You'll need an [Anthropic account](https://console.anthropic.com/) (free to create; usage is pay-as-you-go after free tier)
+
+::: {.callout-note}
+If you don't have `npm`, install [Node.js](https://nodejs.org/) first (LTS version). On Mac: `brew install node` if you have Homebrew.
+:::
+
+### Recommended
+
+**Ghostty** — a fast, clean terminal app
+
+- Download from [ghostty.org](https://ghostty.org)
+- Why? Nicer than the default Terminal.app. Not required, but makes the demo easier to follow.
+
+**Typora** — a markdown editor/viewer
+
+- Download from [typora.io](https://typora.io)
+- Why? Claude Code outputs markdown files. Typora renders them beautifully so you can review, edit, and share.
+
+### Already have these? You're set.
+
+If you already use VS Code, Claude Code also works as a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code). You can use whichever interface you prefer.
+
+## What to bring
+
+- Laptop (Mac or Windows) with power cable
+- A real task you'd like to try — a syllabus to reformat, data to explore, an email to draft, an assignment to create
+
+## Cost
+
+- **Claude Code**: Free tier available; pay-as-you-go after that (~$3–10/month for moderate use)
+- **Ghostty**: Free
+- **Typora**: $14.99 one-time (free trial available)
+- **UVM Microsoft Copilot**: Free for all UVM — [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
+
+PDF funds may cover AI subscriptions. Ask your department chair.
