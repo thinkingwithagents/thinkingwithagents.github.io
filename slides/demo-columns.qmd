@@ -1,0 +1,43 @@
+---
+title: "Serif Theme"
+subtitle: "Traditional and readable"
+author: Demo
+format:
+  revealjs:
+    theme: serif
+    slide-number: true
+    width: 1280
+    height: 720
+    embed-resources: true
+    transition: fade
+---
+
+## Classic serif typography
+
+This theme uses **serif fonts** on a warm background — familiar and professional, like a well-typeset document.
+
+- Great for text-heavy presentations
+- Feels more "academic" than sans-serif themes
+- Easy to read at a distance
+
+## Callout boxes
+
+::: {.callout-tip}
+## Key takeaway
+Callout boxes draw the eye to the most important points on a slide. Use them sparingly.
+:::
+
+::: {.callout-note}
+## For reference
+You can include links, formatted text, and even code inside callout boxes.
+:::
+
+## Data presentation
+
+| Tool | Type | Monthly Cost | Best For |
+|------|------|-------------|----------|
+| Claude | Chat + Terminal | Free – $100 | Research, writing, code |
+| ChatGPT | Chat + Desktop | Free – $20 | Quick questions, brainstorming |
+| Copilot | Chat (UVM) | Free | Sensitive data |
+
+Serif fonts make tables particularly readable.

@@ -1,0 +1,57 @@
+---
+title: "Solarized Theme"
+subtitle: "Warm tones, easy on the eyes"
+author: Demo
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    width: 1280
+    height: 720
+    embed-resources: true
+    transition: convex
+---
+
+## Solarized color scheme
+
+This theme uses the popular **Solarized** palette — a warm cream background with carefully calibrated colors that reduce eye strain.
+
+- Designed for extended reading
+- Colors are perceptually balanced
+- Works well in both bright and dim rooms
+
+## Code looks great here
+
+```python
+import pandas as pd
+
+# Load and explore data
+df = pd.read_csv("teaching_evals.csv")
+print(df.describe())
+print(df.groupby("department")["rating"].mean())
+```
+
+Code blocks use syntax highlighting that matches the Solarized palette.
+
+## Structured comparison
+
+:::: {.columns}
+::: {.column width="50%"}
+**What AI accelerates**
+
+- Data exploration
+- Boilerplate code
+- First-draft writing
+- Formatting tables
+- Literature summaries
+:::
+::: {.column width="50%"}
+**What still needs you**
+
+- Research questions
+- Identification strategy
+- Institutional knowledge
+- Interpreting results
+- Knowing when it's wrong
+:::
+::::

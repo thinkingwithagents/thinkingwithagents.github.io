@@ -1,0 +1,29 @@
+---
+title: "Desktop AI + Teaching Applications"
+subtitle: "AI Bootcamp — Session 1"
+author: Erkmen Aslim
+date: 2026-04-22
+format:
+  revealjs: default
+  beamer: default
+---
+
+# Desktop App Demo
+
+## Desktop AI tools
+
+<!-- Erkmen: replace this slide -->
+
+- ChatGPT / Claude desktop interface
+- When to use chat vs. terminal
+- Quick demo
+
+# Teaching Application
+
+## AI for teaching tasks
+
+<!-- Erkmen: replace this slide -->
+
+- Creating assignment prompts
+- Building grading rubrics
+- Iterating on rubric criteria

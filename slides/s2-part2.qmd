@@ -1,0 +1,48 @@
+---
+title: "Web Scraping + Automated Grading"
+subtitle: "AI Bootcamp — Session 2, Part 2"
+author: Erkmen Aslim
+date: 2026-04-27
+format:
+  revealjs: default
+  beamer: default
+---
+
+# Web Scraping with AI
+
+## Web scraping demo
+
+<!-- Erkmen: replace this slide -->
+
+- Identify a data source
+- Ask AI to write a scraper
+- Run it, inspect output
+- Ethics: terms of service, robots.txt
+
+# Automated Grading
+
+## Automated grading workflow
+
+<!-- Erkmen: replace this slide -->
+
+- Feed submissions + rubric to AI
+- Get structured feedback per submission
+- Limitations: starting point, not final grade
+
+# Wrap-up
+
+## What to try next
+
+**Teaching**
+
+- Draft a new assignment or practice problems
+- Build a study guide from your lecture notes
+
+**Research**
+
+- Try the explore → plan → code workflow on your data
+- Use AI to clean messy data or reformat variables
+
+**Writing**
+
+- Revise a draft, check structure, restructure sections

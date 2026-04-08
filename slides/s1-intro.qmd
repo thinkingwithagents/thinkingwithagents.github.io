@@ -1,0 +1,64 @@
+---
+title: "Getting Started with AI Tools"
+subtitle: "AI Bootcamp for UVM Economics — Session 1"
+author:
+  - Emily Beam
+  - Erkmen Aslim
+date: 2026-04-22
+format:
+  revealjs: default
+  beamer: default
+---
+
+# Welcome
+
+## What is this?
+
+Two lunch sessions on AI tools for teaching and research.
+
+- **Today**: Getting started — what AI can do, live demos
+- **April 27**: Research pipelines, web scraping, automated grading
+
+No installation required. Watch, ask questions, try things later.
+
+<!-- TODO: Add more detail here once we finalize -->
+
+# The AI Ladder
+
+## Where are you?
+
+| Level | Description |
+|-------|-------------|
+| 0 | Haven't tried it |
+| 1 | Tried it once, wasn't impressed |
+| 2 | Use occasionally for simple tasks |
+| 3 | Regular user, integrated into workflow |
+| 4 | Power user, multi-step workflows |
+| 5 | Building systems with AI |
+
+**Goal today:** Show you what Levels 3–4 look like.
+
+::: {.aside}
+Adapted from Kyle Jensen's AI adoption framework, as described in [Goldsmith-Pinkham (2026)](https://paulgp.substack.com/p/getting-started-with-claude-code).
+:::
+
+## The tools landscape
+
+:::: {.columns}
+::: {.column width="50%"}
+**Chat interfaces**
+
+- ChatGPT, Claude.ai, Copilot
+- Good for: quick questions, drafting
+- Limit: copy-paste in/out
+:::
+::: {.column width="50%"}
+**Terminal / Code tools**
+
+- Claude Code, GitHub Copilot
+- Good for: file access, iteration, pipelines
+- Limit: steeper learning curve
+:::
+::::
+
+UVM provides [Microsoft Copilot](https://go.uvm.edu/copilot) free to everyone.

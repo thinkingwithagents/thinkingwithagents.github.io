@@ -1,30 +1,41 @@
 ---
 title: "AI for UVM Economics"
-subtitle: "A practical bootcamp for faculty and graduate students"
+subtitle: "Let's become AI masters"
 ---
 
 ## AI Bootcamp — Spring 2026
 
-Two lunch sessions introducing AI tools for teaching and research. No prior experience required — just bring your laptop and curiosity.
+Two lunch sessions introducing AI tools for teaching and research. No prior experience required.
 
 ### Schedule
 
-| Session | Date | Focus | Slides |
-|---------|------|-------|--------|
-| Session 1 | **Wed, April 22** | Getting started: terminal, Claude Code, teaching applications | [HTML](slides/session1.html){target="_blank"} / [PDF](slides/session1.pdf) |
-| Session 2 | **Mon, April 27** | Research pipelines, web scraping, automated grading | [HTML](slides/session2.html){target="_blank"} / [PDF](slides/session2.pdf) |
+| Session | Date | Focus |
+|---------|------|-------|
+| [Session 1](session1.qmd) | **Wed, April 22** | Getting started: what AI tools exist, how they work, live demos |
+| [Session 2](session2.qmd) | **Mon, April 27** | Research pipelines, web scraping, automated grading |
 
 ### Before you arrive
 
-No installation needed — both sessions are watch-along demos. See the **[Prep Guide](prep.qmd)** if you want to try things on your own afterward.
+No installation needed — both sessions are watch-along demos. See the **[Getting Set Up](prep.qmd)** guide if you want to try things on your own afterward.
 
-### Presenters
+---
 
-- **Emily Beam** — Associate Professor of Economics, UVM
-- **Erkmen Aslim** — Department of Economics, UVM
+### Slide templates
 
-## About
+Here's what the slide format looks like — three quick demos:
 
-This site hosts materials for the UVM Economics AI Bootcamp. After the bootcamp, it will grow into a broader resource for AI literacy in economics.
+:::: {.columns}
+::: {.column width="33%"}
+[**Moon** (dark)](slides/demo-title.html){target="_blank"}
+:::
+::: {.column width="33%"}
+[**Serif** (classic)](slides/demo-columns.html){target="_blank"}
+:::
+::: {.column width="33%"}
+[**Solarized** (warm)](slides/demo-table.html){target="_blank"}
+:::
+::::
+
+---
 
 Built with [Quarto](https://quarto.org). Source on [GitHub](https://github.com/eabeam/uvmecon-ai).

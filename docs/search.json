@@ -4,14 +4,14 @@
     "href": "session2.html",
     "title": "Session 2: AI for Research and Advanced Teaching",
     "section": "",
-    "text": "Time: 1.5 hours (lunch session) Presenters: Emily Beam + Erkmen Aslim Goal: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation."
+    "text": "Time: 1.5 hours (lunch session) Goal: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nPart 1: AI for Research (Beam)\nHTML / PDF\n\n\nPart 2: Web Scraping + Grading (Aslim)\nHTML / PDF"
   },
   {
     "objectID": "session2.html#overview",
     "href": "session2.html#overview",
     "title": "Session 2: AI for Research and Advanced Teaching",
     "section": "",
-    "text": "Time: 1.5 hours (lunch session) Presenters: Emily Beam + Erkmen Aslim Goal: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation."
+    "text": "Time: 1.5 hours (lunch session) Goal: Move from single-prompt tasks to multi-step workflows. See AI applied to research pipelines and teaching automation.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nPart 1: AI for Research (Beam)\nHTML / PDF\n\n\nPart 2: Web Scraping + Grading (Aslim)\nHTML / PDF"
   },
   {
     "objectID": "session2.html#compound-workflow",
@@ -51,44 +51,51 @@
   {
     "objectID": "prep.html",
     "href": "prep.html",
-    "title": "Participant Prep Guide",
+    "title": "Getting Set Up",
     "section": "",
-    "text": "No installation needed — both sessions are demo-based. Just show up with your lunch.\nIf you want to follow along on your own machine or try things after the bootcamp, here’s what we use:\n\n\n\nOpen your terminal (Terminal.app on Mac, or Ghostty if installed)\nRun: npm install -g @anthropic-ai/claude-code\nRun: claude and follow the login prompts\nYou’ll need an Anthropic account (free to create; usage is pay-as-you-go after free tier)\n\n\n\n\n\n\n\nNote\n\n\n\nIf you don’t have npm, install Node.js first (LTS version). On Mac: brew install node if you have Homebrew.\n\n\n\n\n\n\nDownload from ghostty.org\nNicer than the default Terminal.app. Not required — any terminal works.\n\n\n\n\n\nDownload from typora.io\nClaude Code outputs markdown files. Typora renders them nicely for review and sharing.\n\n\n\n\nClaude Code also works as a VS Code extension if you prefer that over the terminal."
+    "text": "These are point-and-click applications. Download, sign in, and start using them.\n\n\nA conversational AI assistant. Available as a desktop app and in your browser.\n\nDownload: claude.ai/download (Mac and Windows)\nOr use in browser: claude.ai\nSubscription: Free tier available. Pro ($20/month) gives more usage and access to the most powerful models.\nCreate an account: claude.ai — sign up with your email\n\n\n\n\nAnother widely-used AI assistant with desktop and mobile apps.\n\nDownload: openai.com/chatgpt/download (Mac and Windows)\nOr use in browser: chatgpt.com\nSubscription: Free tier available. Plus ($20/month) gives access to GPT-4o and more.\n\n\n\n\nUVM provides enterprise-protected access to Microsoft Copilot at no cost.\n\nAccess: go.uvm.edu/copilot\nSubscription: Free — included with your UVM account\nNote: This is the safest option for working with student data or sensitive information, since it’s covered by UVM’s enterprise agreement."
   },
   {
-    "objectID": "prep.html#before-the-bootcamp",
-    "href": "prep.html#before-the-bootcamp",
-    "title": "Participant Prep Guide",
+    "objectID": "prep.html#apps",
+    "href": "prep.html#apps",
+    "title": "Getting Set Up",
     "section": "",
-    "text": "No installation needed — both sessions are demo-based. Just show up with your lunch.\nIf you want to follow along on your own machine or try things after the bootcamp, here’s what we use:\n\n\n\nOpen your terminal (Terminal.app on Mac, or Ghostty if installed)\nRun: npm install -g @anthropic-ai/claude-code\nRun: claude and follow the login prompts\nYou’ll need an Anthropic account (free to create; usage is pay-as-you-go after free tier)\n\n\n\n\n\n\n\nNote\n\n\n\nIf you don’t have npm, install Node.js first (LTS version). On Mac: brew install node if you have Homebrew.\n\n\n\n\n\n\nDownload from ghostty.org\nNicer than the default Terminal.app. Not required — any terminal works.\n\n\n\n\n\nDownload from typora.io\nClaude Code outputs markdown files. Typora renders them nicely for review and sharing.\n\n\n\n\nClaude Code also works as a VS Code extension if you prefer that over the terminal."
+    "text": "These are point-and-click applications. Download, sign in, and start using them.\n\n\nA conversational AI assistant. Available as a desktop app and in your browser.\n\nDownload: claude.ai/download (Mac and Windows)\nOr use in browser: claude.ai\nSubscription: Free tier available. Pro ($20/month) gives more usage and access to the most powerful models.\nCreate an account: claude.ai — sign up with your email\n\n\n\n\nAnother widely-used AI assistant with desktop and mobile apps.\n\nDownload: openai.com/chatgpt/download (Mac and Windows)\nOr use in browser: chatgpt.com\nSubscription: Free tier available. Plus ($20/month) gives access to GPT-4o and more.\n\n\n\n\nUVM provides enterprise-protected access to Microsoft Copilot at no cost.\n\nAccess: go.uvm.edu/copilot\nSubscription: Free — included with your UVM account\nNote: This is the safest option for working with student data or sensitive information, since it’s covered by UVM’s enterprise agreement."
   },
   {
-    "objectID": "prep.html#cost",
-    "href": "prep.html#cost",
-    "title": "Participant Prep Guide",
-    "section": "Cost",
-    "text": "Cost\n\nClaude Code: Free tier available; pay-as-you-go after that (~$3–10/month for moderate use)\nGhostty: Free\nTypora: $14.99 one-time (free trial available)\nUVM Microsoft Copilot: Free for all UVM — go.uvm.edu/copilot\n\nPDF funds may cover AI subscriptions. Ask your department chair."
+    "objectID": "prep.html#command-line",
+    "href": "prep.html#command-line",
+    "title": "Getting Set Up",
+    "section": "Option 2: Command line tools (more powerful)",
+    "text": "Option 2: Command line tools (more powerful)\nThese run in your computer’s terminal — a text-based interface where you type commands. The terminal gives AI tools direct access to your files, which makes them much more powerful for real work.\n\nWhat’s a terminal?\nIt’s an app that’s already on your computer:\n\nMac: Open Terminal (search for “Terminal” in Spotlight, or find it in Applications → Utilities)\nWindows: Open PowerShell (search for “PowerShell” in the Start menu)\n\nYou type commands and press Enter. That’s it.\n\n\nInstalling Claude Code\nClaude Code is an AI assistant that runs in your terminal. It can read your files, write documents, run code, and more.\nStep 1: Install Node.js (a tool that Claude Code needs to run)\n\nGo to nodejs.org\nClick the big green LTS download button\nRun the installer — accept all the defaults\n\nStep 2: Install Claude Code\nOpen your terminal and type this command, then press Enter:\nnpm install -g @anthropic-ai/claude-code\nWait for it to finish (you’ll see some text scroll by — that’s normal).\nStep 3: Launch it\nType this and press Enter:\nclaude\nIt will ask you to sign in to your Anthropic account. Follow the prompts.\nSubscription: Claude Code requires a Claude Max ($100/month) or Pro ($20/month + usage-based API billing) subscription.\n\n\nInstalling OpenAI Codex\nCodex is OpenAI’s terminal-based AI tool, similar to Claude Code.\nStep 1: Install Node.js (same as above — skip if you already did this)\n\nGo to nodejs.org → download LTS → run installer\n\nStep 2: Install Codex\nnpm install -g @openai/codex\nStep 3: Launch it\ncodex\nSubscription: Requires an OpenAI API account with billing enabled."
+  },
+  {
+    "objectID": "prep.html#cost-summary",
+    "href": "prep.html#cost-summary",
+    "title": "Getting Set Up",
+    "section": "Cost summary",
+    "text": "Cost summary\n\n\n\n\n\n\n\n\n\nTool\nFree tier?\nPaid tier\nNotes\n\n\n\n\nMicrosoft Copilot\nFree (UVM)\n—\nEnterprise-protected. Best for sensitive data.\n\n\nClaude (app)\nYes\nPro: $20/mo\nMore powerful models + higher limits\n\n\nChatGPT (app)\nYes\nPlus: $20/mo\nGPT-4o access + higher limits\n\n\nClaude Code (terminal)\n—\nPro + API or Max: $100/mo\nMost powerful; reads/writes your files\n\n\nOpenAI Codex (terminal)\n—\nAPI billing\nSimilar to Claude Code\n\n\n\nPDF funds may cover AI subscriptions — ask your department chair."
+  },
+  {
+    "objectID": "prep.html#resources",
+    "href": "prep.html#resources",
+    "title": "Getting Set Up",
+    "section": "Resources",
+    "text": "Resources\nSome extra tools that aren’t required but are nice to have:\n\nTypora ($14.99) — A clean markdown editor. AI tools often output markdown files; Typora makes them look polished for reading and sharing.\nGhostty (free) — A fast, modern terminal app. Looks nicer than the default Terminal/PowerShell. Purely cosmetic.\nVS Code (free) — A code editor. Claude Code and GitHub Copilot both have VS Code extensions if you prefer a graphical interface over the terminal."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "AI for UVM Economics",
     "section": "",
-    "text": "Two lunch sessions introducing AI tools for teaching and research. No prior experience required — just bring your laptop and curiosity.\n\n\n\n\n\nSession\nDate\nFocus\nSlides\n\n\n\n\nSession 1\nWed, April 22\nGetting started: terminal, Claude Code, teaching applications\nHTML / PDF\n\n\nSession 2\nMon, April 27\nResearch pipelines, web scraping, automated grading\nHTML / PDF\n\n\n\n\n\n\nNo installation needed — both sessions are watch-along demos. See the Prep Guide if you want to try things on your own afterward.\n\n\n\n\nEmily Beam — Associate Professor of Economics, UVM\nErkmen Aslim — Department of Economics, UVM"
+    "text": "Two lunch sessions introducing AI tools for teaching and research. No prior experience required.\n\n\n\n\n\nSession\nDate\nFocus\n\n\n\n\nSession 1\nWed, April 22\nGetting started: what AI tools exist, how they work, live demos\n\n\nSession 2\nMon, April 27\nResearch pipelines, web scraping, automated grading\n\n\n\n\n\n\nNo installation needed — both sessions are watch-along demos. See the Getting Set Up guide if you want to try things on your own afterward.\n\n\n\n\nHere’s what the slide format looks like — three quick demos:\n\n\nMoon (dark)\n\nSerif (classic)\n\nSolarized (warm)\n\n\n\nBuilt with Quarto. Source on GitHub."
   },
   {
     "objectID": "index.html#ai-bootcamp-spring-2026",
     "href": "index.html#ai-bootcamp-spring-2026",
     "title": "AI for UVM Economics",
     "section": "",
-    "text": "Two lunch sessions introducing AI tools for teaching and research. No prior experience required — just bring your laptop and curiosity.\n\n\n\n\n\nSession\nDate\nFocus\nSlides\n\n\n\n\nSession 1\nWed, April 22\nGetting started: terminal, Claude Code, teaching applications\nHTML / PDF\n\n\nSession 2\nMon, April 27\nResearch pipelines, web scraping, automated grading\nHTML / PDF\n\n\n\n\n\n\nNo installation needed — both sessions are watch-along demos. See the Prep Guide if you want to try things on your own afterward.\n\n\n\n\nEmily Beam — Associate Professor of Economics, UVM\nErkmen Aslim — Department of Economics, UVM"
-  },
-  {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "AI for UVM Economics",
-    "section": "About",
-    "text": "About\nThis site hosts materials for the UVM Economics AI Bootcamp. After the bootcamp, it will grow into a broader resource for AI literacy in economics.\nBuilt with Quarto. Source on GitHub."
+    "text": "Two lunch sessions introducing AI tools for teaching and research. No prior experience required.\n\n\n\n\n\nSession\nDate\nFocus\n\n\n\n\nSession 1\nWed, April 22\nGetting started: what AI tools exist, how they work, live demos\n\n\nSession 2\nMon, April 27\nResearch pipelines, web scraping, automated grading\n\n\n\n\n\n\nNo installation needed — both sessions are watch-along demos. See the Getting Set Up guide if you want to try things on your own afterward.\n\n\n\n\nHere’s what the slide format looks like — three quick demos:\n\n\nMoon (dark)\n\nSerif (classic)\n\nSolarized (warm)\n\n\n\nBuilt with Quarto. Source on GitHub."
   },
   {
     "objectID": "about.html#who-its-for",
@@ -172,14 +179,14 @@
     "href": "session1.html",
     "title": "Session 1: Getting Started with AI Tools",
     "section": "",
-    "text": "Time: 1.5 hours (lunch session) Presenters: Emily Beam + Erkmen Aslim Goal: Get faculty comfortable using AI tools for everyday academic tasks. By the end, everyone should have used an AI tool to produce something useful."
+    "text": "Time: 1.5 hours (lunch session) Goal: Get faculty comfortable using AI tools for everyday academic tasks. By the end, everyone should have used an AI tool to produce something useful.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nGetting Started (Beam & Aslim)\nHTML / PDF\n\n\nTerminal + Claude Code (Beam)\nHTML / PDF\n\n\nDesktop AI + Teaching Applications (Aslim)\nHTML / PDF"
   },
   {
     "objectID": "session1.html#overview",
     "href": "session1.html#overview",
     "title": "Session 1: Getting Started with AI Tools",
     "section": "",
-    "text": "Time: 1.5 hours (lunch session) Presenters: Emily Beam + Erkmen Aslim Goal: Get faculty comfortable using AI tools for everyday academic tasks. By the end, everyone should have used an AI tool to produce something useful."
+    "text": "Time: 1.5 hours (lunch session) Goal: Get faculty comfortable using AI tools for everyday academic tasks. By the end, everyone should have used an AI tool to produce something useful.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nGetting Started (Beam & Aslim)\nHTML / PDF\n\n\nTerminal + Claude Code (Beam)\nHTML / PDF\n\n\nDesktop AI + Teaching Applications (Aslim)\nHTML / PDF"
   },
   {
     "objectID": "session1.html#the-ai-ladder",

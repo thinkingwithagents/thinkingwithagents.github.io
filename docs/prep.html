@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Participant Prep Guide – AI for UVM Economics</title>
+<title>Getting Set Up – AI for UVM Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -126,14 +161,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#before-the-bootcamp" id="toc-before-the-bootcamp" class="nav-link active" data-scroll-target="#before-the-bootcamp">Before the Bootcamp</a>
+  <li><a href="#apps" id="toc-apps" class="nav-link active" data-scroll-target="#apps">Option 1: Apps (easiest way to start)</a>
   <ul class="collapse">
-  <li><a href="#claude-code-terminal-based-ai-assistant" id="toc-claude-code-terminal-based-ai-assistant" class="nav-link" data-scroll-target="#claude-code-terminal-based-ai-assistant">Claude Code (terminal-based AI assistant)</a></li>
-  <li><a href="#ghostty-a-fast-clean-terminal-app" id="toc-ghostty-a-fast-clean-terminal-app" class="nav-link" data-scroll-target="#ghostty-a-fast-clean-terminal-app">Ghostty — a fast, clean terminal app</a></li>
-  <li><a href="#typora-a-markdown-editorviewer" id="toc-typora-a-markdown-editorviewer" class="nav-link" data-scroll-target="#typora-a-markdown-editorviewer">Typora — a markdown editor/viewer</a></li>
-  <li><a href="#vs-code-alternative" id="toc-vs-code-alternative" class="nav-link" data-scroll-target="#vs-code-alternative">VS Code (alternative)</a></li>
+  <li><a href="#claude-by-anthropic" id="toc-claude-by-anthropic" class="nav-link" data-scroll-target="#claude-by-anthropic">Claude (by Anthropic)</a></li>
+  <li><a href="#chatgpt-by-openai" id="toc-chatgpt-by-openai" class="nav-link" data-scroll-target="#chatgpt-by-openai">ChatGPT (by OpenAI)</a></li>
+  <li><a href="#microsoft-copilot-free-for-all-uvm" id="toc-microsoft-copilot-free-for-all-uvm" class="nav-link" data-scroll-target="#microsoft-copilot-free-for-all-uvm">Microsoft Copilot (free for all UVM)</a></li>
   </ul></li>
-  <li><a href="#cost" id="toc-cost" class="nav-link" data-scroll-target="#cost">Cost</a></li>
+  <li><a href="#command-line" id="toc-command-line" class="nav-link" data-scroll-target="#command-line">Option 2: Command line tools (more powerful)</a>
+  <ul class="collapse">
+  <li><a href="#whats-a-terminal" id="toc-whats-a-terminal" class="nav-link" data-scroll-target="#whats-a-terminal">What’s a terminal?</a></li>
+  <li><a href="#installing-claude-code" id="toc-installing-claude-code" class="nav-link" data-scroll-target="#installing-claude-code">Installing Claude Code</a></li>
+  <li><a href="#installing-openai-codex" id="toc-installing-openai-codex" class="nav-link" data-scroll-target="#installing-openai-codex">Installing OpenAI Codex</a></li>
+  </ul></li>
+  <li><a href="#cost-summary" id="toc-cost-summary" class="nav-link" data-scroll-target="#cost-summary">Cost summary</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eabeam/uvmecon-ai/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -142,8 +183,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Participant Prep Guide</h1>
-<p class="subtitle lead">What to install before the AI Bootcamp</p>
+<h1 class="title">Getting Set Up</h1>
+<p class="subtitle lead">Tools for the AI Bootcamp</p>
 </div>
 
 
@@ -160,60 +201,147 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="before-the-bootcamp" class="level2">
-<h2 class="anchored" data-anchor-id="before-the-bootcamp">Before the Bootcamp</h2>
-<p>No installation needed — both sessions are demo-based. Just show up with your lunch.</p>
-<p>If you want to follow along on your own machine or try things after the bootcamp, here’s what we use:</p>
-<section id="claude-code-terminal-based-ai-assistant" class="level3">
-<h3 class="anchored" data-anchor-id="claude-code-terminal-based-ai-assistant">Claude Code (terminal-based AI assistant)</h3>
-<ol type="1">
-<li>Open your terminal (Terminal.app on Mac, or Ghostty if installed)</li>
-<li>Run: <code>npm install -g @anthropic-ai/claude-code</code></li>
-<li>Run: <code>claude</code> and follow the login prompts</li>
-<li>You’ll need an <a href="https://console.anthropic.com/">Anthropic account</a> (free to create; usage is pay-as-you-go after free tier)</li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you don’t have <code>npm</code>, install <a href="https://nodejs.org/">Node.js</a> first (LTS version). On Mac: <code>brew install node</code> if you have Homebrew.</p>
-</div>
-</div>
-</section>
-<section id="ghostty-a-fast-clean-terminal-app" class="level3">
-<h3 class="anchored" data-anchor-id="ghostty-a-fast-clean-terminal-app">Ghostty — a fast, clean terminal app</h3>
+<section id="apps" class="level2">
+<h2 class="anchored" data-anchor-id="apps">Option 1: Apps (easiest way to start)</h2>
+<p>These are point-and-click applications. Download, sign in, and start using them.</p>
+<section id="claude-by-anthropic" class="level3">
+<h3 class="anchored" data-anchor-id="claude-by-anthropic">Claude (by Anthropic)</h3>
+<p>A conversational AI assistant. Available as a desktop app and in your browser.</p>
 <ul>
-<li>Download from <a href="https://ghostty.org">ghostty.org</a></li>
-<li>Nicer than the default Terminal.app. Not required — any terminal works.</li>
+<li><strong>Download</strong>: <a href="https://claude.ai/download">claude.ai/download</a> (Mac and Windows)</li>
+<li><strong>Or use in browser</strong>: <a href="https://claude.ai">claude.ai</a></li>
+<li><strong>Subscription</strong>: Free tier available. <strong>Pro</strong> ($20/month) gives more usage and access to the most powerful models.</li>
+<li><strong>Create an account</strong>: <a href="https://claude.ai">claude.ai</a> — sign up with your email</li>
 </ul>
 </section>
-<section id="typora-a-markdown-editorviewer" class="level3">
-<h3 class="anchored" data-anchor-id="typora-a-markdown-editorviewer">Typora — a markdown editor/viewer</h3>
+<section id="chatgpt-by-openai" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt-by-openai">ChatGPT (by OpenAI)</h3>
+<p>Another widely-used AI assistant with desktop and mobile apps.</p>
 <ul>
-<li>Download from <a href="https://typora.io">typora.io</a></li>
-<li>Claude Code outputs markdown files. Typora renders them nicely for review and sharing.</li>
+<li><strong>Download</strong>: <a href="https://openai.com/chatgpt/download">openai.com/chatgpt/download</a> (Mac and Windows)</li>
+<li><strong>Or use in browser</strong>: <a href="https://chatgpt.com">chatgpt.com</a></li>
+<li><strong>Subscription</strong>: Free tier available. <strong>Plus</strong> ($20/month) gives access to GPT-4o and more.</li>
 </ul>
 </section>
-<section id="vs-code-alternative" class="level3">
-<h3 class="anchored" data-anchor-id="vs-code-alternative">VS Code (alternative)</h3>
-<p>Claude Code also works as a <a href="https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code">VS Code extension</a> if you prefer that over the terminal.</p>
-</section>
-</section>
-<section id="cost" class="level2">
-<h2 class="anchored" data-anchor-id="cost">Cost</h2>
+<section id="microsoft-copilot-free-for-all-uvm" class="level3">
+<h3 class="anchored" data-anchor-id="microsoft-copilot-free-for-all-uvm">Microsoft Copilot (free for all UVM)</h3>
+<p>UVM provides enterprise-protected access to Microsoft Copilot at no cost.</p>
 <ul>
-<li><strong>Claude Code</strong>: Free tier available; pay-as-you-go after that (~$3–10/month for moderate use)</li>
-<li><strong>Ghostty</strong>: Free</li>
-<li><strong>Typora</strong>: $14.99 one-time (free trial available)</li>
-<li><strong>UVM Microsoft Copilot</strong>: Free for all UVM — <a href="https://go.uvm.edu/copilot">go.uvm.edu/copilot</a></li>
+<li><strong>Access</strong>: <a href="https://go.uvm.edu/copilot">go.uvm.edu/copilot</a></li>
+<li><strong>Subscription</strong>: <strong>Free</strong> — included with your UVM account</li>
+<li><strong>Note</strong>: This is the safest option for working with student data or sensitive information, since it’s covered by UVM’s enterprise agreement.</li>
 </ul>
-<p>PDF funds may cover AI subscriptions. Ask your department chair.</p>
+<!-- TODO: Add screenshots of each app interface -->
+<hr>
+</section>
+</section>
+<section id="command-line" class="level2">
+<h2 class="anchored" data-anchor-id="command-line">Option 2: Command line tools (more powerful)</h2>
+<p>These run in your computer’s <strong>terminal</strong> — a text-based interface where you type commands. The terminal gives AI tools direct access to your files, which makes them much more powerful for real work.</p>
+<section id="whats-a-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="whats-a-terminal">What’s a terminal?</h3>
+<p>It’s an app that’s already on your computer:</p>
+<ul>
+<li><strong>Mac</strong>: Open <strong>Terminal</strong> (search for “Terminal” in Spotlight, or find it in Applications → Utilities)</li>
+<li><strong>Windows</strong>: Open <strong>PowerShell</strong> (search for “PowerShell” in the Start menu)</li>
+</ul>
+<p>You type commands and press Enter. That’s it.</p>
+</section>
+<section id="installing-claude-code" class="level3">
+<h3 class="anchored" data-anchor-id="installing-claude-code">Installing Claude Code</h3>
+<p>Claude Code is an AI assistant that runs in your terminal. It can read your files, write documents, run code, and more.</p>
+<p><strong>Step 1: Install Node.js</strong> (a tool that Claude Code needs to run)</p>
+<ul>
+<li>Go to <a href="https://nodejs.org/">nodejs.org</a></li>
+<li>Click the big green <strong>LTS</strong> download button</li>
+<li>Run the installer — accept all the defaults</li>
+</ul>
+<p><strong>Step 2: Install Claude Code</strong></p>
+<p>Open your terminal and type this command, then press Enter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @anthropic-ai/claude-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Wait for it to finish (you’ll see some text scroll by — that’s normal).</p>
+<p><strong>Step 3: Launch it</strong></p>
+<p>Type this and press Enter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>It will ask you to sign in to your Anthropic account. Follow the prompts.</p>
+<p><strong>Subscription</strong>: Claude Code requires a Claude <strong>Max</strong> ($100/month) or <strong>Pro</strong> ($20/month + usage-based API billing) subscription.</p>
+</section>
+<section id="installing-openai-codex" class="level3">
+<h3 class="anchored" data-anchor-id="installing-openai-codex">Installing OpenAI Codex</h3>
+<p>Codex is OpenAI’s terminal-based AI tool, similar to Claude Code.</p>
+<p><strong>Step 1: Install Node.js</strong> (same as above — skip if you already did this)</p>
+<ul>
+<li>Go to <a href="https://nodejs.org/">nodejs.org</a> → download LTS → run installer</li>
+</ul>
+<p><strong>Step 2: Install Codex</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @openai/codex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Step 3: Launch it</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Subscription</strong>: Requires an OpenAI API account with billing enabled.</p>
+<hr>
+</section>
+</section>
+<section id="cost-summary" class="level2">
+<h2 class="anchored" data-anchor-id="cost-summary">Cost summary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 31%">
+<col style="width: 31%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Free tier?</th>
+<th>Paid tier</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Microsoft Copilot</td>
+<td><strong>Free</strong> (UVM)</td>
+<td>—</td>
+<td>Enterprise-protected. Best for sensitive data.</td>
+</tr>
+<tr class="even">
+<td>Claude (app)</td>
+<td>Yes</td>
+<td>Pro: $20/mo</td>
+<td>More powerful models + higher limits</td>
+</tr>
+<tr class="odd">
+<td>ChatGPT (app)</td>
+<td>Yes</td>
+<td>Plus: $20/mo</td>
+<td>GPT-4o access + higher limits</td>
+</tr>
+<tr class="even">
+<td>Claude Code (terminal)</td>
+<td>—</td>
+<td>Pro + API or Max: $100/mo</td>
+<td>Most powerful; reads/writes your files</td>
+</tr>
+<tr class="odd">
+<td>OpenAI Codex (terminal)</td>
+<td>—</td>
+<td>API billing</td>
+<td>Similar to Claude Code</td>
+</tr>
+</tbody>
+</table>
+<p>PDF funds may cover AI subscriptions — ask your department chair.</p>
+<hr>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p>Some extra tools that aren’t required but are nice to have:</p>
+<ul>
+<li><strong><a href="https://typora.io">Typora</a></strong> ($14.99) — A clean markdown editor. AI tools often output markdown files; Typora makes them look polished for reading and sharing.</li>
+<li><strong><a href="https://ghostty.org">Ghostty</a></strong> (free) — A fast, modern terminal app. Looks nicer than the default Terminal/PowerShell. Purely cosmetic.</li>
+<li><strong><a href="https://code.visualstudio.com/">VS Code</a></strong> (free) — A code editor. Claude Code and GitHub Copilot both have VS Code extensions if you prefer a graphical interface over the terminal.</li>
+</ul>
 
 
 </section>

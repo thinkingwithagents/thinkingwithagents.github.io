@@ -1,11 +1,8 @@
 ---
-title: "AI for Research and Advanced Teaching"
-subtitle: "AI Bootcamp for UVM Economics — Session 2"
-author:
-  - Emily Beam
-  - Erkmen Aslim
+title: "AI for Research"
+subtitle: "AI Bootcamp — Session 2, Part 1"
+author: Emily Beam
 date: 2026-04-27
-institute: "Department of Economics, University of Vermont"
 format:
   revealjs: default
   beamer: default
@@ -55,7 +52,7 @@ AI tools have limited "memory" (context window).
 
 Write results to **files**, not just chat. Files persist; chat doesn't.
 
-# Demo 1: Research Pipeline (Emily)
+# Research Pipeline Demo
 
 ## Research pipeline demo
 
@@ -90,45 +87,6 @@ Each step = fresh conversation + saved output.
 - Knowing when it's wrong
 :::
 ::::
-
-# Demo 2: Web Scraping (Erkmen)
-
-## Web scraping with AI
-
-<!-- Erkmen: replace this slide -->
-
-- Identify a data source
-- Ask AI to write a scraper
-- Run it, inspect output
-- Ethics: terms of service, robots.txt
-
-# Demo 3: Automated Grading (Erkmen)
-
-## Automated grading workflow
-
-<!-- Erkmen: replace this slide -->
-
-- Feed submissions + rubric to AI
-- Get structured feedback per submission
-- Limitations: starting point, not final grade
-
-# Wrap-up
-
-## What to try next
-
-**Teaching**
-
-- Draft a new assignment or practice problems
-- Build a study guide from your lecture notes
-
-**Research**
-
-- Try the explore → plan → code workflow on your data
-- Use AI to clean messy data or reformat variables
-
-**Writing**
-
-- Revise a draft, check structure, restructure sections
 
 ## Resources & costs
 

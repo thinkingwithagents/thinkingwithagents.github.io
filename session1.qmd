@@ -6,8 +6,15 @@ subtitle: "April 22, 2026 — AI Bootcamp for UVM Economics"
 ## Overview
 
 **Time**: 1.5 hours (lunch session)
-**Presenters**: Emily Beam + Erkmen Aslim
 **Goal**: Get faculty comfortable using AI tools for everyday academic tasks. By the end, everyone should have used an AI tool to produce something useful.
+
+### Slides
+
+| Deck | Format |
+|------|--------|
+| Getting Started (Beam & Aslim) | [HTML](slides/s1-intro.html){target="_blank"} / [PDF](slides/s1-intro.pdf) |
+| Terminal + Claude Code (Beam) | [HTML](slides/s1-emily.html){target="_blank"} / [PDF](slides/s1-emily.pdf) |
+| Desktop AI + Teaching Applications (Aslim) | [HTML](slides/s1-erkmen.html){target="_blank"} / [PDF](slides/s1-erkmen.pdf) |
 
 ## The AI Ladder
 

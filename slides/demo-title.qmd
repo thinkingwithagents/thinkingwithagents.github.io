@@ -1,0 +1,43 @@
+---
+title: "Dark Theme"
+subtitle: "Clean and modern"
+author: Demo
+format:
+  revealjs:
+    theme: moon
+    slide-number: true
+    width: 1280
+    height: 720
+    embed-resources: true
+    transition: slide
+---
+
+## Dark backgrounds, light text
+
+This theme uses a **dark navy background** with light text — great for projecting in dimly-lit rooms.
+
+- Headers stand out in bold
+- Links are [easy to spot](https://example.com)
+- Tables look clean against dark backgrounds
+
+| Feature | Supported |
+|---------|-----------|
+| Tables | Yes |
+| Code blocks | Yes |
+| Callout boxes | Yes |
+| Two-column layouts | Yes |
+
+## Side-by-side content
+
+:::: {.columns}
+::: {.column width="50%"}
+**Left column**
+
+Put your key points here. Columns work well for comparisons, pros/cons, and before/after.
+:::
+::: {.column width="50%"}
+**Right column**
+
+The audience sees both sides at once — no scrolling, no flipping back.
+:::
+::::

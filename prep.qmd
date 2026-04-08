@@ -1,44 +1,128 @@
 ---
-title: "Participant Prep Guide"
-subtitle: "What to install before the AI Bootcamp"
+title: "Getting Set Up"
+subtitle: "Tools for the AI Bootcamp"
 ---
 
-## Before the Bootcamp
+## Option 1: Apps (easiest way to start) {#apps}
 
-No installation needed — both sessions are demo-based. Just show up with your lunch.
+These are point-and-click applications. Download, sign in, and start using them.
 
-If you want to follow along on your own machine or try things after the bootcamp, here's what we use:
+### Claude (by Anthropic)
 
-### Claude Code (terminal-based AI assistant)
+A conversational AI assistant. Available as a desktop app and in your browser.
 
-1. Open your terminal (Terminal.app on Mac, or Ghostty if installed)
-2. Run: `npm install -g @anthropic-ai/claude-code`
-3. Run: `claude` and follow the login prompts
-4. You'll need an [Anthropic account](https://console.anthropic.com/) (free to create; usage is pay-as-you-go after free tier)
+- **Download**: [claude.ai/download](https://claude.ai/download) (Mac and Windows)
+- **Or use in browser**: [claude.ai](https://claude.ai)
+- **Subscription**: Free tier available. **Pro** ($20/month) gives more usage and access to the most powerful models.
+- **Create an account**: [claude.ai](https://claude.ai) — sign up with your email
 
-::: {.callout-note}
-If you don't have `npm`, install [Node.js](https://nodejs.org/) first (LTS version). On Mac: `brew install node` if you have Homebrew.
-:::
+### ChatGPT (by OpenAI)
 
-### Ghostty — a fast, clean terminal app
+Another widely-used AI assistant with desktop and mobile apps.
 
-- Download from [ghostty.org](https://ghostty.org)
-- Nicer than the default Terminal.app. Not required — any terminal works.
+- **Download**: [openai.com/chatgpt/download](https://openai.com/chatgpt/download) (Mac and Windows)
+- **Or use in browser**: [chatgpt.com](https://chatgpt.com)
+- **Subscription**: Free tier available. **Plus** ($20/month) gives access to GPT-4o and more.
 
-### Typora — a markdown editor/viewer
+### Microsoft Copilot (free for all UVM)
 
-- Download from [typora.io](https://typora.io)
-- Claude Code outputs markdown files. Typora renders them nicely for review and sharing.
+UVM provides enterprise-protected access to Microsoft Copilot at no cost.
 
-### VS Code (alternative)
+- **Access**: [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
+- **Subscription**: **Free** — included with your UVM account
+- **Note**: This is the safest option for working with student data or sensitive information, since it's covered by UVM's enterprise agreement.
 
-Claude Code also works as a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code) if you prefer that over the terminal.
+<!-- TODO: Add screenshots of each app interface -->
 
-## Cost
+---
 
-- **Claude Code**: Free tier available; pay-as-you-go after that (~$3–10/month for moderate use)
-- **Ghostty**: Free
-- **Typora**: $14.99 one-time (free trial available)
-- **UVM Microsoft Copilot**: Free for all UVM — [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
+## Option 2: Command line tools (more powerful) {#command-line}
 
-PDF funds may cover AI subscriptions. Ask your department chair.
+These run in your computer's **terminal** — a text-based interface where you type commands. The terminal gives AI tools direct access to your files, which makes them much more powerful for real work.
+
+### What's a terminal?
+
+It's an app that's already on your computer:
+
+- **Mac**: Open **Terminal** (search for "Terminal" in Spotlight, or find it in Applications → Utilities)
+- **Windows**: Open **PowerShell** (search for "PowerShell" in the Start menu)
+
+You type commands and press Enter. That's it.
+
+### Installing Claude Code
+
+Claude Code is an AI assistant that runs in your terminal. It can read your files, write documents, run code, and more.
+
+**Step 1: Install Node.js** (a tool that Claude Code needs to run)
+
+- Go to [nodejs.org](https://nodejs.org/)
+- Click the big green **LTS** download button
+- Run the installer — accept all the defaults
+
+**Step 2: Install Claude Code**
+
+Open your terminal and type this command, then press Enter:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+Wait for it to finish (you'll see some text scroll by — that's normal).
+
+**Step 3: Launch it**
+
+Type this and press Enter:
+
+```bash
+claude
+```
+
+It will ask you to sign in to your Anthropic account. Follow the prompts.
+
+**Subscription**: Claude Code requires a Claude **Max** ($100/month) or **Pro** ($20/month + usage-based API billing) subscription.
+
+### Installing OpenAI Codex
+
+Codex is OpenAI's terminal-based AI tool, similar to Claude Code.
+
+**Step 1: Install Node.js** (same as above — skip if you already did this)
+
+- Go to [nodejs.org](https://nodejs.org/) → download LTS → run installer
+
+**Step 2: Install Codex**
+
+```bash
+npm install -g @openai/codex
+```
+
+**Step 3: Launch it**
+
+```bash
+codex
+```
+
+**Subscription**: Requires an OpenAI API account with billing enabled.
+
+---
+
+## Cost summary
+
+| Tool | Free tier? | Paid tier | Notes |
+|------|-----------|-----------|-------|
+| Microsoft Copilot | **Free** (UVM) | — | Enterprise-protected. Best for sensitive data. |
+| Claude (app) | Yes | Pro: $20/mo | More powerful models + higher limits |
+| ChatGPT (app) | Yes | Plus: $20/mo | GPT-4o access + higher limits |
+| Claude Code (terminal) | — | Pro + API or Max: $100/mo | Most powerful; reads/writes your files |
+| OpenAI Codex (terminal) | — | API billing | Similar to Claude Code |
+
+PDF funds may cover AI subscriptions — ask your department chair.
+
+---
+
+## Resources {#resources}
+
+Some extra tools that aren't required but are nice to have:
+
+- **[Typora](https://typora.io)** ($14.99) — A clean markdown editor. AI tools often output markdown files; Typora makes them look polished for reading and sharing.
+- **[Ghostty](https://ghostty.org)** (free) — A fast, modern terminal app. Looks nicer than the default Terminal/PowerShell. Purely cosmetic.
+- **[VS Code](https://code.visualstudio.com/)** (free) — A code editor. Claude Code and GitHub Copilot both have VS Code extensions if you prefer a graphical interface over the terminal.

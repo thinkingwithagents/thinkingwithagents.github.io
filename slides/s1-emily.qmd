@@ -1,0 +1,51 @@
+---
+title: "Terminal + Claude Code"
+subtitle: "AI Bootcamp — Session 1"
+author: Emily Beam
+date: 2026-04-22
+format:
+  revealjs: default
+  beamer: default
+---
+
+# Terminal + Claude Code
+
+## What you're seeing
+
+1. **A terminal app** — where you type commands
+2. **Claude Code** — an AI assistant that runs in the terminal
+3. Type a request → AI responds → iterate
+
+Key ideas:
+
+- AI can **read and write files** on your computer
+- **Iterate**: "Make it shorter," "Add a section on X"
+- Output is **Markdown** — readable as plain text or rendered nicely
+
+## Context and iteration
+
+**Context window**: The AI only "sees" what you show it. Be explicit.
+
+**Iteration tips:**
+
+- First output is a draft, not a final product
+- Refine: "Change the tone," "Add an example," "This is wrong because..."
+- Save to a file so you can pick up later
+
+**When it's wrong:** AI makes confident-sounding mistakes. Always review output, especially numbers and citations.
+
+# Wrap-up
+
+## Before next time (April 27)
+
+- Try using an AI tool for **one real task** this week
+- Think of a research or teaching task you'd like to automate
+- Install guide: [eabeam.github.io/uvmecon-ai/prep.html](https://eabeam.github.io/uvmecon-ai/prep.html)
+
+**Next session:** Research pipelines, web scraping, automated grading
+
+## Resources
+
+- Bootcamp site: [eabeam.github.io/uvmecon-ai](https://eabeam.github.io/uvmecon-ai)
+- Claude Code docs: [docs.anthropic.com/en/docs/claude-code](https://docs.anthropic.com/en/docs/claude-code)
+- UVM Copilot (free): [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
