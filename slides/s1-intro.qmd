@@ -186,7 +186,7 @@ For coding tools, these are standing instruction files that are loaded automatic
 
 :::: {.columns}
 ::: {.column width="58%"}
-![](assets/claude-context-example.png){width="100%" .shot}
+_TODO: add updated context/preferences screenshot here._
 :::
 ::: {.column width="42%"}
 - good place for preferences like full file paths, permission rules, and writing defaults
