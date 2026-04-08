@@ -5,6 +5,8 @@ subtitle: "Integrations, advanced workflows, and tools worth exploring"
 
 Once you have a basic AI workflow running, these are the things that make it dramatically more useful. None of these are required — pick what fits your work.
 
+*★ = I actually use this regularly. Italic notes are honest opinions, not endorsements.*
+
 ## Direct integrations (MCP)
 
 The Model Context Protocol (MCP) lets agentic tools connect directly to external services. These are not copy-paste workarounds — the tool reads and writes to these services natively.
@@ -73,8 +75,8 @@ AI tools produce Markdown files (`.md`). A good viewer makes them immediately re
 
 | Tool | Cost | Why |
 |---|---|---|
-| **[Typora](https://typora.io)** | $15 | Clean live preview, opens `.md` files like a word processor |
-| **[Obsidian](https://obsidian.md)** | Free | Vault-based notes with links, tags, search — good for storing prompts and session notes |
+| ★ **[Typora](https://typora.io)** | $15 | Clean live preview, opens `.md` files like a word processor |
+| ★ **[Obsidian](https://obsidian.md)** | Free | Vault-based notes with links, tags, search — good for storing prompts and session notes |
 | **[Zettlr](https://www.zettlr.com/)** | Free | Writing-oriented Markdown editor for longer academic work |
 | **[MarkText](https://github.com/marktext/marktext)** | Free | Simple, lightweight Markdown editor |
 
@@ -82,17 +84,17 @@ AI tools produce Markdown files (`.md`). A good viewer makes them immediately re
 
 | Tool | What it does |
 |---|---|
-| **[Granola](https://www.granola.ai/)** | Meeting capture — searchable notes from conversations. AI can search past meetings for context. |
-| **[Wispr Flow](https://wisprflow.ai/)** | Dictation — speak and it types. Good for drafting on the go or narrating session notes. |
+| ★ **[Granola](https://www.granola.ai/)** | Meeting capture — searchable notes from conversations. AI can search past meetings for context. |
+| ★ **[Wispr Flow](https://wisprflow.ai/)** | Dictation — speak and it types. Good for drafting on the go or narrating session notes. |
 
 ## Research and literature tools
 
 | Tool | What it does |
 |---|---|
-| **[Elicit](https://elicit.com)** | Literature review, evidence synthesis, structured research reports |
+| **[Elicit](https://elicit.com)** | Literature review, evidence synthesis, structured research reports. *Cool, but I find my own workflow faster.* |
 | **[Scite](https://scite.ai/)** | Citation context — see whether later papers support or contradict a claim |
-| **[ResearchRabbit](https://www.researchrabbit.ai/)** | Citation-network exploration and related paper discovery |
-| **[Refine](https://refine.ink)** | AI-powered academic writing and editing for research papers |
+| **[ResearchRabbit](https://www.researchrabbit.ai/)** | Citation-network exploration and related paper discovery. *Same — impressive demo, but I haven't stuck with it.* |
+| **[Refine](https://refine.ink)** | AI-powered academic writing and editing for research papers. *Marc swears by this. ~$50/paper. I haven't tried it yet.* |
 
 ## Workflow patterns worth trying
 
