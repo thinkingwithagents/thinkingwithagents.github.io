@@ -1,0 +1,49 @@
+---
+title: "Seminar Theme"
+subtitle: "Plain, traditional, and low-drama"
+author: Demo
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    width: 1280
+    height: 720
+    embed-resources: true
+    transition: none
+---
+
+## A more traditional slide look
+
+This template is meant to feel closer to a standard academic slide deck:
+
+- white background
+- dark text
+- minimal decoration
+- straightforward transitions
+
+## Good uses
+
+- job talks
+- workshop presentations
+- methods lectures
+- any talk where you want the content to do the work
+
+## Example slide structure
+
+### Main point
+
+State the takeaway in one sentence, then support it with 3-4 bullets.
+
+- Start with the result or claim
+- Add the minimum necessary evidence
+- Keep figures and tables clean
+- Avoid unnecessary visual effects
+
+## Example table
+
+| Item | Why it works |
+|------|--------------|
+| White background | Familiar and easy to project |
+| Dark text | High contrast |
+| Minimal styling | Keeps attention on the argument |
+| No transitions | Feels direct and professional |

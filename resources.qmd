@@ -1,0 +1,81 @@
+---
+title: "Outside Resources"
+subtitle: "Talks, guides, and links beyond the bootcamp itself"
+---
+
+This page is a running list of useful outside resources: talks, articles, demos, explainers, and people worth following. It is broader than the bootcamp itself.
+
+## How to use this page
+
+For each link, try to add:
+
+- what it is
+- why it is useful
+- who it is for
+- whether it is more about teaching, research, or general AI literacy
+
+## Talks and explainers
+
+### Paul Goldsmith-Pinkham
+
+- [Getting started with Claude Code](https://paulgp.substack.com/p/getting-started-with-claude-code?utm_source=post-email-title&publication_id=1015181&post_id=192433164&utm_campaign=email-post-title&isFreemail=true&r=4oe7l&triedRedirect=true&utm_medium=email)
+  A good starting point for faculty who want to understand what Claude Code is for, how it fits into a workflow, and why working in the terminal feels different from ordinary chat.
+
+### Claude Blattman
+
+- [claudeblattman.com](https://claudeblattman.com/)
+  Useful for skills, templates, and Claude Code-oriented workflow examples. Good for people who want concrete patterns rather than abstract prompting advice.
+
+## Tool documentation and guides
+
+### Anthropic / Claude
+
+- Claude app
+- Claude Code
+- prompt-writing or workflow guides
+
+### OpenAI / ChatGPT / Codex
+
+- ChatGPT guides
+- Codex guides
+- workflow examples
+
+### Cursor
+
+- [Cursor](https://cursor.com/)
+  A popular AI code editor for people who want an editor-based workflow rather than a pure terminal workflow.
+- [Cursor docs](https://docs.cursor.com/)
+  Useful if you want to compare Cursor's editor-based workflow to Claude Code or Codex.
+
+### Obsidian
+
+- [Obsidian](https://obsidian.md/)
+  A flexible notes app that works well as a personal knowledge base, project notebook, or place to store prompts, reusable instructions, and session notes.
+- [Obsidian Help](https://help.obsidian.md/)
+  Useful if you want to learn linking, vault structure, templates, and other features for organizing AI-assisted work over time.
+
+### Microsoft / Copilot
+
+- UVM Copilot access info
+- Microsoft 365 Copilot guides for Word, Excel, PowerPoint, or Outlook
+
+## Teaching-focused resources
+
+- assignment design
+- rubric design
+- feedback workflows
+- AI policy language
+
+## Research-focused resources
+
+- literature review workflows
+- coding assistance
+- data cleaning and exploration
+- writing and revision
+- paper-reading AI tool or paper-summarization service
+  Placeholder: Emily has a specific reference in mind and will fill this in later.
+
+## Notes
+
+- Keep this page broader than the bootcamp itself.
+- If a resource becomes central to a session, link it from the relevant session page too.

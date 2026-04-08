@@ -18,21 +18,26 @@ Two lunch sessions introducing AI tools for teaching and research. No prior expe
 
 No installation needed — both sessions are watch-along demos. See the **[Getting Set Up](prep.qmd)** guide if you want to try things on your own afterward.
 
+If you want broader reading beyond the bootcamp itself, see **[Outside Resources](resources.qmd)**.
+
 ---
 
 ### Slide templates
 
-Here's what the slide format looks like — three quick demos:
+Here's what the slide format looks like — four quick demos:
 
 :::: {.columns}
-::: {.column width="33%"}
+::: {.column width="25%"}
 [**Moon** (dark)](slides/demo-title.html){target="_blank"}
 :::
-::: {.column width="33%"}
+::: {.column width="25%"}
 [**Serif** (classic)](slides/demo-columns.html){target="_blank"}
 :::
-::: {.column width="33%"}
+::: {.column width="25%"}
 [**Solarized** (warm)](slides/demo-table.html){target="_blank"}
+:::
+::: {.column width="25%"}
+[**Seminar** (plain)](slides/demo-seminar.html){target="_blank"}
 :::
 ::::
 

@@ -22,6 +22,38 @@ Key ideas:
 - **Iterate**: "Make it shorter," "Add a section on X"
 - Output is **Markdown** — readable as plain text or rendered nicely
 
+## Quick Markdown overview
+
+Markdown files are simple plain-text documents that use light formatting marks like `#` for headers and `-` for bullets.
+
+- AI tools often write in **Markdown** by default
+- It is a good **working output format** because it is lightweight and easy to edit
+- Markdown can be converted into **Word files, PDFs, web pages, and slides**
+- You do **not** need to know Markdown syntax for this bootcamp
+
+The practical point is just: the AI may hand you a `.md` file, and that is normal.
+
+## Raw Markdown vs rendered Markdown
+
+:::: {.columns}
+::: {.column width="50%"}
+**Raw file**
+
+![](assets/markdown-raw.png){width="100%"}
+:::
+::: {.column width="50%"}
+**Rendered preview**
+
+![](assets/markdown-pretty.png){width="100%"}
+:::
+::::
+
+- Left: the plain text with hashes and formatting marks
+- Right: the same file shown in a Markdown viewer
+- A viewer such as **Typora** makes Markdown look like normal formatted text
+
+You do not need to learn the syntax today, but it helps to have an app that makes these files easy to read.
+
 ## Context and iteration
 
 **Context window**: The AI only "sees" what you show it. Be explicit.

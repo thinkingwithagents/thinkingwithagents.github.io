@@ -9,7 +9,7 @@ format:
     width: 1280
     height: 720
     embed-resources: true
-    transition: fade
+    transition: none
 ---
 
 ## Classic serif typography

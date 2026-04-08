@@ -5,16 +5,16 @@ project:
 format:
   revealjs:
     theme: default
-    slide-number: true
+    slide-number: c/t
+    progress: true
+    menu: true
+    overview: true
     code-overflow: wrap
     embed-resources: true
     width: 1280
     height: 720
     pdf-separate-fragments: false
     pdf-max-pages-per-slide: 2
-    transition: fade
+    transition: none
     smaller: false
     scrollable: true
-  beamer:
-    theme: metropolis
-    aspectratio: 169

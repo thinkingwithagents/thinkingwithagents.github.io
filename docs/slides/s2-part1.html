@@ -1051,22 +1051,59 @@ Emily Beam
 </ul>
 </div></div>
 <p>Write results to <strong>files</strong>, not just chat. Files persist; chat doesn’t.</p>
+</section>
+<section id="why-this-matters-for-research" class="slide level2">
+<h2>Why this matters for research</h2>
+<ul>
+<li>research work is often a chain of smaller tasks</li>
+<li>the AI is strongest when each step is narrow and well-defined</li>
+<li>the output should be something you can review, rerun, and share</li>
+<li>if a task gets messy, start a new conversation and keep the useful notes</li>
+</ul>
 </section></section>
 <section>
 <section id="research-pipeline-demo" class="title-slide slide level1 center">
 <h1>Research Pipeline Demo</h1>
 
 </section>
-<section id="research-pipeline-demo-1" class="slide level2 scrollable">
-<h2>Research pipeline demo</h2>
-<p>Starting from a raw dataset, using Claude Code to:</p>
+<section id="the-working-example" class="slide level2 scrollable">
+<h2>The working example</h2>
+<p>The main example today is a <strong>county-level IPUMS workflow</strong>.</p>
+<p>Possible question:</p>
+<ul>
+<li>How does the county-level share of native-born population change over time?</li>
+<li>What does that look like in maps and line graphs?</li>
+<li>Can we turn that into a short descriptive report?</li>
+</ul>
+<p>Desired workflow:</p>
 <ol type="1">
-<li><strong>Explore</strong>: “Read this data and describe what’s in it”</li>
-<li><strong>Plan</strong>: “Suggest 3 analyses for a paper on [topic]”</li>
-<li><strong>Code</strong>: “Write Stata code to run [analysis]”</li>
-<li><strong>Report</strong>: “Draft a 1-page summary with a table”</li>
+<li>define the question</li>
+<li>ask the tool for an analysis plan</li>
+<li>have it help with data access, cleaning, and code</li>
+<li>make plots and maps</li>
+<li>draft a short report</li>
 </ol>
-<p>Each step = fresh conversation + saved output.</p>
+<p>The point is not that AI does the research question for you. The point is that it helps you move from a question to a documented workflow faster.</p>
+</section>
+<section id="why-screenshots-may-be-better-than-fully-live-execution" class="slide level2">
+<h2>Why screenshots may be better than fully live execution</h2>
+<ul>
+<li>less waiting</li>
+<li>less technical failure risk</li>
+<li>easier to keep attention on the workflow</li>
+<li>easier to show a whole process in a short lunch session</li>
+</ul>
+<p>We may still keep one live moment, but screenshots can make the sequence clearer.</p>
+</section>
+<section id="mixed-tools-one-workflow" class="slide level2">
+<h2>Mixed tools, one workflow</h2>
+<p>This example is intentionally mixed-tool:</p>
+<ul>
+<li><strong>Stata</strong> for most cleaning and data work</li>
+<li><strong>R</strong> for maps or plots if that is the easiest path</li>
+<li><strong>Markdown or LaTeX</strong> for the report output</li>
+</ul>
+<p>That is normal. The point is not to force one tool to do everything.</p>
 </section>
 <section id="what-ai-is-good-at-here" class="slide level2">
 <h2>What AI is good at here</h2>
@@ -1091,8 +1128,52 @@ Emily Beam
 </ul>
 </div></div>
 </section>
-<section id="resources-costs" class="slide level2">
-<h2>Resources &amp; costs</h2>
+<section id="review-and-guardrails" class="slide level2">
+<h2>Review and guardrails</h2>
+<ul>
+<li>verify the prompt matched the actual data task</li>
+<li>inspect code before you run it</li>
+<li>keep sensitive data rules in mind</li>
+<li>do not confuse polished prose with correctness</li>
+<li>if the task is risky, redesign it rather than forcing it</li>
+</ul>
+<p>If the data are sensitive, a safer pattern is often:</p>
+<ul>
+<li>let the tool write code</li>
+<li>review the code yourself</li>
+<li>review logs or output files rather than exposing raw protected data</li>
+</ul>
+</section>
+<section id="parallel-checks" class="slide level2">
+<h2>Parallel checks</h2>
+<p>One useful trick is to ask for more than one pass.</p>
+<ul>
+<li>run two workflows in parallel</li>
+<li>compare outputs</li>
+<li>ask one agent to challenge the other</li>
+<li>treat disagreement as a reason to review more carefully</li>
+</ul>
+<p>You do not need a fully built adversarial agent to get value from this idea.</p>
+</section>
+<section id="skills-and-new-features" class="slide level2">
+<h2>Skills and new features</h2>
+<p>Skills are reusable task bundles that can help with recurring work.</p>
+<ul>
+<li>useful for repeated document, spreadsheet, or coding tasks</li>
+<li>do not overinvest in building everything from scratch</li>
+<li>start with what already exists</li>
+<li>if reusable project instructions come up, keep them generic here unless a named file already exists</li>
+<li>a personal voice file can be mentioned later if it is part of the actual workflow, for example <code>/Users/ebeam/Dropbox/GitHub/eb-lab/EB-VOICE.md</code></li>
+</ul>
+<p>The tool landscape is changing quickly, so keep an eye on new features.</p>
+<ul>
+<li>remote control for Claude</li>
+<li>dispatch</li>
+<li>other recent orchestration features</li>
+</ul>
+</section>
+<section id="what-to-try-next" class="slide level2">
+<h2>What to try next</h2>
 <ul>
 <li>Bootcamp site: <a href="https://eabeam.github.io/uvmecon-ai">eabeam.github.io/uvmecon-ai</a></li>
 <li>Claude Code: free tier + pay-as-you-go ($3–10/mo typical)</li>
@@ -2224,7 +2305,7 @@ window.QuartoSupport = function () {
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'fade',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',

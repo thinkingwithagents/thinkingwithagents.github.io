@@ -52,18 +52,53 @@ AI tools have limited "memory" (context window).
 
 Write results to **files**, not just chat. Files persist; chat doesn't.
 
+## Why this matters for research
+
+- research work is often a chain of smaller tasks
+- the AI is strongest when each step is narrow and well-defined
+- the output should be something you can review, rerun, and share
+- if a task gets messy, start a new conversation and keep the useful notes
+
 # Research Pipeline Demo
 
-## Research pipeline demo
+## The working example
 
-Starting from a raw dataset, using Claude Code to:
+The main example today is a **county-level IPUMS workflow**.
 
-1. **Explore**: "Read this data and describe what's in it"
-2. **Plan**: "Suggest 3 analyses for a paper on [topic]"
-3. **Code**: "Write Stata code to run [analysis]"
-4. **Report**: "Draft a 1-page summary with a table"
+Possible question:
 
-Each step = fresh conversation + saved output.
+- How does the county-level share of native-born population change over time?
+- What does that look like in maps and line graphs?
+- Can we turn that into a short descriptive report?
+
+Desired workflow:
+
+1. define the question
+2. ask the tool for an analysis plan
+3. have it help with data access, cleaning, and code
+4. make plots and maps
+5. draft a short report
+
+The point is not that AI does the research question for you. The point is that it helps you move from a question to a documented workflow faster.
+
+## Why screenshots may be better than fully live execution
+
+- less waiting
+- less technical failure risk
+- easier to keep attention on the workflow
+- easier to show a whole process in a short lunch session
+
+We may still keep one live moment, but screenshots can make the sequence clearer.
+
+## Mixed tools, one workflow
+
+This example is intentionally mixed-tool:
+
+- **Stata** for most cleaning and data work
+- **R** for maps or plots if that is the easiest path
+- **Markdown or LaTeX** for the report output
+
+That is normal. The point is not to force one tool to do everything.
 
 ## What AI is good at here
 
@@ -88,7 +123,48 @@ Each step = fresh conversation + saved output.
 :::
 ::::
 
-## Resources & costs
+## Review and guardrails
+
+- verify the prompt matched the actual data task
+- inspect code before you run it
+- keep sensitive data rules in mind
+- do not confuse polished prose with correctness
+- if the task is risky, redesign it rather than forcing it
+
+If the data are sensitive, a safer pattern is often:
+
+- let the tool write code
+- review the code yourself
+- review logs or output files rather than exposing raw protected data
+
+## Parallel checks
+
+One useful trick is to ask for more than one pass.
+
+- run two workflows in parallel
+- compare outputs
+- ask one agent to challenge the other
+- treat disagreement as a reason to review more carefully
+
+You do not need a fully built adversarial agent to get value from this idea.
+
+## Skills and new features
+
+Skills are reusable task bundles that can help with recurring work.
+
+- useful for repeated document, spreadsheet, or coding tasks
+- do not overinvest in building everything from scratch
+- start with what already exists
+- if reusable project instructions come up, keep them generic here unless a named file already exists
+- a personal voice file can be mentioned later if it is part of the actual workflow, for example `/Users/ebeam/Dropbox/GitHub/eb-lab/EB-VOICE.md`
+
+The tool landscape is changing quickly, so keep an eye on new features.
+
+- remote control for Claude
+- dispatch
+- other recent orchestration features
+
+## What to try next
 
 - Bootcamp site: [eabeam.github.io/uvmecon-ai](https://eabeam.github.io/uvmecon-ai)
 - Claude Code: free tier + pay-as-you-go ($3–10/mo typical)

@@ -134,16 +134,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Prep Guide</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Outside Resources</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./session1.html"> 
 <span class="menu-text">Session 1 (Apr 22)</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./session2.html"> 
 <span class="menu-text">Session 2 (Apr 27)</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -161,20 +161,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#apps" id="toc-apps" class="nav-link active" data-scroll-target="#apps">Option 1: Apps (easiest way to start)</a>
+  <li><a href="#two-categories-of-ai-tools" id="toc-two-categories-of-ai-tools" class="nav-link active" data-scroll-target="#two-categories-of-ai-tools">Two categories of AI tools</a></li>
+  <li><a href="#apps" id="toc-apps" class="nav-link" data-scroll-target="#apps">Option 1: Chat-based tools (easiest way to start)</a>
   <ul class="collapse">
   <li><a href="#claude-by-anthropic" id="toc-claude-by-anthropic" class="nav-link" data-scroll-target="#claude-by-anthropic">Claude (by Anthropic)</a></li>
   <li><a href="#chatgpt-by-openai" id="toc-chatgpt-by-openai" class="nav-link" data-scroll-target="#chatgpt-by-openai">ChatGPT (by OpenAI)</a></li>
-  <li><a href="#microsoft-copilot-free-for-all-uvm" id="toc-microsoft-copilot-free-for-all-uvm" class="nav-link" data-scroll-target="#microsoft-copilot-free-for-all-uvm">Microsoft Copilot (free for all UVM)</a></li>
+  <li><a href="#uvm-note-microsoft-copilot" id="toc-uvm-note-microsoft-copilot" class="nav-link" data-scroll-target="#uvm-note-microsoft-copilot">UVM note: Microsoft Copilot</a></li>
   </ul></li>
-  <li><a href="#command-line" id="toc-command-line" class="nav-link" data-scroll-target="#command-line">Option 2: Command line tools (more powerful)</a>
+  <li><a href="#command-line" id="toc-command-line" class="nav-link" data-scroll-target="#command-line">Option 2: Agentic tools (more powerful)</a>
   <ul class="collapse">
   <li><a href="#whats-a-terminal" id="toc-whats-a-terminal" class="nav-link" data-scroll-target="#whats-a-terminal">What’s a terminal?</a></li>
   <li><a href="#installing-claude-code" id="toc-installing-claude-code" class="nav-link" data-scroll-target="#installing-claude-code">Installing Claude Code</a></li>
   <li><a href="#installing-openai-codex" id="toc-installing-openai-codex" class="nav-link" data-scroll-target="#installing-openai-codex">Installing OpenAI Codex</a></li>
   </ul></li>
   <li><a href="#cost-summary" id="toc-cost-summary" class="nav-link" data-scroll-target="#cost-summary">Cost summary</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
+  <ul class="collapse">
+  <li><a href="#markdown-viewers-editors" id="toc-markdown-viewers-editors" class="nav-link" data-scroll-target="#markdown-viewers-editors">Markdown viewers / editors</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eabeam/uvmecon-ai/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -201,42 +205,77 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="two-categories-of-ai-tools" class="level2">
+<h2 class="anchored" data-anchor-id="two-categories-of-ai-tools">Two categories of AI tools</h2>
+<p>For this bootcamp, the most useful distinction is not “browser vs.&nbsp;app.” It is:</p>
+<ul>
+<li><strong>Chat-based tools</strong>: good for asking questions, drafting text, analyzing uploaded files, and trying quick prompts.</li>
+<li><strong>Agentic tools</strong>: good for working on files, code, and multi-step tasks with direct access to your project or local environment.</li>
+</ul>
+<p>Chat tools can still <strong>write code snippets</strong> or comment on code. What they usually do <strong>not</strong> do is directly search your folders, edit local files, or run commands on your machine. That is the role of the agentic tools we are focusing on for the terminal demos.</p>
+</section>
 <section id="apps" class="level2">
-<h2 class="anchored" data-anchor-id="apps">Option 1: Apps (easiest way to start)</h2>
+<h2 class="anchored" data-anchor-id="apps">Option 1: Chat-based tools (easiest way to start)</h2>
 <p>These are point-and-click applications. Download, sign in, and start using them.</p>
 <section id="claude-by-anthropic" class="level3">
 <h3 class="anchored" data-anchor-id="claude-by-anthropic">Claude (by Anthropic)</h3>
 <p>A conversational AI assistant. Available as a desktop app and in your browser.</p>
+<p>Best for:</p>
 <ul>
-<li><strong>Download</strong>: <a href="https://claude.ai/download">claude.ai/download</a> (Mac and Windows)</li>
-<li><strong>Or use in browser</strong>: <a href="https://claude.ai">claude.ai</a></li>
-<li><strong>Subscription</strong>: Free tier available. <strong>Pro</strong> ($20/month) gives more usage and access to the most powerful models.</li>
-<li><strong>Create an account</strong>: <a href="https://claude.ai">claude.ai</a> — sign up with your email</li>
+<li>drafting and revising text</li>
+<li>brainstorming</li>
+<li>summarizing uploaded files</li>
+<li>generating code snippets or examples</li>
+</ul>
+<p>Not the same as Claude Code:</p>
+<ul>
+<li><p>Claude in the browser or desktop app can help you <strong>talk through</strong> code and files</p></li>
+<li><p>Claude Code can directly work in your terminal, read local project files, edit files, and run commands</p></li>
+<li><p><strong>Download</strong>: <a href="https://claude.ai/download">claude.ai/download</a> (Mac and Windows)</p></li>
+<li><p><strong>Or use in browser</strong>: <a href="https://claude.ai">claude.ai</a></p></li>
+<li><p><strong>Subscription</strong>: Free tier available. <strong>Pro</strong> ($20/month) is the most straightforward paid option. <strong>Max</strong> starts at $100/month for substantially more usage.</p></li>
+<li><p><strong>Create an account</strong>: <a href="https://claude.ai">claude.ai</a> — sign up with your email</p></li>
 </ul>
 </section>
 <section id="chatgpt-by-openai" class="level3">
 <h3 class="anchored" data-anchor-id="chatgpt-by-openai">ChatGPT (by OpenAI)</h3>
 <p>Another widely-used AI assistant with desktop and mobile apps.</p>
+<p>Best for:</p>
 <ul>
-<li><strong>Download</strong>: <a href="https://openai.com/chatgpt/download">openai.com/chatgpt/download</a> (Mac and Windows)</li>
-<li><strong>Or use in browser</strong>: <a href="https://chatgpt.com">chatgpt.com</a></li>
-<li><strong>Subscription</strong>: Free tier available. <strong>Plus</strong> ($20/month) gives access to GPT-4o and more.</li>
+<li>drafting and revising text</li>
+<li>summarizing uploaded files</li>
+<li>brainstorming</li>
+<li>generating code snippets or examples</li>
+</ul>
+<p>Not the same as Codex:</p>
+<ul>
+<li><p>ChatGPT is primarily a chat interface</p></li>
+<li><p>Codex is OpenAI’s coding agent, designed to work in your terminal, code editor, or Codex app with direct project actions</p></li>
+<li><p><strong>Download</strong>: <a href="https://openai.com/chatgpt/download">openai.com/chatgpt/download</a> (Mac and Windows)</p></li>
+<li><p><strong>Or use in browser</strong>: <a href="https://chatgpt.com">chatgpt.com</a></p></li>
+<li><p><strong>Subscription</strong>: Free tier available. <strong>Plus</strong> ($20/month) is the standard paid tier for most users.</p></li>
 </ul>
 </section>
-<section id="microsoft-copilot-free-for-all-uvm" class="level3">
-<h3 class="anchored" data-anchor-id="microsoft-copilot-free-for-all-uvm">Microsoft Copilot (free for all UVM)</h3>
-<p>UVM provides enterprise-protected access to Microsoft Copilot at no cost.</p>
+<section id="uvm-note-microsoft-copilot" class="level3">
+<h3 class="anchored" data-anchor-id="uvm-note-microsoft-copilot">UVM note: Microsoft Copilot</h3>
+<p>UVM provides enterprise-protected access to Microsoft Copilot Chat through your work account.</p>
 <ul>
 <li><strong>Access</strong>: <a href="https://go.uvm.edu/copilot">go.uvm.edu/copilot</a></li>
-<li><strong>Subscription</strong>: <strong>Free</strong> — included with your UVM account</li>
-<li><strong>Note</strong>: This is the safest option for working with student data or sensitive information, since it’s covered by UVM’s enterprise agreement.</li>
+<li><strong>What it’s good for</strong>: low-friction web chat and some Microsoft 365 workflows</li>
+<li><strong>What it is not for</strong>: the terminal/file-access demos we are centering in this bootcamp</li>
+<li><strong>If you want deeper Office integration</strong>: ask about a <strong>Microsoft 365 Copilot</strong> license, which adds stronger Word, Excel, PowerPoint, and Outlook integration</li>
+<li><strong>Why it’s not the main setup path here</strong>: for this bootcamp, we want tools that can clearly demonstrate the difference between chat-based help and agentic file/code workflows</li>
 </ul>
-<!-- TODO: Add screenshots of each app interface -->
+<!-- TODO: Add a small number of screenshots:
+1. Claude or ChatGPT chat window
+2. Copilot Chat access point
+3. A terminal window for the agentic tools section
+-->
 <hr>
 </section>
 </section>
 <section id="command-line" class="level2">
-<h2 class="anchored" data-anchor-id="command-line">Option 2: Command line tools (more powerful)</h2>
+<h2 class="anchored" data-anchor-id="command-line">Option 2: Agentic tools (more powerful)</h2>
 <p>These run in your computer’s <strong>terminal</strong> — a text-based interface where you type commands. The terminal gives AI tools direct access to your files, which makes them much more powerful for real work.</p>
 <section id="whats-a-terminal" class="level3">
 <h3 class="anchored" data-anchor-id="whats-a-terminal">What’s a terminal?</h3>
@@ -250,6 +289,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="installing-claude-code" class="level3">
 <h3 class="anchored" data-anchor-id="installing-claude-code">Installing Claude Code</h3>
 <p>Claude Code is an AI assistant that runs in your terminal. It can read your files, write documents, run code, and more.</p>
+<p>This is the Anthropic tool that most clearly shows the difference between:</p>
+<ul>
+<li>a <strong>chat tool</strong> that answers questions</li>
+<li>an <strong>agentic tool</strong> that can act on a project</li>
+</ul>
 <p><strong>Step 1: Install Node.js</strong> (a tool that Claude Code needs to run)</p>
 <ul>
 <li>Go to <a href="https://nodejs.org/">nodejs.org</a></li>
@@ -263,12 +307,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Step 3: Launch it</strong></p>
 <p>Type this and press Enter:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It will ask you to sign in to your Anthropic account. Follow the prompts.</p>
-<p><strong>Subscription</strong>: Claude Code requires a Claude <strong>Max</strong> ($100/month) or <strong>Pro</strong> ($20/month + usage-based API billing) subscription.</p>
+<p>It will ask you to sign in. Follow the prompts.</p>
+<p><strong>How you pay for it</strong>:</p>
+<ul>
+<li><strong>Claude Pro</strong> ($20/month) or <strong>Claude Max</strong> (from $100/month) lets you sign in with your Claude account</li>
+<li>Anthropic also supports logging in with an <strong>Anthropic Console</strong> account if you prefer API-based billing instead of a Claude subscription</li>
+</ul>
+<p>For most faculty trying this on their own, <strong>Pro is the default place to start</strong>.</p>
 </section>
 <section id="installing-openai-codex" class="level3">
 <h3 class="anchored" data-anchor-id="installing-openai-codex">Installing OpenAI Codex</h3>
-<p>Codex is OpenAI’s terminal-based AI tool, similar to Claude Code.</p>
+<p>Codex is OpenAI’s coding agent, similar in spirit to Claude Code.</p>
 <p><strong>Step 1: Install Node.js</strong> (same as above — skip if you already did this)</p>
 <ul>
 <li>Go to <a href="https://nodejs.org/">nodejs.org</a> → download LTS → run installer</li>
@@ -277,7 +326,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @openai/codex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Step 3: Launch it</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Subscription</strong>: Requires an OpenAI API account with billing enabled.</p>
+<p><strong>How you pay for it</strong>:</p>
+<ul>
+<li>The simplest path is to sign in with an active <strong>ChatGPT subscription</strong></li>
+<li>You do <strong>not</strong> need a separate API account just to try the subscription-based Codex workflow</li>
+</ul>
+<p>For most faculty, <strong>ChatGPT Plus</strong> is the simplest paid entry point if they want to try Codex.</p>
 <hr>
 </section>
 </section>
@@ -285,65 +339,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="cost-summary">Cost summary</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 17%">
-<col style="width: 31%">
-<col style="width: 31%">
+<col style="width: 9%">
 <col style="width: 20%">
+<col style="width: 46%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Tool</th>
-<th>Free tier?</th>
-<th>Paid tier</th>
-<th>Notes</th>
+<th>Entry point</th>
+<th>Typical cost to try seriously</th>
+<th>Best use here</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Microsoft Copilot</td>
-<td><strong>Free</strong> (UVM)</td>
-<td>—</td>
-<td>Enterprise-protected. Best for sensitive data.</td>
-</tr>
-<tr class="even">
-<td>Claude (app)</td>
-<td>Yes</td>
+<td>Claude (chat app)</td>
+<td>Free tier available</td>
 <td>Pro: $20/mo</td>
-<td>More powerful models + higher limits</td>
-</tr>
-<tr class="odd">
-<td>ChatGPT (app)</td>
-<td>Yes</td>
-<td>Plus: $20/mo</td>
-<td>GPT-4o access + higher limits</td>
+<td>Chat-based drafting, brainstorming, file uploads</td>
 </tr>
 <tr class="even">
-<td>Claude Code (terminal)</td>
-<td>—</td>
-<td>Pro + API or Max: $100/mo</td>
-<td>Most powerful; reads/writes your files</td>
+<td>ChatGPT (chat app)</td>
+<td>Free tier available</td>
+<td>Plus: $20/mo</td>
+<td>Chat-based drafting, brainstorming, file uploads</td>
 </tr>
 <tr class="odd">
-<td>OpenAI Codex (terminal)</td>
-<td>—</td>
-<td>API billing</td>
-<td>Similar to Claude Code</td>
+<td>Claude Code (agentic terminal tool)</td>
+<td>Node.js + Claude login</td>
+<td>Usually Claude Pro: $20/mo</td>
+<td>Terminal workflow with file access and command execution</td>
+</tr>
+<tr class="even">
+<td>OpenAI Codex (agentic coding tool)</td>
+<td>Node.js + ChatGPT login</td>
+<td>Usually ChatGPT Plus: $20/mo</td>
+<td>Terminal/code-editor/app workflow with project actions</td>
+</tr>
+<tr class="odd">
+<td>Microsoft Copilot Chat</td>
+<td>Included with UVM account</td>
+<td>No extra cost</td>
+<td>Enterprise-protected chat and light Office-adjacent support</td>
+</tr>
+<tr class="even">
+<td>Microsoft 365 Copilot</td>
+<td>Ask about license availability</td>
+<td>Extra institutional license</td>
+<td>Deeper Office integration, not the main bootcamp workflow</td>
 </tr>
 </tbody>
 </table>
-<p>PDF funds may cover AI subscriptions — ask your department chair.</p>
+<p>For this bootcamp, the most relevant paid comparison is usually:</p>
+<ul>
+<li><strong>Claude Pro</strong> if you want to try Claude Code</li>
+<li><strong>ChatGPT Plus</strong> if you want to try Codex</li>
+</ul>
+<p>PDF funds may cover subscriptions — ask your department chair.</p>
 <hr>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <p>Some extra tools that aren’t required but are nice to have:</p>
 <ul>
-<li><strong><a href="https://typora.io">Typora</a></strong> ($14.99) — A clean markdown editor. AI tools often output markdown files; Typora makes them look polished for reading and sharing.</li>
 <li><strong><a href="https://ghostty.org">Ghostty</a></strong> (free) — A fast, modern terminal app. Looks nicer than the default Terminal/PowerShell. Purely cosmetic.</li>
 <li><strong><a href="https://code.visualstudio.com/">VS Code</a></strong> (free) — A code editor. Claude Code and GitHub Copilot both have VS Code extensions if you prefer a graphical interface over the terminal.</li>
 </ul>
+<section id="markdown-viewers-editors" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-viewers-editors">Markdown viewers / editors</h3>
+<p>AI tools often output rough-looking <code>.md</code> files. A good Markdown viewer or editor makes them render quickly as readable, attractive text.</p>
+<ul>
+<li><strong><a href="https://typora.io">Typora</a></strong> ($14.99) — Recommended default. It gives a live, clean preview and works well as a standalone app for opening Markdown files directly.</li>
+<li><strong><a href="https://github.com/marktext/marktext">MarkText</a></strong> (free) — A simple open-source Markdown editor for macOS, Windows, and Linux.</li>
+<li><strong><a href="https://www.zettlr.com/">Zettlr</a></strong> (free) — A stronger option for larger academic writing projects if you want more structure and writing features.</li>
+<li><strong><a href="https://github.com/MacDownApp/macdown">MacDown</a></strong> (free, macOS only) — A lightweight Mac-native Markdown editor worth considering.</li>
+</ul>
+<p>If you just want one app that opens Markdown files and makes them look good immediately, <strong>Typora is the default recommendation here</strong>.</p>
+<p>For broader reading beyond the bootcamp, see <strong><a href="./resources.html">Outside Resources</a></strong>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
