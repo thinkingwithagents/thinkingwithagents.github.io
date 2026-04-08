@@ -41,7 +41,7 @@ format:
 }
 </style>
 
-# Welcome
+# Overview
 
 ## What is this?
 
@@ -78,7 +78,7 @@ Where are you today?
 
 **Goal today:** show you what Levels 3-4 look like.
 
-# How the tools differ
+# Tools
 
 ## Conversational AI vs Agentic AI
 
@@ -171,7 +171,7 @@ The jump from conversational AI to agentic AI is mostly about direct work on rea
 - easier to build workflows you can reuse later
 - much better fit for real research, teaching, and website work
 
-# Working with Projects
+# Projects
 
 ## About `CLAUDE.md` and `AGENTS.md`
 
@@ -225,7 +225,7 @@ Markdown looks ugly in raw form and normal in a viewer.
 :::
 ::::
 
-# Working Memory
+# Context
 
 ## Context window
 
@@ -312,7 +312,7 @@ This risk is usually low unless you deliberately ask for something extreme.
 - the tool may pause and ask for permission on risky actions
 - you can refuse, stop the task, or tighten the rules
 
-# Collaboration
+# Demos
 
 ## GitHub and collaboration
 

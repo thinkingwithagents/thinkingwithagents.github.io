@@ -7,7 +7,7 @@ format:
   revealjs: default
 ---
 
-# Emily Session 2
+# Overview
 
 ## Four concrete use cases
 
@@ -20,7 +20,7 @@ Today is built around workflows that many faculty already do:
 
 The point is not one magic prompt. The point is a documented workflow from starting materials to a usable output.
 
-# Slide Creation
+# Slides
 
 ## From rough notes to usable slides
 
@@ -46,7 +46,7 @@ That helps you avoid one long, messy conversation.
 - deciding which examples actually land
 - replacing generic bullets with your real content
 
-# Teaching Applications
+# Teaching
 
 ## Best low-risk teaching uses
 
@@ -83,7 +83,7 @@ Another strong teaching workflow is:
 - fairness decisions
 - anything involving sensitive student situations
 
-# Conducting Data Analysis
+# Research
 
 ## Raw data to report
 
@@ -150,7 +150,7 @@ A safer pattern for sensitive work is often:
 - review the code yourself
 - review logs and outputs rather than exposing raw protected data
 
-# Additional Specific Use Cases
+# Extras
 
 ## Writing and admin
 

@@ -8,7 +8,7 @@ format:
   beamer: default
 ---
 
-# Desktop App Demo
+# Desktop
 
 ## Desktop AI tools
 
@@ -18,7 +18,7 @@ format:
 - When to use chat vs. terminal
 - Quick demo
 
-# Teaching Application
+# Teaching
 
 ## AI for teaching tasks
 
