@@ -19,6 +19,17 @@ Point the tool at your syllabus, lecture notes, and schedule. It scaffolds a Qua
 - **Tool**: Claude Code
 - **Time**: 1–2 hours for a working first draft
 
+Open Claude Code in the folder with your course materials, then:
+
+```
+Read my syllabus.pdf and lecture-schedule.xlsx.
+Build a Quarto website with:
+- a home page with the course description
+- a schedule page with dates and topics from the spreadsheet
+- a page for each major unit with the learning objectives from the syllabus
+Save everything in a new folder called course-site/.
+```
+
 ### Convert lecture notes to slides
 
 Give it your `.md` or `.docx` notes and ask for a Quarto reveal.js or Beamer slide deck. It reads the source file, proposes a slide sequence, and writes the `.qmd`.
@@ -27,6 +38,15 @@ Give it your `.md` or `.docx` notes and ask for a Quarto reveal.js or Beamer sli
 - **Tool**: Claude Code
 - **Time**: 20–30 minutes per lecture
 
+```
+Read lecture-notes/week3-supply-demand.md.
+Convert it to a Quarto reveal.js slide deck.
+One main idea per slide. Use two-column layouts
+where a graph or example would help. Keep bullet
+points to 3-4 per slide max.
+Save as slides/week3-supply-demand.qmd.
+```
+
 ### Grade with a rubric
 
 Give it a rubric file and a folder of student submissions. It reads each submission, applies the rubric, and drafts feedback comments saved as individual files.
@@ -34,6 +54,16 @@ Give it a rubric file and a folder of student submissions. It reads each submiss
 - **What it does**: Reads rubric + submissions from your folder, writes feedback files
 - **Tool**: Claude Code
 - **Time**: 30 minutes to set up, then a few minutes per batch
+
+```
+Read rubric.md and all the .docx files in submissions/.
+For each submission, apply the rubric. Write a feedback
+file for each student in feedback/ with:
+- score per criterion
+- 2-3 sentences of specific feedback per criterion
+- one overall comment on what to improve
+Name each file feedback/[student-name].md.
+```
 
 ---
 
@@ -47,6 +77,16 @@ The full pipeline from Session 2. Describe a dataset and research question; it p
 - **Tool**: Claude Code
 - **Time**: 30–45 minutes for the full pipeline
 
+```
+Read data/cps_extract.csv. Describe what's in it:
+how many observations, what variables, what's missing.
+
+Then propose three analyses for a paper on wage gaps
+by education level. Write the Stata code for the
+first analysis. Save the do-file as code/wage-gaps.do
+and a summary memo as output/analysis-plan.md.
+```
+
 ### Replication package assembly
 
 Point it at your project folder. It reads your do-files or scripts, maps the dependency chain, identifies missing files, and writes a master script.
@@ -54,6 +94,15 @@ Point it at your project folder. It reads your do-files or scripts, maps the dep
 - **What it does**: Reads all scripts in a directory, traces `use`/`merge`/`include` dependencies, writes `master.do`
 - **Tool**: Claude Code
 - **Time**: 30 minutes
+
+```
+Read all the .do files in this project.
+Map which files depend on which — trace every use,
+merge, include, and file reference.
+Write a master.do that runs everything in the
+correct order. Flag any files that are referenced
+but don't exist.
+```
 
 ### Adversarial review of your own paper
 
@@ -63,6 +112,28 @@ Give it your draft as a file. It reads the full paper and flags causal language 
 - **Tool**: Claude Code with `/econ-audit` skill
 - **Time**: 15–20 minutes
 
+Install the skill, then run it:
+
+```bash
+claude skills add econ-audit
+```
+
+```
+/econ-audit
+```
+
+It will ask you to point it at your draft. Or run it manually:
+
+```
+Read my-paper.tex. Act as a skeptical referee.
+For every causal claim, check whether the
+identification strategy actually supports it.
+Flag: causal language without identification,
+missing robustness checks, measurement concerns,
+and anything a referee would push back on.
+Write the report as review/referee-report.md.
+```
+
 ### Data dictionary from a dataset
 
 Point it at a dataset. It reads the metadata and produces a formatted codebook: variable names, types, value ranges, labels, notes.
@@ -71,6 +142,25 @@ Point it at a dataset. It reads the metadata and produces a formatted codebook: 
 - **Tool**: Claude Code with `/data-dictionary` skill
 - **Time**: 10–15 minutes
 
+Install and run:
+
+```bash
+claude skills add data-dictionary
+```
+
+```
+/data-dictionary
+```
+
+Or manually:
+
+```
+Read the headers and first 20 rows of data/survey.csv.
+Produce a data dictionary with: variable name, type,
+range or categories, number of missing values, and
+any notes about coding or units. Save as docs/codebook.md.
+```
+
 ### Literature review with structured output
 
 Give it a research question. It searches, organizes papers by theme, identifies gaps, and writes a formatted review memo saved to your project folder.
@@ -78,6 +168,27 @@ Give it a research question. It searches, organizes papers by theme, identifies 
 - **What it does**: Searches, reads abstracts, writes a structured `.md` review memo
 - **Tool**: Claude Code with `/lit-review` skill
 - **Time**: 20–30 minutes
+
+Install and run:
+
+```bash
+claude skills add lit-review
+```
+
+```
+/lit-review
+```
+
+Or manually:
+
+```
+I'm starting a project on the effect of cash transfers
+on educational outcomes in sub-Saharan Africa.
+Search for recent papers. Organize by methodology
+(RCT vs quasi-experimental). For each paper, note:
+authors, year, country, method, main finding.
+Identify gaps. Save as lit-review/cash-transfers-education.md.
+```
 
 ---
 
@@ -91,6 +202,24 @@ Give the tool access to files with your real writing — saved emails, letters o
 - **Tool**: Claude Code
 - **Time**: 15 minutes to create, then reuse forever
 
+Save 5–10 of your sent emails as `.txt` or `.md` files in a folder, then:
+
+```
+Read all the files in writing-samples/.
+These are emails and letters I've written.
+Describe my writing style: tone, sentence length,
+how I open and close messages, level of formality,
+what I avoid, any distinctive patterns.
+Save the description as MY-VOICE.md.
+```
+
+Then tell Claude Code to use it going forward:
+
+```
+Add to your memory: when I ask you to draft anything,
+load MY-VOICE.md first and match my style.
+```
+
 ### ★ Draft emails using your voice file
 
 Point it at an email thread (via Gmail integration or a saved file) and tell it the gist. It reads the thread, loads your voice file, and drafts a reply that sounds like you.
@@ -99,6 +228,13 @@ Point it at an email thread (via Gmail integration or a saved file) and tell it 
 - **Tool**: Claude Code with Gmail integration
 - **Time**: 2 minutes per email
 
+```
+Read my voice file. Read the most recent email
+from [sender] about [topic].
+Draft a reply. The gist: [your one-sentence summary
+of what you want to say].
+```
+
 ### Revision memo for a journal submission
 
 Give it your paper file and the referee reports. It reads both and drafts a point-by-point response memo.
@@ -106,6 +242,17 @@ Give it your paper file and the referee reports. It reads both and drafts a poin
 - **What it does**: Reads your draft + referee reports, writes a structured response `.md` file
 - **Tool**: Claude Code
 - **Time**: 30–45 minutes for a first draft
+
+```
+Read paper/draft-v2.tex and reviews/referee1.pdf
+and reviews/referee2.pdf.
+Draft a point-by-point response memo. For each
+referee comment:
+- quote the comment
+- describe what we changed (or why we didn't)
+- reference the specific section/page
+Save as paper/revision-memo.md.
+```
 
 ---
 
@@ -119,6 +266,16 @@ Connects to your Gmail, reads recent messages, and categorizes them by action ne
 - **Tool**: Claude Code with Gmail integration
 - **Time**: 30 minutes to set up, 5 minutes each morning
 
+```
+Read my 20 most recent unread emails.
+Categorize each one:
+- 🔴 Needs reply (from a person, expects a response)
+- 📋 Needs review (requires reading but not a reply)
+- 📅 Meeting-related (scheduling, agenda, follow-up)
+- 📦 Can archive (newsletters, notifications, FYI)
+List the reply-needed ones first with a one-line summary.
+```
+
 ### Calendar automation from emails
 
 Reads emails with dates and creates calendar events automatically.
@@ -127,6 +284,13 @@ Reads emails with dates and creates calendar events automatically.
 - **Tool**: Claude Code with Gmail + Google Calendar integrations
 - **Time**: 5 minutes per batch
 
+```
+Search my Gmail for emails from [hockey league / school]
+in the last 7 days. Extract any dates, times, and
+locations for upcoming events. Add each one to my
+Google Calendar with the event name, time, and location.
+```
+
 ### Project handoff notes
 
 At the end of a work session, it summarizes what was done, what's open, and what to do next. Saves as a file so you can pick up later without re-reading everything.
@@ -134,6 +298,15 @@ At the end of a work session, it summarizes what was done, what's open, and what
 - **What it does**: Reads session context, writes a structured handoff `.md` file
 - **Tool**: Claude Code
 - **Time**: 2 minutes
+
+```
+Summarize this session:
+- what we worked on
+- what decisions were made
+- what's still open
+- what I should do next
+Save as notes/handoff-2026-04-08.md.
+```
 
 ---
 
