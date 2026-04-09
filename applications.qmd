@@ -1,9 +1,9 @@
 ---
 title: "Applications"
-subtitle: "Concrete things you can do with these tools"
+subtitle: "Concrete things you can do with agentic tools"
 ---
 
-These are real use cases — not hypothetical. Most of them take 5–30 minutes to try. Pick one that matches something you already do and see what happens.
+These are workflows that go beyond chat — they involve reading your files, writing outputs, running code, or connecting to external services. Most take 10–45 minutes to try.
 
 *★ = demonstrated in the bootcamp sessions.*
 
@@ -11,45 +11,29 @@ These are real use cases — not hypothetical. Most of them take 5–30 minutes 
 
 ## Teaching
 
-### ★ Draft an assignment from learning goals
+### Build a course website from your materials
 
-Tell the tool your course level, topic, and what you want students to demonstrate. It drafts an assignment prompt. You edit.
+Point the tool at your syllabus, lecture notes, and schedule. It scaffolds a Quarto or Hugo site with pages for each topic, a schedule, and assignment links.
 
-- **Try**: "Write a problem set for intermediate micro on price discrimination. 4 questions, increasing difficulty. Students should use real-world examples."
-- **Tool**: Any chat tool or Claude Code
-- **Time**: 10 minutes to draft, 15 to revise
+- **What it does**: Reads your existing files, proposes a site structure, generates the pages, renders to HTML
+- **Tool**: Claude Code
+- **Time**: 1–2 hours for a working first draft
 
-### Build a rubric
+### Convert lecture notes to slides
 
-Give it your assignment prompt and ask for a rubric with criteria and performance levels.
+Give it your `.md` or `.docx` notes and ask for a Quarto reveal.js or Beamer slide deck. It reads the source file, proposes a slide sequence, and writes the `.qmd`.
 
-- **Try**: "Here's my assignment prompt. Create a rubric with 4 criteria, each with Excellent / Satisfactory / Needs Improvement descriptions."
-- **Tool**: Any chat tool
-- **Time**: 5–10 minutes
+- **What it does**: Reads your notes file, splits into slides, writes formatted output with headers and bullets
+- **Tool**: Claude Code
+- **Time**: 20–30 minutes per lecture
 
-### Generate practice problems
+### Grade with a rubric
 
-Good for exam prep or study guides. Specify the topic, level, and format.
+Give it a rubric file and a folder of student submissions. It reads each submission, applies the rubric, and drafts feedback comments saved as individual files.
 
-- **Try**: "Generate 10 multiple-choice questions on supply and demand for an intro economics course. Include answer key with brief explanations."
-- **Tool**: Any chat tool
-- **Time**: 10 minutes
-
-### Create a study guide from your lecture notes
-
-Upload or point the tool at your slides/notes and ask it to extract the key concepts.
-
-- **Try**: "Read these lecture notes and create a study guide organized by topic. Include key terms, main ideas, and 2–3 practice questions per section."
-- **Tool**: Claude Code (can read files directly) or chat tool (upload the file)
-- **Time**: 15 minutes
-
-### Revise an assignment for clarity
-
-Paste in an existing assignment and ask the tool to identify confusing instructions, ambiguous wording, or missing context.
-
-- **Try**: "Read this assignment prompt as if you were a student seeing it for the first time. What's confusing? What's missing?"
-- **Tool**: Any chat tool
-- **Time**: 5 minutes
+- **What it does**: Reads rubric + submissions from your folder, writes feedback files
+- **Tool**: Claude Code
+- **Time**: 30 minutes to set up, then a few minutes per batch
 
 ---
 
@@ -57,43 +41,43 @@ Paste in an existing assignment and ask the tool to identify confusing instructi
 
 ### ★ Raw data to analysis plan to code to report
 
-The full pipeline demonstrated in Session 2. Describe a dataset and research question; the tool proposes an analysis plan, writes code (Stata, R, Python), and drafts a summary memo.
+The full pipeline from Session 2. Describe a dataset and research question; it proposes an analysis plan, writes Stata/R code, and drafts a summary memo — all saved as project files.
 
-- **Try**: "I have CPS data with wages, education, age, and state. Propose three analyses for a paper on wage gaps by education level. Then write the Stata code."
-- **Tool**: Claude Code (can write and run code files)
+- **What it does**: Reads your data (or its metadata), writes `.do`/`.R` scripts, generates a `.md` report
+- **Tool**: Claude Code
 - **Time**: 30–45 minutes for the full pipeline
-
-### Literature review
-
-Give the tool a research question and ask it to search for relevant papers, organize them by theme, and identify gaps.
-
-- **Try**: "Find recent papers on the effect of cash transfers on educational outcomes in sub-Saharan Africa. Organize by methodology."
-- **Tool**: Claude Code with `/lit-review` skill, or Elicit
-- **Time**: 20–30 minutes
-
-### Data dictionary
-
-Point it at a dataset and ask for a formatted codebook: variable names, types, value ranges, labels, notes.
-
-- **Try**: "Read this dataset and produce a data dictionary with variable names, types, ranges, and any obvious issues."
-- **Tool**: Claude Code with `/data-dictionary` skill
-- **Time**: 10–15 minutes
-
-### Adversarial review of your own paper
-
-Ask the tool to read your draft like a hostile referee. It flags causal language without identification, missing robustness checks, and measurement concerns.
-
-- **Try**: "Read this draft and act as a skeptical referee. Flag every causal claim that isn't supported by the identification strategy. Be specific."
-- **Tool**: Claude Code with `/econ-audit` skill
-- **Time**: 15–20 minutes
 
 ### Replication package assembly
 
-Give the tool access to your project folder. It reads your do-files or scripts, maps the dependency chain, identifies missing files, and drafts a master script.
+Point it at your project folder. It reads your do-files or scripts, maps the dependency chain, identifies missing files, and writes a master script.
 
-- **Try**: "Read all the do-files in this folder. Map which files depend on which. Write a master do-file that runs everything in order. Flag anything missing."
+- **What it does**: Reads all scripts in a directory, traces `use`/`merge`/`include` dependencies, writes `master.do`
 - **Tool**: Claude Code
 - **Time**: 30 minutes
+
+### Adversarial review of your own paper
+
+Give it your draft as a file. It reads the full paper and flags causal language without identification, missing robustness checks, and measurement concerns.
+
+- **What it does**: Reads your `.md`/`.tex`/`.docx` draft, writes a structured referee-style report
+- **Tool**: Claude Code with `/econ-audit` skill
+- **Time**: 15–20 minutes
+
+### Data dictionary from a dataset
+
+Point it at a dataset. It reads the metadata and produces a formatted codebook: variable names, types, value ranges, labels, notes.
+
+- **What it does**: Reads dataset headers/metadata, writes a formatted `.md` data dictionary
+- **Tool**: Claude Code with `/data-dictionary` skill
+- **Time**: 10–15 minutes
+
+### Literature review with structured output
+
+Give it a research question. It searches, organizes papers by theme, identifies gaps, and writes a formatted review memo saved to your project folder.
+
+- **What it does**: Searches, reads abstracts, writes a structured `.md` review memo
+- **Tool**: Claude Code with `/lit-review` skill
+- **Time**: 20–30 minutes
 
 ---
 
@@ -101,106 +85,60 @@ Give the tool access to your project folder. It reads your do-files or scripts, 
 
 ### ★ Create a writing voice file
 
-Give the tool samples of your real writing — emails, letters of recommendation, feedback. It describes your patterns and saves them as a reusable voice file.
+Give the tool access to files with your real writing — saved emails, letters of recommendation, feedback comments. It reads them, describes your patterns, and saves a reusable voice file.
 
-- **Try**: "Read these five emails I've sent. Describe my writing style: tone, sentence length, how I open and close messages, what I avoid. Save it as MY-VOICE.md."
+- **What it does**: Reads your writing samples from disk, writes `MY-VOICE.md`
 - **Tool**: Claude Code
 - **Time**: 15 minutes to create, then reuse forever
 
-### Draft emails in your voice
+### ★ Draft emails using your voice file
 
-Once you have a voice file, use it for any email. Especially useful for emails you've been avoiding.
+Point it at an email thread (via Gmail integration or a saved file) and tell it the gist. It reads the thread, loads your voice file, and drafts a reply that sounds like you.
 
-- **Try**: "Draft a reply to this student asking for a deadline extension. Use my voice file. Be kind but firm — the deadline stands."
-- **Tool**: Claude Code with voice file
+- **What it does**: Reads email thread + voice file, writes a draft
+- **Tool**: Claude Code with Gmail integration
 - **Time**: 2 minutes per email
 
-### Letter to a journal editor
+### Revision memo for a journal submission
 
-Revision memos, cover letters, extension requests — all tasks where you know what to say but don't want to stare at a blank page.
+Give it your paper file and the referee reports. It reads both and drafts a point-by-point response memo.
 
-- **Try**: "Write a cover letter for this manuscript submission to the AER. The paper studies X using Y method. Keep it under one page."
-- **Tool**: Any chat tool or Claude Code with voice file
-- **Time**: 10 minutes
-
-### Revise your own writing
-
-Paste in a draft and ask for specific feedback — not "make it better" but "flag sentences that are too long" or "identify where the argument is weakest."
-
-- **Try**: "Read this introduction. Flag any sentence over 30 words. Identify the weakest transition between paragraphs."
-- **Tool**: Any chat tool
-- **Time**: 5–10 minutes
+- **What it does**: Reads your draft + referee reports, writes a structured response `.md` file
+- **Tool**: Claude Code
+- **Time**: 30–45 minutes for a first draft
 
 ---
 
 ## Workflow & Organization
 
-### ★ Inbox triage
+### Inbox triage
 
-Set up a system that reads your inbox and categorizes messages by action needed: reply, review, meeting, delegate, archive.
+Connects to your Gmail, reads recent messages, and categorizes them by action needed: reply, review, meeting, delegate, archive.
 
-- **Try**: "Read my recent emails. Categorize each one: needs reply, needs review, meeting-related, can archive. List the reply-needed ones first."
+- **What it does**: Reads inbox via Gmail integration, writes a categorized summary
 - **Tool**: Claude Code with Gmail integration
-- **Time**: 30 minutes to set up, 5 minutes each morning after that
+- **Time**: 30 minutes to set up, 5 minutes each morning
 
-### Calendar automation
+### Calendar automation from emails
 
-Turn emails into calendar events automatically.
+Reads emails with dates and creates calendar events automatically.
 
-- **Try**: "Read this email about a hockey schedule. Extract all the dates and times. Add them to my Google Calendar."
-- **Tool**: Claude Code with Gmail + Google Calendar integration
+- **What it does**: Reads email via Gmail, extracts dates/times, creates Google Calendar events
+- **Tool**: Claude Code with Gmail + Google Calendar integrations
 - **Time**: 5 minutes per batch
-
-### Morning briefing
-
-Pull today's calendar, tasks, email status, and deadlines into one view.
-
-- **Try**: "What's on my calendar today? What tasks are due this week? Any emails I haven't replied to in 3+ days?"
-- **Tool**: Claude Code with calendar + email + task integrations
-- **Time**: 15 minutes to set up, 2 minutes each morning
 
 ### Project handoff notes
 
-At the end of a work session, ask the tool to summarize what was done, what's still open, and what to do next. Save it so you can pick up later.
+At the end of a work session, it summarizes what was done, what's open, and what to do next. Saves as a file so you can pick up later without re-reading everything.
 
-- **Try**: "Summarize this session: what did we do, what decisions were made, what's still open, what should I do next? Save as a handoff note."
+- **What it does**: Reads session context, writes a structured handoff `.md` file
 - **Tool**: Claude Code
 - **Time**: 2 minutes
 
 ---
 
-## Just for Fun
-
-### Route planning
-
-Build cycling, running, or hiking routes with constraints like distance, elevation, surface type, and traffic.
-
-- **Try**: "Plan a 25-mile gravel ride from Hinesburg, VT with low traffic and moderate elevation."
-- **Tool**: Claude Code (Emily built a whole route planner and has never used a single route)
-- **Time**: A weekend you won't get back
-
-### Meal planning
-
-Generate a week of meals based on dietary preferences, schedule, and what's in your fridge.
-
-- **Try**: "Plan dinners for this week. Two vegetarian, one pasta, nothing that takes more than 30 minutes. We have chicken thighs and sweet potatoes."
-- **Tool**: Any chat tool or Claude Code
-- **Time**: 10 minutes
-
-### D&D campaign
-
-The AI is a very patient dungeon master.
-
-- **Try**: "Run a solo D&D campaign. I'm a half-orc barbarian named Kragith. Start me in a tavern."
-- **Tool**: Any chat tool
-- **Time**: As long as you want
-
----
-
 ## What to try first
 
-If you're not sure where to start:
-
-1. **Lowest friction**: Draft an assignment prompt or rubric in any chat tool (5 minutes)
-2. **Biggest payoff**: Create a voice file in Claude Code (15 minutes, reuse forever)
-3. **Most impressive**: Run the data → code → report pipeline (30 minutes, but you'll see the point)
+1. **Fastest payoff**: Create a voice file (15 minutes, reuse forever)
+2. **Most impressive**: Run the data → code → report pipeline (30 minutes)
+3. **Most practical**: Inbox triage with Gmail integration (30 minutes to set up, then daily)
