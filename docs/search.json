@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "modules/a1-what-llms-do.html",
+    "href": "modules/a1-what-llms-do.html",
+    "title": "A1: What LLMs Actually Do",
+    "section": "",
+    "text": "WarningSample module — not final content\n\n\n\nThis file illustrates the intended structure and format for a module. Replace with actual content before publishing."
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#learning-objectives",
+    "href": "modules/a1-what-llms-do.html#learning-objectives",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this module, students should be able to:"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#overview",
+    "href": "modules/a1-what-llms-do.html#overview",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#content",
+    "href": "modules/a1-what-llms-do.html#content",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Content",
+    "text": "Content"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#exercise",
+    "href": "modules/a1-what-llms-do.html#exercise",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Exercise",
+    "text": "Exercise"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#discussion-questions",
+    "href": "modules/a1-what-llms-do.html#discussion-questions",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#key-takeaways",
+    "href": "modules/a1-what-llms-do.html#key-takeaways",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n\n\n\n\n\nFor instructors:"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI for UVM Economics",
+    "section": "",
+    "text": "WarningScaffold only\n\n\n\nThis site is a skeleton. Content, module structure, and navigation are placeholders. See the sample module for the intended format."
+  },
+  {
+    "objectID": "index.html#what-is-this",
+    "href": "index.html#what-is-this",
+    "title": "AI for UVM Economics",
+    "section": "What Is This?",
+    "text": "What Is This?"
+  },
+  {
+    "objectID": "index.html#modules",
+    "href": "index.html#modules",
+    "title": "AI for UVM Economics",
+    "section": "Modules",
+    "text": "Modules"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "AI for UVM Economics",
+    "section": "About",
+    "text": "About\nCreated by Emily Beam, Department of Economics, University of Vermont.\nBuilt with Quarto. Source on GitHub."
+  },
+  {
+    "objectID": "lesson_plans/a1_lesson_plan.html",
+    "href": "lesson_plans/a1_lesson_plan.html",
+    "title": "A1 Lesson Plan: What LLMs Actually Do",
+    "section": "",
+    "text": "Sample lesson plan — not final content. This file illustrates the intended format. Duplicate and adapt for each module.\n\nModule: A1 | Track: Foundations | Time: ~50 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nSegment\nTime\n\n\n\n\nIntroduction\n10 min\n\n\nCore content\n20 min\n\n\nExercise\n15 min\n\n\nDiscussion\n5 min"
+  },
+  {
+    "objectID": "lesson_plans/a1_lesson_plan.html#suggested-timing",
+    "href": "lesson_plans/a1_lesson_plan.html#suggested-timing",
+    "title": "A1 Lesson Plan: What LLMs Actually Do",
+    "section": "",
+    "text": "Segment\nTime\n\n\n\n\nIntroduction\n10 min\n\n\nCore content\n20 min\n\n\nExercise\n15 min\n\n\nDiscussion\n5 min"
+  },
+  {
+    "objectID": "about.html#who-its-for",
+    "href": "about.html#who-its-for",
+    "title": "About This Project",
+    "section": "Who It’s For",
+    "text": "Who It’s For\nStudents: UVM Economics students across courses. Examples assume comfort with economic reasoning and academic writing.\nInstructors: UVM Economics faculty who want to incorporate AI literacy into existing courses without building everything from scratch."
+  },
+  {
+    "objectID": "about.html#uvm-context",
+    "href": "about.html#uvm-context",
+    "title": "About This Project",
+    "section": "UVM Context",
+    "text": "UVM Context\nThe University of Vermont provides enterprise-protected Microsoft Copilot to all students, faculty, and staff. Some modules reference this tool, but all concepts apply to any LLM."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About This Project",
+    "section": "Contact",
+    "text": "Contact\nEmily Beam · Department of Economics · University of Vermont · emily.beam@uvm.edu"
+  },
+  {
+    "objectID": "about.html#license",
+    "href": "about.html#license",
+    "title": "About This Project",
+    "section": "License",
+    "text": "License\nLicensed CC-BY 4.0 — use freely with attribution."
+  }
+]

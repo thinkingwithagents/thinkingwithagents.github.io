@@ -1,0 +1,55 @@
+---
+title: "A1: What LLMs Actually Do"
+subtitle: "Tokens, prediction, and mental models for economists"
+---
+
+::: {.callout-warning}
+## Sample module — not final content
+This file illustrates the intended structure and format for a module. Replace with actual content before publishing.
+:::
+
+::: {.module-meta}
+[~50 min]{.badge .badge-time}
+[Foundations]{.badge .badge-track}
+[No coding required]{.badge .badge-no-code}
+:::
+
+## Learning Objectives
+
+By the end of this module, students should be able to:
+
+1. <!-- TODO -->
+2. <!-- TODO -->
+3. <!-- TODO -->
+
+## Overview
+
+<!-- TODO: 1-2 paragraph framing of the key concept -->
+
+## Content
+
+<!-- TODO: Main module content. Suggested sub-sections:
+- Core mechanism (e.g., token prediction)
+- Mental models: what an LLM is and isn't
+- Why it fails (failure modes)
+-->
+
+## Exercise
+
+<!-- TODO: Hands-on activity. See exercises/a1/ for worksheet templates. -->
+
+## Discussion Questions
+
+1. <!-- TODO -->
+2. <!-- TODO -->
+3. <!-- TODO -->
+
+## Key Takeaways
+
+- <!-- TODO -->
+- <!-- TODO -->
+- <!-- TODO -->
+
+::: {.instructor-note}
+**For instructors**: <!-- TODO: Adaptation tips, common questions, demo ideas -->
+:::

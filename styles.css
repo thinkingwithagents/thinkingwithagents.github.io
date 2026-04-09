@@ -1,0 +1,48 @@
+/* Module metadata badges */
+.module-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.module-meta .badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.badge-time {
+  background-color: #e8f4f8;
+  color: #1a6b8a;
+}
+
+.badge-track {
+  background-color: #f0e8f8;
+  color: #6b1a8a;
+}
+
+.badge-no-code {
+  background-color: #e8f8e8;
+  color: #1a6b3a;
+}
+
+.badge-technical {
+  background-color: #f8ece8;
+  color: #8a3a1a;
+}
+
+/* Instructor adoption box */
+.instructor-note {
+  background-color: #fdf6e3;
+  border-left: 4px solid #b58900;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.instructor-note p:first-child {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
