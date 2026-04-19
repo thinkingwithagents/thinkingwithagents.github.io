@@ -905,7 +905,53 @@ The learning curve is real, but short
 \end{columns}
 \end{frame}
 
-%% ====== SLIDE 22: EMILY — VOICE FILE COMPARISON ======
+%% ====== SECTION DIVIDER: APPLICATION — VOICE FILE ======
+{
+\setbeamertemplate{footline}{}
+\begin{frame}[plain, noframenumbering]
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[SlateTeal] (current page.north west) rectangle (current page.south east);
+  \node[text=white, font=\fontsize{22}{28}\bfseries\selectfont]
+    at ([yshift=0.4cm]current page.center) {Application 1};
+  \node[text=UVMGold, font=\normalsize]
+    at ([yshift=-0.4cm]current page.center) {Building Your Writing Voice};
+  \draw[UVMGold, line width=0.8pt] ([xshift=-2.5cm, yshift=0cm]current page.center) -- ([xshift=2.5cm, yshift=0cm]current page.center);
+\end{tikzpicture}
+\end{frame}
+}
+
+%% ====== APPLICATION 1: VOICE FILE OVERVIEW ======
+\begin{frame}{Application 1: Building Your Writing Voice}
+\begin{columns}[T]
+\begin{column}{0.50\textwidth}
+\begin{tcolorbox}[keybox, title={\faPen\quad The Task}]
+\scriptsize
+Create a ``voice file'' that captures how you write --- then use it to draft emails, letters, and feedback that sound like you.
+\vskip3pt
+\textbf{Input:} 3--5 samples of your real writing\\
+\textbf{Output:} A reusable \texttt{.md} file describing your style\\
+\textbf{Time:} $\sim$5 minutes to create, seconds to use
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.44\textwidth}
+\vskip2pt
+\begin{tcolorbox}[accentbox]
+\scriptsize
+\textbf{Why this demo?}
+\begin{itemize}\setlength{\itemsep}{0pt}\tiny
+  \item No installation needed --- works in any AI tool
+  \item Immediately useful for email and writing
+  \item Shows the power of context over prompting
+  \item You can start doing this today
+\end{itemize}
+\end{tcolorbox}
+\vskip3pt
+{\scriptsize\color{CoolGray} \faPlay\; We'll walk through the process live.}
+\end{column}
+\end{columns}
+\end{frame}
+
+%% ====== VOICE FILE COMPARISON ======
 \begin{frame}{The Voice File: Making AI Sound Like You}
 \begin{columns}[T]
 \begin{column}{0.28\textwidth}
@@ -1196,14 +1242,14 @@ Reusable & \textcolor{SoftCoral}{No} & \textcolor{SlateTeal}{Yes} \\
 \end{tcolorbox}
 \end{frame}
 
-%% ====== SECTION DIVIDER: APP 1 ======
+%% ====== SECTION DIVIDER: APP 2 ======
 {
 \setbeamertemplate{footline}{}
 \begin{frame}[plain, noframenumbering]
 \begin{tikzpicture}[remember picture, overlay]
   \fill[SlateTeal] (current page.north west) rectangle (current page.south east);
   \node[text=white, font=\fontsize{22}{28}\bfseries\selectfont]
-    at ([yshift=0.4cm]current page.center) {Application 1};
+    at ([yshift=0.4cm]current page.center) {Application 2};
   \node[text=UVMGold, font=\normalsize]
     at ([yshift=-0.4cm]current page.center) {Website Redesign with \texttt{/frontend-design}};
   \draw[UVMGold, line width=0.8pt] ([xshift=-2.5cm, yshift=0cm]current page.center) -- ([xshift=2.5cm, yshift=0cm]current page.center);
@@ -1211,8 +1257,8 @@ Reusable & \textcolor{SoftCoral}{No} & \textcolor{SlateTeal}{Yes} \\
 \end{frame}
 }
 
-%% ====== APP 1 OVERVIEW ======
-\begin{frame}{Application 1: Redesigning a Faculty Website}
+%% ====== APP 2 OVERVIEW ======
+\begin{frame}{Application 2: Redesigning a Faculty Website}
 \begin{columns}[T]
 \begin{column}{0.50\textwidth}
 \begin{tcolorbox}[keybox, title={\faGlobe\quad The Task}]
@@ -1243,7 +1289,7 @@ We are \textit{not} launching --- just demonstrating.
 \end{columns}
 \end{frame}
 
-%% ====== APP 1 PROMPT ======
+%% ====== APP 2 PROMPT ======
 \begin{frame}{The Prompt}
 \begin{tcolorbox}[colback=DarkSlate, colframe=DarkSlate, arc=3pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
 {\color{CoolGray}\ttfamily\tiny /frontend-design\\[2pt]
@@ -1263,7 +1309,7 @@ Focus on: clean typography, clear navigation, prominent research section, respon
 \end{tcolorbox}
 \end{frame}
 
-%% ====== APP 1 RESULTS ======
+%% ====== APP 2 RESULTS ======
 \begin{frame}[fragile]{The Results}
 \centering
 \vskip4pt
@@ -1319,14 +1365,14 @@ Focus on: clean typography, clear navigation, prominent research section, respon
 \end{tcolorbox}
 \end{frame}
 
-%% ====== SECTION DIVIDER: APP 2 ======
+%% ====== SECTION DIVIDER: APP 3 ======
 {
 \setbeamertemplate{footline}{}
 \begin{frame}[plain, noframenumbering]
 \begin{tikzpicture}[remember picture, overlay]
   \fill[SlateTeal] (current page.north west) rectangle (current page.south east);
   \node[text=white, font=\fontsize{22}{28}\bfseries\selectfont]
-    at ([yshift=0.4cm]current page.center) {Application 2};
+    at ([yshift=0.4cm]current page.center) {Application 3};
   \node[text=UVMGold, font=\normalsize]
     at ([yshift=-0.4cm]current page.center) {Creating a Custom Skill with \texttt{/skill-creator}};
   \draw[UVMGold, line width=0.8pt] ([xshift=-2.5cm, yshift=0cm]current page.center) -- ([xshift=2.5cm, yshift=0cm]current page.center);
@@ -1334,8 +1380,8 @@ Focus on: clean typography, clear navigation, prominent research section, respon
 \end{frame}
 }
 
-%% ====== APP 2: LECTURE BUILDER OVERVIEW ======
-\begin{frame}{Application 2: Building a ``Lecture Builder'' Skill}
+%% ====== APP 3: LECTURE BUILDER OVERVIEW ======
+\begin{frame}{Application 3: Building a ``Lecture Builder'' Skill}
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faCubes\quad The Goal}]
@@ -1368,7 +1414,7 @@ Create a skill that:
 \end{columns}
 \end{frame}
 
-%% ====== APP 2: SKILL CREATION PROMPT ======
+%% ====== APP 3: SKILL CREATION PROMPT ======
 \begin{frame}{The Skill Creation Prompt}
 \begin{tcolorbox}[colback=DarkSlate, colframe=DarkSlate, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
 {\color{CoolGray}\ttfamily\tiny /skill-creator\\[2pt]
