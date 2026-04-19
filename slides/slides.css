@@ -4,8 +4,8 @@
 .reveal .slides .highlight-box {
   margin-top: 0.75rem;
   padding: 0.6rem 1rem;
-  border-left: 5px solid #2f6fab;
-  background: #eef3f8;
+  border-left: 5px solid #1B4D5C;
+  background: #EDF2F0;
   font-size: 0.9em;
 }
 
@@ -13,7 +13,7 @@
 .reveal .slides .alert-box {
   margin-top: 0.75rem;
   padding: 0.6rem 1rem;
-  border-left: 5px solid #c8922a;
+  border-left: 5px solid #D4A84B;
   background: #fdf6e3;
   font-size: 0.9em;
 }
@@ -22,8 +22,8 @@
 .reveal .slides .example-box {
   margin-top: 0.75rem;
   padding: 0.6rem 1rem;
-  border-left: 5px solid #3a7d44;
-  background: #eef6ef;
+  border-left: 5px solid #154734;
+  background: #EDF2F0;
   font-size: 0.9em;
 }
 
