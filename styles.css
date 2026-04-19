@@ -14,29 +14,29 @@
 }
 
 .badge-time {
-  background-color: #e8f4f8;
-  color: #1a6b8a;
+  background-color: #EDF2F0;
+  color: #1B4D5C;
 }
 
 .badge-track {
-  background-color: #f0e8f8;
-  color: #6b1a8a;
+  background-color: #FDF6E3;
+  color: #D4A84B;
 }
 
 .badge-no-code {
-  background-color: #e8f8e8;
-  color: #1a6b3a;
+  background-color: #EDF2F0;
+  color: #154734;
 }
 
 .badge-technical {
-  background-color: #f8ece8;
-  color: #8a3a1a;
+  background-color: #FDF6E3;
+  color: #C0534D;
 }
 
 /* Instructor adoption box */
 .instructor-note {
   background-color: #fdf6e3;
-  border-left: 4px solid #b58900;
+  border-left: 4px solid #D4A84B;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
   border-radius: 0 4px 4px 0;
