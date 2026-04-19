@@ -1,0 +1,31 @@
+\frametitle{Anatomy of a Skill}
+\centering
+\vskip2pt
+\begin{tikzpicture}[
+  filebox/.style={
+    draw=#1, fill=#1!8, rounded corners=2pt,
+    minimum width=5cm, minimum height=0.7cm,
+    align=left, font=\scriptsize\ttfamily, text=DeepCharcoal
+  },
+  arr/.style={-{Stealth[length=3pt]}, CoolGray}
+]
+  \node[font=\small\bfseries, text=SlateTeal] at (0,2.4) {\faFolder\; \texttt{.claude/commands/lecture-builder/}};
+  \node[filebox=SlateTeal] (skill) at (0,1.6) {\; SKILL.md {\normalfont\tiny\color{CoolGray} --- instruction playbook}};
+  \node[filebox=UVMGold] (parse) at (0,0.7) {\; parse\_document.py {\normalfont\tiny\color{CoolGray} --- PDF/DOCX reader}};
+  \node[filebox=AccentBlue] (template) at (0,-0.2) {\; slide\_template.md {\normalfont\tiny\color{CoolGray} --- output format}};
+  \node[draw=CoolGray!40, fill=PaleSage, rounded corners=3pt,
+        minimum width=4.5cm, minimum height=2.2cm, align=left, font=\scriptsize,
+        anchor=west] (desc) at (5.5,0.7) {
+    \textbf{SKILL.md contains:}\\[2pt]
+    {\tiny $\bullet$ When to trigger}\\
+    {\tiny $\bullet$ Step-by-step workflow}\\
+    {\tiny $\bullet$ Quality checks}\\
+    {\tiny $\bullet$ Output specifications}\\
+    {\tiny $\bullet$ Error handling rules}
+  };
+  \draw[arr] (skill.east) -- ++(0.3,0) |- (desc.west);
+\end{tikzpicture}
+\vskip8pt
+\begin{tcolorbox}[quotebox, width=11cm]
+\scriptsize Skills created in Claude Code can be \textbf{copied into Codex} --- they're just markdown files. Write once, use everywhere.
+\end{tcolorbox}
