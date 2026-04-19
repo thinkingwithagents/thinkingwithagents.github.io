@@ -11,16 +11,16 @@ This is a watch-along session. No installation needed — we demo everything liv
 
 | Deck | Format |
 |------|--------|
-| Getting Started (Beam & Aslim) | [HTML](slides/s1-intro.html){target="_blank"} / [PDF](slides/s1-intro.pdf) |
-| Terminal + Claude Code (Beam) | [HTML](slides/s1-emily.html){target="_blank"} / [PDF](slides/s1-emily.pdf) |
-| Desktop AI + Teaching Applications (Aslim) | [HTML](slides/s1-erkmen.html){target="_blank"} / [PDF](slides/s1-erkmen.pdf) |
+| Session 1: Agentic AI Bootcamp (Beam & Aslim) | [PDF](Session1_Slides/session_1_slides.pdf) |
 
 ### What we'll cover
 
-- What AI tools exist and which ones are useful for academic work
-- The difference between chat-based tools and agentic tools that work directly on your files
-- Live demos: terminal workflows, desktop AI, and a teaching application
-- What to expect, what to be skeptical about, and where to start
+- What AI tools exist and the difference between chat-based and agentic tools
+- Context windows, standing instructions, and planning — the key concepts
+- What we've actually used these for (and what was fun but saved zero time)
+- Voice files: making AI output sound like you
+- Skills: reusable workflows you can share
+- Live demos: website redesign and custom skill creation
 
 ### Before next time (April 27)
 
