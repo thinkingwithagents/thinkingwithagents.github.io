@@ -20,9 +20,7 @@ Two lunch sessions introducing AI tools for teaching and research. No prior expe
 
 | Deck | Format |
 |------|--------|
-| Getting Started (Beam & Aslim) | [HTML](slides/s1-intro.html){target="_blank"} / [PDF](slides/s1-intro.pdf) |
-| Terminal + Claude Code (Beam) | [HTML](slides/s1-emily.html){target="_blank"} / [PDF](slides/s1-emily.pdf) |
-| Desktop AI + Teaching Applications (Aslim) | [HTML](slides/s1-erkmen.html){target="_blank"} / [PDF](slides/s1-erkmen.pdf) |
+| Session 1: Agentic AI Bootcamp (Beam & Aslim) | [PDF](Session1_Slides/session_1_slides.pdf) |
 
 #### Session 2
 
