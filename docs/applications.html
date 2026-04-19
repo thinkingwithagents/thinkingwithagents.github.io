@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Applications – AI for UVM Economics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2286dc8b2fd5487b028fb5c7e754850a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">AI for UVM Economics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./prep.html"> 
+<span class="menu-text">Prep Guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./applications.html" aria-current="page"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./skills.html"> 
+<span class="menu-text">Skills &amp; Demos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Bells &amp; Whistles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./session1.html"> 
+<span class="menu-text">Session 1 (Apr 22)</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./session2.html"> 
+<span class="menu-text">Session 2 (Apr 27)</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#teaching" id="toc-teaching" class="nav-link active" data-scroll-target="#teaching">Teaching</a>
+  <ul class="collapse">
+  <li><a href="#build-a-course-website-from-your-materials" id="toc-build-a-course-website-from-your-materials" class="nav-link" data-scroll-target="#build-a-course-website-from-your-materials">Build a course website from your materials</a></li>
+  <li><a href="#convert-lecture-notes-to-slides" id="toc-convert-lecture-notes-to-slides" class="nav-link" data-scroll-target="#convert-lecture-notes-to-slides">Convert lecture notes to slides</a></li>
+  <li><a href="#grade-with-a-rubric" id="toc-grade-with-a-rubric" class="nav-link" data-scroll-target="#grade-with-a-rubric">Grade with a rubric</a></li>
+  </ul></li>
+  <li><a href="#research" id="toc-research" class="nav-link" data-scroll-target="#research">Research</a>
+  <ul class="collapse">
+  <li><a href="#raw-data-to-analysis-plan-to-code-to-report" id="toc-raw-data-to-analysis-plan-to-code-to-report" class="nav-link" data-scroll-target="#raw-data-to-analysis-plan-to-code-to-report">★ Raw data to analysis plan to code to report</a></li>
+  <li><a href="#replication-package-assembly" id="toc-replication-package-assembly" class="nav-link" data-scroll-target="#replication-package-assembly">Replication package assembly</a></li>
+  <li><a href="#adversarial-review-of-your-own-paper" id="toc-adversarial-review-of-your-own-paper" class="nav-link" data-scroll-target="#adversarial-review-of-your-own-paper">Adversarial review of your own paper</a></li>
+  <li><a href="#data-dictionary-from-a-dataset" id="toc-data-dictionary-from-a-dataset" class="nav-link" data-scroll-target="#data-dictionary-from-a-dataset">Data dictionary from a dataset</a></li>
+  <li><a href="#literature-review-with-structured-output" id="toc-literature-review-with-structured-output" class="nav-link" data-scroll-target="#literature-review-with-structured-output">Literature review with structured output</a></li>
+  </ul></li>
+  <li><a href="#writing-communication" id="toc-writing-communication" class="nav-link" data-scroll-target="#writing-communication">Writing &amp; Communication</a>
+  <ul class="collapse">
+  <li><a href="#create-a-writing-voice-file" id="toc-create-a-writing-voice-file" class="nav-link" data-scroll-target="#create-a-writing-voice-file">★ Create a writing voice file</a></li>
+  <li><a href="#draft-emails-using-your-voice-file" id="toc-draft-emails-using-your-voice-file" class="nav-link" data-scroll-target="#draft-emails-using-your-voice-file">★ Draft emails using your voice file</a></li>
+  <li><a href="#revision-memo-for-a-journal-submission" id="toc-revision-memo-for-a-journal-submission" class="nav-link" data-scroll-target="#revision-memo-for-a-journal-submission">Revision memo for a journal submission</a></li>
+  </ul></li>
+  <li><a href="#workflow-organization" id="toc-workflow-organization" class="nav-link" data-scroll-target="#workflow-organization">Workflow &amp; Organization</a>
+  <ul class="collapse">
+  <li><a href="#inbox-triage" id="toc-inbox-triage" class="nav-link" data-scroll-target="#inbox-triage">Inbox triage</a></li>
+  <li><a href="#calendar-automation-from-emails" id="toc-calendar-automation-from-emails" class="nav-link" data-scroll-target="#calendar-automation-from-emails">Calendar automation from emails</a></li>
+  <li><a href="#project-handoff-notes" id="toc-project-handoff-notes" class="nav-link" data-scroll-target="#project-handoff-notes">Project handoff notes</a></li>
+  </ul></li>
+  <li><a href="#what-to-try-first" id="toc-what-to-try-first" class="nav-link" data-scroll-target="#what-to-try-first">What to try first</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/eabeam/uvmecon-ai/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Applications</h1>
+<p class="subtitle lead">Concrete things you can do with agentic tools</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>These are workflows that go beyond chat — they involve reading your files, writing outputs, running code, or connecting to external services. Most take 10–45 minutes to try.</p>
+<p><em>★ = demonstrated in the bootcamp sessions.</em></p>
+<hr>
+<section id="teaching" class="level2">
+<h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
+<section id="build-a-course-website-from-your-materials" class="level3">
+<h3 class="anchored" data-anchor-id="build-a-course-website-from-your-materials">Build a course website from your materials</h3>
+<p>Point the tool at your syllabus, lecture notes, and schedule. It scaffolds a Quarto or Hugo site with pages for each topic, a schedule, and assignment links.</p>
+<ul>
+<li><strong>What it does</strong>: Reads your existing files, proposes a site structure, generates the pages, renders to HTML</li>
+<li><strong>Tool</strong>: Claude Code</li>
+<li><strong>Time</strong>: 1–2 hours for a working first draft</li>
+</ul>
+<p>Open Claude Code in the folder with your course materials, then:</p>
+<pre><code>Read my syllabus.pdf and lecture-schedule.xlsx.
+Build a Quarto website with:
+- a home page with the course description
+- a schedule page with dates and topics from the spreadsheet
+- a page for each major unit with the learning objectives from the syllabus
+Save everything in a new folder called course-site/.</code></pre>
+</section>
+<section id="convert-lecture-notes-to-slides" class="level3">
+<h3 class="anchored" data-anchor-id="convert-lecture-notes-to-slides">Convert lecture notes to slides</h3>
+<p>Give it your <code>.md</code> or <code>.docx</code> notes and ask for a Quarto reveal.js or Beamer slide deck. It reads the source file, proposes a slide sequence, and writes the <code>.qmd</code>.</p>
+<ul>
+<li><strong>What it does</strong>: Reads your notes file, splits into slides, writes formatted output with headers and bullets</li>
+<li><strong>Tool</strong>: Claude Code</li>
+<li><strong>Time</strong>: 20–30 minutes per lecture</li>
+</ul>
+<pre><code>Read lecture-notes/week3-supply-demand.md.
+Convert it to a Quarto reveal.js slide deck.
+One main idea per slide. Use two-column layouts
+where a graph or example would help. Keep bullet
+points to 3-4 per slide max.
+Save as slides/week3-supply-demand.qmd.</code></pre>
+</section>
+<section id="grade-with-a-rubric" class="level3">
+<h3 class="anchored" data-anchor-id="grade-with-a-rubric">Grade with a rubric</h3>
+<p>Give it a rubric file and a folder of student submissions. It reads each submission, applies the rubric, and drafts feedback comments saved as individual files.</p>
+<ul>
+<li><strong>What it does</strong>: Reads rubric + submissions from your folder, writes feedback files</li>
+<li><strong>Tool</strong>: Claude Code</li>
+<li><strong>Time</strong>: 30 minutes to set up, then a few minutes per batch</li>
+</ul>
+<pre><code>Read rubric.md and all the .docx files in submissions/.
+For each submission, apply the rubric. Write a feedback
+file for each student in feedback/ with:
+- score per criterion
+- 2-3 sentences of specific feedback per criterion
+- one overall comment on what to improve
+Name each file feedback/[student-name].md.</code></pre>
+<hr>
+</section>
+</section>
+<section id="research" class="level2">
+<h2 class="anchored" data-anchor-id="research">Research</h2>
+<section id="raw-data-to-analysis-plan-to-code-to-report" class="level3">
+<h3 class="anchored" data-anchor-id="raw-data-to-analysis-plan-to-code-to-report">★ Raw data to analysis plan to code to report</h3>
+<p>The full pipeline from Session 2. Describe a dataset and research question; it proposes an analysis plan, writes Stata/R code, and drafts a summary memo — all saved as project files.</p>
+<ul>
+<li><strong>What it does</strong>: Reads your data (or its metadata), writes <code>.do</code>/<code>.R</code> scripts, generates a <code>.md</code> report</li>
+<li><strong>Tool</strong>: Claude Code</li>
+<li><strong>Time</strong>: 30–45 minutes for the full pipeline</li>
+</ul>
+<pre><code>Read data/cps_extract.csv. Describe what's in it:
+how many observations, what variables, what's missing.
+
+Then propose three analyses for a paper on wage gaps
+by education level. Write the Stata code for the
+first analysis. Save the do-file as code/wage-gaps.do
+and a summary memo as output/analysis-plan.md.</code></pre>
+</section>
+<section id="replication-package-assembly" class="level3">
+<h3 class="anchored" data-anchor-id="replication-package-assembly">Replication package assembly</h3>
+<p>Point it at your project folder. It reads your do-files or scripts, maps the dependency chain, identifies missing files, and writes a master script.</p>
+<ul>
+<li><strong>What it does</strong>: Reads all scripts in a directory, traces <code>use</code>/<code>merge</code>/<code>include</code> dependencies, writes <code>master.do</code></li>
+<li><strong>Tool</strong>: Claude Code</li>
+<li><strong>Time</strong>: 30 minutes</li>
+</ul>
+<pre><code>Read all the .do files in this project.
+Map which files depend on which — trace every use,
+merge, include, and file reference.
+Write a master.do that runs everything in the
+correct order. Flag any files that are referenced
+but don't exist.</code></pre>
+</section>
+<section id="adversarial-review-of-your-own-paper" class="level3">
+<h3 class="anchored" data-anchor-id="adversarial-review-of-your-own-paper">Adversarial review of your own paper</h3>
+<p>Give it your draft as a file. It reads the full paper and flags causal language without identification, missing robustness checks, and measurement concerns.</p>
+<ul>
+<li><strong>What it does</strong>: Reads your <code>.md</code>/<code>.tex</code>/<code>.docx</code> draft, writes a structured referee-style report</li>
+<li><strong>Tool</strong>: Claude Code with <code>/econ-audit</code> skill</li>
+<li><strong>Time</strong>: 15–20 minutes</li>
+</ul>
+<p>Install the skill, then run it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add econ-audit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>/econ-audit</code></pre>
+<p>It will ask you to point it at your draft. Or run it manually:</p>
+<pre><code>Read my-paper.tex. Act as a skeptical referee.
+For every causal claim, check whether the
+identification strategy actually supports it.
+Flag: causal language without identification,
+missing robustness checks, measurement concerns,
+and anything a referee would push back on.
+Write the report as review/referee-report.md.</code></pre>
+</section>
+<section id="data-dictionary-from-a-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="data-dictionary-from-a-dataset">Data dictionary from a dataset</h3>
+<p>Point it at a dataset. It reads the metadata and produces a formatted codebook: variable names, types, value ranges, labels, notes.</p>
+<ul>
+<li><strong>What it does</strong>: Reads dataset headers/metadata, writes a formatted <code>.md</code> data dictionary</li>
+<li><strong>Tool</strong>: Claude Code with <code>/data-dictionary</code> skill</li>
+<li><strong>Time</strong>: 10–15 minutes</li>
+</ul>
+<p>Install and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add data-dictionary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>/data-dictionary</code></pre>
+<p>Or manually:</p>
+<pre><code>Read the headers and first 20 rows of data/survey.csv.
+Produce a data dictionary with: variable name, type,
+range or categories, number of missing values, and
+any notes about coding or units. Save as docs/codebook.md.</code></pre>
+</section>
+<section id="literature-review-with-structured-output" class="level3">
+<h3 class="anchored" data-anchor-id="literature-review-with-structured-output">Literature review with structured output</h3>
+<p>Give it a research question. It searches, organizes papers by theme, identifies gaps, and writes a formatted review memo saved to your project folder.</p>
+<ul>
+<li><strong>What it does</strong>: Searches, reads abstracts, writes a structured <code>.md</code> review memo</li>
+<li><strong>Tool</strong>: Claude Code with <code>/lit-review</code> skill</li>
+<li><strong>Time</strong>: 20–30 minutes</li>
+</ul>
+<p>Install and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add lit-review</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>/lit-review</code></pre>
+<p>Or manually:</p>
+<pre><code>I'm starting a project on the effect of cash transfers
+on educational outcomes in sub-Saharan Africa.
+Search for recent papers. Organize by methodology
+(RCT vs quasi-experimental). For each paper, note:
+authors, year, country, method, main finding.
+Identify gaps. Save as lit-review/cash-transfers-education.md.</code></pre>
+<hr>
+</section>
+</section>
+<section id="writing-communication" class="level2">
+<h2 class="anchored" data-anchor-id="writing-communication">Writing &amp; Communication</h2>
+<section id="create-a-writing-voice-file" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-writing-voice-file">★ Create a writing voice file</h3>
+<p>Give the tool access to files with your real writing — saved emails, letters of recommendation, feedback comments. It reads them, describes your patterns, and saves a reusable voice file.</p>
+<ul>
+<li><strong>What it does</strong>: Reads your writing samples from disk, writes <code>MY-VOICE.md</code></li>
+<li><strong>Tool</strong>: Claude Code</li>
+<li><strong>Time</strong>: 15 minutes to create, then reuse forever</li>
+</ul>
+<p>Save 5–10 of your sent emails as <code>.txt</code> or <code>.md</code> files in a folder, then:</p>
+<pre><code>Read all the files in writing-samples/.
+These are emails and letters I've written.
+Describe my writing style: tone, sentence length,
+how I open and close messages, level of formality,
+what I avoid, any distinctive patterns.
+Save the description as MY-VOICE.md.</code></pre>
+<p>Then tell Claude Code to use it going forward:</p>
+<pre><code>Add to your memory: when I ask you to draft anything,
+load MY-VOICE.md first and match my style.</code></pre>
+</section>
+<section id="draft-emails-using-your-voice-file" class="level3">
+<h3 class="anchored" data-anchor-id="draft-emails-using-your-voice-file">★ Draft emails using your voice file</h3>
+<p>Point it at an email thread (via Gmail integration or a saved file) and tell it the gist. It reads the thread, loads your voice file, and drafts a reply that sounds like you.</p>
+<ul>
+<li><strong>What it does</strong>: Reads email thread + voice file, writes a draft</li>
+<li><strong>Tool</strong>: Claude Code with Gmail integration</li>
+<li><strong>Time</strong>: 2 minutes per email</li>
+</ul>
+<pre><code>Read my voice file. Read the most recent email
+from [sender] about [topic].
+Draft a reply. The gist: [your one-sentence summary
+of what you want to say].</code></pre>
+</section>
+<section id="revision-memo-for-a-journal-submission" class="level3">
+<h3 class="anchored" data-anchor-id="revision-memo-for-a-journal-submission">Revision memo for a journal submission</h3>
+<p>Give it your paper file and the referee reports. It reads both and drafts a point-by-point response memo.</p>
+<ul>
+<li><strong>What it does</strong>: Reads your draft + referee reports, writes a structured response <code>.md</code> file</li>
+<li><strong>Tool</strong>: Claude Code</li>
+<li><strong>Time</strong>: 30–45 minutes for a first draft</li>
+</ul>
+<pre><code>Read paper/draft-v2.tex and reviews/referee1.pdf
+and reviews/referee2.pdf.
+Draft a point-by-point response memo. For each
+referee comment:
+- quote the comment
+- describe what we changed (or why we didn't)
+- reference the specific section/page
+Save as paper/revision-memo.md.</code></pre>
+<hr>
+</section>
+</section>
+<section id="workflow-organization" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-organization">Workflow &amp; Organization</h2>
+<section id="inbox-triage" class="level3">
+<h3 class="anchored" data-anchor-id="inbox-triage">Inbox triage</h3>
+<p>Connects to your Gmail, reads recent messages, and categorizes them by action needed: reply, review, meeting, delegate, archive.</p>
+<ul>
+<li><strong>What it does</strong>: Reads inbox via Gmail integration, writes a categorized summary</li>
+<li><strong>Tool</strong>: Claude Code with Gmail integration</li>
+<li><strong>Time</strong>: 30 minutes to set up, 5 minutes each morning</li>
+</ul>
+<pre><code>Read my 20 most recent unread emails.
+Categorize each one:
+- 🔴 Needs reply (from a person, expects a response)
+- 📋 Needs review (requires reading but not a reply)
+- 📅 Meeting-related (scheduling, agenda, follow-up)
+- 📦 Can archive (newsletters, notifications, FYI)
+List the reply-needed ones first with a one-line summary.</code></pre>
+</section>
+<section id="calendar-automation-from-emails" class="level3">
+<h3 class="anchored" data-anchor-id="calendar-automation-from-emails">Calendar automation from emails</h3>
+<p>Reads emails with dates and creates calendar events automatically.</p>
+<ul>
+<li><strong>What it does</strong>: Reads email via Gmail, extracts dates/times, creates Google Calendar events</li>
+<li><strong>Tool</strong>: Claude Code with Gmail + Google Calendar integrations</li>
+<li><strong>Time</strong>: 5 minutes per batch</li>
+</ul>
+<pre><code>Search my Gmail for emails from [hockey league / school]
+in the last 7 days. Extract any dates, times, and
+locations for upcoming events. Add each one to my
+Google Calendar with the event name, time, and location.</code></pre>
+</section>
+<section id="project-handoff-notes" class="level3">
+<h3 class="anchored" data-anchor-id="project-handoff-notes">Project handoff notes</h3>
+<p>At the end of a work session, it summarizes what was done, what’s open, and what to do next. Saves as a file so you can pick up later without re-reading everything.</p>
+<ul>
+<li><strong>What it does</strong>: Reads session context, writes a structured handoff <code>.md</code> file</li>
+<li><strong>Tool</strong>: Claude Code</li>
+<li><strong>Time</strong>: 2 minutes</li>
+</ul>
+<pre><code>Summarize this session:
+- what we worked on
+- what decisions were made
+- what's still open
+- what I should do next
+Save as notes/handoff-2026-04-08.md.</code></pre>
+<hr>
+</section>
+</section>
+<section id="what-to-try-first" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-try-first">What to try first</h2>
+<ol type="1">
+<li><strong>Fastest payoff</strong>: Create a voice file (15 minutes, reuse forever)</li>
+<li><strong>Most impressive</strong>: Run the data → code → report pipeline (30 minutes)</li>
+<li><strong>Most practical</strong>: Inbox triage with Gmail integration (30 minutes to set up, then daily)</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/eabeam\.github\.io\/uvmecon-ai");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>. Built by <a href="https://eabeam.github.io">Emily Beam</a>, University of Vermont.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/eabeam/uvmecon-ai/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
