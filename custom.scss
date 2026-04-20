@@ -167,6 +167,27 @@ $headings-font-weight:   400;
   margin-top: 0.1rem;
 }
 
+.slides-btn {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1B4D5C;
+  background: #fff;
+  border: 1px solid #d0d5d2;
+  border-radius: 3px;
+  padding: 0.3rem 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: #D4A84B;
+    background: #FDF6E3;
+    color: #1B4D5C;
+    text-decoration: none;
+  }
+}
+
 /* Gold line under the full hero */
 .landing-hero-split {
   position: relative;

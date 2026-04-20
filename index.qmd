@@ -20,6 +20,7 @@ toc: false
       <div class="schedule-date">Apr 22</div>
       <div class="schedule-title">Getting Started with AI Tools</div>
       <div class="schedule-detail">11:00–12:30 · Old Mill A500</div>
+      <a href="Session1_Slides/session_1_slides.pdf" class="slides-btn">Download slides ↓</a>
     </div>
     <div class="schedule-item">
       <div class="schedule-date">Apr 27</div>
