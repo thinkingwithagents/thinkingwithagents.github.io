@@ -188,19 +188,19 @@
 {\small
 \begin{tabular}{>{\centering\arraybackslash\bfseries}m{1cm} m{12cm}}
 \rowcolor{SlateTeal}
-\textcolor{white}{Level} & \centering\arraybackslash\textcolor{white}{\textbf{What It Looks Like}} \\[1pt]
+\textcolor{white}{Level} & \centering\arraybackslash\textcolor{white}{\textbf{What It Looks Like}} \\[4pt]
 \rowcolor{PaleSage}
-\textcolor{SlateTeal}{0} & Copy code from ChatGPT in a browser, paste into your editor \\[1pt]
+\textcolor{SlateTeal}{0} & Copy code from ChatGPT in a browser, paste into your editor \\[4pt]
 \rowcolor{white}
-\textcolor{SlateTeal}{1} & IDE (VS Code, Cursor, Zed) offers inline completions and inline chat \\[1pt]
+\textcolor{SlateTeal}{1} & IDE (VS Code, Cursor, Zed) offers inline completions and inline chat \\[4pt]
 \rowcolor{PaleSage}
-\textcolor{SlateTeal}{2} & ``Agent mode'' inside the IDE: the model can read files, run tests, refactor \\[1pt]
+\textcolor{SlateTeal}{2} & ``Agent mode'' inside the IDE: the model can read files, run tests, refactor \\[4pt]
 \rowcolor{white}
-\textcolor{SlateTeal}{3} & \textbf{Dedicated coding agents} (Claude Code, Codex CLI, \ldots) \\[1pt]
+\textcolor{SlateTeal}{3} & \textbf{Dedicated coding agents} (Claude Code, Codex CLI, \ldots) \\[4pt]
 \rowcolor{PaleSage}
-\textcolor{SlateTeal}{4} & Attach tools so agents can search the web, scrape, browse, orchestrate \\[1pt]
+\textcolor{SlateTeal}{4} & Attach tools so agents can search the web, scrape, browse, orchestrate \\[4pt]
 \rowcolor{white}
-\textcolor{SlateTeal}{5} & Orchestrate teams of agents in containers \\[1pt]
+\textcolor{SlateTeal}{5} & Orchestrate teams of agents in containers \\[4pt]
 \end{tabular}
 }
 \vskip8pt
@@ -403,37 +403,37 @@ Codex is included --- no-brainer to try.
 \end{columns}
 \end{frame}
 
-%% ====== SLIDE 7b: API PRICING ======
-\begin{frame}{API Pricing --- Pay-as-You-Go}
-\centering
-\vskip2pt
-{\small If you outgrow the subscription or want more control, both companies offer API billing where you pay per token.}
-\vskip6pt
-{\small
-\begin{tabular}{>{\raggedright\arraybackslash}m{3.5cm} >{\centering\arraybackslash}m{3cm} >{\centering\arraybackslash}m{3cm}}
-\rowcolor{SlateTeal}
-\textcolor{white}{\textbf{Model}} & \textcolor{white}{\textbf{Input (per 1M tokens)}} & \textcolor{white}{\textbf{Output (per 1M tokens)}} \\[2pt]
-\rowcolor{PaleSage}
-Claude Sonnet 4.6 & \$3.00 & \$15.00 \\[2pt]
-\rowcolor{white}
-Claude Opus 4.6 & \$15.00 & \$75.00 \\[2pt]
-\rowcolor{PaleSage}
-Claude Haiku 4.5 & \$0.80 & \$4.00 \\[2pt]
-\rowcolor{white}
-GPT-4o & \$2.50 & \$10.00 \\[2pt]
-\rowcolor{PaleSage}
-GPT-4.1 & \$2.00 & \$8.00 \\[2pt]
-\rowcolor{white}
-GPT-4o mini & \$0.15 & \$0.60 \\[2pt]
-\rowcolor{PaleSage}
-Gemini 2.5 Pro & \$1.25 & \$10.00 \\[2pt]
-\end{tabular}
-}
-\vskip6pt
-\begin{tcolorbox}[quotebox, width=10cm]
-\small A token $\approx$ $\frac{3}{4}$ of a word. Most people \textbf{don't need API billing} --- the subscription covers it.
-\end{tcolorbox}
-\end{frame}
+%% ====== SLIDE 7b: API PRICING (commented out to save time) ======
+%\begin{frame}{API Pricing --- Pay-as-You-Go}
+%\centering
+%\vskip2pt
+%{\small If you outgrow the subscription or want more control, both companies offer API billing where you pay per token.}
+%\vskip6pt
+%{\small
+%\begin{tabular}{>{\raggedright\arraybackslash}m{3.5cm} >{\centering\arraybackslash}m{3cm} >{\centering\arraybackslash}m{3cm}}
+%\rowcolor{SlateTeal}
+%\textcolor{white}{\textbf{Model}} & \textcolor{white}{\textbf{Input (per 1M tokens)}} & \textcolor{white}{\textbf{Output (per 1M tokens)}} \\[2pt]
+%\rowcolor{PaleSage}
+%Claude Sonnet 4.6 & \$3.00 & \$15.00 \\[2pt]
+%\rowcolor{white}
+%Claude Opus 4.6 & \$15.00 & \$75.00 \\[2pt]
+%\rowcolor{PaleSage}
+%Claude Haiku 4.5 & \$0.80 & \$4.00 \\[2pt]
+%\rowcolor{white}
+%GPT-4o & \$2.50 & \$10.00 \\[2pt]
+%\rowcolor{PaleSage}
+%GPT-4.1 & \$2.00 & \$8.00 \\[2pt]
+%\rowcolor{white}
+%GPT-4o mini & \$0.15 & \$0.60 \\[2pt]
+%\rowcolor{PaleSage}
+%Gemini 2.5 Pro & \$1.25 & \$10.00 \\[2pt]
+%\end{tabular}
+%}
+%\vskip6pt
+%\begin{tcolorbox}[quotebox, width=10cm]
+%\small A token $\approx$ $\frac{3}{4}$ of a word. Most people \textbf{don't need API billing} --- the subscription covers it.
+%\end{tcolorbox}
+%\end{frame}
 
 %% ====== SLIDE 8: CLI vs DESKTOP ======
 \begin{frame}{Two Ways to Use It: Terminal vs.\ Desktop App}
@@ -516,6 +516,7 @@ Type \texttt{claude} or \texttt{codex} and follow the sign-in prompts.
 \begin{column}{0.42\textwidth}
 \vskip2pt
 \centering
+\only<1>{%
 \begin{tikzpicture}[scale=0.85, every node/.style={scale=0.85},
   agent/.style={
     draw=SlateTeal, fill=PaleSage, rounded corners=3pt,
@@ -539,6 +540,10 @@ Type \texttt{claude} or \texttt{codex} and follow the sign-in prompts.
   \draw[arr] (a1) -- (t1);
   \draw[arr] (a2) -- (t2);
 \end{tikzpicture}
+}%
+\only<2>{%
+\includegraphics[width=\textwidth, height=0.7\textheight, keepaspectratio]{multi-workflow-1.png}
+}%
 \end{column}
 \begin{column}{0.52\textwidth}
 \vskip2pt
@@ -551,8 +556,8 @@ Type \texttt{claude} or \texttt{codex} and follow the sign-in prompts.
   \item Terminal + desktop app simultaneously
   	\begin{itemize} \setlength{\itemsep}{0pt}\scriptsize
 
-  	\item Or terminal + terminal + terminal + .... 
-  	\end{itemize} 
+  	\item Or terminal + terminal + terminal + ....
+  	\end{itemize}
   \item Each agent has its own context window
 \end{itemize}
 \end{tcolorbox}
@@ -602,6 +607,31 @@ System-wide speech-to-text dictation.
 \end{tcolorbox}
 \end{frame}
 
+%% ====== SLIDE 10b: WHAT IS MARKDOWN ======
+\begin{frame}{Markdown: The Output Format}
+\begin{columns}[T]
+\begin{column}{0.40\textwidth}
+\begin{tcolorbox}[accentbox]
+\small
+AI tools write in \textbf{Markdown} --- a simple plain-text format that uses \texttt{\#} for headers and \texttt{-} for bullets.
+\vskip4pt
+You do \textbf{not} need to learn the syntax. The AI hands you a \texttt{.md} file; a viewer like \textbf{Typora} (\$15) makes it look like formatted text.
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.55\textwidth}
+\centering
+\only<1>{%
+{\small\bfseries\color{SlateTeal} Raw file:}\\[4pt]
+\includegraphics[width=\textwidth, height=0.65\textheight, keepaspectratio]{markdown-raw.png}
+}%
+\only<2>{%
+{\small\bfseries\color{SlateTeal} Rendered in Typora:}\\[4pt]
+\includegraphics[width=\textwidth, height=0.65\textheight, keepaspectratio]{markdown-pretty.png}
+}%
+\end{column}
+\end{columns}
+\end{frame}
+
 %% ====== SLIDE 11: MARKDOWN INTRO ======
 \begin{frame}[fragile]{Markdown Files: The Backbone of Agentic AI}
 \begin{columns}[T]
@@ -639,7 +669,7 @@ System-wide speech-to-text dictation.
 Plain text files with simple formatting. They serve as the \textbf{instruction manuals} that guide AI agents.
 \vskip3pt
 Agents read these to understand:
-\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
+\begin{itemize}\setlength{\itemsep}{0pt}\small
   \item Project rules \& conventions
   \item What to do and how
   \item Your preferred workflows
@@ -750,33 +780,33 @@ Agents read these to understand:
 {\tiny\color{CoolGray} Adapted from Aniket Panjwani's Claude Code course}
 \end{frame}
 
-%% ====== SLIDE 13b: KEY TERMS ======
-\begin{frame}{Key Terms}
-\centering
-\vskip2pt
-{\small
-\begin{tabular}{>{\bfseries\raggedright\arraybackslash}m{3.2cm} m{9.5cm}}
-\rowcolor{SlateTeal}
-\textcolor{white}{Term} & \textcolor{white}{\textbf{What We Mean}} \\[2pt]
-\rowcolor{PaleSage}
-Agent & A tool instance carrying out a bounded task with some autonomy \\[2pt]
-\rowcolor{white}
-Model & The underlying AI system (e.g., Claude Sonnet, GPT-4o) \\[2pt]
-\rowcolor{PaleSage}
-Session & One conversation or working thread with the tool \\[2pt]
-\rowcolor{white}
-Context window & The working memory in the current session --- when full, performance degrades \\[2pt]
-\rowcolor{PaleSage}
-Artifact & A concrete output: file, draft, memo, script, table, or slide \\[2pt]
-\rowcolor{white}
-Rule file & Standing instructions (\texttt{CLAUDE.md} or \texttt{AGENTS.md}) that load automatically \\[2pt]
-\rowcolor{PaleSage}
-Token & The unit AI models process --- roughly $\frac{3}{4}$ of a word \\[2pt]
-\rowcolor{white}
-MCP & Model Context Protocol --- how tools connect to external services (email, calendar, etc.) \\[2pt]
-\end{tabular}
-}
-\end{frame}
+%% ====== SLIDE 13b: KEY TERMS (commented out — terms defined in context) ======
+%\begin{frame}{Key Terms}
+%\centering
+%\vskip2pt
+%{\small
+%\begin{tabular}{>{\bfseries\raggedright\arraybackslash}m{3.2cm} m{9.5cm}}
+%\rowcolor{SlateTeal}
+%\textcolor{white}{Term} & \textcolor{white}{\textbf{What We Mean}} \\[2pt]
+%\rowcolor{PaleSage}
+%Agent & A tool instance carrying out a bounded task with some autonomy \\[2pt]
+%\rowcolor{white}
+%Model & The underlying AI system (e.g., Claude Sonnet, GPT-4o) \\[2pt]
+%\rowcolor{PaleSage}
+%Session & One conversation or working thread with the tool \\[2pt]
+%\rowcolor{white}
+%Context window & The working memory in the current session --- when full, performance degrades \\[2pt]
+%\rowcolor{PaleSage}
+%Artifact & A concrete output: file, draft, memo, script, table, or slide \\[2pt]
+%\rowcolor{white}
+%Rule file & Standing instructions (\texttt{CLAUDE.md} or \texttt{AGENTS.md}) that load automatically \\[2pt]
+%\rowcolor{PaleSage}
+%Token & The unit AI models process --- roughly $\frac{3}{4}$ of a word \\[2pt]
+%\rowcolor{white}
+%MCP & Model Context Protocol --- how tools connect to external services (email, calendar, etc.) \\[2pt]
+%\end{tabular}
+%}
+%\end{frame}
 
 %% ====== SLIDE 14: CONTEXT WINDOW ======
 \begin{frame}{The Context Window --- The Key Concept}
@@ -860,7 +890,7 @@ $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{complet
 \begin{column}{0.55\textwidth}
 \vskip2pt
 \begin{enumerate}\setlength{\itemsep}{6pt}
-  \item[\color{SlateTeal}\textbf{1.}] \textbf{Long sessions degrade} --- after 20+ turns, start fresh (\texttt{\clear})
+  \item[\color{SlateTeal}\textbf{1.}] \textbf{Long sessions degrade} --- after 20+ turns, start fresh (\texttt{/clear})
   \pause
   \item[\color{SlateTeal}\textbf{2.}] \textbf{Write ideas to files} --- files persist, context doesn't
   \pause
@@ -877,7 +907,7 @@ $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{complet
 \small
 \textbf{The ``start fresh'' pattern:}
 \vskip2pt
-\begin{enumerate}\setlength{\itemsep}{0pt}\scriptsize
+\begin{enumerate}\setlength{\itemsep}{0pt}\small
   \item Write progress to \texttt{PLAN.md}
   \item Start a new session
   \item ``Read \texttt{PLAN.md} and continue\ldots''
@@ -946,17 +976,102 @@ Hooks are powerful --- but \textbf{outside the scope} of this bootcamp.
 \small
 \begin{enumerate}\setlength{\itemsep}{1pt}
   \item \textbf{Be specific.}
-    {\tiny Not ``analyze data'' but ``load employment.csv, compute growth rates.''}
+    {\scriptsize Not ``analyze data'' but ``load employment.csv, compute growth rates.''}
   \item \textbf{Iterate, don't argue.}
-    {\tiny Going in circles? Hit ESC, start over.}
+    {\scriptsize Going in circles? Hit ESC, start over.}
   \item \textbf{Correct early.}
-    {\tiny Catch wrong foundations immediately.}
+    {\scriptsize Catch wrong foundations immediately.}
   \item \textbf{Trust but verify.}
-    {\tiny Mistakes happen with edge cases.}
+    {\scriptsize Mistakes happen with edge cases.}
 \end{enumerate}
 \end{tcolorbox}
 \end{column}
 \end{columns}
+\end{frame}
+
+%% ====== SLIDE 18b: WHAT CAN GO WRONG ======
+\begin{frame}{What Can Go Specifically Wrong}
+\begin{columns}[T]
+\begin{column}{0.47\textwidth}
+\begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.6pt, arc=3pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\color{SoftCoral}\faExclamation\; The scary failures}, fonttitle=\small\bfseries, coltitle=SoftCoral]
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item \textbf{Confident citations that don't exist.} It will invent a plausible author, journal, and year.
+  \item \textbf{Code that runs but is wrong.} No error message --- just silently wrong results. Reshapes, merges, and filters are common culprits.
+  \item \textbf{Hallucinated numbers.} Asks for a statistic, gets a plausible-sounding one that is made up.
+\end{itemize}
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.47\textwidth}
+\begin{tcolorbox}[keybox, title={\faLock\quad How to protect yourself}]
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item \textbf{Verify citations.} Google Scholar or CrossRef every reference.
+  \item \textbf{Spot-check outputs.} Run a known case. Compare row counts before and after.
+  \item \textbf{Ask it to explain.} ``Walk me through what this code does line by line.''
+  \item \textbf{Use version control.} Git means you can always undo.
+\end{itemize}
+\end{tcolorbox}
+\end{column}
+\end{columns}
+\vskip3pt
+\begin{tcolorbox}[quotebox, width=12cm]
+\small The failure mode is \textbf{not} ``it refuses to help.'' It's ``it helps confidently and is wrong.'' Treat every output as a first draft.
+\end{tcolorbox}
+\end{frame}
+
+%% ====== SLIDE 18c: WHEN NOT TO USE IT ======
+\begin{frame}{When to Use It --- and When Not To}
+\begin{columns}[T]
+\begin{column}{0.47\textwidth}
+\begin{tcolorbox}[keybox, title={\faCheck\quad Worth the setup cost}]
+\small
+\begin{itemize}\setlength{\itemsep}{2pt}
+  \item Repetitive tasks you do weekly
+  \item Multi-step workflows (data $\rightarrow$ analysis $\rightarrow$ writeup)
+  \item Drafting in your voice at scale
+  \item Exploring unfamiliar code or data
+  \item Anything you'd delegate to an RA
+\end{itemize}
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.47\textwidth}
+\begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral!50, boxrule=0.5pt, arc=3pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\color{SoftCoral}\faTimes\; Not worth it}, fonttitle=\small\bfseries, coltitle=SoftCoral]
+\small
+\begin{itemize}\setlength{\itemsep}{2pt}
+  \item If the task takes \textbf{5 minutes by hand}, just do it by hand
+  \item Tasks requiring \textbf{domain judgment} (identification strategy, causal interpretation)
+  \item Anything with \textbf{confidential data} you can't share with an API
+  \item When you need a \textbf{precise citation} and don't have time to verify
+\end{itemize}
+\end{tcolorbox}
+\end{column}
+\end{columns}
+\vskip4pt
+\begin{tcolorbox}[accentbox, halign=center, width=11cm, top=3pt, bottom=3pt]
+\small\bfseries The cost to try: \$20/month + 30 minutes of setup. That's it.
+\end{tcolorbox}
+\end{frame}
+
+%% ====== SLIDE 18d: REAL PROMPTS ======
+\begin{frame}[fragile]{What Real Prompts Look Like}
+\begin{tcolorbox}[colback=DarkSlate, colframe=DarkSlate, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
+{\color{CoolGray}\ttfamily\tiny Simple:\color{white}\scriptsize\\
+Write a Stata do-file that cleans this dataset, labels the variables, and saves a clean version.\\[4pt]
+\color{CoolGray}\tiny Data exploration:\color{white}\scriptsize\\
+Read the .dta file. Tell me how many observations per year, what variables we have, and flag anything that looks weird. Restrict to working-age adults 25--64 and drop anyone with zero or missing wages. Do this in Stata.\\[4pt]
+\color{CoolGray}\tiny Admin:\color{white}\scriptsize\\
+Extract the deadlines from this document and put them in a table.\\[4pt]
+\color{CoolGray}\tiny Visualization:\color{white}\scriptsize\\
+Make two graphs. First: plot the immigrant share over time, separately for each of the four education groups. Second: show how the total immigrant share has changed by state --- pick the top 6 states by immigrant share in 2020 and plot their trends. Make both graphs clean: white background, labeled lines, y-axis as percentage.\\[4pt]
+\color{CoolGray}\tiny Correction:\color{white}\scriptsize\\
+Fix the language --- this is a replication exercise showing correlations, not a causal estimate.\\[4pt]
+\color{CoolGray}\tiny Advanced:\color{white}\scriptsize\\
+Before writing your score, spawn a research subagent. Search for 2--3 of the most-cited papers referenced in the proposal. For each, summarize: (1) its main finding, and (2) how the proposed study builds on or departs from it.
+}
+\end{tcolorbox}
+\vskip3pt
+{\small\color{CoolGray} No special syntax. Just say what you want. Iterate from there.}
 \end{frame}
 
 %% ====== SLIDE 19: EMILY — WE STARTED IN DECEMBER ======
@@ -1147,29 +1262,29 @@ firm --- the deadline stands.
 \end{columns}
 \end{frame}
 
-%% ====== SLIDE 24b: EMAIL INTEGRATIONS NOTE ======
-\begin{frame}{A Note on Email Integrations}
-\begin{columns}[T]
-\begin{column}{0.52\textwidth}
-\begin{tcolorbox}[keybox, title={\faEnvelope\quad What works today}]
-\small
-Tools like Claude Code have direct integrations with \textbf{Gmail and Google Calendar} --- reading, drafting, and scheduling.
-\vskip4pt
-This means you can draft emails in your voice, triage your inbox, and create calendar events --- all from the same agent.
-\end{tcolorbox}
-\end{column}
-\begin{column}{0.44\textwidth}
-\begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.5pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\color{SoftCoral}\faExclamation\; Outlook limitation}, fonttitle=\scriptsize\bfseries, coltitle=SoftCoral]
-\small
-AI agents \textbf{cannot} currently interact with the Outlook desktop app --- Microsoft gates this heavily. Demos here use saved files, not a live inbox connection.
-\end{tcolorbox}
-\vskip4pt
-\begin{tcolorbox}[quotebox, top=3pt, bottom=3pt]
-\small \textbf{Tip:} Keep a central folder for all your prompts and voice files. They accumulate fast.
-\end{tcolorbox}
-\end{column}
-\end{columns}
-\end{frame}
+%% ====== SLIDE 24b: EMAIL INTEGRATIONS NOTE (commented out to save time) ======
+%\begin{frame}{A Note on Email Integrations}
+%\begin{columns}[T]
+%\begin{column}{0.52\textwidth}
+%\begin{tcolorbox}[keybox, title={\faEnvelope\quad What works today}]
+%\small
+%Tools like Claude Code have direct integrations with \textbf{Gmail and Google Calendar} --- reading, drafting, and scheduling.
+%\vskip4pt
+%This means you can draft emails in your voice, triage your inbox, and create calendar events --- all from the same agent.
+%\end{tcolorbox}
+%\end{column}
+%\begin{column}{0.44\textwidth}
+%\begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.5pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\color{SoftCoral}\faExclamation\; Outlook limitation}, fonttitle=\scriptsize\bfseries, coltitle=SoftCoral]
+%\small
+%AI agents \textbf{cannot} currently interact with the Outlook desktop app --- Microsoft gates this heavily. Demos here use saved files, not a live inbox connection.
+%\end{tcolorbox}
+%\vskip4pt
+%\begin{tcolorbox}[quotebox, top=3pt, bottom=3pt]
+%\small \textbf{Tip:} Keep a central folder for all your prompts and voice files. They accumulate fast.
+%\end{tcolorbox}
+%\end{column}
+%\end{columns}
+%\end{frame}
 
 %% ====== SLIDE 25: POWER OF PLANNING ======
 \begin{frame}[fragile]{The Power of Planning (\texttt{PLAN.md})}
@@ -1204,7 +1319,7 @@ AI agents \textbf{cannot} currently interact with the Outlook desktop app --- Mi
 \begin{tcolorbox}[accentbox, top=3pt, bottom=3pt]
 \small
 \textbf{What goes in a plan?}
-\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
+\begin{itemize}\setlength{\itemsep}{0pt}\small
   \item Project objectives
   \item Do's and don'ts
   \item Inputs and outputs
@@ -1269,60 +1384,23 @@ Markdown instruction \textbf{playbooks} that teach Claude Code how to perform a 
 \vskip3pt
 Think of them as \textbf{SOPs for your AI agent}.
 \vskip3pt
-\textbf{Invoke:} \texttt{/skill-name}\\
-\textbf{Browse:} \texttt{/skills}\\
-\textbf{Create:} \texttt{/skill-creator}
-\end{tcolorbox}
-\end{column}
-\begin{column}{0.46\textwidth}
-\begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal!50, boxrule=0.4pt, left=5pt, right=5pt, top=3pt, bottom=3pt]
-\small
-\textbf{Why not just prompt every time?}
-\vskip3pt
 \begin{tabular}{@{}l@{\;}c@{\;}c@{}}
  & \textbf{Prompt} & \textbf{Skill} \\
 \midrule
 Consistency & \textcolor{SoftCoral}{Low} & \textcolor{SlateTeal}{High} \\
 Quality & \textcolor{CoolGray}{Variable} & \textcolor{SlateTeal}{High} \\
-Token use & \textcolor{SoftCoral}{Higher} & \textcolor{SlateTeal}{Lower} \\
 Reusable & \textcolor{SoftCoral}{No} & \textcolor{SlateTeal}{Yes} \\
 \end{tabular}
 \end{tcolorbox}
-\vskip3pt
-{\tiny\color{CoolGray} Advanced skills can include Python scripts and supporting files.}
 \end{column}
-\end{columns}
-\end{frame}
-
-%% ====== SLIDE 22: INSTALLING SKILLS ======
-\begin{frame}{Installing Anthropic Skills}
-\begin{columns}[T]
-\begin{column}{0.52\textwidth}
-\begin{tcolorbox}[keybox, title={\faDownload\quad Step-by-Step}]
+\begin{column}{0.46\textwidth}
+\begin{tcolorbox}[keybox, title={\faDownload\quad Installing Skills}]
 \small
-\textbf{1. Add the marketplace:}\\
-\texttt{/plugin marketplace add anthropics/skills}
-\vskip4pt
-\textbf{2. Install a skill set:}\\
-\texttt{/plugin install}\\
-\texttt{\; document-skills@anthropic-agent-skills}
-\vskip4pt
-\textbf{3. Use it:}\\
-\texttt{/frontend-design} \; \texttt{/pdf} \; \texttt{/docx}
-\end{tcolorbox}
-\end{column}
-\begin{column}{0.44\textwidth}
-\vskip2pt
-\begin{tcolorbox}[accentbox]
-\small
-\textbf{Also available:}
-\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
-  \item \texttt{/find-data} --- dataset discovery
-  \item \texttt{/lit-review} --- literature synthesis
-  \item \texttt{/econ-audit} --- empirical review
-  \item \texttt{/pptx} --- PowerPoint creation
-  \item \texttt{/xlsx} --- spreadsheet tools
-\end{itemize}
+\textbf{1.} \texttt{/plugin marketplace add}\\
+\quad\texttt{anthropics/skills}\\[2pt]
+\textbf{2.} \texttt{/plugin install}\\
+\quad\texttt{document-skills@anthropic-agent-skills}\\[2pt]
+\textbf{3. Use it:} \texttt{/frontend-design}, \texttt{/pdf}, \texttt{/docx}, \texttt{/lit-review}, \texttt{/econ-audit}
 \end{tcolorbox}
 \vskip3pt
 {\tiny\color{CoolGray} Browse community skills at \texttt{skills.sh}}
@@ -1390,7 +1468,7 @@ We are \textit{not} launching --- just demonstrating.
 \begin{tcolorbox}[accentbox]
 \small
 \textbf{Why this demo?}
-\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
+\begin{itemize}\setlength{\itemsep}{0pt}\small
   \item Shows power of a single skill
   \item Tangible result in minutes
   \item Demonstrates prompt specificity
@@ -1513,7 +1591,7 @@ Create a skill that:
 \begin{tcolorbox}[accentbox]
 \small
 \textbf{Why this is powerful:}
-\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
+\begin{itemize}\setlength{\itemsep}{0pt}\small
   \item 50-page paper $\rightarrow$ 20-slide deck
   \item Consistent formatting every time
   \item Customizable to your teaching style
@@ -1643,35 +1721,65 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \end{frame}
 
 %% ====== SLIDE 35: BUDGET MEME ======
-\begin{frame}{My Budget This Year}
+\begin{frame}{What This Actually Costs}
 \centering
-\vskip4pt
+\vskip2pt
 \begin{tikzpicture}
 \begin{axis}[
     ybar stacked,
-    bar width=28pt,
-    width=8cm, height=5.5cm,
+    bar width=20pt,
+    width=11cm, height=5cm,
     ymin=0, ymax=650,
     ylabel={\scriptsize \$/month},
-    xtick={1},
-    xticklabels={{\small\textbf{``Research Expenses''}}},
+    xtick={1,2,3,4},
+    xticklabels={{\scriptsize\textbf{Erkmen}}, {\scriptsize\textbf{Emily}}, {\scriptsize\textbf{\color{SlateTeal}\$100 experiment}}, {\scriptsize\textbf{\color{SlateTeal}\$20 experiment}}},
     yticklabel style={font=\scriptsize},
     yticklabel={\$\pgfmathprintnumber{\tick}},
     legend style={font=\tiny, at={(1.02,0.98)}, anchor=north west},
     axis line style={draw=CoolGray},
     nodes near coords,
     nodes near coords style={font=\tiny\bfseries, text=white},
+    enlarge x limits=0.2,
 ]
-\addplot[fill=SlateTeal, draw=SlateTeal!80] coordinates {(1,200)};
-\addplot[fill=AccentBlue, draw=AccentBlue!80] coordinates {(1,200)};
-\addplot[fill=UVMGold, draw=UVMGold!80] coordinates {(1,100)};
-\addplot[fill=SoftCoral, draw=SoftCoral!80] coordinates {(1,50)};
-\addplot[fill=CoolGray, draw=CoolGray!80] coordinates {(1,30)};
-\legend{Claude Max \$200, ChatGPT Pro \$200, API costs \$100, Wispr Flow \$50, Coffee to cope \$30}
+\addplot[fill=SlateTeal, draw=SlateTeal!80] coordinates {(1,200) (2,100) (3,20) (4,20)};
+\addplot[fill=AccentBlue, draw=AccentBlue!80] coordinates {(1,200) (2,20) (3,20) (4,0)};
+\addplot[fill=UVMGold, draw=UVMGold!80] coordinates {(1,100) (2,15) (3,15) (4,0)};
+\addplot[fill=SoftCoral, draw=SoftCoral!80] coordinates {(1,50) (2,0) (3,0) (4,0)};
+\addplot[fill=CoolGray, draw=CoolGray!80] coordinates {(1,30) (2,0) (3,0) (4,0)};
+\legend{Claude, ChatGPT/Codex, Wispr/API, Other tools, Coffee to cope}
 \end{axis}
 \end{tikzpicture}
 \vskip2pt
-{\scriptsize\color{CoolGray} ``It's a tax-deductible investment in productivity'' --- me, explaining this to my accountant}
+\begin{tcolorbox}[accentbox, halign=center, width=11cm, top=2pt, bottom=2pt]
+\small \textbf{\$20/mo} is a really good experiment. \textbf{\$100/mo} is an amazing one. You do \textbf{not} need to go all-in.\\[2pt]
+{\scriptsize Keeping up with the frontier is a full-time job. Let us do that --- you get to skip straight to the useful parts.}
+\end{tcolorbox}
+\vskip1pt
+{\tiny\color{CoolGray} Also cut: Cursor (\$20/mo) --- was underutilizing. Considering: Claude Max (\$200/mo) for heavier workloads.}
+\end{frame}
+
+%% ====== SLIDE 35b: USEFUL TOOLS ======
+\begin{frame}{Other Useful Tools (Free or Cheap)}
+\centering
+\vskip4pt
+{\small
+\begin{tabular}{>{\bfseries\raggedright\arraybackslash}m{3cm} >{\centering\arraybackslash}m{2.5cm} m{7cm}}
+\rowcolor{SlateTeal}
+\textcolor{white}{Tool} & \textcolor{white}{\textbf{Cost}} & \textcolor{white}{\textbf{What It Does}} \\[2pt]
+\rowcolor{PaleSage}
+Granola & Free tier & Meeting transcripts + AI summaries. Records locally, generates structured notes. \\[2pt]
+\rowcolor{white}
+Typora & \$15 (one-time) & Beautiful Markdown viewer/editor. Makes \texttt{.md} files look like formatted docs. \\[2pt]
+\rowcolor{PaleSage}
+VS Code & Free & Code editor with LaTeX Workshop extension. Auto-reloads files, great for working alongside AI. \\[2pt]
+\rowcolor{white}
+Ghostty & Free & Fast, modern terminal app. Where you type \texttt{claude} or \texttt{codex}. \\[2pt]
+\end{tabular}
+}
+\vskip8pt
+\begin{tcolorbox}[quotebox, width=11cm]
+\small None of these are required. But they make the workflow \textbf{significantly smoother}.
+\end{tcolorbox}
 \end{frame}
 
 %% ====== SLIDE 36: ARTEMIS MEME ======
