@@ -27,8 +27,19 @@ website:
         text: "Bells & Whistles"
       - href: session1.qmd
         text: "Session 1 (Apr 22)"
-      - href: session2.qmd
-        text: "Session 2 (Apr 27)"
+      - text: "Session 2 (Apr 27) — coming soon"
+
+  body-footer: |
+    <script data-goatcounter="https://eabeam.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && link.href && link.href.match(/\.pdf$/i)) {
+        goatcounter.count({path: 'download:' + link.href.split('/').pop(), event: true});
+      }
+    });
+    </script>
 
   page-footer:
     center: |
