@@ -37,20 +37,7 @@ MCP servers are configured in your Claude Code settings. The [Claude Code docs o
 
 Skills are saved instructions that tell the AI how to do a specific task. Instead of re-explaining your workflow every session, you invoke a skill and it runs.
 
-See the **[Skills & Demos](skills.html)** page for installable skills from this bootcamp, including:
-
-- `/lit-review` — structured literature search and synthesis
-- `/econ-audit` — adversarial review of empirical claims
-- `/data-dictionary` — generate formatted data dictionaries
-
-### Building your own skills
-
-1. Do a task with AI and save the conversation
-2. Extract the instructions into a Markdown file
-3. Drop it in `.claude/commands/` (Claude Code) or equivalent
-4. Invoke it with `/your-skill-name`
-
-The best skill is one you build for a task you actually repeat.
+See the **[Applications & Skills](applications.qmd)** page for installable skills from this bootcamp and detailed workflow examples.
 
 ## Writing and voice
 
@@ -110,7 +97,7 @@ Once the basic tools feel useful, the next level is better workflow structure, n
 ## Explainers and examples from others
 
 - [Paul Goldsmith-Pinkham: Getting started with Claude Code](https://paulgp.substack.com/p/getting-started-with-claude-code) — why terminal-based AI work feels different from chat
-- [Claude Blattman](https://claudeblattman.com/) — concrete workflows and patterns for non-programmers
+- [Claude Blattman](https://claudeblattman.com/) — Chris Blattman's AI workflow blog; concrete patterns for non-programmers
 - [Columbia CTL: Teaching and Learning in the Age of AI](https://ai.ctl.columbia.edu/) — faculty-oriented pedagogy resource
 - [Columbia CTL: Faculty use cases](https://ai.ctl.columbia.edu/explore/examples/) — concrete examples across disciplines
 

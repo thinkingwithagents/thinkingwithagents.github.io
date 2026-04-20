@@ -19,7 +19,7 @@ Two lunch sessions, watch-along format. You do not need to install anything befo
 | **Best for starting** | Quick tasks, brainstorming, one-off drafts | Multi-step workflows, code, file management |
 | **Examples** | Claude, ChatGPT, Microsoft Copilot | Claude Code, OpenAI Codex |
 
-**For this bootcamp**, we demo agentic tools because they show the bigger jump in usefulness. But chat tools are a perfectly good place to start.
+**For this bootcamp**, we demo agentic tools because they show a bigger jump in usefulness. But chat tools are a perfectly good place to start.
 
 ---
 

@@ -168,7 +168,7 @@ Give it your draft as a file. It reads the full paper and flags causal language 
 Install the skill, then run it:
 
 ```bash
-claude skills add econ-audit
+npx skills add eabeam/econ-skills --skill econ-audit
 ```
 
 ```
@@ -198,7 +198,7 @@ Point it at a dataset. It reads the metadata and produces a formatted codebook: 
 Install and run:
 
 ```bash
-claude skills add data-dictionary
+npx skills add eabeam/econ-skills --skill data-dictionary
 ```
 
 ```
@@ -225,7 +225,7 @@ Give it a research question. It searches, organizes papers by theme, identifies 
 Install and run:
 
 ```bash
-claude skills add lit-review
+npx skills add eabeam/econ-skills --skill lit-review
 ```
 
 ```
