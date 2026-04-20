@@ -17,15 +17,15 @@
         minimum width=4.5cm, minimum height=2.2cm, align=left, font=\scriptsize,
         anchor=west] (desc) at (5.5,0.7) {
     \textbf{SKILL.md contains:}\\[2pt]
-    {\tiny $\bullet$ When to trigger}\\
-    {\tiny $\bullet$ Step-by-step workflow}\\
-    {\tiny $\bullet$ Quality checks}\\
-    {\tiny $\bullet$ Output specifications}\\
-    {\tiny $\bullet$ Error handling rules}
+    {\scriptsize $\bullet$ When to trigger}\\
+    {\scriptsize $\bullet$ Step-by-step workflow}\\
+    {\scriptsize $\bullet$ Quality checks}\\
+    {\scriptsize $\bullet$ Output specifications}\\
+    {\scriptsize $\bullet$ Error handling rules}
   };
   \draw[arr] (skill.east) -- ++(0.3,0) |- (desc.west);
 \end{tikzpicture}
 \vskip8pt
 \begin{tcolorbox}[quotebox, width=11cm]
-\scriptsize Skills created in Claude Code can be \textbf{copied into Codex} --- they're just markdown files. Write once, use everywhere.
+\small Skills created in Claude Code can be \textbf{copied into Codex} --- they're just markdown files. Write once, use everywhere.
 \end{tcolorbox}

@@ -168,15 +168,16 @@
   \item Claude Code vs.\ Codex
   \item Terminal vs.\ Desktop App
   \item Skills: reusable workflows
-  \item \textbf{App 1:} Website redesign
-  \item \textbf{App 2:} Skill creation
+  \item \textbf{App 1:} Finding your voice
+  \item \textbf{App 2:} Website redesign
+  \item \textbf{App 3:} Skill creation
 \end{itemize}
 \end{tcolorbox}
 \end{column}
 \end{columns}
 \vfill
 \begin{center}
-\color{CoolGray}\small No prior experience required. Bring curiosity and a task you'd like to automate.
+%\color{CoolGray}\small No prior experience required. Bring curiosity and a task you'd like to automate.
 \end{center}
 \end{frame}
 
@@ -252,6 +253,26 @@
 \end{column}
 \end{columns}
 \end{frame}
+
+
+
+
+%% ====== SLIDE 4b: UVM: Copilot ======
+\begin{frame}{A note on Microsoft Copilot}
+
+\begin{itemize} 
+\item UVM has a enterprise level Microsoft Copilot subscription: \href{https://go.uvm.edu/copilot}{https://go.uvm.edu/copilot }
+\begin{itemize} 
+	\item All our data stays at UVM 
+	\item \textbf{Must login with SSO} (or else not using the UVM-specific service)
+	\item Web interface will save outputs to OneDrive automatically 
+\end{itemize}
+	\item However, this is still Chat AI: like texting a \textit{FERPA-compliant smart friend} for advice 
+
+\item Individual faculty can request use of a paid license for better integration with Microsoft 365 products (Excel, Word, Powerpoint)
+\end{itemize} 
+\end{frame}
+
 
 %% ====== SLIDE 5: POLL ======
 \begin{frame}{Which Agentic Tool Are Economists Using?}
@@ -344,6 +365,7 @@ Skill creation & \textcolor{SlateTeal}{\faStar\faStar\faStar} & \textcolor{Slate
 \begin{tcolorbox}[quotebox, width=11cm]
 \small Think of these tools as \textbf{complementary}, not competing. Use the right tool for the right job.
 \end{tcolorbox}
+
 \end{frame}
 
 %% ====== SLIDE 7: PRICING ======
@@ -351,7 +373,7 @@ Skill creation & \textcolor{SlateTeal}{\faStar\faStar\faStar} & \textcolor{Slate
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faDollarSign\quad Plans}]
-\scriptsize
+\small
 \textbf{Light user} (\$20/mo each):\\
 Claude Pro + ChatGPT Plus\\[3pt]
 \textbf{Heavy user:}\\
@@ -363,7 +385,7 @@ Claude Sonnet: \$3--15 per M tokens
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 \textbf{Our recommendation:}
 \vskip2pt
 Start with the \textbf{\$20/month} plan. Play around before deciding to upgrade.
@@ -373,7 +395,7 @@ Codex is included --- no-brainer to try.
 \end{tcolorbox}
 \vskip4pt
 \begin{tcolorbox}[colback=PaleSage, colframe=CoolGray!50, boxrule=0.4pt, left=4pt, right=4pt, top=2pt, bottom=2pt]
-\centering\scriptsize
+\centering\small
 \textbf{What's a token?} 1 token $\approx$ $\frac{3}{4}$ of a word.\\
 200K tokens $\approx$ 150K words $\approx$ context limit.
 \end{tcolorbox}
@@ -381,31 +403,35 @@ Codex is included --- no-brainer to try.
 \end{columns}
 \end{frame}
 
-%% ====== SLIDE 7b: WHAT IT ACTUALLY COSTS ======
-\begin{frame}{What It Actually Costs --- Real Usage}
-\begin{columns}[T]
-\begin{column}{0.32\textwidth}
-\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title={\tiny Spending Overview}, fonttitle=\bfseries\tiny, coltitle=DeepCharcoal, colbacktitle=PaleSage!80]
+%% ====== SLIDE 7b: API PRICING ======
+\begin{frame}{API Pricing --- Pay-as-You-Go}
 \centering
-\includegraphics[width=\textwidth]{claude-spend-overview.png}
-\end{tcolorbox}
-\end{column}
-\begin{column}{0.32\textwidth}
-\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title={\tiny Usage by Model}, fonttitle=\bfseries\tiny, coltitle=DeepCharcoal, colbacktitle=PaleSage!80]
-\centering
-\includegraphics[width=\textwidth]{claude-usage-panel.png}
-\end{tcolorbox}
-\end{column}
-\begin{column}{0.32\textwidth}
-\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=2pt, right=2pt, top=2pt, bottom=2pt, title={\tiny Cost Breakdown}, fonttitle=\bfseries\tiny, coltitle=DeepCharcoal, colbacktitle=PaleSage!80]
-\centering
-\includegraphics[width=\textwidth]{claude-usage-table.png}
-\end{tcolorbox}
-\end{column}
-\end{columns}
+\vskip2pt
+{\small If you outgrow the subscription or want more control, both companies offer API billing where you pay per token.}
 \vskip6pt
-\begin{tcolorbox}[quotebox, width=11cm]
-\scriptsize This is real API usage since March. The \$20/mo subscription covers most people --- API pricing is for heavy or automated use.
+{\small
+\begin{tabular}{>{\raggedright\arraybackslash}m{3.5cm} >{\centering\arraybackslash}m{3cm} >{\centering\arraybackslash}m{3cm}}
+\rowcolor{SlateTeal}
+\textcolor{white}{\textbf{Model}} & \textcolor{white}{\textbf{Input (per 1M tokens)}} & \textcolor{white}{\textbf{Output (per 1M tokens)}} \\[2pt]
+\rowcolor{PaleSage}
+Claude Sonnet 4.6 & \$3.00 & \$15.00 \\[2pt]
+\rowcolor{white}
+Claude Opus 4.6 & \$15.00 & \$75.00 \\[2pt]
+\rowcolor{PaleSage}
+Claude Haiku 4.5 & \$0.80 & \$4.00 \\[2pt]
+\rowcolor{white}
+GPT-4o & \$2.50 & \$10.00 \\[2pt]
+\rowcolor{PaleSage}
+GPT-4.1 & \$2.00 & \$8.00 \\[2pt]
+\rowcolor{white}
+GPT-4o mini & \$0.15 & \$0.60 \\[2pt]
+\rowcolor{PaleSage}
+Gemini 2.5 Pro & \$1.25 & \$10.00 \\[2pt]
+\end{tabular}
+}
+\vskip6pt
+\begin{tcolorbox}[quotebox, width=10cm]
+\small A token $\approx$ $\frac{3}{4}$ of a word. Most people \textbf{don't need API billing} --- the subscription covers it.
 \end{tcolorbox}
 \end{frame}
 
@@ -414,7 +440,7 @@ Codex is included --- no-brainer to try.
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faTerminal\quad Terminal (CLI)}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Type \texttt{claude} or \texttt{codex}
   \item Gets new features fastest
@@ -425,7 +451,7 @@ Codex is included --- no-brainer to try.
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faDesktop\quad Desktop App}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Point-and-click interface
   \item More approachable for beginners
@@ -438,8 +464,50 @@ Codex is included --- no-brainer to try.
 \vskip6pt
 \pause
 \begin{tcolorbox}[quotebox, width=12cm]
-\scriptsize I use \textbf{both} terminal and desktop app simultaneously. Think of these as \textbf{different agents} you can deploy on different tasks.
+\small I use \textbf{both} terminal and desktop app simultaneously. Think of these as \textbf{different agents} you can deploy on different tasks.
 \end{tcolorbox}
+\end{frame}
+
+%% ====== SLIDE 8b: INSTALLATION & SETUP ======
+\begin{frame}[fragile]{CLI Installation \& Setup}
+\begin{columns}[T]
+\begin{column}{0.47\textwidth}
+\begin{tcolorbox}[keybox, title={\faUserPlus\quad Step 1: Accounts}]
+\small
+Create an account with one or both:
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item \textbf{Claude} (anthropic.com) $\rightarrow$ Claude Code
+  \item \textbf{ChatGPT} (openai.com) $\rightarrow$ Codex
+\end{itemize}
+\vskip2pt
+CLI will only work with a paid subscription! But any level will do
+\end{tcolorbox}
+\vskip3pt
+\begin{tcolorbox}[keybox, title={\faDownload\quad Step 2: Node.js}]
+\small
+Go to \texttt{nodejs.org} $\rightarrow$ click the green \textbf{LTS} button $\rightarrow$ run the installer, accept all defaults.
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.47\textwidth}
+\begin{tcolorbox}[keybox, title={\faTerminal\quad Step 3: Install}]
+\small
+Open Terminal (Mac) or PowerShell (Win):
+\vskip2pt
+\texttt{npm install -g @anthropic-ai/claude-code}\\[2pt]
+\texttt{npm install -g @openai/codex}
+\end{tcolorbox}
+\vskip3pt
+\begin{tcolorbox}[keybox, title={\faPlay\quad Step 4: Launch}]
+\small
+Type \texttt{claude} or \texttt{codex} and follow the sign-in prompts.
+\end{tcolorbox}
+\vskip3pt
+% \begin{tcolorbox}[accentbox, top=2pt, bottom=2pt]
+% \scriptsize
+% \textbf{Don't worry:} You don't need to install anything to follow along today. Bring a task you'd like to try!
+% \end{tcolorbox}
+\end{column}
+\end{columns}
 \end{frame}
 
 %% ====== SLIDE 9: MULTIPLE AGENTS ======
@@ -475,19 +543,23 @@ Codex is included --- no-brainer to try.
 \begin{column}{0.52\textwidth}
 \vskip2pt
 \begin{tcolorbox}[accentbox, top=3pt, bottom=3pt]
-\scriptsize
+\small
 \textbf{The power of parallelism:}
 \vskip2pt
-\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
+\begin{itemize}\setlength{\itemsep}{0pt}\small
   \item Run multiple agents on \textbf{different tasks} in the same folder
   \item Terminal + desktop app simultaneously
+  	\begin{itemize} \setlength{\itemsep}{0pt}\scriptsize
+
+  	\item Or terminal + terminal + terminal + .... 
+  	\end{itemize} 
   \item Each agent has its own context window
 \end{itemize}
 \end{tcolorbox}
 \vskip3pt
 \pause
 \begin{tcolorbox}[quotebox, top=3pt, bottom=3pt]
-\scriptsize Like having an \textbf{army of smart RAs} working on different parts of your project at the same time.
+\small Like having an \textbf{army of smart RAs} working on different parts of your project at the same time.
 \end{tcolorbox}
 \end{column}
 \end{columns}
@@ -498,7 +570,7 @@ Codex is included --- no-brainer to try.
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faMicrophone\quad Voice in Claude Code}]
-\scriptsize
+\small
 Type \texttt{/voice} to activate hold-to-talk.
 \vskip3pt
 \begin{itemize}\setlength{\itemsep}{1pt}
@@ -509,20 +581,25 @@ Type \texttt{/voice} to activate hold-to-talk.
 \end{tcolorbox}
 \end{column}
 \begin{column}{0.47\textwidth}
-\begin{tcolorbox}[keybox, title={\faKeyboard\quad Wispr Flow}]
-\scriptsize
+\begin{tcolorbox}[keybox, title={\faKeyboard\quad Wispr Flow ($\sim$\$12-15/mo)}]
+\small
 System-wide speech-to-text dictation.
 \vskip3pt
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Works in any application
   \item Converts speech to polished text
   \item \texttt{wisprflow.ai}
+  \item Mobile app (iOS adds small friction, but still very good)
 \end{itemize}
 \end{tcolorbox}
 \end{column}
 \end{columns}
-\vskip6pt
-{\scriptsize\color{CoolGray} Both tools reduce friction when translating thoughts into prompts.}
+\vfill 
+% \vskip6pt
+% {\scriptsize\color{CoolGray} Both tools reduce friction when translating thoughts into prompts.}
+\begin{tcolorbox}[accentbox, top=3pt, bottom=3pt]
+\small \textbf{Example:} I will turn on Wispr and talk my way through a PDF or code with all the changes I want to make. Then paste into the agent and ask to implement (simple changes) or make a plan (bigger changes)
+\end{tcolorbox}
 \end{frame}
 
 %% ====== SLIDE 11: MARKDOWN INTRO ======
@@ -556,13 +633,13 @@ System-wide speech-to-text dictation.
 \begin{column}{0.46\textwidth}
 \vskip2pt
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 \textbf{What are \texttt{.md} files?}
 \vskip2pt
 Plain text files with simple formatting. They serve as the \textbf{instruction manuals} that guide AI agents.
 \vskip3pt
 Agents read these to understand:
-\begin{itemize}\setlength{\itemsep}{0pt}\tiny
+\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
   \item Project rules \& conventions
   \item What to do and how
   \item Your preferred workflows
@@ -577,17 +654,18 @@ Agents read these to understand:
 \begin{columns}[T]
 \begin{column}{0.46\textwidth}
 \begin{tcolorbox}[keybox, title={How They Work}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Loaded \textbf{automatically} at session start
   \item Tell agent: style, do's \& don'ts, conventions
+  \item Memory heavy: use tokens \textbf{every turn}
   \item Equivalent of onboarding a new RA
 \end{itemize}
 \end{tcolorbox}
 \vskip3pt
 \pause
 \begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.5pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\color{SoftCoral}\faExclamation\; Pitfalls}, fonttitle=\scriptsize\bfseries, coltitle=SoftCoral]
-\scriptsize
+\small
 \begin{enumerate}\setlength{\itemsep}{0pt}
   \item Too much context $\rightarrow$ hurts performance
   \item \texttt{/init} doesn't produce great files
@@ -597,7 +675,7 @@ Agents read these to understand:
 \end{column}
 \begin{column}{0.50\textwidth}
 \begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal!50, boxrule=0.5pt, left=4pt, right=4pt, top=3pt, bottom=3pt]
-\centering\scriptsize
+\centering\small
 \textbf{Do AGENTS.md files actually help?}
 \vskip3pt
 \begin{tikzpicture}
@@ -666,10 +744,38 @@ Agents read these to understand:
 \vskip6pt
 \pause
 \begin{tcolorbox}[quotebox, width=10cm]
-\scriptsize Today we focus on \textbf{Skills}. MCPs and plugins are powerful but outside the scope of this bootcamp.
+\small Today we focus on \textbf{Skills}. MCPs and plugins are powerful but outside the scope of this bootcamp.
 \end{tcolorbox}
 \vskip1pt
 {\tiny\color{CoolGray} Adapted from Aniket Panjwani's Claude Code course}
+\end{frame}
+
+%% ====== SLIDE 13b: KEY TERMS ======
+\begin{frame}{Key Terms}
+\centering
+\vskip2pt
+{\small
+\begin{tabular}{>{\bfseries\raggedright\arraybackslash}m{3.2cm} m{9.5cm}}
+\rowcolor{SlateTeal}
+\textcolor{white}{Term} & \textcolor{white}{\textbf{What We Mean}} \\[2pt]
+\rowcolor{PaleSage}
+Agent & A tool instance carrying out a bounded task with some autonomy \\[2pt]
+\rowcolor{white}
+Model & The underlying AI system (e.g., Claude Sonnet, GPT-4o) \\[2pt]
+\rowcolor{PaleSage}
+Session & One conversation or working thread with the tool \\[2pt]
+\rowcolor{white}
+Context window & The working memory in the current session --- when full, performance degrades \\[2pt]
+\rowcolor{PaleSage}
+Artifact & A concrete output: file, draft, memo, script, table, or slide \\[2pt]
+\rowcolor{white}
+Rule file & Standing instructions (\texttt{CLAUDE.md} or \texttt{AGENTS.md}) that load automatically \\[2pt]
+\rowcolor{PaleSage}
+Token & The unit AI models process --- roughly $\frac{3}{4}$ of a word \\[2pt]
+\rowcolor{white}
+MCP & Model Context Protocol --- how tools connect to external services (email, calendar, etc.) \\[2pt]
+\end{tabular}
+}
 \end{frame}
 
 %% ====== SLIDE 14: CONTEXT WINDOW ======
@@ -677,7 +783,7 @@ Agents read these to understand:
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={What the model ``sees''}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{0pt}
   \item System prompt
   \item Developer messages (tools)
@@ -690,15 +796,15 @@ Agents read these to understand:
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 \textbf{Every turn:} the entire history gets sent as one input.
 \vskip4pt
-\textbf{Limit:} $\sim$200K tokens ($\sim$150K words)
+\textbf{Limit:} $\sim$200K tokens ($\sim$150K words), increaingly $\sim$ 1M tokens ($\sim$750k words)
 \end{tcolorbox}
 \vskip4pt
 \pause
 \begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.5pt, left=5pt, right=5pt, top=3pt, bottom=3pt]
-\centering\scriptsize
+\centering\small
 This is the \textbf{single most important concept} for using these tools well.
 \end{tcolorbox}
 \end{column}
@@ -709,14 +815,14 @@ This is the \textbf{single most important concept} for using these tools well.
 \begin{frame}[fragile]{Why the Context Window Matters}
 \centering
 \vskip2pt
-\begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal, boxrule=0.6pt, width=7cm, halign=center, top=3pt, bottom=3pt]
+\begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal, boxrule=0.6pt, width=9cm, halign=center, top=3pt, bottom=3pt]
 \normalsize
 $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{completeness}}{\text{size}}$
 \end{tcolorbox}
 \vskip6pt
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{2pt}
   \item As context grows $\rightarrow$ performance \textbf{degrades}
   \item More files, history, outputs $\rightarrow$ model loses the thread
@@ -724,7 +830,7 @@ $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{complet
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[accentbox, top=3pt, bottom=3pt]
-\scriptsize
+\small
 \textbf{Context engineering} is the new prompt engineering. It's not just what you say --- it's what's \textit{in} the window.
 \end{tcolorbox}
 \end{column}
@@ -754,7 +860,7 @@ $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{complet
 \begin{column}{0.55\textwidth}
 \vskip2pt
 \begin{enumerate}\setlength{\itemsep}{6pt}
-  \item[\color{SlateTeal}\textbf{1.}] \textbf{Long sessions degrade} --- after 20+ turns, start fresh
+  \item[\color{SlateTeal}\textbf{1.}] \textbf{Long sessions degrade} --- after 20+ turns, start fresh (\texttt{\clear})
   \pause
   \item[\color{SlateTeal}\textbf{2.}] \textbf{Write ideas to files} --- files persist, context doesn't
   \pause
@@ -762,16 +868,16 @@ $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{complet
 \end{enumerate}
 \vskip8pt
 \begin{tcolorbox}[quotebox]
-\scriptsize \textbf{Frequent intentional compaction is better} than hitting the wall and letting auto-compaction lose details.
+\small \textbf{Frequent intentional compaction is better} than hitting the wall and letting auto-compaction lose details.
 \end{tcolorbox}
 \end{column}
 \begin{column}{0.42\textwidth}
 \vskip2pt
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 \textbf{The ``start fresh'' pattern:}
 \vskip2pt
-\begin{enumerate}\setlength{\itemsep}{0pt}\tiny
+\begin{enumerate}\setlength{\itemsep}{0pt}\scriptsize
   \item Write progress to \texttt{PLAN.md}
   \item Start a new session
   \item ``Read \texttt{PLAN.md} and continue\ldots''
@@ -828,7 +934,7 @@ $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{complet
 \begin{columns}[T]
 \begin{column}{0.44\textwidth}
 \begin{tcolorbox}[keybox, title={\faLock\quad Safety}]
-\scriptsize
+\small
 \textbf{Destructive Command Guard:}\\
 Hooks that block dangerous commands (\texttt{rm -rf /}) before execution.
 \vskip3pt
@@ -837,7 +943,7 @@ Hooks are powerful --- but \textbf{outside the scope} of this bootcamp.
 \end{column}
 \begin{column}{0.52\textwidth}
 \begin{tcolorbox}[keybox, title={\faLightbulb\quad Four Prompting Rules}]
-\scriptsize
+\small
 \begin{enumerate}\setlength{\itemsep}{1pt}
   \item \textbf{Be specific.}
     {\tiny Not ``analyze data'' but ``load employment.csv, compute growth rates.''}
@@ -858,7 +964,7 @@ Hooks are powerful --- but \textbf{outside the scope} of this bootcamp.
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 The learning curve is real, but short
 \vskip4pt
 \begin{itemize}\setlength{\itemsep}{2pt}
@@ -879,7 +985,7 @@ The learning curve is real, but short
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faFlask\quad Research}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Built a replication package --- read do-files, found the dependency chain, wrote the master script
   \item Reproducible balance tables (Stata $\rightarrow$ \LaTeX)
@@ -892,7 +998,7 @@ The learning curve is real, but short
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faChalkboard\quad Teaching \& Workflow}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Course website from scratch (Hugo + GitHub Pages)
   \item Lecture slides in Quarto
@@ -906,7 +1012,7 @@ The learning curve is real, but short
 \end{columns}
 \vskip4pt
 \begin{tcolorbox}[accentbox, halign=center, width=8cm, top=3pt, bottom=3pt]
-\scriptsize\bfseries These slides were also made with AI.
+\small\bfseries These slides were also made with AI.
 \end{tcolorbox}
 \end{frame}
 
@@ -915,7 +1021,7 @@ The learning curve is real, but short
 \begin{columns}[T]
 \begin{column}{0.52\textwidth}
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{2pt}
   \item Built a Vermont cycling route planner \textit{(never used a single route)}
   \item D\&D solo campaign (very patient dungeon master)
@@ -933,86 +1039,44 @@ The learning curve is real, but short
 \end{columns}
 \end{frame}
 
-%% ====== SECTION DIVIDER: APPLICATION — VOICE FILE ======
+%% ====== SECTION DIVIDER: APP 1 ======
 {
 \setbeamertemplate{footline}{}
+\setbeamercolor{background canvas}{bg=SlateTeal}
 \begin{frame}[plain, noframenumbering]
-\begin{tikzpicture}[remember picture, overlay]
-  \fill[SlateTeal] (current page.north west) rectangle (current page.south east);
-  \node[text=white, font=\fontsize{22}{28}\bfseries\selectfont]
-    at ([yshift=0.4cm]current page.center) {Application 1};
-  \node[text=UVMGold, font=\normalsize]
-    at ([yshift=-0.4cm]current page.center) {Building Your Writing Voice};
-  \draw[UVMGold, line width=0.8pt] ([xshift=-2.5cm, yshift=0cm]current page.center) -- ([xshift=2.5cm, yshift=0cm]current page.center);
-\end{tikzpicture}
+\centering\vfill
+{\fontsize{22}{28}\bfseries\selectfont\color{white} Application 1}\\[6pt]
+{\color{UVMGold}\rule{5cm}{0.8pt}}\\[6pt]
+{\normalsize\color{UVMGold} Finding Your Voice}
+\vfill
 \end{frame}
 }
 
-%% ====== APPLICATION 1: VOICE FILE OVERVIEW ======
-\begin{frame}{Application 1: Building Your Writing Voice}
-\begin{columns}[T]
-\begin{column}{0.50\textwidth}
-\begin{tcolorbox}[keybox, title={\faPen\quad The Task}]
-\scriptsize
-Create a ``voice file'' that captures how you write --- then use it to draft emails, letters, and feedback that sound like you.
-\vskip3pt
-\textbf{Input:} 3--5 samples of your real writing\\
-\textbf{Output:} A reusable \texttt{.md} file describing your style\\
-\textbf{Time:} $\sim$5 minutes to create, seconds to use
-\end{tcolorbox}
-\end{column}
-\begin{column}{0.44\textwidth}
-\vskip2pt
-\begin{tcolorbox}[accentbox]
-\scriptsize
-\textbf{Why this demo?}
-\begin{itemize}\setlength{\itemsep}{0pt}\tiny
-  \item No installation needed --- works in any AI tool
-  \item Immediately useful for email and writing
-  \item Shows the power of context over prompting
-  \item You can start doing this today
-\end{itemize}
-\end{tcolorbox}
-\vskip3pt
-{\scriptsize\color{CoolGray} \faPlay\; We'll walk through the process live.}
-\end{column}
-\end{columns}
-\end{frame}
-
-%% ====== VOICE FILE COMPARISON ======
+%% ====== SLIDE 22: EMILY — VOICE FILE COMPARISON (3 overlays) ======
 \begin{frame}{The Voice File: Making AI Sound Like You}
-\begin{columns}[T]
-\begin{column}{0.28\textwidth}
-\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=3pt, right=3pt, top=2pt, bottom=2pt, title={\tiny ChatGPT (not logged in)}, fonttitle=\bfseries\tiny, coltitle=DeepCharcoal, colbacktitle=PaleSage!80]
 \centering
-\includegraphics[width=\textwidth]{voice-chatgpt-not-logged-in.png}
-\end{tcolorbox}
-\end{column}
-\begin{column}{0.04\textwidth}
-\centering\vskip1cm
-{\color{UVMGold}\faArrowRight}
-\end{column}
-\begin{column}{0.28\textwidth}
-\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=3pt, right=3pt, top=2pt, bottom=2pt, title={\tiny ChatGPT (logged in)}, fonttitle=\bfseries\tiny, coltitle=DeepCharcoal, colbacktitle=PaleSage!80]
+\only<1>{%
+\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt, title={\small ChatGPT (not logged in)}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=PaleSage!80, width=10cm]
 \centering
-\includegraphics[width=\textwidth]{voice-chatgpt-logged-in.png}
+\includegraphics[width=0.85\textwidth]{voice-chatgpt-not-logged-in.png}
 \end{tcolorbox}
-\end{column}
-\begin{column}{0.04\textwidth}
-\centering\vskip1cm
-{\color{UVMGold}\faArrowRight}
-\end{column}
-\begin{column}{0.28\textwidth}
-\begin{tcolorbox}[colback=LightGold, colframe=UVMGold, boxrule=0.5pt, arc=3pt, left=3pt, right=3pt, top=2pt, bottom=2pt, title={\tiny Claude + voice file}, fonttitle=\bfseries\tiny, coltitle=DeepCharcoal, colbacktitle=LightGold!80]
+}%
+\only<2>{%
+\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt, title={\small ChatGPT (logged in)}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=PaleSage!80, width=10cm]
 \centering
-\includegraphics[width=\textwidth]{voice-claude-with-voice.png}
+\includegraphics[width=0.85\textwidth]{voice-chatgpt-logged-in.png}
 \end{tcolorbox}
-\end{column}
-\end{columns}
-\vskip6pt
-\begin{tcolorbox}[quotebox, width=11cm]
+}%
+\only<3>{%
+\begin{tcolorbox}[colback=LightGold, colframe=UVMGold, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt, title={\small Claude + voice file}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=LightGold!80, width=10cm]
+\centering
+\includegraphics[width=0.85\textwidth]{voice-claude-with-voice.png}
+\end{tcolorbox}
+\vskip4pt
+\begin{tcolorbox}[quotebox, width=10cm]
 \scriptsize Same prompt, three different outputs. \textbf{Context is the difference.}
 \end{tcolorbox}
+}%
 \end{frame}
 
 %% ====== SLIDE 23: EMILY — CREATING A VOICE FILE ======
@@ -1020,7 +1084,7 @@ Create a ``voice file'' that captures how you write --- then use it to draft ema
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 A ``voice file'' is a plain Markdown file that describes how you write --- tone, structure, habits. The AI reads it and matches your style.
 \vskip4pt
 \textbf{You don't write it from scratch.} Give the AI samples of your real writing --- emails, letters of recommendation, feedback --- and ask it to describe your patterns.
@@ -1041,9 +1105,9 @@ Save it as EB-VOICE.md.
 \end{tcolorbox}
 \vskip3pt
 \begin{tcolorbox}[quotebox, top=3pt, bottom=3pt]
-\scriptsize
+\small
 \textbf{What you get back:}\\[2pt]
-{\tiny $\bullet$ Tone: direct, warm, slightly informal\\
+{\scriptsize $\bullet$ Tone: direct, warm, slightly informal\\
 $\bullet$ Opens with context, not greeting\\
 $\bullet$ Short paragraphs, rarely > 3 sentences\\
 $\bullet$ Avoids: hedging, exclamation points}
@@ -1057,7 +1121,7 @@ $\bullet$ Avoids: hedging, exclamation points}
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faPen\quad Once the file exists}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{2pt}
   \item Tell the AI to \textbf{load it automatically} via standing instructions
   \item \textbf{Call it on demand}: ``Draft this email using my voice file''
@@ -1077,7 +1141,31 @@ firm --- the deadline stands.
 \end{tcolorbox}
 \vskip3pt
 \begin{tcolorbox}[quotebox, top=3pt, bottom=3pt]
-\scriptsize Output looks like \textbf{you wrote it} --- not like a chatbot wrote it. That's the point.
+\small Output looks like \textbf{you wrote it} --- not like a chatbot wrote it. That's the point.
+\end{tcolorbox}
+\end{column}
+\end{columns}
+\end{frame}
+
+%% ====== SLIDE 24b: EMAIL INTEGRATIONS NOTE ======
+\begin{frame}{A Note on Email Integrations}
+\begin{columns}[T]
+\begin{column}{0.52\textwidth}
+\begin{tcolorbox}[keybox, title={\faEnvelope\quad What works today}]
+\small
+Tools like Claude Code have direct integrations with \textbf{Gmail and Google Calendar} --- reading, drafting, and scheduling.
+\vskip4pt
+This means you can draft emails in your voice, triage your inbox, and create calendar events --- all from the same agent.
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.44\textwidth}
+\begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.5pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\color{SoftCoral}\faExclamation\; Outlook limitation}, fonttitle=\scriptsize\bfseries, coltitle=SoftCoral]
+\small
+AI agents \textbf{cannot} currently interact with the Outlook desktop app --- Microsoft gates this heavily. Demos here use saved files, not a live inbox connection.
+\end{tcolorbox}
+\vskip4pt
+\begin{tcolorbox}[quotebox, top=3pt, bottom=3pt]
+\small \textbf{Tip:} Keep a central folder for all your prompts and voice files. They accumulate fast.
 \end{tcolorbox}
 \end{column}
 \end{columns}
@@ -1088,7 +1176,7 @@ firm --- the deadline stands.
 \begin{columns}[T]
 \begin{column}{0.52\textwidth}
 \begin{tcolorbox}[quotebox, top=3pt, bottom=3pt]
-\scriptsize I spend most of my time \textbf{planning}, especially for complex multi-step projects.
+\small I spend most of my time \textbf{planning}, especially for complex multi-step projects.
 \end{tcolorbox}
 \vskip3pt
 \centering
@@ -1114,9 +1202,9 @@ firm --- the deadline stands.
 \begin{column}{0.44\textwidth}
 \vskip2pt
 \begin{tcolorbox}[accentbox, top=3pt, bottom=3pt]
-\scriptsize
+\small
 \textbf{What goes in a plan?}
-\begin{itemize}\setlength{\itemsep}{0pt}\tiny
+\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
   \item Project objectives
   \item Do's and don'ts
   \item Inputs and outputs
@@ -1125,7 +1213,7 @@ firm --- the deadline stands.
 \end{tcolorbox}
 \vskip3pt
 \begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal!40, boxrule=0.4pt, left=4pt, right=4pt, top=2pt, bottom=2pt]
-\scriptsize
+\small
 \textbf{Why save locally?}\\
 Every fresh context starts with:\\
 \texttt{``Read PLAN.md and continue...''}
@@ -1145,7 +1233,7 @@ Every fresh context starts with:\\
 \begin{columns}[T]
 \begin{column}{0.46\textwidth}
 \begin{tcolorbox}[keybox, title={Without a plan}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Constant back-and-forth fixing
   \item Wasted tokens on corrections
@@ -1155,7 +1243,7 @@ Every fresh context starts with:\\
 \end{column}
 \begin{column}{0.46\textwidth}
 \begin{tcolorbox}[keybox, title={With a detailed plan}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Reduces or \textbf{eliminates} rework
   \item Fewer tokens $\rightarrow$ lower cost
@@ -1167,7 +1255,7 @@ Every fresh context starts with:\\
 \vskip6pt
 \pause
 \begin{tcolorbox}[quotebox, width=11cm]
-\scriptsize A detailed plan will save you a \textbf{TON} of time. Think long-term gains, not short term. May not matter for quick tasks!
+\small A detailed plan will save you a \textbf{TON} of time. Think long-term gains, not short term. May not matter for quick tasks!
 \end{tcolorbox}
 \end{frame}
 
@@ -1176,7 +1264,7 @@ Every fresh context starts with:\\
 \begin{columns}[T]
 \begin{column}{0.46\textwidth}
 \begin{tcolorbox}[keybox, title={\faCubes\quad Definition}]
-\scriptsize
+\small
 Markdown instruction \textbf{playbooks} that teach Claude Code how to perform a specific task consistently.
 \vskip3pt
 Think of them as \textbf{SOPs for your AI agent}.
@@ -1188,7 +1276,7 @@ Think of them as \textbf{SOPs for your AI agent}.
 \end{column}
 \begin{column}{0.46\textwidth}
 \begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal!50, boxrule=0.4pt, left=5pt, right=5pt, top=3pt, bottom=3pt]
-\scriptsize
+\small
 \textbf{Why not just prompt every time?}
 \vskip3pt
 \begin{tabular}{@{}l@{\;}c@{\;}c@{}}
@@ -1211,7 +1299,7 @@ Reusable & \textcolor{SoftCoral}{No} & \textcolor{SlateTeal}{Yes} \\
 \begin{columns}[T]
 \begin{column}{0.52\textwidth}
 \begin{tcolorbox}[keybox, title={\faDownload\quad Step-by-Step}]
-\scriptsize
+\small
 \textbf{1. Add the marketplace:}\\
 \texttt{/plugin marketplace add anthropics/skills}
 \vskip4pt
@@ -1226,9 +1314,9 @@ Reusable & \textcolor{SoftCoral}{No} & \textcolor{SlateTeal}{Yes} \\
 \begin{column}{0.44\textwidth}
 \vskip2pt
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 \textbf{Also available:}
-\begin{itemize}\setlength{\itemsep}{0pt}\tiny
+\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
   \item \texttt{/find-data} --- dataset discovery
   \item \texttt{/lit-review} --- literature synthesis
   \item \texttt{/econ-audit} --- empirical review
@@ -1266,22 +1354,20 @@ Reusable & \textcolor{SoftCoral}{No} & \textcolor{SlateTeal}{Yes} \\
 \vskip6pt
 \pause
 \begin{tcolorbox}[quotebox, width=10cm]
-\scriptsize If you repeat a workflow more than twice, it should probably be a skill.
+\small If you repeat a workflow more than twice, it should probably be a skill.
 \end{tcolorbox}
 \end{frame}
 
 %% ====== SECTION DIVIDER: APP 2 ======
 {
 \setbeamertemplate{footline}{}
+\setbeamercolor{background canvas}{bg=SlateTeal}
 \begin{frame}[plain, noframenumbering]
-\begin{tikzpicture}[remember picture, overlay]
-  \fill[SlateTeal] (current page.north west) rectangle (current page.south east);
-  \node[text=white, font=\fontsize{22}{28}\bfseries\selectfont]
-    at ([yshift=0.4cm]current page.center) {Application 2};
-  \node[text=UVMGold, font=\normalsize]
-    at ([yshift=-0.4cm]current page.center) {Website Redesign with \texttt{/frontend-design}};
-  \draw[UVMGold, line width=0.8pt] ([xshift=-2.5cm, yshift=0cm]current page.center) -- ([xshift=2.5cm, yshift=0cm]current page.center);
-\end{tikzpicture}
+\centering\vfill
+{\fontsize{22}{28}\bfseries\selectfont\color{white} Application 2}\\[6pt]
+{\color{UVMGold}\rule{5cm}{0.8pt}}\\[6pt]
+{\normalsize\color{UVMGold} Website Redesign with \texttt{/frontend-design}}
+\vfill
 \end{frame}
 }
 
@@ -1290,7 +1376,7 @@ Reusable & \textcolor{SoftCoral}{No} & \textcolor{SlateTeal}{Yes} \\
 \begin{columns}[T]
 \begin{column}{0.50\textwidth}
 \begin{tcolorbox}[keybox, title={\faGlobe\quad The Task}]
-\scriptsize
+\small
 Take an existing faculty website and redesign it using \texttt{/frontend-design}.
 \vskip3pt
 \textbf{Target:} \texttt{erkmengirayaslim.com}\\
@@ -1302,9 +1388,9 @@ We are \textit{not} launching --- just demonstrating.
 \begin{column}{0.44\textwidth}
 \vskip2pt
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 \textbf{Why this demo?}
-\begin{itemize}\setlength{\itemsep}{0pt}\tiny
+\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
   \item Shows power of a single skill
   \item Tangible result in minutes
   \item Demonstrates prompt specificity
@@ -1333,7 +1419,7 @@ Focus on: clean typography, clear navigation, prominent research section, respon
 \end{tcolorbox}
 \vskip4pt
 \begin{tcolorbox}[quotebox, width=12cm]
-\scriptsize Notice how the prompt is \textbf{specific}: skill name, target, inspiration, number of outputs, where to save. This is effective prompting.
+\small Notice how the prompt is \textbf{specific}: skill name, target, inspiration, number of outputs, where to save. This is effective prompting.
 \end{tcolorbox}
 \end{frame}
 
@@ -1379,32 +1465,30 @@ Focus on: clean typography, clear navigation, prominent research section, respon
         minimum width=4.5cm, minimum height=2.2cm, align=left, font=\scriptsize,
         anchor=west] (desc) at (5.5,0.7) {
     \textbf{SKILL.md contains:}\\[2pt]
-    {\tiny $\bullet$ When to trigger}\\
-    {\tiny $\bullet$ Step-by-step workflow}\\
-    {\tiny $\bullet$ Quality checks}\\
-    {\tiny $\bullet$ Output specifications}\\
-    {\tiny $\bullet$ Error handling rules}
+    {\scriptsize $\bullet$ When to trigger}\\
+    {\scriptsize $\bullet$ Step-by-step workflow}\\
+    {\scriptsize $\bullet$ Quality checks}\\
+    {\scriptsize $\bullet$ Output specifications}\\
+    {\scriptsize $\bullet$ Error handling rules}
   };
   \draw[arr] (skill.east) -- ++(0.3,0) |- (desc.west);
 \end{tikzpicture}
 \vskip8pt
 \begin{tcolorbox}[quotebox, width=11cm]
-\scriptsize Skills created in Claude Code can be \textbf{copied into Codex} --- they're just markdown files. Write once, use everywhere.
+\small Skills created in Claude Code can be \textbf{copied into Codex} --- they're just markdown files. Write once, use everywhere.
 \end{tcolorbox}
 \end{frame}
 
 %% ====== SECTION DIVIDER: APP 3 ======
 {
 \setbeamertemplate{footline}{}
+\setbeamercolor{background canvas}{bg=SlateTeal}
 \begin{frame}[plain, noframenumbering]
-\begin{tikzpicture}[remember picture, overlay]
-  \fill[SlateTeal] (current page.north west) rectangle (current page.south east);
-  \node[text=white, font=\fontsize{22}{28}\bfseries\selectfont]
-    at ([yshift=0.4cm]current page.center) {Application 3};
-  \node[text=UVMGold, font=\normalsize]
-    at ([yshift=-0.4cm]current page.center) {Creating a Custom Skill with \texttt{/skill-creator}};
-  \draw[UVMGold, line width=0.8pt] ([xshift=-2.5cm, yshift=0cm]current page.center) -- ([xshift=2.5cm, yshift=0cm]current page.center);
-\end{tikzpicture}
+\centering\vfill
+{\fontsize{22}{28}\bfseries\selectfont\color{white} Application 3}\\[6pt]
+{\color{UVMGold}\rule{5cm}{0.8pt}}\\[6pt]
+{\normalsize\color{UVMGold} Creating a Custom Skill with \texttt{/skill-creator}}
+\vfill
 \end{frame}
 }
 
@@ -1413,7 +1497,7 @@ Focus on: clean typography, clear navigation, prominent research section, respon
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faCubes\quad The Goal}]
-\scriptsize
+\small
 Create a skill that:
 \begin{enumerate}\setlength{\itemsep}{1pt}
   \item Reads papers, textbooks, articles
@@ -1427,9 +1511,9 @@ Create a skill that:
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[accentbox]
-\scriptsize
+\small
 \textbf{Why this is powerful:}
-\begin{itemize}\setlength{\itemsep}{0pt}\tiny
+\begin{itemize}\setlength{\itemsep}{0pt}\scriptsize
   \item 50-page paper $\rightarrow$ 20-slide deck
   \item Consistent formatting every time
   \item Customizable to your teaching style
@@ -1459,7 +1543,7 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \end{tcolorbox}
 \vskip4pt
 \begin{tcolorbox}[quotebox, width=11cm]
-\scriptsize Note the \textbf{detail}: specific inputs, outputs, supporting scripts, and where to save. Effective skill creation prompts mirror effective planning.
+\small Note the \textbf{detail}: specific inputs, outputs, supporting scripts, and where to save. Effective skill creation prompts mirror effective planning.
 \end{tcolorbox}
 \end{frame}
 
@@ -1468,7 +1552,7 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faChalkboard\quad Teaching Skills}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item \texttt{/find-data} --- discover datasets
   \item \texttt{/referee-report-grader} --- grade student reports with rubric
@@ -1478,7 +1562,7 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faSearch\quad Research Skills}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item \texttt{/lit-review} --- literature synthesis
   \item \texttt{/econ-audit} --- adversarial empirical review
@@ -1501,7 +1585,7 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
   takeaway/.style={
     draw=SlateTeal, fill=PaleSage, rounded corners=3pt,
     minimum width=9cm, minimum height=0.8cm,
-    align=center, font=\scriptsize
+    align=center, font=\small
   }
 ]
   \node[circle, fill=UVMGold, text=white, font=\scriptsize\bfseries, minimum size=0.5cm] (n1) at (-5.3,2) {1};
@@ -1529,7 +1613,7 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faGraduationCap\quad Teaching}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item \textbf{AI Tutorbot} for Intro Econ on Brightspace
   \item Automated office hours Q\&A
@@ -1540,10 +1624,10 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faUniversity\quad Department-Wide}]
-\scriptsize
+\small
 \begin{itemize}\setlength{\itemsep}{1pt}
   \item Shared skill library across faculty
-  \item Research assistant infrastructure
+  \item Research assistant infrastructure and on-boarding
   \item Automated data pipelines
   \item Cross-course alignment tools
 \end{itemize}
@@ -1554,7 +1638,7 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \pause
 \begin{tcolorbox}[accentbox, halign=center, width=11cm, top=3pt, bottom=3pt]
 \small\bfseries We can shape the future of Economics teaching at UVM.\\[1pt]
-\normalfont\scriptsize Start brainstorming. What would \textit{you} automate?
+\normalfont\small Start brainstorming. What would \textit{you} automate?
 \end{tcolorbox}
 \end{frame}
 
@@ -1594,13 +1678,23 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \begin{frame}{Your Productivity After This Bootcamp}
 \centering
 \vskip-2pt
-%\begin{tikzpicture}[remember picture]
-%  \node[inner sep=0pt] (img) {\includegraphics[height=0.65\textheight, keepaspectratio]{artemis.jpeg}};
-%  \node[fill=DarkSlate, fill opacity=0.75, text opacity=1, text=white,
-%        font=\normalsize\bfseries, rounded corners=3pt,
-%        inner sep=6pt, anchor=south]
-%    at ([yshift=0.2cm]img.south) {Your research output after learning Claude Code};
-%\end{tikzpicture}
+\begin{tikzpicture}[remember picture]
+  \node[inner sep=0pt] (img) {\includegraphics[height=0.65\textheight, keepaspectratio]{artemis.jpeg}};
+  \node[fill=DarkSlate, fill opacity=0.75, text opacity=1, text=white,
+        font=\normalsize\bfseries, rounded corners=3pt,
+        inner sep=6pt, anchor=south]
+    at ([yshift=0.2cm]img.south) {Your research output after learning Claude Code};
+\end{tikzpicture}
+\end{frame}
+
+%% ====== SLIDE 36b: ERKMEN PLACEHOLDER ======
+\begin{frame}{Erkmen's Slides}
+\centering
+\vfill
+\begin{tcolorbox}[accentbox, width=8cm, halign=center]
+\large\bfseries\color{SlateTeal} Placeholder for Erkmen's slides
+\end{tcolorbox}
+\vfill
 \end{frame}
 
 %% ====== SLIDE 37: MYTHOS MEME ======
