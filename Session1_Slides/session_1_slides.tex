@@ -683,18 +683,18 @@ Agents read these to understand:
 \begin{columns}[T]
 \begin{column}{0.46\textwidth}
 \begin{tcolorbox}[keybox, title={How They Work}]
-\small
-\begin{itemize}\setlength{\itemsep}{1pt}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{0pt}
   \item Loaded \textbf{automatically} at session start
   \item Tell agent: style, do's \& don'ts, conventions
   \item Memory heavy: use tokens \textbf{every turn}
   \item Equivalent of onboarding a new RA
 \end{itemize}
 \end{tcolorbox}
-\vskip3pt
+\vskip2pt
 \pause
-\begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.5pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\color{SoftCoral}\faExclamation\; Pitfalls}, fonttitle=\scriptsize\bfseries, coltitle=SoftCoral]
-\small
+\begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.5pt, left=5pt, right=5pt, top=2pt, bottom=2pt, title={\color{SoftCoral}\faExclamation\; Pitfalls}, fonttitle=\scriptsize\bfseries, coltitle=SoftCoral]
+\scriptsize
 \begin{enumerate}\setlength{\itemsep}{0pt}
   \item Too much context $\rightarrow$ hurts performance
   \item \texttt{/init} doesn't produce great files
@@ -710,7 +710,7 @@ Agents read these to understand:
 \begin{tikzpicture}
 \begin{axis}[
     ybar, bar width=6pt,
-    width=5.8cm, height=3.2cm,
+    width=5.8cm, height=2.8cm,
     ymin=30, ymax=80,
     ylabel={\tiny Success rate (\%)},
     symbolic x coords={Sonnet-4.5, GPT-5.2, GPT-5.1 Mini, Qwen3-30B},
@@ -875,83 +875,83 @@ $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{complet
 \end{columns}
 \end{frame}
 
-%% ====== SLIDE 16b: PERMISSIONS SPECTRUM ======
+%% ====== SLIDE 16b: PERMISSIONS SPECTRUM (4 overlays in one frame) ======
 \begin{frame}{The Access Spectrum}
 \centering
 \vskip2pt
 
+% Gradient bar — always visible
 \begin{tikzpicture}[x=0.09\textwidth]
-  % Gradient bar
   \shade[left color=PaleSage, right color=SoftCoral!40] (0,0) rectangle (10,0.5);
   \draw[CoolGray, thick] (0,0) rectangle (10,0.5);
 
-  % Labels at ends
   \node[below, font=\small\bfseries, text=SlateTeal] at (0,-0.05) {Chat AI};
   \node[below, font=\scriptsize, text=CoolGray] at (0,-0.4) {(sandbox)};
 
-  \node[below, font=\small\bfseries, text=SoftCoral] at (10,-0.05) {Clawbot};
+  \node[below, font=\small\bfseries, text=SoftCoral] at (10,-0.05) {Clawdbot};
   \node[below, font=\scriptsize, text=CoolGray] at (10,-0.4) {(GOD MODE)};
 
-  % Default tick at ~25th percentile
   \draw[DeepCharcoal, very thick] (2.5,-.1) -- (2.5,0.65);
   \node[above, font=\scriptsize\bfseries, text=DeepCharcoal] at (2.5,0.7) {DEFAULT};
 
-  % "We stay here" bracket
   \draw[AccentBlue, thick, decorate, decoration={brace, amplitude=3pt, mirror}]
     (1.5,-0.9) -- (6.0,-0.9);
-  \node[below, font=\scriptsize\color{AccentBlue}] at (3.75,-1.05) {We stay here};
+  \node[below, font=\scriptsize\color{AccentBlue}] at (3.75,-1.05)
+    {We stay here: works in your project folder, asks before anything risky};
 \end{tikzpicture}
 
-\vskip4pt
-% Three screenshots side by side, no boxes
-\begin{columns}[c]
-\begin{column}{0.32\textwidth}
-\centering
-\includegraphics[width=\textwidth, height=4.2cm, keepaspectratio]{figures/clawbot-1.jpg}
-\end{column}
-\begin{column}{0.32\textwidth}
-\centering
-\includegraphics[width=\textwidth, height=4.2cm, keepaspectratio]{figures/clawbot-2.jpg}
-\end{column}
-\begin{column}{0.32\textwidth}
-\centering
-\includegraphics[width=\textwidth, height=4.2cm, keepaspectratio]{figures/clawbot-3.jpg}
-\end{column}
-\end{columns}
-\vskip2pt
-{\tiny\color{SoftCoral} Real conversation. The agent bulk-deleted hundreds of emails without approval.}
-\end{frame}
+\vskip6pt
 
-%% ====== SLIDE 16c: SANDBOX EXPLAINED ======
-\begin{frame}{The Access Spectrum --- Sandbox}
-\begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal!30, boxrule=0.4pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
+% Overlay 2: Sandbox
+\only<2>{%
+\begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal!30, boxrule=0.4pt, left=8pt, right=8pt, top=5pt, bottom=5pt]
 \small
-\textbf{Sandbox (left end of the spectrum)}
-\vskip4pt
-\begin{itemize}\setlength{\itemsep}{2pt}
+\textbf{Sandbox (left end)}
+\vskip3pt
+\begin{itemize}\setlength{\itemsep}{1pt}
   \item Paste text in, get text back
   \item Tool sees nothing on your machine
   \item No risk, but more manual work
   \item Examples: ChatGPT web, Microsoft Copilot chat
 \end{itemize}
 \end{tcolorbox}
-\end{frame}
+}%
 
-%% ====== SLIDE 16d: GOD MODE EXPLAINED ======
-\begin{frame}{The Access Spectrum --- GOD MODE}
-\begin{tcolorbox}[colback=SoftCoral!6, colframe=SoftCoral!50, boxrule=0.4pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
+% Overlay 3: GOD MODE
+\only<3>{%
+\begin{tcolorbox}[colback=SoftCoral!6, colframe=SoftCoral!50, boxrule=0.4pt, left=8pt, right=8pt, top=5pt, bottom=5pt]
 \small
-\textbf{GOD MODE (right end of the spectrum)}
-\vskip4pt
-\begin{itemize}\setlength{\itemsep}{2pt}
+\textbf{GOD MODE (right end)}
+\vskip3pt
+\begin{itemize}\setlength{\itemsep}{1pt}
   \item Reads, writes, sends, deletes --- everything
   \item Can access email, calendar, files, external services
   \item Very powerful --- also very risky
   \item We do \textbf{NOT} do this
 \end{itemize}
 \end{tcolorbox}
-\vskip6pt
-{\small\color{DeepCharcoal} The \textbf{default}: works in your project folder, asks before anything risky.\\You control it via \texttt{CLAUDE.md} and permission settings.}
+}%
+
+% Overlay 4: Screenshots
+\only<4>{%
+\begin{columns}[c]
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth, height=4.5cm, keepaspectratio]{figures/clawbot-1.jpg}
+\end{column}
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth, height=4.5cm, keepaspectratio]{figures/clawbot-2.jpg}
+\end{column}
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth, height=4.5cm, keepaspectratio]{figures/clawbot-3.jpg}
+\end{column}
+\end{columns}
+\vskip2pt
+{\tiny\color{SoftCoral} Meta AI security and safety researcher.}
+}%
+
 \end{frame}
 
 %% ====== SLIDE 17: PERMISSION MODES ======
@@ -1049,10 +1049,6 @@ Hooks are powerful --- but \textbf{outside the scope} of this bootcamp.
 \end{tcolorbox}
 \end{column}
 \end{columns}
-\vskip3pt
-\begin{tcolorbox}[quotebox, width=12cm]
-\small The failure mode is \textbf{not} ``it refuses to help.'' It's ``it helps confidently and is wrong.'' Treat every output as a first draft.
-\end{tcolorbox}
 \end{frame}
 
 %% ====== SLIDE 18c: WHEN NOT TO USE IT ======
@@ -1090,22 +1086,20 @@ Hooks are powerful --- but \textbf{outside the scope} of this bootcamp.
 
 %% ====== SLIDE 18d: REAL PROMPTS ======
 \begin{frame}[fragile]{What Real Prompts Look Like}
-\begin{tcolorbox}[colback=DarkSlate, colframe=DarkSlate, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
-{\color{CoolGray}\ttfamily\tiny Simple:\color{white}\scriptsize\\
-Write a Stata do-file that cleans this dataset, labels the variables, and saves a clean version.\\[4pt]
-\color{CoolGray}\tiny Data exploration:\color{white}\scriptsize\\
-Read the .dta file. Tell me how many observations per year, what variables we have, and flag anything that looks weird. Restrict to working-age adults 25--64 and drop anyone with zero or missing wages. Do this in Stata.\\[4pt]
-\color{CoolGray}\tiny Admin:\color{white}\scriptsize\\
-Extract the deadlines from this document and put them in a table.\\[4pt]
-\color{CoolGray}\tiny Visualization:\color{white}\scriptsize\\
-Make two graphs. First: plot the immigrant share over time, separately for each of the four education groups. Second: show how the total immigrant share has changed by state --- pick the top 6 states by immigrant share in 2020 and plot their trends. Make both graphs clean: white background, labeled lines, y-axis as percentage.\\[4pt]
-\color{CoolGray}\tiny Correction:\color{white}\scriptsize\\
-Fix the language --- this is a replication exercise showing correlations, not a causal estimate.\\[4pt]
-\color{CoolGray}\tiny Advanced:\color{white}\scriptsize\\
+\begin{tcolorbox}[colback=DarkSlate, colframe=DarkSlate, arc=3pt, left=6pt, right=6pt, top=3pt, bottom=3pt]
+{\color{CoolGray}\ttfamily\tiny Simple:\color{white}\tiny\\
+Write a Stata do-file that cleans this dataset, labels the variables, and saves a clean version.\\[3pt]
+\color{CoolGray}\tiny Data exploration:\color{white}\tiny\\
+Read the .dta file. Tell me how many observations per year, what variables we have, and flag anything that looks weird. Restrict to working-age adults 25--64 and drop anyone with zero or missing wages. Do this in Stata.\\[3pt]
+\color{CoolGray}\tiny Admin:\color{white}\tiny\\
+Extract the deadlines from this document and put them in a table.\\[3pt]
+\color{CoolGray}\tiny Correction:\color{white}\tiny\\
+Fix the language --- this is a replication exercise showing correlations, not a causal estimate.\\[3pt]
+\color{CoolGray}\tiny Advanced:\color{white}\tiny\\
 Before writing your score, spawn a research subagent. Search for 2--3 of the most-cited papers referenced in the proposal. For each, summarize: (1) its main finding, and (2) how the proposed study builds on or departs from it.
 }
 \end{tcolorbox}
-\vskip3pt
+\vskip2pt
 {\small\color{CoolGray} No special syntax. Just say what you want. Iterate from there.}
 \end{frame}
 
@@ -1125,7 +1119,7 @@ The learning curve is real, but short
 \end{column}
 \begin{column}{0.47\textwidth}
 \vskip2pt
-\includegraphics[width=\textwidth]{blattman-tweet.png}
+\includegraphics[width=\textwidth, height=0.65\textheight, keepaspectratio]{blattman-tweet.png}
 \end{column}
 \end{columns}
 \end{frame}
@@ -1135,8 +1129,8 @@ The learning curve is real, but short
 \begin{columns}[T]
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faFlask\quad Research}]
-\small
-\begin{itemize}\setlength{\itemsep}{1pt}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{0pt}
   \item Built a replication package --- read do-files, found the dependency chain, wrote the master script
   \item Reproducible balance tables (Stata $\rightarrow$ \LaTeX)
   \item R script to pull IPUMS census data via API
@@ -1148,8 +1142,8 @@ The learning curve is real, but short
 \end{column}
 \begin{column}{0.47\textwidth}
 \begin{tcolorbox}[keybox, title={\faChalkboard\quad Teaching \& Workflow}]
-\small
-\begin{itemize}\setlength{\itemsep}{1pt}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{0pt}
   \item Course website from scratch (Hugo + GitHub Pages)
   \item Lecture slides in Quarto
   \item Assignment prompts and rubrics from learning goals
@@ -1179,8 +1173,6 @@ The learning curve is real, but short
   \item Automated the to-do list review --- now we procrastinate \textit{faster}
 \end{itemize}
 \end{tcolorbox}
-\vskip4pt
-{\scriptsize\color{CoolGray} The learning curve is real, but at least the rabbit holes are entertaining.}
 \end{column}
 \begin{column}{0.52\textwidth}
 \vskip2pt
@@ -1206,24 +1198,24 @@ The learning curve is real, but short
 \begin{frame}{The Voice File: Making AI Sound Like You}
 \centering
 \only<1>{%
-\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt, title={\small ChatGPT (not logged in)}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=PaleSage!80, width=10cm]
+\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=3pt, bottom=3pt, title={\small ChatGPT (not logged in)}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=PaleSage!80, width=10cm]
 \centering
-\includegraphics[width=0.85\textwidth]{voice-chatgpt-not-logged-in.png}
+\includegraphics[width=0.85\textwidth, height=0.55\textheight, keepaspectratio]{voice-chatgpt-not-logged-in.png}
 \end{tcolorbox}
 }%
 \only<2>{%
-\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt, title={\small ChatGPT (logged in)}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=PaleSage!80, width=10cm]
+\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=3pt, bottom=3pt, title={\small ChatGPT (logged in)}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=PaleSage!80, width=10cm]
 \centering
-\includegraphics[width=0.85\textwidth]{voice-chatgpt-logged-in.png}
+\includegraphics[width=0.85\textwidth, height=0.55\textheight, keepaspectratio]{voice-chatgpt-logged-in.png}
 \end{tcolorbox}
 }%
 \only<3>{%
-\begin{tcolorbox}[colback=LightGold, colframe=UVMGold, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt, title={\small Claude + voice file}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=LightGold!80, width=10cm]
+\begin{tcolorbox}[colback=LightGold, colframe=UVMGold, boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=3pt, bottom=3pt, title={\small Claude + voice file}, fonttitle=\bfseries\small, coltitle=DeepCharcoal, colbacktitle=LightGold!80, width=10cm]
 \centering
-\includegraphics[width=0.85\textwidth]{voice-claude-with-voice.png}
+\includegraphics[width=0.85\textwidth, height=0.5\textheight, keepaspectratio]{voice-claude-with-voice.png}
 \end{tcolorbox}
-\vskip4pt
-\begin{tcolorbox}[quotebox, width=10cm]
+\vskip2pt
+\begin{tcolorbox}[quotebox, width=10cm, top=2pt, bottom=2pt]
 \scriptsize Same prompt, three different outputs. \textbf{Context is the difference.}
 \end{tcolorbox}
 }%
@@ -1562,20 +1554,20 @@ We are \textit{not} launching --- just demonstrating.
 
 %% ====== APP 2 PROMPT ======
 \begin{frame}{The Prompt}
-\begin{tcolorbox}[colback=DarkSlate, colframe=DarkSlate, arc=3pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
+\begin{tcolorbox}[colback=DarkSlate, colframe=DarkSlate, arc=3pt, left=8pt, right=8pt, top=3pt, bottom=3pt]
 {\color{CoolGray}\ttfamily\tiny /frontend-design\\[2pt]
-\color{white}\scriptsize
-I have a website at erkmengirayaslim.com. Please redesign it with a modern, clean aesthetic. Use anthropic.com for design inspiration (minimal, spacious) and caitlinmyers.github.io for academic content structure.\\[3pt]
+\color{white}\tiny
+I have a website at erkmengirayaslim.com. Please redesign it with a modern, clean aesthetic. Use anthropic.com for design inspiration (minimal, spacious) and caitlinmyers.github.io for academic content structure.\\[2pt]
 Create three distinct mock-ups:\\
 1. Minimal dark theme with accent colors\\
 2. Light academic theme with card-based layout\\
-3. Bold modern theme with full-width hero sections\\[3pt]
-Download all content from my current site. Save HTML files and screenshot PNGs to the current directory.\\[3pt]
+3. Bold modern theme with full-width hero sections\\[2pt]
+Download all content from my current site. Save HTML files and screenshot PNGs to the current directory.\\[2pt]
 Focus on: clean typography, clear navigation, prominent research section, responsive design.
 }
 \end{tcolorbox}
-\vskip4pt
-\begin{tcolorbox}[quotebox, width=12cm]
+\vskip3pt
+\begin{tcolorbox}[quotebox, width=12cm, top=2pt, bottom=2pt]
 \small Notice how the prompt is \textbf{specific}: skill name, target, inspiration, number of outputs, where to save. This is effective prompting.
 \end{tcolorbox}
 \end{frame}
