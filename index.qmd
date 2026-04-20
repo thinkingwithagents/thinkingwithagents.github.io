@@ -12,6 +12,7 @@ toc: false
   <div class="hero-left">
     <h1>AI for UVM<br>Economics</h1>
     <p class="hero-subtitle">AI tools for teaching and research</p>
+    <p class="hero-meta">Erkmen G. Aslim &amp; Emily Beam</p>
     <p class="hero-meta">Department of Economics · Spring 2026</p>
   </div>
   <div class="hero-right">
