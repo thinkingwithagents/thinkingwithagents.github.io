@@ -56,7 +56,7 @@ The best skill is one you build for a task you actually repeat.
 
 ### Voice files
 
-A voice file describes how you write — tone, sentence length, habits, what you avoid. The AI reads it and matches your style. See the [Session 1 slides](session1.html) for how to create one.
+A voice file describes how you write — tone, sentence length, habits, what you avoid. The AI reads it and matches your style. See the [Session 1 slides](Session1_Slides/session_1_slides.pdf) for how to create one.
 
 ### Project instruction files
 
