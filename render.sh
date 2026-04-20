@@ -14,7 +14,6 @@ SLIDES=(
   demo-columns.qmd
   demo-table.qmd
   demo-seminar.qmd
-  s1-intro.qmd
   s1-emily.qmd
   s1-erkmen.qmd
   s2-part1.qmd
