@@ -33,6 +33,20 @@ Or you can drop a `.md` file into your `.claude/commands/` folder to create a lo
 Most agentic tools support some form of reusable instructions. In Cursor, these go in `.cursorrules`. In Codex, use `AGENTS.md`. The concept transfers even if the file format differs.
 :::
 
+::: {.callout-tip}
+### Install the bootcamp skills
+
+These skills are published and ready to use:
+
+    npx skills add eabeam/econ-skills
+
+Or install one at a time:
+
+    npx skills add eabeam/econ-skills --skill econ-audit
+
+Browse the source code: [github.com/eabeam/econ-skills](https://github.com/eabeam/econ-skills)
+:::
+
 ## Skills from this bootcamp
 
 These are real skills built for economics research and teaching workflows. They are not toy examples.
@@ -43,17 +57,23 @@ Structured literature search and synthesis. Give it a research question, and it 
 
 **Good for:** starting a new project, preparing a referee report, catching up on a subfield.
 
+**Install:** `npx skills add eabeam/econ-skills --skill lit-review` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/lit-review/SKILL.md)
+
 ### Econometrics Audit (`/econ-audit`)
 
 Adversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.
 
 **Good for:** self-review before submission, preparing for seminars, reviewing student work.
 
+**Install:** `npx skills add eabeam/econ-skills --skill econ-audit` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/econ-audit/SKILL.md)
+
 ### Data Dictionary Generator (`/data-dictionary`)
 
 Reads a dataset's metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.
 
 **Good for:** replication packages, project handoffs, codebook creation.
+
+**Install:** `npx skills add eabeam/econ-skills --skill data-dictionary` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/data-dictionary/SKILL.md)
 
 ## Demo workflows from the sessions
 
