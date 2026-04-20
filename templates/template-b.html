@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Template B — AI for UVM Economics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --slate-teal: #1B4D5C;
+  --uvm-gold: #D4A84B;
+  --deep-charcoal: #2C3E50;
+  --pale-sage: #EDF2F0;
+  --light-gold: #FDF6E3;
+  --cool-gray: #8899A6;
+  --dark-slate: #0F2B36;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  color: var(--deep-charcoal);
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* ─── HEADER BAR ─── */
+.topbar {
+  background: var(--dark-slate);
+  padding: 0.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar .brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.topbar nav a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.topbar nav a:hover {
+  color: var(--uvm-gold);
+}
+
+/* ─── HERO SPLIT ─── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 380px;
+}
+
+.hero-text {
+  background: var(--slate-teal);
+  padding: 4rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.hero-text .subtitle {
+  font-size: 1.05rem;
+  color: var(--uvm-gold);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text .meta {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.hero-visual {
+  background: var(--pale-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+}
+
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 4px;
+  background: var(--uvm-gold);
+}
+
+.schedule-preview {
+  width: 100%;
+  max-width: 320px;
+}
+
+.schedule-preview h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--slate-teal);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.sp-item {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(27,77,92,0.1);
+}
+
+.sp-item:last-child {
+  border-bottom: none;
+}
+
+.sp-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--uvm-gold);
+}
+
+.sp-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--slate-teal);
+  margin-top: 0.15rem;
+}
+
+.sp-detail {
+  font-size: 0.82rem;
+  color: var(--cool-gray);
+  margin-top: 0.1rem;
+}
+
+/* ─── CONTENT AREA ─── */
+.content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+}
+
+.content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--slate-teal);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.content h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--uvm-gold);
+  margin-top: 0.4rem;
+}
+
+/* ─── MATERIALS ─── */
+.materials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.mat-card {
+  background: var(--pale-sage);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.15s ease;
+}
+
+.mat-card:hover {
+  transform: translateY(-2px);
+}
+
+.mat-card .card-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--uvm-gold);
+  margin-bottom: 0.4rem;
+}
+
+.mat-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--slate-teal);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.mat-card p {
+  font-size: 0.88rem;
+  color: var(--cool-gray);
+  margin-bottom: 0.75rem;
+}
+
+.mat-card a {
+  font-size: 0.85rem;
+  color: var(--slate-teal);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.mat-card a:hover {
+  color: var(--uvm-gold);
+}
+
+.mat-card a::after {
+  content: '\2192';
+}
+
+.mat-card.upcoming {
+  border: 1px dashed var(--cool-gray);
+  background: transparent;
+  opacity: 0.7;
+}
+
+/* ─── PREP SECTION ─── */
+.prep-section {
+  background: var(--light-gold);
+  border-radius: 8px;
+  padding: 1.75rem 2rem;
+  margin-top: 2rem;
+}
+
+.prep-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--slate-teal);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.prep-section p {
+  font-size: 0.92rem;
+  color: var(--deep-charcoal);
+}
+
+.prep-section a {
+  color: var(--slate-teal);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--uvm-gold);
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  border-top: 1px solid var(--pale-sage);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.82rem;
+  color: var(--cool-gray);
+  margin-top: 3rem;
+}
+
+.footer a {
+  color: var(--slate-teal);
+  text-decoration: none;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    padding: 2rem;
+  }
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">AI for UVM Economics</div>
+  <nav>
+    <a href="prep.html">Prep Guide</a>
+    <a href="applications.html">Applications</a>
+    <a href="skills.html">Skills & Demos</a>
+    <a href="resources.html">Bells & Whistles</a>
+  </nav>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>AI for UVM<br>Economics</h1>
+    <p class="subtitle">AI tools for teaching and research</p>
+    <p class="meta">Department of Economics &middot; Spring 2026</p>
+  </div>
+  <div class="hero-visual">
+    <div class="schedule-preview">
+      <h2>Bootcamp Schedule</h2>
+      <div class="sp-item">
+        <div class="sp-date">Apr 22</div>
+        <div class="sp-title">Getting Started with AI Tools</div>
+        <div class="sp-detail">11:00&ndash;12:30 &middot; Old Mill A500</div>
+      </div>
+      <div class="sp-item">
+        <div class="sp-date">Apr 27</div>
+        <div class="sp-title">Research Pipelines & Automation</div>
+        <div class="sp-detail">11:00&ndash;12:30 &middot; Old Mill A500</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="content">
+  <h2>Session Materials</h2>
+
+  <div class="materials-grid">
+    <div class="mat-card">
+      <div class="card-label">Session 1</div>
+      <h3>Agentic AI Bootcamp</h3>
+      <p>Beam &amp; Aslim &mdash; what tools exist, how they work, live demos</p>
+      <a href="Session1_Slides/session_1_slides.pdf">Download PDF</a>
+    </div>
+    <div class="mat-card upcoming">
+      <div class="card-label">Session 2</div>
+      <h3>Research Pipelines</h3>
+      <p>Materials posted after April 27</p>
+    </div>
+  </div>
+
+  <h2>Before You Arrive</h2>
+
+  <div class="prep-section">
+    <h3>No installation needed</h3>
+    <p>Both sessions are watch-along demos. See the <a href="prep.html">Getting Set Up</a> guide if you want to try things on your own afterward. If you want broader reading, see <a href="resources.html">Bells & Whistles</a>.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>.
+  Built by <a href="https://eabeam.github.io">Emily Beam</a>, University of Vermont.
+</footer>
+
+</body>
+</html>

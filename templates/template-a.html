@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Template A — AI for UVM Economics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --slate-teal: #1B4D5C;
+  --uvm-gold: #D4A84B;
+  --deep-charcoal: #2C3E50;
+  --pale-sage: #EDF2F0;
+  --light-gold: #FDF6E3;
+  --cool-gray: #8899A6;
+  --dark-slate: #0F2B36;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--deep-charcoal);
+  background: var(--pale-sage);
+  line-height: 1.6;
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: var(--slate-teal);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--uvm-gold);
+}
+
+.hero h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.8rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero .subtitle {
+  font-size: 1.15rem;
+  color: var(--uvm-gold);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.hero .meta {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 1rem;
+}
+
+/* ─── MAIN ─── */
+.main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* ─── SCHEDULE ─── */
+.schedule-section h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6rem;
+  color: var(--slate-teal);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--uvm-gold);
+}
+
+.session-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.25rem;
+  border-left: 4px solid var(--slate-teal);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.session-card:hover {
+  box-shadow: 0 3px 10px rgba(27,77,92,0.1);
+}
+
+.session-card .session-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--uvm-gold);
+  margin-bottom: 0.25rem;
+}
+
+.session-card h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  color: var(--slate-teal);
+  margin-bottom: 0.5rem;
+}
+
+.session-card .details {
+  font-size: 0.95rem;
+  color: var(--cool-gray);
+}
+
+.session-card .details strong {
+  color: var(--deep-charcoal);
+}
+
+/* ─── MATERIALS TABLE ─── */
+.materials-section {
+  margin-top: 3rem;
+}
+
+.materials-section h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6rem;
+  color: var(--slate-teal);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--uvm-gold);
+}
+
+.materials-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.materials-table th {
+  background: var(--slate-teal);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.75rem 1.25rem;
+  text-align: left;
+}
+
+.materials-table td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--pale-sage);
+  font-size: 0.95rem;
+}
+
+.materials-table tr:last-child td {
+  border-bottom: none;
+}
+
+.materials-table a {
+  color: var(--slate-teal);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--uvm-gold);
+  transition: color 0.15s;
+}
+
+.materials-table a:hover {
+  color: var(--uvm-gold);
+}
+
+/* ─── PREP ─── */
+.prep-box {
+  background: var(--light-gold);
+  border-left: 4px solid var(--uvm-gold);
+  border-radius: 0 6px 6px 0;
+  padding: 1.25rem 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.prep-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--slate-teal);
+  margin-bottom: 0.5rem;
+}
+
+.prep-box p {
+  font-size: 0.95rem;
+  color: var(--deep-charcoal);
+}
+
+.prep-box a {
+  color: var(--slate-teal);
+  font-weight: 500;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: var(--cool-gray);
+  border-top: 1px solid rgba(27,77,92,0.1);
+  margin-top: 3rem;
+}
+
+.footer a {
+  color: var(--slate-teal);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>AI for UVM Economics</h1>
+  <p class="subtitle">AI tools for teaching and research</p>
+  <p class="meta">Department of Economics &middot; University of Vermont &middot; Spring 2026</p>
+</header>
+
+<main class="main">
+  <section class="schedule-section">
+    <h2>AI Bootcamp &mdash; Spring 2026</h2>
+    <p style="margin-bottom: 1.5rem; color: var(--deep-charcoal); font-size: 0.95rem;">Two lunch sessions introducing AI tools for teaching and research. No prior experience required.</p>
+
+    <div class="session-card">
+      <div class="session-label">Session 1</div>
+      <h3>Getting Started with AI Tools</h3>
+      <p class="details"><strong>Wed, April 22, 11:00&ndash;12:30</strong> &middot; Old Mill A500</p>
+      <p class="details" style="margin-top: 0.35rem;">What AI tools exist, how they work, live demos</p>
+    </div>
+
+    <div class="session-card" style="border-left-color: var(--cool-gray); opacity: 0.8;">
+      <div class="session-label">Session 2</div>
+      <h3>Research Pipelines & Automation</h3>
+      <p class="details"><strong>Mon, April 27, 11:00&ndash;12:30</strong> &middot; Old Mill A500</p>
+      <p class="details" style="margin-top: 0.35rem;">Research pipelines, web scraping, automated grading</p>
+    </div>
+  </section>
+
+  <section class="materials-section">
+    <h2>Session Materials</h2>
+    <table class="materials-table">
+      <thead>
+        <tr>
+          <th>Deck</th>
+          <th>Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Session 1: Agentic AI Bootcamp (Beam &amp; Aslim)</td>
+          <td><a href="Session1_Slides/session_1_slides.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>Session 2 materials</td>
+          <td><em style="color: var(--cool-gray);">Coming April 27</em></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="prep-box">
+    <h3>Before you arrive</h3>
+    <p>No installation needed &mdash; both sessions are watch-along demos. See the <a href="prep.html">Getting Set Up</a> guide if you want to try things on your own afterward.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>.
+  Built by <a href="https://eabeam.github.io">Emily Beam</a>, University of Vermont.
+</footer>
+
+</body>
+</html>

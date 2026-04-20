@@ -516,7 +516,6 @@ Type \texttt{claude} or \texttt{codex} and follow the sign-in prompts.
 \begin{column}{0.42\textwidth}
 \vskip2pt
 \centering
-\only<1>{%
 \begin{tikzpicture}[scale=0.85, every node/.style={scale=0.85},
   agent/.style={
     draw=SlateTeal, fill=PaleSage, rounded corners=3pt,
@@ -540,10 +539,6 @@ Type \texttt{claude} or \texttt{codex} and follow the sign-in prompts.
   \draw[arr] (a1) -- (t1);
   \draw[arr] (a2) -- (t2);
 \end{tikzpicture}
-}%
-\only<2>{%
-\includegraphics[width=\textwidth, height=0.7\textheight, keepaspectratio]{multi-workflow-1.png}
-}%
 \end{column}
 \begin{column}{0.52\textwidth}
 \vskip2pt
@@ -615,7 +610,11 @@ System-wide speech-to-text dictation.
 \small
 AI tools write in \textbf{Markdown} --- a simple plain-text format that uses \texttt{\#} for headers and \texttt{-} for bullets.
 \vskip4pt
-You do \textbf{not} need to learn the syntax. The AI hands you a \texttt{.md} file; a viewer like \textbf{Typora} (\$15) makes it look like formatted text.
+You do \textbf{not} need to learn the syntax. The AI hands you a \texttt{.md} file; a viewer makes it look like formatted text.
+\vskip3pt
+\textbf{Viewers:} \href{https://obsidian.md}{Obsidian} (free) or \textbf{Typora} (\$15).
+\vskip3pt
+Agents can also convert \texttt{.md} to \texttt{.docx}, \texttt{.tex}, \texttt{.pdf}, etc.
 \end{tcolorbox}
 \end{column}
 \begin{column}{0.55\textwidth}
@@ -711,7 +710,7 @@ Agents read these to understand:
 \begin{tikzpicture}
 \begin{axis}[
     ybar, bar width=6pt,
-    width=5.8cm, height=3.8cm,
+    width=5.8cm, height=3.2cm,
     ymin=30, ymax=80,
     ylabel={\tiny Success rate (\%)},
     symbolic x coords={Sonnet-4.5, GPT-5.2, GPT-5.1 Mini, Qwen3-30B},
@@ -734,50 +733,6 @@ Agents read these to understand:
 \end{tcolorbox}
 \end{column}
 \end{columns}
-\end{frame}
-
-%% ====== SLIDE 13: CAPABILITY TOOLBELT ======
-\begin{frame}[fragile]{The Capability Toolbelt}
-\centering
-\vskip2pt
-\begin{tikzpicture}[scale=0.95, every node/.style={scale=0.95},
-  mainbox/.style={
-    draw=UVMGold, fill=LightGold, rounded corners=4pt,
-    minimum width=10.5cm, minimum height=0.8cm,
-    font=\small\bfseries, text=DeepCharcoal
-  },
-  toolbox/.style={
-    draw=CoolGray!60, fill=PaleSage, rounded corners=3pt,
-    minimum width=2.2cm, minimum height=1.2cm,
-    align=center, font=\scriptsize, text=DeepCharcoal
-  },
-  arr/.style={-{Stealth[length=3pt]}, CoolGray, thick}
-]
-  % Four tool boxes
-  \node[toolbox] (skills) at (-3.6,-2)
-    {{\normalsize\color{SlateTeal}\faCubes}\\[1pt]\textbf{Skills}\\[-1pt]{\tiny Instructions}};
-  \node[toolbox, right=0.25cm of skills] (mcps)
-    {{\normalsize\color{SlateTeal}\faPlug}\\[1pt]\textbf{MCPs}\\[-1pt]{\tiny Access}};
-  \node[toolbox, right=0.25cm of mcps] (plugins)
-    {{\normalsize\color{SlateTeal}\faPuzzlePiece}\\[1pt]\textbf{Plugins}\\[-1pt]{\tiny Community}};
-  \node[toolbox, right=0.25cm of plugins] (subagents)
-    {{\normalsize\color{SlateTeal}\faUsers}\\[1pt]\textbf{Subagents}\\[-1pt]{\tiny Scale}};
-  % CLI box centered above the four tool boxes
-  \path (skills.north) -- (subagents.north) coordinate[midway] (toolmid);
-  \node[mainbox] (cli) at ([yshift=0.9cm]toolmid) {\faTerminal\quad CLI --- You talk to Claude; it uses tools on your machine};
-  % Arrows
-  \draw[arr] (cli.south -| skills) -- (skills.north);
-  \draw[arr] (cli.south -| mcps) -- (mcps.north);
-  \draw[arr] (cli.south -| plugins) -- (plugins.north);
-  \draw[arr] (cli.south -| subagents) -- (subagents.north);
-\end{tikzpicture}
-\vskip6pt
-\pause
-\begin{tcolorbox}[quotebox, width=10cm]
-\small Today we focus on \textbf{Skills}. MCPs and plugins are powerful but outside the scope of this bootcamp.
-\end{tcolorbox}
-\vskip1pt
-{\tiny\color{CoolGray} Adapted from Aniket Panjwani's Claude Code course}
 \end{frame}
 
 %% ====== SLIDE 13b: KEY TERMS (commented out — terms defined in context) ======
@@ -915,9 +870,88 @@ $\text{Performance} \;\approx\; \dfrac{\text{correctness}^2 \times \text{complet
 \end{enumerate}
 \end{tcolorbox}
 \vskip4pt
-{\tiny\color{CoolGray} Recent Opus 4.6 improvements mean this matters less --- but still good practice.}
+{\scriptsize\color{CoolGray} Recent Opus 4.6 improvements mean this matters less --- but still good practice.}
 \end{column}
 \end{columns}
+\end{frame}
+
+%% ====== SLIDE 16b: PERMISSIONS SPECTRUM ======
+\begin{frame}{The Access Spectrum}
+\centering
+\vskip2pt
+
+\begin{tikzpicture}[x=0.09\textwidth]
+  % Gradient bar
+  \shade[left color=PaleSage, right color=SoftCoral!40] (0,0) rectangle (10,0.5);
+  \draw[CoolGray, thick] (0,0) rectangle (10,0.5);
+
+  % Labels at ends
+  \node[below, font=\small\bfseries, text=SlateTeal] at (0,-0.05) {Chat AI};
+  \node[below, font=\scriptsize, text=CoolGray] at (0,-0.4) {(sandbox)};
+
+  \node[below, font=\small\bfseries, text=SoftCoral] at (10,-0.05) {Clawbot};
+  \node[below, font=\scriptsize, text=CoolGray] at (10,-0.4) {(GOD MODE)};
+
+  % Default tick at ~25th percentile
+  \draw[DeepCharcoal, very thick] (2.5,-.1) -- (2.5,0.65);
+  \node[above, font=\scriptsize\bfseries, text=DeepCharcoal] at (2.5,0.7) {DEFAULT};
+
+  % "We stay here" bracket
+  \draw[AccentBlue, thick, decorate, decoration={brace, amplitude=3pt, mirror}]
+    (1.5,-0.9) -- (6.0,-0.9);
+  \node[below, font=\scriptsize\color{AccentBlue}] at (3.75,-1.05) {We stay here};
+\end{tikzpicture}
+
+\vskip4pt
+% Three screenshots side by side, no boxes
+\begin{columns}[c]
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth, height=4.2cm, keepaspectratio]{figures/clawbot-1.jpg}
+\end{column}
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth, height=4.2cm, keepaspectratio]{figures/clawbot-2.jpg}
+\end{column}
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\textwidth, height=4.2cm, keepaspectratio]{figures/clawbot-3.jpg}
+\end{column}
+\end{columns}
+\vskip2pt
+{\tiny\color{SoftCoral} Real conversation. The agent bulk-deleted hundreds of emails without approval.}
+\end{frame}
+
+%% ====== SLIDE 16c: SANDBOX EXPLAINED ======
+\begin{frame}{The Access Spectrum --- Sandbox}
+\begin{tcolorbox}[colback=PaleSage, colframe=SlateTeal!30, boxrule=0.4pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
+\small
+\textbf{Sandbox (left end of the spectrum)}
+\vskip4pt
+\begin{itemize}\setlength{\itemsep}{2pt}
+  \item Paste text in, get text back
+  \item Tool sees nothing on your machine
+  \item No risk, but more manual work
+  \item Examples: ChatGPT web, Microsoft Copilot chat
+\end{itemize}
+\end{tcolorbox}
+\end{frame}
+
+%% ====== SLIDE 16d: GOD MODE EXPLAINED ======
+\begin{frame}{The Access Spectrum --- GOD MODE}
+\begin{tcolorbox}[colback=SoftCoral!6, colframe=SoftCoral!50, boxrule=0.4pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
+\small
+\textbf{GOD MODE (right end of the spectrum)}
+\vskip4pt
+\begin{itemize}\setlength{\itemsep}{2pt}
+  \item Reads, writes, sends, deletes --- everything
+  \item Can access email, calendar, files, external services
+  \item Very powerful --- also very risky
+  \item We do \textbf{NOT} do this
+\end{itemize}
+\end{tcolorbox}
+\vskip6pt
+{\small\color{DeepCharcoal} The \textbf{default}: works in your project folder, asks before anything risky.\\You control it via \texttt{CLAUDE.md} and permission settings.}
 \end{frame}
 
 %% ====== SLIDE 17: PERMISSION MODES ======
@@ -996,9 +1030,9 @@ Hooks are powerful --- but \textbf{outside the scope} of this bootcamp.
 \begin{tcolorbox}[colback=SoftCoral!8, colframe=SoftCoral, boxrule=0.6pt, arc=3pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\color{SoftCoral}\faExclamation\; The scary failures}, fonttitle=\small\bfseries, coltitle=SoftCoral]
 \scriptsize
 \begin{itemize}\setlength{\itemsep}{1pt}
-  \item \textbf{Confident citations that don't exist.} It will invent a plausible author, journal, and year.
+  \item \textbf{Confident citations that don't exist.} It will invent a plausible author, journal, and year \textit{increasingly less common}
   \item \textbf{Code that runs but is wrong.} No error message --- just silently wrong results. Reshapes, merges, and filters are common culprits.
-  \item \textbf{Hallucinated numbers.} Asks for a statistic, gets a plausible-sounding one that is made up.
+  \item \textbf{Hallucinated numbers.} Asks for a statistic, gets a plausible-sounding one that is made up. \textit{ask it to write a script to confirm calculations}
 \end{itemize}
 \end{tcolorbox}
 \end{column}
@@ -1006,10 +1040,11 @@ Hooks are powerful --- but \textbf{outside the scope} of this bootcamp.
 \begin{tcolorbox}[keybox, title={\faLock\quad How to protect yourself}]
 \scriptsize
 \begin{itemize}\setlength{\itemsep}{1pt}
-  \item \textbf{Verify citations.} Google Scholar or CrossRef every reference.
+  \item \textbf{Verify citations.} Google every reference. \textit{Or ask another agent to download every PDF and check.}
   \item \textbf{Spot-check outputs.} Run a known case. Compare row counts before and after.
   \item \textbf{Ask it to explain.} ``Walk me through what this code does line by line.''
-  \item \textbf{Use version control.} Git means you can always undo.
+  \item \textbf{Send an adversarial agent.} ``Review this code and flag any potential misunderstandings or erors''
+  \item \textbf{Use version control.} Cloud drives help, Github \textbf{excels}.
 \end{itemize}
 \end{tcolorbox}
 \end{column}
@@ -1041,7 +1076,7 @@ Hooks are powerful --- but \textbf{outside the scope} of this bootcamp.
 \begin{itemize}\setlength{\itemsep}{2pt}
   \item If the task takes \textbf{5 minutes by hand}, just do it by hand
   \item Tasks requiring \textbf{domain judgment} (identification strategy, causal interpretation)
-  \item Anything with \textbf{confidential data} you can't share with an API
+  \item Anything with \textbf{confidential data} you can't share with an API (or strip out)
   \item When you need a \textbf{precise citation} and don't have time to verify
 \end{itemize}
 \end{tcolorbox}
@@ -1134,7 +1169,7 @@ The learning curve is real, but short
 %% ====== SLIDE 21: EMILY — FUN BUT ZERO TIME SAVED ======
 \begin{frame}{Things That Were Fun but Saved Zero Time}
 \begin{columns}[T]
-\begin{column}{0.52\textwidth}
+\begin{column}{0.45\textwidth}
 \begin{tcolorbox}[accentbox]
 \small
 \begin{itemize}\setlength{\itemsep}{2pt}
@@ -1147,7 +1182,7 @@ The learning curve is real, but short
 \vskip4pt
 {\scriptsize\color{CoolGray} The learning curve is real, but at least the rabbit holes are entertaining.}
 \end{column}
-\begin{column}{0.44\textwidth}
+\begin{column}{0.52\textwidth}
 \vskip2pt
 \includegraphics[width=\textwidth]{vt-routes-screenshot.png}
 \end{column}
@@ -1372,6 +1407,50 @@ Every fresh context starts with:\\
 \begin{tcolorbox}[quotebox, width=11cm]
 \small A detailed plan will save you a \textbf{TON} of time. Think long-term gains, not short term. May not matter for quick tasks!
 \end{tcolorbox}
+\end{frame}
+
+%% ====== SLIDE 13: CAPABILITY TOOLBELT (moved here) ======
+\begin{frame}[fragile]{The Capability Toolbelt}
+\centering
+\vskip2pt
+\begin{tikzpicture}[scale=0.95, every node/.style={scale=0.95},
+  mainbox/.style={
+    draw=UVMGold, fill=LightGold, rounded corners=4pt,
+    minimum width=10.5cm, minimum height=0.8cm,
+    font=\small\bfseries, text=DeepCharcoal
+  },
+  toolbox/.style={
+    draw=CoolGray!60, fill=PaleSage, rounded corners=3pt,
+    minimum width=2.2cm, minimum height=1.2cm,
+    align=center, font=\scriptsize, text=DeepCharcoal
+  },
+  arr/.style={-{Stealth[length=3pt]}, CoolGray, thick}
+]
+  % Four tool boxes
+  \node[toolbox] (skills) at (-3.6,-2)
+    {{\normalsize\color{SlateTeal}\faCubes}\\[1pt]\textbf{Skills}\\[-1pt]{\tiny Instructions}};
+  \node[toolbox, right=0.25cm of skills] (mcps)
+    {{\normalsize\color{SlateTeal}\faPlug}\\[1pt]\textbf{MCPs}\\[-1pt]{\tiny Access}};
+  \node[toolbox, right=0.25cm of mcps] (plugins)
+    {{\normalsize\color{SlateTeal}\faPuzzlePiece}\\[1pt]\textbf{Plugins}\\[-1pt]{\tiny Community}};
+  \node[toolbox, right=0.25cm of plugins] (subagents)
+    {{\normalsize\color{SlateTeal}\faUsers}\\[1pt]\textbf{Subagents}\\[-1pt]{\tiny Scale}};
+  % CLI box centered above the four tool boxes
+  \path (skills.north) -- (subagents.north) coordinate[midway] (toolmid);
+  \node[mainbox] (cli) at ([yshift=0.9cm]toolmid) {\faTerminal\quad CLI --- You talk to Claude; it uses tools on your machine};
+  % Arrows
+  \draw[arr] (cli.south -| skills) -- (skills.north);
+  \draw[arr] (cli.south -| mcps) -- (mcps.north);
+  \draw[arr] (cli.south -| plugins) -- (plugins.north);
+  \draw[arr] (cli.south -| subagents) -- (subagents.north);
+\end{tikzpicture}
+\vskip6pt
+\pause
+\begin{tcolorbox}[quotebox, width=10cm]
+\small Today we focus on \textbf{Skills}. MCPs and plugins are powerful but outside the scope of this bootcamp.
+\end{tcolorbox}
+\vskip1pt
+{\tiny\color{CoolGray} Adapted from Aniket Panjwani's Claude Code course}
 \end{frame}
 
 %% ====== SLIDE 21: WHAT ARE SKILLS ======
@@ -1697,6 +1776,7 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
   \item Automated office hours Q\&A
   \item Exam prep assistant with course content
   \item AI-powered peer review training
+  \item Free, customized auto-graded homework platforms
 \end{itemize}
 \end{tcolorbox}
 \end{column}
@@ -1732,7 +1812,7 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
     ymin=0, ymax=650,
     ylabel={\scriptsize \$/month},
     xtick={1,2,3,4},
-    xticklabels={{\scriptsize\textbf{Erkmen}}, {\scriptsize\textbf{Emily}}, {\scriptsize\textbf{\color{SlateTeal}\$100 experiment}}, {\scriptsize\textbf{\color{SlateTeal}\$20 experiment}}},
+    xticklabels={{\scriptsize\textbf{Erkmen}}, {\scriptsize\textbf{Emily}}, {\scriptsize\textbf{\color{SlateTeal}\$55 experiment}}, {\scriptsize\textbf{\color{SlateTeal}\$20 experiment}}},
     yticklabel style={font=\scriptsize},
     yticklabel={\$\pgfmathprintnumber{\tick}},
     legend style={font=\tiny, at={(1.02,0.98)}, anchor=north west},
@@ -1751,11 +1831,11 @@ Save SKILL.md + all supporting files to .claude/commands/lecture-builder/.
 \end{tikzpicture}
 \vskip2pt
 \begin{tcolorbox}[accentbox, halign=center, width=11cm, top=2pt, bottom=2pt]
-\small \textbf{\$20/mo} is a really good experiment. \textbf{\$100/mo} is an amazing one. You do \textbf{not} need to go all-in.\\[2pt]
-{\scriptsize Keeping up with the frontier is a full-time job. Let us do that --- you get to skip straight to the useful parts.}
+\small \textbf{\$20/mo} is a really good experiment. \textbf{\$55/mo} is an amazing one. You do \textbf{not} need to go all-in.\\[2pt]
+{\scriptsize Keeping up with the frontier is a full-time job. Let someone else do that --- we can ıskip straight to the useful parts.}
 \end{tcolorbox}
 \vskip1pt
-{\tiny\color{CoolGray} Also cut: Cursor (\$20/mo) --- was underutilizing. Considering: Claude Max (\$200/mo) for heavier workloads.}
+{\tiny\color{CoolGray} Tried but cut cut: Cursor (\$20/mo) --- was underutilizing. Considering: Claude Max (\$200/mo) for heavier workloads.}
 \end{frame}
 
 %% ====== SLIDE 35b: USEFUL TOOLS ======
@@ -1795,16 +1875,6 @@ Ghostty & Free & Fast, modern terminal app. Where you type \texttt{claude} or \t
 \end{tikzpicture}
 \end{frame}
 
-%% ====== SLIDE 36b: ERKMEN PLACEHOLDER ======
-\begin{frame}{Erkmen's Slides}
-\centering
-\vfill
-\begin{tcolorbox}[accentbox, width=8cm, halign=center]
-\large\bfseries\color{SlateTeal} Placeholder for Erkmen's slides
-\end{tcolorbox}
-\vfill
-\end{frame}
-
 %% ====== SLIDE 37: MYTHOS MEME ======
 \begin{frame}{Meanwhile, the AI We're Teaching You to Use\ldots}
 \centering
@@ -1815,7 +1885,6 @@ Ghostty & Free & Fast, modern terminal app. Where you type \texttt{claude} or \t
 \vskip6pt
 {\normalsize JUST IN: Anthropic says Claude Mythos escaped a secure environment during testing \& then bragged about its escape online.}
 \end{tcolorbox}
-\vskip8pt
 {\small\color{CoolGray} Don't worry --- Mythos is busy bragging on the internet,\\not grading your students' papers. \textit{Yet.}}
 \end{frame}
 

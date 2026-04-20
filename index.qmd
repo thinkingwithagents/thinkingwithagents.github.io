@@ -1,40 +1,53 @@
 ---
 title: "AI for UVM Economics"
 subtitle: "AI tools for teaching and research"
+page-layout: full
+body-classes: landing-page
+title-block-style: none
+toc: false
 ---
 
-## AI Bootcamp — Spring 2026
+::: {.landing-hero}
+# AI for UVM Economics
 
-Two lunch sessions introducing AI tools for teaching and research. No prior experience required.
+[AI tools for teaching and research]{.hero-subtitle}
 
-### Schedule
+[Two lunch sessions introducing AI tools for teaching and research. No prior experience required.]{.hero-intro}
+:::
 
-| Session | Date | Focus |
-|---------|------|-------|
-| [Session 1](session1.qmd) | **Wed, April 22, 11:00--12:30** Old. Mill A500 | Getting started: what AI tools exist, how they work, live demos |
-| [Session 2](session2.qmd) | **Mon, April 27, 11:00--12:30** Old Mill A500 | Research pipelines, web scraping, automated grading |
+::: {.container .py-4 style="max-width: 700px;"}
 
-### Session materials
+[Schedule]{.landing-section-title}
 
-#### Session 1
+<table class="landing-schedule">
+<thead>
+<tr><th>Session</th><th>Date & Location</th><th>Focus</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="session-num">Session 1 <span class="badge-date">Apr 22</span></td>
+<td class="session-date">Wed 11:00–12:30, Old Mill A500</td>
+<td class="session-focus">Getting started: what AI tools exist, how they work, live demos</td>
+</tr>
+<tr>
+<td class="session-num">Session 2 <span class="badge-soon">Apr 27</span></td>
+<td class="session-date">Mon 11:00–12:30, Old Mill A500</td>
+<td class="session-focus">Research pipelines, web scraping, automated grading</td>
+</tr>
+</tbody>
+</table>
 
-| Deck | Format |
-|------|--------|
-| Session 1: Agentic AI Bootcamp (Beam & Aslim) | [PDF](Session1_Slides/session_1_slides.pdf) |
+[Session 1 Materials]{.landing-section-title}
 
-#### Session 2
+::: {.materials-row}
+[Slides (PDF)](Session1_Slides/session_1_slides.pdf){.material-link}
+[Session page](session1.qmd){.material-link}
+:::
 
-| Deck | Format |
-|------|--------|
-| Emily: Slide Creation, Teaching, and Research Workflows | [HTML](slides/s2-part1.html){target="_blank"} / [PDF](slides/s2-part1.pdf) |
-| Erkmen: Web Scraping + Automated Grading | [HTML](slides/s2-part2.html){target="_blank"} / [PDF](slides/s2-part2.pdf) |
+[Before You Arrive]{.landing-section-title}
 
-### Before you arrive
+::: {.prep-note}
+No installation needed — both sessions are watch-along demos. See the [Getting Set Up](prep.qmd) guide if you want to try things on your own afterward. For broader reading, see [Outside Resources](resources.qmd).
+:::
 
-No installation needed — both sessions are watch-along demos. See the **[Getting Set Up](prep.qmd)** guide if you want to try things on your own afterward.
-
-If you want broader reading beyond the bootcamp itself, see **[Outside Resources](resources.qmd)**.
-
----
-
-Built with [Quarto](https://quarto.org). Source on [GitHub](https://github.com/eabeam/uvmecon-ai).
+:::

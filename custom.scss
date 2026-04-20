@@ -8,3 +8,220 @@ $body-bg:         #FFFFFF;
 $link-color:      #1B4D5C;  /* SlateTeal */
 $link-hover-color: #D4A84B; /* UVMGold */
 $code-color:      #1B4D5C;
+
+/* Typography — DM Serif Display + DM Sans */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+$font-family-sans-serif: 'DM Sans', sans-serif;
+$headings-font-family:   'DM Serif Display', serif;
+$headings-font-weight:   400;
+
+/*-- scss:rules --*/
+
+/* ─── Landing page hero ─── */
+.landing-hero {
+  background: #1B4D5C;
+  padding: 5.5rem 2.5rem 4rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #D4A84B;
+  }
+}
+
+/* Full-bleed on landing page */
+.landing-page {
+  #quarto-content {
+    padding-top: 0;
+  }
+  .content {
+    padding-top: 0;
+  }
+  #title-block-header {
+    display: none;
+  }
+  .quarto-title-block {
+    display: none;
+  }
+  #quarto-margin-sidebar {
+    display: none;
+  }
+  #quarto-document-content {
+    padding: 0;
+    margin: 0;
+  }
+  .page-columns .content {
+    grid-column: page-start / page-end;
+  }
+}
+
+.landing-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  max-width: 700px;
+}
+
+.landing-hero .hero-subtitle {
+  font-size: 1.1rem;
+  color: #D4A84B;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.landing-hero .hero-intro {
+  font-size: 1rem;
+  color: #EDF2F0;
+  font-weight: 300;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ─── Section titles with extending line ─── */
+.landing-section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: #1B4D5C;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e0e5e2;
+  }
+}
+
+/* ─── Schedule table (landing) ─── */
+.landing-schedule {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2.5rem;
+
+  th {
+    text-align: left;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8899A6;
+    padding: 0 0 0.75rem;
+    border-bottom: 1px solid #e0e5e2;
+  }
+
+  td {
+    padding: 1rem 1rem 1rem 0;
+    vertical-align: top;
+    border-bottom: 1px solid #f0f3f1;
+    font-size: 0.92rem;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .session-num {
+    font-weight: 600;
+    color: #1B4D5C;
+    white-space: nowrap;
+  }
+
+  .session-date {
+    color: #2C3E50;
+    font-weight: 500;
+  }
+
+  .session-focus {
+    color: #2C3E50;
+    font-weight: 300;
+  }
+
+  .badge-date {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: #FDF6E3;
+    color: #D4A84B;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-left: 0.5rem;
+  }
+
+  .badge-soon {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #8899A6;
+    font-style: italic;
+  }
+}
+
+/* ─── Material link buttons ─── */
+.materials-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.material-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  border: 1px solid #e0e5e2;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #1B4D5C;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: #D4A84B;
+    background: #FDF6E3;
+    color: #1B4D5C;
+    text-decoration: none;
+  }
+}
+
+/* ─── Prep note box ─── */
+.prep-note {
+  background: #EDF2F0;
+  border-radius: 4px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+
+  p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #2C3E50;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: #1B4D5C;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid #D4A84B;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #D4A84B;
+    }
+  }
+}

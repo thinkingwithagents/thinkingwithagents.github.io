@@ -81,13 +81,13 @@ Reads a dataset's metadata and produces a formatted data dictionary with variabl
 
 Covered in Session 1. Give the AI samples of your real writing — emails, letters, feedback — and ask it to describe your style. It produces a reusable voice file (like `EB-VOICE.md`) that shapes all future drafts.
 
-[See the Session 1 slides →](session1.html)
+[See the Session 1 slides →](Session1_Slides/session_1_slides.pdf)
 
 ### Research pipeline: from raw data to report
 
 Covered in Session 2. A multi-step workflow using IPUMS census data: describe the research question, generate analysis code, run it, review output, produce a summary memo. The AI writes R and Stata code, but you make every judgment call.
 
-[See the Session 2 slides →](session2.html)
+*(Covered in Session 2 — materials coming April 27.)*
 
 ## Building your own
 

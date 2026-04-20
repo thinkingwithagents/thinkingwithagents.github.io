@@ -1,6 +1,7 @@
 ---
 title: "Session 2: AI for Research and Advanced Teaching"
 subtitle: "April 27, 2026 — AI Bootcamp for UVM Economics"
+draft: true
 ---
 
 ## April 27, 11:00--12:30, Old Mill A500
@@ -9,10 +10,7 @@ Last session was single prompts and one-off tasks. This session is about chainin
 
 ### Slides
 
-| Deck | Format |
-|------|--------|
-| Slide Creation, Teaching, and Research Workflows (Beam) | [HTML](slides/s2-part1.html){target="_blank"} / [PDF](slides/s2-part1.pdf) |
-| Web Scraping + Automated Grading (Aslim) | [HTML](slides/s2-part2.html){target="_blank"} / [PDF](slides/s2-part2.pdf) |
+*Slides will be posted here after the session.*
 
 ### What we'll cover
 
