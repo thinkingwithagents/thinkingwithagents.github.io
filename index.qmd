@@ -37,12 +37,12 @@ toc: false
 [Before You Arrive]{.landing-section-title}
 
 ::: {.prep-note}
-No installation needed — both sessions are watch-along demos. See the [Getting Set Up](prep.qmd) guide if you want to try things on your own afterward. For broader reading, see [Outside Resources](resources.qmd).
+No installation needed. See the [Getting Set Up](prep.qmd) guide if you want to try things on your own afterward. For broader reading, see [Outside Resources](resources.qmd).
 :::
 
 [Session 1: Getting Started with AI Tools]{.landing-section-title}
 
-**April 22, 11:00--12:30, Old Mill A500** — This is a watch-along session. No installation needed.
+**April 22, 11:00--12:30, Old Mill A500**
 
 | Deck | Format |
 |------|--------|
