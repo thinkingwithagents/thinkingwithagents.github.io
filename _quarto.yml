@@ -20,14 +20,9 @@ website:
       - href: prep.qmd
         text: "Prep Guide"
       - href: applications.qmd
-        text: "Applications"
-      - href: skills.qmd
-        text: "Skills & Demos"
+        text: "Applications & Skills"
       - href: resources.qmd
         text: "Bells & Whistles"
-      - href: session1.qmd
-        text: "Session 1 (Apr 22)"
-      - text: "Session 2 (Apr 27) — coming soon"
 
   body-footer: |
     <script data-goatcounter="https://eabeam.goatcounter.com/count"

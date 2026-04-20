@@ -1,229 +1,5 @@
 [
   {
-    "objectID": "skills.html",
-    "href": "skills.html",
-    "title": "Skills & Demos",
-    "section": "",
-    "text": "One of the most useful things about agentic AI tools is that workflows can be packaged as skills — reusable prompt-and-instruction bundles that anyone can install and run. Think of them as saved recipes for tasks you do repeatedly.\nThis page collects skills and demos from the bootcamp. You can use them as-is, adapt them, or just read them to see how structured AI workflows are built."
-  },
-  {
-    "objectID": "skills.html#what-is-a-skill",
-    "href": "skills.html#what-is-a-skill",
-    "title": "Skills & Demos",
-    "section": "What is a skill?",
-    "text": "What is a skill?\nA skill is a set of instructions — usually a Markdown file — that tells an AI tool how to do a specific task. When you invoke a skill, it loads those instructions automatically.\nFor example, instead of explaining “read my draft, check the causal claims, flag anything that’s correlational language dressed up as identification” every time, you write that once and save it as a skill. Then you just type /econ-audit and it does it.\nSkills are plain text files. You can read them, edit them, and share them."
-  },
-  {
-    "objectID": "skills.html#how-to-install-a-skill",
-    "href": "skills.html#how-to-install-a-skill",
-    "title": "Skills & Demos",
-    "section": "How to install a skill",
-    "text": "How to install a skill\n\n\n\n\n\n\nNoteClaude Code (terminal)\n\n\n\nSkills can be installed from skills.sh with one command:\nclaude skills add &lt;skill-name&gt;\nOr you can drop a .md file into your .claude/commands/ folder to create a local skill.\n\n\n\n\n\n\n\n\nNoteOther tools\n\n\n\nMost agentic tools support some form of reusable instructions. In Cursor, these go in .cursorrules. In Codex, use AGENTS.md. The concept transfers even if the file format differs.\n\n\n\n\n\n\n\n\nTipInstall the bootcamp skills\n\n\n\nThese skills are published and ready to use:\nnpx skills add eabeam/econ-skills\nOr install one at a time:\nnpx skills add eabeam/econ-skills --skill econ-audit\nBrowse the source code: github.com/eabeam/econ-skills"
-  },
-  {
-    "objectID": "skills.html#skills-from-this-bootcamp",
-    "href": "skills.html#skills-from-this-bootcamp",
-    "title": "Skills & Demos",
-    "section": "Skills from this bootcamp",
-    "text": "Skills from this bootcamp\nThese are real skills built for economics research and teaching workflows. They are not toy examples.\n\nLiterature Review (/lit-review)\nStructured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.\nGood for: starting a new project, preparing a referee report, catching up on a subfield.\nInstall: npx skills add eabeam/econ-skills --skill lit-review | Browse source\n\n\nEconometrics Audit (/econ-audit)\nAdversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.\nGood for: self-review before submission, preparing for seminars, reviewing student work.\nInstall: npx skills add eabeam/econ-skills --skill econ-audit | Browse source\n\n\nData Dictionary Generator (/data-dictionary)\nReads a dataset’s metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.\nGood for: replication packages, project handoffs, codebook creation.\nInstall: npx skills add eabeam/econ-skills --skill data-dictionary | Browse source"
-  },
-  {
-    "objectID": "skills.html#demo-workflows-from-the-sessions",
-    "href": "skills.html#demo-workflows-from-the-sessions",
-    "title": "Skills & Demos",
-    "section": "Demo workflows from the sessions",
-    "text": "Demo workflows from the sessions\n\nCreating a writing voice file\nCovered in Session 1. Give the AI samples of your real writing — emails, letters, feedback — and ask it to describe your style. It produces a reusable voice file (like EB-VOICE.md) that shapes all future drafts.\nSee the Session 1 slides →\n\n\nResearch pipeline: from raw data to report\nCovered in Session 2. A multi-step workflow using IPUMS census data: describe the research question, generate analysis code, run it, review output, produce a summary memo. The AI writes R and Stata code, but you make every judgment call.\n(Covered in Session 2 — materials coming April 27.)"
-  },
-  {
-    "objectID": "skills.html#building-your-own",
-    "href": "skills.html#building-your-own",
-    "title": "Skills & Demos",
-    "section": "Building your own",
-    "text": "Building your own\nThe best skill is one you build for a task you actually do. Start with:\n\nPick one repeating task — grading feedback, email drafts, data cleaning, meeting prep\nDo it once with AI and save the conversation\nExtract the instructions into a Markdown file\nRefine — add constraints, examples, edge cases as you use it\n\nYour instructions file doesn’t need to be perfect. It just needs to be better than explaining the task from scratch every time."
-  },
-  {
-    "objectID": "skills.html#more-resources",
-    "href": "skills.html#more-resources",
-    "title": "Skills & Demos",
-    "section": "More resources",
-    "text": "More resources\n\nskills.sh — public skill registry for Claude Code\nClaude Code docs: custom commands — how to create and organize skills\nclaudlab.in — examples of Claude Code workflows and setups"
-  },
-  {
-    "objectID": "session1.html",
-    "href": "session1.html",
-    "title": "Session 1: Getting Started with AI Tools",
-    "section": "",
-    "text": "This is a watch-along session. No installation needed — we demo everything live. Slides will be visible during AI processing time so you can follow the concepts while the tools work.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nSession 1: Agentic AI Bootcamp (Beam & Aslim)\nPDF\n\n\n\n\n\n\n\nWhat AI tools exist and the difference between chat-based and agentic tools\nContext windows, standing instructions, and planning — the key concepts\nWhat we’ve actually used these for (and what was fun but saved zero time)\nVoice files: making AI output sound like you\nSkills: reusable workflows you can share\nLive demos: website redesign and custom skill creation\n\n\n\n\n\nTry using an AI tool for one real task this week\nInstall the tools from the prep guide if you haven’t already\nThink of a research or teaching task you’d like to automate\n\n\n\n\n\nGetting Set Up — installation and cost guide\nOutside Resources — tools, guides, and examples\nClaude Code docs\nUVM Microsoft Copilot (free for all UVM)"
-  },
-  {
-    "objectID": "session1.html#april-22-11001230-old-mill-a500",
-    "href": "session1.html#april-22-11001230-old-mill-a500",
-    "title": "Session 1: Getting Started with AI Tools",
-    "section": "",
-    "text": "This is a watch-along session. No installation needed — we demo everything live. Slides will be visible during AI processing time so you can follow the concepts while the tools work.\n\n\n\n\n\nDeck\nFormat\n\n\n\n\nSession 1: Agentic AI Bootcamp (Beam & Aslim)\nPDF\n\n\n\n\n\n\n\nWhat AI tools exist and the difference between chat-based and agentic tools\nContext windows, standing instructions, and planning — the key concepts\nWhat we’ve actually used these for (and what was fun but saved zero time)\nVoice files: making AI output sound like you\nSkills: reusable workflows you can share\nLive demos: website redesign and custom skill creation\n\n\n\n\n\nTry using an AI tool for one real task this week\nInstall the tools from the prep guide if you haven’t already\nThink of a research or teaching task you’d like to automate\n\n\n\n\n\nGetting Set Up — installation and cost guide\nOutside Resources — tools, guides, and examples\nClaude Code docs\nUVM Microsoft Copilot (free for all UVM)"
-  },
-  {
-    "objectID": "prep.html",
-    "href": "prep.html",
-    "title": "Getting Set Up",
-    "section": "",
-    "text": "Two lunch sessions, watch-along format. You do not need to install anything beforehand. Bring a laptop if you want to follow along, but it is not required. The main thing to bring is a task you’d like to try — something from your teaching or research where you spend time on mechanical work."
-  },
-  {
-    "objectID": "prep.html#what-to-expect-at-the-bootcamp",
-    "href": "prep.html#what-to-expect-at-the-bootcamp",
-    "title": "Getting Set Up",
-    "section": "",
-    "text": "Two lunch sessions, watch-along format. You do not need to install anything beforehand. Bring a laptop if you want to follow along, but it is not required. The main thing to bring is a task you’d like to try — something from your teaching or research where you spend time on mechanical work."
-  },
-  {
-    "objectID": "prep.html#two-ways-to-use-ai-tools",
-    "href": "prep.html#two-ways-to-use-ai-tools",
-    "title": "Getting Set Up",
-    "section": "Two ways to use AI tools",
-    "text": "Two ways to use AI tools\n\n\n\n\n\n\n\n\n\nChat tools\nAgentic tools\n\n\n\n\nWhat they do\nAnswer questions, draft text, summarize uploaded files\nWork directly on files in your project folders\n\n\nInterface\nWeb browser or desktop app\nTerminal (text-based command line)\n\n\nSetup\nCreate an account, start typing\nInstall Node.js, then install the tool\n\n\nBest for starting\nQuick tasks, brainstorming, one-off drafts\nMulti-step workflows, code, file management\n\n\nExamples\nClaude, ChatGPT, Microsoft Copilot\nClaude Code, OpenAI Codex\n\n\n\nFor this bootcamp, we demo agentic tools because they show the bigger jump in usefulness. But chat tools are a perfectly good place to start."
-  },
-  {
-    "objectID": "prep.html#claude-code-vs.-openai-codex",
-    "href": "prep.html#claude-code-vs.-openai-codex",
-    "title": "Getting Set Up",
-    "section": "Claude Code vs. OpenAI Codex",
-    "text": "Claude Code vs. OpenAI Codex\nThese are the two main agentic tools we use. Both run in your terminal and can read, write, and run files.\n\n\n\n\n\n\n\n\n\nClaude Code\nOpenAI Codex\n\n\n\n\nMade by\nAnthropic\nOpenAI\n\n\nBest models\nClaude Opus 4.6, Sonnet 4.6\nGPT-4.1, o3\n\n\nInstall\nnpm install -g @anthropic-ai/claude-code\nnpm install -g @openai/codex\n\n\nLaunch\nclaude\ncodex\n\n\nSign in with\nClaude account or Anthropic Console\nChatGPT account or OpenAI API key\n\n\nSimplest plan\nClaude Pro ($20/mo)\nChatGPT Plus ($20/mo)\n\n\nHeavy use plan\nClaude Max ($100+/mo) or API billing\nChatGPT Pro ($200/mo) or API billing\n\n\nIDE extensions\nVS Code, JetBrains\nVS Code\n\n\nRule files\nCLAUDE.md\nAGENTS.md\n\n\nIntegrations\nGmail, Google Calendar, Todoist, and more via MCP\nFewer built-in integrations currently\n\n\nStrengths\nLong context, strong writing, extensive tool ecosystem\nStrong coding, fast iteration\n\n\n\nBoth are good. We primarily demo Claude Code, but the concepts transfer."
-  },
-  {
-    "objectID": "prep.html#plans-and-pricing",
-    "href": "prep.html#plans-and-pricing",
-    "title": "Getting Set Up",
-    "section": "Plans and pricing",
-    "text": "Plans and pricing\n\nSubscription plans (simplest way to start)\n\n\n\n\n\n\n\n\nPlan\nCost\nWhat you get\n\n\n\n\nClaude Free\n$0\nChat only, limited usage\n\n\nClaude Pro\n$20/mo\nChat + Claude Code access, generous limits\n\n\nClaude Max\n$100–200/mo\nMuch higher limits for heavy use\n\n\nChatGPT Free\n$0\nChat only, limited models\n\n\nChatGPT Plus\n$20/mo\nChat + Codex access, better models\n\n\nChatGPT Pro\n$200/mo\nHighest limits\n\n\nUVM Copilot\nFree (UVM account)\nMicrosoft Copilot Chat — good for Office tasks\n\n\n\nFor most faculty: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you. PDF funds may cover subscriptions — ask your department chair.\n\n\n\n\n\n\nThe $20/mo subscription is not just chat. Claude Pro includes Claude Code (the terminal tool), and ChatGPT Plus includes Codex. You also get access to integrations with Gmail, Google Calendar, Todoist, and more — all the advanced workflows shown on our Bells & Whistles page. You do not need a separate API account or additional purchases.\n\n\n\n\n\nAPI pricing (pay-as-you-go)\nIf you outgrow the subscription or want more control, both companies offer API billing where you pay per token.\n\n\n\nModel\nInput (per 1M tokens)\nOutput (per 1M tokens)\n\n\n\n\nClaude Sonnet 4.6\n$3.00\n$15.00\n\n\nClaude Opus 4.6\n$15.00\n$75.00\n\n\nClaude Haiku 4.5\n$0.80\n$4.00\n\n\nGPT-4o\n$2.50\n$10.00\n\n\nGPT-4.1\n$2.00\n$8.00\n\n\nGPT-4o mini\n$0.15\n$0.60\n\n\nGemini 2.5 Pro\n$1.25\n$10.00\n\n\n\nA token ≈ ¾ of a word. Most people don’t need API billing — the subscription covers it."
-  },
-  {
-    "objectID": "prep.html#install-guide",
-    "href": "prep.html#install-guide",
-    "title": "Getting Set Up",
-    "section": "Install guide",
-    "text": "Install guide\n\nStep 1: Install Node.js (required for both tools)\n\nGo to nodejs.org\nClick the big green LTS download button\nRun the installer — accept all the defaults\n\n\n\nStep 2: Install your tool\nOpen your terminal:\n\nMac: Search for “Terminal” in Spotlight, or find it in Applications → Utilities\nWindows: Search for “PowerShell” in the Start menu\n\nThen run one (or both):\n# Claude Code\nnpm install -g @anthropic-ai/claude-code\n\n# OpenAI Codex\nnpm install -g @openai/codex\n\n\nStep 3: Launch it\nclaude    # for Claude Code\ncodex     # for Codex\nIt will ask you to sign in. Follow the prompts."
-  },
-  {
-    "objectID": "prep.html#checking-your-usage",
-    "href": "prep.html#checking-your-usage",
-    "title": "Getting Set Up",
-    "section": "Checking your usage",
-    "text": "Checking your usage\nIf you are using Claude Code with a paid subscription:\n\nnpx claude-spend — shows session and weekly limits, extra paid usage\nnpx ccusage@latest — alternative usage tracker\n\nUsage limits can change over time. Some models are cheaper than others."
-  },
-  {
-    "objectID": "prep.html#optional-extras",
-    "href": "prep.html#optional-extras",
-    "title": "Getting Set Up",
-    "section": "Optional extras",
-    "text": "Optional extras\n\nGhostty (free) — A modern terminal app. Looks nicer than the default.\nVS Code (free) — A code editor. Both Claude Code and Codex have VS Code extensions.\nTypora ($15) — A Markdown viewer. AI tools produce .md files; Typora makes them look like formatted text immediately."
-  },
-  {
-    "objectID": "prep.html#key-terms",
-    "href": "prep.html#key-terms",
-    "title": "Getting Set Up",
-    "section": "Key terms",
-    "text": "Key terms\n\n\n\n\n\n\n\nTerm\nWhat we mean\n\n\n\n\nAgent\nA tool instance carrying out a bounded task with some autonomy\n\n\nModel\nThe underlying AI system (e.g., Claude Sonnet, GPT-4o)\n\n\nSession\nOne conversation or working thread with the tool\n\n\nContext window\nThe working memory in the current session — when full, performance degrades\n\n\nArtifact\nA concrete output: file, draft, memo, script, table, or slide\n\n\nRule file\nStanding instructions (CLAUDE.md or AGENTS.md) that load automatically\n\n\nToken\nThe unit AI models process — roughly ¾ of a word\n\n\nMCP\nModel Context Protocol — how tools connect to external services (email, calendar, etc.)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AI for UVM Economics",
-    "section": "",
-    "text": "AI tools for teaching and research\n\n\n\n\n\n  \n    AI for UVMEconomics\n    AI tools for teaching and research\n    Department of Economics · Spring 2026\n  \n  \n    Bootcamp Schedule\n    \n      Apr 22\n      Getting Started with AI Tools\n      11:00–12:30 · Old Mill A500\n    \n    \n      Apr 27\n      Research Pipelines & Automation\n      11:00–12:30 · Old Mill A500\n    \n  \n\n\nSession 1 Materials\n\nSlides (PDF) Session page\n\nBefore You Arrive\n\nNo installation needed — both sessions are watch-along demos. See the Getting Set Up guide if you want to try things on your own afterward. For broader reading, see Outside Resources."
-  },
-  {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
-    "section": "",
-    "text": "These are workflows that go beyond chat — they involve reading your files, writing outputs, running code, or connecting to external services. Most take 10–45 minutes to try.\n★ = demonstrated in the bootcamp sessions."
-  },
-  {
-    "objectID": "applications.html#teaching",
-    "href": "applications.html#teaching",
-    "title": "Applications",
-    "section": "Teaching",
-    "text": "Teaching\n\nBuild a course website from your materials\nPoint the tool at your syllabus, lecture notes, and schedule. It scaffolds a Quarto or Hugo site with pages for each topic, a schedule, and assignment links.\n\nWhat it does: Reads your existing files, proposes a site structure, generates the pages, renders to HTML\nTool: Claude Code\nTime: 1–2 hours for a working first draft\n\nOpen Claude Code in the folder with your course materials, then:\nRead my syllabus.pdf and lecture-schedule.xlsx.\nBuild a Quarto website with:\n- a home page with the course description\n- a schedule page with dates and topics from the spreadsheet\n- a page for each major unit with the learning objectives from the syllabus\nSave everything in a new folder called course-site/.\n\n\nConvert lecture notes to slides\nGive it your .md or .docx notes and ask for a Quarto reveal.js or Beamer slide deck. It reads the source file, proposes a slide sequence, and writes the .qmd.\n\nWhat it does: Reads your notes file, splits into slides, writes formatted output with headers and bullets\nTool: Claude Code\nTime: 20–30 minutes per lecture\n\nRead lecture-notes/week3-supply-demand.md.\nConvert it to a Quarto reveal.js slide deck.\nOne main idea per slide. Use two-column layouts\nwhere a graph or example would help. Keep bullet\npoints to 3-4 per slide max.\nSave as slides/week3-supply-demand.qmd.\n\n\nGrade with a rubric\nGive it a rubric file and a folder of student submissions. It reads each submission, applies the rubric, and drafts feedback comments saved as individual files.\n\nWhat it does: Reads rubric + submissions from your folder, writes feedback files\nTool: Claude Code\nTime: 30 minutes to set up, then a few minutes per batch\n\nRead rubric.md and all the .docx files in submissions/.\nFor each submission, apply the rubric. Write a feedback\nfile for each student in feedback/ with:\n- score per criterion\n- 2-3 sentences of specific feedback per criterion\n- one overall comment on what to improve\nName each file feedback/[student-name].md."
-  },
-  {
-    "objectID": "applications.html#research",
-    "href": "applications.html#research",
-    "title": "Applications",
-    "section": "Research",
-    "text": "Research\n\n★ Raw data to analysis plan to code to report\nThe full pipeline from Session 2. Describe a dataset and research question; it proposes an analysis plan, writes Stata/R code, and drafts a summary memo — all saved as project files.\n\nWhat it does: Reads your data (or its metadata), writes .do/.R scripts, generates a .md report\nTool: Claude Code\nTime: 30–45 minutes for the full pipeline\n\nRead data/cps_extract.csv. Describe what's in it:\nhow many observations, what variables, what's missing.\n\nThen propose three analyses for a paper on wage gaps\nby education level. Write the Stata code for the\nfirst analysis. Save the do-file as code/wage-gaps.do\nand a summary memo as output/analysis-plan.md.\n\n\nReplication package assembly\nPoint it at your project folder. It reads your do-files or scripts, maps the dependency chain, identifies missing files, and writes a master script.\n\nWhat it does: Reads all scripts in a directory, traces use/merge/include dependencies, writes master.do\nTool: Claude Code\nTime: 30 minutes\n\nRead all the .do files in this project.\nMap which files depend on which — trace every use,\nmerge, include, and file reference.\nWrite a master.do that runs everything in the\ncorrect order. Flag any files that are referenced\nbut don't exist.\n\n\nAdversarial review of your own paper\nGive it your draft as a file. It reads the full paper and flags causal language without identification, missing robustness checks, and measurement concerns.\n\nWhat it does: Reads your .md/.tex/.docx draft, writes a structured referee-style report\nTool: Claude Code with /econ-audit skill\nTime: 15–20 minutes\n\nInstall the skill, then run it:\nclaude skills add econ-audit\n/econ-audit\nIt will ask you to point it at your draft. Or run it manually:\nRead my-paper.tex. Act as a skeptical referee.\nFor every causal claim, check whether the\nidentification strategy actually supports it.\nFlag: causal language without identification,\nmissing robustness checks, measurement concerns,\nand anything a referee would push back on.\nWrite the report as review/referee-report.md.\n\n\nData dictionary from a dataset\nPoint it at a dataset. It reads the metadata and produces a formatted codebook: variable names, types, value ranges, labels, notes.\n\nWhat it does: Reads dataset headers/metadata, writes a formatted .md data dictionary\nTool: Claude Code with /data-dictionary skill\nTime: 10–15 minutes\n\nInstall and run:\nclaude skills add data-dictionary\n/data-dictionary\nOr manually:\nRead the headers and first 20 rows of data/survey.csv.\nProduce a data dictionary with: variable name, type,\nrange or categories, number of missing values, and\nany notes about coding or units. Save as docs/codebook.md.\n\n\nLiterature review with structured output\nGive it a research question. It searches, organizes papers by theme, identifies gaps, and writes a formatted review memo saved to your project folder.\n\nWhat it does: Searches, reads abstracts, writes a structured .md review memo\nTool: Claude Code with /lit-review skill\nTime: 20–30 minutes\n\nInstall and run:\nclaude skills add lit-review\n/lit-review\nOr manually:\nI'm starting a project on the effect of cash transfers\non educational outcomes in sub-Saharan Africa.\nSearch for recent papers. Organize by methodology\n(RCT vs quasi-experimental). For each paper, note:\nauthors, year, country, method, main finding.\nIdentify gaps. Save as lit-review/cash-transfers-education.md."
-  },
-  {
-    "objectID": "applications.html#writing-communication",
-    "href": "applications.html#writing-communication",
-    "title": "Applications",
-    "section": "Writing & Communication",
-    "text": "Writing & Communication\n\n★ Create a writing voice file\nGive the tool access to files with your real writing — saved emails, letters of recommendation, feedback comments. It reads them, describes your patterns, and saves a reusable voice file.\n\nWhat it does: Reads your writing samples from disk, writes MY-VOICE.md\nTool: Claude Code\nTime: 15 minutes to create, then reuse forever\n\nSave 5–10 of your sent emails as .txt or .md files in a folder, then:\nRead all the files in writing-samples/.\nThese are emails and letters I've written.\nDescribe my writing style: tone, sentence length,\nhow I open and close messages, level of formality,\nwhat I avoid, any distinctive patterns.\nSave the description as MY-VOICE.md.\nThen tell Claude Code to use it going forward:\nAdd to your memory: when I ask you to draft anything,\nload MY-VOICE.md first and match my style.\n\n\n★ Draft emails using your voice file\nPoint it at an email thread (via Gmail integration or a saved file) and tell it the gist. It reads the thread, loads your voice file, and drafts a reply that sounds like you.\n\nWhat it does: Reads email thread + voice file, writes a draft\nTool: Claude Code with Gmail integration\nTime: 2 minutes per email\n\nRead my voice file. Read the most recent email\nfrom [sender] about [topic].\nDraft a reply. The gist: [your one-sentence summary\nof what you want to say].\n\n\nRevision memo for a journal submission\nGive it your paper file and the referee reports. It reads both and drafts a point-by-point response memo.\n\nWhat it does: Reads your draft + referee reports, writes a structured response .md file\nTool: Claude Code\nTime: 30–45 minutes for a first draft\n\nRead paper/draft-v2.tex and reviews/referee1.pdf\nand reviews/referee2.pdf.\nDraft a point-by-point response memo. For each\nreferee comment:\n- quote the comment\n- describe what we changed (or why we didn't)\n- reference the specific section/page\nSave as paper/revision-memo.md."
-  },
-  {
-    "objectID": "applications.html#workflow-organization",
-    "href": "applications.html#workflow-organization",
-    "title": "Applications",
-    "section": "Workflow & Organization",
-    "text": "Workflow & Organization\n\nInbox triage\nConnects to your Gmail, reads recent messages, and categorizes them by action needed: reply, review, meeting, delegate, archive.\n\nWhat it does: Reads inbox via Gmail integration, writes a categorized summary\nTool: Claude Code with Gmail integration\nTime: 30 minutes to set up, 5 minutes each morning\n\nRead my 20 most recent unread emails.\nCategorize each one:\n- 🔴 Needs reply (from a person, expects a response)\n- 📋 Needs review (requires reading but not a reply)\n- 📅 Meeting-related (scheduling, agenda, follow-up)\n- 📦 Can archive (newsletters, notifications, FYI)\nList the reply-needed ones first with a one-line summary.\n\n\nCalendar automation from emails\nReads emails with dates and creates calendar events automatically.\n\nWhat it does: Reads email via Gmail, extracts dates/times, creates Google Calendar events\nTool: Claude Code with Gmail + Google Calendar integrations\nTime: 5 minutes per batch\n\nSearch my Gmail for emails from [hockey league / school]\nin the last 7 days. Extract any dates, times, and\nlocations for upcoming events. Add each one to my\nGoogle Calendar with the event name, time, and location.\n\n\nProject handoff notes\nAt the end of a work session, it summarizes what was done, what’s open, and what to do next. Saves as a file so you can pick up later without re-reading everything.\n\nWhat it does: Reads session context, writes a structured handoff .md file\nTool: Claude Code\nTime: 2 minutes\n\nSummarize this session:\n- what we worked on\n- what decisions were made\n- what's still open\n- what I should do next\nSave as notes/handoff-2026-04-08.md."
-  },
-  {
-    "objectID": "applications.html#what-to-try-first",
-    "href": "applications.html#what-to-try-first",
-    "title": "Applications",
-    "section": "What to try first",
-    "text": "What to try first\n\nFastest payoff: Create a voice file (15 minutes, reuse forever)\nMost impressive: Run the data → code → report pipeline (30 minutes)\nMost practical: Inbox triage with Gmail integration (30 minutes to set up, then daily)"
-  },
-  {
-    "objectID": "modules/a1-what-llms-do.html",
-    "href": "modules/a1-what-llms-do.html",
-    "title": "A1: What LLMs Actually Do",
-    "section": "",
-    "text": "WarningSample module — not final content\n\n\n\nThis file illustrates the intended structure and format for a module. Replace with actual content before publishing."
-  },
-  {
-    "objectID": "modules/a1-what-llms-do.html#learning-objectives",
-    "href": "modules/a1-what-llms-do.html#learning-objectives",
-    "title": "A1: What LLMs Actually Do",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of this module, students should be able to:"
-  },
-  {
-    "objectID": "modules/a1-what-llms-do.html#overview",
-    "href": "modules/a1-what-llms-do.html#overview",
-    "title": "A1: What LLMs Actually Do",
-    "section": "Overview",
-    "text": "Overview"
-  },
-  {
-    "objectID": "modules/a1-what-llms-do.html#content",
-    "href": "modules/a1-what-llms-do.html#content",
-    "title": "A1: What LLMs Actually Do",
-    "section": "Content",
-    "text": "Content"
-  },
-  {
-    "objectID": "modules/a1-what-llms-do.html#exercise",
-    "href": "modules/a1-what-llms-do.html#exercise",
-    "title": "A1: What LLMs Actually Do",
-    "section": "Exercise",
-    "text": "Exercise"
-  },
-  {
-    "objectID": "modules/a1-what-llms-do.html#discussion-questions",
-    "href": "modules/a1-what-llms-do.html#discussion-questions",
-    "title": "A1: What LLMs Actually Do",
-    "section": "Discussion Questions",
-    "text": "Discussion Questions"
-  },
-  {
-    "objectID": "modules/a1-what-llms-do.html#key-takeaways",
-    "href": "modules/a1-what-llms-do.html#key-takeaways",
-    "title": "A1: What LLMs Actually Do",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\n\n\n\n\n\nFor instructors:"
-  },
-  {
     "objectID": "resources.html",
     "href": "resources.html",
     "title": "Bells and Whistles",
@@ -292,5 +68,173 @@
     "title": "Bells and Whistles",
     "section": "Official documentation",
     "text": "Official documentation\n\nClaude Code docs — the main reference for terminal-based Claude\nOpenAI Codex docs — OpenAI’s agentic coding tool\nAnthropic prompt engineering guide — useful for improving prompts\nskills.sh — public skill registry for Claude Code\nclaudlab.in — Claude Code workflow examples and setups"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html",
+    "href": "modules/a1-what-llms-do.html",
+    "title": "A1: What LLMs Actually Do",
+    "section": "",
+    "text": "WarningSample module — not final content\n\n\n\nThis file illustrates the intended structure and format for a module. Replace with actual content before publishing."
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#learning-objectives",
+    "href": "modules/a1-what-llms-do.html#learning-objectives",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this module, students should be able to:"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#overview",
+    "href": "modules/a1-what-llms-do.html#overview",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#content",
+    "href": "modules/a1-what-llms-do.html#content",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Content",
+    "text": "Content"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#exercise",
+    "href": "modules/a1-what-llms-do.html#exercise",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Exercise",
+    "text": "Exercise"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#discussion-questions",
+    "href": "modules/a1-what-llms-do.html#discussion-questions",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions"
+  },
+  {
+    "objectID": "modules/a1-what-llms-do.html#key-takeaways",
+    "href": "modules/a1-what-llms-do.html#key-takeaways",
+    "title": "A1: What LLMs Actually Do",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n\n\n\n\n\nFor instructors:"
+  },
+  {
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications & Skills",
+    "section": "",
+    "text": "These are workflows that go beyond chat — they involve reading your files, writing outputs, running code, or connecting to external services. Most take 10–45 minutes to try.\n★ = demonstrated in the bootcamp sessions."
+  },
+  {
+    "objectID": "applications.html#installable-skills",
+    "href": "applications.html#installable-skills",
+    "title": "Applications & Skills",
+    "section": "Installable skills",
+    "text": "Installable skills\nSkills are reusable prompt-and-instruction bundles — saved recipes for tasks you do repeatedly. Instead of explaining a workflow from scratch each time, you invoke a skill and it runs.\n\n\n\n\n\n\nTipInstall the bootcamp skills\n\n\n\nThese skills are published and ready to use:\nnpx skills add eabeam/econ-skills\nOr install one at a time:\nnpx skills add eabeam/econ-skills --skill econ-audit\nBrowse the source code: github.com/eabeam/econ-skills\n\n\n\nLiterature Review (/lit-review)\nStructured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.\nGood for: starting a new project, preparing a referee report, catching up on a subfield.\nInstall: npx skills add eabeam/econ-skills --skill lit-review | Browse source\n\n\nEconometrics Audit (/econ-audit)\nAdversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.\nGood for: self-review before submission, preparing for seminars, reviewing student work.\nInstall: npx skills add eabeam/econ-skills --skill econ-audit | Browse source\n\n\nData Dictionary Generator (/data-dictionary)\nReads a dataset’s metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.\nGood for: replication packages, project handoffs, codebook creation.\nInstall: npx skills add eabeam/econ-skills --skill data-dictionary | Browse source\n\n\nBuilding your own skills\n\nPick one repeating task — grading feedback, email drafts, data cleaning, meeting prep\nDo it once with AI and save the conversation\nExtract the instructions into a Markdown file\nRefine — add constraints, examples, edge cases as you use it\n\nMore resources: skills.sh (public skill registry) · Claude Code docs: custom commands · claudlab.in"
+  },
+  {
+    "objectID": "applications.html#teaching",
+    "href": "applications.html#teaching",
+    "title": "Applications & Skills",
+    "section": "Teaching",
+    "text": "Teaching\n\nBuild a course website from your materials\nPoint the tool at your syllabus, lecture notes, and schedule. It scaffolds a Quarto or Hugo site with pages for each topic, a schedule, and assignment links.\n\nWhat it does: Reads your existing files, proposes a site structure, generates the pages, renders to HTML\nTool: Claude Code\nTime: 1–2 hours for a working first draft\n\nOpen Claude Code in the folder with your course materials, then:\nRead my syllabus.pdf and lecture-schedule.xlsx.\nBuild a Quarto website with:\n- a home page with the course description\n- a schedule page with dates and topics from the spreadsheet\n- a page for each major unit with the learning objectives from the syllabus\nSave everything in a new folder called course-site/.\n\n\nConvert lecture notes to slides\nGive it your .md or .docx notes and ask for a Quarto reveal.js or Beamer slide deck. It reads the source file, proposes a slide sequence, and writes the .qmd.\n\nWhat it does: Reads your notes file, splits into slides, writes formatted output with headers and bullets\nTool: Claude Code\nTime: 20–30 minutes per lecture\n\nRead lecture-notes/week3-supply-demand.md.\nConvert it to a Quarto reveal.js slide deck.\nOne main idea per slide. Use two-column layouts\nwhere a graph or example would help. Keep bullet\npoints to 3-4 per slide max.\nSave as slides/week3-supply-demand.qmd.\n\n\nGrade with a rubric\nGive it a rubric file and a folder of student submissions. It reads each submission, applies the rubric, and drafts feedback comments saved as individual files.\n\nWhat it does: Reads rubric + submissions from your folder, writes feedback files\nTool: Claude Code\nTime: 30 minutes to set up, then a few minutes per batch\n\nRead rubric.md and all the .docx files in submissions/.\nFor each submission, apply the rubric. Write a feedback\nfile for each student in feedback/ with:\n- score per criterion\n- 2-3 sentences of specific feedback per criterion\n- one overall comment on what to improve\nName each file feedback/[student-name].md."
+  },
+  {
+    "objectID": "applications.html#research",
+    "href": "applications.html#research",
+    "title": "Applications & Skills",
+    "section": "Research",
+    "text": "Research\n\n★ Raw data to analysis plan to code to report\nThe full pipeline from Session 2. Describe a dataset and research question; it proposes an analysis plan, writes Stata/R code, and drafts a summary memo — all saved as project files.\n\nWhat it does: Reads your data (or its metadata), writes .do/.R scripts, generates a .md report\nTool: Claude Code\nTime: 30–45 minutes for the full pipeline\n\nRead data/cps_extract.csv. Describe what's in it:\nhow many observations, what variables, what's missing.\n\nThen propose three analyses for a paper on wage gaps\nby education level. Write the Stata code for the\nfirst analysis. Save the do-file as code/wage-gaps.do\nand a summary memo as output/analysis-plan.md.\n\n\nReplication package assembly\nPoint it at your project folder. It reads your do-files or scripts, maps the dependency chain, identifies missing files, and writes a master script.\n\nWhat it does: Reads all scripts in a directory, traces use/merge/include dependencies, writes master.do\nTool: Claude Code\nTime: 30 minutes\n\nRead all the .do files in this project.\nMap which files depend on which — trace every use,\nmerge, include, and file reference.\nWrite a master.do that runs everything in the\ncorrect order. Flag any files that are referenced\nbut don't exist.\n\n\nAdversarial review of your own paper\nGive it your draft as a file. It reads the full paper and flags causal language without identification, missing robustness checks, and measurement concerns.\n\nWhat it does: Reads your .md/.tex/.docx draft, writes a structured referee-style report\nTool: Claude Code with /econ-audit skill\nTime: 15–20 minutes\n\nInstall the skill, then run it:\nclaude skills add econ-audit\n/econ-audit\nIt will ask you to point it at your draft. Or run it manually:\nRead my-paper.tex. Act as a skeptical referee.\nFor every causal claim, check whether the\nidentification strategy actually supports it.\nFlag: causal language without identification,\nmissing robustness checks, measurement concerns,\nand anything a referee would push back on.\nWrite the report as review/referee-report.md.\n\n\nData dictionary from a dataset\nPoint it at a dataset. It reads the metadata and produces a formatted codebook: variable names, types, value ranges, labels, notes.\n\nWhat it does: Reads dataset headers/metadata, writes a formatted .md data dictionary\nTool: Claude Code with /data-dictionary skill\nTime: 10–15 minutes\n\nInstall and run:\nclaude skills add data-dictionary\n/data-dictionary\nOr manually:\nRead the headers and first 20 rows of data/survey.csv.\nProduce a data dictionary with: variable name, type,\nrange or categories, number of missing values, and\nany notes about coding or units. Save as docs/codebook.md.\n\n\nLiterature review with structured output\nGive it a research question. It searches, organizes papers by theme, identifies gaps, and writes a formatted review memo saved to your project folder.\n\nWhat it does: Searches, reads abstracts, writes a structured .md review memo\nTool: Claude Code with /lit-review skill\nTime: 20–30 minutes\n\nInstall and run:\nclaude skills add lit-review\n/lit-review\nOr manually:\nI'm starting a project on the effect of cash transfers\non educational outcomes in sub-Saharan Africa.\nSearch for recent papers. Organize by methodology\n(RCT vs quasi-experimental). For each paper, note:\nauthors, year, country, method, main finding.\nIdentify gaps. Save as lit-review/cash-transfers-education.md."
+  },
+  {
+    "objectID": "applications.html#writing-communication",
+    "href": "applications.html#writing-communication",
+    "title": "Applications & Skills",
+    "section": "Writing & Communication",
+    "text": "Writing & Communication\n\n★ Create a writing voice file\nGive the tool access to files with your real writing — saved emails, letters of recommendation, feedback comments. It reads them, describes your patterns, and saves a reusable voice file.\n\nWhat it does: Reads your writing samples from disk, writes MY-VOICE.md\nTool: Claude Code\nTime: 15 minutes to create, then reuse forever\n\nSave 5–10 of your sent emails as .txt or .md files in a folder, then:\nRead all the files in writing-samples/.\nThese are emails and letters I've written.\nDescribe my writing style: tone, sentence length,\nhow I open and close messages, level of formality,\nwhat I avoid, any distinctive patterns.\nSave the description as MY-VOICE.md.\nThen tell Claude Code to use it going forward:\nAdd to your memory: when I ask you to draft anything,\nload MY-VOICE.md first and match my style.\n\n\n★ Draft emails using your voice file\nPoint it at an email thread (via Gmail integration or a saved file) and tell it the gist. It reads the thread, loads your voice file, and drafts a reply that sounds like you.\n\nWhat it does: Reads email thread + voice file, writes a draft\nTool: Claude Code with Gmail integration\nTime: 2 minutes per email\n\nRead my voice file. Read the most recent email\nfrom [sender] about [topic].\nDraft a reply. The gist: [your one-sentence summary\nof what you want to say].\n\n\nRevision memo for a journal submission\nGive it your paper file and the referee reports. It reads both and drafts a point-by-point response memo.\n\nWhat it does: Reads your draft + referee reports, writes a structured response .md file\nTool: Claude Code\nTime: 30–45 minutes for a first draft\n\nRead paper/draft-v2.tex and reviews/referee1.pdf\nand reviews/referee2.pdf.\nDraft a point-by-point response memo. For each\nreferee comment:\n- quote the comment\n- describe what we changed (or why we didn't)\n- reference the specific section/page\nSave as paper/revision-memo.md."
+  },
+  {
+    "objectID": "applications.html#workflow-organization",
+    "href": "applications.html#workflow-organization",
+    "title": "Applications & Skills",
+    "section": "Workflow & Organization",
+    "text": "Workflow & Organization\n\nInbox triage\nConnects to your Gmail, reads recent messages, and categorizes them by action needed: reply, review, meeting, delegate, archive.\n\nWhat it does: Reads inbox via Gmail integration, writes a categorized summary\nTool: Claude Code with Gmail integration\nTime: 30 minutes to set up, 5 minutes each morning\n\nRead my 20 most recent unread emails.\nCategorize each one:\n- 🔴 Needs reply (from a person, expects a response)\n- 📋 Needs review (requires reading but not a reply)\n- 📅 Meeting-related (scheduling, agenda, follow-up)\n- 📦 Can archive (newsletters, notifications, FYI)\nList the reply-needed ones first with a one-line summary.\n\n\nCalendar automation from emails\nReads emails with dates and creates calendar events automatically.\n\nWhat it does: Reads email via Gmail, extracts dates/times, creates Google Calendar events\nTool: Claude Code with Gmail + Google Calendar integrations\nTime: 5 minutes per batch\n\nSearch my Gmail for emails from [hockey league / school]\nin the last 7 days. Extract any dates, times, and\nlocations for upcoming events. Add each one to my\nGoogle Calendar with the event name, time, and location.\n\n\nProject handoff notes\nAt the end of a work session, it summarizes what was done, what’s open, and what to do next. Saves as a file so you can pick up later without re-reading everything.\n\nWhat it does: Reads session context, writes a structured handoff .md file\nTool: Claude Code\nTime: 2 minutes\n\nSummarize this session:\n- what we worked on\n- what decisions were made\n- what's still open\n- what I should do next\nSave as notes/handoff-2026-04-08.md."
+  },
+  {
+    "objectID": "applications.html#what-to-try-first",
+    "href": "applications.html#what-to-try-first",
+    "title": "Applications & Skills",
+    "section": "What to try first",
+    "text": "What to try first\n\nFastest payoff: Create a voice file (15 minutes, reuse forever)\nMost impressive: Run the data → code → report pipeline (30 minutes)\nMost practical: Inbox triage with Gmail integration (30 minutes to set up, then daily)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI for UVM Economics",
+    "section": "",
+    "text": "AI tools for teaching and research\n\n\n\n\n\n  \n    AI for UVMEconomics\n    AI tools for teaching and research\n    Department of Economics · Spring 2026\n  \n  \n    Bootcamp Schedule\n    \n      Apr 22\n      Getting Started with AI Tools\n      11:00–12:30 · Old Mill A500\n    \n    \n      Apr 27\n      Research Pipelines & Automation\n      11:00–12:30 · Old Mill A500\n    \n  \n\n\nBefore You Arrive\n\nNo installation needed — both sessions are watch-along demos. See the Getting Set Up guide if you want to try things on your own afterward. For broader reading, see Outside Resources.\n\nSession 1: Getting Started with AI Tools\nApril 22, 11:00–12:30, Old Mill A500 — This is a watch-along session. No installation needed.\n\n\n\nDeck\nFormat\n\n\n\n\nSession 1: Agentic AI Bootcamp (Beam & Aslim)\nPDF\n\n\n\n\nWhat we’ll cover\n\nWhat AI tools exist and the difference between chat-based and agentic tools\nContext windows, standing instructions, and planning — the key concepts\nWhat we’ve actually used these for (and what was fun but saved zero time)\nVoice files: making AI output sound like you\nSkills: reusable workflows you can share\nLive demos: website redesign and custom skill creation\n\n\n\nBefore next time (April 27)\n\nTry using an AI tool for one real task this week\nInstall the tools from the prep guide if you haven’t already\nThink of a research or teaching task you’d like to automate\n\nSession 2: AI for Research and Advanced Teaching\nApril 27, 11:00–12:30, Old Mill A500 — Chaining steps into workflows: research pipelines, slide creation, teaching applications, and automation.\nSlides will be posted here after the session.\n\n\nWhat we’ll cover\n\nHow to chain AI steps into a documented workflow (plan, execute, review, clear, repeat)\nCreating slides from rough notes\nTeaching applications: assignments, rubrics, study guides\nResearch pipeline: raw CPS data to analysis plan to Stata code to report\nWeb scraping and automated grading (Erkmen)\n\n\n\nWhat to try next\n\nTeaching: Draft a new assignment, create practice problems, or build a study guide\nResearch: Try the data exploration → analysis plan workflow on your own data\nWriting: Use Claude Code to revise a draft, check references, or restructure a section"
+  },
+  {
+    "objectID": "prep.html",
+    "href": "prep.html",
+    "title": "Getting Set Up",
+    "section": "",
+    "text": "Two lunch sessions, watch-along format. You do not need to install anything beforehand. Bring a laptop if you want to follow along, but it is not required. The main thing to bring is a task you’d like to try — something from your teaching or research where you spend time on mechanical work."
+  },
+  {
+    "objectID": "prep.html#what-to-expect-at-the-bootcamp",
+    "href": "prep.html#what-to-expect-at-the-bootcamp",
+    "title": "Getting Set Up",
+    "section": "",
+    "text": "Two lunch sessions, watch-along format. You do not need to install anything beforehand. Bring a laptop if you want to follow along, but it is not required. The main thing to bring is a task you’d like to try — something from your teaching or research where you spend time on mechanical work."
+  },
+  {
+    "objectID": "prep.html#two-ways-to-use-ai-tools",
+    "href": "prep.html#two-ways-to-use-ai-tools",
+    "title": "Getting Set Up",
+    "section": "Two ways to use AI tools",
+    "text": "Two ways to use AI tools\n\n\n\n\n\n\n\n\n\nChat tools\nAgentic tools\n\n\n\n\nWhat they do\nAnswer questions, draft text, summarize uploaded files\nWork directly on files in your project folders\n\n\nInterface\nWeb browser or desktop app\nTerminal (text-based command line)\n\n\nSetup\nCreate an account, start typing\nInstall Node.js, then install the tool\n\n\nBest for starting\nQuick tasks, brainstorming, one-off drafts\nMulti-step workflows, code, file management\n\n\nExamples\nClaude, ChatGPT, Microsoft Copilot\nClaude Code, OpenAI Codex\n\n\n\nFor this bootcamp, we demo agentic tools because they show the bigger jump in usefulness. But chat tools are a perfectly good place to start."
+  },
+  {
+    "objectID": "prep.html#claude-code-vs.-openai-codex",
+    "href": "prep.html#claude-code-vs.-openai-codex",
+    "title": "Getting Set Up",
+    "section": "Claude Code vs. OpenAI Codex",
+    "text": "Claude Code vs. OpenAI Codex\nThese are the two main agentic tools we use. Both run in your terminal and can read, write, and run files.\n\n\n\n\n\n\n\n\n\nClaude Code\nOpenAI Codex\n\n\n\n\nMade by\nAnthropic\nOpenAI\n\n\nBest models\nClaude Opus 4.6, Sonnet 4.6\nGPT-4.1, o3\n\n\nInstall\nnpm install -g @anthropic-ai/claude-code\nnpm install -g @openai/codex\n\n\nLaunch\nclaude\ncodex\n\n\nSign in with\nClaude account or Anthropic Console\nChatGPT account or OpenAI API key\n\n\nSimplest plan\nClaude Pro ($20/mo)\nChatGPT Plus ($20/mo)\n\n\nHeavy use plan\nClaude Max ($100+/mo) or API billing\nChatGPT Pro ($200/mo) or API billing\n\n\nIDE extensions\nVS Code, JetBrains\nVS Code\n\n\nRule files\nCLAUDE.md\nAGENTS.md\n\n\nIntegrations\nGmail, Google Calendar, Todoist, and more via MCP\nFewer built-in integrations currently\n\n\nStrengths\nLong context, strong writing, extensive tool ecosystem\nStrong coding, fast iteration\n\n\n\nBoth are good. We primarily demo Claude Code, but the concepts transfer."
+  },
+  {
+    "objectID": "prep.html#plans-and-pricing",
+    "href": "prep.html#plans-and-pricing",
+    "title": "Getting Set Up",
+    "section": "Plans and pricing",
+    "text": "Plans and pricing\n\nSubscription plans (simplest way to start)\n\n\n\n\n\n\n\n\nPlan\nCost\nWhat you get\n\n\n\n\nClaude Free\n$0\nChat only, limited usage\n\n\nClaude Pro\n$20/mo\nChat + Claude Code access, generous limits\n\n\nClaude Max\n$100–200/mo\nMuch higher limits for heavy use\n\n\nChatGPT Free\n$0\nChat only, limited models\n\n\nChatGPT Plus\n$20/mo\nChat + Codex access, better models\n\n\nChatGPT Pro\n$200/mo\nHighest limits\n\n\nUVM Copilot\nFree (UVM account)\nMicrosoft Copilot Chat — good for Office tasks\n\n\n\nFor most faculty: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you. PDF funds may cover subscriptions — ask your department chair.\n\n\n\n\n\n\nThe $20/mo subscription is not just chat. Claude Pro includes Claude Code (the terminal tool), and ChatGPT Plus includes Codex. You also get access to integrations with Gmail, Google Calendar, Todoist, and more — all the advanced workflows shown on our Bells & Whistles page. You do not need a separate API account or additional purchases.\n\n\n\n\n\nAPI pricing (pay-as-you-go)\nIf you outgrow the subscription or want more control, both companies offer API billing where you pay per token.\n\n\n\nModel\nInput (per 1M tokens)\nOutput (per 1M tokens)\n\n\n\n\nClaude Sonnet 4.6\n$3.00\n$15.00\n\n\nClaude Opus 4.6\n$15.00\n$75.00\n\n\nClaude Haiku 4.5\n$0.80\n$4.00\n\n\nGPT-4o\n$2.50\n$10.00\n\n\nGPT-4.1\n$2.00\n$8.00\n\n\nGPT-4o mini\n$0.15\n$0.60\n\n\nGemini 2.5 Pro\n$1.25\n$10.00\n\n\n\nA token ≈ ¾ of a word. Most people don’t need API billing — the subscription covers it."
+  },
+  {
+    "objectID": "prep.html#install-guide",
+    "href": "prep.html#install-guide",
+    "title": "Getting Set Up",
+    "section": "Install guide",
+    "text": "Install guide\n\nStep 1: Install Node.js (required for both tools)\n\nGo to nodejs.org\nClick the big green LTS download button\nRun the installer — accept all the defaults\n\n\n\nStep 2: Install your tool\nOpen your terminal:\n\nMac: Search for “Terminal” in Spotlight, or find it in Applications → Utilities\nWindows: Search for “PowerShell” in the Start menu\n\nThen run one (or both):\n# Claude Code\nnpm install -g @anthropic-ai/claude-code\n\n# OpenAI Codex\nnpm install -g @openai/codex\n\n\nStep 3: Launch it\nclaude    # for Claude Code\ncodex     # for Codex\nIt will ask you to sign in. Follow the prompts."
+  },
+  {
+    "objectID": "prep.html#checking-your-usage",
+    "href": "prep.html#checking-your-usage",
+    "title": "Getting Set Up",
+    "section": "Checking your usage",
+    "text": "Checking your usage\nIf you are using Claude Code with a paid subscription:\n\nnpx claude-spend — shows session and weekly limits, extra paid usage\nnpx ccusage@latest — alternative usage tracker\n\nUsage limits can change over time. Some models are cheaper than others."
+  },
+  {
+    "objectID": "prep.html#optional-extras",
+    "href": "prep.html#optional-extras",
+    "title": "Getting Set Up",
+    "section": "Optional extras",
+    "text": "Optional extras\n\nGhostty (free) — A modern terminal app. Looks nicer than the default.\nVS Code (free) — A code editor. Both Claude Code and Codex have VS Code extensions.\nTypora ($15) — A Markdown viewer. AI tools produce .md files; Typora makes them look like formatted text immediately."
+  },
+  {
+    "objectID": "prep.html#key-terms",
+    "href": "prep.html#key-terms",
+    "title": "Getting Set Up",
+    "section": "Key terms",
+    "text": "Key terms\n\n\n\n\n\n\n\nTerm\nWhat we mean\n\n\n\n\nAgent\nA tool instance carrying out a bounded task with some autonomy\n\n\nModel\nThe underlying AI system (e.g., Claude Sonnet, GPT-4o)\n\n\nSession\nOne conversation or working thread with the tool\n\n\nContext window\nThe working memory in the current session — when full, performance degrades\n\n\nArtifact\nA concrete output: file, draft, memo, script, table, or slide\n\n\nRule file\nStanding instructions (CLAUDE.md or AGENTS.md) that load automatically\n\n\nToken\nThe unit AI models process — roughly ¾ of a word\n\n\nMCP\nModel Context Protocol — how tools connect to external services (email, calendar, etc.)"
   }
 ]

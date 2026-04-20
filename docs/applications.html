@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Applications – AI for UVM Economics</title>
+<title>Applications &amp; Skills – AI for UVM Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,24 +135,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./applications.html" aria-current="page"> 
-<span class="menu-text">Applications</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./skills.html"> 
-<span class="menu-text">Skills &amp; Demos</span></a>
+<span class="menu-text">Applications &amp; Skills</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Bells &amp; Whistles</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./session1.html"> 
-<span class="menu-text">Session 1 (Apr 22)</span></a>
-  </li>  
-  <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">Session 2 (Apr 27) — coming soon</span>
-    </span>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -170,7 +157,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#teaching" id="toc-teaching" class="nav-link active" data-scroll-target="#teaching">Teaching</a>
+  <li><a href="#installable-skills" id="toc-installable-skills" class="nav-link active" data-scroll-target="#installable-skills">Installable skills</a>
+  <ul class="collapse">
+  <li><a href="#literature-review-lit-review" id="toc-literature-review-lit-review" class="nav-link" data-scroll-target="#literature-review-lit-review">Literature Review (<code>/lit-review</code>)</a></li>
+  <li><a href="#econometrics-audit-econ-audit" id="toc-econometrics-audit-econ-audit" class="nav-link" data-scroll-target="#econometrics-audit-econ-audit">Econometrics Audit (<code>/econ-audit</code>)</a></li>
+  <li><a href="#data-dictionary-generator-data-dictionary" id="toc-data-dictionary-generator-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary-generator-data-dictionary">Data Dictionary Generator (<code>/data-dictionary</code>)</a></li>
+  <li><a href="#building-your-own-skills" id="toc-building-your-own-skills" class="nav-link" data-scroll-target="#building-your-own-skills">Building your own skills</a></li>
+  </ul></li>
+  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a>
   <ul class="collapse">
   <li><a href="#build-a-course-website-from-your-materials" id="toc-build-a-course-website-from-your-materials" class="nav-link" data-scroll-target="#build-a-course-website-from-your-materials">Build a course website from your materials</a></li>
   <li><a href="#convert-lecture-notes-to-slides" id="toc-convert-lecture-notes-to-slides" class="nav-link" data-scroll-target="#convert-lecture-notes-to-slides">Convert lecture notes to slides</a></li>
@@ -205,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Applications</h1>
+<h1 class="title">Applications &amp; Skills</h1>
 <p class="subtitle lead">Concrete things you can do with agentic tools</p>
 </div>
 
@@ -226,6 +220,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>These are workflows that go beyond chat — they involve reading your files, writing outputs, running code, or connecting to external services. Most take 10–45 minutes to try.</p>
 <p><em>★ = demonstrated in the bootcamp sessions.</em></p>
 <hr>
+<section id="installable-skills" class="level2">
+<h2 class="anchored" data-anchor-id="installable-skills">Installable skills</h2>
+<p>Skills are reusable prompt-and-instruction bundles — saved recipes for tasks you do repeatedly. Instead of explaining a workflow from scratch each time, you invoke a skill and it runs.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Install the bootcamp skills
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These skills are published and ready to use:</p>
+<pre><code>npx skills add eabeam/econ-skills</code></pre>
+<p>Or install one at a time:</p>
+<pre><code>npx skills add eabeam/econ-skills --skill econ-audit</code></pre>
+<p>Browse the source code: <a href="https://github.com/eabeam/econ-skills">github.com/eabeam/econ-skills</a></p>
+</div>
+</div>
+<section id="literature-review-lit-review" class="level3">
+<h3 class="anchored" data-anchor-id="literature-review-lit-review">Literature Review (<code>/lit-review</code>)</h3>
+<p>Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.</p>
+<p><strong>Good for:</strong> starting a new project, preparing a referee report, catching up on a subfield.</p>
+<p><strong>Install:</strong> <code>npx skills add eabeam/econ-skills --skill lit-review</code> | <a href="https://github.com/eabeam/econ-skills/tree/main/lit-review/SKILL.md">Browse source</a></p>
+</section>
+<section id="econometrics-audit-econ-audit" class="level3">
+<h3 class="anchored" data-anchor-id="econometrics-audit-econ-audit">Econometrics Audit (<code>/econ-audit</code>)</h3>
+<p>Adversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.</p>
+<p><strong>Good for:</strong> self-review before submission, preparing for seminars, reviewing student work.</p>
+<p><strong>Install:</strong> <code>npx skills add eabeam/econ-skills --skill econ-audit</code> | <a href="https://github.com/eabeam/econ-skills/tree/main/econ-audit/SKILL.md">Browse source</a></p>
+</section>
+<section id="data-dictionary-generator-data-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="data-dictionary-generator-data-dictionary">Data Dictionary Generator (<code>/data-dictionary</code>)</h3>
+<p>Reads a dataset’s metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.</p>
+<p><strong>Good for:</strong> replication packages, project handoffs, codebook creation.</p>
+<p><strong>Install:</strong> <code>npx skills add eabeam/econ-skills --skill data-dictionary</code> | <a href="https://github.com/eabeam/econ-skills/tree/main/data-dictionary/SKILL.md">Browse source</a></p>
+</section>
+<section id="building-your-own-skills" class="level3">
+<h3 class="anchored" data-anchor-id="building-your-own-skills">Building your own skills</h3>
+<ol type="1">
+<li><strong>Pick one repeating task</strong> — grading feedback, email drafts, data cleaning, meeting prep</li>
+<li><strong>Do it once with AI</strong> and save the conversation</li>
+<li><strong>Extract the instructions</strong> into a Markdown file</li>
+<li><strong>Refine</strong> — add constraints, examples, edge cases as you use it</li>
+</ol>
+<p>More resources: <a href="https://skills.sh">skills.sh</a> (public skill registry) · <a href="https://docs.anthropic.com/en/docs/claude-code/tutorials#create-custom-slash-commands">Claude Code docs: custom commands</a> · <a href="https://claudlab.in">claudlab.in</a></p>
+<hr>
+</section>
+</section>
 <section id="teaching" class="level2">
 <h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
 <section id="build-a-course-website-from-your-materials" class="level3">
@@ -319,7 +363,7 @@ but don't exist.</code></pre>
 <li><strong>Time</strong>: 15–20 minutes</li>
 </ul>
 <p>Install the skill, then run it:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add econ-audit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add econ-audit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>/econ-audit</code></pre>
 <p>It will ask you to point it at your draft. Or run it manually:</p>
 <pre><code>Read my-paper.tex. Act as a skeptical referee.
@@ -339,7 +383,7 @@ Write the report as review/referee-report.md.</code></pre>
 <li><strong>Time</strong>: 10–15 minutes</li>
 </ul>
 <p>Install and run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add data-dictionary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add data-dictionary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>/data-dictionary</code></pre>
 <p>Or manually:</p>
 <pre><code>Read the headers and first 20 rows of data/survey.csv.
@@ -356,7 +400,7 @@ any notes about coding or units. Save as docs/codebook.md.</code></pre>
 <li><strong>Time</strong>: 20–30 minutes</li>
 </ul>
 <p>Install and run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add lit-review</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> skills add lit-review</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>/lit-review</code></pre>
 <p>Or manually:</p>
 <pre><code>I'm starting a project on the effect of cash transfers

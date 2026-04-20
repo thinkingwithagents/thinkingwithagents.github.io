@@ -1,11 +1,64 @@
 ---
-title: "Applications"
+title: "Applications & Skills"
 subtitle: "Concrete things you can do with agentic tools"
 ---
 
 These are workflows that go beyond chat — they involve reading your files, writing outputs, running code, or connecting to external services. Most take 10–45 minutes to try.
 
 *★ = demonstrated in the bootcamp sessions.*
+
+---
+
+## Installable skills
+
+Skills are reusable prompt-and-instruction bundles — saved recipes for tasks you do repeatedly. Instead of explaining a workflow from scratch each time, you invoke a skill and it runs.
+
+::: {.callout-tip}
+### Install the bootcamp skills
+
+These skills are published and ready to use:
+
+    npx skills add eabeam/econ-skills
+
+Or install one at a time:
+
+    npx skills add eabeam/econ-skills --skill econ-audit
+
+Browse the source code: [github.com/eabeam/econ-skills](https://github.com/eabeam/econ-skills)
+:::
+
+### Literature Review (`/lit-review`)
+
+Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.
+
+**Good for:** starting a new project, preparing a referee report, catching up on a subfield.
+
+**Install:** `npx skills add eabeam/econ-skills --skill lit-review` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/lit-review/SKILL.md)
+
+### Econometrics Audit (`/econ-audit`)
+
+Adversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.
+
+**Good for:** self-review before submission, preparing for seminars, reviewing student work.
+
+**Install:** `npx skills add eabeam/econ-skills --skill econ-audit` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/econ-audit/SKILL.md)
+
+### Data Dictionary Generator (`/data-dictionary`)
+
+Reads a dataset's metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.
+
+**Good for:** replication packages, project handoffs, codebook creation.
+
+**Install:** `npx skills add eabeam/econ-skills --skill data-dictionary` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/data-dictionary/SKILL.md)
+
+### Building your own skills
+
+1. **Pick one repeating task** — grading feedback, email drafts, data cleaning, meeting prep
+2. **Do it once with AI** and save the conversation
+3. **Extract the instructions** into a Markdown file
+4. **Refine** — add constraints, examples, edge cases as you use it
+
+More resources: [skills.sh](https://skills.sh) (public skill registry) · [Claude Code docs: custom commands](https://docs.anthropic.com/en/docs/claude-code/tutorials#create-custom-slash-commands) · [claudlab.in](https://claudlab.in)
 
 ---
 

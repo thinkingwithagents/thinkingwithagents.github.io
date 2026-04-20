@@ -32,17 +32,53 @@ toc: false
 
 ::: {.landing-content}
 
-[Session 1 Materials]{.landing-section-title}
-
-::: {.materials-row}
-[Slides (PDF)](Session1_Slides/session_1_slides.pdf){.material-link}
-[Session page](session1.qmd){.material-link}
-:::
-
 [Before You Arrive]{.landing-section-title}
 
 ::: {.prep-note}
 No installation needed — both sessions are watch-along demos. See the [Getting Set Up](prep.qmd) guide if you want to try things on your own afterward. For broader reading, see [Outside Resources](resources.qmd).
 :::
+
+[Session 1: Getting Started with AI Tools]{.landing-section-title}
+
+**April 22, 11:00--12:30, Old Mill A500** — This is a watch-along session. No installation needed.
+
+| Deck | Format |
+|------|--------|
+| Session 1: Agentic AI Bootcamp (Beam & Aslim) | [PDF](Session1_Slides/session_1_slides.pdf) |
+
+#### What we'll cover
+
+- What AI tools exist and the difference between chat-based and agentic tools
+- Context windows, standing instructions, and planning — the key concepts
+- What we've actually used these for (and what was fun but saved zero time)
+- Voice files: making AI output sound like you
+- Skills: reusable workflows you can share
+- Live demos: website redesign and custom skill creation
+
+#### Before next time (April 27)
+
+- [ ] Try using an AI tool for one real task this week
+- [ ] Install the tools from the [prep guide](prep.qmd) if you haven't already
+- [ ] Think of a research or teaching task you'd like to automate
+
+[Session 2: AI for Research and Advanced Teaching]{.landing-section-title}
+
+**April 27, 11:00--12:30, Old Mill A500** — Chaining steps into workflows: research pipelines, slide creation, teaching applications, and automation.
+
+*Slides will be posted here after the session.*
+
+#### What we'll cover
+
+- How to chain AI steps into a documented workflow (plan, execute, review, clear, repeat)
+- Creating slides from rough notes
+- Teaching applications: assignments, rubrics, study guides
+- Research pipeline: raw CPS data to analysis plan to Stata code to report
+- Web scraping and automated grading (Erkmen)
+
+#### What to try next
+
+- **Teaching**: Draft a new assignment, create practice problems, or build a study guide
+- **Research**: Try the data exploration → analysis plan workflow on your own data
+- **Writing**: Use Claude Code to revise a draft, check references, or restructure a section
 
 :::

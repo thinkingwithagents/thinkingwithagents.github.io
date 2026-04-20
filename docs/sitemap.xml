@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://eabeam.github.io/uvmecon-ai/skills.html</loc>
-    <lastmod>2026-04-20T21:27:57.245Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eabeam.github.io/uvmecon-ai/session1.html</loc>
-    <lastmod>2026-04-19T00:43:21.321Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eabeam.github.io/uvmecon-ai/prep.html</loc>
-    <lastmod>2026-04-20T21:27:58.019Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eabeam.github.io/uvmecon-ai/index.html</loc>
-    <lastmod>2026-04-20T21:33:02.188Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eabeam.github.io/uvmecon-ai/applications.html</loc>
-    <lastmod>2026-04-09T00:46:09.897Z</lastmod>
+    <loc>https://eabeam.github.io/uvmecon-ai/resources.html</loc>
+    <lastmod>2026-04-08T23:50:33.619Z</lastmod>
   </url>
   <url>
     <loc>https://eabeam.github.io/uvmecon-ai/modules/a1-what-llms-do.html</loc>
     <lastmod>2026-04-03T15:14:25.898Z</lastmod>
   </url>
   <url>
-    <loc>https://eabeam.github.io/uvmecon-ai/resources.html</loc>
-    <lastmod>2026-04-08T23:50:33.619Z</lastmod>
+    <loc>https://eabeam.github.io/uvmecon-ai/applications.html</loc>
+    <lastmod>2026-04-20T21:41:43.853Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eabeam.github.io/uvmecon-ai/index.html</loc>
+    <lastmod>2026-04-20T21:41:16.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eabeam.github.io/uvmecon-ai/prep.html</loc>
+    <lastmod>2026-04-20T21:27:58.019Z</lastmod>
   </url>
 </urlset>
