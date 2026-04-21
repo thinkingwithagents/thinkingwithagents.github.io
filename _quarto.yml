@@ -8,8 +8,8 @@ project:
 website:
   title: "AI for UVM Economics"
   description: "Modular AI literacy resources for UVM Economics students and faculty"
-  site-url: https://eabeam.github.io/uvmecon-ai
-  repo-url: https://github.com/eabeam/uvmecon-ai
+  site-url: https://thinkingwithagents.github.io
+  repo-url: https://github.com/thinkingwithagents/thinkingwithagents.github.io
   repo-actions: [issue]
 
   navbar:
