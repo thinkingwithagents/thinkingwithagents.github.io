@@ -6,7 +6,7 @@ project:
     - "!slides/"
 
 website:
-  title: "AI for UVM Economics"
+  title: "Thinking with Agents"
   description: "Modular AI literacy resources for UVM Economics students and faculty"
   site-url: https://thinkingwithagents.github.io
   repo-url: https://github.com/thinkingwithagents/thinkingwithagents.github.io
@@ -39,7 +39,7 @@ website:
   page-footer:
     center: |
       Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-      Built by [Emily Beam](https://eabeam.github.io), University of Vermont.
+      Built by Emily Beam and Erkmen Aslim.
 
 format:
   html:

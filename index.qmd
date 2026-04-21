@@ -1,5 +1,5 @@
 ---
-title: "AI for UVM Economics"
+title: "Thinking with Agents"
 subtitle: "AI tools for teaching and research"
 page-layout: full
 body-classes: landing-page
@@ -10,13 +10,12 @@ toc: false
 ```{=html}
 <section class="landing-hero-split">
   <div class="hero-left">
-    <h1>AI for UVM<br>Economics</h1>
+    <h1>Thinking with<br>Agents</h1>
     <p class="hero-subtitle">AI tools for teaching and research</p>
     <p class="hero-meta">Erkmen G. Aslim &amp; Emily Beam</p>
-    <p class="hero-meta">Department of Economics · Spring 2026</p>
   </div>
   <div class="hero-right">
-    <h2 class="schedule-heading">Bootcamp Schedule</h2>
+    <h2 class="schedule-heading">UVM Economics Bootcamp Schedule</h2>
     <div class="schedule-item">
       <div class="schedule-date">Apr 22</div>
       <div class="schedule-title">Getting Started with AI Tools</div>
@@ -46,7 +45,7 @@ No installation needed. See the [Getting Set Up](prep.qmd) guide if you want to 
 
 | Deck | Format |
 |------|--------|
-| Session 1: Agentic AI Bootcamp (Beam & Aslim) | [PDF](Session1_Slides/session_1_slides.pdf) |
+| Session 1: Agentic AI Bootcamp (Aslim & Beam) | [PDF](Session1_Slides/session_1_slides.pdf) |
 
 #### What we'll cover
 
@@ -74,13 +73,15 @@ No installation needed. See the [Getting Set Up](prep.qmd) guide if you want to 
 - How to chain AI steps into a documented workflow (plan, execute, review, clear, repeat)
 - Creating slides from rough notes
 - Teaching applications: assignments, rubrics, study guides
-- Research pipeline: raw CPS data to analysis plan to Stata code to report
-- Web scraping and automated grading (Erkmen)
+- Research pipeline
+- Web scraping and automated grading
 
+<!--
 #### What to try next
 
 - **Teaching**: Draft a new assignment, create practice problems, or build a study guide
 - **Research**: Try the data exploration → analysis plan workflow on your own data
 - **Writing**: Use Claude Code to revise a draft, check references, or restructure a section
+-->
 
 :::

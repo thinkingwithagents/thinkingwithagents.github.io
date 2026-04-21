@@ -30,13 +30,12 @@ These are the two main agentic tools we use. Both run in your terminal and can r
 | | Claude Code | OpenAI Codex |
 |---|---|---|
 | **Made by** | Anthropic | OpenAI |
-| **Best models** | Claude Opus 4.6, Sonnet 4.6 | GPT-4.1, o3 |
+| **Best models** | Claude Opus 4.6, Sonnet 4.6 | GPT-5.4, o3 |
 | **Install** | `npm install -g @anthropic-ai/claude-code` | `npm install -g @openai/codex` |
 | **Launch** | `claude` | `codex` |
 | **Sign in with** | Claude account or Anthropic Console | ChatGPT account or OpenAI API key |
 | **Simplest plan** | Claude Pro ($20/mo) | ChatGPT Plus ($20/mo) |
 | **Heavy use plan** | Claude Max ($100+/mo) or API billing | ChatGPT Pro ($200/mo) or API billing |
-| **IDE extensions** | VS Code, JetBrains | VS Code |
 | **Rule files** | `CLAUDE.md` | `AGENTS.md` |
 | **Integrations** | Gmail, Google Calendar, Todoist, and more via MCP | Fewer built-in integrations currently |
 | **Strengths** | Long context, strong writing, extensive tool ecosystem | Strong coding, fast iteration |
@@ -59,7 +58,7 @@ Both are good. We primarily demo Claude Code, but the concepts transfer.
 | **ChatGPT Pro** | $200/mo | Highest limits |
 | **UVM Copilot** | Free (UVM account) | Microsoft Copilot Chat — good for Office tasks |
 
-**For most faculty**: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you. PDF funds may cover subscriptions — ask your department chair.
+**For most faculty**: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you.
 
 ::: {.callout-important appearance="simple"}
 **The $20/mo subscription is not just chat.** Claude Pro includes Claude Code (the terminal tool), and ChatGPT Plus includes Codex. You also get access to integrations with Gmail, Google Calendar, Todoist, and more — all the advanced workflows shown on our [Bells & Whistles](resources.qmd) page. You do not need a separate API account or additional purchases.
@@ -67,19 +66,7 @@ Both are good. We primarily demo Claude Code, but the concepts transfer.
 
 ### API pricing (pay-as-you-go)
 
-If you outgrow the subscription or want more control, both companies offer API billing where you pay per token.
-
-| Model | Input (per 1M tokens) | Output (per 1M tokens) |
-|---|---|---|
-| Claude Sonnet 4.6 | $3.00 | $15.00 |
-| Claude Opus 4.6 | $15.00 | $75.00 |
-| Claude Haiku 4.5 | $0.80 | $4.00 |
-| GPT-4o | $2.50 | $10.00 |
-| GPT-4.1 | $2.00 | $8.00 |
-| GPT-4o mini | $0.15 | $0.60 |
-| Gemini 2.5 Pro | $1.25 | $10.00 |
-
-*A token ≈ ¾ of a word. Most people don't need API billing — the subscription covers it.*
+If you outgrow the subscription or want more control, both companies offer API billing where you pay per token. Most people don't need this — the subscription covers it. For current pricing, see [BenchLM's LLM pricing tracker](https://benchlm.ai/llm-pricing).
 
 ---
 
