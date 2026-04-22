@@ -256,43 +256,6 @@ This checks your installation, configuration, and network connectivity.
 
 ---
 
-## Two ways to use AI tools
-
-| | Chat tools | Agentic tools |
-|---|---|---|
-| **What they do** | Answer questions, draft text, summarize uploaded files | Work directly on files in your project folders |
-| **Interface** | Web browser or desktop app | Terminal (text-based command line) |
-| **Setup** | Create an account, start typing | Run a one-line installer in your terminal |
-| **Best for starting** | Quick tasks, brainstorming, one-off drafts | Multi-step workflows, code, file management |
-| **Examples** | Claude, ChatGPT, Microsoft Copilot | Claude Code, OpenAI Codex |
-
-**For this bootcamp**, we demo agentic tools because they show a bigger jump in usefulness. But chat tools are a perfectly good place to start.
-
-If you just want to use chat, no installation is needed — go to [claude.ai](https://claude.ai), [chatgpt.com](https://chatgpt.com), or [go.uvm.edu/copilot](https://go.uvm.edu/copilot) (free with your UVM account).
-
----
-
-## Claude Code vs. OpenAI Codex
-
-These are the two main agentic tools we use. Both run in your terminal and can read, write, and run files.
-
-| | Claude Code | OpenAI Codex |
-|---|---|---|
-| **Made by** | Anthropic | OpenAI |
-| **Best models** | Claude Opus 4.6, Sonnet 4.6 | GPT-5.4, o3 |
-| **Install** | Native installer (see above) | Binary download or npm (see above) |
-| **Launch** | `claude` | `codex` |
-| **Sign in with** | Claude account or Anthropic Console | ChatGPT account or OpenAI API key |
-| **Simplest plan** | Claude Pro ($20/mo) | ChatGPT Plus ($20/mo) |
-| **Heavy use plan** | Claude Max ($100+/mo) or API billing | ChatGPT Pro ($200/mo) or API billing |
-| **Rule files** | `CLAUDE.md` | `AGENTS.md` |
-| **Integrations** | Gmail, Google Calendar, Todoist, and more via MCP | Fewer built-in integrations currently |
-| **Strengths** | Long context, strong writing, extensive tool ecosystem | Strong coding, fast iteration |
-
-Both are good. We primarily demo Claude Code, but the concepts transfer.
-
----
-
 ## Plans and pricing
 
 ### Subscription plans (simplest way to start)
