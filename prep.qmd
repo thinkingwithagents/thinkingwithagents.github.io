@@ -3,73 +3,6 @@ title: "Getting Set Up"
 subtitle: "Choose a tool, pick a plan, install it"
 ---
 
-## What to expect at the bootcamp
-
-Two lunch sessions, watch-along format. You do not need to install anything beforehand. Bring a laptop if you want to follow along, but it is not required. The main thing to bring is a task you'd like to try — something from your teaching or research where you spend time on mechanical work.
-
----
-
-## Two ways to use AI tools
-
-| | Chat tools | Agentic tools |
-|---|---|---|
-| **What they do** | Answer questions, draft text, summarize uploaded files | Work directly on files in your project folders |
-| **Interface** | Web browser or desktop app | Terminal (text-based command line) |
-| **Setup** | Create an account, start typing | Run a one-line installer in your terminal |
-| **Best for starting** | Quick tasks, brainstorming, one-off drafts | Multi-step workflows, code, file management |
-| **Examples** | Claude, ChatGPT, Microsoft Copilot | Claude Code, OpenAI Codex |
-
-**For this bootcamp**, we demo agentic tools because they show a bigger jump in usefulness. But chat tools are a perfectly good place to start.
-
----
-
-## Claude Code vs. OpenAI Codex
-
-These are the two main agentic tools we use. Both run in your terminal and can read, write, and run files.
-
-| | Claude Code | OpenAI Codex |
-|---|---|---|
-| **Made by** | Anthropic | OpenAI |
-| **Best models** | Claude Opus 4.6, Sonnet 4.6 | GPT-5.4, o3 |
-| **Install** | Native installer (see below) | Binary download or npm (see below) |
-| **Launch** | `claude` | `codex` |
-| **Sign in with** | Claude account or Anthropic Console | ChatGPT account or OpenAI API key |
-| **Simplest plan** | Claude Pro ($20/mo) | ChatGPT Plus ($20/mo) |
-| **Heavy use plan** | Claude Max ($100+/mo) or API billing | ChatGPT Pro ($200/mo) or API billing |
-| **Rule files** | `CLAUDE.md` | `AGENTS.md` |
-| **Integrations** | Gmail, Google Calendar, Todoist, and more via MCP | Fewer built-in integrations currently |
-| **Strengths** | Long context, strong writing, extensive tool ecosystem | Strong coding, fast iteration |
-
-Both are good. We primarily demo Claude Code, but the concepts transfer.
-
----
-
-## Plans and pricing
-
-### Subscription plans (simplest way to start)
-
-| Plan | Cost | What you get |
-|---|---|---|
-| **Claude Free** | $0 | Chat only, limited usage |
-| **Claude Pro** | $20/mo | Chat + Claude Code access, generous limits |
-| **Claude Max** | $100–200/mo | Much higher limits for heavy use |
-| **ChatGPT Free** | $0 | Chat only, limited models |
-| **ChatGPT Plus** | $20/mo | Chat + Codex access, better models |
-| **ChatGPT Pro** | $200/mo | Highest limits |
-| **UVM Copilot** | Free (UVM account) | Microsoft Copilot Chat — good for Office tasks |
-
-**For most faculty**: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you.
-
-::: {.callout-important appearance="simple"}
-**The $20/mo subscription is not just chat.** Claude Pro includes Claude Code (the terminal tool), and ChatGPT Plus includes Codex. You also get access to integrations with Gmail, Google Calendar, Todoist, and more — all the advanced workflows shown on our [Bells & Whistles](resources.qmd) page. You do not need a separate API account or additional purchases.
-:::
-
-### API pricing (pay-as-you-go)
-
-If you outgrow the subscription or want more control, both companies offer API billing where you pay per token. Most people don't need this — the subscription covers it. For current pricing, see [BenchLM's LLM pricing tracker](https://benchlm.ai/llm-pricing).
-
----
-
 ## Install guide
 
 ### Step 1: Pick your machine, then your tool
@@ -119,14 +52,6 @@ codex
 ```
 
 Sign in with your ChatGPT account (a [ChatGPT Plus subscription](https://chatgpt.com/) is the simplest option).
-
-### Chat only (no install)
-
-No installation needed. Just open one of these in your browser:
-
-- **Claude**: [claude.ai](https://claude.ai)
-- **ChatGPT**: [chatgpt.com](https://chatgpt.com)
-- **UVM Copilot** (free with UVM account): [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
 
 :::
 
@@ -179,14 +104,6 @@ codex
 
 Sign in with your ChatGPT account (a [ChatGPT Plus subscription](https://chatgpt.com/) is the simplest option).
 
-### Chat only (no install)
-
-No installation needed. Just open one of these in your browser:
-
-- **Claude**: [claude.ai](https://claude.ai)
-- **ChatGPT**: [chatgpt.com](https://chatgpt.com)
-- **UVM Copilot** (free with UVM account): [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
-
 :::
 
 :::
@@ -202,27 +119,31 @@ claude             # Launches Claude Code
 
 Once inside, type `/help` to see what's available, or just start typing a request.
 
----
+### Troubleshooting
 
-## Troubleshooting
+::: {.callout-warning appearance="simple"}
+**The installer may show errors but still succeed.** Sometimes the install script prints warnings or error messages even though it worked fine. After installing, close and reopen your terminal and try `claude --version`. If it prints a version number, you're good — ignore the earlier errors.
+:::
+
+::: {.panel-tabset}
+
+## Mac
 
 ::: {.callout-tip collapse="true"}
-### "command not found" or "not recognized"
+#### "command not found: claude"
 
 The installer put the tool somewhere your terminal can't find it.
-
-**Mac fix:**
 
 ```bash
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-**Windows fix:** Close and reopen PowerShell. If that doesn't work, check that `~\.local\bin` is in your system PATH (search "Environment Variables" in Settings).
+Then try `claude --version` again.
 :::
 
 ::: {.callout-tip collapse="true"}
-### Permission errors on Mac
+#### Permission errors
 
 If you get "permission denied" during install:
 
@@ -235,27 +156,13 @@ Then re-run the installer.
 :::
 
 ::: {.callout-tip collapse="true"}
-### Windows: wrong shell
+#### Network or firewall errors
 
-- `'irm' is not recognized` → You're in Command Prompt, not PowerShell. Open **PowerShell** from the Start menu.
-- `'bash' is not recognized` → You ran the Mac installer on Windows. Use the PowerShell command instead.
-:::
+If you get SSL/TLS errors or "failed to fetch," your network may be blocking the download. Try Homebrew instead:
 
-::: {.callout-tip collapse="true"}
-### Windows: "requires git-bash"
-
-Claude Code on Windows needs Git for Windows. Download it from [git-scm.com/downloads/win](https://git-scm.com/downloads/win), install with defaults, restart PowerShell, and try again.
-:::
-
-::: {.callout-tip collapse="true"}
-### Network or firewall errors
-
-If you get SSL/TLS errors or "failed to fetch," your network may be blocking the download.
-
-**Try an alternative installer:**
-
-- Mac: `brew install --cask claude-code`
-- Windows: `winget install Anthropic.ClaudeCode`
+```bash
+brew install --cask claude-code
+```
 
 If your institution uses a proxy, ask IT for the proxy URL and set it before installing:
 
@@ -266,15 +173,67 @@ export HTTPS_PROXY=http://your-proxy:8080
 :::
 
 ::: {.callout-tip collapse="true"}
-### Sign-in problems
+#### Multiple installations conflicting
 
-- **"Invalid code" error**: The sign-in code expired. Run `/login` inside Claude Code to try again — complete the browser sign-in quickly.
-- **"403 Forbidden"**: Make sure your subscription is active at [claude.ai/settings](https://claude.ai/settings).
-- **Browser doesn't open (Windows/WSL)**: Set your browser manually: `export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"`
+If you previously installed via npm and now used the native installer, you may have two versions. Remove the old one:
+
+```bash
+npm uninstall -g @anthropic-ai/claude-code
+```
+
+The native installer (at `~/.local/bin/claude`) is the recommended version — it auto-updates.
+:::
+
+## Windows
+
+::: {.callout-tip collapse="true"}
+#### "not recognized" or "'irm' is not recognized"
+
+You're probably in Command Prompt instead of PowerShell. Open **PowerShell** from the Start menu — your prompt should start with `PS C:\`.
+
+If you're already in PowerShell and `claude` isn't found, close and reopen PowerShell. If that doesn't work, check that `~\.local\bin` is in your system PATH (search "Environment Variables" in Settings).
 :::
 
 ::: {.callout-tip collapse="true"}
-### Run the built-in diagnostic
+#### "'bash' is not recognized"
+
+You ran the Mac installer on Windows. Use the PowerShell command instead:
+
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+:::
+
+::: {.callout-tip collapse="true"}
+#### "requires git-bash"
+
+Claude Code on Windows needs Git for Windows. Download it from [git-scm.com/downloads/win](https://git-scm.com/downloads/win), install with defaults (make sure "Add to PATH" is checked), restart PowerShell, and try again.
+:::
+
+::: {.callout-tip collapse="true"}
+#### Network or firewall errors
+
+If you get SSL/TLS errors or "failed to fetch," try WinGet instead:
+
+```powershell
+winget install Anthropic.ClaudeCode
+```
+
+If your institution uses a proxy, ask IT for the proxy URL.
+:::
+
+## Both
+
+::: {.callout-tip collapse="true"}
+#### Sign-in problems
+
+- **"Invalid code" error**: The sign-in code expired. Run `/login` inside Claude Code to try again — complete the browser sign-in quickly.
+- **"403 Forbidden"**: Make sure your subscription is active at [claude.ai/settings](https://claude.ai/settings).
+- **Browser doesn't open**: Try copying the URL from the terminal and pasting it into your browser manually.
+:::
+
+::: {.callout-tip collapse="true"}
+#### Run the built-in diagnostic
 
 Claude Code has a doctor command that checks your setup:
 
@@ -286,25 +245,77 @@ This checks your installation, configuration, and network connectivity.
 :::
 
 ::: {.callout-tip collapse="true"}
-### Multiple installations conflicting
-
-If you previously installed via npm and now used the native installer, you may have two versions. Remove the old one:
-
-```bash
-npm uninstall -g @anthropic-ai/claude-code
-```
-
-The native installer (at `~/.local/bin/claude`) is the recommended version — it auto-updates.
-:::
-
-::: {.callout-tip collapse="true"}
-### Still stuck?
+#### Still stuck?
 
 - Type `/help` inside Claude Code for built-in help
 - File an issue: [github.com/anthropics/claude-code/issues](https://github.com/anthropics/claude-code/issues)
-- Ask Emily or Erkmen — we'll troubleshoot with you at the bootcamp
+- Ask Emily or Erkmen — we'll troubleshoot with you
 :::
 
+:::
+
+---
+
+## Two ways to use AI tools
+
+| | Chat tools | Agentic tools |
+|---|---|---|
+| **What they do** | Answer questions, draft text, summarize uploaded files | Work directly on files in your project folders |
+| **Interface** | Web browser or desktop app | Terminal (text-based command line) |
+| **Setup** | Create an account, start typing | Run a one-line installer in your terminal |
+| **Best for starting** | Quick tasks, brainstorming, one-off drafts | Multi-step workflows, code, file management |
+| **Examples** | Claude, ChatGPT, Microsoft Copilot | Claude Code, OpenAI Codex |
+
+**For this bootcamp**, we demo agentic tools because they show a bigger jump in usefulness. But chat tools are a perfectly good place to start.
+
+If you just want to use chat, no installation is needed — go to [claude.ai](https://claude.ai), [chatgpt.com](https://chatgpt.com), or [go.uvm.edu/copilot](https://go.uvm.edu/copilot) (free with your UVM account).
+
+---
+
+## Claude Code vs. OpenAI Codex
+
+These are the two main agentic tools we use. Both run in your terminal and can read, write, and run files.
+
+| | Claude Code | OpenAI Codex |
+|---|---|---|
+| **Made by** | Anthropic | OpenAI |
+| **Best models** | Claude Opus 4.6, Sonnet 4.6 | GPT-5.4, o3 |
+| **Install** | Native installer (see above) | Binary download or npm (see above) |
+| **Launch** | `claude` | `codex` |
+| **Sign in with** | Claude account or Anthropic Console | ChatGPT account or OpenAI API key |
+| **Simplest plan** | Claude Pro ($20/mo) | ChatGPT Plus ($20/mo) |
+| **Heavy use plan** | Claude Max ($100+/mo) or API billing | ChatGPT Pro ($200/mo) or API billing |
+| **Rule files** | `CLAUDE.md` | `AGENTS.md` |
+| **Integrations** | Gmail, Google Calendar, Todoist, and more via MCP | Fewer built-in integrations currently |
+| **Strengths** | Long context, strong writing, extensive tool ecosystem | Strong coding, fast iteration |
+
+Both are good. We primarily demo Claude Code, but the concepts transfer.
+
+---
+
+## Plans and pricing
+
+### Subscription plans (simplest way to start)
+
+| Plan | Cost | What you get |
+|---|---|---|
+| **Claude Free** | $0 | Chat only, limited usage |
+| **Claude Pro** | $20/mo | Chat + Claude Code access, generous limits |
+| **Claude Max** | $100–200/mo | Much higher limits for heavy use |
+| **ChatGPT Free** | $0 | Chat only, limited models |
+| **ChatGPT Plus** | $20/mo | Chat + Codex access, better models |
+| **ChatGPT Pro** | $200/mo | Highest limits |
+| **UVM Copilot** | Free (UVM account) | Microsoft Copilot Chat — good for Office tasks |
+
+**For most faculty**: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you.
+
+::: {.callout-important appearance="simple"}
+**The $20/mo subscription is not just chat.** Claude Pro includes Claude Code (the terminal tool), and ChatGPT Plus includes Codex. You also get access to integrations with Gmail, Google Calendar, Todoist, and more — all the advanced workflows shown on our [Bells & Whistles](resources.qmd) page. You do not need a separate API account or additional purchases.
+:::
+
+### API pricing (pay-as-you-go)
+
+If you outgrow the subscription or want more control, both companies offer API billing where you pay per token. Most people don't need this — the subscription covers it. For current pricing, see [BenchLM's LLM pricing tracker](https://benchlm.ai/llm-pricing).
 
 ---
 
@@ -317,25 +328,3 @@ If you are using Claude Code with a paid subscription:
 
 Usage limits can change over time. Some models are cheaper than others.
 
----
-
-## Optional extras
-
-- **[Ghostty](https://ghostty.org)** (free) — A modern terminal app. Looks nicer than the default.
-- **[VS Code](https://code.visualstudio.com/)** (free) — A code editor. Both Claude Code and Codex have VS Code extensions.
-- **[Typora](https://typora.io)** ($15) — A Markdown viewer. AI tools produce `.md` files; Typora makes them look like formatted text immediately.
-
----
-
-## Key terms
-
-| Term | What we mean |
-|------|-------------|
-| **Agent** | A tool instance carrying out a bounded task with some autonomy |
-| **Model** | The underlying AI system (e.g., Claude Sonnet, GPT-4o) |
-| **Session** | One conversation or working thread with the tool |
-| **Context window** | The working memory in the current session — when full, performance degrades |
-| **Artifact** | A concrete output: file, draft, memo, script, table, or slide |
-| **Rule file** | Standing instructions (`CLAUDE.md` or `AGENTS.md`) that load automatically |
-| **Token** | The unit AI models process — roughly ¾ of a word |
-| **MCP** | Model Context Protocol — how tools connect to external services (email, calendar, etc.) |

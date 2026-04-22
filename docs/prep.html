@@ -157,7 +157,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-to-expect-at-the-bootcamp" id="toc-what-to-expect-at-the-bootcamp" class="nav-link active" data-scroll-target="#what-to-expect-at-the-bootcamp">What to expect at the bootcamp</a></li>
+  <li><a href="#install-guide" id="toc-install-guide" class="nav-link active" data-scroll-target="#install-guide">Install guide</a>
+  <ul class="collapse">
+  <li><a href="#step-1-pick-your-machine-then-your-tool" id="toc-step-1-pick-your-machine-then-your-tool" class="nav-link" data-scroll-target="#step-1-pick-your-machine-then-your-tool">Step 1: Pick your machine, then your tool</a></li>
+  <li><a href="#step-2-verify-it-works" id="toc-step-2-verify-it-works" class="nav-link" data-scroll-target="#step-2-verify-it-works">Step 2: Verify it works</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  </ul></li>
   <li><a href="#two-ways-to-use-ai-tools" id="toc-two-ways-to-use-ai-tools" class="nav-link" data-scroll-target="#two-ways-to-use-ai-tools">Two ways to use AI tools</a></li>
   <li><a href="#claude-code-vs.-openai-codex" id="toc-claude-code-vs.-openai-codex" class="nav-link" data-scroll-target="#claude-code-vs.-openai-codex">Claude Code vs.&nbsp;OpenAI Codex</a></li>
   <li><a href="#plans-and-pricing" id="toc-plans-and-pricing" class="nav-link" data-scroll-target="#plans-and-pricing">Plans and pricing</a>
@@ -165,15 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#subscription-plans-simplest-way-to-start" id="toc-subscription-plans-simplest-way-to-start" class="nav-link" data-scroll-target="#subscription-plans-simplest-way-to-start">Subscription plans (simplest way to start)</a></li>
   <li><a href="#api-pricing-pay-as-you-go" id="toc-api-pricing-pay-as-you-go" class="nav-link" data-scroll-target="#api-pricing-pay-as-you-go">API pricing (pay-as-you-go)</a></li>
   </ul></li>
-  <li><a href="#install-guide" id="toc-install-guide" class="nav-link" data-scroll-target="#install-guide">Install guide</a>
-  <ul class="collapse">
-  <li><a href="#step-1-pick-your-machine-then-your-tool" id="toc-step-1-pick-your-machine-then-your-tool" class="nav-link" data-scroll-target="#step-1-pick-your-machine-then-your-tool">Step 1: Pick your machine, then your tool</a></li>
-  <li><a href="#step-2-verify-it-works" id="toc-step-2-verify-it-works" class="nav-link" data-scroll-target="#step-2-verify-it-works">Step 2: Verify it works</a></li>
-  </ul></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   <li><a href="#checking-your-usage" id="toc-checking-your-usage" class="nav-link" data-scroll-target="#checking-your-usage">Checking your usage</a></li>
-  <li><a href="#optional-extras" id="toc-optional-extras" class="nav-link" data-scroll-target="#optional-extras">Optional extras</a></li>
-  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms">Key terms</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/thinkingwithagents/thinkingwithagents.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -200,10 +197,337 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="what-to-expect-at-the-bootcamp" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-expect-at-the-bootcamp">What to expect at the bootcamp</h2>
-<p>Two lunch sessions, watch-along format. You do not need to install anything beforehand. Bring a laptop if you want to follow along, but it is not required. The main thing to bring is a task you’d like to try — something from your teaching or research where you spend time on mechanical work.</p>
+<section id="install-guide" class="level2">
+<h2 class="anchored" data-anchor-id="install-guide">Install guide</h2>
+<section id="step-1-pick-your-machine-then-your-tool" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-pick-your-machine-then-your-tool">Step 1: Pick your machine, then your tool</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Claude Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">OpenAI Codex</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><strong>Open Terminal</strong> (search “Terminal” in Spotlight, or find it in Applications → Utilities), then paste:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://claude.ai/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After it finishes, close and reopen Terminal, then launch:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>It will open a browser window to sign in. Use your Claude account (a <a href="https://claude.ai/pricing">Claude Pro subscription</a> is the simplest option).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Alternative: Homebrew
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>If you already use Homebrew, you can install with <code>brew install --cask claude-code</code> instead. Note: Homebrew installs do not auto-update — you’ll need to run <code>brew upgrade claude-code</code> yourself.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><strong>Option A — Direct download (no prerequisites)</strong></p>
+<ol type="1">
+<li>Go to the <a href="https://github.com/openai/codex/releases">Codex releases page</a></li>
+<li>Download the <strong>macOS</strong> binary for your machine (Apple Silicon or Intel)</li>
+<li>Move it to a folder in your PATH (e.g., <code>/usr/local/bin/</code>)</li>
+<li>Open Terminal and run: <code>codex</code></li>
+</ol>
+<p><strong>Option B — npm (if you already have Node.js 22+)</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @openai/codex</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Sign in with your ChatGPT account (a <a href="https://chatgpt.com/">ChatGPT Plus subscription</a> is the simplest option).</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Claude Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">OpenAI Codex</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><strong>Step 1: Install Git for Windows</strong> (required)</p>
+<ul>
+<li>Download from <a href="https://git-scm.com/downloads/win">git-scm.com/downloads/win</a></li>
+<li>Run the installer — accept all defaults</li>
+<li>Make sure “Add to PATH” is checked</li>
+</ul>
+<p><strong>Step 2: Open PowerShell</strong> (search “PowerShell” in the Start menu — <strong>not</strong> Command Prompt), then paste:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">irm</span> https<span class="op">://</span>claude<span class="op">.</span><span class="fu">ai</span><span class="op">/</span>install<span class="op">.</span><span class="fu">ps1</span> <span class="op">|</span> <span class="fu">iex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Step 3:</strong> Close and reopen PowerShell, then launch:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>claude</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>It will open a browser window to sign in. Use your Claude account (a <a href="https://claude.ai/pricing">Claude Pro subscription</a> is the simplest option).</p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Make sure you’re in PowerShell</strong>, not Command Prompt. Your prompt should start with <code>PS C:\</code>. If you see just <code>C:\&gt;</code>, you’re in the wrong shell — search for “PowerShell” in the Start menu.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><strong>Option A — Direct download (no prerequisites besides Git)</strong></p>
+<ol type="1">
+<li>Install <a href="https://git-scm.com/downloads/win">Git for Windows</a> if you haven’t already</li>
+<li>Go to the <a href="https://github.com/openai/codex/releases">Codex releases page</a></li>
+<li>Download the <strong>Windows</strong> binary</li>
+<li>Open PowerShell and navigate to where you downloaded it</li>
+<li>Run: <code>.\codex.exe</code></li>
+</ol>
+<p><strong>Option B — npm (if you already have Node.js 22+)</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>npm install <span class="op">-</span>g @openai<span class="op">/</span>codex</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>codex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Sign in with your ChatGPT account (a <a href="https://chatgpt.com/">ChatGPT Plus subscription</a> is the simplest option).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-verify-it-works" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-verify-it-works">Step 2: Verify it works</h3>
+<p>After installing, check that the tool is working:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> <span class="at">--version</span>   <span class="co"># Should print a version number</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span>             <span class="co"># Launches Claude Code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Once inside, type <code>/help</code> to see what’s available, or just start typing a request.</p>
+</section>
+<section id="troubleshooting" class="level3">
+<h3 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h3>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>The installer may show errors but still succeed.</strong> Sometimes the install script prints warnings or error messages even though it worked fine. After installing, close and reopen your terminal and try <code>claude --version</code>. If it prints a version number, you’re good — ignore the earlier errors.</p>
+</div>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Both</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>“command not found: claude”
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The installer put the tool somewhere your terminal can’t find it.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'export PATH="$HOME/.local/bin:$PATH"'</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then try <code>claude --version</code> again.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Permission errors
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you get “permission denied” during install:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> ~/.local/bin</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chown <span class="at">-R</span> <span class="va">$(</span><span class="fu">whoami</span><span class="va">)</span> ~/.local</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then re-run the installer.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Network or firewall errors
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you get SSL/TLS errors or “failed to fetch,” your network may be blocking the download. Try Homebrew instead:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> claude-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If your institution uses a proxy, ask IT for the proxy URL and set it before installing:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HTTP_PROXY</span><span class="op">=</span>http://your-proxy:8080</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HTTPS_PROXY</span><span class="op">=</span>http://your-proxy:8080</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Multiple installations conflicting
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you previously installed via npm and now used the native installer, you may have two versions. Remove the old one:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> uninstall <span class="at">-g</span> @anthropic-ai/claude-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The native installer (at <code>~/.local/bin/claude</code>) is the recommended version — it auto-updates.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>“not recognized” or “‘irm’ is not recognized”
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You’re probably in Command Prompt instead of PowerShell. Open <strong>PowerShell</strong> from the Start menu — your prompt should start with <code>PS C:\</code>.</p>
+<p>If you’re already in PowerShell and <code>claude</code> isn’t found, close and reopen PowerShell. If that doesn’t work, check that <code>~\.local\bin</code> is in your system PATH (search “Environment Variables” in Settings).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>“‘bash’ is not recognized”
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You ran the Mac installer on Windows. Use the PowerShell command instead:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">irm</span> https<span class="op">://</span>claude<span class="op">.</span><span class="fu">ai</span><span class="op">/</span>install<span class="op">.</span><span class="fu">ps1</span> <span class="op">|</span> <span class="fu">iex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>“requires git-bash”
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Claude Code on Windows needs Git for Windows. Download it from <a href="https://git-scm.com/downloads/win">git-scm.com/downloads/win</a>, install with defaults (make sure “Add to PATH” is checked), restart PowerShell, and try again.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Network or firewall errors
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you get SSL/TLS errors or “failed to fetch,” try WinGet instead:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>winget install Anthropic<span class="op">.</span><span class="fu">ClaudeCode</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If your institution uses a proxy, ask IT for the proxy URL.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Sign-in problems
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>“Invalid code” error</strong>: The sign-in code expired. Run <code>/login</code> inside Claude Code to try again — complete the browser sign-in quickly.</li>
+<li><strong>“403 Forbidden”</strong>: Make sure your subscription is active at <a href="https://claude.ai/settings">claude.ai/settings</a>.</li>
+<li><strong>Browser doesn’t open</strong>: Try copying the URL from the terminal and pasting it into your browser manually.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Run the built-in diagnostic
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Claude Code has a doctor command that checks your setup:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> doctor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This checks your installation, configuration, and network connectivity.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Still stuck?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Type <code>/help</code> inside Claude Code for built-in help</li>
+<li>File an issue: <a href="https://github.com/anthropics/claude-code/issues">github.com/anthropics/claude-code/issues</a></li>
+<li>Ask Emily or Erkmen — we’ll troubleshoot with you</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <hr>
+</section>
 </section>
 <section id="two-ways-to-use-ai-tools" class="level2">
 <h2 class="anchored" data-anchor-id="two-ways-to-use-ai-tools">Two ways to use AI tools</h2>
@@ -249,6 +573,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p><strong>For this bootcamp</strong>, we demo agentic tools because they show a bigger jump in usefulness. But chat tools are a perfectly good place to start.</p>
+<p>If you just want to use chat, no installation is needed — go to <a href="https://claude.ai">claude.ai</a>, <a href="https://chatgpt.com">chatgpt.com</a>, or <a href="https://go.uvm.edu/copilot">go.uvm.edu/copilot</a> (free with your UVM account).</p>
 <hr>
 </section>
 <section id="claude-code-vs.-openai-codex" class="level2">
@@ -280,8 +605,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>Install</strong></td>
-<td>Native installer (see below)</td>
-<td>Binary download or npm (see below)</td>
+<td>Native installer (see above)</td>
+<td>Binary download or npm (see above)</td>
 </tr>
 <tr class="even">
 <td><strong>Launch</strong></td>
@@ -396,306 +721,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="install-guide" class="level2">
-<h2 class="anchored" data-anchor-id="install-guide">Install guide</h2>
-<section id="step-1-pick-your-machine-then-your-tool" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-pick-your-machine-then-your-tool">Step 1: Pick your machine, then your tool</h3>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Windows</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Claude Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">OpenAI Codex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Chat only (no install)</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><strong>Open Terminal</strong> (search “Terminal” in Spotlight, or find it in Applications → Utilities), then paste:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://claude.ai/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After it finishes, close and reopen Terminal, then launch:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It will open a browser window to sign in. Use your Claude account (a <a href="https://claude.ai/pricing">Claude Pro subscription</a> is the simplest option).</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Alternative: Homebrew
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<p>If you already use Homebrew, you can install with <code>brew install --cask claude-code</code> instead. Note: Homebrew installs do not auto-update — you’ll need to run <code>brew upgrade claude-code</code> yourself.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><strong>Option A — Direct download (no prerequisites)</strong></p>
-<ol type="1">
-<li>Go to the <a href="https://github.com/openai/codex/releases">Codex releases page</a></li>
-<li>Download the <strong>macOS</strong> binary for your machine (Apple Silicon or Intel)</li>
-<li>Move it to a folder in your PATH (e.g., <code>/usr/local/bin/</code>)</li>
-<li>Open Terminal and run: <code>codex</code></li>
-</ol>
-<p><strong>Option B — npm (if you already have Node.js 22+)</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @openai/codex</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Sign in with your ChatGPT account (a <a href="https://chatgpt.com/">ChatGPT Plus subscription</a> is the simplest option).</p>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>No installation needed. Just open one of these in your browser:</p>
-<ul>
-<li><strong>Claude</strong>: <a href="https://claude.ai">claude.ai</a></li>
-<li><strong>ChatGPT</strong>: <a href="https://chatgpt.com">chatgpt.com</a></li>
-<li><strong>UVM Copilot</strong> (free with UVM account): <a href="https://go.uvm.edu/copilot">go.uvm.edu/copilot</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Claude Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">OpenAI Codex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Chat only (no install)</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p><strong>Step 1: Install Git for Windows</strong> (required)</p>
-<ul>
-<li>Download from <a href="https://git-scm.com/downloads/win">git-scm.com/downloads/win</a></li>
-<li>Run the installer — accept all defaults</li>
-<li>Make sure “Add to PATH” is checked</li>
-</ul>
-<p><strong>Step 2: Open PowerShell</strong> (search “PowerShell” in the Start menu — <strong>not</strong> Command Prompt), then paste:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">irm</span> https<span class="op">://</span>claude<span class="op">.</span><span class="fu">ai</span><span class="op">/</span>install<span class="op">.</span><span class="fu">ps1</span> <span class="op">|</span> <span class="fu">iex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Step 3:</strong> Close and reopen PowerShell, then launch:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>claude</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It will open a browser window to sign in. Use your Claude account (a <a href="https://claude.ai/pricing">Claude Pro subscription</a> is the simplest option).</p>
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Make sure you’re in PowerShell</strong>, not Command Prompt. Your prompt should start with <code>PS C:\</code>. If you see just <code>C:\&gt;</code>, you’re in the wrong shell — search for “PowerShell” in the Start menu.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p><strong>Option A — Direct download (no prerequisites besides Git)</strong></p>
-<ol type="1">
-<li>Install <a href="https://git-scm.com/downloads/win">Git for Windows</a> if you haven’t already</li>
-<li>Go to the <a href="https://github.com/openai/codex/releases">Codex releases page</a></li>
-<li>Download the <strong>Windows</strong> binary</li>
-<li>Open PowerShell and navigate to where you downloaded it</li>
-<li>Run: <code>.\codex.exe</code></li>
-</ol>
-<p><strong>Option B — npm (if you already have Node.js 22+)</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>npm install <span class="op">-</span>g @openai<span class="op">/</span>codex</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>codex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Sign in with your ChatGPT account (a <a href="https://chatgpt.com/">ChatGPT Plus subscription</a> is the simplest option).</p>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>No installation needed. Just open one of these in your browser:</p>
-<ul>
-<li><strong>Claude</strong>: <a href="https://claude.ai">claude.ai</a></li>
-<li><strong>ChatGPT</strong>: <a href="https://chatgpt.com">chatgpt.com</a></li>
-<li><strong>UVM Copilot</strong> (free with UVM account): <a href="https://go.uvm.edu/copilot">go.uvm.edu/copilot</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="step-2-verify-it-works" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-verify-it-works">Step 2: Verify it works</h3>
-<p>After installing, check that the tool is working:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> <span class="at">--version</span>   <span class="co"># Should print a version number</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span>             <span class="co"># Launches Claude Code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Once inside, type <code>/help</code> to see what’s available, or just start typing a request.</p>
-<hr>
-</section>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>“command not found” or “not recognized”
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The installer put the tool somewhere your terminal can’t find it.</p>
-<p><strong>Mac fix:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'export PATH="$HOME/.local/bin:$PATH"'</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Windows fix:</strong> Close and reopen PowerShell. If that doesn’t work, check that <code>~\.local\bin</code> is in your system PATH (search “Environment Variables” in Settings).</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Permission errors on Mac
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>If you get “permission denied” during install:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> ~/.local/bin</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chown <span class="at">-R</span> <span class="va">$(</span><span class="fu">whoami</span><span class="va">)</span> ~/.local</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then re-run the installer.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Windows: wrong shell
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><code>'irm' is not recognized</code> → You’re in Command Prompt, not PowerShell. Open <strong>PowerShell</strong> from the Start menu.</li>
-<li><code>'bash' is not recognized</code> → You ran the Mac installer on Windows. Use the PowerShell command instead.</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Windows: “requires git-bash”
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Claude Code on Windows needs Git for Windows. Download it from <a href="https://git-scm.com/downloads/win">git-scm.com/downloads/win</a>, install with defaults, restart PowerShell, and try again.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Network or firewall errors
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>If you get SSL/TLS errors or “failed to fetch,” your network may be blocking the download.</p>
-<p><strong>Try an alternative installer:</strong></p>
-<ul>
-<li>Mac: <code>brew install --cask claude-code</code></li>
-<li>Windows: <code>winget install Anthropic.ClaudeCode</code></li>
-</ul>
-<p>If your institution uses a proxy, ask IT for the proxy URL and set it before installing:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HTTP_PROXY</span><span class="op">=</span>http://your-proxy:8080</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HTTPS_PROXY</span><span class="op">=</span>http://your-proxy:8080</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Sign-in problems
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>“Invalid code” error</strong>: The sign-in code expired. Run <code>/login</code> inside Claude Code to try again — complete the browser sign-in quickly.</li>
-<li><strong>“403 Forbidden”</strong>: Make sure your subscription is active at <a href="https://claude.ai/settings">claude.ai/settings</a>.</li>
-<li><strong>Browser doesn’t open (Windows/WSL)</strong>: Set your browser manually: <code>export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"</code></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Run the built-in diagnostic
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Claude Code has a doctor command that checks your setup:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> doctor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This checks your installation, configuration, and network connectivity.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Multiple installations conflicting
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>If you previously installed via npm and now used the native installer, you may have two versions. Remove the old one:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> uninstall <span class="at">-g</span> @anthropic-ai/claude-code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The native installer (at <code>~/.local/bin/claude</code>) is the recommended version — it auto-updates.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Still stuck?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>Type <code>/help</code> inside Claude Code for built-in help</li>
-<li>File an issue: <a href="https://github.com/anthropics/claude-code/issues">github.com/anthropics/claude-code/issues</a></li>
-<li>Ask Emily or Erkmen — we’ll troubleshoot with you at the bootcamp</li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
 <section id="checking-your-usage" class="level2">
 <h2 class="anchored" data-anchor-id="checking-your-usage">Checking your usage</h2>
 <p>If you are using Claude Code with a paid subscription:</p>
@@ -704,65 +729,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>npx ccusage@latest</code> — alternative usage tracker</li>
 </ul>
 <p>Usage limits can change over time. Some models are cheaper than others.</p>
-<hr>
-</section>
-<section id="optional-extras" class="level2">
-<h2 class="anchored" data-anchor-id="optional-extras">Optional extras</h2>
-<ul>
-<li><strong><a href="https://ghostty.org">Ghostty</a></strong> (free) — A modern terminal app. Looks nicer than the default.</li>
-<li><strong><a href="https://code.visualstudio.com/">VS Code</a></strong> (free) — A code editor. Both Claude Code and Codex have VS Code extensions.</li>
-<li><strong><a href="https://typora.io">Typora</a></strong> ($15) — A Markdown viewer. AI tools produce <code>.md</code> files; Typora makes them look like formatted text immediately.</li>
-</ul>
-<hr>
-</section>
-<section id="key-terms" class="level2">
-<h2 class="anchored" data-anchor-id="key-terms">Key terms</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 31%">
-<col style="width: 68%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Term</th>
-<th>What we mean</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Agent</strong></td>
-<td>A tool instance carrying out a bounded task with some autonomy</td>
-</tr>
-<tr class="even">
-<td><strong>Model</strong></td>
-<td>The underlying AI system (e.g., Claude Sonnet, GPT-4o)</td>
-</tr>
-<tr class="odd">
-<td><strong>Session</strong></td>
-<td>One conversation or working thread with the tool</td>
-</tr>
-<tr class="even">
-<td><strong>Context window</strong></td>
-<td>The working memory in the current session — when full, performance degrades</td>
-</tr>
-<tr class="odd">
-<td><strong>Artifact</strong></td>
-<td>A concrete output: file, draft, memo, script, table, or slide</td>
-</tr>
-<tr class="even">
-<td><strong>Rule file</strong></td>
-<td>Standing instructions (<code>CLAUDE.md</code> or <code>AGENTS.md</code>) that load automatically</td>
-</tr>
-<tr class="odd">
-<td><strong>Token</strong></td>
-<td>The unit AI models process — roughly ¾ of a word</td>
-</tr>
-<tr class="even">
-<td><strong>MCP</strong></td>
-<td>Model Context Protocol — how tools connect to external services (email, calendar, etc.)</td>
-</tr>
-</tbody>
-</table>
 
 
 </section>
