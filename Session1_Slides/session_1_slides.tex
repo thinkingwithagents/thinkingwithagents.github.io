@@ -138,7 +138,7 @@
   \node[anchor=center, text=CoolGray!70!white, font=\small]
     at ([yshift=-2.2cm]current page.center) {Session 1 \quad$\cdot$\quad April 22, 2026 \quad$\cdot$\quad Old Mill A500};
   \node[anchor=center, text=UVMGold, font=\small\ttfamily]
-    at ([yshift=-2.8cm]current page.center) {eabeam.github.io/uvmecon-ai};
+    at ([yshift=-2.8cm]current page.center) {thinkingwithagents.github.io};
   % Subtle robot watermark
   \node[text=white, opacity=0.04, font=\fontsize{100}{100}\selectfont, anchor=center, rotate=-15]
     at ([xshift=5cm, yshift=1.5cm]current page.center) {\faRobot};
@@ -476,36 +476,39 @@ Codex is included --- no-brainer to try.
 \small
 Create an account with one or both:
 \begin{itemize}\setlength{\itemsep}{1pt}
-  \item \textbf{Claude} (anthropic.com) $\rightarrow$ Claude Code
-  \item \textbf{ChatGPT} (openai.com) $\rightarrow$ Codex
+  \item \textbf{Claude} (claude.ai) $\rightarrow$ Claude Code
+  \item \textbf{ChatGPT} (chatgpt.com) $\rightarrow$ Codex
 \end{itemize}
 \vskip2pt
-CLI will only work with a paid subscription! But any level will do
+CLI requires a paid subscription (\$20/mo), but any level works
 \end{tcolorbox}
 \vskip3pt
-\begin{tcolorbox}[keybox, title={\faDownload\quad Step 2: Node.js}]
+\begin{tcolorbox}[keybox, title={\faTerminal\quad Step 2: Install}]
 \small
-Go to \texttt{nodejs.org} $\rightarrow$ click the green \textbf{LTS} button $\rightarrow$ run the installer, accept all defaults.
+Open Terminal (Mac) or PowerShell (Win).\\[4pt]
+\textbf{Claude Code:}\\[2pt]
+\texttt{\scriptsize curl -fsSL https://claude.ai/install.sh | bash}\\[2pt]
+{\scriptsize (Windows: \texttt{irm https://claude.ai/install.ps1 | iex})}\\[4pt]
+\textbf{Codex:} download binary from\\[1pt]
+{\scriptsize\texttt{github.com/openai/codex/releases}}
 \end{tcolorbox}
 \end{column}
 \begin{column}{0.47\textwidth}
-\begin{tcolorbox}[keybox, title={\faTerminal\quad Step 3: Install}]
+\begin{tcolorbox}[keybox, title={\faPlay\quad Step 3: Launch}]
 \small
-Open Terminal (Mac) or PowerShell (Win):
-\vskip2pt
-\texttt{npm install -g @anthropic-ai/claude-code}\\[2pt]
-\texttt{npm install -g @openai/codex}
+Close and reopen your terminal, then type \texttt{claude} or \texttt{codex} and follow the sign-in prompts.
 \end{tcolorbox}
 \vskip3pt
-\begin{tcolorbox}[keybox, title={\faPlay\quad Step 4: Launch}]
+\begin{tcolorbox}[keybox, title={\faExclamationTriangle\quad Windows note}]
 \small
-Type \texttt{claude} or \texttt{codex} and follow the sign-in prompts.
+Claude Code requires \textbf{Git for Windows} --- install it from \texttt{git-scm.com} first. And use \textbf{PowerShell}, not Command Prompt.
 \end{tcolorbox}
 \vskip3pt
-% \begin{tcolorbox}[accentbox, top=2pt, bottom=2pt]
-% \scriptsize
-% \textbf{Don't worry:} You don't need to install anything to follow along today. Bring a task you'd like to try!
-% \end{tcolorbox}
+\begin{tcolorbox}[accentbox, top=2pt, bottom=2pt]
+\scriptsize
+\textbf{Full guide with troubleshooting:}\\
+\texttt{thinkingwithagents.github.io/prep.html}
+\end{tcolorbox}
 \end{column}
 \end{columns}
 \end{frame}
@@ -1903,7 +1906,7 @@ Ghostty & Free & Fast, modern terminal app. Where you type \texttt{claude} or \t
   \node[text=CoolGray!70!white, font=\small, anchor=center]
     at ([yshift=-2.2cm]current page.center) {Bootcamp materials \& resources:};
   \node[text=UVMGold, font=\small\ttfamily, anchor=center]
-    at ([yshift=-2.8cm]current page.center) {eabeam.github.io/uvmecon-ai};
+    at ([yshift=-2.8cm]current page.center) {thinkingwithagents.github.io};
   % Watermark
   \node[text=white, opacity=0.04, font=\fontsize{100}{100}\selectfont, anchor=center, rotate=15]
     at ([xshift=-4.5cm, yshift=1.5cm]current page.center) {\faRobot};

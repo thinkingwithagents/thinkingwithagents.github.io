@@ -15,7 +15,7 @@ Two lunch sessions, watch-along format. You do not need to install anything befo
 |---|---|---|
 | **What they do** | Answer questions, draft text, summarize uploaded files | Work directly on files in your project folders |
 | **Interface** | Web browser or desktop app | Terminal (text-based command line) |
-| **Setup** | Create an account, start typing | Install Node.js, then install the tool |
+| **Setup** | Create an account, start typing | Run a one-line installer in your terminal |
 | **Best for starting** | Quick tasks, brainstorming, one-off drafts | Multi-step workflows, code, file management |
 | **Examples** | Claude, ChatGPT, Microsoft Copilot | Claude Code, OpenAI Codex |
 
@@ -31,7 +31,7 @@ These are the two main agentic tools we use. Both run in your terminal and can r
 |---|---|---|
 | **Made by** | Anthropic | OpenAI |
 | **Best models** | Claude Opus 4.6, Sonnet 4.6 | GPT-5.4, o3 |
-| **Install** | `npm install -g @anthropic-ai/claude-code` | `npm install -g @openai/codex` |
+| **Install** | Native installer (see below) | Binary download or npm (see below) |
 | **Launch** | `claude` | `codex` |
 | **Sign in with** | Claude account or Anthropic Console | ChatGPT account or OpenAI API key |
 | **Simplest plan** | Claude Pro ($20/mo) | ChatGPT Plus ($20/mo) |
@@ -72,37 +72,239 @@ If you outgrow the subscription or want more control, both companies offer API b
 
 ## Install guide
 
-### Step 1: Install Node.js (required for both tools)
+### Step 1: Pick your machine, then your tool
 
-- Go to [nodejs.org](https://nodejs.org/)
-- Click the big green **LTS** download button
-- Run the installer — accept all the defaults
+::: {.panel-tabset}
 
-### Step 2: Install your tool
+## Mac
 
-Open your terminal:
+::: {.panel-tabset}
 
-- **Mac**: Search for "Terminal" in Spotlight, or find it in Applications → Utilities
-- **Windows**: Search for "PowerShell" in the Start menu
+### Claude Code
 
-Then run one (or both):
+**Open Terminal** (search "Terminal" in Spotlight, or find it in Applications → Utilities), then paste:
 
 ```bash
-# Claude Code
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash
+```
 
-# OpenAI Codex
+After it finishes, close and reopen Terminal, then launch:
+
+```bash
+claude
+```
+
+It will open a browser window to sign in. Use your Claude account (a [Claude Pro subscription](https://claude.ai/pricing) is the simplest option).
+
+::: {.callout-tip collapse="false"}
+#### Alternative: Homebrew
+
+If you already use Homebrew, you can install with `brew install --cask claude-code` instead. Note: Homebrew installs do not auto-update — you'll need to run `brew upgrade claude-code` yourself.
+:::
+
+### OpenAI Codex
+
+**Option A — Direct download (no prerequisites)**
+
+1. Go to the [Codex releases page](https://github.com/openai/codex/releases)
+2. Download the **macOS** binary for your machine (Apple Silicon or Intel)
+3. Move it to a folder in your PATH (e.g., `/usr/local/bin/`)
+4. Open Terminal and run: `codex`
+
+**Option B — npm (if you already have Node.js 22+)**
+
+```bash
 npm install -g @openai/codex
+codex
 ```
 
-### Step 3: Launch it
+Sign in with your ChatGPT account (a [ChatGPT Plus subscription](https://chatgpt.com/) is the simplest option).
+
+### Chat only (no install)
+
+No installation needed. Just open one of these in your browser:
+
+- **Claude**: [claude.ai](https://claude.ai)
+- **ChatGPT**: [chatgpt.com](https://chatgpt.com)
+- **UVM Copilot** (free with UVM account): [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
+
+:::
+
+## Windows
+
+::: {.panel-tabset}
+
+### Claude Code
+
+**Step 1: Install Git for Windows** (required)
+
+- Download from [git-scm.com/downloads/win](https://git-scm.com/downloads/win)
+- Run the installer — accept all defaults
+- Make sure "Add to PATH" is checked
+
+**Step 2: Open PowerShell** (search "PowerShell" in the Start menu — **not** Command Prompt), then paste:
+
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+**Step 3:** Close and reopen PowerShell, then launch:
+
+```powershell
+claude
+```
+
+It will open a browser window to sign in. Use your Claude account (a [Claude Pro subscription](https://claude.ai/pricing) is the simplest option).
+
+::: {.callout-warning appearance="simple"}
+**Make sure you're in PowerShell**, not Command Prompt. Your prompt should start with `PS C:\`. If you see just `C:\>`, you're in the wrong shell — search for "PowerShell" in the Start menu.
+:::
+
+### OpenAI Codex
+
+**Option A — Direct download (no prerequisites besides Git)**
+
+1. Install [Git for Windows](https://git-scm.com/downloads/win) if you haven't already
+2. Go to the [Codex releases page](https://github.com/openai/codex/releases)
+3. Download the **Windows** binary
+4. Open PowerShell and navigate to where you downloaded it
+5. Run: `.\codex.exe`
+
+**Option B — npm (if you already have Node.js 22+)**
+
+```powershell
+npm install -g @openai/codex
+codex
+```
+
+Sign in with your ChatGPT account (a [ChatGPT Plus subscription](https://chatgpt.com/) is the simplest option).
+
+### Chat only (no install)
+
+No installation needed. Just open one of these in your browser:
+
+- **Claude**: [claude.ai](https://claude.ai)
+- **ChatGPT**: [chatgpt.com](https://chatgpt.com)
+- **UVM Copilot** (free with UVM account): [go.uvm.edu/copilot](https://go.uvm.edu/copilot)
+
+:::
+
+:::
+
+### Step 2: Verify it works
+
+After installing, check that the tool is working:
 
 ```bash
-claude    # for Claude Code
-codex     # for Codex
+claude --version   # Should print a version number
+claude             # Launches Claude Code
 ```
 
-It will ask you to sign in. Follow the prompts.
+Once inside, type `/help` to see what's available, or just start typing a request.
+
+---
+
+## Troubleshooting
+
+::: {.callout-tip collapse="true"}
+### "command not found" or "not recognized"
+
+The installer put the tool somewhere your terminal can't find it.
+
+**Mac fix:**
+
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+**Windows fix:** Close and reopen PowerShell. If that doesn't work, check that `~\.local\bin` is in your system PATH (search "Environment Variables" in Settings).
+:::
+
+::: {.callout-tip collapse="true"}
+### Permission errors on Mac
+
+If you get "permission denied" during install:
+
+```bash
+sudo mkdir -p ~/.local/bin
+sudo chown -R $(whoami) ~/.local
+```
+
+Then re-run the installer.
+:::
+
+::: {.callout-tip collapse="true"}
+### Windows: wrong shell
+
+- `'irm' is not recognized` → You're in Command Prompt, not PowerShell. Open **PowerShell** from the Start menu.
+- `'bash' is not recognized` → You ran the Mac installer on Windows. Use the PowerShell command instead.
+:::
+
+::: {.callout-tip collapse="true"}
+### Windows: "requires git-bash"
+
+Claude Code on Windows needs Git for Windows. Download it from [git-scm.com/downloads/win](https://git-scm.com/downloads/win), install with defaults, restart PowerShell, and try again.
+:::
+
+::: {.callout-tip collapse="true"}
+### Network or firewall errors
+
+If you get SSL/TLS errors or "failed to fetch," your network may be blocking the download.
+
+**Try an alternative installer:**
+
+- Mac: `brew install --cask claude-code`
+- Windows: `winget install Anthropic.ClaudeCode`
+
+If your institution uses a proxy, ask IT for the proxy URL and set it before installing:
+
+```bash
+export HTTP_PROXY=http://your-proxy:8080
+export HTTPS_PROXY=http://your-proxy:8080
+```
+:::
+
+::: {.callout-tip collapse="true"}
+### Sign-in problems
+
+- **"Invalid code" error**: The sign-in code expired. Run `/login` inside Claude Code to try again — complete the browser sign-in quickly.
+- **"403 Forbidden"**: Make sure your subscription is active at [claude.ai/settings](https://claude.ai/settings).
+- **Browser doesn't open (Windows/WSL)**: Set your browser manually: `export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"`
+:::
+
+::: {.callout-tip collapse="true"}
+### Run the built-in diagnostic
+
+Claude Code has a doctor command that checks your setup:
+
+```bash
+claude doctor
+```
+
+This checks your installation, configuration, and network connectivity.
+:::
+
+::: {.callout-tip collapse="true"}
+### Multiple installations conflicting
+
+If you previously installed via npm and now used the native installer, you may have two versions. Remove the old one:
+
+```bash
+npm uninstall -g @anthropic-ai/claude-code
+```
+
+The native installer (at `~/.local/bin/claude`) is the recommended version — it auto-updates.
+:::
+
+::: {.callout-tip collapse="true"}
+### Still stuck?
+
+- Type `/help` inside Claude Code for built-in help
+- File an issue: [github.com/anthropics/claude-code/issues](https://github.com/anthropics/claude-code/issues)
+- Ask Emily or Erkmen — we'll troubleshoot with you at the bootcamp
+:::
+
 
 ---
 
