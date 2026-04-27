@@ -26,6 +26,7 @@ toc: false
       <div class="schedule-date">Apr 27</div>
       <div class="schedule-title">Research Pipelines &amp; Automation</div>
       <div class="schedule-detail">11:00–12:30 · Old Mill A500</div>
+      <a href="Session2_Slides/session_2_slides.pdf" class="slides-btn">Download slides ↓</a>
     </div>
   </div>
 </section>
@@ -62,26 +63,24 @@ No installation needed. See the [Getting Set Up](prep.qmd) guide if you want to 
 - [ ] Install the tools from the [prep guide](prep.qmd) if you haven't already
 - [ ] Think of a research or teaching task you'd like to automate
 
-[Session 2: AI for Research and Advanced Teaching]{.landing-section-title}
+[Session 2: Research Workflows, Teaching & Applications]{.landing-section-title}
 
-**April 27, 11:00--12:30, Old Mill A500** — Chaining steps into workflows: research pipelines, slide creation, teaching applications, and automation.
+**April 27, 11:00--12:30, Old Mill A500**
 
-*Slides will be posted here after the session.*
+| Deck | Format |
+|------|--------|
+| Session 2: Research Workflows, Teaching & Applications (Aslim & Beam) | [PDF](Session2_Slides/session_2_slides.pdf) |
 
 #### What we'll cover
 
-- How to chain AI steps into a documented workflow (plan, execute, review, clear, repeat)
-- Creating slides from rough notes
-- Teaching applications: assignments, rubrics, study guides
-- Research pipeline
-- Web scraping and automated grading
+- **Emily: Research workflows** — data pipeline (curiosity → map in 20 min), code auditing a replication package, paper auditing with `/econ-audit`, AI vs. real referee reports
+- **Erkmen: Teaching & applications** — lecture builder skill, research brainstorm, web scraping with `/find-data`
 
-<!--
 #### What to try next
 
-- **Teaching**: Draft a new assignment, create practice problems, or build a study guide
 - **Research**: Try the data exploration → analysis plan workflow on your own data
+- **Teaching**: Draft a new assignment, create practice problems, or build a study guide
+- **Code**: Run `/econ-audit` on a paper before you submit it
 - **Writing**: Use Claude Code to revise a draft, check references, or restructure a section
--->
 
 :::
