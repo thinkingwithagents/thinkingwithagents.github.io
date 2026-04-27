@@ -763,38 +763,26 @@ the upper and lower bounds with confidence intervals.}
 }
 
 %% ====== SLIDE: WHAT JUST HAPPENED ======
-\begin{frame}{What Just Happened}
-\begin{columns}[T]
-\begin{column}{0.47\textwidth}
-\begin{tcolorbox}[keybox, title={\faCode\quad AI Wrote the Code}]
-\small
-\begin{itemize}\setlength{\itemsep}{2pt}
-  \item Identified the right variables
-  \item Computed attrition rates by arm
-  \item Implemented the trimming procedure
-  \item Produced bounds with CIs
-  \item Formatted a results table
-\end{itemize}
-\end{tcolorbox}
-\end{column}
-\begin{column}{0.47\textwidth}
-\begin{tcolorbox}[accentbox]
-\small
-\textbf{What you still check:}
+\begin{frame}{The Code It Wrote}
+\centering
+\vskip2pt
+\includegraphics[width=0.85\textwidth, height=0.75\textheight, keepaspectratio]{lee_bounds_code.png}
 \vskip4pt
-\begin{itemize}\setlength{\itemsep}{2pt}
-  \item Is the attrition variable right?
-  \item Is it trimming from the correct tail?
-  \item Do the bounds make sense given your priors?
-  \item Does the code match Lee (2009)?
-\end{itemize}
+{\scriptsize\color{CoolGray} Installs \texttt{leebounds} if needed, loads data, restricts to App arm vs.\ control, builds the outcome, runs the bounds.
+\href{file:///Users/ebeam/Dropbox/GitHub/bd-remote-ed/code/07_Dofiles_academic/lee_bounds_app.do}{\color{AccentBlue}\;\underline{Open do-file}}}
+\end{frame}
+
+%% ====== SLIDE: LEE BOUNDS RESULTS ======
+\begin{frame}{The Results}
+\centering
+\vskip2pt
+\includegraphics[width=0.92\textwidth, height=0.62\textheight, keepaspectratio]{lee_bounds_results.png}
 \vskip4pt
-\textbf{Time:} minutes, not hours.
+\begin{tcolorbox}[accentbox, width=12cm, top=3pt, bottom=3pt]
+\small Bounds span zero for all three outcomes. Differential attrition ($-9.6$pp) is large enough to make Lee bounds uninformative about the direction. \textbf{From referee comment to answer: $\sim$10 minutes.}
 \end{tcolorbox}
-\end{column}
-\end{columns}
-\vskip6pt
-\begin{tcolorbox}[quotebox, width=12cm]
+\vskip3pt
+\begin{tcolorbox}[quotebox, width=12cm, top=2pt, bottom=2pt]
 \small The audit flagged it. The AI wrote the code. \textbf{You check the output.} Same principle, end to end.
 \end{tcolorbox}
 \end{frame}
