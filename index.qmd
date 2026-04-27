@@ -73,7 +73,7 @@ No installation needed. See the [Getting Set Up](prep.qmd) guide if you want to 
 
 #### What we'll cover
 
-- **Emily: Research workflows** — data pipeline (curiosity → map in 20 min), code auditing a replication package, paper auditing with `/econ-audit`, AI vs. real referee reports
+- **Emily: Research workflows** — code auditing a replication package, paper auditing with `/econ-audit` and `/review-paper`, running Lee bounds live
 - **Erkmen: Teaching & applications** — lecture builder skill, research brainstorm, web scraping with `/find-data`
 
 #### What to try next

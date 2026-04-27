@@ -18,13 +18,13 @@ Skills are reusable prompt-and-instruction bundles — saved recipes for tasks y
 
 These skills are published and ready to use:
 
-    npx skills add eabeam/econ-skills
+    npx skills add thinkingwithagents/skills
 
 Or install one at a time:
 
-    npx skills add eabeam/econ-skills --skill econ-audit
+    npx skills add thinkingwithagents/skills --skill econ-audit
 
-Browse the source code: [github.com/eabeam/econ-skills](https://github.com/eabeam/econ-skills)
+Browse the source code: [github.com/thinkingwithagents/skills](https://github.com/thinkingwithagents/skills)
 :::
 
 ### Literature Review (`/lit-review`)
@@ -33,7 +33,7 @@ Structured literature search and synthesis. Give it a research question, and it 
 
 **Good for:** starting a new project, preparing a referee report, catching up on a subfield.
 
-**Install:** `npx skills add eabeam/econ-skills --skill lit-review` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/lit-review/SKILL.md)
+**Install:** `npx skills add thinkingwithagents/skills --skill lit-review` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/lit-review/SKILL.md)
 
 ### Econometrics Audit (`/econ-audit`)
 
@@ -41,7 +41,7 @@ Adversarial review of empirical claims. It reads your draft or code and flags: c
 
 **Good for:** self-review before submission, preparing for seminars, reviewing student work.
 
-**Install:** `npx skills add eabeam/econ-skills --skill econ-audit` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/econ-audit/SKILL.md)
+**Install:** `npx skills add thinkingwithagents/skills --skill econ-audit` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/econ-audit/SKILL.md)
 
 ### Data Dictionary Generator (`/data-dictionary`)
 
@@ -49,7 +49,55 @@ Reads a dataset's metadata and produces a formatted data dictionary with variabl
 
 **Good for:** replication packages, project handoffs, codebook creation.
 
-**Install:** `npx skills add eabeam/econ-skills --skill data-dictionary` | [Browse source](https://github.com/eabeam/econ-skills/tree/main/data-dictionary/SKILL.md)
+**Install:** `npx skills add thinkingwithagents/skills --skill data-dictionary` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/data-dictionary/SKILL.md)
+
+### Code Review (`/code-review`)
+
+Structured review of research code (Stata, R, Python) against DIME, Gentzkow-Shapiro, AEA, and IPA standards. Catches silent failures, reproducibility risks, and style issues that generic linters miss.
+
+**Good for:** cleaning up code before submission, replication package prep, catching merge bugs and missing-value traps.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill code-review` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/code-review/SKILL.md)
+
+### Paper Review (`/review-paper`)
+
+Adversarial paper review simulating a skeptical referee. Checks identification, statistical claims, robustness, and presentation against real referee patterns.
+
+**Good for:** pre-submission self-review, preparing for seminars, stress-testing a draft.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill review-paper` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/review-paper/SKILL.md)
+
+### Pipeline Audit (`/pipeline-audit`)
+
+Adversarial data pipeline review — audits variable construction, sample restrictions, and analytical decisions against pre-analysis plans.
+
+**Good for:** verifying that code matches the PAP, catching silent deviations.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill pipeline-audit` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/pipeline-audit/SKILL.md)
+
+### Research Brainstorm (`/research-brainstorm`)
+
+Structured brainstorming for research ideas. Takes a half-formed question and produces a research brief with related work, contribution framing, feasibility assessment, and next steps.
+
+**Good for:** early-stage project development, stress-testing ideas before investing time.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill research-brainstorm` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/research-brainstorm/SKILL.md)
+
+### Find Data (`/find-data`)
+
+Surfaces public data sources matching your constraints. Give it a topic and requirements; it searches repositories and proposes datasets with download instructions.
+
+**Good for:** teaching demos, finding new data for a project, discovering what's publicly available.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill find-data` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/find-data/SKILL.md)
+
+### Academic Beamer Deck (`/academic-beamer-deck`)
+
+Generates a polished Beamer slide deck from source documents. Reads PDFs or notes, extracts key content, and produces a `.tex` file with UVM-style formatting.
+
+**Good for:** converting papers to lecture slides, building conference presentations.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill academic-beamer-deck` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/academic-beamer-deck/SKILL.md)
 
 ### Building your own skills
 
@@ -168,7 +216,7 @@ Give it your draft as a file. It reads the full paper and flags causal language 
 Install the skill, then run it:
 
 ```bash
-npx skills add eabeam/econ-skills --skill econ-audit
+npx skills add thinkingwithagents/skills --skill econ-audit
 ```
 
 ```
@@ -198,7 +246,7 @@ Point it at a dataset. It reads the metadata and produces a formatted codebook: 
 Install and run:
 
 ```bash
-npx skills add eabeam/econ-skills --skill data-dictionary
+npx skills add thinkingwithagents/skills --skill data-dictionary
 ```
 
 ```
@@ -225,7 +273,7 @@ Give it a research question. It searches, organizes papers by theme, identifies 
 Install and run:
 
 ```bash
-npx skills add eabeam/econ-skills --skill lit-review
+npx skills add thinkingwithagents/skills --skill lit-review
 ```
 
 ```
