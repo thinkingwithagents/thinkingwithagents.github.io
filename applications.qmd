@@ -13,6 +13,17 @@ These are workflows that go beyond chat — they involve reading your files, wri
 
 Skills are reusable prompt-and-instruction bundles — saved recipes for tasks you do repeatedly. Instead of explaining a workflow from scratch each time, you invoke a skill and it runs.
 
+::: {.callout-note}
+### Prerequisites
+
+To install skills from the terminal, you need **Node.js** (which provides the `npx` command):
+
+1. **Install Node.js:** Go to [nodejs.org](https://nodejs.org) and click the **LTS** download. Run the installer.
+2. **Verify it worked:** Open a terminal and run `npx --version`. If you see a version number, you're set.
+
+If you installed Claude Code via `npm install -g @anthropic-ai/claude-code`, you already have Node.js — skip to the next step.
+:::
+
 ::: {.callout-tip}
 ### Install the bootcamp skills
 
@@ -27,7 +38,7 @@ Or install one at a time:
 Browse the source code: [github.com/thinkingwithagents/skills](https://github.com/thinkingwithagents/skills)
 :::
 
-### Literature Review (`/lit-review`)
+### Literature Review (`/lit-review`) {#lit-review}
 
 Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.
 
@@ -35,7 +46,7 @@ Structured literature search and synthesis. Give it a research question, and it 
 
 **Install:** `npx skills add thinkingwithagents/skills --skill lit-review` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/lit-review/SKILL.md)
 
-### Econometrics Audit (`/econ-audit`)
+### Econometrics Audit (`/econ-audit`) {#econ-audit}
 
 Adversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.
 
@@ -43,7 +54,7 @@ Adversarial review of empirical claims. It reads your draft or code and flags: c
 
 **Install:** `npx skills add thinkingwithagents/skills --skill econ-audit` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/econ-audit/SKILL.md)
 
-### Data Dictionary Generator (`/data-dictionary`)
+### Data Dictionary Generator (`/data-dictionary`) {#data-dictionary}
 
 Reads a dataset's metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.
 
@@ -51,7 +62,7 @@ Reads a dataset's metadata and produces a formatted data dictionary with variabl
 
 **Install:** `npx skills add thinkingwithagents/skills --skill data-dictionary` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/data-dictionary/SKILL.md)
 
-### Code Review (`/code-review`)
+### Code Review (`/code-review`) {#code-review}
 
 Structured review of research code (Stata, R, Python) against DIME, Gentzkow-Shapiro, AEA, and IPA standards. Catches silent failures, reproducibility risks, and style issues that generic linters miss.
 
@@ -59,7 +70,7 @@ Structured review of research code (Stata, R, Python) against DIME, Gentzkow-Sha
 
 **Install:** `npx skills add thinkingwithagents/skills --skill code-review` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/code-review/SKILL.md)
 
-### Paper Review (`/review-paper`)
+### Paper Review (`/review-paper`) {#review-paper}
 
 Adversarial paper review simulating a skeptical referee. Checks identification, statistical claims, robustness, and presentation against real referee patterns.
 
@@ -67,7 +78,7 @@ Adversarial paper review simulating a skeptical referee. Checks identification, 
 
 **Install:** `npx skills add thinkingwithagents/skills --skill review-paper` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/review-paper/SKILL.md)
 
-### Pipeline Audit (`/pipeline-audit`)
+### Pipeline Audit (`/pipeline-audit`) {#pipeline-audit}
 
 Adversarial data pipeline review — audits variable construction, sample restrictions, and analytical decisions against pre-analysis plans.
 
@@ -75,7 +86,7 @@ Adversarial data pipeline review — audits variable construction, sample restri
 
 **Install:** `npx skills add thinkingwithagents/skills --skill pipeline-audit` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/pipeline-audit/SKILL.md)
 
-### Research Brainstorm (`/research-brainstorm`)
+### Research Brainstorm (`/research-brainstorm`) {#research-brainstorm}
 
 Structured brainstorming for research ideas. Takes a half-formed question and produces a research brief with related work, contribution framing, feasibility assessment, and next steps.
 
@@ -83,7 +94,7 @@ Structured brainstorming for research ideas. Takes a half-formed question and pr
 
 **Install:** `npx skills add thinkingwithagents/skills --skill research-brainstorm` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/research-brainstorm/SKILL.md)
 
-### Find Data (`/find-data`)
+### Find Data (`/find-data`) {#find-data}
 
 Surfaces public data sources matching your constraints. Give it a topic and requirements; it searches repositories and proposes datasets with download instructions.
 
@@ -91,7 +102,7 @@ Surfaces public data sources matching your constraints. Give it a topic and requ
 
 **Install:** `npx skills add thinkingwithagents/skills --skill find-data` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/find-data/SKILL.md)
 
-### Academic Beamer Deck (`/academic-beamer-deck`)
+### Academic Beamer Deck (`/academic-beamer-deck`) {#academic-beamer-deck}
 
 Generates a polished Beamer slide deck from source documents. Reads PDFs or notes, extracts key content, and produces a `.tex` file with UVM-style formatting.
 

@@ -159,9 +159,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#installable-skills" id="toc-installable-skills" class="nav-link active" data-scroll-target="#installable-skills">Installable skills</a>
   <ul class="collapse">
-  <li><a href="#literature-review-lit-review" id="toc-literature-review-lit-review" class="nav-link" data-scroll-target="#literature-review-lit-review">Literature Review (<code>/lit-review</code>)</a></li>
-  <li><a href="#econometrics-audit-econ-audit" id="toc-econometrics-audit-econ-audit" class="nav-link" data-scroll-target="#econometrics-audit-econ-audit">Econometrics Audit (<code>/econ-audit</code>)</a></li>
-  <li><a href="#data-dictionary-generator-data-dictionary" id="toc-data-dictionary-generator-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary-generator-data-dictionary">Data Dictionary Generator (<code>/data-dictionary</code>)</a></li>
+  <li><a href="#lit-review" id="toc-lit-review" class="nav-link" data-scroll-target="#lit-review">Literature Review (<code>/lit-review</code>)</a></li>
+  <li><a href="#econ-audit" id="toc-econ-audit" class="nav-link" data-scroll-target="#econ-audit">Econometrics Audit (<code>/econ-audit</code>)</a></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary Generator (<code>/data-dictionary</code>)</a></li>
+  <li><a href="#code-review" id="toc-code-review" class="nav-link" data-scroll-target="#code-review">Code Review (<code>/code-review</code>)</a></li>
+  <li><a href="#review-paper" id="toc-review-paper" class="nav-link" data-scroll-target="#review-paper">Paper Review (<code>/review-paper</code>)</a></li>
+  <li><a href="#pipeline-audit" id="toc-pipeline-audit" class="nav-link" data-scroll-target="#pipeline-audit">Pipeline Audit (<code>/pipeline-audit</code>)</a></li>
+  <li><a href="#research-brainstorm" id="toc-research-brainstorm" class="nav-link" data-scroll-target="#research-brainstorm">Research Brainstorm (<code>/research-brainstorm</code>)</a></li>
+  <li><a href="#find-data" id="toc-find-data" class="nav-link" data-scroll-target="#find-data">Find Data (<code>/find-data</code>)</a></li>
+  <li><a href="#academic-beamer-deck" id="toc-academic-beamer-deck" class="nav-link" data-scroll-target="#academic-beamer-deck">Academic Beamer Deck (<code>/academic-beamer-deck</code>)</a></li>
   <li><a href="#building-your-own-skills" id="toc-building-your-own-skills" class="nav-link" data-scroll-target="#building-your-own-skills">Building your own skills</a></li>
   </ul></li>
   <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a>
@@ -223,6 +229,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="installable-skills" class="level2">
 <h2 class="anchored" data-anchor-id="installable-skills">Installable skills</h2>
 <p>Skills are reusable prompt-and-instruction bundles — saved recipes for tasks you do repeatedly. Instead of explaining a workflow from scratch each time, you invoke a skill and it runs.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Prerequisites
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To install skills from the terminal, you need <strong>Node.js</strong> (which provides the <code>npx</code> command):</p>
+<ol type="1">
+<li><strong>Install Node.js:</strong> Go to <a href="https://nodejs.org">nodejs.org</a> and click the <strong>LTS</strong> download. Run the installer.</li>
+<li><strong>Verify it worked:</strong> Open a terminal and run <code>npx --version</code>. If you see a version number, you’re set.</li>
+</ol>
+<p>If you installed Claude Code via <code>npm install -g @anthropic-ai/claude-code</code>, you already have Node.js — skip to the next step.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -234,29 +258,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>These skills are published and ready to use:</p>
-<pre><code>npx skills add eabeam/econ-skills</code></pre>
+<pre><code>npx skills add thinkingwithagents/skills</code></pre>
 <p>Or install one at a time:</p>
-<pre><code>npx skills add eabeam/econ-skills --skill econ-audit</code></pre>
-<p>Browse the source code: <a href="https://github.com/eabeam/econ-skills">github.com/eabeam/econ-skills</a></p>
+<pre><code>npx skills add thinkingwithagents/skills --skill econ-audit</code></pre>
+<p>Browse the source code: <a href="https://github.com/thinkingwithagents/skills">github.com/thinkingwithagents/skills</a></p>
 </div>
 </div>
-<section id="literature-review-lit-review" class="level3">
-<h3 class="anchored" data-anchor-id="literature-review-lit-review">Literature Review (<code>/lit-review</code>)</h3>
+<section id="lit-review" class="level3">
+<h3 class="anchored" data-anchor-id="lit-review">Literature Review (<code>/lit-review</code>)</h3>
 <p>Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.</p>
 <p><strong>Good for:</strong> starting a new project, preparing a referee report, catching up on a subfield.</p>
-<p><strong>Install:</strong> <code>npx skills add eabeam/econ-skills --skill lit-review</code> | <a href="https://github.com/eabeam/econ-skills/tree/main/lit-review/SKILL.md">Browse source</a></p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill lit-review</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/lit-review/SKILL.md">Browse source</a></p>
 </section>
-<section id="econometrics-audit-econ-audit" class="level3">
-<h3 class="anchored" data-anchor-id="econometrics-audit-econ-audit">Econometrics Audit (<code>/econ-audit</code>)</h3>
+<section id="econ-audit" class="level3">
+<h3 class="anchored" data-anchor-id="econ-audit">Econometrics Audit (<code>/econ-audit</code>)</h3>
 <p>Adversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.</p>
 <p><strong>Good for:</strong> self-review before submission, preparing for seminars, reviewing student work.</p>
-<p><strong>Install:</strong> <code>npx skills add eabeam/econ-skills --skill econ-audit</code> | <a href="https://github.com/eabeam/econ-skills/tree/main/econ-audit/SKILL.md">Browse source</a></p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill econ-audit</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/econ-audit/SKILL.md">Browse source</a></p>
 </section>
-<section id="data-dictionary-generator-data-dictionary" class="level3">
-<h3 class="anchored" data-anchor-id="data-dictionary-generator-data-dictionary">Data Dictionary Generator (<code>/data-dictionary</code>)</h3>
+<section id="data-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="data-dictionary">Data Dictionary Generator (<code>/data-dictionary</code>)</h3>
 <p>Reads a dataset’s metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.</p>
 <p><strong>Good for:</strong> replication packages, project handoffs, codebook creation.</p>
-<p><strong>Install:</strong> <code>npx skills add eabeam/econ-skills --skill data-dictionary</code> | <a href="https://github.com/eabeam/econ-skills/tree/main/data-dictionary/SKILL.md">Browse source</a></p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill data-dictionary</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/data-dictionary/SKILL.md">Browse source</a></p>
+</section>
+<section id="code-review" class="level3">
+<h3 class="anchored" data-anchor-id="code-review">Code Review (<code>/code-review</code>)</h3>
+<p>Structured review of research code (Stata, R, Python) against DIME, Gentzkow-Shapiro, AEA, and IPA standards. Catches silent failures, reproducibility risks, and style issues that generic linters miss.</p>
+<p><strong>Good for:</strong> cleaning up code before submission, replication package prep, catching merge bugs and missing-value traps.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill code-review</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/code-review/SKILL.md">Browse source</a></p>
+</section>
+<section id="review-paper" class="level3">
+<h3 class="anchored" data-anchor-id="review-paper">Paper Review (<code>/review-paper</code>)</h3>
+<p>Adversarial paper review simulating a skeptical referee. Checks identification, statistical claims, robustness, and presentation against real referee patterns.</p>
+<p><strong>Good for:</strong> pre-submission self-review, preparing for seminars, stress-testing a draft.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill review-paper</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/review-paper/SKILL.md">Browse source</a></p>
+</section>
+<section id="pipeline-audit" class="level3">
+<h3 class="anchored" data-anchor-id="pipeline-audit">Pipeline Audit (<code>/pipeline-audit</code>)</h3>
+<p>Adversarial data pipeline review — audits variable construction, sample restrictions, and analytical decisions against pre-analysis plans.</p>
+<p><strong>Good for:</strong> verifying that code matches the PAP, catching silent deviations.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill pipeline-audit</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/pipeline-audit/SKILL.md">Browse source</a></p>
+</section>
+<section id="research-brainstorm" class="level3">
+<h3 class="anchored" data-anchor-id="research-brainstorm">Research Brainstorm (<code>/research-brainstorm</code>)</h3>
+<p>Structured brainstorming for research ideas. Takes a half-formed question and produces a research brief with related work, contribution framing, feasibility assessment, and next steps.</p>
+<p><strong>Good for:</strong> early-stage project development, stress-testing ideas before investing time.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill research-brainstorm</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/research-brainstorm/SKILL.md">Browse source</a></p>
+</section>
+<section id="find-data" class="level3">
+<h3 class="anchored" data-anchor-id="find-data">Find Data (<code>/find-data</code>)</h3>
+<p>Surfaces public data sources matching your constraints. Give it a topic and requirements; it searches repositories and proposes datasets with download instructions.</p>
+<p><strong>Good for:</strong> teaching demos, finding new data for a project, discovering what’s publicly available.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill find-data</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/find-data/SKILL.md">Browse source</a></p>
+</section>
+<section id="academic-beamer-deck" class="level3">
+<h3 class="anchored" data-anchor-id="academic-beamer-deck">Academic Beamer Deck (<code>/academic-beamer-deck</code>)</h3>
+<p>Generates a polished Beamer slide deck from source documents. Reads PDFs or notes, extracts key content, and produces a <code>.tex</code> file with UVM-style formatting.</p>
+<p><strong>Good for:</strong> converting papers to lecture slides, building conference presentations.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill academic-beamer-deck</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/academic-beamer-deck/SKILL.md">Browse source</a></p>
 </section>
 <section id="building-your-own-skills" class="level3">
 <h3 class="anchored" data-anchor-id="building-your-own-skills">Building your own skills</h3>
@@ -363,7 +423,7 @@ but don't exist.</code></pre>
 <li><strong>Time</strong>: 15–20 minutes</li>
 </ul>
 <p>Install the skill, then run it:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add eabeam/econ-skills <span class="at">--skill</span> econ-audit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add thinkingwithagents/skills <span class="at">--skill</span> econ-audit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>/econ-audit</code></pre>
 <p>It will ask you to point it at your draft. Or run it manually:</p>
 <pre><code>Read my-paper.tex. Act as a skeptical referee.
@@ -383,7 +443,7 @@ Write the report as review/referee-report.md.</code></pre>
 <li><strong>Time</strong>: 10–15 minutes</li>
 </ul>
 <p>Install and run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add eabeam/econ-skills <span class="at">--skill</span> data-dictionary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add thinkingwithagents/skills <span class="at">--skill</span> data-dictionary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>/data-dictionary</code></pre>
 <p>Or manually:</p>
 <pre><code>Read the headers and first 20 rows of data/survey.csv.
@@ -400,7 +460,7 @@ any notes about coding or units. Save as docs/codebook.md.</code></pre>
 <li><strong>Time</strong>: 20–30 minutes</li>
 </ul>
 <p>Install and run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add eabeam/econ-skills <span class="at">--skill</span> lit-review</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add thinkingwithagents/skills <span class="at">--skill</span> lit-review</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>/lit-review</code></pre>
 <p>Or manually:</p>
 <pre><code>I'm starting a project on the effect of cash transfers
