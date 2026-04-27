@@ -1,0 +1,20 @@
+\frametitle{The Scraping Prompt}
+\begin{tcolorbox}[promptboxsm]
+{\color{white}\fontsize{5.5}{7}\selectfont\ttfamily
+Scrape NBER working papers for a teaching demo. Build a self-contained\\
+Python script in ./scrape\_nber/ using uv:\\[2pt]
+1.\;Fetch the most recent \textasciitilde 1{,}000 papers from\\
+\hspace*{1.5em}nber.org/papers?page=N\&perPage=100\&sortBy=public\_date\\
+\hspace*{1.5em}(paginate until 1{,}000 or cutoff 2024-01-01).\\
+2.\;Extract: nber\_number, title, authors, public\_date, primary\\
+\hspace*{1.5em}JEL code, affiliations (from detail page if needed).\\
+3.\;Save to ./scrape\_nber/data/nber\_papers.csv.\\
+4.\;Generate three PNGs to ./scrape\_nber/figures/:\\
+\hspace*{1.5em}- papers\_per\_month.png \quad bars, last 24 months, UVM colors\\
+\hspace*{1.5em}- top\_jel\_codes.png \quad top 15 primary JEL codes\\
+\hspace*{1.5em}- top\_institutions.png \quad top 10 affiliations\\
+5.\;Print 5-line stdout summary.\\[2pt]
+Politeness: real-browser User-Agent; sleep 0.5s between fetches;\\
+cache HTML to ./scrape\_nber/cache/ so re-runs are free.
+}
+\end{tcolorbox}

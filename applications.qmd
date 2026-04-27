@@ -40,7 +40,7 @@ Browse the source code: [github.com/thinkingwithagents/skills](https://github.co
 
 ### Literature Review (`/lit-review`) {#lit-review}
 
-Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.
+Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo. Pairs with [`/academic-pdf-parsing`](#academic-pdf-parsing) to build a parsed corpus from your PDFs for deeper, citation-grounded analysis.
 
 **Good for:** starting a new project, preparing a referee report, catching up on a subfield.
 
@@ -109,6 +109,36 @@ Generates a polished Beamer slide deck from source documents. Reads PDFs or note
 **Good for:** converting papers to lecture slides, building conference presentations.
 
 **Install:** `npx skills add thinkingwithagents/skills --skill academic-beamer-deck` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/academic-beamer-deck/SKILL.md)
+
+### Academic PDF Parsing (`/academic-pdf-parsing`) {#academic-pdf-parsing}
+
+Parses academic PDFs into structured, reusable artifacts: clean markdown, section-based chunks with page numbers, metadata JSON, and extraction quality notes. Handles single papers or batch-processes a folder into a corpus with a manifest. Integrates with `/lit-review` as the ingestion layer — parse your PDFs once, then use the structured output for deep dives, evidence synthesis, and slide content.
+
+**Good for:** preparing papers for LLM-powered Q&A, building a parsed corpus for a literature review, extracting tables and sections from journal articles.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill academic-pdf-parsing` | [Browse source](https://github.com/thinkingwithagents/skills/tree/main/academic-pdf-parsing/SKILL.md)
+
+### Meal Plan (`/meal-plan`) {#meal-plan}
+
+Two-week rolling meal planner. Checks your Google Calendar for conflicts, applies your day-of-week defaults, flags dietary restrictions and picky eaters, handles leftovers and guest scaling, and generates a printable HTML plan for the fridge.
+
+**Good for:** weekly meal planning, reducing dinnertime decision fatigue, coordinating around a busy family calendar.
+
+**First run:** A setup interview asks about your household, calendars, default meals, dietary restrictions, recipes, and preferences. You do this once; answers are saved to `~/Documents/MealPlan/`.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill meal-plan` | [Browse source](skills/meal-plan.md)
+
+### Groceries (`/groceries`) {#groceries}
+
+Grocery list generator that merges your Apple Reminders, Apple Notes, staples template, and current meal plan into one categorized shopping list per store. Scales ingredients for hosting nights and leftover meals. Flags dietary conflicts.
+
+**Good for:** weekly grocery runs, keeping a single organized list instead of checking three apps.
+
+**First run:** A setup interview asks about your stores, aisle categories, Apple Reminders/Notes setup, and staple items. Answers are saved alongside your meal plan config.
+
+**Requires:** macOS (Apple Notes/Reminders integration). Pairs with `/meal-plan` but works standalone.
+
+**Install:** `npx skills add thinkingwithagents/skills --skill groceries` | [Browse source](skills/groceries.md)
 
 ### Building your own skills
 
@@ -364,6 +394,35 @@ referee comment:
 - describe what we changed (or why we didn't)
 - reference the specific section/page
 Save as paper/revision-memo.md.
+```
+
+---
+
+## Living Better with Robots
+
+### Meal planning and grocery lists
+
+A pair of skills that handle weekly meal planning end-to-end: [`/meal-plan`](#meal-plan) generates a two-week dinner plan from your defaults and calendar, and [`/groceries`](#groceries) turns that plan into a store-ready shopping list merged with your running lists from Apple Reminders and Notes.
+
+- **What it does**: Checks Google Calendar for conflicts, applies your day-of-week defaults, flags picky eaters and dietary restrictions, handles leftovers and guest scaling, prints an HTML plan for the fridge, generates categorized grocery lists
+- **Tool**: Claude Code with Google Calendar MCP + macOS (Apple Notes/Reminders)
+- **Time**: 30 minutes for first-run setup, then 5 minutes each week
+
+```
+/meal-plan
+```
+
+The first time, it walks you through a setup interview. After that, it drafts a plan in seconds. When you're ready to shop:
+
+```
+/groceries tj
+```
+
+See [installation instructions](skills/README.md) or install directly:
+
+```bash
+npx skills add thinkingwithagents/skills --skill meal-plan
+npx skills add thinkingwithagents/skills --skill groceries
 ```
 
 ---
