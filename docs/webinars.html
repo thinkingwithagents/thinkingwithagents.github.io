@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A1: What LLMs Actually Do – Thinking with Agents</title>
+<title>Webinars · June 2026 – Thinking with Agents</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a75511a9d989de01053f1fcd1d561c0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a75511a9d989de01053f1fcd1d561c0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Thinking with Agents</span>
     </a>
   </div>
@@ -91,23 +91,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../webinars.html"> 
+    <a class="nav-link active" href="./webinars.html" aria-current="page"> 
 <span class="menu-text">Webinars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../bootcamp.html"> 
+    <a class="nav-link" href="./bootcamp.html"> 
 <span class="menu-text">RA Bootcamp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources.html"> 
+    <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../applications.html"> 
+    <a class="nav-link" href="./applications.html"> 
 <span class="menu-text">Skills &amp; Demos</span></a>
   </li>  
 </ul>
@@ -126,12 +126,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
-  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions">Discussion Questions</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#research" id="toc-research" class="nav-link active" data-scroll-target="#research">AI for Research</a>
+  <ul class="collapse">
+  <li><a href="#what-well-cover" id="toc-what-well-cover" class="nav-link" data-scroll-target="#what-well-cover">What we’ll cover</a></li>
+  <li><a href="#who-should-attend" id="toc-who-should-attend" class="nav-link" data-scroll-target="#who-should-attend">Who should attend</a></li>
+  </ul></li>
+  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">AI for Teaching</a>
+  <ul class="collapse">
+  <li><a href="#what-well-cover-1" id="toc-what-well-cover-1" class="nav-link" data-scroll-target="#what-well-cover-1">What we’ll cover</a></li>
+  <li><a href="#who-should-attend-1" id="toc-who-should-attend-1" class="nav-link" data-scroll-target="#who-should-attend-1">Who should attend</a></li>
+  </ul></li>
+  <li><a href="#about-the-presenters" id="toc-about-the-presenters" class="nav-link" data-scroll-target="#about-the-presenters">About the presenters</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/thinkingwithagents/thinkingwithagents.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -140,8 +145,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A1: What LLMs Actually Do</h1>
-<p class="subtitle lead">Tokens, prediction, and mental models for economists</p>
+<h1 class="title">Webinars · June 2026</h1>
+<p class="subtitle lead">Two standalone sessions on AI for research and teaching</p>
 </div>
 
 
@@ -158,65 +163,75 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Sample module — not final content
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This file illustrates the intended structure and format for a module. Replace with actual content before publishing.</p>
-</div>
-</div>
-<div class="module-meta">
-<p><span class="badge badge-time">~50 min</span> <span class="badge badge-track">Foundations</span> <span class="badge badge-no-code">No coding required</span></p>
-</div>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of this module, students should be able to:</p>
-<ol type="1">
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-</ol>
-</section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<!-- TODO: 1-2 paragraph framing of the key concept -->
-</section>
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
-<!-- TODO: Main module content. Suggested sub-sections:
-- Core mechanism (e.g., token prediction)
-- Mental models: what an LLM is and isn't
-- Why it fails (failure modes)
--->
-</section>
-<section id="exercise" class="level2">
-<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
-<!-- TODO: Hands-on activity. See exercises/a1/ for worksheet templates. -->
-</section>
-<section id="discussion-questions" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-questions">Discussion Questions</h2>
-<ol type="1">
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-</ol>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<p>Two 2-hour webinars. <strong>Come to one or both</strong> — they are independent, standalone events.</p>
+<p>Both sessions are live on Microsoft Teams. Recordings will be available to registered participants for a limited time after each event.</p>
+<hr>
+<section id="research" class="level2">
+<h2 class="anchored" data-anchor-id="research">AI for Research</h2>
+<p><strong>Sunday, June 15, 2026 · 10:00 AM–12:00 PM ET</strong></p>
+<p>How AI tools are changing research workflows — and what RAs and researchers need to know.</p>
+<section id="what-well-cover" class="level3">
+<h3 class="anchored" data-anchor-id="what-well-cover">What we’ll cover</h3>
 <ul>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
+<li>The AI landscape for research: what tools can and can’t do</li>
+<li><strong>Live demo</strong>: A realistic research task done with and without AI (literature review, data exploration, or code debugging)</li>
+<li>The skills gap forming in economics and development research</li>
+<li>How to build verification habits for AI-generated content</li>
+<li>Q&amp;A</li>
 </ul>
-<div class="instructor-note">
-<p><strong>For instructors</strong>: <!-- TODO: Adaptation tips, common questions, demo ideas --></p>
+</section>
+<section id="who-should-attend" class="level3">
+<h3 class="anchored" data-anchor-id="who-should-attend">Who should attend</h3>
+<ul>
+<li>Research assistants (current or aspiring)</li>
+<li>Pre-doctoral fellows</li>
+<li>Graduate students in economics, public policy, or related fields</li>
+<li>Researchers curious about AI tools for their workflow</li>
+</ul>
+<div style="margin: 2rem 0;">
+  <a href="#" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
+    Register for AI for Research (June 15) →
+  </a>
+  <p style="font-size: 0.8rem; color: #8899A6; margin-top: 0.5rem;">Registration link coming soon. Teams webinar — no installation required.</p>
 </div>
+<hr>
+</section>
+</section>
+<section id="teaching" class="level2">
+<h2 class="anchored" data-anchor-id="teaching">AI for Teaching</h2>
+<p><strong>Tuesday, June 17, 2026 · 10:00 AM–12:00 PM ET</strong></p>
+<p>How faculty can use AI tools for course design, student feedback, and teaching students to use AI effectively.</p>
+<section id="what-well-cover-1" class="level3">
+<h3 class="anchored" data-anchor-id="what-well-cover-1">What we’ll cover</h3>
+<ul>
+<li>The faculty AI gap: most instructors know AI exists but don’t know where to start</li>
+<li><strong>Live demo</strong>: AI-assisted course preparation — from rough notes to polished materials</li>
+<li><strong>Live demo</strong>: Feedback at scale — using AI to scaffold (not automate) student feedback</li>
+<li>Q&amp;A</li>
+</ul>
+</section>
+<section id="who-should-attend-1" class="level3">
+<h3 class="anchored" data-anchor-id="who-should-attend-1">Who should attend</h3>
+<ul>
+<li>Faculty in economics, social sciences, or related fields</li>
+<li>Instructors at any level (community college through R1)</li>
+<li>Graduate students who teach</li>
+<li>Academic staff involved in curriculum design</li>
+</ul>
+<div style="margin: 2rem 0;">
+  <a href="#" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
+    Register for AI for Teaching (June 17) →
+  </a>
+  <p style="font-size: 0.8rem; color: #8899A6; margin-top: 0.5rem;">Registration link coming soon. Teams webinar — no installation required.</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="about-the-presenters" class="level2">
+<h2 class="anchored" data-anchor-id="about-the-presenters">About the presenters</h2>
+<p><strong><a href="https://eabeam.github.io">Emily Beam</a></strong> is an associate professor of economics at the University of Vermont, specializing in development economics and randomized impact evaluations. She uses AI tools daily across research, teaching, and project coordination.</p>
+<p><strong><a href="https://sites.google.com/view/erkmenaslim/">Erkmen G. Aslim</a></strong> is an assistant professor of economics at the University of Vermont. His research spans health economics and applied microeconomics, and he integrates AI tools into both research and teaching workflows.</p>
+<p>Together, they developed and delivered the UVM Economics AI Bootcamp (Spring 2026) and created the <a href="./index.html">Thinking with Agents</a> resource collection.</p>
 
 
 </section>

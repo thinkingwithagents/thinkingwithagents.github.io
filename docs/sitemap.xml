@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://thinkingwithagents.github.io/webinars.html</loc>
+    <lastmod>2026-05-04T19:32:06.734Z</lastmod>
+  </url>
+  <url>
     <loc>https://thinkingwithagents.github.io/resources.html</loc>
     <lastmod>2026-04-27T00:59:29.804Z</lastmod>
   </url>
@@ -9,15 +13,23 @@
     <lastmod>2026-04-22T17:17:22.404Z</lastmod>
   </url>
   <url>
+    <loc>https://thinkingwithagents.github.io/bootcamp.html</loc>
+    <lastmod>2026-05-04T19:32:31.302Z</lastmod>
+  </url>
+  <url>
     <loc>https://thinkingwithagents.github.io/applications.html</loc>
-    <lastmod>2026-04-27T12:40:30.257Z</lastmod>
+    <lastmod>2026-04-27T17:58:41.132Z</lastmod>
   </url>
   <url>
     <loc>https://thinkingwithagents.github.io/index.html</loc>
-    <lastmod>2026-04-27T12:39:55.043Z</lastmod>
+    <lastmod>2026-05-04T19:31:49.957Z</lastmod>
   </url>
   <url>
     <loc>https://thinkingwithagents.github.io/prep.html</loc>
     <lastmod>2026-04-27T00:59:29.802Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thinkingwithagents.github.io/uvm-bootcamp.html</loc>
+    <lastmod>2026-05-04T19:01:58.898Z</lastmod>
   </url>
 </urlset>

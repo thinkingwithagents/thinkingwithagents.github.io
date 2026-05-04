@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A1: What LLMs Actually Do – Thinking with Agents</title>
+<title>RA Intensive Bootcamp · Summer 2026 – Thinking with Agents</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a75511a9d989de01053f1fcd1d561c0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a75511a9d989de01053f1fcd1d561c0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Thinking with Agents</span>
     </a>
   </div>
@@ -91,23 +91,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../webinars.html"> 
+    <a class="nav-link" href="./webinars.html"> 
 <span class="menu-text">Webinars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../bootcamp.html"> 
+    <a class="nav-link active" href="./bootcamp.html" aria-current="page"> 
 <span class="menu-text">RA Bootcamp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources.html"> 
+    <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../applications.html"> 
+    <a class="nav-link" href="./applications.html"> 
 <span class="menu-text">Skills &amp; Demos</span></a>
   </li>  
 </ul>
@@ -126,12 +126,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
-  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions">Discussion Questions</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#what-this-is" id="toc-what-this-is" class="nav-link active" data-scroll-target="#what-this-is">What this is</a></li>
+  <li><a href="#who-its-for" id="toc-who-its-for" class="nav-link" data-scroll-target="#who-its-for">Who it’s for</a></li>
+  <li><a href="#what-youll-learn" id="toc-what-youll-learn" class="nav-link" data-scroll-target="#what-youll-learn">What you’ll learn</a></li>
+  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
+  <li><a href="#pricing" id="toc-pricing" class="nav-link" data-scroll-target="#pricing">Pricing</a></li>
+  <li><a href="#interested" id="toc-interested" class="nav-link" data-scroll-target="#interested">Interested?</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/thinkingwithagents/thinkingwithagents.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -140,8 +141,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A1: What LLMs Actually Do</h1>
-<p class="subtitle lead">Tokens, prediction, and mental models for economists</p>
+<h1 class="title">RA Intensive Bootcamp · Summer 2026</h1>
+<p class="subtitle lead">A cohort-based AI bootcamp for research assistants</p>
 </div>
 
 
@@ -158,65 +159,124 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Learn to use AI tools across the full research assistant workflow — literature review, data exploration, code debugging, writing, and field coordination.</p>
+<div class="prep-note">
+<p><strong>Dates and registration coming soon.</strong> Join a <a href="./webinars.html">webinar</a> in June to see our approach, or check back here for updates.</p>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Sample module — not final content
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This file illustrates the intended structure and format for a module. Replace with actual content before publishing.</p>
-</div>
-</div>
-<div class="module-meta">
-<p><span class="badge badge-time">~50 min</span> <span class="badge badge-track">Foundations</span> <span class="badge badge-no-code">No coding required</span></p>
-</div>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of this module, students should be able to:</p>
-<ol type="1">
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-</ol>
+<hr>
+<section id="what-this-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-is">What this is</h2>
+<p>A live, cohort-based bootcamp taught by <a href="https://eabeam.github.io">Emily Beam</a> and <a href="https://sites.google.com/view/erkmenaslim/">Erkmen G. Aslim</a>. Multiple sessions over several weeks, with homework exercises between sessions and a capstone project.</p>
+<p>This is not a self-paced course or a recording you watch on your own. You’ll work through realistic RA tasks with AI tools, get feedback, and learn alongside a cohort of peers.</p>
+<hr>
 </section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<!-- TODO: 1-2 paragraph framing of the key concept -->
-</section>
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
-<!-- TODO: Main module content. Suggested sub-sections:
-- Core mechanism (e.g., token prediction)
-- Mental models: what an LLM is and isn't
-- Why it fails (failure modes)
--->
-</section>
-<section id="exercise" class="level2">
-<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
-<!-- TODO: Hands-on activity. See exercises/a1/ for worksheet templates. -->
-</section>
-<section id="discussion-questions" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-questions">Discussion Questions</h2>
-<ol type="1">
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-</ol>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<section id="who-its-for" class="level2">
+<h2 class="anchored" data-anchor-id="who-its-for">Who it’s for</h2>
 <ul>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
+<li><strong>Aspiring RAs and pre-docs</strong> who want to signal AI competence to PIs</li>
+<li><strong>Current RAs at research organizations</strong> (IPA, J-PAL, IDinsight, DIME, university labs) who want professional development</li>
 </ul>
-<div class="instructor-note">
-<p><strong>For instructors</strong>: <!-- TODO: Adaptation tips, common questions, demo ideas --></p>
+<p>No prior AI experience required. You should be comfortable with at least one of Stata or R.</p>
+<hr>
+</section>
+<section id="what-youll-learn" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-learn">What you’ll learn</h2>
+<p>Each session focuses on a core RA workflow, with live demos and hands-on exercises.</p>
+<div class="curriculum-grid">
+  <div class="curriculum-card">
+    <div class="curriculum-icon">📚</div>
+    <h3 class="anchored">Literature Review</h3>
+    <p>AI-assisted searching, summarizing, identifying gaps, and catching hallucinated citations.</p>
+  </div>
+  <div class="curriculum-card">
+    <div class="curriculum-icon">📊</div>
+    <h3 class="anchored">Data Exploration &amp; Cleaning</h3>
+    <p>Using AI to describe datasets, spot anomalies, and generate summary statistics — with verification guardrails.</p>
+  </div>
+  <div class="curriculum-card">
+    <div class="curriculum-icon">💻</div>
+    <h3 class="anchored">Code Assistance &amp; Debugging</h3>
+    <p>AI for Stata and R debugging, code translation, and documentation. Recognizing bad suggestions.</p>
+  </div>
+  <div class="curriculum-card">
+    <div class="curriculum-icon">✍️</div>
+    <h3 class="anchored">Writing &amp; Field Coordination</h3>
+    <p>Drafting memos, editing, survey instrument review, translation, and communicating with PIs and field teams.</p>
+  </div>
+  <div class="curriculum-card">
+    <div class="curriculum-icon">🎯</div>
+    <h3 class="anchored">Capstone</h3>
+    <p>A multi-step RA task that brings it all together: dataset + papers → summary memo with descriptives and flagged issues.</p>
+  </div>
 </div>
+<hr>
+</section>
+<section id="format" class="level2">
+<h2 class="anchored" data-anchor-id="format">Format</h2>
+<ul>
+<li><strong>Live online sessions</strong> via Zoom or Teams</li>
+<li><strong>Homework</strong> between sessions — realistic RA tasks you complete with AI tools</li>
+<li><strong>Capstone exercise</strong> — demonstrate your skills on a multi-step research task</li>
+<li><strong>Cohort community</strong> — async channel for peer support and discussion</li>
+<li><strong>Certificate of completion</strong> upon finishing the program</li>
+</ul>
+<hr>
+</section>
+<section id="pricing" class="level2">
+<h2 class="anchored" data-anchor-id="pricing">Pricing</h2>
+<p>We use a sliding scale based on <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups">World Bank country income classifications</a> to keep the program accessible globally.</p>
+<table class="pricing-table caption-top table">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Tier</th>
+<th data-quarto-table-cell-role="th">Price</th>
+<th data-quarto-table-cell-role="th">Who</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>High-income country</strong></td>
+<td>$200–300</td>
+<td>US, Europe, Australia, etc.</td>
+</tr>
+<tr class="even">
+<td><strong>Middle-income country</strong></td>
+<td>$75–100</td>
+<td>Self-reported</td>
+</tr>
+<tr class="odd">
+<td><strong>Low-income country</strong></td>
+<td>$25–50</td>
+<td>Self-reported</td>
+</tr>
+<tr class="even">
+<td><strong>Scholarship</strong></td>
+<td>Free</td>
+<td>Application-based (limited spots)</td>
+</tr>
+</tbody>
+</table>
+<p>Pricing is self-reported on the honor system. If your organization is paying, use the tier where the organization is headquartered.</p>
+<p><strong>Group rates</strong>: 10–15% discount for organizations sending 3+ participants.</p>
+<hr>
+</section>
+<section id="interested" class="level2">
+<h2 class="anchored" data-anchor-id="interested">Interested?</h2>
+<p>Registration isn’t open yet. In the meantime:</p>
+<ol type="1">
+<li><strong><a href="./webinars.html">Join a webinar</a></strong> on June 15 or 17 to see our approach</li>
+<li><strong>Sign up for updates</strong> — we’ll email you when registration opens</li>
+</ol>
+<div style="margin: 2rem 0;">
+  <a href="webinars.html" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
+    Register for a webinar →
+  </a>
+</div>
+<hr>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions?</h2>
+<p>Email <a href="mailto:emily.beam@uvm.edu">emily.beam@uvm.edu</a> with “RA Intensive” in the subject line.</p>
 
 
 </section>

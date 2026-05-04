@@ -1,0 +1,56 @@
+---
+title: "UVM Economics AI Bootcamp"
+subtitle: "April 2026 · Department of Economics, University of Vermont"
+toc: true
+---
+
+A two-session faculty bootcamp on AI tools for teaching and research, delivered in April 2026 at the University of Vermont.
+
+---
+
+## Session 1: Getting Started with AI Tools
+
+**April 22, 11:00–12:30, Old Mill A500**
+
+| Deck | Format |
+|------|--------|
+| Session 1: Agentic AI Bootcamp (Aslim & Beam) | [PDF](Session1_Slides/session_1_slides.pdf) |
+
+### What we covered
+
+- What AI tools exist and the difference between chat-based and agentic tools
+- Context windows, standing instructions, and planning — the key concepts
+- What we've actually used these for (and what was fun but saved zero time)
+- Voice files: making AI output sound like you
+- Skills: reusable workflows you can share
+- Live demos: website redesign and custom skill creation
+
+---
+
+## Session 2: Research Workflows, Teaching & Applications
+
+**April 27, 11:00–12:30, Old Mill A500**
+
+| Deck | Format |
+|------|--------|
+| Session 2: Research Workflows, Teaching & Applications (Aslim & Beam) | [PDF](Session2_Slides/session_2_slides.pdf) |
+
+### What we covered
+
+- **Emily: Research workflows** — code auditing a replication package with [`/code-review`](applications.html#code-review), paper auditing with [`/econ-audit`](applications.html#econ-audit) and [`/review-paper`](applications.html#review-paper), running Lee bounds live
+- **Erkmen: Teaching & applications** — building a lecture-builder skill with [`/academic-beamer-deck`](applications.html#academic-beamer-deck), stress-testing a research idea with [`/research-brainstorm`](applications.html#research-brainstorm), web scraping with [`/find-data`](applications.html#find-data)
+
+### What to try next
+
+- **Research**: Try the data exploration → analysis plan workflow on your own data
+- **Teaching**: Draft a new assignment, create practice problems, or build a study guide
+- **Code**: Run `/econ-audit` on a paper before you submit it
+- **Writing**: Use Claude Code to revise a draft, check references, or restructure a section
+
+---
+
+## Resources
+
+- [Getting Set Up](prep.qmd) — prep guide for installing and configuring AI tools
+- [Applications & Skills](applications.qmd) — the skills and demos shown in the bootcamp
+- [Outside Resources](resources.qmd) — broader reading and tools

@@ -1,0 +1,82 @@
+---
+title: "Webinars · June 2026"
+subtitle: "Two standalone sessions on AI for research and teaching"
+toc: true
+---
+
+Two 2-hour webinars. **Come to one or both** — they are independent, standalone events.
+
+Both sessions are live on Microsoft Teams. Recordings will be available to registered participants for a limited time after each event.
+
+---
+
+## AI for Research {#research}
+
+**Sunday, June 15, 2026 · 10:00 AM–12:00 PM ET**
+
+How AI tools are changing research workflows — and what RAs and researchers need to know.
+
+### What we'll cover
+
+- The AI landscape for research: what tools can and can't do
+- **Live demo**: A realistic research task done with and without AI (literature review, data exploration, or code debugging)
+- The skills gap forming in economics and development research
+- How to build verification habits for AI-generated content
+- Q&A
+
+### Who should attend
+
+- Research assistants (current or aspiring)
+- Pre-doctoral fellows
+- Graduate students in economics, public policy, or related fields
+- Researchers curious about AI tools for their workflow
+
+```{=html}
+<div style="margin: 2rem 0;">
+  <a href="#" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
+    Register for AI for Research (June 15) →
+  </a>
+  <p style="font-size: 0.8rem; color: #8899A6; margin-top: 0.5rem;">Registration link coming soon. Teams webinar — no installation required.</p>
+</div>
+```
+
+---
+
+## AI for Teaching {#teaching}
+
+**Tuesday, June 17, 2026 · 10:00 AM–12:00 PM ET**
+
+How faculty can use AI tools for course design, student feedback, and teaching students to use AI effectively.
+
+### What we'll cover
+
+- The faculty AI gap: most instructors know AI exists but don't know where to start
+- **Live demo**: AI-assisted course preparation — from rough notes to polished materials
+- **Live demo**: Feedback at scale — using AI to scaffold (not automate) student feedback
+- Q&A
+
+### Who should attend
+
+- Faculty in economics, social sciences, or related fields
+- Instructors at any level (community college through R1)
+- Graduate students who teach
+- Academic staff involved in curriculum design
+
+```{=html}
+<div style="margin: 2rem 0;">
+  <a href="#" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
+    Register for AI for Teaching (June 17) →
+  </a>
+  <p style="font-size: 0.8rem; color: #8899A6; margin-top: 0.5rem;">Registration link coming soon. Teams webinar — no installation required.</p>
+</div>
+```
+
+---
+
+## About the presenters
+
+**[Emily Beam](https://eabeam.github.io)** is an associate professor of economics at the University of Vermont, specializing in development economics and randomized impact evaluations. She uses AI tools daily across research, teaching, and project coordination.
+
+**[Erkmen G. Aslim](https://sites.google.com/view/erkmenaslim/)** is an assistant professor of economics at the University of Vermont. His research spans health economics and applied microeconomics, and he integrates AI tools into both research and teaching workflows.
+
+Together, they developed and delivered the UVM Economics AI Bootcamp (Spring 2026) and created the [Thinking with Agents](index.qmd) resource collection.

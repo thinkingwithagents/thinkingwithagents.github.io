@@ -15,18 +15,24 @@ toc: false
     <p class="hero-meta">Erkmen G. Aslim &amp; Emily Beam</p>
   </div>
   <div class="hero-right">
-    <h2 class="schedule-heading">UVM Economics Bootcamp Schedule</h2>
+    <h2 class="schedule-heading">Upcoming Events</h2>
     <div class="schedule-item">
-      <div class="schedule-date">Apr 22</div>
-      <div class="schedule-title">Getting Started with AI Tools</div>
-      <div class="schedule-detail">11:00–12:30 · Old Mill A500</div>
-      <a href="Session1_Slides/session_1_slides.pdf" class="slides-btn">Download slides ↓</a>
+      <div class="schedule-date">Jun 15</div>
+      <div class="schedule-title">AI for Research (Webinar)</div>
+      <div class="schedule-detail">10:00 AM–12:00 PM ET · Online</div>
+      <a href="webinars.html" class="slides-btn">Register →</a>
     </div>
     <div class="schedule-item">
-      <div class="schedule-date">Apr 27</div>
-      <div class="schedule-title">Research Pipelines &amp; Automation</div>
-      <div class="schedule-detail">11:00–12:30 · Old Mill A500</div>
-      <a href="Session2_Slides/session_2_slides.pdf" class="slides-btn">Download slides ↓</a>
+      <div class="schedule-date">Jun 17</div>
+      <div class="schedule-title">AI for Teaching (Webinar)</div>
+      <div class="schedule-detail">10:00 AM–12:00 PM ET · Online</div>
+      <a href="webinars.html" class="slides-btn">Register →</a>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-date">Jul–Aug</div>
+      <div class="schedule-title">RA Intensive Bootcamp</div>
+      <div class="schedule-detail">Cohort-based · Online · Sliding scale pricing</div>
+      <a href="bootcamp.html" class="slides-btn">Learn more →</a>
     </div>
   </div>
 </section>
@@ -34,53 +40,36 @@ toc: false
 
 ::: {.landing-content}
 
-[Before You Arrive]{.landing-section-title}
+[What We Do]{.landing-section-title}
+
+We run hands-on workshops and bootcamps that teach economists and research professionals how to use AI tools effectively — for research workflows, teaching, and field coordination.
+
+Our approach is **discipline-specific** (economics and development research, not generic prompt engineering), **applied** (real tasks, real datasets, real workflows), and **accessible** (LMIC sliding-scale pricing on paid programs).
 
 ::: {.prep-note}
-No installation needed. See the [Getting Set Up](prep.qmd) guide if you want to try things on your own afterward. For broader reading, see [Outside Resources](resources.qmd).
+Our June webinars are a good place to start — two standalone sessions on AI for research and teaching. [See the webinars →](webinars.qmd)
 :::
 
-[Session 1: Getting Started with AI Tools]{.landing-section-title}
+[Webinars · June 2026]{.landing-section-title}
 
-**April 22, 11:00--12:30, Old Mill A500**
+Two standalone 2-hour sessions. Come to one or both.
 
-| Deck | Format |
-|------|--------|
-| Session 1: Agentic AI Bootcamp (Aslim & Beam) | [PDF](Session1_Slides/session_1_slides.pdf) |
+**[AI for Research](webinars.qmd#research)** (June 15, 10am–12pm ET) — How AI tools change research workflows for RAs and researchers. Live demos, Q&A.
 
-#### What we'll cover
+**[AI for Teaching](webinars.qmd#teaching)** (June 17, 10am–12pm ET) — How faculty can use AI for course design and feedback.
 
-- What AI tools exist and the difference between chat-based and agentic tools
-- Context windows, standing instructions, and planning — the key concepts
-- What we've actually used these for (and what was fun but saved zero time)
-- Voice files: making AI output sound like you
-- Skills: reusable workflows you can share
-- Live demos: website redesign and custom skill creation
+[RA Intensive Bootcamp · Summer 2026]{.landing-section-title}
 
-#### Before next time (April 27)
+A cohort-based bootcamp for aspiring and current research assistants. Learn to use AI tools across the full RA workflow — literature review, data cleaning, code debugging, writing, and field coordination.
 
-- [ ] Try using an AI tool for one real task this week
-- [ ] Install the tools from the [prep guide](prep.qmd) if you haven't already
-- [ ] Think of a research or teaching task you'd like to automate
+- **Who it's for**: Pre-docs, recent grads, RAs at research organizations (IPA, J-PAL, IDinsight, DIME, university labs)
+- **Format**: Live sessions over multiple weeks, with homework and a capstone exercise
+- **Pricing**: Sliding scale by country income level. Scholarships available.
 
-[Session 2: Research Workflows, Teaching & Applications]{.landing-section-title}
+[Learn more and register →](bootcamp.qmd)
 
-**April 27, 11:00--12:30, Old Mill A500**
+[Past Events]{.landing-section-title}
 
-| Deck | Format |
-|------|--------|
-| Session 2: Research Workflows, Teaching & Applications (Aslim & Beam) | [PDF](Session2_Slides/session_2_slides.pdf) |
-
-#### What we'll cover
-
-- **Emily: Research workflows** — code auditing a replication package with [`/code-review`](applications.qmd#code-review), paper auditing with [`/econ-audit`](applications.qmd#econ-audit) and [`/review-paper`](applications.qmd#review-paper), running Lee bounds live
-- **Erkmen: Teaching & applications** — building a lecture-builder skill with [`/academic-beamer-deck`](applications.qmd#academic-beamer-deck), stress-testing a research idea with [`/research-brainstorm`](applications.qmd#research-brainstorm), web scraping with [`/find-data`](applications.qmd#find-data)
-
-#### What to try next
-
-- **Research**: Try the data exploration → analysis plan workflow on your own data
-- **Teaching**: Draft a new assignment, create practice problems, or build a study guide
-- **Code**: Run `/econ-audit` on a paper before you submit it
-- **Writing**: Use Claude Code to revise a draft, check references, or restructure a section
+**UVM Economics AI Bootcamp** (April 2026) — Two-session faculty workshop at the University of Vermont. [View materials →](uvm-bootcamp.html)
 
 :::

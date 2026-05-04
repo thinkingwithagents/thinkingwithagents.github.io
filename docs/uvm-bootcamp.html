@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A1: What LLMs Actually Do – Thinking with Agents</title>
+<title>UVM Economics AI Bootcamp – Thinking with Agents</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a75511a9d989de01053f1fcd1d561c0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a75511a9d989de01053f1fcd1d561c0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Thinking with Agents</span>
     </a>
   </div>
@@ -91,23 +91,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../webinars.html"> 
+    <a class="nav-link" href="./webinars.html"> 
 <span class="menu-text">Webinars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../bootcamp.html"> 
+    <a class="nav-link" href="./bootcamp.html"> 
 <span class="menu-text">RA Bootcamp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources.html"> 
+    <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../applications.html"> 
+    <a class="nav-link" href="./applications.html"> 
 <span class="menu-text">Skills &amp; Demos</span></a>
   </li>  
 </ul>
@@ -126,12 +126,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
-  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions">Discussion Questions</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#session-1-getting-started-with-ai-tools" id="toc-session-1-getting-started-with-ai-tools" class="nav-link active" data-scroll-target="#session-1-getting-started-with-ai-tools">Session 1: Getting Started with AI Tools</a>
+  <ul class="collapse">
+  <li><a href="#what-we-covered" id="toc-what-we-covered" class="nav-link" data-scroll-target="#what-we-covered">What we covered</a></li>
+  </ul></li>
+  <li><a href="#session-2-research-workflows-teaching-applications" id="toc-session-2-research-workflows-teaching-applications" class="nav-link" data-scroll-target="#session-2-research-workflows-teaching-applications">Session 2: Research Workflows, Teaching &amp; Applications</a>
+  <ul class="collapse">
+  <li><a href="#what-we-covered-1" id="toc-what-we-covered-1" class="nav-link" data-scroll-target="#what-we-covered-1">What we covered</a></li>
+  <li><a href="#what-to-try-next" id="toc-what-to-try-next" class="nav-link" data-scroll-target="#what-to-try-next">What to try next</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/thinkingwithagents/thinkingwithagents.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -140,8 +144,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A1: What LLMs Actually Do</h1>
-<p class="subtitle lead">Tokens, prediction, and mental models for economists</p>
+<h1 class="title">UVM Economics AI Bootcamp</h1>
+<p class="subtitle lead">April 2026 · Department of Economics, University of Vermont</p>
 </div>
 
 
@@ -158,65 +162,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Sample module — not final content
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This file illustrates the intended structure and format for a module. Replace with actual content before publishing.</p>
-</div>
-</div>
-<div class="module-meta">
-<p><span class="badge badge-time">~50 min</span> <span class="badge badge-track">Foundations</span> <span class="badge badge-no-code">No coding required</span></p>
-</div>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of this module, students should be able to:</p>
-<ol type="1">
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-</ol>
-</section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<!-- TODO: 1-2 paragraph framing of the key concept -->
-</section>
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
-<!-- TODO: Main module content. Suggested sub-sections:
-- Core mechanism (e.g., token prediction)
-- Mental models: what an LLM is and isn't
-- Why it fails (failure modes)
--->
-</section>
-<section id="exercise" class="level2">
-<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
-<!-- TODO: Hands-on activity. See exercises/a1/ for worksheet templates. -->
-</section>
-<section id="discussion-questions" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-questions">Discussion Questions</h2>
-<ol type="1">
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-</ol>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<p>A two-session faculty bootcamp on AI tools for teaching and research, delivered in April 2026 at the University of Vermont.</p>
+<hr>
+<section id="session-1-getting-started-with-ai-tools" class="level2">
+<h2 class="anchored" data-anchor-id="session-1-getting-started-with-ai-tools">Session 1: Getting Started with AI Tools</h2>
+<p><strong>April 22, 11:00–12:30, Old Mill A500</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Deck</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Session 1: Agentic AI Bootcamp (Aslim &amp; Beam)</td>
+<td><a href="Session1_Slides/session_1_slides.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+<section id="what-we-covered" class="level3">
+<h3 class="anchored" data-anchor-id="what-we-covered">What we covered</h3>
 <ul>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
-<li><!-- TODO --></li>
+<li>What AI tools exist and the difference between chat-based and agentic tools</li>
+<li>Context windows, standing instructions, and planning — the key concepts</li>
+<li>What we’ve actually used these for (and what was fun but saved zero time)</li>
+<li>Voice files: making AI output sound like you</li>
+<li>Skills: reusable workflows you can share</li>
+<li>Live demos: website redesign and custom skill creation</li>
 </ul>
-<div class="instructor-note">
-<p><strong>For instructors</strong>: <!-- TODO: Adaptation tips, common questions, demo ideas --></p>
-</div>
+<hr>
+</section>
+</section>
+<section id="session-2-research-workflows-teaching-applications" class="level2">
+<h2 class="anchored" data-anchor-id="session-2-research-workflows-teaching-applications">Session 2: Research Workflows, Teaching &amp; Applications</h2>
+<p><strong>April 27, 11:00–12:30, Old Mill A500</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Deck</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Session 2: Research Workflows, Teaching &amp; Applications (Aslim &amp; Beam)</td>
+<td><a href="Session2_Slides/session_2_slides.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+<section id="what-we-covered-1" class="level3">
+<h3 class="anchored" data-anchor-id="what-we-covered-1">What we covered</h3>
+<ul>
+<li><strong>Emily: Research workflows</strong> — code auditing a replication package with <a href="applications.html#code-review"><code>/code-review</code></a>, paper auditing with <a href="applications.html#econ-audit"><code>/econ-audit</code></a> and <a href="applications.html#review-paper"><code>/review-paper</code></a>, running Lee bounds live</li>
+<li><strong>Erkmen: Teaching &amp; applications</strong> — building a lecture-builder skill with <a href="applications.html#academic-beamer-deck"><code>/academic-beamer-deck</code></a>, stress-testing a research idea with <a href="applications.html#research-brainstorm"><code>/research-brainstorm</code></a>, web scraping with <a href="applications.html#find-data"><code>/find-data</code></a></li>
+</ul>
+</section>
+<section id="what-to-try-next" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-try-next">What to try next</h3>
+<ul>
+<li><strong>Research</strong>: Try the data exploration → analysis plan workflow on your own data</li>
+<li><strong>Teaching</strong>: Draft a new assignment, create practice problems, or build a study guide</li>
+<li><strong>Code</strong>: Run <code>/econ-audit</code> on a paper before you submit it</li>
+<li><strong>Writing</strong>: Use Claude Code to revise a draft, check references, or restructure a section</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="./prep.html">Getting Set Up</a> — prep guide for installing and configuring AI tools</li>
+<li><a href="./applications.html">Applications &amp; Skills</a> — the skills and demos shown in the bootcamp</li>
+<li><a href="./resources.html">Outside Resources</a> — broader reading and tools</li>
+</ul>
 
 
 </section>

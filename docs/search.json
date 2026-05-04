@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "webinars.html",
+    "href": "webinars.html",
+    "title": "Webinars · June 2026",
+    "section": "",
+    "text": "Two 2-hour webinars. Come to one or both — they are independent, standalone events.\nBoth sessions are live on Microsoft Teams. Recordings will be available to registered participants for a limited time after each event."
+  },
+  {
+    "objectID": "webinars.html#research",
+    "href": "webinars.html#research",
+    "title": "Webinars · June 2026",
+    "section": "AI for Research",
+    "text": "AI for Research\nSunday, June 15, 2026 · 10:00 AM–12:00 PM ET\nHow AI tools are changing research workflows — and what RAs and researchers need to know.\n\nWhat we’ll cover\n\nThe AI landscape for research: what tools can and can’t do\nLive demo: A realistic research task done with and without AI (literature review, data exploration, or code debugging)\nThe skills gap forming in economics and development research\nHow to build verification habits for AI-generated content\nQ&A\n\n\n\nWho should attend\n\nResearch assistants (current or aspiring)\nPre-doctoral fellows\nGraduate students in economics, public policy, or related fields\nResearchers curious about AI tools for their workflow\n\n\n  \n    Register for AI for Research (June 15) →\n  \n  Registration link coming soon. Teams webinar — no installation required."
+  },
+  {
+    "objectID": "webinars.html#teaching",
+    "href": "webinars.html#teaching",
+    "title": "Webinars · June 2026",
+    "section": "AI for Teaching",
+    "text": "AI for Teaching\nTuesday, June 17, 2026 · 10:00 AM–12:00 PM ET\nHow faculty can use AI tools for course design, student feedback, and teaching students to use AI effectively.\n\nWhat we’ll cover\n\nThe faculty AI gap: most instructors know AI exists but don’t know where to start\nLive demo: AI-assisted course preparation — from rough notes to polished materials\nLive demo: Feedback at scale — using AI to scaffold (not automate) student feedback\nQ&A\n\n\n\nWho should attend\n\nFaculty in economics, social sciences, or related fields\nInstructors at any level (community college through R1)\nGraduate students who teach\nAcademic staff involved in curriculum design\n\n\n  \n    Register for AI for Teaching (June 17) →\n  \n  Registration link coming soon. Teams webinar — no installation required."
+  },
+  {
+    "objectID": "webinars.html#about-the-presenters",
+    "href": "webinars.html#about-the-presenters",
+    "title": "Webinars · June 2026",
+    "section": "About the presenters",
+    "text": "About the presenters\nEmily Beam is an associate professor of economics at the University of Vermont, specializing in development economics and randomized impact evaluations. She uses AI tools daily across research, teaching, and project coordination.\nErkmen G. Aslim is an assistant professor of economics at the University of Vermont. His research spans health economics and applied microeconomics, and he integrates AI tools into both research and teaching workflows.\nTogether, they developed and delivered the UVM Economics AI Bootcamp (Spring 2026) and created the Thinking with Agents resource collection."
+  },
+  {
     "objectID": "resources.html",
     "href": "resources.html",
     "title": "Bells and Whistles",
@@ -119,6 +147,62 @@
     "text": "Key Takeaways\n\n\n\n\n\n\nFor instructors:"
   },
   {
+    "objectID": "bootcamp.html",
+    "href": "bootcamp.html",
+    "title": "RA Intensive Bootcamp · Summer 2026",
+    "section": "",
+    "text": "Learn to use AI tools across the full research assistant workflow — literature review, data exploration, code debugging, writing, and field coordination."
+  },
+  {
+    "objectID": "bootcamp.html#what-this-is",
+    "href": "bootcamp.html#what-this-is",
+    "title": "RA Intensive Bootcamp · Summer 2026",
+    "section": "What this is",
+    "text": "What this is\nA live, cohort-based bootcamp taught by Emily Beam and Erkmen G. Aslim. Multiple sessions over several weeks, with homework exercises between sessions and a capstone project.\nThis is not a self-paced course or a recording you watch on your own. You’ll work through realistic RA tasks with AI tools, get feedback, and learn alongside a cohort of peers."
+  },
+  {
+    "objectID": "bootcamp.html#who-its-for",
+    "href": "bootcamp.html#who-its-for",
+    "title": "RA Intensive Bootcamp · Summer 2026",
+    "section": "Who it’s for",
+    "text": "Who it’s for\n\nAspiring RAs and pre-docs who want to signal AI competence to PIs\nCurrent RAs at research organizations (IPA, J-PAL, IDinsight, DIME, university labs) who want professional development\n\nNo prior AI experience required. You should be comfortable with at least one of Stata or R."
+  },
+  {
+    "objectID": "bootcamp.html#what-youll-learn",
+    "href": "bootcamp.html#what-youll-learn",
+    "title": "RA Intensive Bootcamp · Summer 2026",
+    "section": "What you’ll learn",
+    "text": "What you’ll learn\nEach session focuses on a core RA workflow, with live demos and hands-on exercises.\n\n  \n    📚\n    Literature Review\n    AI-assisted searching, summarizing, identifying gaps, and catching hallucinated citations.\n  \n  \n    📊\n    Data Exploration & Cleaning\n    Using AI to describe datasets, spot anomalies, and generate summary statistics — with verification guardrails.\n  \n  \n    💻\n    Code Assistance & Debugging\n    AI for Stata and R debugging, code translation, and documentation. Recognizing bad suggestions.\n  \n  \n    ✍️\n    Writing & Field Coordination\n    Drafting memos, editing, survey instrument review, translation, and communicating with PIs and field teams.\n  \n  \n    🎯\n    Capstone\n    A multi-step RA task that brings it all together: dataset + papers → summary memo with descriptives and flagged issues."
+  },
+  {
+    "objectID": "bootcamp.html#format",
+    "href": "bootcamp.html#format",
+    "title": "RA Intensive Bootcamp · Summer 2026",
+    "section": "Format",
+    "text": "Format\n\nLive online sessions via Zoom or Teams\nHomework between sessions — realistic RA tasks you complete with AI tools\nCapstone exercise — demonstrate your skills on a multi-step research task\nCohort community — async channel for peer support and discussion\nCertificate of completion upon finishing the program"
+  },
+  {
+    "objectID": "bootcamp.html#pricing",
+    "href": "bootcamp.html#pricing",
+    "title": "RA Intensive Bootcamp · Summer 2026",
+    "section": "Pricing",
+    "text": "Pricing\nWe use a sliding scale based on World Bank country income classifications to keep the program accessible globally.\n\n\n\nTier\nPrice\nWho\n\n\n\n\nHigh-income country\n$200–300\nUS, Europe, Australia, etc.\n\n\nMiddle-income country\n$75–100\nSelf-reported\n\n\nLow-income country\n$25–50\nSelf-reported\n\n\nScholarship\nFree\nApplication-based (limited spots)\n\n\n\nPricing is self-reported on the honor system. If your organization is paying, use the tier where the organization is headquartered.\nGroup rates: 10–15% discount for organizations sending 3+ participants."
+  },
+  {
+    "objectID": "bootcamp.html#interested",
+    "href": "bootcamp.html#interested",
+    "title": "RA Intensive Bootcamp · Summer 2026",
+    "section": "Interested?",
+    "text": "Interested?\nRegistration isn’t open yet. In the meantime:\n\nJoin a webinar on June 15 or 17 to see our approach\nSign up for updates — we’ll email you when registration opens\n\n\n  \n    Register for a webinar →"
+  },
+  {
+    "objectID": "bootcamp.html#questions",
+    "href": "bootcamp.html#questions",
+    "title": "RA Intensive Bootcamp · Summer 2026",
+    "section": "Questions?",
+    "text": "Questions?\nEmail emily.beam@uvm.edu with “RA Intensive” in the subject line."
+  },
+  {
     "objectID": "applications.html",
     "href": "applications.html",
     "title": "Applications & Skills",
@@ -130,7 +214,7 @@
     "href": "applications.html#installable-skills",
     "title": "Applications & Skills",
     "section": "Installable skills",
-    "text": "Installable skills\nSkills are reusable prompt-and-instruction bundles — saved recipes for tasks you do repeatedly. Instead of explaining a workflow from scratch each time, you invoke a skill and it runs.\n\n\n\n\n\n\nNotePrerequisites\n\n\n\nTo install skills from the terminal, you need Node.js (which provides the npx command):\n\nInstall Node.js: Go to nodejs.org and click the LTS download. Run the installer.\nVerify it worked: Open a terminal and run npx --version. If you see a version number, you’re set.\n\nIf you installed Claude Code via npm install -g @anthropic-ai/claude-code, you already have Node.js — skip to the next step.\n\n\n\n\n\n\n\n\nTipInstall the bootcamp skills\n\n\n\nThese skills are published and ready to use:\nnpx skills add thinkingwithagents/skills\nOr install one at a time:\nnpx skills add thinkingwithagents/skills --skill econ-audit\nBrowse the source code: github.com/thinkingwithagents/skills\n\n\n\nLiterature Review (/lit-review)\nStructured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.\nGood for: starting a new project, preparing a referee report, catching up on a subfield.\nInstall: npx skills add thinkingwithagents/skills --skill lit-review | Browse source\n\n\nEconometrics Audit (/econ-audit)\nAdversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.\nGood for: self-review before submission, preparing for seminars, reviewing student work.\nInstall: npx skills add thinkingwithagents/skills --skill econ-audit | Browse source\n\n\nData Dictionary Generator (/data-dictionary)\nReads a dataset’s metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.\nGood for: replication packages, project handoffs, codebook creation.\nInstall: npx skills add thinkingwithagents/skills --skill data-dictionary | Browse source\n\n\nCode Review (/code-review)\nStructured review of research code (Stata, R, Python) against DIME, Gentzkow-Shapiro, AEA, and IPA standards. Catches silent failures, reproducibility risks, and style issues that generic linters miss.\nGood for: cleaning up code before submission, replication package prep, catching merge bugs and missing-value traps.\nInstall: npx skills add thinkingwithagents/skills --skill code-review | Browse source\n\n\nPaper Review (/review-paper)\nAdversarial paper review simulating a skeptical referee. Checks identification, statistical claims, robustness, and presentation against real referee patterns.\nGood for: pre-submission self-review, preparing for seminars, stress-testing a draft.\nInstall: npx skills add thinkingwithagents/skills --skill review-paper | Browse source\n\n\nPipeline Audit (/pipeline-audit)\nAdversarial data pipeline review — audits variable construction, sample restrictions, and analytical decisions against pre-analysis plans.\nGood for: verifying that code matches the PAP, catching silent deviations.\nInstall: npx skills add thinkingwithagents/skills --skill pipeline-audit | Browse source\n\n\nResearch Brainstorm (/research-brainstorm)\nStructured brainstorming for research ideas. Takes a half-formed question and produces a research brief with related work, contribution framing, feasibility assessment, and next steps.\nGood for: early-stage project development, stress-testing ideas before investing time.\nInstall: npx skills add thinkingwithagents/skills --skill research-brainstorm | Browse source\n\n\nFind Data (/find-data)\nSurfaces public data sources matching your constraints. Give it a topic and requirements; it searches repositories and proposes datasets with download instructions.\nGood for: teaching demos, finding new data for a project, discovering what’s publicly available.\nInstall: npx skills add thinkingwithagents/skills --skill find-data | Browse source\n\n\nAcademic Beamer Deck (/academic-beamer-deck)\nGenerates a polished Beamer slide deck from source documents. Reads PDFs or notes, extracts key content, and produces a .tex file with UVM-style formatting.\nGood for: converting papers to lecture slides, building conference presentations.\nInstall: npx skills add thinkingwithagents/skills --skill academic-beamer-deck | Browse source\n\n\nBuilding your own skills\n\nPick one repeating task — grading feedback, email drafts, data cleaning, meeting prep\nDo it once with AI and save the conversation\nExtract the instructions into a Markdown file\nRefine — add constraints, examples, edge cases as you use it\n\nMore resources: skills.sh (public skill registry) · Claude Code docs: custom commands · claudlab.in"
+    "text": "Installable skills\nSkills are reusable prompt-and-instruction bundles — saved recipes for tasks you do repeatedly. Instead of explaining a workflow from scratch each time, you invoke a skill and it runs.\n\n\n\n\n\n\nNotePrerequisites\n\n\n\nTo install skills from the terminal, you need Node.js (which provides the npx command):\n\nInstall Node.js: Go to nodejs.org and click the LTS download. Run the installer.\nVerify it worked: Open a terminal and run npx --version. If you see a version number, you’re set.\n\nIf you installed Claude Code via npm install -g @anthropic-ai/claude-code, you already have Node.js — skip to the next step.\n\n\n\n\n\n\n\n\nTipInstall the bootcamp skills\n\n\n\nThese skills are published and ready to use:\nnpx skills add thinkingwithagents/skills\nOr install one at a time:\nnpx skills add thinkingwithagents/skills --skill econ-audit\nBrowse the source code: github.com/thinkingwithagents/skills\n\n\n\nLiterature Review (/lit-review)\nStructured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo. Pairs with /academic-pdf-parsing to build a parsed corpus from your PDFs for deeper, citation-grounded analysis.\nGood for: starting a new project, preparing a referee report, catching up on a subfield.\nInstall: npx skills add thinkingwithagents/skills --skill lit-review | Browse source\n\n\nEconometrics Audit (/econ-audit)\nAdversarial review of empirical claims. It reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.\nGood for: self-review before submission, preparing for seminars, reviewing student work.\nInstall: npx skills add thinkingwithagents/skills --skill econ-audit | Browse source\n\n\nData Dictionary Generator (/data-dictionary)\nReads a dataset’s metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes. Saves time on replication package documentation.\nGood for: replication packages, project handoffs, codebook creation.\nInstall: npx skills add thinkingwithagents/skills --skill data-dictionary | Browse source\n\n\nCode Review (/code-review)\nStructured review of research code (Stata, R, Python) against DIME, Gentzkow-Shapiro, AEA, and IPA standards. Catches silent failures, reproducibility risks, and style issues that generic linters miss.\nGood for: cleaning up code before submission, replication package prep, catching merge bugs and missing-value traps.\nInstall: npx skills add thinkingwithagents/skills --skill code-review | Browse source\n\n\nPaper Review (/review-paper)\nAdversarial paper review simulating a skeptical referee. Checks identification, statistical claims, robustness, and presentation against real referee patterns.\nGood for: pre-submission self-review, preparing for seminars, stress-testing a draft.\nInstall: npx skills add thinkingwithagents/skills --skill review-paper | Browse source\n\n\nPipeline Audit (/pipeline-audit)\nAdversarial data pipeline review — audits variable construction, sample restrictions, and analytical decisions against pre-analysis plans.\nGood for: verifying that code matches the PAP, catching silent deviations.\nInstall: npx skills add thinkingwithagents/skills --skill pipeline-audit | Browse source\n\n\nResearch Brainstorm (/research-brainstorm)\nStructured brainstorming for research ideas. Takes a half-formed question and produces a research brief with related work, contribution framing, feasibility assessment, and next steps.\nGood for: early-stage project development, stress-testing ideas before investing time.\nInstall: npx skills add thinkingwithagents/skills --skill research-brainstorm | Browse source\n\n\nFind Data (/find-data)\nSurfaces public data sources matching your constraints. Give it a topic and requirements; it searches repositories and proposes datasets with download instructions.\nGood for: teaching demos, finding new data for a project, discovering what’s publicly available.\nInstall: npx skills add thinkingwithagents/skills --skill find-data | Browse source\n\n\nAcademic Beamer Deck (/academic-beamer-deck)\nGenerates a polished Beamer slide deck from source documents. Reads PDFs or notes, extracts key content, and produces a .tex file with UVM-style formatting.\nGood for: converting papers to lecture slides, building conference presentations.\nInstall: npx skills add thinkingwithagents/skills --skill academic-beamer-deck | Browse source\n\n\nAcademic PDF Parsing (/academic-pdf-parsing)\nParses academic PDFs into structured, reusable artifacts: clean markdown, section-based chunks with page numbers, metadata JSON, and extraction quality notes. Handles single papers or batch-processes a folder into a corpus with a manifest. Integrates with /lit-review as the ingestion layer — parse your PDFs once, then use the structured output for deep dives, evidence synthesis, and slide content.\nGood for: preparing papers for LLM-powered Q&A, building a parsed corpus for a literature review, extracting tables and sections from journal articles.\nInstall: npx skills add thinkingwithagents/skills --skill academic-pdf-parsing | Browse source\n\n\nMeal Plan (/meal-plan)\nTwo-week rolling meal planner. Checks your Google Calendar for conflicts, applies your day-of-week defaults, flags dietary restrictions and picky eaters, handles leftovers and guest scaling, and generates a printable HTML plan for the fridge.\nGood for: weekly meal planning, reducing dinnertime decision fatigue, coordinating around a busy family calendar.\nFirst run: A setup interview asks about your household, calendars, default meals, dietary restrictions, recipes, and preferences. You do this once; answers are saved to ~/Documents/MealPlan/.\nInstall: npx skills add thinkingwithagents/skills --skill meal-plan | Browse source\n\n\nGroceries (/groceries)\nGrocery list generator that merges your Apple Reminders, Apple Notes, staples template, and current meal plan into one categorized shopping list per store. Scales ingredients for hosting nights and leftover meals. Flags dietary conflicts.\nGood for: weekly grocery runs, keeping a single organized list instead of checking three apps.\nFirst run: A setup interview asks about your stores, aisle categories, Apple Reminders/Notes setup, and staple items. Answers are saved alongside your meal plan config.\nRequires: macOS (Apple Notes/Reminders integration). Pairs with /meal-plan but works standalone.\nInstall: npx skills add thinkingwithagents/skills --skill groceries | Browse source\n\n\nBuilding your own skills\n\nPick one repeating task — grading feedback, email drafts, data cleaning, meeting prep\nDo it once with AI and save the conversation\nExtract the instructions into a Markdown file\nRefine — add constraints, examples, edge cases as you use it\n\nMore resources: skills.sh (public skill registry) · Claude Code docs: custom commands · claudlab.in"
   },
   {
     "objectID": "applications.html#teaching",
@@ -154,6 +238,13 @@
     "text": "Writing & Communication\n\n★ Create a writing voice file\nGive the tool access to files with your real writing — saved emails, letters of recommendation, feedback comments. It reads them, describes your patterns, and saves a reusable voice file.\n\nWhat it does: Reads your writing samples from disk, writes MY-VOICE.md\nTool: Claude Code\nTime: 15 minutes to create, then reuse forever\n\nSave 5–10 of your sent emails as .txt or .md files in a folder, then:\nRead all the files in writing-samples/.\nThese are emails and letters I've written.\nDescribe my writing style: tone, sentence length,\nhow I open and close messages, level of formality,\nwhat I avoid, any distinctive patterns.\nSave the description as MY-VOICE.md.\nThen tell Claude Code to use it going forward:\nAdd to your memory: when I ask you to draft anything,\nload MY-VOICE.md first and match my style.\n\n\n★ Draft emails using your voice file\nPoint it at an email thread (via Gmail integration or a saved file) and tell it the gist. It reads the thread, loads your voice file, and drafts a reply that sounds like you.\n\nWhat it does: Reads email thread + voice file, writes a draft\nTool: Claude Code with Gmail integration\nTime: 2 minutes per email\n\nRead my voice file. Read the most recent email\nfrom [sender] about [topic].\nDraft a reply. The gist: [your one-sentence summary\nof what you want to say].\n\n\nRevision memo for a journal submission\nGive it your paper file and the referee reports. It reads both and drafts a point-by-point response memo.\n\nWhat it does: Reads your draft + referee reports, writes a structured response .md file\nTool: Claude Code\nTime: 30–45 minutes for a first draft\n\nRead paper/draft-v2.tex and reviews/referee1.pdf\nand reviews/referee2.pdf.\nDraft a point-by-point response memo. For each\nreferee comment:\n- quote the comment\n- describe what we changed (or why we didn't)\n- reference the specific section/page\nSave as paper/revision-memo.md."
   },
   {
+    "objectID": "applications.html#living-better-with-robots",
+    "href": "applications.html#living-better-with-robots",
+    "title": "Applications & Skills",
+    "section": "Living Better with Robots",
+    "text": "Living Better with Robots\n\nMeal planning and grocery lists\nA pair of skills that handle weekly meal planning end-to-end: /meal-plan generates a two-week dinner plan from your defaults and calendar, and /groceries turns that plan into a store-ready shopping list merged with your running lists from Apple Reminders and Notes.\n\nWhat it does: Checks Google Calendar for conflicts, applies your day-of-week defaults, flags picky eaters and dietary restrictions, handles leftovers and guest scaling, prints an HTML plan for the fridge, generates categorized grocery lists\nTool: Claude Code with Google Calendar MCP + macOS (Apple Notes/Reminders)\nTime: 30 minutes for first-run setup, then 5 minutes each week\n\n/meal-plan\nThe first time, it walks you through a setup interview. After that, it drafts a plan in seconds. When you’re ready to shop:\n/groceries tj\nSee installation instructions or install directly:\nnpx skills add thinkingwithagents/skills --skill meal-plan\nnpx skills add thinkingwithagents/skills --skill groceries"
+  },
+  {
     "objectID": "applications.html#workflow-organization",
     "href": "applications.html#workflow-organization",
     "title": "Applications & Skills",
@@ -172,7 +263,7 @@
     "href": "index.html",
     "title": "Thinking with Agents",
     "section": "",
-    "text": "AI tools for teaching and research\n\n\n\n\n\n  \n    Thinking withAgents\n    AI tools for teaching and research\n    Erkmen G. Aslim & Emily Beam\n  \n  \n    UVM Economics Bootcamp Schedule\n    \n      Apr 22\n      Getting Started with AI Tools\n      11:00–12:30 · Old Mill A500\n      Download slides ↓\n    \n    \n      Apr 27\n      Research Pipelines & Automation\n      11:00–12:30 · Old Mill A500\n      Download slides ↓\n    \n  \n\n\nBefore You Arrive\n\nNo installation needed. See the Getting Set Up guide if you want to try things on your own afterward. For broader reading, see Outside Resources.\n\nSession 1: Getting Started with AI Tools\nApril 22, 11:00–12:30, Old Mill A500\n\n\n\nDeck\nFormat\n\n\n\n\nSession 1: Agentic AI Bootcamp (Aslim & Beam)\nPDF\n\n\n\n\nWhat we’ll cover\n\nWhat AI tools exist and the difference between chat-based and agentic tools\nContext windows, standing instructions, and planning — the key concepts\nWhat we’ve actually used these for (and what was fun but saved zero time)\nVoice files: making AI output sound like you\nSkills: reusable workflows you can share\nLive demos: website redesign and custom skill creation\n\n\n\nBefore next time (April 27)\n\nTry using an AI tool for one real task this week\nInstall the tools from the prep guide if you haven’t already\nThink of a research or teaching task you’d like to automate\n\nSession 2: Research Workflows, Teaching & Applications\nApril 27, 11:00–12:30, Old Mill A500\n\n\n\nDeck\nFormat\n\n\n\n\nSession 2: Research Workflows, Teaching & Applications (Aslim & Beam)\nPDF\n\n\n\n\n\nWhat we’ll cover\n\nEmily: Research workflows — code auditing a replication package with /code-review, paper auditing with /econ-audit and /review-paper, running Lee bounds live\nErkmen: Teaching & applications — building a lecture-builder skill with /academic-beamer-deck, stress-testing a research idea with /research-brainstorm, web scraping with /find-data\n\n\n\nWhat to try next\n\nResearch: Try the data exploration → analysis plan workflow on your own data\nTeaching: Draft a new assignment, create practice problems, or build a study guide\nCode: Run /econ-audit on a paper before you submit it\nWriting: Use Claude Code to revise a draft, check references, or restructure a section"
+    "text": "AI tools for teaching and research\n\n\n\n\n\n  \n    Thinking withAgents\n    AI tools for teaching and research\n    Erkmen G. Aslim & Emily Beam\n  \n  \n    Upcoming Events\n    \n      Jun 15\n      AI for Research (Webinar)\n      10:00 AM–12:00 PM ET · Online\n      Register →\n    \n    \n      Jun 17\n      AI for Teaching (Webinar)\n      10:00 AM–12:00 PM ET · Online\n      Register →\n    \n    \n      Jul–Aug\n      RA Intensive Bootcamp\n      Cohort-based · Online · Sliding scale pricing\n      Learn more →\n    \n  \n\n\nWhat We Do\nWe run hands-on workshops and bootcamps that teach economists and research professionals how to use AI tools effectively — for research workflows, teaching, and field coordination.\nOur approach is discipline-specific (economics and development research, not generic prompt engineering), applied (real tasks, real datasets, real workflows), and accessible (LMIC sliding-scale pricing on paid programs).\n\nOur June webinars are a good place to start — two standalone sessions on AI for research and teaching. See the webinars →\n\nWebinars · June 2026\nTwo standalone 2-hour sessions. Come to one or both.\nAI for Research (June 15, 10am–12pm ET) — How AI tools change research workflows for RAs and researchers. Live demos, Q&A.\nAI for Teaching (June 17, 10am–12pm ET) — How faculty can use AI for course design and feedback.\nRA Intensive Bootcamp · Summer 2026\nA cohort-based bootcamp for aspiring and current research assistants. Learn to use AI tools across the full RA workflow — literature review, data cleaning, code debugging, writing, and field coordination.\n\nWho it’s for: Pre-docs, recent grads, RAs at research organizations (IPA, J-PAL, IDinsight, DIME, university labs)\nFormat: Live sessions over multiple weeks, with homework and a capstone exercise\nPricing: Sliding scale by country income level. Scholarships available.\n\nLearn more and register →\nPast Events\nUVM Economics AI Bootcamp (April 2026) — Two-session faculty workshop at the University of Vermont. View materials →"
   },
   {
     "objectID": "prep.html",
@@ -201,5 +292,33 @@
     "title": "Getting Set Up",
     "section": "Checking your usage",
     "text": "Checking your usage\nIf you are using Claude Code with a paid subscription:\n\nnpx claude-spend — shows session and weekly limits, extra paid usage\nnpx ccusage@latest — alternative usage tracker\n\nUsage limits can change over time. Some models are cheaper than others."
+  },
+  {
+    "objectID": "uvm-bootcamp.html",
+    "href": "uvm-bootcamp.html",
+    "title": "UVM Economics AI Bootcamp",
+    "section": "",
+    "text": "A two-session faculty bootcamp on AI tools for teaching and research, delivered in April 2026 at the University of Vermont."
+  },
+  {
+    "objectID": "uvm-bootcamp.html#session-1-getting-started-with-ai-tools",
+    "href": "uvm-bootcamp.html#session-1-getting-started-with-ai-tools",
+    "title": "UVM Economics AI Bootcamp",
+    "section": "Session 1: Getting Started with AI Tools",
+    "text": "Session 1: Getting Started with AI Tools\nApril 22, 11:00–12:30, Old Mill A500\n\n\n\nDeck\nFormat\n\n\n\n\nSession 1: Agentic AI Bootcamp (Aslim & Beam)\nPDF\n\n\n\n\nWhat we covered\n\nWhat AI tools exist and the difference between chat-based and agentic tools\nContext windows, standing instructions, and planning — the key concepts\nWhat we’ve actually used these for (and what was fun but saved zero time)\nVoice files: making AI output sound like you\nSkills: reusable workflows you can share\nLive demos: website redesign and custom skill creation"
+  },
+  {
+    "objectID": "uvm-bootcamp.html#session-2-research-workflows-teaching-applications",
+    "href": "uvm-bootcamp.html#session-2-research-workflows-teaching-applications",
+    "title": "UVM Economics AI Bootcamp",
+    "section": "Session 2: Research Workflows, Teaching & Applications",
+    "text": "Session 2: Research Workflows, Teaching & Applications\nApril 27, 11:00–12:30, Old Mill A500\n\n\n\nDeck\nFormat\n\n\n\n\nSession 2: Research Workflows, Teaching & Applications (Aslim & Beam)\nPDF\n\n\n\n\nWhat we covered\n\nEmily: Research workflows — code auditing a replication package with /code-review, paper auditing with /econ-audit and /review-paper, running Lee bounds live\nErkmen: Teaching & applications — building a lecture-builder skill with /academic-beamer-deck, stress-testing a research idea with /research-brainstorm, web scraping with /find-data\n\n\n\nWhat to try next\n\nResearch: Try the data exploration → analysis plan workflow on your own data\nTeaching: Draft a new assignment, create practice problems, or build a study guide\nCode: Run /econ-audit on a paper before you submit it\nWriting: Use Claude Code to revise a draft, check references, or restructure a section"
+  },
+  {
+    "objectID": "uvm-bootcamp.html#resources",
+    "href": "uvm-bootcamp.html#resources",
+    "title": "UVM Economics AI Bootcamp",
+    "section": "Resources",
+    "text": "Resources\n\nGetting Set Up — prep guide for installing and configuring AI tools\nApplications & Skills — the skills and demos shown in the bootcamp\nOutside Resources — broader reading and tools"
   }
 ]

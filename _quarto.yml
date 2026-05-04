@@ -7,7 +7,7 @@ project:
 
 website:
   title: "Thinking with Agents"
-  description: "Modular AI literacy resources for UVM Economics students and faculty"
+  description: "AI tools for teaching and research — workshops, bootcamps, and resources"
   site-url: https://thinkingwithagents.github.io
   repo-url: https://github.com/thinkingwithagents/thinkingwithagents.github.io
   repo-actions: [issue]
@@ -17,12 +17,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: prep.qmd
-        text: "Prep Guide"
-      - href: applications.qmd
-        text: "Applications & Skills"
+      - href: webinars.qmd
+        text: "Webinars"
+      - href: bootcamp.qmd
+        text: "RA Bootcamp"
       - href: resources.qmd
-        text: "Bells & Whistles"
+        text: "Resources"
+      - href: applications.qmd
+        text: "Skills & Demos"
 
   body-footer: |
     <script data-goatcounter="https://eabeam.goatcounter.com/count"

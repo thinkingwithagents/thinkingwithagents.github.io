@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c4ff085a4831b42e7f3bda00323ca38f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a75511a9d989de01053f1fcd1d561c0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -130,16 +130,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./prep.html"> 
-<span class="menu-text">Prep Guide</span></a>
+    <a class="nav-link" href="./webinars.html"> 
+<span class="menu-text">Webinars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./applications.html" aria-current="page"> 
-<span class="menu-text">Applications &amp; Skills</span></a>
+    <a class="nav-link" href="./bootcamp.html"> 
+<span class="menu-text">RA Bootcamp</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./resources.html"> 
-<span class="menu-text">Bells &amp; Whistles</span></a>
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./applications.html" aria-current="page"> 
+<span class="menu-text">Skills &amp; Demos</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -168,6 +172,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#research-brainstorm" id="toc-research-brainstorm" class="nav-link" data-scroll-target="#research-brainstorm">Research Brainstorm (<code>/research-brainstorm</code>)</a></li>
   <li><a href="#find-data" id="toc-find-data" class="nav-link" data-scroll-target="#find-data">Find Data (<code>/find-data</code>)</a></li>
   <li><a href="#academic-beamer-deck" id="toc-academic-beamer-deck" class="nav-link" data-scroll-target="#academic-beamer-deck">Academic Beamer Deck (<code>/academic-beamer-deck</code>)</a></li>
+  <li><a href="#academic-pdf-parsing" id="toc-academic-pdf-parsing" class="nav-link" data-scroll-target="#academic-pdf-parsing">Academic PDF Parsing (<code>/academic-pdf-parsing</code>)</a></li>
+  <li><a href="#meal-plan" id="toc-meal-plan" class="nav-link" data-scroll-target="#meal-plan">Meal Plan (<code>/meal-plan</code>)</a></li>
+  <li><a href="#groceries" id="toc-groceries" class="nav-link" data-scroll-target="#groceries">Groceries (<code>/groceries</code>)</a></li>
   <li><a href="#building-your-own-skills" id="toc-building-your-own-skills" class="nav-link" data-scroll-target="#building-your-own-skills">Building your own skills</a></li>
   </ul></li>
   <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a>
@@ -189,6 +196,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#create-a-writing-voice-file" id="toc-create-a-writing-voice-file" class="nav-link" data-scroll-target="#create-a-writing-voice-file">★ Create a writing voice file</a></li>
   <li><a href="#draft-emails-using-your-voice-file" id="toc-draft-emails-using-your-voice-file" class="nav-link" data-scroll-target="#draft-emails-using-your-voice-file">★ Draft emails using your voice file</a></li>
   <li><a href="#revision-memo-for-a-journal-submission" id="toc-revision-memo-for-a-journal-submission" class="nav-link" data-scroll-target="#revision-memo-for-a-journal-submission">Revision memo for a journal submission</a></li>
+  </ul></li>
+  <li><a href="#living-better-with-robots" id="toc-living-better-with-robots" class="nav-link" data-scroll-target="#living-better-with-robots">Living Better with Robots</a>
+  <ul class="collapse">
+  <li><a href="#meal-planning-and-grocery-lists" id="toc-meal-planning-and-grocery-lists" class="nav-link" data-scroll-target="#meal-planning-and-grocery-lists">Meal planning and grocery lists</a></li>
   </ul></li>
   <li><a href="#workflow-organization" id="toc-workflow-organization" class="nav-link" data-scroll-target="#workflow-organization">Workflow &amp; Organization</a>
   <ul class="collapse">
@@ -266,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="lit-review" class="level3">
 <h3 class="anchored" data-anchor-id="lit-review">Literature Review (<code>/lit-review</code>)</h3>
-<p>Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo.</p>
+<p>Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo. Pairs with <a href="#academic-pdf-parsing"><code>/academic-pdf-parsing</code></a> to build a parsed corpus from your PDFs for deeper, citation-grounded analysis.</p>
 <p><strong>Good for:</strong> starting a new project, preparing a referee report, catching up on a subfield.</p>
 <p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill lit-review</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/lit-review/SKILL.md">Browse source</a></p>
 </section>
@@ -317,6 +328,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Generates a polished Beamer slide deck from source documents. Reads PDFs or notes, extracts key content, and produces a <code>.tex</code> file with UVM-style formatting.</p>
 <p><strong>Good for:</strong> converting papers to lecture slides, building conference presentations.</p>
 <p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill academic-beamer-deck</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/academic-beamer-deck/SKILL.md">Browse source</a></p>
+</section>
+<section id="academic-pdf-parsing" class="level3">
+<h3 class="anchored" data-anchor-id="academic-pdf-parsing">Academic PDF Parsing (<code>/academic-pdf-parsing</code>)</h3>
+<p>Parses academic PDFs into structured, reusable artifacts: clean markdown, section-based chunks with page numbers, metadata JSON, and extraction quality notes. Handles single papers or batch-processes a folder into a corpus with a manifest. Integrates with <code>/lit-review</code> as the ingestion layer — parse your PDFs once, then use the structured output for deep dives, evidence synthesis, and slide content.</p>
+<p><strong>Good for:</strong> preparing papers for LLM-powered Q&amp;A, building a parsed corpus for a literature review, extracting tables and sections from journal articles.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill academic-pdf-parsing</code> | <a href="https://github.com/thinkingwithagents/skills/tree/main/academic-pdf-parsing/SKILL.md">Browse source</a></p>
+</section>
+<section id="meal-plan" class="level3">
+<h3 class="anchored" data-anchor-id="meal-plan">Meal Plan (<code>/meal-plan</code>)</h3>
+<p>Two-week rolling meal planner. Checks your Google Calendar for conflicts, applies your day-of-week defaults, flags dietary restrictions and picky eaters, handles leftovers and guest scaling, and generates a printable HTML plan for the fridge.</p>
+<p><strong>Good for:</strong> weekly meal planning, reducing dinnertime decision fatigue, coordinating around a busy family calendar.</p>
+<p><strong>First run:</strong> A setup interview asks about your household, calendars, default meals, dietary restrictions, recipes, and preferences. You do this once; answers are saved to <code>~/Documents/MealPlan/</code>.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill meal-plan</code> | <a href="skills/meal-plan.md">Browse source</a></p>
+</section>
+<section id="groceries" class="level3">
+<h3 class="anchored" data-anchor-id="groceries">Groceries (<code>/groceries</code>)</h3>
+<p>Grocery list generator that merges your Apple Reminders, Apple Notes, staples template, and current meal plan into one categorized shopping list per store. Scales ingredients for hosting nights and leftover meals. Flags dietary conflicts.</p>
+<p><strong>Good for:</strong> weekly grocery runs, keeping a single organized list instead of checking three apps.</p>
+<p><strong>First run:</strong> A setup interview asks about your stores, aisle categories, Apple Reminders/Notes setup, and staple items. Answers are saved alongside your meal plan config.</p>
+<p><strong>Requires:</strong> macOS (Apple Notes/Reminders integration). Pairs with <code>/meal-plan</code> but works standalone.</p>
+<p><strong>Install:</strong> <code>npx skills add thinkingwithagents/skills --skill groceries</code> | <a href="skills/groceries.md">Browse source</a></p>
 </section>
 <section id="building-your-own-skills" class="level3">
 <h3 class="anchored" data-anchor-id="building-your-own-skills">Building your own skills</h3>
@@ -522,6 +554,25 @@ referee comment:
 - describe what we changed (or why we didn't)
 - reference the specific section/page
 Save as paper/revision-memo.md.</code></pre>
+<hr>
+</section>
+</section>
+<section id="living-better-with-robots" class="level2">
+<h2 class="anchored" data-anchor-id="living-better-with-robots">Living Better with Robots</h2>
+<section id="meal-planning-and-grocery-lists" class="level3">
+<h3 class="anchored" data-anchor-id="meal-planning-and-grocery-lists">Meal planning and grocery lists</h3>
+<p>A pair of skills that handle weekly meal planning end-to-end: <a href="#meal-plan"><code>/meal-plan</code></a> generates a two-week dinner plan from your defaults and calendar, and <a href="#groceries"><code>/groceries</code></a> turns that plan into a store-ready shopping list merged with your running lists from Apple Reminders and Notes.</p>
+<ul>
+<li><strong>What it does</strong>: Checks Google Calendar for conflicts, applies your day-of-week defaults, flags picky eaters and dietary restrictions, handles leftovers and guest scaling, prints an HTML plan for the fridge, generates categorized grocery lists</li>
+<li><strong>Tool</strong>: Claude Code with Google Calendar MCP + macOS (Apple Notes/Reminders)</li>
+<li><strong>Time</strong>: 30 minutes for first-run setup, then 5 minutes each week</li>
+</ul>
+<pre><code>/meal-plan</code></pre>
+<p>The first time, it walks you through a setup interview. After that, it drafts a plan in seconds. When you’re ready to shop:</p>
+<pre><code>/groceries tj</code></pre>
+<p>See <a href="skills/README.md">installation instructions</a> or install directly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add thinkingwithagents/skills <span class="at">--skill</span> meal-plan</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add thinkingwithagents/skills <span class="at">--skill</span> groceries</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>

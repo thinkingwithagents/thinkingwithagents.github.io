@@ -1,0 +1,141 @@
+---
+title: "RA Intensive Bootcamp · Summer 2026"
+subtitle: "A cohort-based AI bootcamp for research assistants"
+toc: true
+---
+
+Learn to use AI tools across the full research assistant workflow — literature review, data exploration, code debugging, writing, and field coordination.
+
+::: {.prep-note}
+**Dates and registration coming soon.** Join a [webinar](webinars.qmd) in June to see our approach, or check back here for updates.
+:::
+
+---
+
+## What this is
+
+A live, cohort-based bootcamp taught by [Emily Beam](https://eabeam.github.io) and [Erkmen G. Aslim](https://sites.google.com/view/erkmenaslim/). Multiple sessions over several weeks, with homework exercises between sessions and a capstone project.
+
+This is not a self-paced course or a recording you watch on your own. You'll work through realistic RA tasks with AI tools, get feedback, and learn alongside a cohort of peers.
+
+---
+
+## Who it's for
+
+- **Aspiring RAs and pre-docs** who want to signal AI competence to PIs
+- **Current RAs at research organizations** (IPA, J-PAL, IDinsight, DIME, university labs) who want professional development
+
+No prior AI experience required. You should be comfortable with at least one of Stata or R.
+
+---
+
+## What you'll learn
+
+Each session focuses on a core RA workflow, with live demos and hands-on exercises.
+
+```{=html}
+<div class="curriculum-grid">
+  <div class="curriculum-card">
+    <div class="curriculum-icon">📚</div>
+    <h3>Literature Review</h3>
+    <p>AI-assisted searching, summarizing, identifying gaps, and catching hallucinated citations.</p>
+  </div>
+  <div class="curriculum-card">
+    <div class="curriculum-icon">📊</div>
+    <h3>Data Exploration &amp; Cleaning</h3>
+    <p>Using AI to describe datasets, spot anomalies, and generate summary statistics — with verification guardrails.</p>
+  </div>
+  <div class="curriculum-card">
+    <div class="curriculum-icon">💻</div>
+    <h3>Code Assistance &amp; Debugging</h3>
+    <p>AI for Stata and R debugging, code translation, and documentation. Recognizing bad suggestions.</p>
+  </div>
+  <div class="curriculum-card">
+    <div class="curriculum-icon">✍️</div>
+    <h3>Writing &amp; Field Coordination</h3>
+    <p>Drafting memos, editing, survey instrument review, translation, and communicating with PIs and field teams.</p>
+  </div>
+  <div class="curriculum-card">
+    <div class="curriculum-icon">🎯</div>
+    <h3>Capstone</h3>
+    <p>A multi-step RA task that brings it all together: dataset + papers → summary memo with descriptives and flagged issues.</p>
+  </div>
+</div>
+```
+
+---
+
+## Format
+
+- **Live online sessions** via Zoom or Teams
+- **Homework** between sessions — realistic RA tasks you complete with AI tools
+- **Capstone exercise** — demonstrate your skills on a multi-step research task
+- **Cohort community** — async channel for peer support and discussion
+- **Certificate of completion** upon finishing the program
+
+---
+
+## Pricing
+
+We use a sliding scale based on [World Bank country income classifications](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups) to keep the program accessible globally.
+
+```{=html}
+<table class="pricing-table">
+  <thead>
+    <tr>
+      <th>Tier</th>
+      <th>Price</th>
+      <th>Who</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>High-income country</strong></td>
+      <td>$200–300</td>
+      <td>US, Europe, Australia, etc.</td>
+    </tr>
+    <tr>
+      <td><strong>Middle-income country</strong></td>
+      <td>$75–100</td>
+      <td>Self-reported</td>
+    </tr>
+    <tr>
+      <td><strong>Low-income country</strong></td>
+      <td>$25–50</td>
+      <td>Self-reported</td>
+    </tr>
+    <tr>
+      <td><strong>Scholarship</strong></td>
+      <td>Free</td>
+      <td>Application-based (limited spots)</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+Pricing is self-reported on the honor system. If your organization is paying, use the tier where the organization is headquartered.
+
+**Group rates**: 10–15% discount for organizations sending 3+ participants.
+
+---
+
+## Interested?
+
+Registration isn't open yet. In the meantime:
+
+1. **[Join a webinar](webinars.qmd)** on June 15 or 17 to see our approach
+2. **Sign up for updates** — we'll email you when registration opens
+
+```{=html}
+<div style="margin: 2rem 0;">
+  <a href="webinars.html" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
+    Register for a webinar →
+  </a>
+</div>
+```
+
+---
+
+## Questions?
+
+Email [emily.beam@uvm.edu](mailto:emily.beam@uvm.edu) with "RA Intensive" in the subject line.
