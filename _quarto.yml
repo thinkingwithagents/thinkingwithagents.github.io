@@ -23,6 +23,8 @@ website:
         text: "Applications & Skills"
       - href: resources.qmd
         text: "Bells & Whistles"
+      - href: past-events.qmd
+        text: "Past Events"
 
   body-footer: |
     <script data-goatcounter="https://eabeam.goatcounter.com/count"
