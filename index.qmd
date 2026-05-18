@@ -34,59 +34,49 @@ toc: false
 
 ::: {.landing-content}
 
-Two free 2-hour webinars. **Come to one or both** — they are independent, standalone events. Both sessions are live on Microsoft Teams.
-
----
-
-[Agentic Tools for Research · June 15]{.landing-section-title}
-
-**Monday, June 15, 2026 · 10:00 AM–12:00 PM ET**
-
-How AI tools are changing research workflows — and how to use them effectively.
-
-#### What we'll cover
-
-- The AI landscape for research: what tools can and can't do
-- **Live demo**: A realistic research task done with and without AI (literature review, data exploration, or code debugging)
-- How to build verification habits for AI-generated content
-- Q&A
-
-#### Who is this for?
-
-Targeted toward faculty, researchers, and graduate students in economics and related fields — but all are welcome.
-
 ```{=html}
-<div style="margin: 1.5rem 0 2.5rem;">
-  <a href="https://events.teams.microsoft.com/event/88b689b0-2b31-4f1a-b04b-74873f4a7305@1c177758-4d6b-43dc-aaeb-3b9c42562967" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
-    Register for AI for Research (June 15) →
-  </a>
+<p class="reassurance">Pick a starting point below.</p>
+
+<div class="pathway-cards">
+  <div class="pathway-card">
+    <h3>Learn the foundations</h3>
+    <p>Terminal, Git, setup — a clear path from zero. Most economists can be doing useful work in an afternoon.</p>
+    <a href="getting-started.html">Getting Started →</a>
+  </div>
+  <div class="pathway-card">
+    <h3>See what's possible</h3>
+    <p>Installable skills for research and teaching, plus workflow recipes you can try in 30 minutes.</p>
+    <a href="skills-workflows.html">Skills &amp; Workflows →</a>
+  </div>
+  <div class="pathway-card">
+    <h3>Teach this material</h3>
+    <p>Drop-in modules with lesson plans and exercises for your own courses and workshops.</p>
+    <a href="https://eabeam.github.io/teaching-ai">Teaching Modules →</a>
+  </div>
 </div>
-```
 
-[Agentic Tools for Teaching · June 17]{.landing-section-title}
-
-**Wednesday, June 17, 2026 · 10:00 AM–12:00 PM ET**
-
-How faculty can use AI tools for course design, student feedback, and teaching students to use AI effectively.
-
-#### What we'll cover
-
-- **Live demo**: AI-assisted course preparation — from rough notes to polished materials
-- **Live demo**: Feedback at scale — using AI to scaffold (not automate) student feedback
-- Q&A
-
-#### Who should attend
-
-- Faculty in economics, social sciences, or related fields
-- Instructors at any level (community college through R1)
-- Graduate students who teach
-- Academic staff involved in curriculum design
-
-```{=html}
-<div style="margin: 1.5rem 0 2.5rem;">
-  <a href="https://events.teams.microsoft.com/event/bc7022b1-63ae-470e-8c41-9c7890bdf108@1c177758-4d6b-43dc-aaeb-3b9c42562967" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
-    Register for AI for Teaching (June 17) →
-  </a>
+<div class="start-router">
+  <h2>Where should I start?</h2>
+  <div class="router-entry">
+    <div class="router-q">"I've never used a terminal."</div>
+    <div class="router-a">→ <a href="getting-started.html">Getting Started</a>, Layer 1</div>
+  </div>
+  <div class="router-entry">
+    <div class="router-q">"I use ChatGPT but want real tools."</div>
+    <div class="router-a">→ <a href="getting-started.html">Getting Started</a>, Layer 3</div>
+  </div>
+  <div class="router-entry">
+    <div class="router-q">"I already use Claude Code — show me the good stuff."</div>
+    <div class="router-a">→ <a href="skills-workflows.html">Skills &amp; Workflows</a></div>
+  </div>
+  <div class="router-entry">
+    <div class="router-q">"I want to teach this to my students."</div>
+    <div class="router-a">→ <a href="https://eabeam.github.io/teaching-ai">Teaching Modules</a> (eabeam.github.io/teaching-ai)</div>
+  </div>
+  <div class="router-entry">
+    <div class="router-q">"I have one week and no budget."</div>
+    <div class="router-a">→ <a href="getting-started.html">Getting Started</a> (see the $0 path)</div>
+  </div>
 </div>
 ```
 
@@ -98,12 +88,6 @@ How faculty can use AI tools for course design, student feedback, and teaching s
 
 **[Erkmen G. Aslim](https://sites.google.com/view/erkmenaslim/)** is an assistant professor of economics at the University of Vermont. His research spans health economics and applied microeconomics, and he integrates AI tools into both research and teaching workflows.
 
-Together, they developed and delivered the [UVM Economics AI Bootcamp](past-events.qmd) (Spring 2026) and created the Thinking with Agents resource collection.
-
----
-
-[New to AI tools?]{.landing-section-title}
-
-If you've never used a terminal, Git, or an AI coding tool — start with our [Getting Started](getting-started.qmd) guide. It sequences the best existing resources into a clear path. Most economists can work through it in an afternoon.
+Together, they developed and delivered the [UVM Economics AI Bootcamp](events.qmd) (Spring 2026) and created the Thinking with Agents resource collection.
 
 :::

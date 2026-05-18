@@ -1,6 +1,6 @@
 ---
-title: "Bells and Whistles"
-subtitle: "Integrations, advanced workflows, and tools worth exploring"
+title: "Resources"
+subtitle: "Integrations, tools, and references worth exploring"
 ---
 
 Once you have a basic AI workflow running, these are the things that make it dramatically more useful. None of these are required — pick what fits your work.
@@ -31,21 +31,15 @@ The Model Context Protocol (MCP) lets agentic tools connect directly to external
 
 ### Setting up MCP
 
-MCP servers are configured in your Claude Code settings. The [Claude Code docs on MCP](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp) walk through the setup. Most integrations take 5–10 minutes to configure.
+MCP servers are configured in your Claude Code settings file (`~/.claude/settings.json`). The basic steps:
 
-## Skills: reusable workflows
+1. Open Claude Code and run `/settings`
+2. Add a server entry under `"mcpServers"` — each integration has its own configuration block
+3. Restart Claude Code to activate
 
-Skills are saved instructions that tell the AI how to do a specific task. Instead of re-explaining your workflow every session, you invoke a skill and it runs.
+The [Claude Code docs on MCP](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp) have the full reference. Most integrations take 5–10 minutes to configure. Gmail and Google Calendar are the easiest starting points.
 
-See the **[Applications & Skills](applications.qmd)** page for installable skills from this bootcamp and detailed workflow examples.
-
-## Writing and voice
-
-### Voice files
-
-A voice file describes how you write — tone, sentence length, habits, what you avoid. The AI reads it and matches your style. See the [Session 1 slides](Session1_Slides/session_1_slides.pdf) for how to create one.
-
-### Project instruction files
+## Project instruction files
 
 Files like `CLAUDE.md` or `AGENTS.md` load automatically when you work in a project. They store:
 

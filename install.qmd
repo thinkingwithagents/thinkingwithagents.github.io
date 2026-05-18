@@ -1,10 +1,10 @@
 ---
-title: "Getting Set Up"
+title: "Install"
 subtitle: "Choose a tool, pick a plan, install it"
 ---
 
 ::: {.callout-note appearance="simple"}
-**Starting from scratch?** See [Getting Started](getting-started.qmd) for the full path from zero to setup-ready. This page covers installation once you're ready for it.
+**This page is part of [Getting Started](getting-started.qmd) → Layer 3.** It has the step-by-step install instructions for Claude Code and Codex on Mac and Windows.
 :::
 
 ## Install guide
@@ -277,7 +277,7 @@ This checks your installation, configuration, and network connectivity.
 **For most faculty**: Claude Pro or ChatGPT Plus is the right starting point. Pick whichever ecosystem appeals to you.
 
 ::: {.callout-important appearance="simple"}
-**The $20/mo subscription is not just chat.** Claude Pro includes Claude Code (the terminal tool), and ChatGPT Plus includes Codex. You also get access to integrations with Gmail, Google Calendar, Todoist, and more — all the advanced workflows shown on our [Bells & Whistles](resources.qmd) page. You do not need a separate API account or additional purchases.
+**The $20/mo subscription is not just chat.** Claude Pro includes Claude Code (the terminal tool), and ChatGPT Plus includes Codex. You also get access to integrations with Gmail, Google Calendar, Todoist, and more — all the advanced workflows shown on our [Resources](resources.qmd) page. You do not need a separate API account or additional purchases.
 :::
 
 ### API pricing (pay-as-you-go)

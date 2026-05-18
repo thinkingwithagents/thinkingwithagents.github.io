@@ -18,6 +18,40 @@ $headings-font-weight:   400;
 
 /*-- scss:rules --*/
 
+/* ─── Fix Quarto TOC collapse bug ─── */
+#TOC > ul.collapse {
+  display: block !important;
+}
+
+/* ─── Content readability ─── */
+.quarto-title-block {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e5e2;
+}
+
+#quarto-document-content {
+  h2 {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e5e2;
+  }
+
+  h2:first-of-type {
+    border-top: none;
+    margin-top: 2rem;
+    padding-top: 0;
+  }
+
+  h3 {
+    margin-top: 2rem;
+  }
+
+  > p, > ul, > ol {
+    max-width: 45em;
+  }
+}
+
 /* ─── Dark compact navbar ─── */
 .navbar {
   background: #0F2B36 !important;
@@ -219,7 +253,7 @@ $headings-font-weight:   400;
 
 /* ─── Landing content area ─── */
 .landing-content {
-  max-width: 700px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 3rem 2rem;
 }
@@ -295,5 +329,136 @@ $headings-font-weight:   400;
     &:hover {
       color: #D4A84B;
     }
+  }
+}
+
+/* ─── Homepage pathway cards ─── */
+.pathway-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.pathway-card {
+  background: #fff;
+  border: 1px solid #e0e5e2;
+  border-radius: 6px;
+  padding: 1.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: #D4A84B;
+    box-shadow: 0 2px 8px rgba(27,77,92,0.08);
+  }
+
+  h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    color: #1B4D5C;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #5a6c7a;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1B4D5C;
+    text-decoration: none;
+    border-bottom: 2px solid #D4A84B;
+    padding-bottom: 1px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #D4A84B;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pathway-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Reassurance line ─── */
+.reassurance {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #5a6c7a;
+  text-align: center;
+  max-width: 600px;
+  margin: 2.5rem auto;
+  font-style: italic;
+}
+
+/* ─── "Where should I start?" router ─── */
+.start-router {
+  background: #EDF2F0;
+  border-radius: 6px;
+  padding: 2rem 2.25rem;
+  margin: 2.5rem 0;
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: #1B4D5C;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.router-entry {
+  margin-bottom: 1rem;
+
+  .router-q {
+    font-style: italic;
+    color: #2C3E50;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .router-a {
+    font-size: 0.9rem;
+    padding-left: 1.25rem;
+
+    a {
+      font-weight: 600;
+      color: #1B4D5C;
+      text-decoration: none;
+      border-bottom: 1px solid #D4A84B;
+      transition: color 0.2s;
+
+      &:hover { color: #D4A84B; }
+    }
+  }
+}
+
+/* ─── Events page: upcoming vs past ─── */
+.upcoming-event {
+  background: #fff;
+  border: 1px solid #e0e5e2;
+  border-left: 4px solid #D4A84B;
+  border-radius: 6px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+
+  h3 {
+    font-family: 'DM Serif Display', serif;
+    color: #1B4D5C;
+    margin-top: 0;
+  }
+}
+
+.past-events-section {
+  opacity: 0.85;
+
+  h3, h4 {
+    color: #5a6c7a;
   }
 }

@@ -2,7 +2,6 @@
 title: "Getting Started"
 subtitle: "A sequenced guide for economists — from zero to working AI workflow"
 toc: true
-toc-depth: 2
 ---
 
 The resources already exist — they're just scattered. This page puts them in order.
@@ -10,6 +9,8 @@ The resources already exist — they're just scattered. This page puts them in o
 Most economists don't need a course. They need someone to say: do this first, then this, then this. That's what this page is.
 
 **How to use this page:** Work through the layers in order if you're starting from scratch. Jump to wherever you got stuck if you're partway there. Each layer ends with a checkpoint so you know when you're ready to move on.
+
+**Short on time?** Layers 1–3 are the core. You can be set up and doing useful work in an afternoon. Layers 4–5 are for when you're ready to share your work with others.
 
 ---
 
@@ -24,6 +25,10 @@ You already use a terminal — Stata's command window is one. The difference is 
 
 **Supplement**: [The Unix Shell](https://swcarpentry.github.io/shell-novice/) (Software Carpentry)
 — More thorough, with a biology-flavored dataset, but the shell commands are identical.
+
+::: {.callout-note appearance="simple"}
+**Windows users:** Use **PowerShell** (not Command Prompt). Your prompt should start with `PS C:\`.
+:::
 
 ::: {.callout-tip}
 ## You're ready for the next layer when...
@@ -55,7 +60,7 @@ Now you need the actual tool. The two main options for economists right now are 
 
 **Not sure you need the terminal?** Read [When to Move to the Terminal](modules/terminal-transition.qmd) — a short guide for people who are productive with desktop apps and wondering whether the terminal is worth it.
 
-**Installation**: Our [Prep Guide](prep.qmd) has step-by-step instructions for both tools on Mac and Windows. Start there.
+**Installation**: Follow our [step-by-step install instructions](install.qmd) for Claude Code or Codex on Mac and Windows.
 
 **Getting oriented after install**:
 
@@ -65,6 +70,15 @@ Now you need the actual tool. The two main options for economists right now are 
 **On cost**: Claude Pro ($20/mo) or ChatGPT Plus ($20/mo) are enough to get started. You'll know if you need more. Don't overthink this — pick one and try it for a month.
 
 **On privacy**: These tools send your files to remote servers during your session. Published data, your own code, and course materials are fine. IRB-protected data, student records, and restricted-use datasets are not. Paul GP's rule of thumb: "If you wouldn't email it to a collaborator, don't point the AI at it." Use `.claudeignore` to exclude sensitive directories.
+
+::: {.callout-tip}
+## On a budget?
+You can learn Layers 1–2 (terminal + Git) for free — no subscription needed.
+For Layer 3, UVM Copilot is free with a UVM account (web chat, not terminal).
+Claude and ChatGPT both have free tiers for chat. The $20/mo subscription
+adds the terminal tools (Claude Code / Codex), which is where the real
+leverage is — but you can learn the foundations first and decide later.
+:::
 
 ::: {.callout-tip}
 ## You're ready for the next layer when...
@@ -120,6 +134,6 @@ Terminal (Layer 1) → create a project folder with clean structure → AI (Laye
 
 ### What comes next
 
-Once you're comfortable with the basics, the [Prep Guide](prep.qmd) covers installation details and troubleshooting. [Applications & Skills](applications.qmd) shows specific research and teaching workflows. And the [Bells & Whistles](resources.qmd) page covers integrations and advanced tools for when you're ready to go deeper.
+Once you're comfortable with the basics, [Skills & Workflows](skills-workflows.qmd) shows specific research and teaching workflows. [Resources](resources.qmd) covers integrations and advanced tools for when you're ready to go deeper.
 
-If you're attending one of our [webinars](index.qmd#upcoming-webinars--june-2026) — this page is your pre-work. You don't need all five layers before the session, but Layers 1-3 will help you follow along.
+If you're attending one of our [webinars](events.qmd) — this page is your pre-work. You don't need all five layers before the session, but Layers 1-3 will help you follow along.

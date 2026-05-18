@@ -20,14 +20,12 @@ website:
         text: Home
       - href: getting-started.qmd
         text: "Getting Started"
-      - href: prep.qmd
-        text: "Prep Guide"
-      - href: applications.qmd
-        text: "Applications & Skills"
+      - href: skills-workflows.qmd
+        text: "Skills & Workflows"
       - href: resources.qmd
-        text: "Bells & Whistles"
-      - href: past-events.qmd
-        text: "Past Events"
+        text: "Resources"
+      - href: events.qmd
+        text: "Events"
 
   body-footer: |
     <script data-goatcounter="https://eabeam.goatcounter.com/count"

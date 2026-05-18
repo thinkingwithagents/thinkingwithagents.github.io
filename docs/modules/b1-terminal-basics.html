@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>B1: Terminal Basics – Thinking with Agents</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-14dc43dbc84180bcf2c7dee16ce6548c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Thinking with Agents</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../getting-started.html"> 
+<span class="menu-text">Getting Started</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../skills-workflows.html"> 
+<span class="menu-text">Skills &amp; Workflows</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../events.html"> 
+<span class="menu-text">Events</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#why-economists-need-the-terminal" id="toc-why-economists-need-the-terminal" class="nav-link" data-scroll-target="#why-economists-need-the-terminal">Why Economists Need the Terminal</a></li>
+  <li><a href="#opening-your-terminal" id="toc-opening-your-terminal" class="nav-link" data-scroll-target="#opening-your-terminal">Opening Your Terminal</a>
+  <ul class="collapse">
+  <li><a href="#mac" id="toc-mac" class="nav-link" data-scroll-target="#mac">Mac</a></li>
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+  </ul></li>
+  <li><a href="#navigating-the-filesystem" id="toc-navigating-the-filesystem" class="nav-link" data-scroll-target="#navigating-the-filesystem">Navigating the Filesystem</a>
+  <ul class="collapse">
+  <li><a href="#where-am-i-pwd" id="toc-where-am-i-pwd" class="nav-link" data-scroll-target="#where-am-i-pwd">Where am I? (<code>pwd</code>)</a></li>
+  <li><a href="#whats-here-ls" id="toc-whats-here-ls" class="nav-link" data-scroll-target="#whats-here-ls">What’s here? (<code>ls</code>)</a></li>
+  <li><a href="#moving-around-cd" id="toc-moving-around-cd" class="nav-link" data-scroll-target="#moving-around-cd">Moving around (<code>cd</code>)</a></li>
+  <li><a href="#a-note-on-spaces-in-filenames" id="toc-a-note-on-spaces-in-filenames" class="nav-link" data-scroll-target="#a-note-on-spaces-in-filenames">A note on spaces in filenames</a></li>
+  </ul></li>
+  <li><a href="#reading-files" id="toc-reading-files" class="nav-link" data-scroll-target="#reading-files">Reading Files</a>
+  <ul class="collapse">
+  <li><a href="#see-the-whole-file-cat" id="toc-see-the-whole-file-cat" class="nav-link" data-scroll-target="#see-the-whole-file-cat">See the whole file (<code>cat</code>)</a></li>
+  <li><a href="#see-just-the-beginning-or-end-head-tail" id="toc-see-just-the-beginning-or-end-head-tail" class="nav-link" data-scroll-target="#see-just-the-beginning-or-end-head-tail">See just the beginning or end (<code>head</code>, <code>tail</code>)</a></li>
+  <li><a href="#page-through-a-file-less" id="toc-page-through-a-file-less" class="nav-link" data-scroll-target="#page-through-a-file-less">Page through a file (<code>less</code>)</a></li>
+  </ul></li>
+  <li><a href="#searching-grep" id="toc-searching-grep" class="nav-link" data-scroll-target="#searching-grep">Searching: <code>grep</code></a>
+  <ul class="collapse">
+  <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link" data-scroll-target="#basic-usage">Basic usage</a></li>
+  <li><a href="#useful-flags" id="toc-useful-flags" class="nav-link" data-scroll-target="#useful-flags">Useful flags</a></li>
+  <li><a href="#searching-a-project" id="toc-searching-a-project" class="nav-link" data-scroll-target="#searching-a-project">Searching a project</a></li>
+  </ul></li>
+  <li><a href="#file-operations" id="toc-file-operations" class="nav-link" data-scroll-target="#file-operations">File Operations</a>
+  <ul class="collapse">
+  <li><a href="#create-a-directory-mkdir" id="toc-create-a-directory-mkdir" class="nav-link" data-scroll-target="#create-a-directory-mkdir">Create a directory (<code>mkdir</code>)</a></li>
+  <li><a href="#copy-files-cp" id="toc-copy-files-cp" class="nav-link" data-scroll-target="#copy-files-cp">Copy files (<code>cp</code>)</a></li>
+  <li><a href="#move-or-rename-files-mv" id="toc-move-or-rename-files-mv" class="nav-link" data-scroll-target="#move-or-rename-files-mv">Move or rename files (<code>mv</code>)</a></li>
+  <li><a href="#remove-files-rm" id="toc-remove-files-rm" class="nav-link" data-scroll-target="#remove-files-rm">Remove files (<code>rm</code>)</a></li>
+  </ul></li>
+  <li><a href="#pipes-and-redirection" id="toc-pipes-and-redirection" class="nav-link" data-scroll-target="#pipes-and-redirection">Pipes and Redirection</a>
+  <ul class="collapse">
+  <li><a href="#the-pipe-operator" id="toc-the-pipe-operator" class="nav-link" data-scroll-target="#the-pipe-operator">The pipe operator (<code>|</code>)</a></li>
+  <li><a href="#counting-things-wc" id="toc-counting-things-wc" class="nav-link" data-scroll-target="#counting-things-wc">Counting things (<code>wc</code>)</a></li>
+  <li><a href="#combining-pipes" id="toc-combining-pipes" class="nav-link" data-scroll-target="#combining-pipes">Combining pipes</a></li>
+  <li><a href="#output-redirection-and" id="toc-output-redirection-and" class="nav-link" data-scroll-target="#output-redirection-and">Output redirection (<code>&gt;</code> and <code>&gt;&gt;</code>)</a></li>
+  </ul></li>
+  <li><a href="#a-few-more-useful-commands" id="toc-a-few-more-useful-commands" class="nav-link" data-scroll-target="#a-few-more-useful-commands">A Few More Useful Commands</a></li>
+  <li><a href="#exercise-exploring-a-replication-package" id="toc-exercise-exploring-a-replication-package" class="nav-link" data-scroll-target="#exercise-exploring-a-replication-package">Exercise: Exploring a Replication Package</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
+  <li><a href="#sample-solution-for-the-practice-data" id="toc-sample-solution-for-the-practice-data" class="nav-link" data-scroll-target="#sample-solution-for-the-practice-data">Sample solution (for the practice data)</a></li>
+  </ul></li>
+  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions">Discussion Questions</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/thinkingwithagents/thinkingwithagents.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">B1: Terminal Basics</h1>
+<p class="subtitle lead">Your computer has a command line — and it’s more powerful than you think</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="module-meta">
+<p><span class="badge badge-time">~75 min</span> <span class="badge badge-track">Technical</span> <span class="badge badge-technical">Hands-on</span></p>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this module, you should be able to:</p>
+<ol type="1">
+<li>Explain why economists use the command line and how it supports reproducible research</li>
+<li>Navigate your computer’s filesystem using terminal commands (<code>pwd</code>, <code>ls</code>, <code>cd</code>)</li>
+<li>Read, search, and manipulate files from the command line (<code>cat</code>, <code>head</code>, <code>grep</code>, <code>wc</code>)</li>
+<li>Combine commands using pipes and redirection to answer data questions without opening a spreadsheet</li>
+<li>Use the terminal confidently enough to follow along with Git, Stata batch mode, and other research tools</li>
+</ol>
+</section>
+<section id="why-economists-need-the-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="why-economists-need-the-terminal">Why Economists Need the Terminal</h2>
+<p>You already have Finder (Mac) or File Explorer (Windows). You can point, click, drag, and drop. Why learn a text-based interface from the 1970s?</p>
+<p>Three reasons:</p>
+<p><strong>1. Reproducibility.</strong> If you cleaned a dataset by clicking through menus, can you reproduce exactly what you did six months later? A sequence of terminal commands (or a script) is a precise, replayable record of every step.</p>
+<p><strong>2. Automation.</strong> Renaming 200 files, running the same Stata do-file on 50 datasets, or checking whether every CSV in a replication package has the right number of columns — these are trivial on the command line and painful with a mouse.</p>
+<p><strong>3. Access to power tools.</strong> Git, SSH, cloud computing, package managers, and many research tools either require or work best through the terminal. If you plan to do any computational work beyond Excel, you will encounter the command line.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Economist’s Analogy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Think of the terminal as <strong>Stata’s command window for your entire computer</strong>. In Stata, you <em>could</em> do everything through the menus — but you don’t, because typing commands is faster, more precise, and reproducible. The terminal is the same idea, applied to your whole filesystem instead of just your data.</p>
+</div>
+</div>
+</section>
+<section id="opening-your-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="opening-your-terminal">Opening Your Terminal</h2>
+<section id="mac" class="level3">
+<h3 class="anchored" data-anchor-id="mac">Mac</h3>
+<p>You already have a terminal. Open <strong>Terminal.app</strong> (find it in Applications &gt; Utilities, or hit <code>Cmd + Space</code> and type “Terminal”).</p>
+<p>You’ll see something like this:</p>
+<pre><code>emilys-macbook:~ emily$</code></pre>
+<p>That’s your <strong>prompt</strong>. It’s waiting for you to type something. The <code>~</code> means you’re in your home directory (more on that shortly).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>iTerm2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Many people eventually switch to <a href="https://iterm2.com/">iTerm2</a>, a more feature-rich terminal for Mac. It’s free and excellent. But the built-in Terminal.app works fine for everything in this module.</p>
+</div>
+</div>
+</section>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<p>Windows doesn’t natively use the same commands we’ll cover here (it has its own system called PowerShell). You have two main options:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>What It Is</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Git Bash</strong></td>
+<td>Comes with <a href="https://gitforwindows.org/">Git for Windows</a>; provides a Unix-like terminal</td>
+<td>Quick setup, light use</td>
+</tr>
+<tr class="even">
+<td><strong>WSL (Windows Subsystem for Linux)</strong></td>
+<td>A full Linux environment inside Windows</td>
+<td>Serious work, long-term use</td>
+</tr>
+</tbody>
+</table>
+<p>For this course, Git Bash is sufficient. If you plan to do more computational work, WSL is worth the setup time.</p>
+</section>
+</section>
+<section id="navigating-the-filesystem" class="level2">
+<h2 class="anchored" data-anchor-id="navigating-the-filesystem">Navigating the Filesystem</h2>
+<p>Your computer’s files are organized in a tree structure: folders contain files and other folders, all the way down from one root. The terminal lets you move around this tree.</p>
+<section id="where-am-i-pwd" class="level3">
+<h3 class="anchored" data-anchor-id="where-am-i-pwd">Where am I? (<code>pwd</code>)</h3>
+<p><code>pwd</code> stands for <strong>print working directory</strong>. It tells you where you are right now.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/emily</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is your <strong>home directory</strong> — the starting point for your files. On a Mac, it’s <code>/Users/yourname</code>. On Linux/WSL, it’s <code>/home/yourname</code>.</p>
+</section>
+<section id="whats-here-ls" class="level3">
+<h3 class="anchored" data-anchor-id="whats-here-ls">What’s here? (<code>ls</code>)</h3>
+<p><code>ls</code> lists the contents of the current directory.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Desktop</span>    Documents  Downloads  Dropbox    Music      Pictures</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Add flags to get more information:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-l</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 0</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">drwx------</span>   5 emily  staff   160 Mar 10 09:14 Desktop</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">drwx------</span>  12 emily  staff   384 Mar 18 14:22 Documents</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">drwx------</span>   8 emily  staff   256 Mar 20 11:05 Downloads</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">drwx------</span>  15 emily  staff   480 Mar 19 08:30 Dropbox</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>-l</code> flag gives you a <strong>long listing</strong> — permissions, owner, size, date modified, and name. The <code>d</code> at the start of each line means it’s a directory.</p>
+<p>Other useful flags:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ls -a</code></td>
+<td>Show <strong>all</strong> files, including hidden ones (files starting with <code>.</code>)</td>
+</tr>
+<tr class="even">
+<td><code>ls -lh</code></td>
+<td>Long listing with <strong>human-readable</strong> file sizes (KB, MB, GB)</td>
+</tr>
+<tr class="odd">
+<td><code>ls -lt</code></td>
+<td>Long listing sorted by <strong>time</strong> (most recent first)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="moving-around-cd" class="level3">
+<h3 class="anchored" data-anchor-id="moving-around-cd">Moving around (<code>cd</code>)</h3>
+<p><code>cd</code> stands for <strong>change directory</strong>. It moves you to a different folder.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd Documents</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/emily/Documents</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Key shortcuts:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Shortcut</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>~</code></td>
+<td>Your home directory</td>
+<td><code>cd ~</code> takes you home from anywhere</td>
+</tr>
+<tr class="even">
+<td><code>..</code></td>
+<td>One level up (parent directory)</td>
+<td><code>cd ..</code> from <code>/Users/emily/Documents</code> takes you to <code>/Users/emily</code></td>
+</tr>
+<tr class="odd">
+<td><code>-</code></td>
+<td>Previous directory</td>
+<td><code>cd -</code> toggles back to where you just were</td>
+</tr>
+<tr class="even">
+<td><code>/</code></td>
+<td>The root of the filesystem</td>
+<td><code>cd /</code> takes you to the very top</td>
+</tr>
+</tbody>
+</table>
+<p>You can chain these:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Dropbox/research/my-project</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/emily/Dropbox/research/my-project</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Tab Completion Will Save Your Life
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Start typing a file or folder name and press <code>Tab</code>. The terminal will autocomplete it for you. If there are multiple matches, press <code>Tab</code> twice to see all options. This is faster than typing full names and prevents typos.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Drop        <span class="co"># press Tab</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Dropbox/    <span class="co"># autocompleted!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Tab completion is not laziness. It is how you avoid mistyping paths and accidentally operating on the wrong file.</p>
+</div>
+</div>
+</section>
+<section id="a-note-on-spaces-in-filenames" class="level3">
+<h3 class="anchored" data-anchor-id="a-note-on-spaces-in-filenames">A note on spaces in filenames</h3>
+<p>Spaces in folder names cause problems on the command line because the terminal interprets spaces as separating different arguments. If you have a folder called <code>My Project</code>, you need to either:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd <span class="st">"My Project"</span>     <span class="co"># wrap in quotes</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd My<span class="dt">\ </span>Project      <span class="co"># escape the space with a backslash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is one reason many programmers and researchers use hyphens or underscores in folder names: <code>my-project</code> or <code>my_project</code> is much easier to work with than <code>My Project</code>.</p>
+</section>
+</section>
+<section id="reading-files" class="level2">
+<h2 class="anchored" data-anchor-id="reading-files">Reading Files</h2>
+<p>You don’t need to open a file in an application to see what’s in it. The terminal gives you several ways to peek at file contents.</p>
+<section id="see-the-whole-file-cat" class="level3">
+<h3 class="anchored" data-anchor-id="see-the-whole-file-cat">See the whole file (<code>cat</code>)</h3>
+<p><code>cat</code> (short for “concatenate”) prints the entire contents of a file to your screen.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat README.md</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># My Research Project</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">This</span> project estimates the effect of...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Good for short files. For long files, your screen will fill with text before you can read it.</p>
+</section>
+<section id="see-just-the-beginning-or-end-head-tail" class="level3">
+<h3 class="anchored" data-anchor-id="see-just-the-beginning-or-end-head-tail">See just the beginning or end (<code>head</code>, <code>tail</code>)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> head data.csv          <span class="co"># first 10 lines (default)</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> head <span class="at">-n</span> 5 data.csv     <span class="co"># first 5 lines</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tail <span class="at">-n</span> 20 results.log <span class="co"># last 20 lines</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>head</code> is invaluable for checking the structure of a CSV file without loading it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> head <span class="at">-n</span> 3 household_survey.csv</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">hhid,district,treatment,income,n_children</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">1001,Nairobi,1,45000,3</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ex">1002,Mombasa,0,32000,1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now you know the variable names and delimiter without opening Excel or Stata.</p>
+</section>
+<section id="page-through-a-file-less" class="level3">
+<h3 class="anchored" data-anchor-id="page-through-a-file-less">Page through a file (<code>less</code>)</h3>
+<p><code>less</code> lets you scroll through a file interactively:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> less analysis.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Use arrow keys or <code>j</code>/<code>k</code> to scroll</li>
+<li>Press <code>Space</code> for the next page</li>
+<li>Press <code>/</code> then type a search term to find text</li>
+<li>Press <code>q</code> to quit</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Economist’s Analogy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Think of <code>cat</code> as <code>list</code> in Stata (dumps everything), <code>head</code> as <code>list in 1/10</code> (first few observations), and <code>less</code> as the Stata data browser (you can scroll and search). You pick the right tool based on how much you need to see.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="searching-grep" class="level2">
+<h2 class="anchored" data-anchor-id="searching-grep">Searching: <code>grep</code></h2>
+<p><code>grep</code> is one of the most powerful commands you’ll learn. It searches for patterns in files and returns matching lines.</p>
+<section id="basic-usage" class="level3">
+<h3 class="anchored" data-anchor-id="basic-usage">Basic usage</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"income"</span> analysis.do</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">gen</span> log_income = ln<span class="er">(</span><span class="ex">income</span><span class="kw">)</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">reg</span> log_income treatment age education, robust</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">label</span> var income <span class="st">"Monthly household income (KES)"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This found every line in <code>analysis.do</code> that contains the word “income”.</p>
+</section>
+<section id="useful-flags" class="level3">
+<h3 class="anchored" data-anchor-id="useful-flags">Useful flags</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Flag</th>
+<th>What It Does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-i</code></td>
+<td>Case-<strong>i</strong>nsensitive search</td>
+<td><code>grep -i "income" file.do</code> matches “Income”, “INCOME”, etc.</td>
+</tr>
+<tr class="even">
+<td><code>-n</code></td>
+<td>Show line <strong>n</strong>umbers</td>
+<td><code>grep -n "regress" analysis.do</code> shows which line each match is on</td>
+</tr>
+<tr class="odd">
+<td><code>-r</code></td>
+<td>Search <strong>r</strong>ecursively through all files in a directory</td>
+<td><code>grep -r "treatment" ./do-files/</code></td>
+</tr>
+<tr class="even">
+<td><code>-l</code></td>
+<td>Show only file <strong>l</strong>ists (which files contain the match)</td>
+<td><code>grep -rl "robust" .</code> lists all files mentioning “robust”</td>
+</tr>
+<tr class="odd">
+<td><code>-c</code></td>
+<td><strong>C</strong>ount matches</td>
+<td><code>grep -c "district" data.csv</code> counts how many rows mention “district”</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="searching-a-project" class="level3">
+<h3 class="anchored" data-anchor-id="searching-a-project">Searching a project</h3>
+<p>Suppose you have a replication package and you want to find every file that uses a particular variable:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-rn</span> <span class="st">"hh_consumption"</span> ./code/</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./code/01_clean.do:45:</span>  gen hh_consumption = food_exp + nonfood_exp</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./code/02_analysis.do:12:</span>  sum hh_consumption, detail</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="ex">./code/02_analysis.do:31:</span>  reg hh_consumption treatment, cluster<span class="er">(</span><span class="ex">village</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In seconds, you know exactly where that variable is created and used — across every file in the project. Try doing that by opening files one at a time.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>grep is Literal by Default
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>grep "treatment effect" file.do</code> looks for the exact string “treatment effect” (with the space). If you want to search for either “treatment” or “effect” separately, those are two separate searches.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="file-operations" class="level2">
+<h2 class="anchored" data-anchor-id="file-operations">File Operations</h2>
+<section id="create-a-directory-mkdir" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-directory-mkdir">Create a directory (<code>mkdir</code>)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir replication-package</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> project/data/raw    <span class="co"># -p creates parent directories as needed</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="copy-files-cp" class="level3">
+<h3 class="anchored" data-anchor-id="copy-files-cp">Copy files (<code>cp</code>)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cp analysis.do analysis_backup.do        <span class="co"># copy a file</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cp <span class="at">-r</span> code/ code_backup/                 <span class="co"># copy a directory (-r = recursive)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="move-or-rename-files-mv" class="level3">
+<h3 class="anchored" data-anchor-id="move-or-rename-files-mv">Move or rename files (<code>mv</code>)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mv old_name.do new_name.do               <span class="co"># rename a file</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mv analysis.do ./code/                   <span class="co"># move a file to a different folder</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="remove-files-rm" class="level3">
+<h3 class="anchored" data-anchor-id="remove-files-rm">Remove files (<code>rm</code>)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm temp_file.csv                         <span class="co"># delete a file</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm <span class="at">-r</span> temp_folder/                       <span class="co"># delete a directory and everything in it</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>rm Is Permanent
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is no Trash, no Recycle Bin, no undo. When you <code>rm</code> a file, it is gone. This is not like deleting a file in Finder.</p>
+<p>Safety habits:</p>
+<ul>
+<li><strong>Use <code>ls</code> before <code>rm</code></strong> to verify you’re targeting the right files</li>
+<li><strong>Never run <code>rm -rf /</code></strong> or <code>rm -rf ~</code> — this would delete your entire filesystem or home directory</li>
+<li><strong>Consider <code>rm -i</code></strong> which asks for confirmation before each deletion</li>
+<li><strong>When in doubt, <code>mv</code> to a trash folder</strong> instead of deleting</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls temp_<span class="pp">*</span>.csv          <span class="co"># check what matches</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">temp_data.csv</span>  temp_results.csv</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm temp_<span class="pp">*</span>.csv          <span class="co"># now delete (you know what you're removing)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+</section>
+<section id="pipes-and-redirection" class="level2">
+<h2 class="anchored" data-anchor-id="pipes-and-redirection">Pipes and Redirection</h2>
+<p>This is where the command line gets genuinely powerful. Pipes let you chain commands together, sending the output of one command as input to the next.</p>
+<section id="the-pipe-operator" class="level3">
+<h3 class="anchored" data-anchor-id="the-pipe-operator">The pipe operator (<code>|</code>)</h3>
+<p>The <code>|</code> (pipe) takes the output of one command and feeds it into the next:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat household_survey.csv <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This says: “print the file, but only show me the first 5 lines.” (Same result as <code>head -n 5 household_survey.csv</code>, but the pipe pattern becomes essential for longer chains.)</p>
+</section>
+<section id="counting-things-wc" class="level3">
+<h3 class="anchored" data-anchor-id="counting-things-wc">Counting things (<code>wc</code>)</h3>
+<p><code>wc</code> stands for <strong>word count</strong>, but it does more than that:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> household_survey.csv     <span class="co"># count lines</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">5001</span> household_survey.csv</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-w</span> README.md                <span class="co"># count words</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>     <span class="ex">342</span> README.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Since a CSV file has one row per line (usually), <code>wc -l</code> tells you how many observations you have (minus 1 for the header). A quick way to check dataset size without loading anything.</p>
+</section>
+<section id="combining-pipes" class="level3">
+<h3 class="anchored" data-anchor-id="combining-pipes">Combining pipes</h3>
+<p>Now the real payoff. You can chain as many commands as you need:</p>
+<p><strong>How many observations are in the treatment group?</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">",1,"</span> household_survey.csv <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">2487</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This says: find all lines containing <code>,1,</code> (the treatment indicator, surrounded by commas), then count them.</p>
+<p><strong>What variables are in this dataset?</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> head <span class="at">-n</span> 1 household_survey.csv</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">hhid,district,treatment,income,n_children</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Which do-files use the <code>regress</code> command?</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-rl</span> <span class="st">"regress"</span> ./code/ <span class="kw">|</span> <span class="fu">sort</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./code/02_analysis.do</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./code/03_robustness.do</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="ex">./code/05_heterogeneity.do</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="output-redirection-and" class="level3">
+<h3 class="anchored" data-anchor-id="output-redirection-and">Output redirection (<code>&gt;</code> and <code>&gt;&gt;</code>)</h3>
+<p>Instead of printing to the screen, you can send output to a file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"ERROR"</span> analysis.log <span class="op">&gt;</span> errors.txt        <span class="co"># write to a new file (overwrites)</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"WARNING"</span> analysis.log <span class="op">&gt;&gt;</span> errors.txt     <span class="co"># append to existing file</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Economist’s Analogy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pipes are the terminal’s version of <strong>method chaining</strong> or <strong>piping in R</strong> (<code>%&gt;%</code>). Each command does one thing well, and you compose them to answer complex questions. It’s the Unix philosophy: small, focused tools that combine. This is also how Stata works — <code>gen</code>, <code>replace</code>, <code>collapse</code>, <code>merge</code> each do one thing, and you chain them together in a do-file.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="a-few-more-useful-commands" class="level2">
+<h2 class="anchored" data-anchor-id="a-few-more-useful-commands">A Few More Useful Commands</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>What It Does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>clear</code></td>
+<td>Clear the terminal screen</td>
+<td><code>clear</code></td>
+</tr>
+<tr class="even">
+<td><code>history</code></td>
+<td>Show your recent commands</td>
+<td><code>history</code> (then re-run one with <code>!42</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>man</code></td>
+<td>Read the <strong>man</strong>ual for a command</td>
+<td><code>man grep</code> (press <code>q</code> to exit)</td>
+</tr>
+<tr class="even">
+<td><code>which</code></td>
+<td>Find where a program lives</td>
+<td><code>which stata</code> shows the path to Stata</td>
+</tr>
+<tr class="odd">
+<td><code>echo</code></td>
+<td>Print text</td>
+<td><code>echo "hello"</code> or <code>echo $PATH</code> to see your PATH</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Getting Unstuck
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the terminal seems frozen or stuck in a command:</p>
+<ul>
+<li><strong><code>Ctrl + C</code></strong> — cancel the current command</li>
+<li><strong><code>q</code></strong> — quit interactive views (like <code>less</code> or <code>man</code>)</li>
+<li><strong><code>Ctrl + D</code></strong> — exit the terminal session</li>
+<li><strong><code>Ctrl + L</code></strong> — clear the screen (same as <code>clear</code>)</li>
+</ul>
+<p>You will use <code>Ctrl + C</code> constantly. It’s the universal “nevermind, stop” signal.</p>
+</div>
+</div>
+</section>
+<section id="exercise-exploring-a-replication-package" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-exploring-a-replication-package">Exercise: Exploring a Replication Package</h2>
+<p>This exercise simulates what you’d actually do when you download a replication package or start working with a collaborator’s project. You’ll use only the terminal — no Finder, no Stata, no Excel.</p>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">Setup</h3>
+<p>Pick a project folder on your computer — ideally one with some do-files, CSVs, or other research files. If you don’t have one handy, create a practice structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/practice-project/code</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/practice-project/data/raw</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/practice-project/output</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"hhid,treatment,income,district"</span> <span class="op">&gt;</span> ~/practice-project/data/raw/survey.csv</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"1001,1,45000,Nairobi"</span> <span class="op">&gt;&gt;</span> ~/practice-project/data/raw/survey.csv</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"1002,0,32000,Mombasa"</span> <span class="op">&gt;&gt;</span> ~/practice-project/data/raw/survey.csv</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"1003,1,51000,Nairobi"</span> <span class="op">&gt;&gt;</span> ~/practice-project/data/raw/survey.csv</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"1004,0,28000,Kisumu"</span> <span class="op">&gt;&gt;</span> ~/practice-project/data/raw/survey.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="tasks" class="level3">
+<h3 class="anchored" data-anchor-id="tasks">Tasks</h3>
+<p>Work through these using only the terminal:</p>
+<ol type="1">
+<li><strong>Navigate</strong> to the project folder and confirm your location with <code>pwd</code></li>
+<li><strong>Explore</strong> the folder structure: What directories exist? What files are in each?</li>
+<li><strong>Check the data</strong>: How many observations (rows) are in the CSV? What are the variable names?</li>
+<li><strong>Search</strong>: If you have do-files, find all lines that contain <code>gen</code> or <code>regress</code>. If using the practice data, search for “Nairobi” in the CSV.</li>
+<li><strong>Count</strong>: How many observations are from Nairobi? (Use <code>grep</code> and <code>wc -l</code>)</li>
+<li><strong>Save your work</strong>: Redirect the results of your Nairobi search to a file called <code>nairobi_obs.txt</code></li>
+<li><strong>Verify</strong>: Use <code>cat</code> to confirm the file was created correctly</li>
+</ol>
+</section>
+<section id="sample-solution-for-the-practice-data" class="level3">
+<h3 class="anchored" data-anchor-id="sample-solution-for-the-practice-data">Sample solution (for the practice data)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/practice-project</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/emily/practice-project</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-R</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span>    data    output</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="ex">./code:</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="ex">./data:</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="ex">raw</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="ex">./data/raw:</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="ex">survey.csv</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="ex">./output:</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> data/raw/survey.csv</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>       <span class="ex">5</span> data/raw/survey.csv</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> head <span class="at">-n</span> 1 data/raw/survey.csv</span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a><span class="ex">hhid,treatment,income,district</span></span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"Nairobi"</span> data/raw/survey.csv</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a><span class="ex">1001,1,45000,Nairobi</span></span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a><span class="ex">1003,1,51000,Nairobi</span></span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"Nairobi"</span> data/raw/survey.csv <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>       <span class="ex">2</span></span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"Nairobi"</span> data/raw/survey.csv <span class="op">&gt;</span> output/nairobi_obs.txt</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat output/nairobi_obs.txt</span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a><span class="ex">1001,1,45000,Nairobi</span></span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a><span class="ex">1003,1,51000,Nairobi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="discussion-questions" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-questions">Discussion Questions</h2>
+<ol type="1">
+<li>Many economics journals now require replication packages. How does command-line literacy help you <em>create</em> better replication packages? How does it help you <em>evaluate</em> someone else’s package?</li>
+<li>A colleague says “I can do all of this in Stata — why learn another tool?” What can the terminal do that Stata can’t? What’s the value of having a tool that works <em>outside</em> of any specific application?</li>
+<li>Think about a repetitive task you’ve done manually (renaming files, checking data, copying folders). How might you approach it differently with the terminal?</li>
+<li>Why do you think the command line has survived for 50+ years while graphical interfaces have changed completely every decade? What does this tell you about which skills are worth investing in?</li>
+</ol>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<ol type="1">
+<li><strong>The terminal is a reproducible interface to your computer.</strong> Every action is a typed command that can be recorded, shared, and replayed — unlike point-and-click workflows.</li>
+<li><strong>A handful of commands covers most needs.</strong> <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>head</code>, <code>grep</code>, <code>wc</code>, and pipes will handle the majority of what you need as an economist.</li>
+<li><strong>Pipes are the key insight.</strong> Combining small, focused commands into chains lets you answer complex questions without writing a script or opening an application.</li>
+<li><strong>This is the foundation for everything else.</strong> Git, remote computing, Stata batch mode, and AI coding tools all assume you can navigate a terminal. Time invested here pays off repeatedly.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Notes for instructors
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This module works best as a live-coding session where students follow along on their own machines. Go slowly through the first few commands (<code>pwd</code>, <code>ls</code>, <code>cd</code>) — students who have never used a terminal will need time to build confidence. The exercise at the end can be done individually or in pairs.</p>
+<p><strong>Common student issues</strong>: (1) Windows students may need help installing Git Bash or WSL before the session — consider sending setup instructions in advance. (2) Students often forget <code>cd</code> changes are persistent across commands (they expect each command to “reset”). (3) Tab completion is the single most impactful thing you can teach early — demonstrate it repeatedly.</p>
+<p><strong>Adaptation</strong>: For a shorter session (~45 min), skip the “File Operations” and “A Few More Useful Commands” sections and focus on navigation, reading files, grep, and pipes. These are the highest-value skills for the exercise.</p>
+<p><strong>Connection to other modules</strong>: This module is a prerequisite for <a href="../modules/b2-git-github.html">B2: Git &amp; GitHub Essentials</a>, which assumes students can navigate the terminal.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<script data-goatcounter="https://eabeam.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/thinkingwithagents\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>. Built by Emily Beam and Erkmen Aslim.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/thinkingwithagents/thinkingwithagents.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

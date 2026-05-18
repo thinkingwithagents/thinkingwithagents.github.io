@@ -1,0 +1,409 @@
+---
+title: "Skills & Workflows"
+subtitle: "Concrete things you can do with agentic tools"
+---
+
+These are workflows that go beyond chat — they involve reading your files, writing outputs, running code, or connecting to external services. Most take 10–45 minutes to try.
+
+## Quick start
+
+Not sure where to begin? Three suggestions:
+
+1. **Fastest payoff**: Create a voice file (15 minutes, reuse forever) — see [Writing & Communication](#writing--communication)
+2. **Most impressive**: Run the data → code → report pipeline (30 minutes) — see [Research](#research)
+3. **Most practical**: Inbox triage with Gmail integration (30 minutes to set up, then daily) — see [Productivity](#productivity)
+
+---
+
+## Research {#research}
+
+### Installable skills
+
+| Skill | What it does | Install |
+|---|---|---|
+| [`/econ-audit`](#econ-audit) | Adversarial review of empirical claims | `npx skills add thinkingwithagents/skills --skill econ-audit` |
+| [`/review-paper`](#review-paper) | Skeptical referee simulation | `npx skills add thinkingwithagents/skills --skill review-paper` |
+| [`/code-review`](#code-review) | Research code review against standards | `npx skills add thinkingwithagents/skills --skill code-review` |
+| [`/pipeline-audit`](#pipeline-audit) | Data pipeline audit against PAP | `npx skills add thinkingwithagents/skills --skill pipeline-audit` |
+| [`/lit-review`](#lit-review) | Literature review pipeline | `npx skills add thinkingwithagents/skills --skill lit-review` |
+| [`/academic-pdf-parsing`](#academic-pdf-parsing) | Parse PDFs into structured corpus | `npx skills add thinkingwithagents/skills --skill academic-pdf-parsing` |
+| [`/data-dictionary`](#data-dictionary) | Dataset documentation | `npx skills add thinkingwithagents/skills --skill data-dictionary` |
+| [`/research-brainstorm`](#research-brainstorm) | Structured idea development | `npx skills add thinkingwithagents/skills --skill research-brainstorm` |
+| [`/find-data`](#find-data) | Public data source discovery | `npx skills add thinkingwithagents/skills --skill find-data` |
+
+### Skill details
+
+#### Econometrics Audit (`/econ-audit`) {#econ-audit}
+
+Reads your draft or code and flags: causal language without identification, missing robustness checks, specification concerns, and measurement issues.
+
+**Good for:** self-review before submission, preparing for seminars, reviewing student work.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/econ-audit/SKILL.md)
+
+#### Paper Review (`/review-paper`) {#review-paper}
+
+Adversarial paper review simulating a skeptical referee. Checks identification, statistical claims, robustness, and presentation against real referee patterns.
+
+**Good for:** pre-submission self-review, preparing for seminars, stress-testing a draft.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/review-paper/SKILL.md)
+
+#### Code Review (`/code-review`) {#code-review}
+
+Structured review of research code (Stata, R, Python) against DIME, Gentzkow-Shapiro, AEA, and IPA standards. Catches silent failures, reproducibility risks, and style issues that generic linters miss.
+
+**Good for:** cleaning up code before submission, replication package prep, catching merge bugs and missing-value traps.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/code-review/SKILL.md)
+
+#### Pipeline Audit (`/pipeline-audit`) {#pipeline-audit}
+
+Audits variable construction, sample restrictions, and analytical decisions against pre-analysis plans.
+
+**Good for:** verifying that code matches the PAP, catching silent deviations.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/pipeline-audit/SKILL.md)
+
+#### Literature Review (`/lit-review`) {#lit-review}
+
+Structured literature search and synthesis. Give it a research question, and it searches for relevant papers, organizes them by theme, identifies gaps, and produces a formatted review memo. Pairs with `/academic-pdf-parsing` to build a parsed corpus for deeper analysis.
+
+**Good for:** starting a new project, preparing a referee report, catching up on a subfield.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/lit-review/SKILL.md)
+
+#### Academic PDF Parsing (`/academic-pdf-parsing`) {#academic-pdf-parsing}
+
+Parses academic PDFs into structured, reusable artifacts: clean markdown, section-based chunks with page numbers, metadata JSON, and extraction quality notes. Handles single papers or batch-processes a folder into a corpus with a manifest.
+
+**Good for:** preparing papers for LLM-powered Q&A, building a parsed corpus for a literature review, extracting tables and sections from journal articles.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/academic-pdf-parsing/SKILL.md)
+
+#### Data Dictionary Generator (`/data-dictionary`) {#data-dictionary}
+
+Reads a dataset's metadata and produces a formatted data dictionary with variable names, types, labels, value ranges, and notes.
+
+**Good for:** replication packages, project handoffs, codebook creation.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/data-dictionary/SKILL.md)
+
+#### Research Brainstorm (`/research-brainstorm`) {#research-brainstorm}
+
+Takes a half-formed question and produces a research brief with related work, contribution framing, feasibility assessment, and next steps.
+
+**Good for:** early-stage project development, stress-testing ideas before investing time.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/research-brainstorm/SKILL.md)
+
+#### Find Data (`/find-data`) {#find-data}
+
+Surfaces public data sources matching your constraints. Give it a topic and requirements; it searches repositories and proposes datasets with download instructions.
+
+**Good for:** teaching demos, finding new data for a project, discovering what's publicly available.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/find-data/SKILL.md)
+
+### Workflows
+
+#### Raw data → analysis plan → code → report
+
+The full research pipeline. Describe a dataset and research question; it proposes an analysis plan, writes Stata/R code, and drafts a summary memo — all saved as project files.
+
+- **What it does**: Reads your data (or its metadata), writes `.do`/`.R` scripts, generates a `.md` report
+- **Tool**: Claude Code
+- **Time**: 30–45 minutes for the full pipeline
+
+```
+Read data/cps_extract.csv. Describe what's in it:
+how many observations, what variables, what's missing.
+
+Then propose three analyses for a paper on wage gaps
+by education level. Write the Stata code for the
+first analysis. Save the do-file as code/wage-gaps.do
+and a summary memo as output/analysis-plan.md.
+```
+
+#### Replication package assembly
+
+Point it at your project folder. It reads your do-files or scripts, maps the dependency chain, identifies missing files, and writes a master script.
+
+- **What it does**: Reads all scripts in a directory, traces `use`/`merge`/`include` dependencies, writes `master.do`
+- **Tool**: Claude Code
+- **Time**: 30 minutes
+
+```
+Read all the .do files in this project.
+Map which files depend on which — trace every use,
+merge, include, and file reference.
+Write a master.do that runs everything in the
+correct order. Flag any files that are referenced
+but don't exist.
+```
+
+#### Literature review with structured output
+
+Give it a research question. It searches, organizes papers by theme, identifies gaps, and writes a formatted review memo.
+
+- **What it does**: Searches, reads abstracts, writes a structured `.md` review memo
+- **Tool**: Claude Code with `/lit-review` skill
+- **Time**: 20–30 minutes
+
+```
+/lit-review
+```
+
+Or manually:
+
+```
+I'm starting a project on the effect of cash transfers
+on educational outcomes in sub-Saharan Africa.
+Search for recent papers. Organize by methodology
+(RCT vs quasi-experimental). For each paper, note:
+authors, year, country, method, main finding.
+Identify gaps. Save as lit-review/cash-transfers-education.md.
+```
+
+---
+
+## Teaching {#teaching}
+
+### Installable skills
+
+| Skill | What it does | Install |
+|---|---|---|
+| [`/academic-beamer-deck`](#academic-beamer-deck) | Paper to slide deck | `npx skills add thinkingwithagents/skills --skill academic-beamer-deck` |
+
+#### Academic Beamer Deck (`/academic-beamer-deck`) {#academic-beamer-deck}
+
+Generates a polished Beamer slide deck from source documents. Reads PDFs or notes, extracts key content, and produces a `.tex` file with UVM-style formatting.
+
+**Good for:** converting papers to lecture slides, building conference presentations.
+[Browse source](https://github.com/thinkingwithagents/skills/tree/main/academic-beamer-deck/SKILL.md)
+
+### Workflows
+
+#### Build a course website from your materials
+
+Point the tool at your syllabus, lecture notes, and schedule. It scaffolds a Quarto or Hugo site with pages for each topic, a schedule, and assignment links.
+
+- **What it does**: Reads your existing files, proposes a site structure, generates the pages, renders to HTML
+- **Tool**: Claude Code
+- **Time**: 1–2 hours for a working first draft
+
+```
+Read my syllabus.pdf and lecture-schedule.xlsx.
+Build a Quarto website with:
+- a home page with the course description
+- a schedule page with dates and topics from the spreadsheet
+- a page for each major unit with the learning objectives from the syllabus
+Save everything in a new folder called course-site/.
+```
+
+#### Convert lecture notes to slides
+
+Give it your `.md` or `.docx` notes and ask for a Quarto reveal.js or Beamer slide deck.
+
+- **What it does**: Reads your notes file, splits into slides, writes formatted output with headers and bullets
+- **Tool**: Claude Code
+- **Time**: 20–30 minutes per lecture
+
+```
+Read lecture-notes/week3-supply-demand.md.
+Convert it to a Quarto reveal.js slide deck.
+One main idea per slide. Use two-column layouts
+where a graph or example would help. Keep bullet
+points to 3-4 per slide max.
+Save as slides/week3-supply-demand.qmd.
+```
+
+#### Grade with a rubric
+
+Give it a rubric file and a folder of student submissions. It reads each submission, applies the rubric, and drafts feedback comments.
+
+- **What it does**: Reads rubric + submissions, writes feedback files
+- **Tool**: Claude Code
+- **Time**: 30 minutes to set up, then a few minutes per batch
+
+```
+Read rubric.md and all the .docx files in submissions/.
+For each submission, apply the rubric. Write a feedback
+file for each student in feedback/ with:
+- score per criterion
+- 2-3 sentences of specific feedback per criterion
+- one overall comment on what to improve
+Name each file feedback/[student-name].md.
+```
+
+---
+
+## Writing & Communication {#writing--communication}
+
+### Workflows
+
+#### Create a writing voice file
+
+Give the tool access to files with your real writing — saved emails, letters of recommendation, feedback comments. It reads them, describes your patterns, and saves a reusable voice file.
+
+- **What it does**: Reads your writing samples from disk, writes `MY-VOICE.md`
+- **Tool**: Claude Code
+- **Time**: 15 minutes to create, then reuse forever
+
+Save 5–10 of your sent emails as `.txt` or `.md` files in a folder, then:
+
+```
+Read all the files in writing-samples/.
+These are emails and letters I've written.
+Describe my writing style: tone, sentence length,
+how I open and close messages, level of formality,
+what I avoid, any distinctive patterns.
+Save the description as MY-VOICE.md.
+```
+
+Then tell Claude Code to use it going forward:
+
+```
+Add to your memory: when I ask you to draft anything,
+load MY-VOICE.md first and match my style.
+```
+
+#### Draft emails using your voice file
+
+Point it at an email thread (via Gmail integration or a saved file) and tell it the gist. It reads the thread, loads your voice file, and drafts a reply that sounds like you.
+
+- **What it does**: Reads email thread + voice file, writes a draft
+- **Tool**: Claude Code with Gmail integration
+- **Time**: 2 minutes per email
+
+```
+Read my voice file. Read the most recent email
+from [sender] about [topic].
+Draft a reply. The gist: [your one-sentence summary
+of what you want to say].
+```
+
+#### Revision memo for a journal submission
+
+Give it your paper file and the referee reports. It reads both and drafts a point-by-point response memo.
+
+- **What it does**: Reads your draft + referee reports, writes a structured response `.md` file
+- **Tool**: Claude Code
+- **Time**: 30–45 minutes for a first draft
+
+```
+Read paper/draft-v2.tex and reviews/referee1.pdf
+and reviews/referee2.pdf.
+Draft a point-by-point response memo. For each
+referee comment:
+- quote the comment
+- describe what we changed (or why we didn't)
+- reference the specific section/page
+Save as paper/revision-memo.md.
+```
+
+---
+
+## Productivity {#productivity}
+
+### Installable skills
+
+| Skill | What it does | Install |
+|---|---|---|
+| [`/meal-plan`](#meal-plan) | Two-week rolling meal planner | `npx skills add thinkingwithagents/skills --skill meal-plan` |
+| [`/groceries`](#groceries) | Categorized grocery list from your plans and lists | `npx skills add thinkingwithagents/skills --skill groceries` |
+
+#### Meal Plan (`/meal-plan`) {#meal-plan}
+
+Two-week rolling meal planner. Checks your Google Calendar for conflicts, applies your day-of-week defaults, flags dietary restrictions and picky eaters, handles leftovers and guest scaling, and generates a printable HTML plan for the fridge.
+
+**First run:** A setup interview asks about your household, calendars, default meals, dietary restrictions, recipes, and preferences. You do this once; answers are saved to `~/Documents/MealPlan/`.
+[Browse source](skills/meal-plan.md)
+
+#### Groceries (`/groceries`) {#groceries}
+
+Grocery list generator that merges your Apple Reminders, Apple Notes, staples template, and current meal plan into one categorized shopping list per store. Scales ingredients for hosting nights and leftover meals.
+
+**Requires:** macOS (Apple Notes/Reminders integration). Pairs with `/meal-plan` but works standalone.
+[Browse source](skills/groceries.md)
+
+### Workflows
+
+#### Inbox triage
+
+Connects to your Gmail, reads recent messages, and categorizes them by action needed: reply, review, meeting, delegate, archive.
+
+- **What it does**: Reads inbox via Gmail integration, writes a categorized summary
+- **Tool**: Claude Code with Gmail integration
+- **Time**: 30 minutes to set up, 5 minutes each morning
+
+```
+Read my 20 most recent unread emails.
+Categorize each one:
+- 🔴 Needs reply (from a person, expects a response)
+- 📋 Needs review (requires reading but not a reply)
+- 📅 Meeting-related (scheduling, agenda, follow-up)
+- 📦 Can archive (newsletters, notifications, FYI)
+List the reply-needed ones first with a one-line summary.
+```
+
+#### Calendar automation from emails
+
+Reads emails with dates and creates calendar events automatically.
+
+- **What it does**: Reads email via Gmail, extracts dates/times, creates Google Calendar events
+- **Tool**: Claude Code with Gmail + Google Calendar integrations
+- **Time**: 5 minutes per batch
+
+```
+Search my Gmail for emails from [hockey league / school]
+in the last 7 days. Extract any dates, times, and
+locations for upcoming events. Add each one to my
+Google Calendar with the event name, time, and location.
+```
+
+#### Project handoff notes
+
+At the end of a work session, it summarizes what was done, what's open, and what to do next.
+
+- **What it does**: Reads session context, writes a structured handoff `.md` file
+- **Tool**: Claude Code
+- **Time**: 2 minutes
+
+```
+Summarize this session:
+- what we worked on
+- what decisions were made
+- what's still open
+- what I should do next
+Save as notes/handoff-2026-04-08.md.
+```
+
+---
+
+## Build your own {#build-your-own}
+
+1. **Pick one repeating task** — grading feedback, email drafts, data cleaning, meeting prep
+2. **Do it once with AI** and save the conversation
+3. **Extract the instructions** into a Markdown file
+4. **Refine** — add constraints, examples, edge cases as you use it
+
+More resources: [skills.sh](https://skills.sh) (public skill registry) · [Claude Code docs: custom commands](https://docs.anthropic.com/en/docs/claude-code/tutorials#create-custom-slash-commands) · [claudlab.in](https://claudlab.in)
+
+---
+
+## Installing skills {#installing-skills}
+
+::: {.callout-note}
+### Prerequisites
+
+To install skills from the terminal, you need **Node.js** (which provides the `npx` command):
+
+1. **Install Node.js:** Go to [nodejs.org](https://nodejs.org) and click the **LTS** download. Run the installer.
+2. **Verify it worked:** Open a terminal and run `npx --version`. If you see a version number, you're set.
+
+If you installed Claude Code via `npm install -g @anthropic-ai/claude-code`, you already have Node.js — skip to the next step.
+:::
+
+::: {.callout-tip}
+### Install all the bootcamp skills at once
+
+    npx skills add thinkingwithagents/skills
+
+Or install one at a time:
+
+    npx skills add thinkingwithagents/skills --skill econ-audit
+
+Browse the source code: [github.com/thinkingwithagents/skills](https://github.com/thinkingwithagents/skills)
+:::

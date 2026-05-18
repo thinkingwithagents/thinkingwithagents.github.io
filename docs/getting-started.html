@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Resources – Thinking with Agents</title>
+<title>Getting Started – Thinking with Agents</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./getting-started.html"> 
+    <a class="nav-link active" href="./getting-started.html" aria-current="page"> 
 <span class="menu-text">Getting Started</span></a>
   </li>  
   <li class="nav-item">
@@ -103,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Skills &amp; Workflows</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./resources.html" aria-current="page"> 
+    <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
@@ -126,18 +126,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#direct-integrations-mcp" id="toc-direct-integrations-mcp" class="nav-link active" data-scroll-target="#direct-integrations-mcp">Direct integrations (MCP)</a>
+  <li><a href="#layer-1-the-terminal" id="toc-layer-1-the-terminal" class="nav-link active" data-scroll-target="#layer-1-the-terminal">Layer 1: The Terminal</a></li>
+  <li><a href="#layer-2-version-control-git-github" id="toc-layer-2-version-control-git-github" class="nav-link" data-scroll-target="#layer-2-version-control-git-github">Layer 2: Version Control (Git &amp; GitHub)</a></li>
+  <li><a href="#layer-3-your-ai-setup" id="toc-layer-3-your-ai-setup" class="nav-link" data-scroll-target="#layer-3-your-ai-setup">Layer 3: Your AI Setup</a></li>
+  <li><a href="#layer-4-deploying-things" id="toc-layer-4-deploying-things" class="nav-link" data-scroll-target="#layer-4-deploying-things">Layer 4: Deploying Things</a>
   <ul class="collapse">
-  <li><a href="#currently-available-in-claude-code" id="toc-currently-available-in-claude-code" class="nav-link" data-scroll-target="#currently-available-in-claude-code">Currently available in Claude Code</a></li>
-  <li><a href="#setting-up-mcp" id="toc-setting-up-mcp" class="nav-link" data-scroll-target="#setting-up-mcp">Setting up MCP</a></li>
+  <li><a href="#websites-quarto-github-pages" id="toc-websites-quarto-github-pages" class="nav-link" data-scroll-target="#websites-quarto-github-pages">Websites (Quarto → GitHub Pages)</a></li>
+  <li><a href="#shared-code-heres-my-repo" id="toc-shared-code-heres-my-repo" class="nav-link" data-scroll-target="#shared-code-heres-my-repo">Shared code (“here’s my repo”)</a></li>
+  <li><a href="#replication-packages" id="toc-replication-packages" class="nav-link" data-scroll-target="#replication-packages">Replication packages</a></li>
   </ul></li>
-  <li><a href="#project-instruction-files" id="toc-project-instruction-files" class="nav-link" data-scroll-target="#project-instruction-files">Project instruction files</a></li>
-  <li><a href="#markdown-and-knowledge-management" id="toc-markdown-and-knowledge-management" class="nav-link" data-scroll-target="#markdown-and-knowledge-management">Markdown and knowledge management</a></li>
-  <li><a href="#meeting-capture-and-dictation" id="toc-meeting-capture-and-dictation" class="nav-link" data-scroll-target="#meeting-capture-and-dictation">Meeting capture and dictation</a></li>
-  <li><a href="#research-and-literature-tools" id="toc-research-and-literature-tools" class="nav-link" data-scroll-target="#research-and-literature-tools">Research and literature tools</a></li>
-  <li><a href="#workflow-patterns-worth-trying" id="toc-workflow-patterns-worth-trying" class="nav-link" data-scroll-target="#workflow-patterns-worth-trying">Workflow patterns worth trying</a></li>
-  <li><a href="#explainers-and-examples-from-others" id="toc-explainers-and-examples-from-others" class="nav-link" data-scroll-target="#explainers-and-examples-from-others">Explainers and examples from others</a></li>
-  <li><a href="#official-documentation" id="toc-official-documentation" class="nav-link" data-scroll-target="#official-documentation">Official documentation</a></li>
+  <li><a href="#layer-5-connecting-the-pieces" id="toc-layer-5-connecting-the-pieces" class="nav-link" data-scroll-target="#layer-5-connecting-the-pieces">Layer 5: Connecting the Pieces</a>
+  <ul class="collapse">
+  <li><a href="#workflow-a-make-a-course-website" id="toc-workflow-a-make-a-course-website" class="nav-link" data-scroll-target="#workflow-a-make-a-course-website">Workflow A: “Make a course website”</a></li>
+  <li><a href="#workflow-b-build-a-replication-package" id="toc-workflow-b-build-a-replication-package" class="nav-link" data-scroll-target="#workflow-b-build-a-replication-package">Workflow B: “Build a replication package”</a></li>
+  <li><a href="#workflow-c-go-from-rough-idea-to-shareable-analysis" id="toc-workflow-c-go-from-rough-idea-to-shareable-analysis" class="nav-link" data-scroll-target="#workflow-c-go-from-rough-idea-to-shareable-analysis">Workflow C: “Go from rough idea to shareable analysis”</a></li>
+  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/thinkingwithagents/thinkingwithagents.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -146,8 +150,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resources</h1>
-<p class="subtitle lead">Integrations, tools, and references worth exploring</p>
+<h1 class="title">Getting Started</h1>
+<p class="subtitle lead">A sequenced guide for economists — from zero to working AI workflow</p>
 </div>
 
 
@@ -164,206 +168,157 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Once you have a basic AI workflow running, these are the things that make it dramatically more useful. None of these are required — pick what fits your work.</p>
-<p><em>★ = I actually use this regularly. Italic notes are honest opinions, not endorsements.</em></p>
-<section id="direct-integrations-mcp" class="level2">
-<h2 class="anchored" data-anchor-id="direct-integrations-mcp">Direct integrations (MCP)</h2>
-<p>The Model Context Protocol (MCP) lets agentic tools connect directly to external services. These are not copy-paste workarounds — the tool reads and writes to these services natively.</p>
-<section id="currently-available-in-claude-code" class="level3">
-<h3 class="anchored" data-anchor-id="currently-available-in-claude-code">Currently available in Claude Code</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Service</th>
-<th>What it can do</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Gmail</strong></td>
-<td>Read inbox, search messages, draft and send emails</td>
-</tr>
-<tr class="even">
-<td><strong>Google Calendar</strong></td>
-<td>Read events, create events, invite attendees, find free time</td>
-</tr>
-<tr class="odd">
-<td><strong>Google Docs</strong></td>
-<td>Read, create, search, and edit documents</td>
-</tr>
-<tr class="even">
-<td><strong>Google Sheets</strong></td>
-<td>Read and write spreadsheet data</td>
-</tr>
-<tr class="odd">
-<td><strong>Todoist</strong></td>
-<td>Create/update/complete tasks, search, manage projects</td>
-</tr>
-<tr class="even">
-<td><strong>Slack</strong></td>
-<td>Read and send messages in channels and DMs</td>
-</tr>
-<tr class="odd">
-<td><strong>GitHub</strong></td>
-<td>Create issues, PRs, review code, manage repos</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example workflow</strong>: “Go through my inbox. Anything about hockey, add it to my Google Calendar.” This is real — it reads the emails, extracts dates, and creates the events.</p>
+<p>The resources already exist — they’re just scattered. This page puts them in order.</p>
+<p>Most economists don’t need a course. They need someone to say: do this first, then this, then this. That’s what this page is.</p>
+<p><strong>How to use this page:</strong> Work through the layers in order if you’re starting from scratch. Jump to wherever you got stuck if you’re partway there. Each layer ends with a checkpoint so you know when you’re ready to move on.</p>
+<p><strong>Short on time?</strong> Layers 1–3 are the core. You can be set up and doing useful work in an afternoon. Layers 4–5 are for when you’re ready to share your work with others.</p>
+<hr>
+<section id="layer-1-the-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="layer-1-the-terminal">Layer 1: The Terminal</h2>
+<p>You already use a terminal — Stata’s command window is one. The difference is that your computer’s terminal (<code>Terminal</code> on Mac, <code>PowerShell</code> on Windows) can control <em>everything</em>, not just Stata. AI coding tools live here, and learning a handful of commands makes the rest of this guide possible.</p>
+<p><strong>You need about 10 commands</strong>: <code>ls</code>, <code>cd</code>, <code>pwd</code>, <code>mkdir</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>cat</code>, <code>grep</code>, <code>which</code>. That’s it for now.</p>
+<p><strong>Primary resource</strong>: <a href="./modules/b1-terminal-basics.html">Terminal Basics for Economists</a> (~75 min, hands-on with economics data) — Our module. Uses a Kenya household survey dataset. Includes exercises with answer keys.</p>
+<p><strong>Supplement</strong>: <a href="https://swcarpentry.github.io/shell-novice/">The Unix Shell</a> (Software Carpentry) — More thorough, with a biology-flavored dataset, but the shell commands are identical.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Outlook limitation</strong>: AI agents cannot currently interact with the Outlook desktop app — Microsoft gates this heavily. Gmail and Google Calendar integrations are much more mature. There are workarounds for Outlook read access, but they require manual setup.</p>
+<p><strong>Windows users:</strong> Use <strong>PowerShell</strong> (not Command Prompt). Your prompt should start with <code>PS C:\</code>.</p>
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>You’re ready for the next layer when…
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can open a terminal, <code>cd</code> to a project folder, <code>ls</code> its contents, and <code>grep</code> for a variable name in a <code>.do</code> or <code>.R</code> file.</p>
+</div>
+</div>
 </section>
-<section id="setting-up-mcp" class="level3">
-<h3 class="anchored" data-anchor-id="setting-up-mcp">Setting up MCP</h3>
-<p>MCP servers are configured in your Claude Code settings file (<code>~/.claude/settings.json</code>). The basic steps:</p>
-<ol type="1">
-<li>Open Claude Code and run <code>/settings</code></li>
-<li>Add a server entry under <code>"mcpServers"</code> — each integration has its own configuration block</li>
-<li>Restart Claude Code to activate</li>
-</ol>
-<p>The <a href="https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp">Claude Code docs on MCP</a> have the full reference. Most integrations take 5–10 minutes to configure. Gmail and Google Calendar are the easiest starting points.</p>
+<section id="layer-2-version-control-git-github" class="level2">
+<h2 class="anchored" data-anchor-id="layer-2-version-control-git-github">Layer 2: Version Control (Git &amp; GitHub)</h2>
+<p>If your version control system is <code>analysis_final_v2_REAL_USE_THIS.do</code>, you need Git. Even if you work alone — because AI tools generate a lot of code, and you need a way to track what changed and undo what broke.</p>
+<p>The core workflow is five commands: <code>clone</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code>. Learn those and you’re functional.</p>
+<p><strong>Primary resource</strong>: <a href="./modules/b2-git-github.html">Git &amp; GitHub Essentials for Economists</a> (~75 min, hands-on) — Our module. Covers the mental model, the 5-command workflow, reading diffs, and common mistakes. Includes an econ-specific <code>.gitignore</code> template.</p>
+<p><strong>Supplement</strong>: <a href="https://github.com/fpinter/git-for-economists">Git: A Guide for Economists</a> (Frank Pinter) — The gold standard econ-specific git reference. More comprehensive than you need right now, but excellent to return to.</p>
+<p><strong>If you don’t want the terminal</strong>: <a href="https://desktop.github.com/">GitHub Desktop</a> is a legitimate choice. It does everything above through a GUI. Not a crutch — just a different interface.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>You’re ready for the next layer when…
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can clone a GitHub repo to your machine, make a change, commit it with a meaningful message, and push it back.</p>
+</div>
+</div>
 </section>
-</section>
-<section id="project-instruction-files" class="level2">
-<h2 class="anchored" data-anchor-id="project-instruction-files">Project instruction files</h2>
-<p>Files like <code>CLAUDE.md</code> or <code>AGENTS.md</code> load automatically when you work in a project. They store:</p>
+<section id="layer-3-your-ai-setup" class="level2">
+<h2 class="anchored" data-anchor-id="layer-3-your-ai-setup">Layer 3: Your AI Setup</h2>
+<p>Now you need the actual tool. The two main options for economists right now are <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a> (Anthropic) and <a href="https://openai.com/index/introducing-codex/">Codex</a> (OpenAI). Both are terminal-based, both can read and edit your files, both cost money beyond free tiers.</p>
+<p><strong>Not sure you need the terminal?</strong> Read <a href="./modules/terminal-transition.html">When to Move to the Terminal</a> — a short guide for people who are productive with desktop apps and wondering whether the terminal is worth it.</p>
+<p><strong>Installation</strong>: Follow our <a href="./install.html">step-by-step install instructions</a> for Claude Code or Codex on Mac and Windows.</p>
+<p><strong>Getting oriented after install</strong>:</p>
 <ul>
-<li>Stable preferences and permission rules</li>
-<li>File path conventions</li>
-<li>What the tool should and shouldn’t do</li>
-<li>Project-specific context</li>
+<li><a href="https://paulgp.substack.com/p/getting-started-with-claude-code">Getting Started with Claude Code</a> (Paul Goldsmith-Pinkham) — A thorough walkthrough from a fellow economist. Covers setup, first tasks, and an explicit privacy framework.</li>
+<li><a href="https://claudeblattman.com">Claude Blattman: Essentials</a> (Chris Blattman) — “I’ve never coded in my life, so if I can do this you can.” Beginner-friendly, operational focus.</li>
 </ul>
-<p>These compound over time — each session gets better as the instructions improve.</p>
+<p><strong>On cost</strong>: Claude Pro ($20/mo) or ChatGPT Plus ($20/mo) are enough to get started. You’ll know if you need more. Don’t overthink this — pick one and try it for a month.</p>
+<p><strong>On privacy</strong>: These tools send your files to remote servers during your session. Published data, your own code, and course materials are fine. IRB-protected data, student records, and restricted-use datasets are not. Paul GP’s rule of thumb: “If you wouldn’t email it to a collaborator, don’t point the AI at it.” Use <code>.claudeignore</code> to exclude sensitive directories.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>On a budget?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can learn Layers 1–2 (terminal + Git) for free — no subscription needed. For Layer 3, UVM Copilot is free with a UVM account (web chat, not terminal). Claude and ChatGPT both have free tiers for chat. The $20/mo subscription adds the terminal tools (Claude Code / Codex), which is where the real leverage is — but you can learn the foundations first and decide later.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>You’re ready for the next layer when…
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can open your AI tool in a terminal, <code>cd</code> to a project folder, and ask it to do something small — summarize a file, rename some variables, draft an email. It works, and you understand what it read to do the task.</p>
+</div>
+</div>
 </section>
-<section id="markdown-and-knowledge-management" class="level2">
-<h2 class="anchored" data-anchor-id="markdown-and-knowledge-management">Markdown and knowledge management</h2>
-<p>AI tools produce Markdown files (<code>.md</code>). A good viewer makes them immediately readable.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>Cost</th>
-<th>Why</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>★ <strong><a href="https://typora.io">Typora</a></strong></td>
-<td>$15</td>
-<td>Clean live preview, opens <code>.md</code> files like a word processor</td>
-</tr>
-<tr class="even">
-<td>★ <strong><a href="https://obsidian.md">Obsidian</a></strong></td>
-<td>Free</td>
-<td>Vault-based notes with links, tags, search — good for storing prompts and session notes</td>
-</tr>
-<tr class="odd">
-<td><strong><a href="https://www.zettlr.com/">Zettlr</a></strong></td>
-<td>Free</td>
-<td>Writing-oriented Markdown editor for longer academic work</td>
-</tr>
-<tr class="even">
-<td><strong><a href="https://github.com/marktext/marktext">MarkText</a></strong></td>
-<td>Free</td>
-<td>Simple, lightweight Markdown editor</td>
-</tr>
-</tbody>
-</table>
+<section id="layer-4-deploying-things" class="level2">
+<h2 class="anchored" data-anchor-id="layer-4-deploying-things">Layer 4: Deploying Things</h2>
+<p>This is the layer nobody teaches. AI can build you a website, write your replication package, or generate a slide deck — but if you can’t get it off your laptop and onto the internet, it doesn’t matter. The gap between “AI made me a thing” and “the thing actually works in the world” is deployment. It’s not hard, but you have to learn it once.</p>
+<p><strong>Three things economists actually deploy:</strong></p>
+<section id="websites-quarto-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="websites-quarto-github-pages">Websites (Quarto → GitHub Pages)</h3>
+<p>If you use Quarto (for slides, course sites, or personal pages), you can publish for free on GitHub Pages. The workflow: write <code>.qmd</code> files → render → push to GitHub → site is live.</p>
+<p>📖 <a href="https://quarto.org/docs/publishing/github-pages.html">Publishing with GitHub Pages</a> (Quarto docs) — The official guide. Clear and complete.</p>
+<p>📖 <a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/4-quarto_github_pages.html">Quarto + GitHub Pages walkthrough</a> (UBC DSCI 521) — A lecture-style walkthrough if you want more hand-holding than the official docs.</p>
 </section>
-<section id="meeting-capture-and-dictation" class="level2">
-<h2 class="anchored" data-anchor-id="meeting-capture-and-dictation">Meeting capture and dictation</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>★ <strong><a href="https://www.granola.ai/">Granola</a></strong></td>
-<td>Meeting capture — searchable notes from conversations. AI can search past meetings for context.</td>
-</tr>
-<tr class="even">
-<td>★ <strong><a href="https://wisprflow.ai/">Wispr Flow</a></strong></td>
-<td>Dictation — speak and it types. Good for drafting on the go or narrating session notes.</td>
-</tr>
-</tbody>
-</table>
+<section id="shared-code-heres-my-repo" class="level3">
+<h3 class="anchored" data-anchor-id="shared-code-heres-my-repo">Shared code (“here’s my repo”)</h3>
+<p>Sharing a GitHub repo is better than emailing a zip file. But a repo someone else can actually use needs: a README that explains what’s in it, a <code>.gitignore</code> that excludes junk, and file paths that aren’t hardcoded to your machine.</p>
+<p>📖 The <code>config_local.do</code> pattern: Instead of <code>cd "/Users/emily/Dropbox/myproject/"</code>, create a <code>config_local_template.do</code> with placeholder paths. Each collaborator copies it to <code>config_local.do</code> (which is <code>.gitignore</code>’d) and fills in their own paths. Your master script <code>include</code>s it. Now the code runs on anyone’s machine.</p>
 </section>
-<section id="research-and-literature-tools" class="level2">
-<h2 class="anchored" data-anchor-id="research-and-literature-tools">Research and literature tools</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><a href="https://elicit.com">Elicit</a></strong></td>
-<td>Literature review, evidence synthesis, structured research reports. <em>Cool, but I find my own workflow faster.</em></td>
-</tr>
-<tr class="even">
-<td><strong><a href="https://scite.ai/">Scite</a></strong></td>
-<td>Citation context — see whether later papers support or contradict a claim</td>
-</tr>
-<tr class="odd">
-<td><strong><a href="https://www.researchrabbit.ai/">ResearchRabbit</a></strong></td>
-<td>Citation-network exploration and related paper discovery. <em>Same — impressive demo, but I haven’t stuck with it.</em></td>
-</tr>
-<tr class="even">
-<td><strong><a href="https://refine.ink">Refine</a></strong></td>
-<td>AI-powered academic writing and editing for research papers. <em>Lots of people love this. ~$50/paper. I haven’t tried it yet.</em></td>
-</tr>
-</tbody>
-</table>
+<section id="replication-packages" class="level3">
+<h3 class="anchored" data-anchor-id="replication-packages">Replication packages</h3>
+<p>If you’re assembling a replication package for a journal, the standard is a master script that runs everything from raw data to final tables. The <a href="https://aeadataeditor.github.io/aea-de-guidance/">AEA Data Editor’s guidance</a> is the reference.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>You’re ready for the next layer when…
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’ve published <em>something</em> — a Quarto page, a GitHub repo with a README, or a shared project folder with <code>config_local.do</code>. The bar is: someone else could find it and use it without emailing you.</p>
+</div>
+</div>
 </section>
-<section id="workflow-patterns-worth-trying" class="level2">
-<h2 class="anchored" data-anchor-id="workflow-patterns-worth-trying">Workflow patterns worth trying</h2>
-<p>Once the basic tools feel useful, the next level is better workflow structure, not better prompting:</p>
-<ul>
-<li><strong>Reusable prompts</strong> saved as files, not typed from memory</li>
-<li><strong>Project instruction files</strong> that accumulate over time</li>
-<li><strong>Session handoff notes</strong> so you pick up where you left off</li>
-<li><strong>Separate sessions</strong> for separate tasks — don’t pile everything into one thread</li>
-<li><strong>Plan → execute → review → clear context → continue</strong> for bigger tasks</li>
-<li><strong>Compare two AI outputs</strong> instead of trusting the first one</li>
-</ul>
 </section>
-<section id="explainers-and-examples-from-others" class="level2">
-<h2 class="anchored" data-anchor-id="explainers-and-examples-from-others">Explainers and examples from others</h2>
-<ul>
-<li><a href="https://paulgp.substack.com/p/getting-started-with-claude-code">Paul Goldsmith-Pinkham: Getting started with Claude Code</a> — why terminal-based AI work feels different from chat</li>
-<li><a href="https://claudeblattman.com/">Claude Blattman</a> — Chris Blattman’s AI workflow blog; concrete patterns for non-programmers</li>
-<li><a href="https://ai.ctl.columbia.edu/">Columbia CTL: Teaching and Learning in the Age of AI</a> — faculty-oriented pedagogy resource</li>
-<li><a href="https://ai.ctl.columbia.edu/explore/examples/">Columbia CTL: Faculty use cases</a> — concrete examples across disciplines</li>
-</ul>
+<section id="layer-5-connecting-the-pieces" class="level2">
+<h2 class="anchored" data-anchor-id="layer-5-connecting-the-pieces">Layer 5: Connecting the Pieces</h2>
+<p>The previous four layers are independent skills. This section is about how they combine into workflows you’ll actually use.</p>
+<section id="workflow-a-make-a-course-website" class="level3">
+<h3 class="anchored" data-anchor-id="workflow-a-make-a-course-website">Workflow A: “Make a course website”</h3>
+<p>Terminal (Layer 1) → create a Quarto project → AI (Layer 3) generates page content from your syllabus and notes → Git (Layer 2) tracks versions → GitHub Pages (Layer 4) publishes it. Time to live site: under an hour once you’ve done it once.</p>
 </section>
-<section id="official-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="official-documentation">Official documentation</h2>
-<ul>
-<li><a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code docs</a> — the main reference for terminal-based Claude</li>
-<li><a href="https://platform.openai.com/docs/codex">OpenAI Codex docs</a> — OpenAI’s agentic coding tool</li>
-<li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">Anthropic prompt engineering guide</a> — useful for improving prompts</li>
-<li><a href="https://skills.sh">skills.sh</a> — public skill registry for Claude Code</li>
-<li><a href="https://claudlab.in">claudlab.in</a> — Claude Code workflow examples and setups</li>
-</ul>
+<section id="workflow-b-build-a-replication-package" class="level3">
+<h3 class="anchored" data-anchor-id="workflow-b-build-a-replication-package">Workflow B: “Build a replication package”</h3>
+<p>AI (Layer 3) drafts a master do-file and README from your existing scripts → you review and fix what it gets wrong → Git (Layer 2) tracks the package → GitHub (Layer 4) hosts it. The AI handles the tedious parts (file headers, path management, README boilerplate). You handle the judgment (does this code actually reproduce the results?).</p>
+</section>
+<section id="workflow-c-go-from-rough-idea-to-shareable-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="workflow-c-go-from-rough-idea-to-shareable-analysis">Workflow C: “Go from rough idea to shareable analysis”</h3>
+<p>Terminal (Layer 1) → create a project folder with clean structure → AI (Layer 3) does initial data exploration and drafts analysis code → Git (Layer 2) checkpoints each stage → share the repo (Layer 4) when it’s ready for a coauthor or RA.</p>
+<hr>
+</section>
+<section id="what-comes-next" class="level3">
+<h3 class="anchored" data-anchor-id="what-comes-next">What comes next</h3>
+<p>Once you’re comfortable with the basics, <a href="./skills-workflows.html">Skills &amp; Workflows</a> shows specific research and teaching workflows. <a href="./resources.html">Resources</a> covers integrations and advanced tools for when you’re ready to go deeper.</p>
+<p>If you’re attending one of our <a href="./events.html">webinars</a> — this page is your pre-work. You don’t need all five layers before the session, but Layers 1-3 will help you follow along.</p>
 
 
+</section>
 </section>
 
 <script data-goatcounter="https://eabeam.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></main> <!-- /main -->

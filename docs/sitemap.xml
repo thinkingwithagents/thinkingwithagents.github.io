@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://thinkingwithagents.github.io/resources.html</loc>
-    <lastmod>2026-04-27T00:59:29.804Z</lastmod>
+    <loc>https://thinkingwithagents.github.io/skills-workflows.html</loc>
+    <lastmod>2026-05-18T19:48:25.717Z</lastmod>
   </url>
   <url>
-    <loc>https://thinkingwithagents.github.io/past-events.html</loc>
-    <lastmod>2026-05-14T19:32:57.119Z</lastmod>
+    <loc>https://thinkingwithagents.github.io/modules/terminal-transition.html</loc>
+    <lastmod>2026-05-18T18:53:42.896Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thinkingwithagents.github.io/modules/b1-terminal-basics.html</loc>
+    <lastmod>2026-05-18T18:54:14.881Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thinkingwithagents.github.io/install.html</loc>
+    <lastmod>2026-05-18T20:01:34.870Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thinkingwithagents.github.io/getting-started.html</loc>
+    <lastmod>2026-05-18T20:11:26.800Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thinkingwithagents.github.io/events.html</loc>
+    <lastmod>2026-05-18T20:00:38.640Z</lastmod>
   </url>
   <url>
     <loc>https://thinkingwithagents.github.io/index.html</loc>
-    <lastmod>2026-05-14T19:40:56.637Z</lastmod>
-  </url>
-  <url>
-    <loc>https://thinkingwithagents.github.io/applications.html</loc>
-    <lastmod>2026-04-27T17:58:41.132Z</lastmod>
+    <lastmod>2026-05-18T20:12:56.870Z</lastmod>
   </url>
   <url>
     <loc>https://thinkingwithagents.github.io/modules/a1-what-llms-do.html</loc>
     <lastmod>2026-04-22T17:17:22.404Z</lastmod>
   </url>
   <url>
-    <loc>https://thinkingwithagents.github.io/prep.html</loc>
-    <lastmod>2026-04-27T00:59:29.802Z</lastmod>
+    <loc>https://thinkingwithagents.github.io/modules/b2-git-github.html</loc>
+    <lastmod>2026-05-18T18:54:23.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thinkingwithagents.github.io/resources.html</loc>
+    <lastmod>2026-05-18T19:49:11.491Z</lastmod>
   </url>
 </urlset>
