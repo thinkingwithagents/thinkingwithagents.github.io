@@ -1,0 +1,574 @@
+---
+title: "B2: Git & GitHub Essentials"
+subtitle: "Version control for economists — because 'final_v2_REAL_final.do' is not a system"
+---
+
+::: {.module-meta}
+[~75 min]{.badge .badge-time}
+[Technical]{.badge .badge-track}
+[Hands-on]{.badge .badge-technical}
+:::
+
+## Learning Objectives
+
+By the end of this module, you should be able to:
+
+1. Explain why version control matters for reproducible economics research
+2. Describe Git's mental model — snapshots, staging, and commits — and relate it to your existing workflow
+3. Execute the core Git workflow: clone, status, add, commit, push, pull
+4. Read a diff and a commit history to understand what changed and when
+5. Recover from common mistakes without panic
+
+## The Problem You Already Have
+
+You've done this. Maybe not today, but you've done it:
+
+```
+analysis.do
+analysis_v2.do
+analysis_v2_final.do
+analysis_v2_final_REAL.do
+analysis_v2_final_REAL_oct12.do
+analysis_v2_final_REAL_oct12_after_meeting.do
+```
+
+Or worse — you renamed the file, overwrote something, and now you're not sure which version produced the tables in your paper. Your co-author emailed you `analysis_FINAL.do` and you're not sure if it's newer than yours. You both edited the same file last week and now you have to manually compare 400 lines of Stata code.
+
+This is not a personal failing. This is a systems problem. And it has a systems solution.
+
+::: {.callout-tip}
+## Economist's Analogy
+Think of your current file management as a **missing data problem**. Without version control, you've lost the full history of your analysis pipeline. You have the final dataset but no audit trail — no way to verify which transformations were applied, in what order, by whom. Git is the metadata you wish you'd been collecting all along.
+:::
+
+### Why economists should especially care
+
+- **Reproducibility**: Journals increasingly require replication packages. Version control makes this trivial instead of painful.
+- **Collaboration**: Research is co-authored. Git solves the "who has the latest version?" problem.
+- **Audit trail**: If a referee asks "when did you add that control variable?", you can answer precisely — with a timestamp and a note explaining why.
+- **Mistake recovery**: Deleted a critical chunk of code? Changed something that broke your results? Git lets you go back.
+
+::: {.callout-important}
+## Key Insight
+Version control is not a programming tool that economists happen to use. It is a **research integrity tool** that every empirical researcher needs — just like a lab notebook in the sciences.
+:::
+
+## The Mental Model: Snapshots, Not Track Changes
+
+If you've used "Track Changes" in Word, forget that model. Git works differently.
+
+Git takes **snapshots** of your entire project at specific points in time. Each snapshot (called a **commit**) is a complete picture of every file in your project at that moment. You decide when to take each snapshot, and you attach a message describing what changed and why.
+
+Think of it like this:
+
+| Concept | Analogy |
+|---|---|
+| **Repository (repo)** | A project folder that Git is tracking |
+| **Commit** | A checkpoint save — a snapshot of your project at a moment in time |
+| **Commit message** | A lab notebook entry — "Added state fixed effects to main specification" |
+| **Staging area** | A holding zone where you decide *which changes* go into the next snapshot |
+| **Remote (GitHub)** | A backup copy of your project that lives online and can be shared |
+
+::: {.callout-tip}
+## Economist's Analogy
+A commit is like a **dated entry in a research log**. You wouldn't write "changed stuff" in a lab notebook — you'd write "re-ran regressions with clustered standard errors at the state level per referee suggestion." Same idea here. Every commit is a documented, recoverable checkpoint.
+:::
+
+### Why the staging area matters
+
+The staging area is Git's most confusing concept for beginners, and also one of its most useful features. Here's why it exists:
+
+Say you've been working for an hour. You fixed a bug in your data cleaning code AND started experimenting with a new specification. These are two separate changes with two separate purposes. The staging area lets you commit them separately, with separate messages, even though you made both changes in the same work session.
+
+You *choose* what goes into each snapshot. This keeps your history clean and meaningful.
+
+## Setting Up Git
+
+Before using Git, you need to tell it who you are. Open your terminal and run:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@uvm.edu"
+```
+
+This tags your commits with your identity — important when you're collaborating and need to know who changed what.
+
+::: {.callout-note}
+## One-Time Setup
+You only need to do this once per computer. Git remembers these settings. If you're working on a shared computing cluster, you may need to do it once per account.
+:::
+
+To verify your setup:
+
+```bash
+git config --list
+```
+
+You should see your name and email in the output.
+
+## The Core Workflow
+
+Here's the workflow you'll use 95% of the time. We'll walk through each step.
+
+```
+clone → [edit files] → status → add → commit → push
+                ↑                                 │
+                └──────────── pull ←──────────────┘
+```
+
+### Step 1: Clone — Get a copy of a project
+
+`git clone` downloads a repository from GitHub to your computer.
+
+```bash
+git clone https://github.com/username/my-econ-project.git
+```
+
+This creates a folder called `my-econ-project/` with all the files and their full history.
+
+```
+Cloning into 'my-econ-project'...
+remote: Enumerating objects: 47, done.
+remote: Counting objects: 100% (47/47), done.
+remote: Compressing objects: 100% (31/31), done.
+Receiving objects: 100% (47/47), 12.03 KiB | 6.02 MiB/s, done.
+```
+
+You only clone once. After that, you use `pull` to get updates.
+
+### Step 2: Check status — What has changed?
+
+After editing files, `git status` tells you what's different since the last commit.
+
+```bash
+git status
+```
+
+```
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+
+        modified:   analysis/01_clean_data.do
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        analysis/02_regressions.do
+
+no changes added to commit (use "git add" to add)
+```
+
+This tells you:
+
+- `01_clean_data.do` was modified (Git knows about it, you changed it)
+- `02_regressions.do` is new (Git hasn't seen it before — "untracked")
+- Nothing is staged yet (nothing is ready to be committed)
+
+::: {.callout-warning}
+## Check Status Frequently
+Run `git status` often. It's free, it never changes anything, and it's the fastest way to orient yourself. Think of it as looking at your desk before you start working — just seeing what's there.
+:::
+
+### Step 3: Add — Stage your changes
+
+`git add` moves changes into the staging area — the "ready to commit" zone.
+
+```bash
+# Stage a specific file
+git add analysis/01_clean_data.do
+
+# Stage multiple specific files
+git add analysis/01_clean_data.do analysis/02_regressions.do
+
+# Stage all changes (use cautiously)
+git add .
+```
+
+After staging, `git status` looks different:
+
+```
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+
+        modified:   analysis/01_clean_data.do
+        new file:   analysis/02_regressions.do
+```
+
+The files are now in the staging area, ready for a snapshot.
+
+::: {.callout-warning}
+## Be Careful with `git add .`
+`git add .` stages *everything*. This includes data files, log files, temporary files, and anything else in the folder. For economics projects, you almost never want to commit your datasets to Git (they're too large and should live elsewhere). Stage specific files by name until you're comfortable with `.gitignore` files, which tell Git what to ignore.
+:::
+
+### Step 4: Commit — Take the snapshot
+
+`git commit` creates the snapshot and attaches your message.
+
+```bash
+git commit -m "Add state fixed effects to main regression specification"
+```
+
+```
+[main a3b8f2d] Add state fixed effects to main regression specification
+ 2 files changed, 34 insertions(+), 12 deletions(-)
+ create mode 100644 analysis/02_regressions.do
+```
+
+The commit now exists in your *local* history. It hasn't gone anywhere yet.
+
+#### What makes a good commit message?
+
+Your commit message is the "why" behind the change. Future you (and your co-authors) will read these.
+
+| Bad | Good |
+|---|---|
+| "updated file" | "Fix missing value handling in income variable" |
+| "changes" | "Add robustness check: drop top 1% of earnings" |
+| "final version" | "Revise tables for R&R — add county fixed effects" |
+| "stuff" | "Clean ACS data: harmonize occupation codes across years" |
+
+**Rules of thumb**:
+
+- Start with a verb (Add, Fix, Update, Remove, Refactor)
+- Be specific enough that you could find this commit later
+- Keep it under ~72 characters for the first line
+- If you need more detail, leave a blank line and write a longer description
+
+### Step 5: Push — Send your commits to GitHub
+
+`git push` uploads your local commits to the remote repository on GitHub.
+
+```bash
+git push
+```
+
+```
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 512 bytes | 512.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+To https://github.com/username/my-econ-project.git
+   f4a21c8..a3b8f2d  main -> main
+```
+
+Now your changes are backed up online and visible to collaborators.
+
+### Step 6: Pull — Get your collaborator's changes
+
+`git pull` downloads and integrates changes that others have pushed.
+
+```bash
+git pull
+```
+
+```
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+Updating f4a21c8..b7c9e31
+Fast-forward
+ analysis/03_tables.do | 28 +++++++++++++++
+ 1 file changed, 28 insertions(+)
+ create mode 100644 analysis/03_tables.do
+```
+
+Your co-author pushed a new file. Now you have it.
+
+::: {.callout-tip}
+## Economist's Analogy
+Think of push and pull like submitting and downloading files from a shared Dropbox — except Git tracks *exactly* what changed, when, and by whom. And if two people change the same file, Git will alert you instead of silently overwriting someone's work.
+:::
+
+## Reading a Diff: What Changed?
+
+A **diff** shows the line-by-line differences between two versions of a file. Learning to read diffs is like learning to read regression output — it looks cryptic at first, then it becomes second nature.
+
+```bash
+git diff
+```
+
+```diff
+diff --git a/analysis/01_clean_data.do b/analysis/01_clean_data.do
+index 3a2b1c0..8f4e2d1 100644
+--- a/analysis/01_clean_data.do
++++ b/analysis/01_clean_data.do
+@@ -23,7 +23,8 @@
+ * Clean income variable
+ gen income_clean = income
+ replace income_clean = . if income < 0
+-replace income_clean = . if income > 500000
++replace income_clean = . if income > 1000000
++label var income_clean "Annual income (cleaned, USD)"
+```
+
+Here's how to read this:
+
+- Lines starting with `-` were **removed** (the old version)
+- Lines starting with `+` were **added** (the new version)
+- Lines with no prefix are **context** — unchanged lines shown for reference
+
+In this example: someone raised the income top-code from $500k to $1M and added a variable label. Clear, traceable, reviewable.
+
+### Reading commit history
+
+```bash
+git log --oneline
+```
+
+```
+a3b8f2d Add state fixed effects to main regression specification
+f4a21c8 Fix missing value handling in income variable
+c1d9e2f Initial commit: data cleaning pipeline
+```
+
+Each line is a commit. Read from bottom to top — that's the chronological order of your project's development. The string on the left (e.g., `a3b8f2d`) is the commit's unique ID. You can use it to inspect or revert to any past snapshot.
+
+For more detail:
+
+```bash
+git log
+```
+
+This shows full commit messages, authors, and timestamps — your project's complete lab notebook.
+
+## GitHub: The Online Layer
+
+**Git** is the version control system that runs on your computer. **GitHub** is a website that hosts Git repositories online. They are related but separate things.
+
+| Feature | Git (local) | GitHub (online) |
+|---|---|---|
+| Where it lives | Your computer | github.com |
+| What it does | Tracks changes, manages history | Hosts repos, enables collaboration |
+| Works offline? | Yes | No |
+| Required? | Yes (for version control) | No (but very useful) |
+
+### What GitHub gives you
+
+- **Backup**: Your code exists somewhere other than your laptop
+- **Collaboration**: Co-authors can push and pull changes
+- **Visibility**: Browse code, history, and changes in a web browser
+- **README display**: GitHub renders your project's README file as a homepage — useful for replication packages
+- **Issue tracking**: A lightweight task list for your project ("TODO: add robustness checks", "BUG: inflation adjustment wrong for 2019")
+
+### Navigating a repository on GitHub
+
+When you visit a GitHub repository, you'll see:
+
+- **Code tab**: Browse all files, click into folders, read code directly
+- **Commits**: Full history of every snapshot, who made it, when, and why
+- **README.md**: Displayed automatically at the bottom of the file listing — your project's front page
+
+::: {.callout-note}
+## GitHub Is Not Just for Code
+Many economics replication packages are hosted on GitHub. Browsing them is a great way to see how experienced researchers organize their projects. Search for replication packages in your subfield — the structure is as instructive as the code.
+:::
+
+## Exercise: Your First Git Workflow
+
+This exercise walks you through the full workflow. You'll need a terminal open and Git installed. (If you haven't installed Git, see the setup note at the end of this module.)
+
+### Part 1: Clone and explore
+
+1. Clone a sample repository (your instructor will provide the URL, or use any public repo):
+
+```bash
+git clone https://github.com/username/econ-project.git
+cd econ-project
+```
+
+2. Look around:
+
+```bash
+git status
+git log --oneline
+```
+
+Notice the clean history. Every change is documented.
+
+### Part 2: Create and commit a file
+
+3. Create a simple analysis script. Open a text editor and create a file called `my_analysis.do` (or `my_analysis.R`) in the project folder:
+
+```stata
+* My first version-controlled analysis
+* Author: [Your Name]
+* Date: [Today's Date]
+
+display "Hello, version control!"
+```
+
+4. Check what Git sees:
+
+```bash
+git status
+```
+
+You should see your new file listed as "untracked."
+
+5. Stage and commit:
+
+```bash
+git add my_analysis.do
+git commit -m "Add initial analysis script with header"
+```
+
+6. Verify:
+
+```bash
+git log --oneline
+```
+
+Your commit is now at the top of the history.
+
+### Part 3: Make a change and commit again
+
+7. Edit `my_analysis.do` — add a line of code (anything):
+
+```stata
+* Calculate summary statistics
+sysuse auto, clear
+summarize price mpg weight
+```
+
+8. See the diff:
+
+```bash
+git diff
+```
+
+You should see your new lines marked with `+`.
+
+9. Stage and commit with a descriptive message:
+
+```bash
+git add my_analysis.do
+git commit -m "Add summary statistics for auto dataset"
+```
+
+10. Check your history:
+
+```bash
+git log --oneline
+```
+
+You now have two commits — two recoverable checkpoints.
+
+### Part 4: Push (if you have a remote)
+
+If your instructor has set up a remote repository for you:
+
+```bash
+git push
+```
+
+If not, that's fine — everything you've done is tracked locally.
+
+::: {.callout-important}
+## What You Just Did
+You created a file, committed it with a clear message, made a change, and committed that separately. You now have two snapshots of your project. You can go back to either one at any time. This is the entire core workflow — everything else is refinement.
+:::
+
+## When Things Go Wrong
+
+Things will go wrong. That's fine. Here are the most common situations and the simplest fixes.
+
+### "I forgot to pull before I started working"
+
+```bash
+git pull
+```
+
+If your changes don't overlap with your collaborator's, Git merges automatically. If they do overlap, Git will tell you there's a **conflict** and ask you to resolve it. (Conflict resolution is beyond this module — for now, the fix is to communicate with your co-author about who's editing which file.)
+
+### "I committed the wrong file"
+
+If you committed a data file or a log file by accident and haven't pushed yet:
+
+```bash
+git reset --soft HEAD~1
+```
+
+This undoes the last commit but keeps your changes staged. You can then unstage the file you don't want and recommit:
+
+```bash
+git restore --staged big_dataset.dta
+git commit -m "Add analysis script (without data file)"
+```
+
+### "I want to see what a file looked like before"
+
+```bash
+git log --oneline my_analysis.do
+git show a3b8f2d:my_analysis.do
+```
+
+This prints the file as it existed at that commit — without changing anything in your current version.
+
+### "I want to undo changes I haven't committed yet"
+
+If you've been editing a file and want to go back to the last committed version:
+
+```bash
+git restore my_analysis.do
+```
+
+::: {.callout-warning}
+## This Is Irreversible
+`git restore` throws away your uncommitted changes. They're gone. This is why committing frequently is a good idea — committed changes can always be recovered. Uncommitted changes cannot.
+:::
+
+### "I have no idea what's going on"
+
+```bash
+git status
+```
+
+Always start here. Read the output carefully — Git usually tells you exactly what's happening and suggests what to do next.
+
+## What We're Not Covering (And Why)
+
+Git is a deep tool. We've covered the core workflow that handles the vast majority of day-to-day research work. Here's what we're deliberately leaving out:
+
+| Topic | What it is | Why we're skipping it |
+|---|---|---|
+| **Branches** | Parallel versions of your project | Essential for teams, but adds complexity; covered in an advanced module |
+| **Merge conflicts** | When two people edit the same lines | Requires branches to explain properly |
+| **Pull requests** | A way to propose and review changes | A GitHub collaboration feature; builds on branches |
+| **Rebasing** | Rewriting commit history | Advanced; easy to lose work if done wrong |
+| **`.gitignore`** | Telling Git which files to skip | Useful but mechanical; easy to look up when you need it |
+
+These are all real and useful. But the workflow in this module — clone, status, add, commit, push, pull — will carry you through your first year of version-controlled research. Add the other tools as you need them.
+
+## Discussion Questions
+
+1. Think about a research project you've worked on (or are working on). What would a good set of commit messages look like for that project? How would having that history change how you work?
+
+2. Many economics journals now require replication packages. How does version control change the process of creating a replication package — from something you build at the end to something you build as you go?
+
+3. A colleague says "I use Dropbox, so I already have version control." What's right about this? What's missing compared to Git?
+
+4. What kinds of files should go in a Git repository, and what kinds should not? Think about a typical empirical economics project with .do files, .dta files, .csv files, .log files, .tex files, and PDFs.
+
+## Key Takeaways
+
+1. **Version control solves the "final_v2_REAL_final" problem.** Git tracks every version of every file automatically. You never need to rename files to save old versions.
+2. **The core workflow is five commands.** `status`, `add`, `commit`, `push`, `pull` — that's 95% of what you need day-to-day.
+3. **Commit messages are your research log.** Write them for future you. Be specific about *what* changed and *why*.
+4. **Start now, not later.** The best time to put a project under version control is at the beginning. The second best time is today.
+
+::: {.callout-note collapse="true"}
+## Notes for instructors
+
+This module works best with a live coding demo. Walk through the full workflow in real time — create a repo, make changes, commit, show the log. Students should follow along on their own machines.
+
+**Setup note**: Students need Git installed before class. On macOS, Git ships with Xcode Command Line Tools (`xcode-select --install`). On Windows, install [Git for Windows](https://gitforwindows.org/). Consider sending setup instructions a week before this module.
+
+**Pairing**: This module pairs naturally with [B1: Terminal Basics](b1-terminal-basics.qmd). Students who are comfortable in the terminal will find Git much less intimidating. If your students haven't done B1, budget an extra 15 minutes for terminal orientation.
+
+**Common sticking points**: (1) The staging area concept — use the "packing a suitcase" analogy (you choose what goes in before you zip it shut). (2) The difference between Git and GitHub — draw it on the board. (3) Authentication with GitHub — consider having students set up SSH keys or a personal access token before class.
+
+**Assessment idea**: Have students submit a link to a GitHub repository with at least 5 meaningful commits showing the progression of an analysis. Grade the commit messages and the logical flow of the project, not just the final code.
+:::

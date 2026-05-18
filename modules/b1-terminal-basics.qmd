@@ -1,0 +1,489 @@
+---
+title: "B1: Terminal Basics"
+subtitle: "Your computer has a command line — and it's more powerful than you think"
+---
+
+::: {.module-meta}
+[~75 min]{.badge .badge-time}
+[Technical]{.badge .badge-track}
+[Hands-on]{.badge .badge-technical}
+:::
+
+## Learning Objectives
+
+By the end of this module, you should be able to:
+
+1. Explain why economists use the command line and how it supports reproducible research
+2. Navigate your computer's filesystem using terminal commands (`pwd`, `ls`, `cd`)
+3. Read, search, and manipulate files from the command line (`cat`, `head`, `grep`, `wc`)
+4. Combine commands using pipes and redirection to answer data questions without opening a spreadsheet
+5. Use the terminal confidently enough to follow along with Git, Stata batch mode, and other research tools
+
+## Why Economists Need the Terminal
+
+You already have Finder (Mac) or File Explorer (Windows). You can point, click, drag, and drop. Why learn a text-based interface from the 1970s?
+
+Three reasons:
+
+**1. Reproducibility.** If you cleaned a dataset by clicking through menus, can you reproduce exactly what you did six months later? A sequence of terminal commands (or a script) is a precise, replayable record of every step.
+
+**2. Automation.** Renaming 200 files, running the same Stata do-file on 50 datasets, or checking whether every CSV in a replication package has the right number of columns — these are trivial on the command line and painful with a mouse.
+
+**3. Access to power tools.** Git, SSH, cloud computing, package managers, and many research tools either require or work best through the terminal. If you plan to do any computational work beyond Excel, you will encounter the command line.
+
+::: {.callout-tip}
+## Economist's Analogy
+Think of the terminal as **Stata's command window for your entire computer**. In Stata, you *could* do everything through the menus — but you don't, because typing commands is faster, more precise, and reproducible. The terminal is the same idea, applied to your whole filesystem instead of just your data.
+:::
+
+## Opening Your Terminal
+
+### Mac
+
+You already have a terminal. Open **Terminal.app** (find it in Applications > Utilities, or hit `Cmd + Space` and type "Terminal").
+
+You'll see something like this:
+
+```
+emilys-macbook:~ emily$
+```
+
+That's your **prompt**. It's waiting for you to type something. The `~` means you're in your home directory (more on that shortly).
+
+::: {.callout-note}
+## iTerm2
+Many people eventually switch to [iTerm2](https://iterm2.com/), a more feature-rich terminal for Mac. It's free and excellent. But the built-in Terminal.app works fine for everything in this module.
+:::
+
+### Windows
+
+Windows doesn't natively use the same commands we'll cover here (it has its own system called PowerShell). You have two main options:
+
+| Option | What It Is | Best For |
+|---|---|---|
+| **Git Bash** | Comes with [Git for Windows](https://gitforwindows.org/); provides a Unix-like terminal | Quick setup, light use |
+| **WSL (Windows Subsystem for Linux)** | A full Linux environment inside Windows | Serious work, long-term use |
+
+For this course, Git Bash is sufficient. If you plan to do more computational work, WSL is worth the setup time.
+
+## Navigating the Filesystem
+
+Your computer's files are organized in a tree structure: folders contain files and other folders, all the way down from one root. The terminal lets you move around this tree.
+
+### Where am I? (`pwd`)
+
+`pwd` stands for **print working directory**. It tells you where you are right now.
+
+```bash
+$ pwd
+/Users/emily
+```
+
+This is your **home directory** — the starting point for your files. On a Mac, it's `/Users/yourname`. On Linux/WSL, it's `/home/yourname`.
+
+### What's here? (`ls`)
+
+`ls` lists the contents of the current directory.
+
+```bash
+$ ls
+Desktop    Documents  Downloads  Dropbox    Music      Pictures
+```
+
+Add flags to get more information:
+
+```bash
+$ ls -l
+total 0
+drwx------   5 emily  staff   160 Mar 10 09:14 Desktop
+drwx------  12 emily  staff   384 Mar 18 14:22 Documents
+drwx------   8 emily  staff   256 Mar 20 11:05 Downloads
+drwx------  15 emily  staff   480 Mar 19 08:30 Dropbox
+```
+
+The `-l` flag gives you a **long listing** — permissions, owner, size, date modified, and name. The `d` at the start of each line means it's a directory.
+
+Other useful flags:
+
+| Command | What It Does |
+|---|---|
+| `ls -a` | Show **all** files, including hidden ones (files starting with `.`) |
+| `ls -lh` | Long listing with **human-readable** file sizes (KB, MB, GB) |
+| `ls -lt` | Long listing sorted by **time** (most recent first) |
+
+### Moving around (`cd`)
+
+`cd` stands for **change directory**. It moves you to a different folder.
+
+```bash
+$ cd Documents
+$ pwd
+/Users/emily/Documents
+```
+
+Key shortcuts:
+
+| Shortcut | Meaning | Example |
+|---|---|---|
+| `~` | Your home directory | `cd ~` takes you home from anywhere |
+| `..` | One level up (parent directory) | `cd ..` from `/Users/emily/Documents` takes you to `/Users/emily` |
+| `-` | Previous directory | `cd -` toggles back to where you just were |
+| `/` | The root of the filesystem | `cd /` takes you to the very top |
+
+You can chain these:
+
+```bash
+$ cd ~/Dropbox/research/my-project
+$ pwd
+/Users/emily/Dropbox/research/my-project
+```
+
+::: {.callout-important}
+## Tab Completion Will Save Your Life
+Start typing a file or folder name and press `Tab`. The terminal will autocomplete it for you. If there are multiple matches, press `Tab` twice to see all options. This is faster than typing full names and prevents typos.
+
+```bash
+$ cd ~/Drop        # press Tab
+$ cd ~/Dropbox/    # autocompleted!
+```
+
+Tab completion is not laziness. It is how you avoid mistyping paths and accidentally operating on the wrong file.
+:::
+
+### A note on spaces in filenames
+
+Spaces in folder names cause problems on the command line because the terminal interprets spaces as separating different arguments. If you have a folder called `My Project`, you need to either:
+
+```bash
+$ cd "My Project"     # wrap in quotes
+$ cd My\ Project      # escape the space with a backslash
+```
+
+This is one reason many programmers and researchers use hyphens or underscores in folder names: `my-project` or `my_project` is much easier to work with than `My Project`.
+
+## Reading Files
+
+You don't need to open a file in an application to see what's in it. The terminal gives you several ways to peek at file contents.
+
+### See the whole file (`cat`)
+
+`cat` (short for "concatenate") prints the entire contents of a file to your screen.
+
+```bash
+$ cat README.md
+# My Research Project
+This project estimates the effect of...
+```
+
+Good for short files. For long files, your screen will fill with text before you can read it.
+
+### See just the beginning or end (`head`, `tail`)
+
+```bash
+$ head data.csv          # first 10 lines (default)
+$ head -n 5 data.csv     # first 5 lines
+$ tail -n 20 results.log # last 20 lines
+```
+
+`head` is invaluable for checking the structure of a CSV file without loading it:
+
+```bash
+$ head -n 3 household_survey.csv
+hhid,district,treatment,income,n_children
+1001,Nairobi,1,45000,3
+1002,Mombasa,0,32000,1
+```
+
+Now you know the variable names and delimiter without opening Excel or Stata.
+
+### Page through a file (`less`)
+
+`less` lets you scroll through a file interactively:
+
+```bash
+$ less analysis.log
+```
+
+- Use arrow keys or `j`/`k` to scroll
+- Press `Space` for the next page
+- Press `/` then type a search term to find text
+- Press `q` to quit
+
+::: {.callout-tip}
+## Economist's Analogy
+Think of `cat` as `list` in Stata (dumps everything), `head` as `list in 1/10` (first few observations), and `less` as the Stata data browser (you can scroll and search). You pick the right tool based on how much you need to see.
+:::
+
+## Searching: `grep`
+
+`grep` is one of the most powerful commands you'll learn. It searches for patterns in files and returns matching lines.
+
+### Basic usage
+
+```bash
+$ grep "income" analysis.do
+gen log_income = ln(income)
+reg log_income treatment age education, robust
+label var income "Monthly household income (KES)"
+```
+
+This found every line in `analysis.do` that contains the word "income".
+
+### Useful flags
+
+| Flag | What It Does | Example |
+|---|---|---|
+| `-i` | Case-**i**nsensitive search | `grep -i "income" file.do` matches "Income", "INCOME", etc. |
+| `-n` | Show line **n**umbers | `grep -n "regress" analysis.do` shows which line each match is on |
+| `-r` | Search **r**ecursively through all files in a directory | `grep -r "treatment" ./do-files/` |
+| `-l` | Show only file **l**ists (which files contain the match) | `grep -rl "robust" .` lists all files mentioning "robust" |
+| `-c` | **C**ount matches | `grep -c "district" data.csv` counts how many rows mention "district" |
+
+### Searching a project
+
+Suppose you have a replication package and you want to find every file that uses a particular variable:
+
+```bash
+$ grep -rn "hh_consumption" ./code/
+./code/01_clean.do:45:  gen hh_consumption = food_exp + nonfood_exp
+./code/02_analysis.do:12:  sum hh_consumption, detail
+./code/02_analysis.do:31:  reg hh_consumption treatment, cluster(village)
+```
+
+In seconds, you know exactly where that variable is created and used — across every file in the project. Try doing that by opening files one at a time.
+
+::: {.callout-warning}
+## grep is Literal by Default
+`grep "treatment effect" file.do` looks for the exact string "treatment effect" (with the space). If you want to search for either "treatment" or "effect" separately, those are two separate searches.
+:::
+
+## File Operations
+
+### Create a directory (`mkdir`)
+
+```bash
+$ mkdir replication-package
+$ mkdir -p project/data/raw    # -p creates parent directories as needed
+```
+
+### Copy files (`cp`)
+
+```bash
+$ cp analysis.do analysis_backup.do        # copy a file
+$ cp -r code/ code_backup/                 # copy a directory (-r = recursive)
+```
+
+### Move or rename files (`mv`)
+
+```bash
+$ mv old_name.do new_name.do               # rename a file
+$ mv analysis.do ./code/                   # move a file to a different folder
+```
+
+### Remove files (`rm`)
+
+```bash
+$ rm temp_file.csv                         # delete a file
+$ rm -r temp_folder/                       # delete a directory and everything in it
+```
+
+::: {.callout-warning}
+## rm Is Permanent
+There is no Trash, no Recycle Bin, no undo. When you `rm` a file, it is gone. This is not like deleting a file in Finder.
+
+Safety habits:
+
+- **Use `ls` before `rm`** to verify you're targeting the right files
+- **Never run `rm -rf /`** or `rm -rf ~` — this would delete your entire filesystem or home directory
+- **Consider `rm -i`** which asks for confirmation before each deletion
+- **When in doubt, `mv` to a trash folder** instead of deleting
+
+```bash
+$ ls temp_*.csv          # check what matches
+temp_data.csv  temp_results.csv
+$ rm temp_*.csv          # now delete (you know what you're removing)
+```
+:::
+
+## Pipes and Redirection
+
+This is where the command line gets genuinely powerful. Pipes let you chain commands together, sending the output of one command as input to the next.
+
+### The pipe operator (`|`)
+
+The `|` (pipe) takes the output of one command and feeds it into the next:
+
+```bash
+$ cat household_survey.csv | head -n 5
+```
+
+This says: "print the file, but only show me the first 5 lines." (Same result as `head -n 5 household_survey.csv`, but the pipe pattern becomes essential for longer chains.)
+
+### Counting things (`wc`)
+
+`wc` stands for **word count**, but it does more than that:
+
+```bash
+$ wc -l household_survey.csv     # count lines
+    5001 household_survey.csv
+
+$ wc -w README.md                # count words
+     342 README.md
+```
+
+Since a CSV file has one row per line (usually), `wc -l` tells you how many observations you have (minus 1 for the header). A quick way to check dataset size without loading anything.
+
+### Combining pipes
+
+Now the real payoff. You can chain as many commands as you need:
+
+**How many observations are in the treatment group?**
+```bash
+$ grep ",1," household_survey.csv | wc -l
+    2487
+```
+
+This says: find all lines containing `,1,` (the treatment indicator, surrounded by commas), then count them.
+
+**What variables are in this dataset?**
+```bash
+$ head -n 1 household_survey.csv
+hhid,district,treatment,income,n_children
+```
+
+**Which do-files use the `regress` command?**
+```bash
+$ grep -rl "regress" ./code/ | sort
+./code/02_analysis.do
+./code/03_robustness.do
+./code/05_heterogeneity.do
+```
+
+### Output redirection (`>` and `>>`)
+
+Instead of printing to the screen, you can send output to a file:
+
+```bash
+$ grep "ERROR" analysis.log > errors.txt        # write to a new file (overwrites)
+$ grep "WARNING" analysis.log >> errors.txt     # append to existing file
+```
+
+::: {.callout-tip}
+## Economist's Analogy
+Pipes are the terminal's version of **method chaining** or **piping in R** (`%>%`). Each command does one thing well, and you compose them to answer complex questions. It's the Unix philosophy: small, focused tools that combine. This is also how Stata works — `gen`, `replace`, `collapse`, `merge` each do one thing, and you chain them together in a do-file.
+:::
+
+## A Few More Useful Commands
+
+| Command | What It Does | Example |
+|---|---|---|
+| `clear` | Clear the terminal screen | `clear` |
+| `history` | Show your recent commands | `history` (then re-run one with `!42`) |
+| `man` | Read the **man**ual for a command | `man grep` (press `q` to exit) |
+| `which` | Find where a program lives | `which stata` shows the path to Stata |
+| `echo` | Print text | `echo "hello"` or `echo $PATH` to see your PATH |
+
+::: {.callout-note}
+## Getting Unstuck
+If the terminal seems frozen or stuck in a command:
+
+- **`Ctrl + C`** — cancel the current command
+- **`q`** — quit interactive views (like `less` or `man`)
+- **`Ctrl + D`** — exit the terminal session
+- **`Ctrl + L`** — clear the screen (same as `clear`)
+
+You will use `Ctrl + C` constantly. It's the universal "nevermind, stop" signal.
+:::
+
+## Exercise: Exploring a Replication Package
+
+This exercise simulates what you'd actually do when you download a replication package or start working with a collaborator's project. You'll use only the terminal — no Finder, no Stata, no Excel.
+
+### Setup
+
+Pick a project folder on your computer — ideally one with some do-files, CSVs, or other research files. If you don't have one handy, create a practice structure:
+
+```bash
+$ mkdir -p ~/practice-project/code
+$ mkdir -p ~/practice-project/data/raw
+$ mkdir -p ~/practice-project/output
+$ echo "hhid,treatment,income,district" > ~/practice-project/data/raw/survey.csv
+$ echo "1001,1,45000,Nairobi" >> ~/practice-project/data/raw/survey.csv
+$ echo "1002,0,32000,Mombasa" >> ~/practice-project/data/raw/survey.csv
+$ echo "1003,1,51000,Nairobi" >> ~/practice-project/data/raw/survey.csv
+$ echo "1004,0,28000,Kisumu" >> ~/practice-project/data/raw/survey.csv
+```
+
+### Tasks
+
+Work through these using only the terminal:
+
+1. **Navigate** to the project folder and confirm your location with `pwd`
+2. **Explore** the folder structure: What directories exist? What files are in each?
+3. **Check the data**: How many observations (rows) are in the CSV? What are the variable names?
+4. **Search**: If you have do-files, find all lines that contain `gen` or `regress`. If using the practice data, search for "Nairobi" in the CSV.
+5. **Count**: How many observations are from Nairobi? (Use `grep` and `wc -l`)
+6. **Save your work**: Redirect the results of your Nairobi search to a file called `nairobi_obs.txt`
+7. **Verify**: Use `cat` to confirm the file was created correctly
+
+### Sample solution (for the practice data)
+
+```bash
+$ cd ~/practice-project
+$ pwd
+/Users/emily/practice-project
+
+$ ls -R
+code    data    output
+./code:
+./data:
+raw
+./data/raw:
+survey.csv
+./output:
+
+$ wc -l data/raw/survey.csv
+       5 data/raw/survey.csv
+
+$ head -n 1 data/raw/survey.csv
+hhid,treatment,income,district
+
+$ grep "Nairobi" data/raw/survey.csv
+1001,1,45000,Nairobi
+1003,1,51000,Nairobi
+
+$ grep "Nairobi" data/raw/survey.csv | wc -l
+       2
+
+$ grep "Nairobi" data/raw/survey.csv > output/nairobi_obs.txt
+
+$ cat output/nairobi_obs.txt
+1001,1,45000,Nairobi
+1003,1,51000,Nairobi
+```
+
+## Discussion Questions
+
+1. Many economics journals now require replication packages. How does command-line literacy help you *create* better replication packages? How does it help you *evaluate* someone else's package?
+2. A colleague says "I can do all of this in Stata — why learn another tool?" What can the terminal do that Stata can't? What's the value of having a tool that works *outside* of any specific application?
+3. Think about a repetitive task you've done manually (renaming files, checking data, copying folders). How might you approach it differently with the terminal?
+4. Why do you think the command line has survived for 50+ years while graphical interfaces have changed completely every decade? What does this tell you about which skills are worth investing in?
+
+## Key Takeaways
+
+1. **The terminal is a reproducible interface to your computer.** Every action is a typed command that can be recorded, shared, and replayed — unlike point-and-click workflows.
+2. **A handful of commands covers most needs.** `pwd`, `ls`, `cd`, `cat`, `head`, `grep`, `wc`, and pipes will handle the majority of what you need as an economist.
+3. **Pipes are the key insight.** Combining small, focused commands into chains lets you answer complex questions without writing a script or opening an application.
+4. **This is the foundation for everything else.** Git, remote computing, Stata batch mode, and AI coding tools all assume you can navigate a terminal. Time invested here pays off repeatedly.
+
+::: {.callout-note collapse="true"}
+## Notes for instructors
+
+This module works best as a live-coding session where students follow along on their own machines. Go slowly through the first few commands (`pwd`, `ls`, `cd`) — students who have never used a terminal will need time to build confidence. The exercise at the end can be done individually or in pairs.
+
+**Common student issues**: (1) Windows students may need help installing Git Bash or WSL before the session — consider sending setup instructions in advance. (2) Students often forget `cd` changes are persistent across commands (they expect each command to "reset"). (3) Tab completion is the single most impactful thing you can teach early — demonstrate it repeatedly.
+
+**Adaptation**: For a shorter session (~45 min), skip the "File Operations" and "A Few More Useful Commands" sections and focus on navigation, reading files, grep, and pipes. These are the highest-value skills for the exercise.
+
+**Connection to other modules**: This module is a prerequisite for [B2: Git & GitHub Essentials](b2-git-github.qmd), which assumes students can navigate the terminal.
+:::

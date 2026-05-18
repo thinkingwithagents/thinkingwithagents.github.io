@@ -1,0 +1,70 @@
+---
+title: "When to Move to the Terminal"
+subtitle: "A guide for faculty who are wondering whether they need more"
+---
+
+::: {.module-meta}
+[~10 min read]{.badge .badge-time}
+[Faculty Quick Start]{.badge .badge-track}
+[Reference page]{.badge .badge-no-code}
+:::
+
+## The App Is Enough
+
+Let's start here: **for most faculty, the desktop app is all you need.**
+
+If you're using AI for document-level tasks — course prep, feedback, summarizing readings, drafting policy language — the desktop app handles this well. You attach files, ask questions, iterate, and get useful output. That workflow covers 90% of what faculty typically want AI to do.
+
+You do not need the terminal to get value from AI. If the F-track modules are working for you and nothing below sounds familiar, stop reading and keep using the app.
+
+## Signs You Might Want More
+
+If you've been using AI for a while and you notice certain friction points, those are signals that a terminal-based workflow would help:
+
+### "I keep doing the same thing to dozens of files."
+
+You're generating reading guides for 15 papers, or reformatting a folder of old exams, or creating practice problems for every chapter. Doing this one file at a time in the app works, but it's tedious. In the terminal, you can write a short script that processes all 15 files automatically.
+
+### "I wish this were part of my Stata or R workflow."
+
+You use AI to help debug Stata code, but the workflow is: copy code from Stata, paste into AI app, read the suggestion, type it back into Stata. In the terminal, AI can read your `.do` file directly, suggest changes in context, and you accept or reject each edit without leaving your workflow.
+
+### "I want to track what changed and why."
+
+You've been editing course materials with AI help, but you're not sure which version is current, what you changed last week, or how to go back. Terminal-based AI workflows integrate naturally with version control (Git) — every change is recorded, and you can always undo.
+
+### "I'm building something students will use."
+
+You want to create an interactive simulation, a course website, or a tool that students can run. These are development tasks, and they benefit from tools designed for development — editors, file management, testing, and deployment.
+
+### "I want finer control over what the AI sees."
+
+In the app, you can attach files. In the terminal, you can tell AI to read your entire project folder, ignore certain files, or focus on specific sections. For larger projects with many files, this control matters.
+
+## Signs the App Is the Right Choice
+
+Conversely, stick with the app when:
+
+- **You're doing one-off tasks.** One exam, one rubric, one reading guide. The overhead of learning terminal tools isn't worth it.
+- **Your work lives in Word or Google Docs.** The app integrates naturally with document workflows. The terminal does not.
+- **You want quick Q&A or brainstorming.** "What's a good way to explain comparative advantage?" doesn't need a terminal.
+- **The file picker already does what you need.** If dragging a file into the app works, you don't need a more powerful way to select files.
+
+## What Terminal-Based AI Actually Looks Like
+
+If you've never used the terminal, this might sound intimidating. It shouldn't. Here's what it actually looks like:
+
+You type a question in plain English. The AI reads your project files, suggests edits, and you approve or reject each one. It's a conversation — just in text instead of a chat window. The difference is that the AI can touch your files directly, run your code, and keep track of the whole project structure.
+
+It's not "harder" than the app. It's different. It trades the graphical interface for more power over files, automation, and integration with other tools. Some people prefer it immediately; some never need it. Both are fine.
+
+## The Bridge
+
+If anything in the "want more" list resonated, start with [B1: Terminal Basics](b1-terminal-basics.qmd). It's a 75-minute module that teaches you to navigate files, search text, and run basic commands. By the end, you'll know whether the terminal is something you want to pursue — or whether the app is genuinely the right fit for your work.
+
+One module is enough to tell. There's no commitment, and the skills transfer regardless.
+
+::: {.callout-tip}
+## No Guilt
+There is no hierarchy here. Faculty who use the desktop app are not doing it wrong. Faculty who use the terminal are not doing it better. They're different tools for different tasks. The best choice is the one that fits how you actually work.
+:::

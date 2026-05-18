@@ -3,11 +3,12 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+    - "modules/*.qmd"
     - "!slides/"
 
 website:
   title: "Thinking with Agents"
-  description: "Modular AI literacy resources for UVM Economics students and faculty"
+  description: "Modular AI literacy resources for economists and social scientists"
   site-url: https://thinkingwithagents.github.io
   repo-url: https://github.com/thinkingwithagents/thinkingwithagents.github.io
   repo-actions: [issue]

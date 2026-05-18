@@ -1,0 +1,94 @@
+# ==============================================
+# .gitignore for Economics Research Projects
+# ==============================================
+# Copy this file to your project root and rename it to .gitignore
+# Then run: git add .gitignore && git commit -m "Add .gitignore for economics project"
+# ==============================================
+
+# ------------------------------------------
+# Data files
+# ------------------------------------------
+# These are typically too large for Git and should be stored
+# separately (e.g., Box, Dropbox, or a data repository).
+# Your README should document where to find the data.
+*.dta
+*.csv
+*.xlsx
+*.xls
+*.sav
+*.rds
+*.rda
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+
+# ------------------------------------------
+# Stata output files
+# ------------------------------------------
+# Log files change every time you run code, so they create
+# noisy commit histories. Re-generate them from do-files instead.
+*.log
+*.smcl
+
+# ------------------------------------------
+# R output and environment
+# ------------------------------------------
+.Rhistory
+.RData
+.Rproj.user/
+
+# ------------------------------------------
+# LaTeX auxiliary files
+# ------------------------------------------
+# These are generated during compilation and can always be
+# recreated from the .tex source files.
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# ------------------------------------------
+# Compiled PDFs (optional)
+# ------------------------------------------
+# Uncomment the next line if you want to track only source
+# files (.tex, .Rmd) and not compiled output. Leave it
+# commented if you want PDFs in the repo (e.g., for sharing
+# with co-authors who do not compile LaTeX).
+# *.pdf
+
+# ------------------------------------------
+# OS-generated files
+# ------------------------------------------
+# These are created automatically by your operating system
+# and have no place in a research project.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------
+# Editor and IDE files
+# ------------------------------------------
+# Temporary files created by text editors.
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ------------------------------------------
+# Python (if applicable)
+# ------------------------------------------
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
