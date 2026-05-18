@@ -1,0 +1,125 @@
+---
+title: "Getting Started"
+subtitle: "A sequenced guide for economists — from zero to working AI workflow"
+toc: true
+toc-depth: 2
+---
+
+The resources already exist — they're just scattered. This page puts them in order.
+
+Most economists don't need a course. They need someone to say: do this first, then this, then this. That's what this page is.
+
+**How to use this page:** Work through the layers in order if you're starting from scratch. Jump to wherever you got stuck if you're partway there. Each layer ends with a checkpoint so you know when you're ready to move on.
+
+---
+
+## Layer 1: The Terminal
+
+You already use a terminal — Stata's command window is one. The difference is that your computer's terminal (`Terminal` on Mac, `PowerShell` on Windows) can control *everything*, not just Stata. AI coding tools live here, and learning a handful of commands makes the rest of this guide possible.
+
+**You need about 10 commands**: `ls`, `cd`, `pwd`, `mkdir`, `cp`, `mv`, `rm`, `cat`, `grep`, `which`. That's it for now.
+
+**Primary resource**: [Terminal Basics for Economists](modules/b1-terminal-basics.qmd) (~75 min, hands-on with economics data)
+— Our module. Uses a Kenya household survey dataset. Includes exercises with answer keys.
+
+**Supplement**: [The Unix Shell](https://swcarpentry.github.io/shell-novice/) (Software Carpentry)
+— More thorough, with a biology-flavored dataset, but the shell commands are identical.
+
+::: {.callout-tip}
+## You're ready for the next layer when...
+You can open a terminal, `cd` to a project folder, `ls` its contents, and `grep` for a variable name in a `.do` or `.R` file.
+:::
+
+## Layer 2: Version Control (Git & GitHub)
+
+If your version control system is `analysis_final_v2_REAL_USE_THIS.do`, you need Git. Even if you work alone — because AI tools generate a lot of code, and you need a way to track what changed and undo what broke.
+
+The core workflow is five commands: `clone`, `add`, `commit`, `push`, `pull`. Learn those and you're functional.
+
+**Primary resource**: [Git & GitHub Essentials for Economists](modules/b2-git-github.qmd) (~75 min, hands-on)
+— Our module. Covers the mental model, the 5-command workflow, reading diffs, and common mistakes. Includes an econ-specific `.gitignore` template.
+
+**Supplement**: [Git: A Guide for Economists](https://github.com/fpinter/git-for-economists) (Frank Pinter)
+— The gold standard econ-specific git reference. More comprehensive than you need right now, but excellent to return to.
+
+**If you don't want the terminal**: [GitHub Desktop](https://desktop.github.com/) is a legitimate choice. It does everything above through a GUI. Not a crutch — just a different interface.
+
+::: {.callout-tip}
+## You're ready for the next layer when...
+You can clone a GitHub repo to your machine, make a change, commit it with a meaningful message, and push it back.
+:::
+
+## Layer 3: Your AI Setup
+
+Now you need the actual tool. The two main options for economists right now are [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic) and [Codex](https://openai.com/index/introducing-codex/) (OpenAI). Both are terminal-based, both can read and edit your files, both cost money beyond free tiers.
+
+**Not sure you need the terminal?** Read [When to Move to the Terminal](modules/terminal-transition.qmd) — a short guide for people who are productive with desktop apps and wondering whether the terminal is worth it.
+
+**Installation**: Our [Prep Guide](prep.qmd) has step-by-step instructions for both tools on Mac and Windows. Start there.
+
+**Getting oriented after install**:
+
+- [Getting Started with Claude Code](https://paulgp.substack.com/p/getting-started-with-claude-code) (Paul Goldsmith-Pinkham) — A thorough walkthrough from a fellow economist. Covers setup, first tasks, and an explicit privacy framework.
+- [Claude Blattman: Essentials](https://claudeblattman.com) (Chris Blattman) — "I've never coded in my life, so if I can do this you can." Beginner-friendly, operational focus.
+
+**On cost**: Claude Pro ($20/mo) or ChatGPT Plus ($20/mo) are enough to get started. You'll know if you need more. Don't overthink this — pick one and try it for a month.
+
+**On privacy**: These tools send your files to remote servers during your session. Published data, your own code, and course materials are fine. IRB-protected data, student records, and restricted-use datasets are not. Paul GP's rule of thumb: "If you wouldn't email it to a collaborator, don't point the AI at it." Use `.claudeignore` to exclude sensitive directories.
+
+::: {.callout-tip}
+## You're ready for the next layer when...
+You can open your AI tool in a terminal, `cd` to a project folder, and ask it to do something small — summarize a file, rename some variables, draft an email. It works, and you understand what it read to do the task.
+:::
+
+## Layer 4: Deploying Things
+
+This is the layer nobody teaches. AI can build you a website, write your replication package, or generate a slide deck — but if you can't get it off your laptop and onto the internet, it doesn't matter. The gap between "AI made me a thing" and "the thing actually works in the world" is deployment. It's not hard, but you have to learn it once.
+
+**Three things economists actually deploy:**
+
+### Websites (Quarto → GitHub Pages)
+
+If you use Quarto (for slides, course sites, or personal pages), you can publish for free on GitHub Pages. The workflow: write `.qmd` files → render → push to GitHub → site is live.
+
+📖 [Publishing with GitHub Pages](https://quarto.org/docs/publishing/github-pages.html) (Quarto docs) — The official guide. Clear and complete.
+
+📖 [Quarto + GitHub Pages walkthrough](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/4-quarto_github_pages.html) (UBC DSCI 521) — A lecture-style walkthrough if you want more hand-holding than the official docs.
+
+### Shared code ("here's my repo")
+
+Sharing a GitHub repo is better than emailing a zip file. But a repo someone else can actually use needs: a README that explains what's in it, a `.gitignore` that excludes junk, and file paths that aren't hardcoded to your machine.
+
+📖 The `config_local.do` pattern: Instead of `cd "/Users/emily/Dropbox/myproject/"`, create a `config_local_template.do` with placeholder paths. Each collaborator copies it to `config_local.do` (which is `.gitignore`'d) and fills in their own paths. Your master script `include`s it. Now the code runs on anyone's machine.
+
+### Replication packages
+
+If you're assembling a replication package for a journal, the standard is a master script that runs everything from raw data to final tables. The [AEA Data Editor's guidance](https://aeadataeditor.github.io/aea-de-guidance/) is the reference.
+
+::: {.callout-tip}
+## You're ready for the next layer when...
+You've published *something* — a Quarto page, a GitHub repo with a README, or a shared project folder with `config_local.do`. The bar is: someone else could find it and use it without emailing you.
+:::
+
+## Layer 5: Connecting the Pieces
+
+The previous four layers are independent skills. This section is about how they combine into workflows you'll actually use.
+
+### Workflow A: "Make a course website"
+
+Terminal (Layer 1) → create a Quarto project → AI (Layer 3) generates page content from your syllabus and notes → Git (Layer 2) tracks versions → GitHub Pages (Layer 4) publishes it. Time to live site: under an hour once you've done it once.
+
+### Workflow B: "Build a replication package"
+
+AI (Layer 3) drafts a master do-file and README from your existing scripts → you review and fix what it gets wrong → Git (Layer 2) tracks the package → GitHub (Layer 4) hosts it. The AI handles the tedious parts (file headers, path management, README boilerplate). You handle the judgment (does this code actually reproduce the results?).
+
+### Workflow C: "Go from rough idea to shareable analysis"
+
+Terminal (Layer 1) → create a project folder with clean structure → AI (Layer 3) does initial data exploration and drafts analysis code → Git (Layer 2) checkpoints each stage → share the repo (Layer 4) when it's ready for a coauthor or RA.
+
+---
+
+### What comes next
+
+Once you're comfortable with the basics, the [Prep Guide](prep.qmd) covers installation details and troubleshooting. [Applications & Skills](applications.qmd) shows specific research and teaching workflows. And the [Bells & Whistles](resources.qmd) page covers integrations and advanced tools for when you're ready to go deeper.
+
+If you're attending one of our [webinars](index.qmd#upcoming-webinars--june-2026) — this page is your pre-work. You don't need all five layers before the session, but Layers 1-3 will help you follow along.
