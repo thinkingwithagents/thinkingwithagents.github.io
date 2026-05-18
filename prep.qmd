@@ -3,6 +3,10 @@ title: "Getting Set Up"
 subtitle: "Choose a tool, pick a plan, install it"
 ---
 
+::: {.callout-note appearance="simple"}
+**Starting from scratch?** See [Getting Started](getting-started.qmd) for the full path from zero to setup-ready. This page covers installation once you're ready for it.
+:::
+
 ## Install guide
 
 ### Step 1: Pick your machine, then your tool

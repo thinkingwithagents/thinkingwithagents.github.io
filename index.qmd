@@ -100,4 +100,10 @@ How faculty can use AI tools for course design, student feedback, and teaching s
 
 Together, they developed and delivered the [UVM Economics AI Bootcamp](past-events.qmd) (Spring 2026) and created the Thinking with Agents resource collection.
 
+---
+
+[New to AI tools?]{.landing-section-title}
+
+If you've never used a terminal, Git, or an AI coding tool — start with our [Getting Started](getting-started.qmd) guide. It sequences the best existing resources into a clear path. Most economists can work through it in an afternoon.
+
 :::
