@@ -173,7 +173,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#where-am-i-pwd" id="toc-where-am-i-pwd" class="nav-link" data-scroll-target="#where-am-i-pwd">Where am I? (<code>pwd</code>)</a></li>
   <li><a href="#whats-here-ls" id="toc-whats-here-ls" class="nav-link" data-scroll-target="#whats-here-ls">What’s here? (<code>ls</code>)</a></li>
   <li><a href="#moving-around-cd" id="toc-moving-around-cd" class="nav-link" data-scroll-target="#moving-around-cd">Moving around (<code>cd</code>)</a></li>
-  <li><a href="#a-note-on-spaces-in-filenames" id="toc-a-note-on-spaces-in-filenames" class="nav-link" data-scroll-target="#a-note-on-spaces-in-filenames">A note on spaces in filenames</a></li>
   </ul></li>
   <li><a href="#reading-files" id="toc-reading-files" class="nav-link" data-scroll-target="#reading-files">Reading Files</a>
   <ul class="collapse">
@@ -184,15 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#searching-grep" id="toc-searching-grep" class="nav-link" data-scroll-target="#searching-grep">Searching: <code>grep</code></a>
   <ul class="collapse">
   <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link" data-scroll-target="#basic-usage">Basic usage</a></li>
-  <li><a href="#useful-flags" id="toc-useful-flags" class="nav-link" data-scroll-target="#useful-flags">Useful flags</a></li>
   <li><a href="#searching-a-project" id="toc-searching-a-project" class="nav-link" data-scroll-target="#searching-a-project">Searching a project</a></li>
-  </ul></li>
-  <li><a href="#file-operations" id="toc-file-operations" class="nav-link" data-scroll-target="#file-operations">File Operations</a>
-  <ul class="collapse">
-  <li><a href="#create-a-directory-mkdir" id="toc-create-a-directory-mkdir" class="nav-link" data-scroll-target="#create-a-directory-mkdir">Create a directory (<code>mkdir</code>)</a></li>
-  <li><a href="#copy-files-cp" id="toc-copy-files-cp" class="nav-link" data-scroll-target="#copy-files-cp">Copy files (<code>cp</code>)</a></li>
-  <li><a href="#move-or-rename-files-mv" id="toc-move-or-rename-files-mv" class="nav-link" data-scroll-target="#move-or-rename-files-mv">Move or rename files (<code>mv</code>)</a></li>
-  <li><a href="#remove-files-rm" id="toc-remove-files-rm" class="nav-link" data-scroll-target="#remove-files-rm">Remove files (<code>rm</code>)</a></li>
   </ul></li>
   <li><a href="#pipes-and-redirection" id="toc-pipes-and-redirection" class="nav-link" data-scroll-target="#pipes-and-redirection">Pipes and Redirection</a>
   <ul class="collapse">
@@ -201,14 +192,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#combining-pipes" id="toc-combining-pipes" class="nav-link" data-scroll-target="#combining-pipes">Combining pipes</a></li>
   <li><a href="#output-redirection-and" id="toc-output-redirection-and" class="nav-link" data-scroll-target="#output-redirection-and">Output redirection (<code>&gt;</code> and <code>&gt;&gt;</code>)</a></li>
   </ul></li>
-  <li><a href="#a-few-more-useful-commands" id="toc-a-few-more-useful-commands" class="nav-link" data-scroll-target="#a-few-more-useful-commands">A Few More Useful Commands</a></li>
   <li><a href="#exercise-exploring-a-replication-package" id="toc-exercise-exploring-a-replication-package" class="nav-link" data-scroll-target="#exercise-exploring-a-replication-package">Exercise: Exploring a Replication Package</a>
   <ul class="collapse">
   <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
-  <li><a href="#sample-solution-for-the-practice-data" id="toc-sample-solution-for-the-practice-data" class="nav-link" data-scroll-target="#sample-solution-for-the-practice-data">Sample solution (for the practice data)</a></li>
   </ul></li>
-  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions">Discussion Questions</a></li>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/thinkingwithagents/thinkingwithagents.github.io/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -343,7 +331,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">drwx------</span>   8 emily  staff   256 Mar 20 11:05 Downloads</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">drwx------</span>  15 emily  staff   480 Mar 19 08:30 Dropbox</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The <code>-l</code> flag gives you a <strong>long listing</strong> — permissions, owner, size, date modified, and name. The <code>d</code> at the start of each line means it’s a directory.</p>
-<p>Other useful flags:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: Other useful ls flags
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -370,6 +369,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
 </section>
 <section id="moving-around-cd" class="level3">
 <h3 class="anchored" data-anchor-id="moving-around-cd">Moving around (<code>cd</code>)</h3>
@@ -377,7 +379,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd Documents</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/emily/Documents</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Key shortcuts:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: cd shortcuts reference
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -414,6 +427,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
 <p>You can chain these:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Dropbox/research/my-project</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
@@ -434,13 +450,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Tab completion is not laziness. It is how you avoid mistyping paths and accidentally operating on the wrong file.</p>
 </div>
 </div>
-</section>
-<section id="a-note-on-spaces-in-filenames" class="level3">
-<h3 class="anchored" data-anchor-id="a-note-on-spaces-in-filenames">A note on spaces in filenames</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: A note on spaces in filenames
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Spaces in folder names cause problems on the command line because the terminal interprets spaces as separating different arguments. If you have a folder called <code>My Project</code>, you need to either:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd <span class="st">"My Project"</span>     <span class="co"># wrap in quotes</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd My<span class="dt">\ </span>Project      <span class="co"># escape the space with a backslash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This is one reason many programmers and researchers use hyphens or underscores in folder names: <code>my-project</code> or <code>my_project</code> is much easier to work with than <code>My Project</code>.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="reading-files" class="level2">
@@ -501,9 +529,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">reg</span> log_income treatment age education, robust</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">label</span> var income <span class="st">"Monthly household income (KES)"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This found every line in <code>analysis.do</code> that contains the word “income”.</p>
-</section>
-<section id="useful-flags" class="level3">
-<h3 class="anchored" data-anchor-id="useful-flags">Useful flags</h3>
+<p>The two flags you’ll use most: <code>-r</code> (search all files in a directory) and <code>-n</code> (show line numbers).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: All grep flags worth knowing
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -545,6 +583,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
 </section>
 <section id="searching-a-project" class="level3">
 <h3 class="anchored" data-anchor-id="searching-a-project">Searching a project</h3>
@@ -567,10 +608,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>grep "treatment effect" file.do</code> looks for the exact string “treatment effect” (with the space). If you want to search for either “treatment” or “effect” separately, those are two separate searches.</p>
 </div>
 </div>
-</section>
-</section>
-<section id="file-operations" class="level2">
-<h2 class="anchored" data-anchor-id="file-operations">File Operations</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: File Operations (mkdir, cp, mv, rm)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <section id="create-a-directory-mkdir" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-directory-mkdir">Create a directory (<code>mkdir</code>)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir replication-package</span>
@@ -611,6 +660,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls temp_<span class="pp">*</span>.csv          <span class="co"># check what matches</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">temp_data.csv</span>  temp_results.csv</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm temp_<span class="pp">*</span>.csv          <span class="co"># now delete (you know what you're removing)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+</div>
 </div>
 </div>
 </section>
@@ -668,10 +721,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Pipes are the terminal’s version of <strong>method chaining</strong> or <strong>piping in R</strong> (<code>%&gt;%</code>). Each command does one thing well, and you compose them to answer complex questions. It’s the Unix philosophy: small, focused tools that combine. This is also how Stata works — <code>gen</code>, <code>replace</code>, <code>collapse</code>, <code>merge</code> each do one thing, and you chain them together in a do-file.</p>
 </div>
 </div>
-</section>
-</section>
-<section id="a-few-more-useful-commands" class="level2">
-<h2 class="anchored" data-anchor-id="a-few-more-useful-commands">A Few More Useful Commands</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: A few more useful commands
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -713,6 +774,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -733,6 +797,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You will use <code>Ctrl + C</code> constantly. It’s the universal “nevermind, stop” signal.</p>
 </div>
 </div>
+</section>
 </section>
 <section id="exercise-exploring-a-replication-package" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-exploring-a-replication-package">Exercise: Exploring a Replication Package</h2>
@@ -761,9 +826,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Save your work</strong>: Redirect the results of your Nairobi search to a file called <code>nairobi_obs.txt</code></li>
 <li><strong>Verify</strong>: Use <code>cat</code> to confirm the file was created correctly</li>
 </ol>
-</section>
-<section id="sample-solution-for-the-practice-data" class="level3">
-<h3 class="anchored" data-anchor-id="sample-solution-for-the-practice-data">Sample solution (for the practice data)</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: Sample solution (for the practice data)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/practice-project</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/emily/practice-project</span></span>
@@ -795,16 +869,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat output/nairobi_obs.txt</span>
 <span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a><span class="ex">1001,1,45000,Nairobi</span></span>
 <span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a><span class="ex">1003,1,51000,Nairobi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="discussion-questions" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-questions">Discussion Questions</h2>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: Discussion Questions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Many economics journals now require replication packages. How does command-line literacy help you <em>create</em> better replication packages? How does it help you <em>evaluate</em> someone else’s package?</li>
 <li>A colleague says “I can do all of this in Stata — why learn another tool?” What can the terminal do that Stata can’t? What’s the value of having a tool that works <em>outside</em> of any specific application?</li>
 <li>Think about a repetitive task you’ve done manually (renaming files, checking data, copying folders). How might you approach it differently with the terminal?</li>
 <li>Why do you think the command line has survived for 50+ years while graphical interfaces have changed completely every decade? What does this tell you about which skills are worth investing in?</li>
 </ol>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="key-takeaways" class="level2">
 <h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
@@ -815,7 +904,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>This is the foundation for everything else.</strong> Git, remote computing, Stata batch mode, and AI coding tools all assume you can navigate a terminal. Time invested here pays off repeatedly.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -824,7 +913,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This module works best as a live-coding session where students follow along on their own machines. Go slowly through the first few commands (<code>pwd</code>, <code>ls</code>, <code>cd</code>) — students who have never used a terminal will need time to build confidence. The exercise at the end can be done individually or in pairs.</p>
 <p><strong>Common student issues</strong>: (1) Windows students may need help installing Git Bash or WSL before the session — consider sending setup instructions in advance. (2) Students often forget <code>cd</code> changes are persistent across commands (they expect each command to “reset”). (3) Tab completion is the single most impactful thing you can teach early — demonstrate it repeatedly.</p>

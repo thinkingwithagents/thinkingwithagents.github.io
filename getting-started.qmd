@@ -69,7 +69,11 @@ Now you need the actual tool. The two main options for economists right now are 
 
 **On cost**: Claude Pro ($20/mo) or ChatGPT Plus ($20/mo) are enough to get started. You'll know if you need more. Don't overthink this — pick one and try it for a month.
 
-**On privacy**: These tools send your files to remote servers during your session. Published data, your own code, and course materials are fine. IRB-protected data, student records, and restricted-use datasets are not. Paul GP's rule of thumb: "If you wouldn't email it to a collaborator, don't point the AI at it." Use `.claudeignore` to exclude sensitive directories.
+::: {.callout-tip collapse="true"}
+## Click to expand: Privacy considerations
+
+These tools send your files to remote servers during your session. Published data, your own code, and course materials are fine. IRB-protected data, student records, and restricted-use datasets are not. Paul GP's rule of thumb: "If you wouldn't email it to a collaborator, don't point the AI at it." Use `.claudeignore` to exclude sensitive directories.
+:::
 
 ::: {.callout-tip}
 ## On a budget?
@@ -91,23 +95,28 @@ This is the layer nobody teaches. AI can build you a website, write your replica
 
 **Three things economists actually deploy:**
 
-### Websites (Quarto → GitHub Pages)
+::: {.callout-tip collapse="true"}
+## Click to expand: Websites (Quarto to GitHub Pages)
 
 If you use Quarto (for slides, course sites, or personal pages), you can publish for free on GitHub Pages. The workflow: write `.qmd` files → render → push to GitHub → site is live.
 
-📖 [Publishing with GitHub Pages](https://quarto.org/docs/publishing/github-pages.html) (Quarto docs) — The official guide. Clear and complete.
+- [Publishing with GitHub Pages](https://quarto.org/docs/publishing/github-pages.html) (Quarto docs) — The official guide. Clear and complete.
+- [Quarto + GitHub Pages walkthrough](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/4-quarto_github_pages.html) (UBC DSCI 521) — A lecture-style walkthrough if you want more hand-holding than the official docs.
+:::
 
-📖 [Quarto + GitHub Pages walkthrough](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/4-quarto_github_pages.html) (UBC DSCI 521) — A lecture-style walkthrough if you want more hand-holding than the official docs.
-
-### Shared code ("here's my repo")
+::: {.callout-tip collapse="true"}
+## Click to expand: Shared code ("here's my repo")
 
 Sharing a GitHub repo is better than emailing a zip file. But a repo someone else can actually use needs: a README that explains what's in it, a `.gitignore` that excludes junk, and file paths that aren't hardcoded to your machine.
 
-📖 The `config_local.do` pattern: Instead of `cd "/Users/emily/Dropbox/myproject/"`, create a `config_local_template.do` with placeholder paths. Each collaborator copies it to `config_local.do` (which is `.gitignore`'d) and fills in their own paths. Your master script `include`s it. Now the code runs on anyone's machine.
+The `config_local.do` pattern: Instead of `cd "/Users/emily/Dropbox/myproject/"`, create a `config_local_template.do` with placeholder paths. Each collaborator copies it to `config_local.do` (which is `.gitignore`'d) and fills in their own paths. Your master script `include`s it. Now the code runs on anyone's machine.
+:::
 
-### Replication packages
+::: {.callout-tip collapse="true"}
+## Click to expand: Replication packages
 
 If you're assembling a replication package for a journal, the standard is a master script that runs everything from raw data to final tables. The [AEA Data Editor's guidance](https://aeadataeditor.github.io/aea-de-guidance/) is the reference.
+:::
 
 ::: {.callout-tip}
 ## You're ready for the next layer when...
@@ -117,6 +126,9 @@ You've published *something* — a Quarto page, a GitHub repo with a README, or 
 ## Layer 5: Connecting the Pieces
 
 The previous four layers are independent skills. This section is about how they combine into workflows you'll actually use.
+
+::: {.callout-tip collapse="true"}
+## Click to expand: Three example workflows
 
 ### Workflow A: "Make a course website"
 
@@ -129,6 +141,7 @@ AI (Layer 3) drafts a master do-file and README from your existing scripts → y
 ### Workflow C: "Go from rough idea to shareable analysis"
 
 Terminal (Layer 1) → create a project folder with clean structure → AI (Layer 3) does initial data exploration and drafts analysis code → Git (Layer 2) checkpoints each stage → share the repo (Layer 4) when it's ready for a coauthor or RA.
+:::
 
 ---
 

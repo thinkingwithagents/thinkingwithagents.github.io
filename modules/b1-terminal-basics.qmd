@@ -103,13 +103,15 @@ drwx------  15 emily  staff   480 Mar 19 08:30 Dropbox
 
 The `-l` flag gives you a **long listing** — permissions, owner, size, date modified, and name. The `d` at the start of each line means it's a directory.
 
-Other useful flags:
+::: {.callout-tip collapse="true"}
+## Click to expand: Other useful ls flags
 
 | Command | What It Does |
 |---|---|
 | `ls -a` | Show **all** files, including hidden ones (files starting with `.`) |
 | `ls -lh` | Long listing with **human-readable** file sizes (KB, MB, GB) |
 | `ls -lt` | Long listing sorted by **time** (most recent first) |
+:::
 
 ### Moving around (`cd`)
 
@@ -121,7 +123,8 @@ $ pwd
 /Users/emily/Documents
 ```
 
-Key shortcuts:
+::: {.callout-tip collapse="true"}
+## Click to expand: cd shortcuts reference
 
 | Shortcut | Meaning | Example |
 |---|---|---|
@@ -129,6 +132,7 @@ Key shortcuts:
 | `..` | One level up (parent directory) | `cd ..` from `/Users/emily/Documents` takes you to `/Users/emily` |
 | `-` | Previous directory | `cd -` toggles back to where you just were |
 | `/` | The root of the filesystem | `cd /` takes you to the very top |
+:::
 
 You can chain these:
 
@@ -150,7 +154,8 @@ $ cd ~/Dropbox/    # autocompleted!
 Tab completion is not laziness. It is how you avoid mistyping paths and accidentally operating on the wrong file.
 :::
 
-### A note on spaces in filenames
+::: {.callout-tip collapse="true"}
+## Click to expand: A note on spaces in filenames
 
 Spaces in folder names cause problems on the command line because the terminal interprets spaces as separating different arguments. If you have a folder called `My Project`, you need to either:
 
@@ -160,6 +165,7 @@ $ cd My\ Project      # escape the space with a backslash
 ```
 
 This is one reason many programmers and researchers use hyphens or underscores in folder names: `my-project` or `my_project` is much easier to work with than `My Project`.
+:::
 
 ## Reading Files
 
@@ -229,7 +235,10 @@ label var income "Monthly household income (KES)"
 
 This found every line in `analysis.do` that contains the word "income".
 
-### Useful flags
+The two flags you'll use most: `-r` (search all files in a directory) and `-n` (show line numbers).
+
+::: {.callout-tip collapse="true"}
+## Click to expand: All grep flags worth knowing
 
 | Flag | What It Does | Example |
 |---|---|---|
@@ -238,6 +247,7 @@ This found every line in `analysis.do` that contains the word "income".
 | `-r` | Search **r**ecursively through all files in a directory | `grep -r "treatment" ./do-files/` |
 | `-l` | Show only file **l**ists (which files contain the match) | `grep -rl "robust" .` lists all files mentioning "robust" |
 | `-c` | **C**ount matches | `grep -c "district" data.csv` counts how many rows mention "district" |
+:::
 
 ### Searching a project
 
@@ -257,7 +267,8 @@ In seconds, you know exactly where that variable is created and used — across 
 `grep "treatment effect" file.do` looks for the exact string "treatment effect" (with the space). If you want to search for either "treatment" or "effect" separately, those are two separate searches.
 :::
 
-## File Operations
+::: {.callout-tip collapse="true"}
+## Click to expand: File Operations (mkdir, cp, mv, rm)
 
 ### Create a directory (`mkdir`)
 
@@ -303,6 +314,8 @@ $ ls temp_*.csv          # check what matches
 temp_data.csv  temp_results.csv
 $ rm temp_*.csv          # now delete (you know what you're removing)
 ```
+:::
+
 :::
 
 ## Pipes and Redirection
@@ -373,7 +386,8 @@ $ grep "WARNING" analysis.log >> errors.txt     # append to existing file
 Pipes are the terminal's version of **method chaining** or **piping in R** (`%>%`). Each command does one thing well, and you compose them to answer complex questions. It's the Unix philosophy: small, focused tools that combine. This is also how Stata works — `gen`, `replace`, `collapse`, `merge` each do one thing, and you chain them together in a do-file.
 :::
 
-## A Few More Useful Commands
+::: {.callout-tip collapse="true"}
+## Click to expand: A few more useful commands
 
 | Command | What It Does | Example |
 |---|---|---|
@@ -382,6 +396,7 @@ Pipes are the terminal's version of **method chaining** or **piping in R** (`%>%
 | `man` | Read the **man**ual for a command | `man grep` (press `q` to exit) |
 | `which` | Find where a program lives | `which stata` shows the path to Stata |
 | `echo` | Print text | `echo "hello"` or `echo $PATH` to see your PATH |
+:::
 
 ::: {.callout-note}
 ## Getting Unstuck
@@ -426,7 +441,8 @@ Work through these using only the terminal:
 6. **Save your work**: Redirect the results of your Nairobi search to a file called `nairobi_obs.txt`
 7. **Verify**: Use `cat` to confirm the file was created correctly
 
-### Sample solution (for the practice data)
+::: {.callout-tip collapse="true"}
+## Click to expand: Sample solution (for the practice data)
 
 ```bash
 $ cd ~/practice-project
@@ -461,13 +477,16 @@ $ cat output/nairobi_obs.txt
 1001,1,45000,Nairobi
 1003,1,51000,Nairobi
 ```
+:::
 
-## Discussion Questions
+::: {.callout-tip collapse="true"}
+## Click to expand: Discussion Questions
 
 1. Many economics journals now require replication packages. How does command-line literacy help you *create* better replication packages? How does it help you *evaluate* someone else's package?
 2. A colleague says "I can do all of this in Stata — why learn another tool?" What can the terminal do that Stata can't? What's the value of having a tool that works *outside* of any specific application?
 3. Think about a repetitive task you've done manually (renaming files, checking data, copying folders). How might you approach it differently with the terminal?
 4. Why do you think the command line has survived for 50+ years while graphical interfaces have changed completely every decade? What does this tell you about which skills are worth investing in?
+:::
 
 ## Key Takeaways
 

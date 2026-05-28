@@ -129,17 +129,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#layer-1-the-terminal" id="toc-layer-1-the-terminal" class="nav-link active" data-scroll-target="#layer-1-the-terminal">Layer 1: The Terminal</a></li>
   <li><a href="#layer-2-version-control-git-github" id="toc-layer-2-version-control-git-github" class="nav-link" data-scroll-target="#layer-2-version-control-git-github">Layer 2: Version Control (Git &amp; GitHub)</a></li>
   <li><a href="#layer-3-your-ai-setup" id="toc-layer-3-your-ai-setup" class="nav-link" data-scroll-target="#layer-3-your-ai-setup">Layer 3: Your AI Setup</a></li>
-  <li><a href="#layer-4-deploying-things" id="toc-layer-4-deploying-things" class="nav-link" data-scroll-target="#layer-4-deploying-things">Layer 4: Deploying Things</a>
-  <ul class="collapse">
-  <li><a href="#websites-quarto-github-pages" id="toc-websites-quarto-github-pages" class="nav-link" data-scroll-target="#websites-quarto-github-pages">Websites (Quarto → GitHub Pages)</a></li>
-  <li><a href="#shared-code-heres-my-repo" id="toc-shared-code-heres-my-repo" class="nav-link" data-scroll-target="#shared-code-heres-my-repo">Shared code (“here’s my repo”)</a></li>
-  <li><a href="#replication-packages" id="toc-replication-packages" class="nav-link" data-scroll-target="#replication-packages">Replication packages</a></li>
-  </ul></li>
+  <li><a href="#layer-4-deploying-things" id="toc-layer-4-deploying-things" class="nav-link" data-scroll-target="#layer-4-deploying-things">Layer 4: Deploying Things</a></li>
   <li><a href="#layer-5-connecting-the-pieces" id="toc-layer-5-connecting-the-pieces" class="nav-link" data-scroll-target="#layer-5-connecting-the-pieces">Layer 5: Connecting the Pieces</a>
   <ul class="collapse">
-  <li><a href="#workflow-a-make-a-course-website" id="toc-workflow-a-make-a-course-website" class="nav-link" data-scroll-target="#workflow-a-make-a-course-website">Workflow A: “Make a course website”</a></li>
-  <li><a href="#workflow-b-build-a-replication-package" id="toc-workflow-b-build-a-replication-package" class="nav-link" data-scroll-target="#workflow-b-build-a-replication-package">Workflow B: “Build a replication package”</a></li>
-  <li><a href="#workflow-c-go-from-rough-idea-to-shareable-analysis" id="toc-workflow-c-go-from-rough-idea-to-shareable-analysis" class="nav-link" data-scroll-target="#workflow-c-go-from-rough-idea-to-shareable-analysis">Workflow C: “Go from rough idea to shareable analysis”</a></li>
   <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
   </ul></li>
   </ul>
@@ -235,7 +227,22 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://claudeblattman.com">Claude Blattman: Essentials</a> (Chris Blattman) — “I’ve never coded in my life, so if I can do this you can.” Beginner-friendly, operational focus.</li>
 </ul>
 <p><strong>On cost</strong>: Claude Pro ($20/mo) or ChatGPT Plus ($20/mo) are enough to get started. You’ll know if you need more. Don’t overthink this — pick one and try it for a month.</p>
-<p><strong>On privacy</strong>: These tools send your files to remote servers during your session. Published data, your own code, and course materials are fine. IRB-protected data, student records, and restricted-use datasets are not. Paul GP’s rule of thumb: “If you wouldn’t email it to a collaborator, don’t point the AI at it.” Use <code>.claudeignore</code> to exclude sensitive directories.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: Privacy considerations
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>These tools send your files to remote servers during your session. Published data, your own code, and course materials are fine. IRB-protected data, student records, and restricted-use datasets are not. Paul GP’s rule of thumb: “If you wouldn’t email it to a collaborator, don’t point the AI at it.” Use <code>.claudeignore</code> to exclude sensitive directories.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -267,20 +274,59 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="layer-4-deploying-things">Layer 4: Deploying Things</h2>
 <p>This is the layer nobody teaches. AI can build you a website, write your replication package, or generate a slide deck — but if you can’t get it off your laptop and onto the internet, it doesn’t matter. The gap between “AI made me a thing” and “the thing actually works in the world” is deployment. It’s not hard, but you have to learn it once.</p>
 <p><strong>Three things economists actually deploy:</strong></p>
-<section id="websites-quarto-github-pages" class="level3">
-<h3 class="anchored" data-anchor-id="websites-quarto-github-pages">Websites (Quarto → GitHub Pages)</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: Websites (Quarto to GitHub Pages)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>If you use Quarto (for slides, course sites, or personal pages), you can publish for free on GitHub Pages. The workflow: write <code>.qmd</code> files → render → push to GitHub → site is live.</p>
-<p>📖 <a href="https://quarto.org/docs/publishing/github-pages.html">Publishing with GitHub Pages</a> (Quarto docs) — The official guide. Clear and complete.</p>
-<p>📖 <a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/4-quarto_github_pages.html">Quarto + GitHub Pages walkthrough</a> (UBC DSCI 521) — A lecture-style walkthrough if you want more hand-holding than the official docs.</p>
-</section>
-<section id="shared-code-heres-my-repo" class="level3">
-<h3 class="anchored" data-anchor-id="shared-code-heres-my-repo">Shared code (“here’s my repo”)</h3>
+<ul>
+<li><a href="https://quarto.org/docs/publishing/github-pages.html">Publishing with GitHub Pages</a> (Quarto docs) — The official guide. Clear and complete.</li>
+<li><a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/4-quarto_github_pages.html">Quarto + GitHub Pages walkthrough</a> (UBC DSCI 521) — A lecture-style walkthrough if you want more hand-holding than the official docs.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: Shared code (“here’s my repo”)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Sharing a GitHub repo is better than emailing a zip file. But a repo someone else can actually use needs: a README that explains what’s in it, a <code>.gitignore</code> that excludes junk, and file paths that aren’t hardcoded to your machine.</p>
-<p>📖 The <code>config_local.do</code> pattern: Instead of <code>cd "/Users/emily/Dropbox/myproject/"</code>, create a <code>config_local_template.do</code> with placeholder paths. Each collaborator copies it to <code>config_local.do</code> (which is <code>.gitignore</code>’d) and fills in their own paths. Your master script <code>include</code>s it. Now the code runs on anyone’s machine.</p>
-</section>
-<section id="replication-packages" class="level3">
-<h3 class="anchored" data-anchor-id="replication-packages">Replication packages</h3>
+<p>The <code>config_local.do</code> pattern: Instead of <code>cd "/Users/emily/Dropbox/myproject/"</code>, create a <code>config_local_template.do</code> with placeholder paths. Each collaborator copies it to <code>config_local.do</code> (which is <code>.gitignore</code>’d) and fills in their own paths. Your master script <code>include</code>s it. Now the code runs on anyone’s machine.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: Replication packages
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>If you’re assembling a replication package for a journal, the standard is a master script that runs everything from raw data to final tables. The <a href="https://aeadataeditor.github.io/aea-de-guidance/">AEA Data Editor’s guidance</a> is the reference.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -295,10 +341,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-</section>
 <section id="layer-5-connecting-the-pieces" class="level2">
 <h2 class="anchored" data-anchor-id="layer-5-connecting-the-pieces">Layer 5: Connecting the Pieces</h2>
 <p>The previous four layers are independent skills. This section is about how they combine into workflows you’ll actually use.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Click to expand: Three example workflows
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <section id="workflow-a-make-a-course-website" class="level3">
 <h3 class="anchored" data-anchor-id="workflow-a-make-a-course-website">Workflow A: “Make a course website”</h3>
 <p>Terminal (Layer 1) → create a Quarto project → AI (Layer 3) generates page content from your syllabus and notes → Git (Layer 2) tracks versions → GitHub Pages (Layer 4) publishes it. Time to live site: under an hour once you’ve done it once.</p>
@@ -310,8 +367,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="workflow-c-go-from-rough-idea-to-shareable-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="workflow-c-go-from-rough-idea-to-shareable-analysis">Workflow C: “Go from rough idea to shareable analysis”</h3>
 <p>Terminal (Layer 1) → create a project folder with clean structure → AI (Layer 3) does initial data exploration and drafts analysis code → Git (Layer 2) checkpoints each stage → share the repo (Layer 4) when it’s ready for a coauthor or RA.</p>
-<hr>
 </section>
+</div>
+</div>
+</div>
+<hr>
 <section id="what-comes-next" class="level3">
 <h3 class="anchored" data-anchor-id="what-comes-next">What comes next</h3>
 <p>Once you’re comfortable with the basics, <a href="./skills-workflows.html">Skills &amp; Workflows</a> shows specific research and teaching workflows. <a href="./resources.html">Resources</a> covers integrations and advanced tools for when you’re ready to go deeper.</p>
