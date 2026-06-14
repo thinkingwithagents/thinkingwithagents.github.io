@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#installable-skills-1" id="toc-installable-skills-1" class="nav-link" data-scroll-target="#installable-skills-1">Installable skills</a></li>
   <li><a href="#workflows-1" id="toc-workflows-1" class="nav-link" data-scroll-target="#workflows-1">Workflows</a></li>
   </ul></li>
-  <li><a href="#writing--communication" id="toc-writing--communication" class="nav-link" data-scroll-target="#writing--communication">Writing &amp; Communication</a>
+  <li><a href="#writing" id="toc-writing" class="nav-link" data-scroll-target="#writing">Writing</a>
   <ul class="collapse">
   <li><a href="#workflows-2" id="toc-workflows-2" class="nav-link" data-scroll-target="#workflows-2">Workflows</a></li>
   </ul></li>
@@ -146,6 +146,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#installable-skills-2" id="toc-installable-skills-2" class="nav-link" data-scroll-target="#installable-skills-2">Installable skills</a></li>
   <li><a href="#workflows-3" id="toc-workflows-3" class="nav-link" data-scroll-target="#workflows-3">Workflows</a></li>
+  </ul></li>
+  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous">Miscellaneous</a>
+  <ul class="collapse">
+  <li><a href="#installable-skills-3" id="toc-installable-skills-3" class="nav-link" data-scroll-target="#installable-skills-3">Installable skills</a></li>
   </ul></li>
   <li><a href="#build-your-own" id="toc-build-your-own" class="nav-link" data-scroll-target="#build-your-own">Build your own</a></li>
   <li><a href="#installing-skills" id="toc-installing-skills" class="nav-link" data-scroll-target="#installing-skills">Installing skills</a></li>
@@ -180,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="quick-start">Quick start</h2>
 <p>Not sure where to begin? Three suggestions:</p>
 <ol type="1">
-<li><strong>Fastest payoff</strong>: Create a voice file (15 minutes, reuse forever) — see <a href="#writing--communication">Writing &amp; Communication</a></li>
+<li><strong>Fastest payoff</strong>: Create a voice file (15 minutes, reuse forever) — see <a href="#writing">Writing</a></li>
 <li><strong>Most impressive</strong>: Run the data → code → report pipeline (30 minutes) — see <a href="#research">Research</a></li>
 <li><strong>Most practical</strong>: Inbox triage with Gmail integration (30 minutes to set up, then daily) — see <a href="#productivity">Productivity</a></li>
 </ol>
@@ -425,8 +429,8 @@ Name each file feedback/[student-name].md.</code></pre>
 </section>
 </section>
 </section>
-<section id="writing--communication" class="level2">
-<h2 class="anchored" data-anchor-id="writing--communication">Writing &amp; Communication</h2>
+<section id="writing" class="level2">
+<h2 class="anchored" data-anchor-id="writing">Writing</h2>
 <section id="workflows-2" class="level3">
 <h3 class="anchored" data-anchor-id="workflows-2">Workflows</h3>
 <section id="create-a-writing-voice-file" class="level4">
@@ -495,26 +499,19 @@ Save as paper/revision-memo.md.</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="#meal-plan"><code>/meal-plan</code></a></td>
-<td>Two-week rolling meal planner</td>
-<td><code>npx skills add thinkingwithagents/skills --skill meal-plan</code></td>
-</tr>
-<tr class="even">
-<td><a href="#groceries"><code>/groceries</code></a></td>
-<td>Categorized grocery list from your plans and lists</td>
-<td><code>npx skills add thinkingwithagents/skills --skill groceries</code></td>
+<td><a href="#academic-website-builder"><code>academic-website-builder</code></a></td>
+<td>Turn your CV into a polished academic website (re-runs when your CV changes)</td>
+<td><code>npx skills add erkmenaslim/academic-website-demo</code></td>
 </tr>
 </tbody>
 </table>
-<section id="meal-plan" class="level4">
-<h4 class="anchored" data-anchor-id="meal-plan">Meal Plan (<code>/meal-plan</code>)</h4>
-<p>Two-week rolling meal planner. Checks your Google Calendar for conflicts, applies your day-of-week defaults, flags dietary restrictions and picky eaters, handles leftovers and guest scaling, and generates a printable HTML plan for the fridge.</p>
-<p><strong>First run:</strong> A setup interview asks about your household, calendars, default meals, dietary restrictions, recipes, and preferences. You do this once; answers are saved to <code>~/Documents/MealPlan/</code>. <a href="skills/meal-plan.md">Browse source</a></p>
-</section>
-<section id="groceries" class="level4">
-<h4 class="anchored" data-anchor-id="groceries">Groceries (<code>/groceries</code>)</h4>
-<p>Grocery list generator that merges your Apple Reminders, Apple Notes, staples template, and current meal plan into one categorized shopping list per store. Scales ingredients for hosting nights and leftover meals.</p>
-<p><strong>Requires:</strong> macOS (Apple Notes/Reminders integration). Pairs with <code>/meal-plan</code> but works standalone. <a href="skills/groceries.md">Browse source</a></p>
+<section id="academic-website-builder" class="level4">
+<h4 class="anchored" data-anchor-id="academic-website-builder">Academic Website Builder (<code>academic-website-builder</code>)</h4>
+<p>Turns your CV into a polished, self-contained academic website. Generates three design themes (minimal dark, light academic, bold modern), lets you preview all three and tweak any of them, then builds the one you pick. Keeping it current is one step: edit a single data file — or drop in an updated CV — and re-run one build command.</p>
+<p><strong>Good for:</strong> spinning up a job-market or faculty site fast, maintaining your academic web presence without fighting web tooling, a quick personal homepage from materials you already have.</p>
+<p><strong>Requires:</strong> Python 3 (no web frameworks or servers). Deploys to GitHub Pages, Netlify, Vercel, etc.</p>
+<p><a href="https://github.com/erkmenaslim/academic-website-demo">Browse source</a> · <a href="https://erkmenaslim.github.io/academic-website-demo/">▶ See the live demo</a></p>
+<p><em>Contributed by <a href="https://erkmenaslim.github.io/">Erkmen Aslim</a>.</em></p>
 </section>
 </section>
 <section id="workflows-3" class="level3">
@@ -562,6 +559,44 @@ Google Calendar with the event name, time, and location.</code></pre>
 - what's still open
 - what I should do next
 Save as notes/handoff-2026-04-08.md.</code></pre>
+<hr>
+</section>
+</section>
+</section>
+<section id="miscellaneous" class="level2">
+<h2 class="anchored" data-anchor-id="miscellaneous">Miscellaneous</h2>
+<section id="installable-skills-3" class="level3">
+<h3 class="anchored" data-anchor-id="installable-skills-3">Installable skills</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>What it does</th>
+<th>Install</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="#meal-plan"><code>/meal-plan</code></a></td>
+<td>Two-week rolling meal planner</td>
+<td><code>npx skills add thinkingwithagents/skills --skill meal-plan</code></td>
+</tr>
+<tr class="even">
+<td><a href="#groceries"><code>/groceries</code></a></td>
+<td>Categorized grocery list from your plans and lists</td>
+<td><code>npx skills add thinkingwithagents/skills --skill groceries</code></td>
+</tr>
+</tbody>
+</table>
+<section id="meal-plan" class="level4">
+<h4 class="anchored" data-anchor-id="meal-plan">Meal Plan (<code>/meal-plan</code>)</h4>
+<p>Two-week rolling meal planner. Checks your Google Calendar for conflicts, applies your day-of-week defaults, flags dietary restrictions and picky eaters, handles leftovers and guest scaling, and generates a printable HTML plan for the fridge.</p>
+<p><strong>First run:</strong> A setup interview asks about your household, calendars, default meals, dietary restrictions, recipes, and preferences. You do this once; answers are saved to <code>~/Documents/MealPlan/</code>. <a href="skills/meal-plan.md">Browse source</a></p>
+</section>
+<section id="groceries" class="level4">
+<h4 class="anchored" data-anchor-id="groceries">Groceries (<code>/groceries</code>)</h4>
+<p>Grocery list generator that merges your Apple Reminders, Apple Notes, staples template, and current meal plan into one categorized shopping list per store. Scales ingredients for hosting nights and leftover meals.</p>
+<p><strong>Requires:</strong> macOS (Apple Notes/Reminders integration). Pairs with <code>/meal-plan</code> but works standalone. <a href="skills/groceries.md">Browse source</a></p>
 <hr>
 </section>
 </section>

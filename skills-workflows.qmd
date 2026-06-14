@@ -9,7 +9,7 @@ These are workflows that go beyond chat — they involve reading your files, wri
 
 Not sure where to begin? Three suggestions:
 
-1. **Fastest payoff**: Create a voice file (15 minutes, reuse forever) — see [Writing & Communication](#writing--communication)
+1. **Fastest payoff**: Create a voice file (15 minutes, reuse forever) — see [Writing](#writing)
 2. **Most impressive**: Run the data → code → report pipeline (30 minutes) — see [Research](#research)
 3. **Most practical**: Inbox triage with Gmail integration (30 minutes to set up, then daily) — see [Productivity](#productivity)
 
@@ -229,7 +229,7 @@ Name each file feedback/[student-name].md.
 
 ---
 
-## Writing & Communication {#writing--communication}
+## Writing {#writing}
 
 ### Workflows
 
@@ -301,22 +301,23 @@ Save as paper/revision-memo.md.
 
 | Skill | What it does | Install |
 |---|---|---|
-| [`/meal-plan`](#meal-plan) | Two-week rolling meal planner | `npx skills add thinkingwithagents/skills --skill meal-plan` |
-| [`/groceries`](#groceries) | Categorized grocery list from your plans and lists | `npx skills add thinkingwithagents/skills --skill groceries` |
+| [`academic-website-builder`](#academic-website-builder) | Turn your CV into a polished academic website (re-runs when your CV changes) | `npx skills add erkmenaslim/academic-website-demo` |
 
-#### Meal Plan (`/meal-plan`) {#meal-plan}
+#### Academic Website Builder (`academic-website-builder`) {#academic-website-builder}
 
-Two-week rolling meal planner. Checks your Google Calendar for conflicts, applies your day-of-week defaults, flags dietary restrictions and picky eaters, handles leftovers and guest scaling, and generates a printable HTML plan for the fridge.
+Turns your CV into a polished, self-contained academic website. Generates three design themes
+(minimal dark, light academic, bold modern), lets you preview all three and tweak any of them, then
+builds the one you pick. Keeping it current is one step: edit a single data file — or drop in an
+updated CV — and re-run one build command.
 
-**First run:** A setup interview asks about your household, calendars, default meals, dietary restrictions, recipes, and preferences. You do this once; answers are saved to `~/Documents/MealPlan/`.
-[Browse source](skills/meal-plan.md)
+**Good for:** spinning up a job-market or faculty site fast, maintaining your academic web presence
+without fighting web tooling, a quick personal homepage from materials you already have.
 
-#### Groceries (`/groceries`) {#groceries}
+**Requires:** Python 3 (no web frameworks or servers). Deploys to GitHub Pages, Netlify, Vercel, etc.
 
-Grocery list generator that merges your Apple Reminders, Apple Notes, staples template, and current meal plan into one categorized shopping list per store. Scales ingredients for hosting nights and leftover meals.
+[Browse source](https://github.com/erkmenaslim/academic-website-demo) · [▶ See the live demo](https://erkmenaslim.github.io/academic-website-demo/)
 
-**Requires:** macOS (Apple Notes/Reminders integration). Pairs with `/meal-plan` but works standalone.
-[Browse source](skills/groceries.md)
+*Contributed by [Erkmen Aslim](https://erkmenaslim.github.io/).*
 
 ### Workflows
 
@@ -369,6 +370,31 @@ Summarize this session:
 - what I should do next
 Save as notes/handoff-2026-04-08.md.
 ```
+
+---
+
+## Miscellaneous {#miscellaneous}
+
+### Installable skills
+
+| Skill | What it does | Install |
+|---|---|---|
+| [`/meal-plan`](#meal-plan) | Two-week rolling meal planner | `npx skills add thinkingwithagents/skills --skill meal-plan` |
+| [`/groceries`](#groceries) | Categorized grocery list from your plans and lists | `npx skills add thinkingwithagents/skills --skill groceries` |
+
+#### Meal Plan (`/meal-plan`) {#meal-plan}
+
+Two-week rolling meal planner. Checks your Google Calendar for conflicts, applies your day-of-week defaults, flags dietary restrictions and picky eaters, handles leftovers and guest scaling, and generates a printable HTML plan for the fridge.
+
+**First run:** A setup interview asks about your household, calendars, default meals, dietary restrictions, recipes, and preferences. You do this once; answers are saved to `~/Documents/MealPlan/`.
+[Browse source](skills/meal-plan.md)
+
+#### Groceries (`/groceries`) {#groceries}
+
+Grocery list generator that merges your Apple Reminders, Apple Notes, staples template, and current meal plan into one categorized shopping list per store. Scales ingredients for hosting nights and leftover meals.
+
+**Requires:** macOS (Apple Notes/Reminders integration). Pairs with `/meal-plan` but works standalone.
+[Browse source](skills/groceries.md)
 
 ---
 
