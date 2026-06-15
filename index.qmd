@@ -23,6 +23,7 @@ toc: false
       <div class="schedule-actions">
         <a href="webinar-jun2026/twa-research-deck1-foundations-voice.pdf" class="slides-btn">Deck 1: Foundations &amp; Voice (PDF) →</a>
         <a href="webinar-jun2026/twa-research-deck2-website-brainstorming.pdf" class="slides-btn">Deck 2: Website &amp; Brainstorming (PDF) →</a>
+        <a href="project-context-kit.html" class="slides-btn">Project Context Kit →</a>
       </div>
     </div>
     <div class="schedule-item">
