@@ -201,6 +201,12 @@ $headings-font-weight:   400;
   margin-top: 0.1rem;
 }
 
+.schedule-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .slides-btn {
   display: inline-block;
   margin-top: 0.6rem;

@@ -26,9 +26,12 @@ How AI tools are changing research workflows — and how to use them effectively
 Targeted toward faculty, researchers, and graduate students in economics and related fields — but all are welcome.
 
 ```{=html}
-<div style="margin: 1.5rem 0 0.5rem;">
-  <a href="https://events.teams.microsoft.com/event/88b689b0-2b31-4f1a-b04b-74873f4a7305@1c177758-4d6b-43dc-aaeb-3b9c42562967" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
-    Register for AI for Research (June 15) →
+<div class="schedule-actions" style="margin: 1.5rem 0 0.5rem;">
+  <a href="webinar-jun2026/twa-research-deck1-foundations-voice.pdf" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
+    Deck 1: Foundations &amp; Voice (PDF) →
+  </a>
+  <a href="webinar-jun2026/twa-research-deck2-website-brainstorming.pdf" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
+    Deck 2: Website &amp; Brainstorming (PDF) →
   </a>
 </div>
 ```

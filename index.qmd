@@ -20,7 +20,10 @@ toc: false
       <div class="schedule-date">Jun 15</div>
       <div class="schedule-title">TwA Webinar: Agentic Tools for Research</div>
       <div class="schedule-detail">10:00 AM–12:00 PM ET · Online (Teams)</div>
-      <a href="https://events.teams.microsoft.com/event/88b689b0-2b31-4f1a-b04b-74873f4a7305@1c177758-4d6b-43dc-aaeb-3b9c42562967" class="slides-btn">Register →</a>
+      <div class="schedule-actions">
+        <a href="webinar-jun2026/twa-research-deck1-foundations-voice.pdf" class="slides-btn">Deck 1: Foundations &amp; Voice (PDF) →</a>
+        <a href="webinar-jun2026/twa-research-deck2-website-brainstorming.pdf" class="slides-btn">Deck 2: Website &amp; Brainstorming (PDF) →</a>
+      </div>
     </div>
     <div class="schedule-item">
       <div class="schedule-date">Jun 17</div>
