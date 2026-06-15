@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{name}} — {{title}}, {{institution}}</title>
+<meta name="description" content="{{name}}, {{title}} at {{institution}}." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  /* ============ THEME 2 — LIGHT ACADEMIC (cool paper / pine green) ============ */
+  :root {
+    --paper:   #fbfbf8;   /* cool clean paper, not cream */
+    --surface: #ffffff;
+    --raised:  #f4f5f1;
+    --ink:     #1a2420;   /* deep slate-green ink */
+    --muted:   #54605b;
+    --faint:   #8a948f;
+    --pine:    #1b4332;   /* deep pine — primary */
+    --pine-2:  #2d6a4f;
+    --gold:    #a9762a;   /* warm hairline accent, used sparingly */
+    --line:    #e7e5dc;
+    --line-2:  #efeee7;
+    --shadow:  0 1px 2px rgba(26,36,32,.04), 0 8px 24px rgba(26,36,32,.06);
+    --shadow-h:0 2px 6px rgba(26,36,32,.06), 0 14px 34px rgba(26,36,32,.10);
+    --maxw: 1120px;
+    --serif: 'Newsreader', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    background: var(--paper); color: var(--ink); font-family: var(--sans);
+    font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility; overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
+  .eyebrow {
+    font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--pine-2);
+  }
+
+  /* ---------- nav ---------- */
+  header.nav {
+    position: sticky; top: 0; z-index: 50; background: rgba(251,251,248,0.85);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+  .brand { font-family: var(--serif); font-weight: 600; font-size: 21px; letter-spacing: -0.01em; color: var(--pine); }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { font-size: 14.5px; font-weight: 500; color: var(--muted); transition: color .2s ease; position: relative; }
+  .nav-links a:hover, .nav-links a.active { color: var(--pine); }
+  .nav-links a.active::after { content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--gold); }
+  .nav-cta { background: var(--pine); color: #fff !important; padding: 9px 16px; border-radius: 8px; font-weight: 600; }
+  .nav-cta:hover { background: var(--pine-2); }
+  .menu-btn { display: none; background: none; border: 1px solid var(--line); color: var(--ink);
+    width: 42px; height: 42px; border-radius: 8px; cursor: pointer; font-size: 18px; }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 80px 0 64px; }
+  .hero-grid { display: grid; grid-template-columns: 1.4fr 0.85fr; gap: 56px; align-items: center; }
+  .hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.04; letter-spacing: -0.02em; margin: 16px 0 0; }
+  .hero .role { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--pine-2); margin-top: 14px; }
+  .hero .blurb { color: var(--muted); margin-top: 20px; max-width: 52ch; font-size: 18px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .chip { font-size: 12.5px; color: var(--muted); background: var(--raised); border: 1px solid var(--line);
+    padding: 6px 12px; border-radius: 999px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 600;
+    padding: 12px 20px; border-radius: 9px; cursor: pointer; transition: all .2s ease; border: 1px solid transparent; }
+  .btn-primary { background: var(--pine); color: #fff; }
+  .btn-primary:hover { background: var(--pine-2); transform: translateY(-1px); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--surface); }
+  .btn-ghost:hover { border-color: var(--pine-2); color: var(--pine); }
+
+  .photo-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+    padding: 14px; box-shadow: var(--shadow); }
+  .photo-ph { aspect-ratio: 4/5; border-radius: 12px; background: var(--raised);
+    border: 1.5px dashed var(--line); display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 12px; }
+  .photo-ph .init { font-family: var(--serif); font-weight: 600; font-size: 58px; color: var(--pine); }
+  .photo-ph .note { font-size: 12px; color: var(--faint); text-align: center; max-width: 80%; line-height: 1.5; }
+  .photo-meta { display: flex; justify-content: space-between; padding: 12px 6px 4px; font-size: 12.5px; color: var(--faint); }
+  .photo-meta b { color: var(--pine); font-weight: 600; }
+  .photo-ph.has-photo { border: none; background: none; padding: 0; }
+  .photo-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 12px; display: block; }
+  .contact-grid .social { margin-top: 14px; display: flex; gap: 18px; flex-wrap: wrap; }
+  .contact-grid .social a { color: var(--pine); font-weight: 600; font-size: 13.5px; }
+  .contact-grid .social a:hover { color: var(--pine-2); }
+
+  /* ---------- sections ---------- */
+  section { padding: 72px 0; }
+  section.alt { background: var(--raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .sec-head { margin-bottom: 40px; max-width: 60ch; }
+  .sec-head h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 4vw, 42px);
+    letter-spacing: -0.02em; margin-top: 8px; }
+  .sec-head p { color: var(--muted); margin-top: 12px; font-size: 18px; }
+
+  /* ---------- featured research cards ---------- */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 0;
+    box-shadow: var(--shadow); overflow: hidden; transition: transform .22s ease, box-shadow .22s ease;
+    display: flex; flex-direction: column;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-h); }
+  .card .rule { height: 4px; background: var(--pine); }
+  .card .card-body { padding: 24px 24px 22px; display: flex; flex-direction: column; flex: 1; }
+  .card .tagrow { display: flex; align-items: center; gap: 10px; }
+  .venue-pill { font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em; color: var(--pine);
+    background: rgba(45,106,79,0.10); border: 1px solid rgba(45,106,79,0.2); padding: 4px 11px; border-radius: 999px; }
+  .yr { margin-left: auto; font-family: var(--serif); font-size: 20px; color: var(--faint); }
+  .card h3 { font-family: var(--serif); font-weight: 500; font-size: 21px; line-height: 1.28;
+    letter-spacing: -0.01em; margin: 14px 0 10px; }
+  .card .auth { font-size: 14px; color: var(--muted); margin-top: auto; }
+  .press { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600;
+    color: var(--gold); margin-top: 14px; }
+  .press::before { content: "★"; }
+
+  /* ---------- publication list (grouped, in a panel) ---------- */
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    box-shadow: var(--shadow); padding: 8px 30px; margin-top: 28px; }
+  .grp-title { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--pine-2); padding: 26px 0 8px; }
+  .pub { display: grid; grid-template-columns: 56px 1fr; gap: 18px; padding: 15px 0;
+    border-top: 1px solid var(--line-2); }
+  .pub:first-of-type { border-top: none; }
+  .pub .py { font-family: var(--serif); font-size: 17px; color: var(--faint); }
+  .pub .pt { font-weight: 500; font-size: 16.5px; line-height: 1.4; }
+  .pub .pt a:hover { color: var(--pine); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  .pub .pm { font-size: 14px; color: var(--muted); margin-top: 3px; }
+  .pub .pm i { font-style: italic; color: var(--ink); }
+  .smalltag { font-size: 11px; font-weight: 600; color: var(--gold); border: 1px solid rgba(169,118,42,.3);
+    padding: 1px 7px; border-radius: 5px; margin-left: 6px; white-space: nowrap; }
+
+  /* ---------- two cards row (teaching) ---------- */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .info-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 28px 28px; box-shadow: var(--shadow); }
+  .info-card h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin-bottom: 16px; }
+  .info-list { list-style: none; }
+  .info-list li { padding: 11px 0; border-top: 1px solid var(--line-2); font-size: 15.5px; }
+  .info-list li:first-child { border-top: none; }
+  .info-list li span { display: block; color: var(--faint); font-size: 12.5px; margin-top: 2px; }
+
+  /* ---------- media cards ---------- */
+  .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .media-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+  .media-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-h); }
+  .media-card .outlet { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--pine); }
+  .media-card .head { font-size: 14.5px; line-height: 1.45; margin-top: 8px; color: var(--ink); }
+  .media-card .date { font-size: 12px; color: var(--faint); margin-top: 10px; }
+
+  /* ---------- stats / grants ---------- */
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px 22px;
+    box-shadow: var(--shadow); }
+  .stat .n { font-family: var(--serif); font-weight: 500; font-size: 38px; color: var(--pine); letter-spacing: -0.02em; }
+  .stat .l { font-size: 13.5px; color: var(--muted); margin-top: 4px; }
+
+  /* ---------- contact ---------- */
+  .contact-grid { display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 44px;
+    box-shadow: var(--shadow); }
+  .contact-grid h2 { font-family: var(--serif); font-weight: 500; font-size: 34px; letter-spacing: -0.02em; }
+  .contact-grid .addr { color: var(--muted); margin-top: 12px; line-height: 1.7; }
+  .contact-grid a.email { color: var(--pine); font-weight: 600; }
+
+  footer { padding: 40px 0 56px; border-top: 1px solid var(--line); color: var(--faint); font-size: 13.5px; }
+  .foot-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 920px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .photo-card { max-width: 320px; }
+    .cards, .duo { grid-template-columns: 1fr; }
+    .media-grid { grid-template-columns: 1fr 1fr; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; padding: 32px; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0;
+      background: var(--surface); border-bottom: 1px solid var(--line); padding: 20px 32px; gap: 18px; box-shadow: var(--shadow); }
+    .menu-btn { display: block; }
+  }
+  @media (max-width: 520px) {
+    body { font-size: 16px; } .wrap { padding: 0 20px; }
+    .media-grid, .stat-row { grid-template-columns: 1fr; }
+    .panel { padding: 4px 20px; }
+  }
+  :focus-visible { outline: 2px solid var(--pine-2); outline-offset: 3px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">{{name}}</a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#media">Media</a>
+      <a href="{{cv_file}}" class="nav-cta">CV</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">{{tagline}}</p>
+      <h1>{{name}}</h1>
+      <p class="role">{{title}}, {{institution}}</p>
+      <p class="blurb">{{bio_text}}</p>
+      <div class="chips">
+        {{#each affiliations}}<span class="chip">{{.}}</span>{{/each}}
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:{{email}}">✉ {{email}}</a>
+        <a class="btn btn-ghost" href="{{cv_file}}">Download CV</a>
+      </div>
+    </div>
+    <div>
+      <div class="photo-card">
+        {{#if has_photo}}<div class="photo-ph has-photo"><img class="photo-img" src="{{photo}}" alt="{{photo_alt}}" /></div>{{/if}}
+        {{#unless has_photo}}<div class="photo-ph">
+          <div class="init">{{initials}}</div>
+          <div class="note">Add a headshot — set <b>site.photo</b> in cv-data.json</div>
+        </div>{{/unless}}
+        <div class="photo-meta"><span>{{edu_primary}}</span><span><b>{{institution_short}}</b> · {{since}}–</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="alt" id="research">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Research</p>
+      <h2>Selected work</h2>
+      <p>{{ research_intro }}</p>
+    </div>
+
+    <!-- featured cards -->
+    <div class="cards">
+      {{#each featured}}<article class="card"><div class="rule"></div><div class="card-body">
+        <div class="tagrow"><span class="venue-pill">{{venue_short}}</span><span class="yr">{{year}}</span></div>
+        <h3>{{title}}</h3>
+        <p class="auth">{{authors}}</p>
+        {{#if badge}}<span class="press">{{badge}}</span>{{/if}}
+      </div></article>{{/each}}
+    </div>
+
+    <!-- full list -->
+    <div class="panel">
+      {{#if under_revision}}<div class="grp-title">Under Revision</div>
+      {{#each under_revision}}<div class="pub"><div class="py">{{marker}}</div><div>{{#if url}}<div class="pt"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="pt">{{title}}</div>{{/unless}}<div class="pm">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="smalltag">{{tag}}</span>{{/if}}</div></div></div>{{/each}}{{/if}}
+
+      {{#if peer_reviewed}}<div class="grp-title">Peer-Reviewed Articles</div>
+      {{#each peer_reviewed}}<div class="pub"><div class="py">{{marker}}</div><div>{{#if url}}<div class="pt"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="pt">{{title}}</div>{{/unless}}<div class="pm">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="smalltag">{{tag}}</span>{{/if}}</div></div></div>{{/each}}{{/if}}
+
+      {{#if working_papers}}<div class="grp-title">Working Papers</div>
+      {{#each working_papers}}<div class="pub"><div class="py">{{marker}}</div><div>{{#if url}}<div class="pt"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="pt">{{title}}</div>{{/unless}}<div class="pm">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="smalltag">{{tag}}</span>{{/if}}</div></div></div>{{/each}}{{/if}}
+
+      {{#if in_progress}}<div class="grp-title">In Progress</div>
+      {{#each in_progress}}<div class="pub"><div class="py">{{marker}}</div><div>{{#if url}}<div class="pt"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="pt">{{title}}</div>{{/unless}}<div class="pm">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="smalltag">{{tag}}</span>{{/if}}</div></div></div>{{/each}}{{/if}}
+
+      {{#if policy_reports}}<div class="grp-title">Policy Reports</div>
+      {{#each policy_reports}}<div class="pub"><div class="py">{{marker}}</div><div>{{#if url}}<div class="pt"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="pt">{{title}}</div>{{/unless}}<div class="pm">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="smalltag">{{tag}}</span>{{/if}}</div></div></div>{{/each}}{{/if}}
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Teaching &amp; Advising</p><h2>In the classroom</h2></div>
+    <div class="duo">
+      <div class="info-card">
+        <h3>Courses at {{institution_short}}</h3>
+        <ul class="info-list">
+          {{#each teaching}}<li>{{course}} <span>{{terms}}</span></li>{{/each}}
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Advising &amp; placements</h3>
+        <ul class="info-list">
+          {{#each advising}}<li>{{name}}{{#if detail}} — {{detail}}{{/if}} <span>{{note}}</span></li>{{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRANTS / STATS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Grants &amp; Recognition</p><h2>Funded research</h2></div>
+    <div class="stat-row">
+      {{#each stats}}<div class="stat"><div class="n">{{value}}</div><div class="l">{{label}}</div></div>{{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">In the Media</p><h2>Beyond the journal</h2><p>Research covered in the national press and cited in federal policy.</p></div>
+    <div class="media-grid">
+      {{#each media}}<a class="media-card" href="{{#if url}}{{url}}{{/if}}{{#unless url}}#{{/unless}}"><div class="outlet">{{outlet}}</div><div class="head">{{headline}}</div><div class="date">{{date}}</div></a>{{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="alt" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <p class="addr">{{address_line1}}<br>{{address_line2}}<br><a class="email" href="mailto:{{email}}">{{email}}</a></p>
+        {{#if social_links}}<p class="social">{{#each social_links}}<a href="{{url}}">{{label}}</a>{{/each}}</p>{{/if}}
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <a class="btn btn-primary" href="mailto:{{email}}">Email me</a>
+        <a class="btn btn-ghost" href="{{cv_file}}">Full CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© {{footer_year}} {{name}} · {{institution}}</span>
+    <span>{{tagline}}</span>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('menuBtn');
+  var links = document.getElementById('navlinks');
+  btn.addEventListener('click', function () { links.classList.toggle('open'); });
+  links.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { links.classList.remove('open'); }); });
+  var sections = ['about','research','teaching','media','contact'];
+  var navMap = {};
+  links.querySelectorAll('a').forEach(function (a) {
+    var id = (a.getAttribute('href') || '').replace('#','');
+    if (sections.indexOf(id) > -1) navMap[id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          Object.values(navMap).forEach(function (a) { a.classList.remove('active'); });
+          if (navMap[e.target.id]) navMap[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (id) { var el = document.getElementById(id); if (el) obs.observe(el); });
+  }
+</script>
+{{#if goatcounter}}
+<script>
+  // Skip inside iframes so preview.html's embedded themes aren't double-counted.
+  if (window.self === window.top) {
+    var gc = document.createElement('script');
+    gc.async = true;
+    gc.src = 'https://gc.zgo.at/count.js';
+    gc.setAttribute('data-goatcounter', 'https://{{goatcounter}}.goatcounter.com/count');
+    document.body.appendChild(gc);
+  }
+</script>
+{{/if}}
+</body>
+</html>

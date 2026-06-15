@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{name}} — {{title}}</title>
+<meta name="description" content="{{name}}, {{title}} at {{institution}}." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ============ THEME 3 — BOLD MODERN (warm ink / marigold, full-width bands) ============ */
+  :root {
+    --ink:     #16130f;   /* warm near-black */
+    --ink-2:   #211c16;
+    --paper:   #faf6ee;   /* warm paper */
+    --paper-2: #f1eadc;
+    --cream:   #f1ebdd;
+    --gold:    #f4a01c;   /* marigold — signature */
+    --gold-d:  #d9870a;
+    --ink-soft:#cdbfab;
+    --on-ink:  #f4efe6;
+    --on-ink-mute: #b3a896;
+    --line-ink: rgba(255,255,255,0.12);
+    --line-pap: #e4dcc9;
+    --maxw: 1180px;
+    --disp: 'Bricolage Grotesque', system-ui, sans-serif;
+    --body: 'Inter', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--paper); color: var(--ink); font-family: var(--body);
+    font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 36px; }
+  .kicker { font-family: var(--body); font-size: 12px; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold-d); }
+
+  /* ---------- nav ---------- */
+  header.nav { position: sticky; top: 0; z-index: 60; background: var(--ink); transition: box-shadow .25s ease, padding .25s ease; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; transition: height .25s ease; }
+  header.nav.scrolled { box-shadow: 0 6px 30px rgba(0,0,0,.25); }
+  header.nav.scrolled .nav-inner { height: 60px; }
+  .brand { font-family: var(--disp); font-weight: 700; font-size: 19px; color: var(--on-ink); letter-spacing: -0.01em; }
+  .brand b { color: var(--gold); }
+  .nav-links { display: flex; gap: 30px; align-items: center; }
+  .nav-links a { font-size: 14.5px; font-weight: 600; color: var(--on-ink-mute); transition: color .2s ease; }
+  .nav-links a:hover, .nav-links a.active { color: var(--on-ink); }
+  .nav-links a.cv { background: var(--gold); color: var(--ink) !important; padding: 9px 18px; border-radius: 999px; }
+  .nav-links a.cv:hover { background: #ffb43e; }
+  .menu-btn { display: none; background: none; border: 1px solid var(--line-ink); color: var(--on-ink);
+    width: 44px; height: 44px; border-radius: 10px; cursor: pointer; font-size: 18px; }
+
+  /* ---------- HERO (full-bleed ink) ---------- */
+  .hero { background: var(--ink); color: var(--on-ink); padding: 90px 0 0; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; top: -160px; right: -120px; width: 520px; height: 520px;
+    background: radial-gradient(circle, rgba(244,160,28,0.16), transparent 62%); pointer-events: none; }
+  .hero-inner { position: relative; }
+  .hero h1 { font-family: var(--disp); font-weight: 800; font-size: clamp(52px, 11vw, 138px);
+    line-height: 0.92; letter-spacing: -0.035em; margin: 22px 0 0; }
+  .hero h1 .amp { color: var(--gold); }
+  .hero .role { font-size: clamp(18px, 2.4vw, 23px); font-weight: 600; margin-top: 26px; max-width: 30ch; }
+  .hero .role b { color: var(--gold); font-weight: 700; }
+  .hero .blurb { color: var(--on-ink-mute); font-size: 18px; margin-top: 18px; max-width: 56ch; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin: 32px 0 60px; }
+  .btn { display: inline-flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 700;
+    padding: 15px 26px; border-radius: 999px; cursor: pointer; transition: all .2s ease; border: 2px solid transparent; }
+  .btn-gold { background: var(--gold); color: var(--ink); }
+  .btn-gold:hover { background: #ffb43e; transform: translateY(-2px); }
+  .btn-line { border-color: var(--line-ink); color: var(--on-ink); }
+  .btn-line:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* stat callouts */
+  .stat-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    border-top: 1px solid var(--line-ink); }
+  .stat-strip .s { padding: 28px 24px 30px; border-right: 1px solid var(--line-ink); }
+  .stat-strip .s:last-child { border-right: none; }
+  .stat-strip .n { font-family: var(--disp); font-weight: 700; font-size: 44px; color: var(--gold); letter-spacing: -0.03em; line-height: 1; }
+  .stat-strip .l { font-size: 13px; color: var(--on-ink-mute); margin-top: 10px; line-height: 1.4; }
+
+  /* ---------- media ticker (signature) ---------- */
+  .ticker { background: var(--gold); color: var(--ink); overflow: hidden; white-space: nowrap; }
+  .ticker-track { display: inline-flex; gap: 0; padding: 14px 0; animation: scroll 32s linear infinite; }
+  .ticker-track span { font-family: var(--disp); font-weight: 700; font-size: 16px; padding: 0 26px;
+    display: inline-flex; align-items: center; gap: 26px; }
+  .ticker-track span::after { content: "✦"; font-size: 11px; opacity: .55; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+  .ticker:hover .ticker-track { animation-play-state: paused; }
+
+  /* ---------- sections ---------- */
+  section { padding: 92px 0; }
+  .band-ink { background: var(--ink); color: var(--on-ink); }
+  .band-cream { background: var(--cream); }
+  .sec-head { max-width: 64ch; margin-bottom: 46px; }
+  .sec-head h2 { font-family: var(--disp); font-weight: 700; font-size: clamp(34px, 5.5vw, 60px);
+    letter-spacing: -0.03em; line-height: 1.02; margin-top: 12px; }
+  .sec-head p { font-size: 19px; color: var(--ink); opacity: .72; margin-top: 16px; }
+  .band-ink .sec-head p { color: var(--on-ink-mute); opacity: 1; }
+
+  /* about split */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .about-grid p.lead { font-family: var(--disp); font-weight: 500; font-size: clamp(22px, 2.8vw, 30px);
+    line-height: 1.32; letter-spacing: -0.01em; }
+  .fact-list { list-style: none; }
+  .fact-list li { display: flex; gap: 18px; padding: 16px 0; border-top: 1px solid var(--line-pap); font-size: 16px; }
+  .fact-list li .k { font-weight: 700; min-width: 110px; color: var(--gold-d); }
+
+  /* ---------- featured research (big cards) ---------- */
+  .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .feat { background: var(--ink-2); border: 1px solid var(--line-ink); border-radius: 18px; padding: 32px;
+    transition: transform .22s ease, border-color .22s ease; position: relative; overflow: hidden; }
+  .feat:hover { transform: translateY(-4px); border-color: var(--gold); }
+  .feat .num { font-family: var(--disp); font-weight: 800; font-size: 15px; color: var(--gold); }
+  .feat .venue { font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--on-ink-mute); margin-top: 4px; }
+  .feat h3 { font-family: var(--disp); font-weight: 600; font-size: 25px; line-height: 1.18;
+    letter-spacing: -0.01em; margin: 16px 0 12px; color: var(--on-ink); }
+  .feat .auth { font-size: 14.5px; color: var(--on-ink-mute); }
+  .feat .yr { position: absolute; top: 28px; right: 30px; font-family: var(--disp); font-weight: 700;
+    font-size: 30px; color: rgba(255,255,255,0.10); }
+  .feat .press { display: inline-block; font-size: 11.5px; font-weight: 700; color: var(--ink);
+    background: var(--gold); padding: 4px 11px; border-radius: 999px; margin-top: 18px; }
+
+  /* full list (on cream) */
+  .listblock { margin-top: 60px; }
+  .lb-head { font-family: var(--disp); font-weight: 700; font-size: 14px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--gold-d); padding: 22px 0 10px; border-bottom: 2px solid var(--ink); margin-bottom: 4px; }
+  .li { display: grid; grid-template-columns: 70px 1fr; gap: 22px; padding: 16px 0; border-bottom: 1px solid var(--line-pap); }
+  .li .y { font-family: var(--disp); font-weight: 700; font-size: 17px; color: var(--ink); opacity: .5; }
+  .li .t { font-weight: 600; font-size: 17px; line-height: 1.38; }
+  .li .t a:hover { color: var(--gold-d); }
+  .li .m { font-size: 14.5px; color: var(--ink); opacity: .65; margin-top: 3px; }
+  .li .m i { font-style: italic; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 700; color: var(--gold-d);
+    border: 1.5px solid var(--gold); padding: 1px 8px; border-radius: 999px; margin-left: 6px; }
+
+  /* teaching */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .tcard { background: var(--paper); border: 1px solid var(--line-pap); border-radius: 18px; padding: 32px; }
+  .band-ink .tcard { background: var(--ink-2); border-color: var(--line-ink); }
+  .tcard h3 { font-family: var(--disp); font-weight: 700; font-size: 22px; margin-bottom: 16px; }
+  .tlist { list-style: none; }
+  .tlist li { padding: 12px 0; border-top: 1px solid var(--line-pap); font-size: 15.5px; }
+  .band-ink .tlist li { border-color: var(--line-ink); }
+  .tlist li:first-child { border-top: none; }
+  .tlist li span { display: block; opacity: .6; font-size: 12.5px; margin-top: 2px; }
+
+  /* media band */
+  .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-ink); border: 1px solid var(--line-ink); border-radius: 16px; overflow: hidden; }
+  .mcard { background: var(--ink); padding: 30px 26px; transition: background .2s ease; }
+  .mcard:hover { background: var(--ink-2); }
+  .mcard .o { font-family: var(--disp); font-weight: 700; font-size: 21px; color: var(--gold); }
+  .mcard .h { font-size: 15px; line-height: 1.45; margin-top: 10px; color: var(--on-ink); }
+  .mcard .d { font-size: 12.5px; color: var(--on-ink-mute); margin-top: 12px; }
+
+  /* contact */
+  .contact { background: var(--gold); color: var(--ink); border-radius: 24px; padding: 60px; text-align: center; }
+  .contact h2 { font-family: var(--disp); font-weight: 800; font-size: clamp(34px, 6vw, 64px); letter-spacing: -0.03em; line-height: 1; }
+  .contact p { font-size: 17px; margin-top: 18px; opacity: .85; }
+  .contact .email { display: inline-block; font-family: var(--disp); font-weight: 700; font-size: clamp(22px,3.5vw,34px);
+    margin-top: 22px; border-bottom: 3px solid var(--ink); }
+  .contact-cta { display: flex; gap: 14px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+  .btn-dark { background: var(--ink); color: var(--gold); }
+  .btn-dark:hover { background: var(--ink-2); transform: translateY(-2px); }
+  .btn-outl { border-color: var(--ink); color: var(--ink); }
+  .btn-outl:hover { background: rgba(0,0,0,.06); }
+  .contact .social { margin-top: 20px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  .contact .social a { font-family: var(--disp); font-weight: 700; font-size: 15px; border-bottom: 2px solid var(--ink); }
+
+  footer { background: var(--ink); color: var(--on-ink-mute); padding: 36px 0; font-size: 13.5px; }
+  .foot-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+
+  /* responsive */
+  @media (max-width: 940px) {
+    .stat-strip { grid-template-columns: 1fr 1fr; }
+    .stat-strip .s:nth-child(2) { border-right: none; }
+    .stat-strip .s:nth-child(1), .stat-strip .s:nth-child(2) { border-bottom: 1px solid var(--line-ink); }
+    .about-grid, .feat-grid, .duo { grid-template-columns: 1fr; gap: 26px; }
+    .media-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 74px; left: 0; right: 0;
+      background: var(--ink); border-bottom: 1px solid var(--line-ink); padding: 22px 36px; gap: 20px; }
+    .menu-btn { display: block; }
+    .contact { padding: 40px 24px; }
+  }
+  @media (max-width: 520px) {
+    body { font-size: 16px; } .wrap { padding: 0 20px; }
+    .stat-strip { grid-template-columns: 1fr; }
+    .stat-strip .s { border-right: none; border-bottom: 1px solid var(--line-ink); }
+  }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">{{first_name}} <b>{{last_name}}</b></a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+      <a href="{{cv_file}}" class="cv">CV</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" style="padding-bottom:0;">
+  <div class="wrap hero-inner">
+    <p class="kicker">{{tagline}}</p>
+    <h1>{{first_name}}<br>{{last_name}}</h1>
+    <p class="role">{{title}}, <b>{{institution}}</b></p>
+    <p class="blurb">{{bio_text}}</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#research">Explore the research</a>
+      <a class="btn btn-line" href="mailto:{{email}}">✉ {{email}}</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stat-strip">
+      {{#each stats}}<div class="s"><div class="n">{{value}}</div><div class="l">{{label}}</div></div>{{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    {{#each ticker_items}}<span>{{.}}</span>{{/each}}{{#each ticker_items}}<span>{{.}}</span>{{/each}}
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="band-cream">
+  <div class="wrap">
+    <p class="kicker">About</p>
+    <div class="about-grid" style="margin-top:18px;">
+      <p class="lead">{{about_lead}}</p>
+      <div>
+        <ul class="fact-list">
+          {{#each bold_facts}}<li><span class="k">{{k}}</span><span>{{v}}</span></li>{{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="band-ink">
+  <div class="wrap">
+    <div class="sec-head"><p class="kicker">Research</p><h2>Selected work</h2><p>{{ research_intro }}</p></div>
+    <div class="feat-grid">
+      {{#each featured}}<article class="feat"><span class="yr">{{year}}</span><div class="num">{{num}}</div><div class="venue">{{venue_short}}</div>
+        <h3>{{title}}</h3>
+        <p class="auth">{{authors}}</p>
+        {{#if badge}}<span class="press">{{badge}}</span>{{/if}}</article>{{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- FULL LIST on cream -->
+<section class="band-cream" style="padding-top:72px;">
+  <div class="wrap">
+    <div class="sec-head"><p class="kicker">Publications</p><h2>The full record</h2></div>
+
+    {{#if under_revision}}<div class="listblock" style="margin-top:0;">
+      <div class="lb-head">Under Revision</div>
+      {{#each under_revision}}<div class="li"><div class="y">{{marker}}</div><div>{{#if url}}<div class="t"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="t">{{title}}</div>{{/unless}}<div class="m">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="pill">{{tag}}</span>{{/if}}</div></div></div>{{/each}}
+    </div>{{/if}}
+
+    {{#if peer_reviewed}}<div class="listblock">
+      <div class="lb-head">Peer-Reviewed Articles · {{count_peer_reviewed}}</div>
+      {{#each peer_reviewed}}<div class="li"><div class="y">{{marker}}</div><div>{{#if url}}<div class="t"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="t">{{title}}</div>{{/unless}}<div class="m">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="pill">{{tag}}</span>{{/if}}</div></div></div>{{/each}}
+    </div>{{/if}}
+
+    {{#if working_papers}}<div class="listblock">
+      <div class="lb-head">Working Papers · {{count_working_papers}}</div>
+      {{#each working_papers}}<div class="li"><div class="y">{{marker}}</div><div>{{#if url}}<div class="t"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="t">{{title}}</div>{{/unless}}<div class="m">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="pill">{{tag}}</span>{{/if}}</div></div></div>{{/each}}
+    </div>{{/if}}
+
+    {{#if in_progress}}<div class="listblock">
+      <div class="lb-head">In Progress · {{count_in_progress}}</div>
+      {{#each in_progress}}<div class="li"><div class="y">{{marker}}</div><div>{{#if url}}<div class="t"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="t">{{title}}</div>{{/unless}}<div class="m">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="pill">{{tag}}</span>{{/if}}</div></div></div>{{/each}}
+    </div>{{/if}}
+
+    {{#if policy_reports}}<div class="listblock">
+      <div class="lb-head">Policy Reports · {{count_policy_reports}}</div>
+      {{#each policy_reports}}<div class="li"><div class="y">{{marker}}</div><div>{{#if url}}<div class="t"><a href="{{url}}">{{title}}</a></div>{{/if}}{{#unless url}}<div class="t">{{title}}</div>{{/unless}}<div class="m">{{authors}}{{#if note}} · {{note}}{{/if}}{{#if venue}} · <i>{{venue}}</i>{{/if}}{{#if tag}} <span class="pill">{{tag}}</span>{{/if}}</div></div></div>{{/each}}
+    </div>{{/if}}
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching">
+  <div class="wrap">
+    <div class="sec-head"><p class="kicker">Teaching &amp; Advising</p><h2>In the classroom</h2></div>
+    <div class="duo">
+      <div class="tcard">
+        <h3>Courses at {{institution_short}}</h3>
+        <ul class="tlist">
+          {{#each teaching}}<li>{{course}} <span>{{terms}}</span></li>{{/each}}
+        </ul>
+      </div>
+      <div class="tcard">
+        <h3>Advising &amp; placements</h3>
+        <ul class="tlist">
+          {{#each advising}}<li>{{name}}{{#if detail}} — {{detail}}{{/if}} <span>{{note}}</span></li>{{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media" class="band-ink">
+  <div class="wrap">
+    <div class="sec-head"><p class="kicker">In the Media</p><h2>Beyond the journal</h2><p>Research in the national press — and cited where policy is made.</p></div>
+    <div class="media-grid">
+      {{#each media}}<a class="mcard" href="{{#if url}}{{url}}{{/if}}{{#unless url}}#{{/unless}}"><div class="o">{{outlet}}</div><div class="h">{{headline}}</div><div class="d">{{date}}</div></a>{{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <p class="kicker" style="color:var(--ink);opacity:.7;">Contact</p>
+      <h2>Let's work together.</h2>
+      <p>{{address_line1}} · {{address_line2}}</p>
+      <a class="email" href="mailto:{{email}}">{{email}}</a>
+      {{#if social_links}}<p class="social">{{#each social_links}}<a href="{{url}}">{{label}}</a>{{/each}}</p>{{/if}}
+      <div class="contact-cta">
+        <a class="btn btn-dark" href="mailto:{{email}}">Email me</a>
+        <a class="btn btn-outl" href="{{cv_file}}">Download full CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© {{footer_year}} {{name}} · {{institution}}</span>
+    <span>{{tagline}}</span>
+  </div>
+</footer>
+
+<script>
+  var nav = document.getElementById('nav');
+  var btn = document.getElementById('menuBtn');
+  var links = document.getElementById('navlinks');
+  btn.addEventListener('click', function () { links.classList.toggle('open'); });
+  links.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { links.classList.remove('open'); }); });
+  // condense nav on scroll
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 20) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+  }, { passive: true });
+  // scroll-spy
+  var sections = ['about','research','teaching','media','contact'];
+  var navMap = {};
+  links.querySelectorAll('a').forEach(function (a) {
+    var id = (a.getAttribute('href') || '').replace('#','');
+    if (sections.indexOf(id) > -1) navMap[id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          Object.values(navMap).forEach(function (a) { a.classList.remove('active'); });
+          if (navMap[e.target.id]) navMap[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (id) { var el = document.getElementById(id); if (el) obs.observe(el); });
+  }
+</script>
+{{#if goatcounter}}
+<script>
+  // Skip inside iframes so preview.html's embedded themes aren't double-counted.
+  if (window.self === window.top) {
+    var gc = document.createElement('script');
+    gc.async = true;
+    gc.src = 'https://gc.zgo.at/count.js';
+    gc.setAttribute('data-goatcounter', 'https://{{goatcounter}}.goatcounter.com/count');
+    document.body.appendChild(gc);
+  }
+</script>
+{{/if}}
+</body>
+</html>

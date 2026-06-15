@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "academic-website-builder": {
+      "source": "erkmenaslim/academic-website-demo",
+      "sourceType": "github",
+      "skillPath": "skill/academic-website-builder/SKILL.md",
+      "computedHash": "b5d1d4de7cfb7ec235c3dd16150d88ffa2d131eb990e26766b09c980bcd5db5f"
+    }
+  }
+}

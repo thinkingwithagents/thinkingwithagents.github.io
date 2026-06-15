@@ -35,26 +35,7 @@ You already use a terminal — Stata's command window is one. The difference is 
 You can open a terminal, `cd` to a project folder, `ls` its contents, and `grep` for a variable name in a `.do` or `.R` file.
 :::
 
-## Layer 2: Version Control (Git & GitHub)
-
-If your version control system is `analysis_final_v2_REAL_USE_THIS.do`, you need Git. Even if you work alone — because AI tools generate a lot of code, and you need a way to track what changed and undo what broke.
-
-The core workflow is five commands: `clone`, `add`, `commit`, `push`, `pull`. Learn those and you're functional.
-
-**Primary resource**: [Git & GitHub Essentials for Economists](modules/b2-git-github.qmd) (~75 min, hands-on)
-— Our module. Covers the mental model, the 5-command workflow, reading diffs, and common mistakes. Includes an econ-specific `.gitignore` template.
-
-**Supplement**: [Git: A Guide for Economists](https://github.com/fpinter/git-for-economists) (Frank Pinter)
-— The gold standard econ-specific git reference. More comprehensive than you need right now, but excellent to return to.
-
-**If you don't want the terminal**: [GitHub Desktop](https://desktop.github.com/) is a legitimate choice. It does everything above through a GUI. Not a crutch — just a different interface.
-
-::: {.callout-tip}
-## You're ready for the next layer when...
-You can clone a GitHub repo to your machine, make a change, commit it with a meaningful message, and push it back.
-:::
-
-## Layer 3: Your AI Setup
+## Layer 2: Your AI Setup
 
 Now you need the actual tool. The two main options for economists right now are [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic) and [Codex](https://openai.com/index/introducing-codex/) (OpenAI). Both are terminal-based, both can read and edit your files, both cost money beyond free tiers.
 
@@ -77,8 +58,8 @@ These tools send your files to remote servers during your session. Published dat
 
 ::: {.callout-tip}
 ## On a budget?
-You can learn Layers 1–2 (terminal + Git) for free — no subscription needed.
-For Layer 3, UVM Copilot is free with a UVM account (web chat, not terminal).
+The terminal (Layer 1) and Git (Layer 3) are free to learn — no subscription needed.
+For your AI setup, UVM Copilot is free with a UVM account (web chat, not terminal).
 Claude and ChatGPT both have free tiers for chat. The $20/mo subscription
 adds the terminal tools (Claude Code / Codex), which is where the real
 leverage is — but you can learn the foundations first and decide later.
@@ -87,6 +68,27 @@ leverage is — but you can learn the foundations first and decide later.
 ::: {.callout-tip}
 ## You're ready for the next layer when...
 You can open your AI tool in a terminal, `cd` to a project folder, and ask it to do something small — summarize a file, rename some variables, draft an email. It works, and you understand what it read to do the task.
+:::
+
+## Layer 3: Version Control (Git & GitHub)
+
+Now that an AI tool is editing your files, you need a way to track every change and undo anything it breaks. Git is the undo button for AI-assisted work — and the single best safety net even when you work alone: review what changed, keep what's good, revert what isn't.
+
+(If your current version control system is `analysis_final_v2_REAL_USE_THIS.do`, this is also the fix for that.)
+
+The core workflow is five commands: `clone`, `add`, `commit`, `push`, `pull`. Learn those and you're functional.
+
+**Primary resource**: [Git & GitHub Essentials for Economists](modules/b2-git-github.qmd) (~75 min, hands-on)
+— Our module. Covers the mental model, the 5-command workflow, reading diffs, and common mistakes. Includes an econ-specific `.gitignore` template.
+
+**Supplement**: [Git: A Guide for Economists](https://github.com/fpinter/git-for-economists) (Frank Pinter)
+— The gold standard econ-specific git reference. More comprehensive than you need right now, but excellent to return to.
+
+**If you don't want the terminal**: [GitHub Desktop](https://desktop.github.com/) is a legitimate choice. It does everything above through a GUI. Not a crutch — just a different interface.
+
+::: {.callout-tip}
+## You're ready for the next layer when...
+You can clone a GitHub repo to your machine, make a change, commit it with a meaningful message, and push it back.
 :::
 
 ## Layer 4: Deploying Things
@@ -132,15 +134,15 @@ The previous four layers are independent skills. This section is about how they 
 
 ### Workflow A: "Make a course website"
 
-Terminal (Layer 1) → create a Quarto project → AI (Layer 3) generates page content from your syllabus and notes → Git (Layer 2) tracks versions → GitHub Pages (Layer 4) publishes it. Time to live site: under an hour once you've done it once.
+Terminal (Layer 1) → create a Quarto project → AI (Layer 2) generates page content from your syllabus and notes → Git (Layer 3) tracks versions → GitHub Pages (Layer 4) publishes it. Time to live site: under an hour once you've done it once.
 
 ### Workflow B: "Build a replication package"
 
-AI (Layer 3) drafts a master do-file and README from your existing scripts → you review and fix what it gets wrong → Git (Layer 2) tracks the package → GitHub (Layer 4) hosts it. The AI handles the tedious parts (file headers, path management, README boilerplate). You handle the judgment (does this code actually reproduce the results?).
+AI (Layer 2) drafts a master do-file and README from your existing scripts → you review and fix what it gets wrong → Git (Layer 3) tracks the package → GitHub (Layer 4) hosts it. The AI handles the tedious parts (file headers, path management, README boilerplate). You handle the judgment (does this code actually reproduce the results?).
 
 ### Workflow C: "Go from rough idea to shareable analysis"
 
-Terminal (Layer 1) → create a project folder with clean structure → AI (Layer 3) does initial data exploration and drafts analysis code → Git (Layer 2) checkpoints each stage → share the repo (Layer 4) when it's ready for a coauthor or RA.
+Terminal (Layer 1) → create a project folder with clean structure → AI (Layer 2) does initial data exploration and drafts analysis code → Git (Layer 3) checkpoints each stage → share the repo (Layer 4) when it's ready for a coauthor or RA.
 :::
 
 ---

@@ -1,0 +1,126 @@
+{
+  "site": {
+    "theme": "light-academic",
+    "photo": "",
+    "cv_file": "CV/Adam_Smith_CV.pdf",
+    "footer_year": "2026",
+    "bio_use": "standard"
+  },
+
+  "name": "Adam Smith",
+  "first_name": "Adam",
+  "last_name": "Smith",
+  "title": "Professor of Economics",
+  "institution": "Stockholm University",
+  "institution_short": "Stockholm University",
+  "since": "2021",
+  "email": "adam.smith@example.edu",
+  "tagline": "Public · Labor · Taxation",
+  "fields": "Public Economics · Labor Economics · Taxation & Inequality",
+  "address_line1": "Department of Economics, Stockholm University",
+  "address_line2": "Universitetsvägen 10A, SE-106 91 Stockholm, Sweden",
+
+  "affiliations": [
+    "CEPR",
+    "IZA",
+    "CESifo",
+    "Uppsala Center for Fiscal Studies",
+    "ERC Consolidator Grantee"
+  ],
+
+  "links": {
+    "scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "x": "",
+    "github": "",
+    "website": "",
+    "nber": ""
+  },
+
+  "bio": {
+    "short": "Adam Smith is a Professor of Economics at Stockholm University working on public and labor economics, with a focus on taxation, inequality, and the welfare state.",
+    "standard": "Adam Smith is a Professor of Economics at Stockholm University. He combines Swedish administrative register data with quasi-experimental and structural methods to study how tax and social-insurance policy shapes work, wealth, and inequality — from how people respond to marginal tax rates to the long-run effects of parental leave and the consequences of taxing wealth in an open economy. His work has appeared in the American Economic Review, the Quarterly Journal of Economics, the Journal of Political Economy, and Econometrica, and has been covered by The New York Times, the Financial Times, and The Economist.",
+    "extended": "Adam Smith is a Professor of Economics at Stockholm University, where he has taught since 2021 after positions at the Stockholm School of Economics and Uppsala University. His research sits at the intersection of public and labor economics: he uses Sweden's administrative registers, paired with quasi-experimental and structural methods, to measure how tax and transfer policy affects earnings, savings, and the distribution of income and wealth. His work has appeared in the American Economic Review, the Quarterly Journal of Economics, the Journal of Political Economy, Econometrica, and the Review of Economic Studies, and has been covered by The New York Times, the Financial Times, The Economist, and Bloomberg. His research is supported by a European Research Council Consolidator Grant and the Swedish Research Council. He is a Research Fellow of the CEPR and affiliated with IZA, CESifo, and the Uppsala Center for Fiscal Studies."
+  },
+
+  "about": {
+    "lead": "An economist studying taxation, inequality, and the welfare state — published in the AER, QJE, and JPE, and covered by The New York Times, the Financial Times, and The Economist.",
+    "where_heading": "Where the work lands",
+    "where_body": "Published in the American Economic Review, the Quarterly Journal of Economics, the Journal of Political Economy, Econometrica, and the Review of Economic Studies. Funded by the European Research Council and the Swedish Research Council; covered by The New York Times, the Financial Times, The Economist, and Bloomberg."
+  },
+
+  "research_intro": "Empirical work on taxation, inequality, and the welfare state — published in the American Economic Review, the Quarterly Journal of Economics, the Journal of Political Economy, and Econometrica.",
+
+  "education": [
+    {"degree": "Ph.D., Economics", "institution": "Massachusetts Institute of Technology", "year": "2011", "note": "Solow Prize for Best Dissertation"},
+    {"degree": "M.Sc., Economics", "institution": "London School of Economics", "year": "2006", "note": "with Distinction"},
+    {"degree": "B.Sc., Economics", "institution": "Stockholm University", "year": "2004", "note": "summa cum laude"}
+  ],
+
+  "stats": [
+    {"value": "12", "label": "Peer-reviewed articles"},
+    {"value": "Top 5", "label": "Published in AER, QJE, JPE & Econometrica"},
+    {"value": "€3M+", "label": "In competitive funding, incl. ERC Consolidator"},
+    {"value": "NYT · FT", "label": "Covered by NYT, FT & The Economist"}
+  ],
+
+  "publications": [
+    {"type": "peer_reviewed", "featured": true, "marker": "2024", "year": "2024", "venue_short": "QJE",
+     "title": "Wealth Taxation and Capital Flight: Register Evidence from the Nordic Abolition",
+     "authors": "with H. Berg & M. Olsson", "venue": "Quarterly Journal of Economics, 139(2): 845–901",
+     "note": "", "tag": "The Economist", "badge": "Covered by The Economist & WSJ", "url": ""},
+    {"type": "peer_reviewed", "featured": true, "marker": "2025", "year": "2025", "venue_short": "AER",
+     "title": "Marginal Tax Rates and the Elasticity of Taxable Income: Evidence from a Swedish Reform",
+     "authors": "with J. Lindqvist", "venue": "American Economic Review, 115(4): 1102–1147",
+     "note": "", "tag": "NYT", "badge": "Featured in The New York Times", "url": ""},
+    {"type": "peer_reviewed", "featured": true, "marker": "2023", "year": "2023", "venue_short": "JPE",
+     "title": "The Long-Run Effects of Parental Leave on Earnings and Fertility",
+     "authors": "with S. Eriksson", "venue": "Journal of Political Economy, 131(9): 2410–2458",
+     "note": "", "tag": "Financial Times", "badge": "Covered by the Financial Times", "url": ""},
+    {"type": "peer_reviewed", "featured": true, "marker": "2022", "year": "2022", "venue_short": "Econometrica",
+     "title": "Place-Based Subsidies and Local Labor Markets",
+     "authors": "with L. Petersson", "venue": "Econometrica, 90(6): 2733–2779",
+     "note": "", "tag": "Bloomberg", "badge": "Covered by Bloomberg", "url": ""},
+
+    {"type": "peer_reviewed", "marker": "2021", "year": "2021",
+     "title": "Inheritance, Mobility, and the Transmission of Wealth across Generations",
+     "authors": "with H. Berg", "venue": "Journal of Public Economics, 198", "url": ""},
+    {"type": "peer_reviewed", "marker": "2019", "year": "2019",
+     "title": "Tax Salience and Consumer Responses to Value-Added Taxation",
+     "authors": "with S. Eriksson", "venue": "Journal of Public Economics, 176: 32–49", "url": ""},
+
+    {"type": "under_revision", "marker": "R&R",
+     "title": "Carbon Taxes, Commuting, and the Distribution of Welfare",
+     "authors": "with S. Eriksson & C. Mendez", "note": "Revise & resubmit",
+     "venue": "American Economic Review", "url": ""},
+
+    {"type": "working_paper", "marker": "33812",
+     "title": "Top Incomes and the Race between Education and Technology",
+     "authors": "with H. Berg", "note": "NBER WP 33812", "venue": "", "url": ""},
+    {"type": "working_paper", "marker": "CEPR",
+     "title": "Childcare Subsidies and Maternal Labor Supply: A Structural Evaluation",
+     "authors": "with S. Eriksson", "note": "CEPR Discussion Paper 19204", "venue": "", "url": ""},
+
+    {"type": "in_progress", "marker": "·",
+     "title": "Automation, Reallocation, and the Welfare State",
+     "authors": "with J. Lindqvist", "url": ""}
+  ],
+
+  "teaching": [
+    {"course": "Public Economics (Ph.D.)", "terms": "2021 – present"},
+    {"course": "Empirical Methods in Economics (M.Sc.)", "terms": "2021 – present"},
+    {"course": "Principles of Microeconomics (B.Sc.)", "terms": "2021 – 2023"}
+  ],
+
+  "advising": [
+    {"name": "Emil Karlsson", "detail": "Ph.D., primary advisor", "note": "2024 · Norwegian School of Economics (NHH)"},
+    {"name": "Priya Nair", "detail": "Ph.D., primary advisor", "note": "2023 · Ministry of Finance, Sweden"}
+  ],
+
+  "media": [
+    {"outlet": "The New York Times", "headline": "Does Taxing the Rich Drive Them Away? New Evidence Says No.", "date": "March 2024", "url": ""},
+    {"outlet": "The Economist", "headline": "The Nordic Wealth-Tax Experiment", "date": "April 2024", "url": ""},
+    {"outlet": "Financial Times", "headline": "Parental Leave Pays Off for Decades, Study Finds", "date": "September 2023", "url": ""}
+  ]
+}
