@@ -8,38 +8,6 @@ toc: true
 
 ::: {.upcoming-event}
 
-### TwA Webinar: Agentic Tools for Research
-
-**Monday, June 15, 2026 · 10:00 AM–12:00 PM ET · Online (Teams)**
-
-How AI tools are changing research workflows — and how to use them effectively.
-
-#### What we'll cover
-
-- The AI landscape for research: what tools can and can't do
-- **Live demo**: A realistic research task done with and without AI (literature review, data exploration, or code debugging)
-- How to build verification habits for AI-generated content
-- Q&A
-
-#### Who is this for?
-
-Targeted toward faculty, researchers, and graduate students in economics and related fields — but all are welcome.
-
-```{=html}
-<div class="schedule-actions" style="margin: 1.5rem 0 0.5rem;">
-  <a href="webinar-jun2026/twa-research-deck1-foundations-voice.pdf" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
-    Deck 1: Foundations &amp; Voice (PDF) →
-  </a>
-  <a href="webinar-jun2026/twa-research-deck2-website-brainstorming.pdf" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
-    Deck 2: Website &amp; Brainstorming (PDF) →
-  </a>
-</div>
-```
-
-:::
-
-::: {.upcoming-event}
-
 ### TwA Webinar: Agentic Tools for Teaching
 
 **Wednesday, June 17, 2026 · 10:00 AM–12:00 PM ET · Online (Teams)**
@@ -74,6 +42,28 @@ How faculty can use AI tools for course design, student feedback, and teaching s
 ::: {.past-events-section}
 
 ## Past Events
+
+### TwA Webinar: Agentic Tools for Research
+
+**June 15, 2026 · Online (Teams)**
+
+How AI tools are changing research workflows — and how to use them effectively.
+
+| Deck | Format |
+|------|--------|
+| Deck 1: Foundations & Voice | [PDF](webinar-jun2026/twa-research-deck1-foundations-voice.pdf) |
+| Deck 2: Website & Brainstorming | [PDF](webinar-jun2026/twa-research-deck2-website-brainstorming.pdf) |
+
+**Sample materials:** [Project Context Kit](project-context-kit.qmd) — a worked HUB + session log and a prompt to build your own.
+
+#### What we covered
+
+- The AI landscape for research: what tools can and can't do
+- Building a writing voice file so AI output sounds like you
+- Live demos: redesigning a website and brainstorming a research idea with an agent
+- Building verification habits for AI-generated content
+
+---
 
 ### UVM Economics AI Bootcamp · Spring 2026
 

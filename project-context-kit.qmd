@@ -1,0 +1,231 @@
+---
+title: "Project Context Kit"
+subtitle: "Give your agent a memory that survives between sessions"
+toc: true
+---
+
+The single biggest upgrade to working with an agent isn't a better prompt — it's **persistent context**. Instead of re-explaining your project every time, you keep two small Markdown files the agent reads at the start of a session and updates at the end:
+
+- A **HUB** — the *standing state* of the project: what it is, where the data and code live, who's waiting on what, the next few steps, and the open questions.
+- A **session log** — the *running history*: what each work session did, the decisions you made and *why*, and a "start here next time" handoff.
+
+The HUB answers *"where do things stand?"* The log answers *"how did we get here?"* Together they let a fresh session pick up where the last one left off.
+
+Below is a worked example for a fictional study, plus a prompt you can paste into your own agent to build the same thing for your project.
+
+::: {.callout-note appearance="simple"}
+The sample project — *Cash Transfers & School Attendance (Kenya)* — is **fictional**. Names, paths, and results are invented to show the format, not a real study.
+:::
+
+## Build your own (copy-paste prompt)
+
+This is the actionable part. Edit the bracketed bits and paste it into Claude Code, Claude, ChatGPT — anything that can see your project folder. It creates the two files for your project, then keeps them current.
+
+[Download the prompt →](webinar-jun2026/hub-log-prompt.md){download="hub-log-prompt.md" .slides-btn}
+
+**Step 1 — create the two files (run once):**
+
+```
+You're helping me set up persistent context for a research project so that you (and future
+sessions) can pick up where we left off without me re-explaining everything.
+
+My project: [one or two sentences — what it is and the deliverable].
+Project folder: [path, e.g. ~/Dropbox/GitHub/my-project/ — or describe where things live].
+
+Please create two Markdown files in [folder]:
+
+1. HUB.md — the standing state of the project. Include:
+   - Status / stage / last-updated / owner
+   - A "Where Everything Lives" table (data, code, draft, IRB, pre-registration — whatever applies)
+   - Team & human dependencies (who's waiting on what, with dates)
+   - Current state (done / in progress / blocked)
+   - Next 3 steps, each concrete enough to act on
+   - Key decisions & open questions
+   - A status log table at the bottom
+
+2. session-log.md — a running, newest-on-top history. For each work session, record:
+   - Date and a one-line goal
+   - What happened
+   - Decisions made, each with the *why*
+   - Files touched
+   - A "Start here next time" handoff line
+
+Before you write anything, look through my project folder and ask me up to 5 questions about
+anything you can't infer (team, deadlines, where the data lives, open decisions). Then draft both
+files and show them to me for edits.
+```
+
+**Step 2 — keep them current (end of each session):**
+
+```
+Before we stop: update HUB.md and session-log.md to reflect today's work.
+- Add a new session-log entry on top (goal, what happened, decisions + why, files touched,
+  and a "Start here next time" line).
+- Update the HUB's current-state, next-3-steps, open-questions, and status-log so they match reality.
+Keep it concise — these are working notes, not a report.
+```
+
+**Step 3 — rehydrate at the start of a later session:**
+
+```
+Read HUB.md and session-log.md before we begin, then tell me in 3–4 bullets where the project
+stands and what the "start here next time" note said. Then we'll pick the next step.
+```
+
+## Sample 1 — the HUB
+
+The standing state of the project. Keep it to about a page; if it's painful to maintain, it won't get maintained.
+
+[View / download sample-HUB.md →](webinar-jun2026/sample-HUB.md){download="sample-HUB.md" .slides-btn}
+
+<details>
+<summary>Show the full sample HUB</summary>
+
+````markdown
+# Cash Transfers & School Attendance (Kenya)
+
+**Status**: Active
+**Stage**: Analysis
+**Last Updated**: 2026-06-12
+**Owner**: A. Researcher
+
+## Quick Summary
+
+A clustered RCT in 120 primary schools testing whether unconditional cash transfers to
+households raise daughters' school attendance. Deliverable: a working paper + replication
+package by Fall 2026. We are mid-analysis on the midline data.
+
+## Where Everything Lives
+
+| Resource | Service | Path / Link |
+|----------|---------|-------------|
+| **Raw data** | Box | `Box/CashTransfers_KE/01_raw/` |
+| **Working data** | Box | `Box/CashTransfers_KE/02_working/` |
+| **Output (tables/figures)** | Box | `Box/CashTransfers_KE/03_output/` |
+| **Code** | GitHub | `github.com/aresearcher/cash-transfers-ke` |
+| **Paper draft** | Overleaf | "Cash Transfers KE — working paper" |
+| **IRB** | UVM IRB | Protocol #STUDY00004821 (approved 2025-03) |
+| **Pre-registration** | AEA RCT Registry | AEARCTR-00xxxxx |
+
+## Team & Human Dependencies
+
+| Person | Role | Waiting on them? | They waiting on you? | Deadline |
+|--------|------|-------------------|----------------------|----------|
+| A. Researcher | PI | No | — | — |
+| J. Co-author | Co-PI (analysis) | Attendance recode decision | No | Jun 20 |
+| Field RA (Nairobi) | Data | Cleaned endline roster | No | Jul 1 |
+
+## Current State
+
+- **What's done**: Baseline + midline cleaned; balance table passing; main attendance regression running.
+- **What's in progress**: Heterogeneity by household poverty; how to handle students who transferred schools mid-year.
+- **What's blocked**: Endline data not yet delivered from the field (expected ~Jul 1).
+
+## Next 3 Steps
+
+1. [ ] Resolve the transfer-student recode with J. Co-author (affects the attendance denominator). Due Jun 20.
+2. [ ] Rebuild the main results table once the recode is settled.
+3. [ ] Draft the heterogeneity section from the poverty-interaction results.
+
+## Key Decisions & Open Questions
+
+- **Open**: Do students who transfer schools mid-year count as "attending"? Two defensible codings; results move ~2pp. Need J. Co-author's call.
+- **Decided (2026-05-30)**: Cluster SEs at the school level (the unit of randomization), not the household.
+
+## Notes
+
+- Randomization is at the **school** level — always cluster SEs there.
+- `01_raw/` is read-only. All cleaning writes to `02_working/`.
+- Paired with the session log — this HUB holds current state; the log holds how we got here.
+
+## Status Log
+
+| Date | Update | Session |
+|------|--------|---------|
+| 2026-06-12 | Balance table passing; started heterogeneity by poverty | S4 |
+| 2026-06-05 | Main attendance spec finalized; SE clustering decided | S3 |
+| 2026-05-28 | Midline data cleaned and merged to baseline | S2 |
+| 2026-05-20 | Project HUB created; file locations mapped | S1 |
+````
+
+</details>
+
+## Sample 2 — the session log
+
+The running history. Newest entry on top. Each entry captures the goal, what happened, decisions **and the reasoning behind them**, files touched, and where to start next time.
+
+[View / download sample-session-log.md →](webinar-jun2026/sample-session-log.md){download="sample-session-log.md" .slides-btn}
+
+<details>
+<summary>Show the full sample session log</summary>
+
+````markdown
+# Session Log — Cash Transfers & School Attendance (Kenya)
+
+## 2026-06-12 · Session 4 — Heterogeneity by poverty
+
+**Goal:** Start the heterogeneity analysis now that the main spec is settled.
+
+**What happened:**
+- Confirmed the balance table still passes after the midline merge (no differential attrition flags).
+- Ran the main attendance regression interacted with a baseline poverty index (PCA of asset ownership).
+- First pass: effect looks ~twice as large in the poorest tercile, but CIs overlap — needs endline data.
+
+**Decisions:**
+- Use the **baseline** poverty index for heterogeneity, not midline — midline poverty is post-treatment
+  and would be a bad control. *(Why: avoids conditioning on an outcome.)*
+
+**Files touched:** `code/04_heterogeneity.do` (new); `03_output/f3_het_poverty.png` (draft)
+
+**Start here next time:** Don't finalize heterogeneity numbers until the transfer-student recode is
+resolved (see open question in HUB) — it shifts the denominator.
+
+## 2026-06-05 · Session 3 — Main spec + SE clustering
+
+**Goal:** Lock down the main attendance regression so results are stable.
+
+**What happened:**
+- Specified the primary model: attendance on treatment, school strata FE, baseline controls.
+- Reviewed whether to cluster at school or household.
+
+**Decisions:**
+- **Cluster SEs at the school level** — the unit of randomization. *(Why: clustering below the
+  randomization unit understates SEs.)*
+
+**Files touched:** `code/03_main_results.do`; `03_output/t2_attendance.tex`
+
+**Start here next time:** Begin heterogeneity by poverty. Build the baseline poverty index first.
+
+## 2026-05-28 · Session 2 — Clean and merge midline
+
+**Goal:** Get midline into a usable analysis file.
+
+**What happened:**
+- Cleaned the midline roster; fixed 14 duplicate student IDs (kept most recent).
+- Merged midline to baseline on `student_id`; 3% unmatched, all students who left the sample area.
+
+**Decisions:**
+- All cleaning writes to `02_working/`; `01_raw/` stays untouched. *(Why: reproducibility.)*
+
+**Files touched:** `code/02_clean_midline.do`; `02_working/midline_clean.dta`
+
+**Start here next time:** Specify the main attendance regression and settle SE clustering.
+
+## 2026-05-20 · Session 1 — Project setup
+
+**Goal:** Stand up the project so future sessions have context.
+
+**What happened:**
+- Created the project HUB: mapped where data, code, and the draft live; listed the team.
+- Confirmed IRB and pre-registration IDs.
+
+**Files touched:** HUB.md (new)
+
+**Start here next time:** Clean and merge the midline data.
+````
+
+</details>
+
+---
+
+These pair with the [June 15 webinar materials](events.qmd). The same idea scales up: as projects accumulate, a folder of HUBs becomes a dashboard of everything you have going on.

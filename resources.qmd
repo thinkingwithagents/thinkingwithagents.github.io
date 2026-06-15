@@ -82,7 +82,7 @@ AI tools produce Markdown files (`.md`). A good viewer makes them immediately re
 Once the basic tools feel useful, the next level is better workflow structure, not better prompting:
 
 - **Reusable prompts** saved as files, not typed from memory
-- **Project instruction files** that accumulate over time
+- **Project instruction files** that accumulate over time — see the [Project Context Kit](project-context-kit.qmd) for a worked HUB + session log and a prompt to build your own
 - **Session handoff notes** so you pick up where you left off
 - **Separate sessions** for separate tasks — don't pile everything into one thread
 - **Plan → execute → review → clear context → continue** for bigger tasks
