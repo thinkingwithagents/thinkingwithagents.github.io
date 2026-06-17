@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-14dc43dbc84180bcf2c7dee16ce6548c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fc09e87de26e26f248790eb387227fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -127,8 +127,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#layer-1-the-terminal" id="toc-layer-1-the-terminal" class="nav-link active" data-scroll-target="#layer-1-the-terminal">Layer 1: The Terminal</a></li>
-  <li><a href="#layer-2-version-control-git-github" id="toc-layer-2-version-control-git-github" class="nav-link" data-scroll-target="#layer-2-version-control-git-github">Layer 2: Version Control (Git &amp; GitHub)</a></li>
-  <li><a href="#layer-3-your-ai-setup" id="toc-layer-3-your-ai-setup" class="nav-link" data-scroll-target="#layer-3-your-ai-setup">Layer 3: Your AI Setup</a></li>
+  <li><a href="#layer-2-your-ai-setup" id="toc-layer-2-your-ai-setup" class="nav-link" data-scroll-target="#layer-2-your-ai-setup">Layer 2: Your AI Setup</a></li>
+  <li><a href="#layer-3-version-control-git-github" id="toc-layer-3-version-control-git-github" class="nav-link" data-scroll-target="#layer-3-version-control-git-github">Layer 3: Version Control (Git &amp; GitHub)</a></li>
   <li><a href="#layer-4-deploying-things" id="toc-layer-4-deploying-things" class="nav-link" data-scroll-target="#layer-4-deploying-things">Layer 4: Deploying Things</a></li>
   <li><a href="#layer-5-connecting-the-pieces" id="toc-layer-5-connecting-the-pieces" class="nav-link" data-scroll-target="#layer-5-connecting-the-pieces">Layer 5: Connecting the Pieces</a>
   <ul class="collapse">
@@ -195,29 +195,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="layer-2-version-control-git-github" class="level2">
-<h2 class="anchored" data-anchor-id="layer-2-version-control-git-github">Layer 2: Version Control (Git &amp; GitHub)</h2>
-<p>If your version control system is <code>analysis_final_v2_REAL_USE_THIS.do</code>, you need Git. Even if you work alone — because AI tools generate a lot of code, and you need a way to track what changed and undo what broke.</p>
-<p>The core workflow is five commands: <code>clone</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code>. Learn those and you’re functional.</p>
-<p><strong>Primary resource</strong>: <a href="./modules/b2-git-github.html">Git &amp; GitHub Essentials for Economists</a> (~75 min, hands-on) — Our module. Covers the mental model, the 5-command workflow, reading diffs, and common mistakes. Includes an econ-specific <code>.gitignore</code> template.</p>
-<p><strong>Supplement</strong>: <a href="https://github.com/fpinter/git-for-economists">Git: A Guide for Economists</a> (Frank Pinter) — The gold standard econ-specific git reference. More comprehensive than you need right now, but excellent to return to.</p>
-<p><strong>If you don’t want the terminal</strong>: <a href="https://desktop.github.com/">GitHub Desktop</a> is a legitimate choice. It does everything above through a GUI. Not a crutch — just a different interface.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>You’re ready for the next layer when…
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can clone a GitHub repo to your machine, make a change, commit it with a meaningful message, and push it back.</p>
-</div>
-</div>
-</section>
-<section id="layer-3-your-ai-setup" class="level2">
-<h2 class="anchored" data-anchor-id="layer-3-your-ai-setup">Layer 3: Your AI Setup</h2>
+<section id="layer-2-your-ai-setup" class="level2">
+<h2 class="anchored" data-anchor-id="layer-2-your-ai-setup">Layer 2: Your AI Setup</h2>
 <p>Now you need the actual tool. The two main options for economists right now are <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a> (Anthropic) and <a href="https://openai.com/index/introducing-codex/">Codex</a> (OpenAI). Both are terminal-based, both can read and edit your files, both cost money beyond free tiers.</p>
 <p><strong>Not sure you need the terminal?</strong> Read <a href="./modules/terminal-transition.html">When to Move to the Terminal</a> — a short guide for people who are productive with desktop apps and wondering whether the terminal is worth it.</p>
 <p><strong>Installation</strong>: Follow our <a href="./install.html">step-by-step install instructions</a> for Claude Code or Codex on Mac and Windows.</p>
@@ -228,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>On cost</strong>: Claude Pro ($20/mo) or ChatGPT Plus ($20/mo) are enough to get started. You’ll know if you need more. Don’t overthink this — pick one and try it for a month.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -237,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>These tools send your files to remote servers during your session. Published data, your own code, and course materials are fine. IRB-protected data, student records, and restricted-use datasets are not. Paul GP’s rule of thumb: “If you wouldn’t email it to a collaborator, don’t point the AI at it.” Use <code>.claudeignore</code> to exclude sensitive directories.</p>
 </div>
@@ -253,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can learn Layers 1–2 (terminal + Git) for free — no subscription needed. For Layer 3, UVM Copilot is free with a UVM account (web chat, not terminal). Claude and ChatGPT both have free tiers for chat. The $20/mo subscription adds the terminal tools (Claude Code / Codex), which is where the real leverage is — but you can learn the foundations first and decide later.</p>
+<p>The terminal (Layer 1) and Git (Layer 3) are free to learn — no subscription needed. For your AI setup, UVM Copilot is free with a UVM account (web chat, not terminal). Claude and ChatGPT both have free tiers for chat. The $20/mo subscription adds the terminal tools (Claude Code / Codex), which is where the real leverage is — but you can learn the foundations first and decide later.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -267,6 +246,28 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>You can open your AI tool in a terminal, <code>cd</code> to a project folder, and ask it to do something small — summarize a file, rename some variables, draft an email. It works, and you understand what it read to do the task.</p>
+</div>
+</div>
+</section>
+<section id="layer-3-version-control-git-github" class="level2">
+<h2 class="anchored" data-anchor-id="layer-3-version-control-git-github">Layer 3: Version Control (Git &amp; GitHub)</h2>
+<p>Now that an AI tool is editing your files, you need a way to track every change and undo anything it breaks. Git is the undo button for AI-assisted work — and the single best safety net even when you work alone: review what changed, keep what’s good, revert what isn’t.</p>
+<p>(If your current version control system is <code>analysis_final_v2_REAL_USE_THIS.do</code>, this is also the fix for that.)</p>
+<p>The core workflow is five commands: <code>clone</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code>. Learn those and you’re functional.</p>
+<p><strong>Primary resource</strong>: <a href="./modules/b2-git-github.html">Git &amp; GitHub Essentials for Economists</a> (~75 min, hands-on) — Our module. Covers the mental model, the 5-command workflow, reading diffs, and common mistakes. Includes an econ-specific <code>.gitignore</code> template.</p>
+<p><strong>Supplement</strong>: <a href="https://github.com/fpinter/git-for-economists">Git: A Guide for Economists</a> (Frank Pinter) — The gold standard econ-specific git reference. More comprehensive than you need right now, but excellent to return to.</p>
+<p><strong>If you don’t want the terminal</strong>: <a href="https://desktop.github.com/">GitHub Desktop</a> is a legitimate choice. It does everything above through a GUI. Not a crutch — just a different interface.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>You’re ready for the next layer when…
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can clone a GitHub repo to your machine, make a change, commit it with a meaningful message, and push it back.</p>
 </div>
 </div>
 </section>
@@ -358,15 +359,15 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <section id="workflow-a-make-a-course-website" class="level3">
 <h3 class="anchored" data-anchor-id="workflow-a-make-a-course-website">Workflow A: “Make a course website”</h3>
-<p>Terminal (Layer 1) → create a Quarto project → AI (Layer 3) generates page content from your syllabus and notes → Git (Layer 2) tracks versions → GitHub Pages (Layer 4) publishes it. Time to live site: under an hour once you’ve done it once.</p>
+<p>Terminal (Layer 1) → create a Quarto project → AI (Layer 2) generates page content from your syllabus and notes → Git (Layer 3) tracks versions → GitHub Pages (Layer 4) publishes it. Time to live site: under an hour once you’ve done it once.</p>
 </section>
 <section id="workflow-b-build-a-replication-package" class="level3">
 <h3 class="anchored" data-anchor-id="workflow-b-build-a-replication-package">Workflow B: “Build a replication package”</h3>
-<p>AI (Layer 3) drafts a master do-file and README from your existing scripts → you review and fix what it gets wrong → Git (Layer 2) tracks the package → GitHub (Layer 4) hosts it. The AI handles the tedious parts (file headers, path management, README boilerplate). You handle the judgment (does this code actually reproduce the results?).</p>
+<p>AI (Layer 2) drafts a master do-file and README from your existing scripts → you review and fix what it gets wrong → Git (Layer 3) tracks the package → GitHub (Layer 4) hosts it. The AI handles the tedious parts (file headers, path management, README boilerplate). You handle the judgment (does this code actually reproduce the results?).</p>
 </section>
 <section id="workflow-c-go-from-rough-idea-to-shareable-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="workflow-c-go-from-rough-idea-to-shareable-analysis">Workflow C: “Go from rough idea to shareable analysis”</h3>
-<p>Terminal (Layer 1) → create a project folder with clean structure → AI (Layer 3) does initial data exploration and drafts analysis code → Git (Layer 2) checkpoints each stage → share the repo (Layer 4) when it’s ready for a coauthor or RA.</p>
+<p>Terminal (Layer 1) → create a project folder with clean structure → AI (Layer 2) does initial data exploration and drafts analysis code → Git (Layer 3) checkpoints each stage → share the repo (Layer 4) when it’s ready for a coauthor or RA.</p>
 </section>
 </div>
 </div>

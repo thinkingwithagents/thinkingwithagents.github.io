@@ -15,7 +15,7 @@ toc: false
     <p class="hero-meta">Erkmen G. Aslim &amp; Emily Beam</p>
   </div>
   <div class="hero-right">
-    <h2 class="schedule-heading">Upcoming Webinars · June 2026</h2>
+    <h2 class="schedule-heading">Recent Webinars · June 2026</h2>
     <div class="schedule-item">
       <div class="schedule-date">Jun 15</div>
       <div class="schedule-title">TwA Webinar: Agentic Tools for Research</div>

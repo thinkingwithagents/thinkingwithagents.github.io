@@ -6,28 +6,19 @@ toc: true
 
 ## Upcoming
 
-::: {.upcoming-event}
+*More webinars are in the works — check back soon.*
+
+---
+
+::: {.past-events-section}
+
+## Past Events
 
 ### TwA Webinar: Agentic Tools for Teaching
 
-**Wednesday, June 17, 2026 · 10:00 AM–12:00 PM ET · Online (Teams)**
+**June 17, 2026 · Online (Teams)**
 
 How faculty can use AI tools for course design, student feedback, and teaching students to use AI effectively.
-
-#### What we'll cover
-
-- **Live demo**: AI-assisted course preparation — from rough notes to polished materials
-- **Live demo**: Feedback at scale — using AI to scaffold (not automate) student feedback
-- Q&A
-
-#### Who should attend
-
-- Faculty in economics, social sciences, or related fields
-- Instructors at any level (community college through R1)
-- Graduate students who teach
-- Academic staff involved in curriculum design
-
-#### Materials
 
 | Resource | Format |
 |----------|--------|
@@ -35,21 +26,13 @@ How faculty can use AI tools for course design, student feedback, and teaching s
 | Erkmen's Slides: Teaching Prep | [PDF](webinar-jun2026/twa-teaching-deck-erkmen.pdf) |
 | Supply & Demand Explorer | [Live Demo](webinar-jun2026/supply-demand-explorer.html) |
 
-```{=html}
-<div style="margin: 1.5rem 0 0.5rem;">
-  <a href="https://events.teams.microsoft.com/event/bc7022b1-63ae-470e-8c41-9c7890bdf108@1c177758-4d6b-43dc-aaeb-3b9c42562967" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">
-    Register for AI for Teaching (June 17) →
-  </a>
-</div>
-```
+#### What we covered
 
-:::
+- **Emily — Student data & grading**: the FERPA decision (approved tool, de-identify first, or don't), what counts as identifiable student data (including the "mosaic effect"), and a live de-identification grading pipeline that never sees a student's name
+- **Erkmen — Teaching prep**: turning a paper into a ready-to-teach lecture — notes, slides, discussion prompts, and exam questions — with a reusable lecture-builder skill, plus building a self-contained interactive tool that embeds in any LMS
+- Q&A
 
 ---
-
-::: {.past-events-section}
-
-## Past Events
 
 ### TwA Webinar: Agentic Tools for Research
 
