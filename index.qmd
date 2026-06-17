@@ -30,7 +30,11 @@ toc: false
       <div class="schedule-date">Jun 17</div>
       <div class="schedule-title">TwA Webinar: Agentic Tools for Teaching</div>
       <div class="schedule-detail">10:00 AM–12:00 PM ET · Online (Teams)</div>
-      <a href="https://events.teams.microsoft.com/event/bc7022b1-63ae-470e-8c41-9c7890bdf108@1c177758-4d6b-43dc-aaeb-3b9c42562967" class="slides-btn">Register →</a>
+      <div class="schedule-actions">
+        <a href="webinar-jun2026/twa-teaching-deck-emily.pdf" class="slides-btn">Emily: Student Data &amp; Grading (PDF) →</a>
+        <a href="webinar-jun2026/twa-teaching-deck-erkmen.pdf" class="slides-btn">Erkmen: Teaching Prep (PDF) →</a>
+        <a href="webinar-jun2026/supply-demand-explorer.html" class="slides-btn">Supply &amp; Demand Explorer →</a>
+      </div>
     </div>
   </div>
 </section>

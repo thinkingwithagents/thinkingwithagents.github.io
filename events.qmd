@@ -31,7 +31,8 @@ How faculty can use AI tools for course design, student feedback, and teaching s
 
 | Resource | Format |
 |----------|--------|
-| Erkmen's Teaching Slides | [PDF](webinar-jun2026/twa-teaching-deck-erkmen.pdf) |
+| Emily's Slides: Student Data & Grading | [PDF](webinar-jun2026/twa-teaching-deck-emily.pdf) |
+| Erkmen's Slides: Teaching Prep | [PDF](webinar-jun2026/twa-teaching-deck-erkmen.pdf) |
 | Supply & Demand Explorer | [Live Demo](webinar-jun2026/supply-demand-explorer.html) |
 
 ```{=html}
