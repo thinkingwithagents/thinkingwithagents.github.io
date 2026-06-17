@@ -27,6 +27,13 @@ How faculty can use AI tools for course design, student feedback, and teaching s
 - Graduate students who teach
 - Academic staff involved in curriculum design
 
+#### Materials
+
+| Resource | Format |
+|----------|--------|
+| Erkmen's Teaching Slides | [PDF](webinar-jun2026/twa-teaching-deck-erkmen.pdf) |
+| Supply & Demand Explorer | [Live Demo](webinar-jun2026/supply-demand-explorer.html) |
+
 ```{=html}
 <div style="margin: 1.5rem 0 0.5rem;">
   <a href="https://events.teams.microsoft.com/event/bc7022b1-63ae-470e-8c41-9c7890bdf108@1c177758-4d6b-43dc-aaeb-3b9c42562967" class="slides-btn" style="font-size: 0.95rem; padding: 0.6rem 1.5rem;">

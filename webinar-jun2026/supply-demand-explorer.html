@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Explorer — Supply &amp; Demand</title>
+<style>
+  :root {
+    --teal: #1B4D5C;
+    --gold: #D4A84B;
+    --coral: #C0534D;
+    --charcoal: #2C3E50;
+    --sage: #EDF2F0;
+    --gray: #8899A6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--charcoal);
+    background: #fafbfb;
+    padding: 16px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  header { margin-bottom: 12px; }
+  header h1 { font-size: 1.25rem; color: var(--teal); }
+  header p { font-size: 0.85rem; color: var(--gray); }
+  .layout { display: flex; gap: 16px; flex-wrap: wrap; }
+  .chart-card, .panel {
+    background: #fff; border: 1px solid #e2e8ea; border-radius: 10px;
+    padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .chart-card { flex: 1 1 480px; }
+  .panel { flex: 1 1 280px; display: flex; flex-direction: column; gap: 14px; }
+  svg { width: 100%; height: auto; display: block; }
+
+  .sliders label {
+    display: block; font-size: 0.82rem; font-weight: 600; margin: 10px 0 2px;
+  }
+  .sliders .hint { font-weight: 400; color: var(--gray); font-size: 0.75rem; }
+  input[type=range] { width: 100%; accent-color: var(--teal); }
+  .demand-slider { accent-color: var(--teal); }
+  .supply-slider { accent-color: var(--coral); }
+
+  .readout {
+    background: var(--sage); border-radius: 8px; padding: 10px 12px;
+    font-size: 0.9rem; line-height: 1.6;
+  }
+  .readout b { color: var(--teal); }
+  .delta-up { color: #1e7d32; font-weight: 700; }
+  .delta-down { color: var(--coral); font-weight: 700; }
+  .delta-same { color: var(--gray); font-weight: 700; }
+
+  .scenarios h3, .sliders h3, .quiz h3 {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--gray); margin-bottom: 6px;
+  }
+  .scenarios .btns { display: flex; flex-wrap: wrap; gap: 6px; }
+  button {
+    font: inherit; font-size: 0.78rem; padding: 6px 10px; border-radius: 16px;
+    border: 1px solid var(--teal); background: #fff; color: var(--teal);
+    cursor: pointer; transition: background 0.15s;
+  }
+  button:hover { background: var(--sage); }
+  button.reset { border-color: var(--gray); color: var(--gray); }
+  button.primary { background: var(--teal); color: #fff; }
+  button.primary:hover { background: #15404d; }
+
+  .quiz .q { font-size: 0.85rem; margin-bottom: 8px; min-height: 3em; }
+  .quiz .opts { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .quiz .feedback { font-size: 0.82rem; min-height: 2.5em; }
+  .quiz .feedback.good { color: #1e7d32; }
+  .quiz .feedback.bad { color: var(--coral); }
+  footer { margin-top: 14px; font-size: 0.72rem; color: var(--gray); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Market Explorer: Supply &amp; Demand</h1>
+    <p>Drag the sliders or click a scenario. Solid curves are the new market; dashed curves show where it started.</p>
+  </header>
+
+  <div class="layout">
+    <div class="chart-card">
+      <svg id="chart" viewBox="0 0 560 420" role="img" aria-label="Supply and demand diagram"></svg>
+      <div class="readout" id="readout"></div>
+    </div>
+
+    <div class="panel">
+      <div class="scenarios">
+        <h3>Scenarios</h3>
+        <div class="btns">
+          <button data-d="22" data-s="0">Incomes rise (normal good)</button>
+          <button data-d="-22" data-s="0">Substitute gets cheaper</button>
+          <button data-d="0" data-s="-22">Input costs rise</button>
+          <button data-d="0" data-s="22">Better technology</button>
+          <button data-d="0" data-s="-15">Per-unit tax on sellers</button>
+          <button data-d="18" data-s="18">Both: boom + cheap inputs</button>
+          <button class="reset" id="resetBtn">Reset</button>
+        </div>
+      </div>
+
+      <div class="sliders">
+        <h3>Shift the curves</h3>
+        <label>Demand shift <span class="hint" id="dVal">(none)</span></label>
+        <input type="range" class="demand-slider" id="dShift" min="-30" max="30" value="0" step="1"
+               aria-label="Demand shift">
+        <label>Supply shift <span class="hint" id="sVal">(none)</span></label>
+        <input type="range" class="supply-slider" id="sShift" min="-30" max="30" value="0" step="1"
+               aria-label="Supply shift">
+      </div>
+
+      <div class="quiz">
+        <h3>Quiz me</h3>
+        <div class="q" id="quizQ">Press “New question” to test yourself before you touch the sliders.</div>
+        <div class="opts" id="quizOpts"></div>
+        <div class="feedback" id="quizFb"></div>
+        <button class="primary" id="newQ">New question</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Works in any LMS (Canvas, Blackboard, Brightspace) — one self-contained file, no internet needed.
+    Instructors: the same template works for taxes, price controls, elasticity, trade, labor markets…
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- Model: linear demand & supply, intercept shifts ----
+  // Demand: P = aD - bD*Q + d   Supply: P = aS + bS*Q + s
+  var aD = 100, bD = 1.0, aS = 10, bS = 0.9;
+  var d = 0, s = 0; // slider shifts (demand out = +, supply out = + → price intercept falls)
+
+  function equilibrium(dd, ss) {
+    var q = (aD + dd - aS + ss) / (bD + bS); // supply out (+ss) lowers supply price intercept
+    var p = aD + dd - bD * q;
+    return { q: q, p: p };
+  }
+
+  // ---- SVG plumbing ----
+  var SVG_NS = "http://www.w3.org/2000/svg";
+  var M = { left: 58, right: 24, top: 22, bottom: 50 };
+  var W = 560, H = 420;
+  var QMAX = 100, PMAX = 130;
+
+  function xPix(q) { return M.left + (q / QMAX) * (W - M.left - M.right); }
+  function yPix(p) { return H - M.bottom - (p / PMAX) * (H - M.top - M.bottom); }
+
+  function el(name, attrs, text) {
+    var e = document.createElementNS(SVG_NS, name);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  // Clip a line P(Q) over [0, QMAX] to the plot area, return endpoints
+  function lineEnds(intercept, slope) { // P = intercept + slope*Q
+    var pts = [];
+    var q0 = 0, q1 = QMAX;
+    // walk in small steps to find visible span (simple & robust)
+    for (var q = q0; q <= q1; q += 0.5) {
+      var p = intercept + slope * q;
+      if (p >= 0 && p <= PMAX) pts.push([q, p]);
+    }
+    if (pts.length < 2) return null;
+    return [pts[0], pts[pts.length - 1]];
+  }
+
+  function drawCurve(svg, intercept, slope, color, dashed, label) {
+    var ends = lineEnds(intercept, slope);
+    if (!ends) return;
+    var ln = el("line", {
+      x1: xPix(ends[0][0]), y1: yPix(ends[0][1]),
+      x2: xPix(ends[1][0]), y2: yPix(ends[1][1]),
+      stroke: color, "stroke-width": dashed ? 2 : 3.2,
+      "stroke-dasharray": dashed ? "6,5" : "none",
+      "stroke-opacity": dashed ? 0.45 : 1, "stroke-linecap": "round"
+    });
+    svg.appendChild(ln);
+    if (label) {
+      var lx = ends[1][0], ly = ends[1][1];
+      svg.appendChild(el("text", {
+        x: Math.min(xPix(lx) + 6, W - 18), y: yPix(ly) + 4,
+        fill: color, "font-size": "15", "font-weight": "700"
+      }, label));
+    }
+  }
+
+  function drawEq(svg, eq, color, faded) {
+    if (eq.q < 0 || eq.q > QMAX || eq.p < 0 || eq.p > PMAX) return;
+    var x = xPix(eq.q), y = yPix(eq.p);
+    var op = faded ? 0.4 : 1;
+    svg.appendChild(el("line", { x1: x, y1: y, x2: x, y2: yPix(0), stroke: color, "stroke-dasharray": "3,4", "stroke-opacity": 0.5 * op }));
+    svg.appendChild(el("line", { x1: x, y1: y, x2: xPix(0), y2: y, stroke: color, "stroke-dasharray": "3,4", "stroke-opacity": 0.5 * op }));
+    svg.appendChild(el("circle", { cx: x, cy: y, r: faded ? 4 : 6, fill: color, "fill-opacity": op, stroke: "#fff", "stroke-width": 1.5 }));
+  }
+
+  function render() {
+    var svg = document.getElementById("chart");
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    // axes
+    svg.appendChild(el("line", { x1: xPix(0), y1: yPix(0), x2: xPix(QMAX), y2: yPix(0), stroke: "#444", "stroke-width": 1.5 }));
+    svg.appendChild(el("line", { x1: xPix(0), y1: yPix(0), x2: xPix(0), y2: yPix(PMAX), stroke: "#444", "stroke-width": 1.5 }));
+    svg.appendChild(el("text", { x: (xPix(0) + xPix(QMAX)) / 2, y: H - 14, "text-anchor": "middle", "font-size": "14", fill: "#444" }, "Quantity"));
+    var pl = el("text", { x: 16, y: (yPix(0) + yPix(PMAX)) / 2, "font-size": "14", fill: "#444", "text-anchor": "middle" }, "Price");
+    pl.setAttribute("transform", "rotate(-90 16 " + ((yPix(0) + yPix(PMAX)) / 2) + ")");
+    svg.appendChild(pl);
+
+    var shifted = (d !== 0 || s !== 0);
+    // original curves (dashed) only when shifted
+    if (shifted) {
+      drawCurve(svg, aD, -bD, "#1B4D5C", true, null);
+      drawCurve(svg, aS, bS, "#C0534D", true, null);
+      drawEq(svg, equilibrium(0, 0), "#8899A6", true);
+    }
+    // current curves
+    drawCurve(svg, aD + d, -bD, "#1B4D5C", false, shifted && d !== 0 ? "D′" : "D");
+    drawCurve(svg, aS - s, bS, "#C0534D", false, shifted && s !== 0 ? "S′" : "S");
+    drawEq(svg, equilibrium(d, s), "#D4A84B", false);
+
+    // readout
+    var e0 = equilibrium(0, 0), e1 = equilibrium(d, s);
+    var dp = e1.p - e0.p, dq = e1.q - e0.q;
+    function arrow(v) {
+      if (Math.abs(v) < 0.01) return '<span class="delta-same">unchanged</span>';
+      return v > 0 ? '<span class="delta-up">&#9650; up ' + Math.abs(v).toFixed(1) + "</span>"
+                   : '<span class="delta-down">&#9660; down ' + Math.abs(v).toFixed(1) + "</span>";
+    }
+    document.getElementById("readout").innerHTML =
+      "Equilibrium price: <b>" + e1.p.toFixed(1) + "</b> (" + arrow(dp) + ") &nbsp;&middot;&nbsp; " +
+      "Equilibrium quantity: <b>" + e1.q.toFixed(1) + "</b> (" + arrow(dq) + ")";
+
+    document.getElementById("dVal").textContent = d === 0 ? "(none)" : (d > 0 ? "(increase — shifts right)" : "(decrease — shifts left)");
+    document.getElementById("sVal").textContent = s === 0 ? "(none)" : (s > 0 ? "(increase — shifts right)" : "(decrease — shifts left)");
+  }
+
+  // ---- Controls ----
+  var dSlider = document.getElementById("dShift");
+  var sSlider = document.getElementById("sShift");
+  dSlider.addEventListener("input", function () { d = +this.value; render(); });
+  sSlider.addEventListener("input", function () { s = +this.value; render(); });
+
+  document.querySelectorAll(".scenarios button[data-d]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      d = +this.dataset.d; s = +this.dataset.s;
+      dSlider.value = d; sSlider.value = s;
+      render();
+    });
+  });
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    d = 0; s = 0; dSlider.value = 0; sSlider.value = 0; render();
+  });
+
+  // ---- Quiz ----
+  var QUESTIONS = [
+    { q: "A drought destroys half the coffee crop. What happens in the market for coffee?", d: 0, s: -22, a: "P up, Q down" },
+    { q: "Consumer incomes rise and pizza is a normal good. The pizza market shows…", d: 22, s: 0, a: "P up, Q up" },
+    { q: "A new machine makes T-shirts cheaper to produce. The T-shirt market shows…", d: 0, s: 22, a: "P down, Q up" },
+    { q: "A popular study says blueberries cause headaches. The blueberry market shows…", d: -22, s: 0, a: "P down, Q down" },
+    { q: "Demand AND supply both increase at the same time. What can we say for sure?", d: 18, s: 18, a: "Q up, P ambiguous" },
+    { q: "The government places a per-unit tax on sellers of soda. The soda market shows…", d: 0, s: -15, a: "P up, Q down" }
+  ];
+  var OPTIONS = ["P up, Q up", "P up, Q down", "P down, Q up", "P down, Q down", "Q up, P ambiguous"];
+  var current = null;
+
+  function newQuestion() {
+    current = QUESTIONS[Math.floor(Math.random() * QUESTIONS.length)];
+    document.getElementById("quizQ").textContent = current.q;
+    document.getElementById("quizFb").textContent = "";
+    document.getElementById("quizFb").className = "feedback";
+    var opts = document.getElementById("quizOpts");
+    opts.innerHTML = "";
+    OPTIONS.forEach(function (o) {
+      var b = document.createElement("button");
+      b.textContent = o;
+      b.addEventListener("click", function () { answer(o); });
+      opts.appendChild(b);
+    });
+  }
+
+  function answer(o) {
+    var fb = document.getElementById("quizFb");
+    if (!current) return;
+    if (o === current.a) {
+      fb.textContent = "Correct! Watch the graph act it out.";
+      fb.className = "feedback good";
+    } else {
+      fb.textContent = "Not quite — the answer is “" + current.a + "”. Watch the graph.";
+      fb.className = "feedback bad";
+    }
+    d = current.d; s = current.s;
+    dSlider.value = d; sSlider.value = s;
+    render();
+  }
+
+  document.getElementById("newQ").addEventListener("click", newQuestion);
+
+  // Optional deep link: ...explorer.html?d=22&s=-10 opens with curves pre-shifted
+  try {
+    var qs = new URLSearchParams(window.location.search);
+    if (qs.has("d")) { d = Math.max(-30, Math.min(30, +qs.get("d") || 0)); dSlider.value = d; }
+    if (qs.has("s")) { s = Math.max(-30, Math.min(30, +qs.get("s") || 0)); sSlider.value = s; }
+  } catch (e) { /* older browsers: ignore */ }
+
+  render();
+})();
+</script>
+</body>
+</html>
