@@ -26,6 +26,10 @@ website:
         text: "Resources"
       - href: events.qmd
         text: "Events"
+    right:
+      - href: https://thinkingwithagents.substack.com
+        text: "Substack"
+        aria-label: "Substack newsletter"
 
   body-footer: |
     <script data-goatcounter="https://eabeam.goatcounter.com/count"

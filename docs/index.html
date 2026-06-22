@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bba940068ace8b20947ad52ec252939a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fda2e333fa7fe9e9144147d3d0562dc5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -111,6 +111,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Events</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://thinkingwithagents.substack.com"> 
+<span class="menu-text">Substack</span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -137,6 +143,10 @@ ul.task-list li input[type="checkbox"] {
     <h1>Thinking with<br>Agents</h1>
     <p class="hero-subtitle">AI tools for teaching and research</p>
     <p class="hero-meta">Erkmen G. Aslim &amp; Emily Beam</p>
+    <a href="https://thinkingwithagents.substack.com" class="hero-substack-btn" target="_blank">
+      <svg viewbox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align: -3px;"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24l9.54-5.39L20.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"></path></svg>
+      Follow on Substack
+    </a>
   </div>
   <div class="hero-right">
     <h2 class="schedule-heading anchored">Recent Webinars · June 2026</h2>
@@ -163,6 +173,14 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </section>
 <div class="landing-content">
+<div class="substack-section">
+  <h2 class="anchored">Latest from our Substack</h2>
+  <div id="substack-feed" class="substack-feed-grid">
+    <p class="substack-loading">Loading posts...</p>
+  </div>
+  <p class="substack-cta"><a href="https://thinkingwithagents.substack.com" target="_blank">See all posts &amp; subscribe →</a></p>
+</div>
+
 <p class="reassurance">Pick a starting point below.</p>
 
 <div class="pathway-cards">
@@ -182,6 +200,39 @@ ul.task-list li input[type="checkbox"] {
     <a href="https://eabeam.github.io/teaching-ai">Teaching Modules →</a>
   </div>
 </div>
+
+<script>
+(async () => {
+  const feedUrl = 'https://thinkingwithagents.substack.com/feed';
+  const container = document.getElementById('substack-feed');
+  try {
+    const res = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(feedUrl));
+    if (!res.ok) throw new Error('Feed unavailable');
+    const txt = await res.text();
+    const doc = new DOMParser().parseFromString(txt, 'text/xml');
+    const items = [...doc.querySelectorAll('item')].slice(0, 3);
+    if (!items.length) throw new Error('No posts');
+    container.innerHTML = items.map(item => {
+      const title = item.querySelector('title')?.textContent || 'Untitled';
+      const link = item.querySelector('link')?.textContent || '#';
+      const desc = item.querySelector('description')?.textContent || '';
+      const date = new Date(item.querySelector('pubDate')?.textContent);
+      const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+      const excerpt = desc.replace(/<[^>]*>/g, '').slice(0, 160).trim();
+      return '<a href="' + link + '" target="_blank" class="substack-card">' +
+        '<span class="substack-card-date">' + dateStr + '</span>' +
+        '<span class="substack-card-title">' + title + '</span>' +
+        '<span class="substack-card-excerpt">' + (excerpt ? excerpt + '...' : '') + '</span>' +
+        '</a>';
+    }).join('');
+  } catch (e) {
+    container.innerHTML = '<a href="https://thinkingwithagents.substack.com" target="_blank" class="substack-card substack-card-fallback">' +
+      '<span class="substack-card-title">Visit our Substack</span>' +
+      '<span class="substack-card-excerpt">Reflections, workflows, and lessons learned from teaching economists to work with AI agents.</span>' +
+      '</a>';
+  }
+})();
+</script>
 
 <div class="start-router">
   <h2 class="anchored">Where should I start?</h2>
